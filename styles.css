@@ -2370,22 +2370,31 @@ ul.clean li::before {
   .section-nav { display: none !important; }
 
   .toc-fab {
-    display: inline-flex; align-items: center; gap: 7px;
+    display: inline-flex; align-items: center;
     position: fixed;
     right: 0;
     bottom: calc(108px + env(safe-area-inset-bottom));
     z-index: 50;
-    padding: 9px 15px 9px 13px;
+    padding: 9px 11px;                 /* idle: a compact icon-only nub */
     border: none;
     border-top-left-radius: 999px; border-bottom-left-radius: 999px;
     background: var(--accent); color: #fff;
     font-size: 12.5px; font-weight: 600; letter-spacing: -0.005em;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.24);
-    transition: transform 0.22s var(--ease), opacity 0.22s var(--ease);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+    opacity: 0.5;                      /* unobtrusive when you're not scrolling */
+    transition: padding 0.3s var(--ease), opacity 0.25s var(--ease), transform 0.22s var(--ease);
   }
   .toc-fab:active { transform: scale(0.96); }
-  .toc-fab.hidden { opacity: 0; pointer-events: none; transform: translateX(14px); }
-  .toc-fab-icon { font-size: 15px; line-height: 1; }
+  .toc-fab-icon { font-size: 15px; line-height: 1; flex-shrink: 0; }
+  .toc-fab-label {
+    max-width: 0; overflow: hidden; white-space: nowrap;
+    opacity: 0; margin-left: 0;
+    transition: max-width 0.32s var(--ease), opacity 0.26s var(--ease), margin-left 0.32s var(--ease);
+  }
+  /* While scrolling the nub extends into a pill naming the current section. */
+  .toc-fab.peek { opacity: 1; padding: 9px 15px 9px 13px; }
+  .toc-fab.peek .toc-fab-label { max-width: 168px; opacity: 1; margin-left: 8px; }
+  .toc-fab.hidden { opacity: 0; pointer-events: none; transform: translateX(16px); }
 
   .toc-sheet-backdrop {
     display: block;

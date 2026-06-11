@@ -300,6 +300,7 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
   const [present, setPresent] = uS([]);     // sections that actually rendered
   const [tocOpen, setTocOpen] = uS(false);  // mobile "On this page" panel
   const [navBar, setNavBar] = uS({ top: 0, height: 0 }); // sliding accent-bar geometry
+  const [scrolling, setScrolling] = uS(false); // true briefly while the page scrolls
   const navListRef = uR(null);              // desktop rail list
   const mobileListRef = uR(null);           // iPhone panel list
 
@@ -325,16 +326,21 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
 
   uE(() => {
     const ids = sections.map(([id]) => id);
+    let hideTimer;
     const handler = () => {
       for (const id of ids) {
         const el = document.getElementById("sec-" + id);
         if (el && el.getBoundingClientRect().top < 120) setActiveSec(id);
       }
+      // Reveal the section pill while scrolling, retract ~1s after it stops.
+      setScrolling(true);
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => setScrolling(false), 1100);
     };
     const c = document.querySelector(".content");
     window.addEventListener("scroll", handler, true);
     if (c) c.addEventListener("scroll", handler);
-    return () => { window.removeEventListener("scroll", handler, true); if (c) c.removeEventListener("scroll", handler); };
+    return () => { clearTimeout(hideTimer); window.removeEventListener("scroll", handler, true); if (c) c.removeEventListener("scroll", handler); };
   }, [diseaseId]);
 
   uE(() => { setActiveSec("overview"); setActiveStep(null); setTocOpen(false); }, [diseaseId]);
@@ -371,6 +377,9 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
     setActiveSec(id);
     setTocOpen(false);
   };
+
+  // Label shown in the floating pill — the section currently in view.
+  const curLabel = (present.find(([id]) => id === activeSec) || [null, "Contents"])[1];
 
   const diseaseQs = QUIZ_BANK.filter((q) => q.disease === diseaseId);
   const deptQs = QUIZ_BANK.filter((q) => q.dept === d.dept && q.disease !== diseaseId);
@@ -772,12 +781,12 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
       {/* iPHONE — floating "Contents" tab + right-side TOC panel. Overlays the
           page (doesn't push it) so the article keeps full reading width. */}
       <button
-        className={"toc-fab" + (tocOpen ? " hidden" : "")}
-        aria-label="On this page"
+        className={"toc-fab" + (tocOpen ? " hidden" : (scrolling ? " peek" : ""))}
+        aria-label={"On this page — currently " + curLabel}
         onClick={() => setTocOpen(true)}
       >
         <span className="toc-fab-icon">≣</span>
-        <span className="toc-fab-label">Contents</span>
+        <span className="toc-fab-label">{curLabel}</span>
       </button>
       <div className={"toc-sheet-backdrop" + (tocOpen ? " show" : "")} onClick={() => setTocOpen(false)} />
       <aside className={"toc-sheet" + (tocOpen ? " open" : "")} role="dialog" aria-label="On this page">
