@@ -451,6 +451,13 @@ input, select { font-family: inherit; }
   align-items: center;
   transition: background 0.15s var(--ease);
 }
+/* Department rows carry an extra SRS-status dot between organ and severity, so
+   they have 6 cells (num · name · organ · srs-dot · severity · bookmark). The
+   base 5-column grid left the bookmark star with no track, wrapping it onto a
+   second line. Give these rows their own 6-column track set. */
+.disease-row.with-srs {
+  grid-template-columns: 36px 1fr 200px auto 120px 36px;
+}
 .disease-row:last-child { border-bottom: none; }
 .disease-row:hover { background: var(--bg-warm); }
 .disease-row .num {
@@ -2524,7 +2531,8 @@ ul.clean li::before {
   /* Disease list rows: drop the organ / severity / SRS-dot columns and keep
      just number · name · bookmark so the row fits a phone width. The name cell
      already carries the latin/organ subtitle, so no key info is lost. */
-  .disease-row {
+  .disease-row,
+  .disease-row.with-srs {
     grid-template-columns: 26px 1fr auto;
     gap: 12px;
     padding: 14px 4px;

@@ -271,7 +271,7 @@ function DeptView({ deptId, goto, bookmarks, toggle, srs }) {
           const srsData = srs[d.id] || { level: 0 };
           const due = !srsData.nextReview || new Date(srsData.nextReview) <= new Date();
           return (
-            <div key={d.id} className="disease-row" onClick={() => goto({ view: "detail", diseaseId: d.id, deptDiseases: diseases.map(x => x.id) })}>
+            <div key={d.id} className="disease-row with-srs" onClick={() => goto({ view: "detail", diseaseId: d.id, deptDiseases: diseases.map(x => x.id) })}>
               <div className="num">{String(i + 1).padStart(2, "0")}</div>
               <div className="name">
                 {d.name}
