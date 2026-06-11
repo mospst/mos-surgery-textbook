@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Netlify local state (not needed for GitHub Pages)
+.netlify/
+
+# Editor / agent local config
+.claude/
+
+# Node (none committed, but guard against accidental installs)
+node_modules/
