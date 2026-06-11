@@ -1181,9 +1181,9 @@ function CompareView({ goto }) {
         <h1 className="page-title">Compare diagnoses</h1>
         <p className="page-sub">Place two conditions side by side — useful for differentials.</p>
       </div>
-      <div style={{ display: "flex", gap: 16, marginBottom: 24, alignItems: "center" }}>
+      <div className="compare-picker" style={{ display: "flex", gap: 16, marginBottom: 24, alignItems: "center" }}>
         <Sel value={a} onChange={setA} />
-        <span style={{ color: "var(--ink-soft)", fontWeight: 500 }}>vs</span>
+        <span className="compare-vs" style={{ color: "var(--ink-soft)", fontWeight: 500 }}>vs</span>
         <Sel value={b} onChange={setB} />
       </div>
       <div className="compare-grid" style={{ "--cols": 2 }}>
