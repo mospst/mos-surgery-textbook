@@ -1336,6 +1336,33 @@ function ProcedureMode({ goto, initialProcedureId }) {
   const [q, setQ] = uS("");
   const validInitialId = PROCEDURES.some((p) => p.id === initialProcedureId) ? initialProcedureId : null;
   const [selectedId, setSelectedId] = uS(validInitialId || PROCEDURES[0]?.id);
+  const detailRef = uR(null);
+  // Set true only when the user taps a list row (not on initial mount, filter
+  // changes, or deep-links) so we scroll exactly when they expect it.
+  const scrollOnSelect = uR(false);
+
+  // On a phone the picker list sits *above* the detail, so tapping a row would
+  // otherwise leave you parked on the list with the (now-changed) detail far
+  // below. Auto-scroll the detail into view so the user doesn't have to. Only
+  // on mobile — on desktop the detail is already visible beside the list.
+  const selectProc = (id) => {
+    scrollOnSelect.current = true;
+    setSelectedId(id);
+  };
+
+  // Runs after React commits the new detail content, so the measurement below
+  // reflects the procedure the user just tapped.
+  uE(() => {
+    if (!scrollOnSelect.current) return;
+    scrollOnSelect.current = false;
+    if (!window.matchMedia("(max-width: 820px)").matches) return;
+    const el = detailRef.current;
+    if (!el) return;
+    const topbar = document.querySelector(".topbar");
+    const offset = (topbar ? topbar.offsetHeight : 0) + 8;
+    const y = window.scrollY + el.getBoundingClientRect().top - offset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }, [selectedId]);
 
   const filtered = uM(() => {
     const term = q.trim().toLowerCase();
@@ -1399,7 +1426,7 @@ function ProcedureMode({ goto, initialProcedureId }) {
         <div className="procedure-list">
           {filtered.length === 0 && <div className="empty">No procedures match this filter.</div>}
           {filtered.map((p) => (
-            <button key={p.id} className={`procedure-row ${selected?.id === p.id ? "active" : ""}`} onClick={() => setSelectedId(p.id)}>
+            <button key={p.id} className={`procedure-row ${selected?.id === p.id ? "active" : ""}`} onClick={() => selectProc(p.id)}>
               <span className="procedure-row-dept">{DEPARTMENTS.find((d) => d.id === p.dept)?.name}</span>
               <span className="procedure-row-name">{p.name}</span>
               <span className="procedure-row-disease">{p.disease}</span>
@@ -1408,7 +1435,7 @@ function ProcedureMode({ goto, initialProcedureId }) {
         </div>
 
         {selected && (
-          <div className="procedure-detail">
+          <div className="procedure-detail" ref={detailRef}>
             <div className="procedure-kicker">{deptName} · {selected.organ}</div>
             <h2>{selected.name}</h2>
             <p className="procedure-summary">{selected.summary}</p>
