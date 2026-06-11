@@ -1212,6 +1212,28 @@ function AlgorithmMode({ goto }) {
   const [q, setQ] = uS("");
   const [urgency, setUrgency] = uS("all");
   const [selectedId, setSelectedId] = uS(ALGORITHMS[0]?.id);
+  const detailRef = uR(null);
+  // True only on a user tap, so we scroll exactly when they expect it.
+  const scrollOnSelect = uR(false);
+
+  // On a phone the list stacks above the detail; tapping a row should bring the
+  // detail into view rather than leaving the user parked on the list.
+  const selectAlgo = (id) => {
+    scrollOnSelect.current = true;
+    setSelectedId(id);
+  };
+
+  uE(() => {
+    if (!scrollOnSelect.current) return;
+    scrollOnSelect.current = false;
+    if (!window.matchMedia("(max-width: 820px)").matches) return;
+    const el = detailRef.current;
+    if (!el) return;
+    const topbar = document.querySelector(".topbar");
+    const offset = (topbar ? topbar.offsetHeight : 0) + 8;
+    const y = window.scrollY + el.getBoundingClientRect().top - offset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }, [selectedId]);
 
   const filtered = uM(() => {
     const term = q.trim().toLowerCase();
@@ -1270,7 +1292,7 @@ function AlgorithmMode({ goto }) {
         <div className="algorithm-list">
           {filtered.length === 0 && <div className="empty">No algorithms match this filter.</div>}
           {filtered.map(a => (
-            <button key={a.id} className={`algorithm-row ${selected?.id === a.id ? "active" : ""}`} onClick={() => setSelectedId(a.id)}>
+            <button key={a.id} className={`algorithm-row ${selected?.id === a.id ? "active" : ""}`} onClick={() => selectAlgo(a.id)}>
               <span>{urgencyLabels[a.urgency] || a.urgency}</span>
               <b>{a.title}</b>
               <em>{a.scope}</em>
@@ -1279,7 +1301,7 @@ function AlgorithmMode({ goto }) {
         </div>
 
         {selected && (
-          <div className="algorithm-detail">
+          <div className="algorithm-detail" ref={detailRef}>
             <div className="algorithm-kicker">{selected.scope} · {urgencyLabels[selected.urgency] || selected.urgency}</div>
             <h2>{selected.title}</h2>
             <p className="algorithm-presentation">{selected.presentation}</p>
