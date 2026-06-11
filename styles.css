@@ -74,6 +74,8 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.003em;
 }
+/* Smooth in-page jumps (the "On this page" rail / TOC sheet scroll the window). */
+html { scroll-behavior: smooth; }
 
 /* Soft ambient gradient — barely there */
 body::before {
@@ -528,32 +530,62 @@ input, select { font-family: inherit; }
 .section-nav {
   position: sticky;
   top: 90px;
-  display: flex; flex-direction: column; gap: 1px;
+  display: flex; flex-direction: column;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  /* hide the rail's own scrollbar so it reads as a clean column */
+  scrollbar-width: none;
 }
-.section-nav a {
-  color: var(--ink-soft);
-  padding: 8px 12px;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.15s var(--ease);
-  border-radius: 8px;
-  letter-spacing: -0.005em;
-}
-.section-nav a:hover { color: var(--ink); background: rgba(0,0,0,0.04); }
-.section-nav a.active {
-  color: var(--accent);
-  background: var(--accent-soft);
-  font-weight: 600;
-}
+.section-nav::-webkit-scrollbar { width: 0; }
 .section-nav-head {
   font-size: 11px;
   color: var(--ink-soft);
   font-weight: 600;
-  margin: 0 12px 8px;
-  letter-spacing: -0.005em;
+  margin: 0 0 10px 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
+
+/* Apple-docs style "On this page" rail: a faint full-height track with a single
+   accent bar that slides to the active section, plus a soft row highlight. */
+.section-nav-list {
+  position: relative;
+  display: flex; flex-direction: column;
+}
+.section-nav-list::before {        /* faint track sitting behind every item */
+  content: "";
+  position: absolute; left: 0; top: 4px; bottom: 4px;
+  width: 2px; border-radius: 2px;
+  background: var(--rule);
+}
+.section-nav-bar {                 /* the accent bar that slides to the active row */
+  position: absolute; left: 0; top: 0; width: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: transform 0.32s var(--ease), height 0.32s var(--ease), opacity 0.2s var(--ease);
+  will-change: transform, height;
+  pointer-events: none;
+}
+.section-nav-link {
+  position: relative;
+  color: var(--ink-soft);
+  padding: 7px 10px 7px 16px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 7px;
+  letter-spacing: -0.005em;
+  transition: color 0.2s var(--ease), background 0.2s var(--ease);
+}
+.section-nav-link:hover { color: var(--ink); background: rgba(0,0,0,0.035); }
+.section-nav-link.active { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+
+/* Mobile floating "Contents" button + bottom sheet (declared here, shown only in
+   the ≤820px media query). The rail can't fit a phone, so the same TOC lives in
+   a thumb-reachable sheet and the article keeps full reading width. */
+.toc-fab { display: none; }
+.toc-sheet, .toc-sheet-backdrop { display: none; }
 
 .detail-section {
   margin-bottom: 64px;
@@ -2331,9 +2363,73 @@ ul.clean li::before {
     padding-left: 16px; padding-right: 16px;
   }
 
-  /* The detail page's sticky right-rail section nav is a desktop convenience —
-     hide it on mobile (breadcrumbs + scrolling cover navigation). */
+  /* The desktop right rail can't fit a phone, so hide it and surface the same
+     "On this page" TOC as a floating tab that opens a right-side panel. The
+     panel overlays the page (doesn't reflow it) so the article keeps full
+     reading width. */
   .section-nav { display: none !important; }
+
+  .toc-fab {
+    display: inline-flex; align-items: center; gap: 7px;
+    position: fixed;
+    right: 0;
+    bottom: calc(108px + env(safe-area-inset-bottom));
+    z-index: 50;
+    padding: 9px 15px 9px 13px;
+    border: none;
+    border-top-left-radius: 999px; border-bottom-left-radius: 999px;
+    background: var(--accent); color: #fff;
+    font-size: 12.5px; font-weight: 600; letter-spacing: -0.005em;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.24);
+    transition: transform 0.22s var(--ease), opacity 0.22s var(--ease);
+  }
+  .toc-fab:active { transform: scale(0.96); }
+  .toc-fab.hidden { opacity: 0; pointer-events: none; transform: translateX(14px); }
+  .toc-fab-icon { font-size: 15px; line-height: 1; }
+
+  .toc-sheet-backdrop {
+    display: block;
+    position: fixed; inset: 0; z-index: 65;
+    background: rgba(0,0,0,0.32);
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s var(--ease);
+  }
+  .toc-sheet-backdrop.show { opacity: 1; pointer-events: auto; }
+
+  .toc-sheet {
+    display: flex; flex-direction: column;
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: 276px; max-width: 82vw;
+    z-index: 70;
+    background: var(--bg-card);
+    box-shadow: -14px 0 44px rgba(0,0,0,0.22);
+    padding: max(20px, env(safe-area-inset-top)) 18px calc(20px + env(safe-area-inset-bottom));
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
+    transform: translateX(100%);
+    transition: transform 0.32s var(--ease);
+  }
+  .toc-sheet.open { transform: translateX(0); }
+  .toc-sheet-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.02em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+  .toc-sheet-close {
+    border: none; background: var(--bg-tint); color: var(--ink-mute);
+    width: 30px; height: 30px; border-radius: 50%;
+    font-size: 13px; line-height: 1; flex-shrink: 0;
+  }
+  /* Bigger touch targets + a slightly heavier accent bar in the panel. */
+  .toc-sheet .section-nav-link {
+    padding: 11px 10px 11px 18px;
+    font-size: 14.5px;
+    border-radius: 9px;
+  }
+  .toc-sheet .section-nav-bar { width: 3px; }
+
+  /* Smooth-scroll target lands just below the (shorter) mobile topbar. */
+  .detail-section { scroll-margin-top: 76px; }
 
   /* Definition tables (Classification, Diagnostic Criteria, Guidelines) are a
      200px | 1fr two-column grid on desktop. Forcing them to a single column

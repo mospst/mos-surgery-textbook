@@ -297,6 +297,11 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
   const proc = PROCEDURES.find((p) => p.diseaseId === diseaseId);
   const [activeStep, setActiveStep] = uS(null);
   const [activeSec, setActiveSec] = uS("overview");
+  const [present, setPresent] = uS([]);     // sections that actually rendered
+  const [tocOpen, setTocOpen] = uS(false);  // mobile "On this page" panel
+  const [navBar, setNavBar] = uS({ top: 0, height: 0 }); // sliding accent-bar geometry
+  const navListRef = uR(null);              // desktop rail list
+  const mobileListRef = uR(null);           // iPhone panel list
 
   const deptList = deptDiseases || DISEASES.filter((x) => x.dept === d.dept).map((x) => x.id);
   const curIdx = deptList.indexOf(diseaseId);
@@ -332,7 +337,40 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
     return () => { window.removeEventListener("scroll", handler, true); if (c) c.removeEventListener("scroll", handler); };
   }, [diseaseId]);
 
-  uE(() => { setActiveSec("overview"); setActiveStep(null); }, [diseaseId]);
+  uE(() => { setActiveSec("overview"); setActiveStep(null); setTocOpen(false); }, [diseaseId]);
+
+  // Build the "On this page" list from the sections that actually rendered, so we
+  // never link to an absent section (e.g. a disease with no scoring block).
+  uE(() => {
+    setPresent(sections.filter(([id]) => document.getElementById("sec-" + id)));
+  }, [diseaseId]);
+
+  // Slide the accent bar to the active link (Apple-docs style). Measure whichever
+  // list is visible: the desktop rail, or the iPhone panel on narrow screens.
+  uE(() => {
+    const onPhone = typeof window !== "undefined" && window.matchMedia("(max-width: 820px)").matches;
+    const list = onPhone ? mobileListRef.current : navListRef.current;
+    if (!list) return;
+    const el = list.querySelector(`a[data-sec="${activeSec}"]`);
+    if (el && el.offsetParent) setNavBar({ top: el.offsetTop, height: el.offsetHeight });
+  }, [activeSec, present, tocOpen]);
+
+  // Lock body scroll while the mobile panel is open so the page doesn't slide
+  // behind it (matches the nav-drawer behaviour).
+  uE(() => {
+    if (tocOpen) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => { document.body.style.overflow = prev; };
+    }
+  }, [tocOpen]);
+
+  const scrollToSec = (id) => {
+    const el = document.getElementById("sec-" + id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    setActiveSec(id);
+    setTocOpen(false);
+  };
 
   const diseaseQs = QUIZ_BANK.filter((q) => q.disease === diseaseId);
   const deptQs = QUIZ_BANK.filter((q) => q.dept === d.dept && q.disease !== diseaseId);
@@ -714,21 +752,45 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
         </div>
       </div>
 
-      {/* RIGHT SIDEBAR */}
+      {/* RIGHT SIDEBAR — sticky "On this page" rail (desktop / wide screens) */}
       <aside className="section-nav">
         <div className="section-nav-head">On this page</div>
-        {sections.map(([id, lbl]) => (
-          <a key={id} className={activeSec === id ? "active" : ""} onClick={() => {
-            const el = document.getElementById("sec-" + id);
-            if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-          }}>{lbl}</a>
-        ))}
+        <nav className="section-nav-list" ref={navListRef}>
+          <span className="section-nav-bar" style={{ transform: `translateY(${navBar.top}px)`, height: navBar.height + "px", opacity: navBar.height ? 1 : 0 }} />
+          {present.map(([id, lbl]) => (
+            <a key={id} data-sec={id} className={"section-nav-link" + (activeSec === id ? " active" : "")} onClick={() => scrollToSec(id)}>{lbl}</a>
+          ))}
+        </nav>
         <div style={{ marginTop: 20 }}>
           <SrsWidget id={d.id} srs={srs} review={review} />
         </div>
         <div style={{ marginTop: 12 }}>
           <NotesWidget id={d.id} notes={notes} setNote={setNote} />
         </div>
+      </aside>
+
+      {/* iPHONE — floating "Contents" tab + right-side TOC panel. Overlays the
+          page (doesn't push it) so the article keeps full reading width. */}
+      <button
+        className={"toc-fab" + (tocOpen ? " hidden" : "")}
+        aria-label="On this page"
+        onClick={() => setTocOpen(true)}
+      >
+        <span className="toc-fab-icon">≣</span>
+        <span className="toc-fab-label">Contents</span>
+      </button>
+      <div className={"toc-sheet-backdrop" + (tocOpen ? " show" : "")} onClick={() => setTocOpen(false)} />
+      <aside className={"toc-sheet" + (tocOpen ? " open" : "")} role="dialog" aria-label="On this page">
+        <div className="toc-sheet-head">
+          <span>On this page</span>
+          <button className="toc-sheet-close" aria-label="Close" onClick={() => setTocOpen(false)}>✕</button>
+        </div>
+        <nav className="section-nav-list" ref={mobileListRef}>
+          <span className="section-nav-bar" style={{ transform: `translateY(${navBar.top}px)`, height: navBar.height + "px", opacity: navBar.height ? 1 : 0 }} />
+          {present.map(([id, lbl]) => (
+            <a key={id} data-sec={id} className={"section-nav-link" + (activeSec === id ? " active" : "")} onClick={() => scrollToSec(id)}>{lbl}</a>
+          ))}
+        </nav>
       </aside>
     </div>
   );
