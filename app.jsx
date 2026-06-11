@@ -32,6 +32,7 @@ function App() {
   const [progress, setProgress] = useLocalState("sk_progress", {});
   const [searchOpen, setSearchOpen] = uSt(false);
   const [searchQ, setSearchQ] = uSt("");
+  const [navOpen, setNavOpen] = uSt(false); // mobile off-canvas sidebar drawer
   const { srs, review, isDue } = useSRS();
   const { notes, setNote } = useNotes();
 
@@ -53,6 +54,7 @@ function App() {
     setRoute(r);
     setSearchOpen(false);
     setSearchQ("");
+    setNavOpen(false); // close the mobile drawer when navigating
     setTimeout(() => {
       const c = document.querySelector(".content");
       if (c) c.scrollTo(0, 0);
@@ -110,8 +112,13 @@ function App() {
 
   return (
     <div className="app">
+      {/* Mobile drawer backdrop — tap to close */}
+      <div
+        className={`nav-backdrop ${navOpen ? "show" : ""}`}
+        onClick={() => setNavOpen(false)}
+      />
       {/* SIDEBAR */}
-      <aside className="sidebar">
+      <aside className={`sidebar ${navOpen ? "open" : ""}`}>
         <div className="brand" onClick={() => goto({ view: "home" })} style={{ cursor: "pointer" }}>
           <div className="brand-mark">S</div>
           <div className="brand-text">
@@ -191,6 +198,13 @@ function App() {
       {/* MAIN */}
       <div className="main">
         <div className="topbar">
+          <button
+            className="nav-toggle"
+            aria-label="Open menu"
+            onClick={() => setNavOpen((o) => !o)}
+          >
+            ☰
+          </button>
           <div className="crumbs">
             {crumb.map(([label, target], i) => (
               <React.Fragment key={i}>

@@ -100,7 +100,7 @@ function buildHtml(compiledJs) {
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=1280" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="build-mode" content="precompiled-jsx" />
   <title>Surgical Knowledge — Compendium</title>
   <meta name="theme-color" content="#0d5c63" />
