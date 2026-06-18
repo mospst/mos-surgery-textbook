@@ -723,6 +723,27 @@ const SECTION_COMMENTS = {
   'mis-principles':   '  // ══════════════════════ MINIMALLY INVASIVE SURGERY ══════════════════════',
 };
 
+// ── Auto-generate reverse "Related" links from MIS topics ─────────────────
+// tmp_mis.js is the single source of truth: each MIS topic lists the existing
+// procedures it relates to (forward links). Here we walk those forward links and
+// add the mirror image on the target disease, so e.g. Cholecystitis gains a
+// "see Principles of Laparoscopy" card pointing back into the MIS department.
+// Re-using the forward note keeps the relationship description identical in both
+// directions, and the dedup check makes this idempotent across rebuilds.
+let reverseLinks = 0;
+for (const src of Object.values(diseaseMap)) {
+  if (src.dept !== 'mis' || !Array.isArray(src.related)) continue;
+  for (const r of src.related) {
+    const target = diseaseMap[r.id];
+    if (!target || target.dept === 'mis') continue; // only mirror onto non-MIS diseases
+    if (!Array.isArray(target.related)) target.related = [];
+    if (target.related.some(x => x && x.id === src.id)) continue; // already linked
+    target.related.push({ id: src.id, note: r.note });
+    reverseLinks++;
+  }
+}
+console.log(`Reverse MIS links injected: ${reverseLinks}`);
+
 // ── Build DISEASES array ───────────────────────────────────────────────────
 const parts = [];
 for (const id of ID_ORDER) {

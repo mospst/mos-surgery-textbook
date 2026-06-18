@@ -4796,6 +4796,28 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "cholecystitis"
       }
+    ],
+    related: [
+      {
+        id: "mis-principles",
+        note: "Laparoscopic cholecystectomy — the index MIS operation"
+      },
+      {
+        id: "lap-access",
+        note: "Standard 4-port access for laparoscopic cholecystectomy"
+      },
+      {
+        id: "mis-energy",
+        note: "Hook-diathermy dissection of Calot's triangle — thermal bile-duct injury risk"
+      },
+      {
+        id: "mis-complications",
+        note: "Bile-duct and bleeding complications of laparoscopic cholecystectomy"
+      },
+      {
+        id: "conversion-to-open",
+        note: "Difficult cholecystectomy: critical view, subtotal, or convert"
+      }
     ]
   },
 
@@ -5966,6 +5988,12 @@ const DISEASES = [
         url: "https://www.google.com/search?q=pancreatic%20cancer%20site%3Awebpath.med.utah.edu",
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "pancreatic cancer"
+      }
+    ],
+    related: [
+      {
+        id: "robotic-surgery",
+        note: "Robotic pancreatic and HPB resections in selected centres"
       }
     ]
   },
@@ -10708,6 +10736,20 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "appendicitis"
       }
+    ],
+    related: [
+      {
+        id: "mis-principles",
+        note: "Laparoscopic appendicectomy — the commonest emergency MIS case"
+      },
+      {
+        id: "lap-access",
+        note: "3-port access for laparoscopic appendicectomy"
+      },
+      {
+        id: "diagnostic-laparoscopy",
+        note: "Confirm and treat appendicitis at the same sitting"
+      }
     ]
   },
 
@@ -10982,6 +11024,12 @@ const DISEASES = [
         url: "https://www.google.com/search?q=Diverticulitis%20site%3Awebpath.med.utah.edu",
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Diverticulitis"
+      }
+    ],
+    related: [
+      {
+        id: "conversion-to-open",
+        note: "Hostile pelvis in complicated diverticular disease"
       }
     ]
   },
@@ -11282,6 +11330,24 @@ const DISEASES = [
         url: "https://www.google.com/search?q=colorectal%20cancer%20site%3Awebpath.med.utah.edu",
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "colorectal cancer"
+      }
+    ],
+    related: [
+      {
+        id: "mis-energy",
+        note: "Vessel-sealing of the mesenteric pedicle in laparoscopic colectomy"
+      },
+      {
+        id: "robotic-surgery",
+        note: "Robotic TME for rectal cancer in the narrow pelvis"
+      },
+      {
+        id: "conversion-to-open",
+        note: "Conversion in laparoscopic colectomy for bulky/fixed tumours"
+      },
+      {
+        id: "therapeutic-endoscopy",
+        note: "Colonic stenting as a bridge to surgery in obstruction"
       }
     ]
   },
@@ -17493,6 +17559,12 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "gastric cancer"
       }
+    ],
+    related: [
+      {
+        id: "diagnostic-laparoscopy",
+        note: "Staging laparoscopy detects occult peritoneal metastases"
+      }
     ]
   },
 
@@ -17769,6 +17841,12 @@ const DISEASES = [
         url: "https://www.google.com/search?q=upper%20gastrointestinal%20bleeding%20site%3Awebpath.med.utah.edu",
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "upper gastrointestinal bleeding"
+      }
+    ],
+    related: [
+      {
+        id: "therapeutic-endoscopy",
+        note: "Endoscopic haemostasis for upper-GI bleeding"
       }
     ]
   },
@@ -20186,6 +20264,12 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Barrett oesophagus"
       }
+    ],
+    related: [
+      {
+        id: "therapeutic-endoscopy",
+        note: "EMR/ESD and ablation for Barrett's dysplasia / early cancer"
+      }
     ]
   },
 
@@ -22196,6 +22280,12 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Acute Abdomen"
       }
+    ],
+    related: [
+      {
+        id: "diagnostic-laparoscopy",
+        note: "Diagnostic laparoscopy in the equivocal acute abdomen"
+      }
     ]
   },
 
@@ -22671,6 +22761,12 @@ const DISEASES = [
         url: "https://www.google.com/search?q=Gastric%20Outlet%20Obstruction%20site%3Awebpath.med.utah.edu",
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Gastric Outlet Obstruction"
+      }
+    ],
+    related: [
+      {
+        id: "therapeutic-endoscopy",
+        note: "Enteral SEMS for malignant gastric-outlet obstruction"
       }
     ]
   },
@@ -24406,6 +24502,12 @@ const DISEASES = [
         url: "https://www.google.com/search?q=thyroid%20cancer%20site%3Awebpath.med.utah.edu",
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "thyroid cancer"
+      }
+    ],
+    related: [
+      {
+        id: "mis-energy",
+        note: "Energy control near the recurrent laryngeal nerve"
       }
     ]
   },
@@ -29373,6 +29475,16 @@ const DISEASES = [
         url: "https://www.google.com/search?q=abdominal%20trauma%20site%3Aimaios.com",
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "abdominal trauma"
+      }
+    ],
+    related: [
+      {
+        id: "lap-access",
+        note: "Why a hostile/scarred abdomen may mandate open entry"
+      },
+      {
+        id: "diagnostic-laparoscopy",
+        note: "When direct vision is not enough — proceed to laparotomy"
       }
     ]
   },
@@ -38002,6 +38114,20 @@ const DISEASES = [
         tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
         query: "inguinal hernia"
       }
+    ],
+    related: [
+      {
+        id: "mis-principles",
+        note: "Laparoscopic inguinal hernia repair (TAPP / TEP)"
+      },
+      {
+        id: "mis-complications",
+        note: "Mesh and fascial-closure principles to prevent port-site hernia"
+      },
+      {
+        id: "robotic-surgery",
+        note: "Robotic TAPP / complex abdominal-wall reconstruction"
+      }
     ]
   },
 
@@ -38773,6 +38899,12 @@ const DISEASES = [
         url: "https://radiopaedia.org/search?q=Incisional%20Hernia",
         tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
         query: "Incisional Hernia"
+      }
+    ],
+    related: [
+      {
+        id: "mis-complications",
+        note: "Port-site hernia is a form of incisional hernia at a trocar site"
       }
     ]
   },
