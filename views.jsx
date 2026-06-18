@@ -321,7 +321,8 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
     ["mnemonics",   "09 Mnemonics"],
     ["anatomy",     "10 Anatomy"],
     ["videos",      "11 Videos"],
-    ["quiz",        "12 Quiz"],
+    ["related",     "12 Related"],
+    ["quiz",        "13 Quiz"],
   ];
 
   uE(() => {
@@ -748,9 +749,38 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
           </div>
         )}
 
+        {/* RELATED PROCEDURES & DISEASES (cross-references) */}
+        {(() => {
+          const rel = (d.related || [])
+            .map((r) => ({ ...r, target: DISEASES.find((x) => x.id === r.id) }))
+            .filter((r) => r.target);
+          if (rel.length === 0) return null;
+          return (
+            <div className="detail-section" id="sec-related">
+              <SectionHead num="12" title="Related Procedures & Diseases" />
+              <div className="related-grid">
+                {rel.map((r) => {
+                  const dep = DEPARTMENTS.find((x) => x.id === r.target.dept);
+                  return (
+                    <button
+                      key={r.id}
+                      className="related-card"
+                      onClick={() => goto({ view: "detail", diseaseId: r.id })}
+                    >
+                      <div className="related-card-eyebrow">{dep ? dep.name : r.target.dept}</div>
+                      <div className="related-card-title">{r.target.name} →</div>
+                      {r.note && <div className="related-card-note">{r.note}</div>}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+
         {/* QUIZ */}
         <div className="detail-section" id="sec-quiz">
-          <SectionHead num="12" title="Self Assessment" />
+          <SectionHead num="13" title="Self Assessment" />
           <QuizModule
             questions={detailQuizQs}
             progress={progress}

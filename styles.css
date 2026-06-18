@@ -2157,6 +2157,25 @@ ul.clean li::before {
 .mnemonic-name { font-size: 13px; font-weight: 700; color: var(--blue); margin-bottom: 8px; letter-spacing: -0.005em; }
 .mnemonic-text { font-size: 13.5px; line-height: 1.6; color: var(--ink-mute); white-space: pre-line; font-family: var(--mono); }
 
+/* ─── RELATED PROCEDURES & DISEASES (cross-references) ──────────────────── */
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.related-card {
+  display: block;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: var(--r-md);
+  padding: 16px 18px;
+  font: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.related-card:hover { border-color: var(--teal); box-shadow: var(--shadow-sm); transform: translateY(-1px); }
+.related-card-eyebrow { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); margin-bottom: 6px; }
+.related-card-title { font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 6px; }
+.related-card-note { font-size: 12.5px; line-height: 1.5; color: var(--ink-soft); }
+
 /* ─── IMAGE / VIDEO RESOURCES ───────────────────────────────────────────── */
 .image-resource-grid,
 .video-resource-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }

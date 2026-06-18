@@ -105,6 +105,7 @@ const TMP_FILES = [
   'tmp_hernia2.js',
   'tmp_atls.js',
   'tmp_tms.js',      // TeachMeSurgery reference additions (10 new entries)
+  'tmp_mis.js',      // Minimally Invasive Surgery department (8 principles topics)
 ];
 
 // ── Hardcoded ID order (all 187 diseases in display sequence) ─────────────
@@ -154,6 +155,9 @@ const ID_ORDER = [
   // SKIN & SOFT TISSUE (9)
   'melanoma','bcc','scc-skin','hidradenitis','liposarcoma','leiomyosarcoma',
   'desmoid','merkel-cell','kaposi',
+  // MINIMALLY INVASIVE SURGERY (8)
+  'mis-principles','lap-access','mis-energy','mis-complications','robotic-surgery',
+  'diagnostic-laparoscopy','conversion-to-open','therapeutic-endoscopy',
 ];
 
 // ── Load all diseases ─────────────────────────────────────────────────────
@@ -631,6 +635,7 @@ const DEPARTMENTS_BLOCK = `const DEPARTMENTS = [
   { id:"thoracic",   name:"Thoracic",                glyph:"◌" },
   { id:"hernia",     name:"Hernia & Abdominal Wall", glyph:"◈" },
   { id:"softtissue", name:"Skin & Soft Tissue",      glyph:"◫" },
+  { id:"mis",        name:"Minimally Invasive Surgery", glyph:"◔", subtitle:"Laparoscopy, Robotics & Endoscopy" },
 ];`;
 
 // ── Extract stubs from data.jsx (fallback for IDs not in any tmp file) ────
@@ -715,6 +720,7 @@ const SECTION_COMMENTS = {
   'lung-cancer':      '  // ══════════════════════ THORACIC ══════════════════════',
   'inguinal-hernia':  '  // ══════════════════════ HERNIA & ABDOMINAL WALL ══════════════════════',
   'melanoma':         '  // ══════════════════════ SKIN & SOFT TISSUE ══════════════════════',
+  'mis-principles':   '  // ══════════════════════ MINIMALLY INVASIVE SURGERY ══════════════════════',
 };
 
 // ── Build DISEASES array ───────────────────────────────────────────────────
