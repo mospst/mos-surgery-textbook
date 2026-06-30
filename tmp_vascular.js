@@ -247,7 +247,7 @@
     definition:"Tortuous, dilated, palpable subcutaneous veins >3mm diameter in the standing position, caused by incompetent valves in the superficial venous system.",
     epidemiology:"Prevalence 25–30% women, 15% men. Increases with age, pregnancy, prolonged standing, and positive family history. Estimated 1–2% of adults have venous ulceration (C6).",
     pathophysiology:"Primary valvular incompetence at SFJ or small saphenous junction allows reflux, causing hydrostatic pressure to increase in superficial veins. Venous hypertension leads to skin changes, lipodermatosclerosis, and ulceration over time.",
-    classification:[{label:"C0–C1",note:"No/minor visible disease — telangiectasia/reticular veins"},{label:"C2",note:"Symptomatic varicose veins — aching, heaviness, itching"},{label:"C3–C4",note:"Oedema, skin changes — lipodermatosclerosis, haemosiderin deposition"},{label:"C5–C6",note:"Healed or active venous ulceration — requires treatment"}]
+    classification:[{label:"CEAP C0–C1",note:"No/minor visible disease — telangiectasia/reticular veins (CEAP clinical class)"},{label:"CEAP C2",note:"Symptomatic varicose veins — aching, heaviness, itching"},{label:"CEAP C3–C4",note:"Oedema, skin changes — lipodermatosclerosis, haemosiderin deposition"},{label:"CEAP C5–C6",note:"Healed or active venous ulceration — requires treatment"}]
   },
   diagnosis:{
     history:["Aching, heaviness, itch, leg cramps — worse at end of day and in heat","Visible prominent veins; cosmetic concern","Previous DVT, phlebitis, pregnancy","Family history"],

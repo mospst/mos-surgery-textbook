@@ -155,10 +155,11 @@ window._TMP_COLORECTAL2 = [
     epidemiology:"Prevalence 1–3/100 000; predominantly affects elderly women (F:M = 6:1); <40 years: male predominance (associated with psychiatric disease/constipation).",
     pathophysiology:"Redundant sigmoid colon, deep Douglas' pouch, weak pelvic floor, lax lateral rectal ligaments → progressive intussusception of rectum → full-thickness prolapse. Chronic prolapse → sphincter stretch → incontinence (pudendal nerve neuropathy).",
     classification:[
-      {label:"Grade I",note:"Internal intussusception (ODS — obstructive defaecation syndrome); no external prolapse"},
-      {label:"Grade II",note:"Prolapse to but not through anal sphincter"},
-      {label:"Grade III",note:"External prolapse reducible"},
-      {label:"Grade IV",note:"Irreducible prolapse; risk of strangulation"}
+      {label:"Clinical Grade I",note:"Internal intussusception (ODS — obstructive defaecation syndrome); no external prolapse"},
+      {label:"Clinical Grade II",note:"Prolapse to but not through anal sphincter"},
+      {label:"Clinical Grade III",note:"External prolapse reducible"},
+      {label:"Clinical Grade IV",note:"Irreducible prolapse; risk of strangulation"},
+      {label:"Oxford Rectal Prolapse Grade (proctography)",note:"Radiological I–V scale on defaecating proctography: I–II recto-rectal intussusception, III–IV recto-anal intussusception, V overt external prolapse"}
     ]
   },
   diagnosis:{

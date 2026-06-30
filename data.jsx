@@ -2267,19 +2267,19 @@ const DISEASES = [
       pathophysiology: "Primary valvular incompetence at SFJ or small saphenous junction allows reflux, causing hydrostatic pressure to increase in superficial veins. Venous hypertension leads to skin changes, lipodermatosclerosis, and ulceration over time.",
       classification: [
         {
-          label: "C0–C1",
-          note: "No/minor visible disease — telangiectasia/reticular veins"
+          label: "CEAP C0–C1",
+          note: "No/minor visible disease — telangiectasia/reticular veins (CEAP clinical class)"
         },
         {
-          label: "C2",
+          label: "CEAP C2",
           note: "Symptomatic varicose veins — aching, heaviness, itching"
         },
         {
-          label: "C3–C4",
+          label: "CEAP C3–C4",
           note: "Oedema, skin changes — lipodermatosclerosis, haemosiderin deposition"
         },
         {
-          label: "C5–C6",
+          label: "CEAP C5–C6",
           note: "Healed or active venous ulceration — requires treatment"
         }
       ]
@@ -10788,7 +10788,11 @@ const DISEASES = [
       pathophysiology: "Mucosal herniation through muscular wall at sites of nutrient artery penetration (false diverticula). Increased intraluminal pressure + low-fibre diet. Obstructed neck → bacterial overgrowth → microperformation → pericolic inflammation → abscess → free perforation.",
       classification: [
         {
-          label: "Hinchey I",
+          label: "Modified Hinchey 0 / Ia",
+          note: "Stages the original Hinchey omits — 0 = mild clinical diverticulitis; Ia = confined pericolic inflammation/phlegmon, no abscess"
+        },
+        {
+          label: "Hinchey I (Ib)",
           note: "Pericolic or mesenteric abscess"
         },
         {
@@ -10802,6 +10806,10 @@ const DISEASES = [
         {
           label: "Hinchey IV",
           note: "Generalised faecal peritonitis — free perforation with faecal content"
+        },
+        {
+          label: "WSES CT classification",
+          note: "Maps CT findings to uncomplicated vs complicated (stage 1a–4) to guide non-operative vs operative care"
         }
       ]
     },
@@ -11069,19 +11077,19 @@ const DISEASES = [
       pathophysiology: "CIN pathway (85%): APC → KRAS → SMAD4 → TP53. MSI/MMR-deficient pathway (15%): MLH1 hypermethylation (sporadic) or germline MMR mutation (Lynch). Villous polyps have higher malignancy risk (40%) than tubular (5%).",
       classification: [
         {
-          label: "Stage I",
+          label: "TNM/AJCC 8th — Stage I (Dukes A)",
           note: "T1–T2 N0 M0; 5-year survival >90%"
         },
         {
-          label: "Stage II",
+          label: "TNM/AJCC 8th — Stage II (Dukes B)",
           note: "T3–T4 N0 M0; 5-year survival 70–85%"
         },
         {
-          label: "Stage III",
+          label: "TNM/AJCC 8th — Stage III (Dukes C)",
           note: "Any T, N1–N2, M0; 5-year survival 40–60%; adjuvant chemotherapy indicated"
         },
         {
-          label: "Stage IV",
+          label: "TNM/AJCC 8th — Stage IV (Dukes D)",
           note: "Any T, any N, M1; 5-year survival 5–15% overall; resectable liver mets 30–50%"
         }
       ]
@@ -11386,20 +11394,24 @@ const DISEASES = [
       pathophysiology: "Redundant sigmoid colon, deep Douglas' pouch, weak pelvic floor, lax lateral rectal ligaments → progressive intussusception of rectum → full-thickness prolapse. Chronic prolapse → sphincter stretch → incontinence (pudendal nerve neuropathy).",
       classification: [
         {
-          label: "Grade I",
+          label: "Clinical Grade I",
           note: "Internal intussusception (ODS — obstructive defaecation syndrome); no external prolapse"
         },
         {
-          label: "Grade II",
+          label: "Clinical Grade II",
           note: "Prolapse to but not through anal sphincter"
         },
         {
-          label: "Grade III",
+          label: "Clinical Grade III",
           note: "External prolapse reducible"
         },
         {
-          label: "Grade IV",
+          label: "Clinical Grade IV",
           note: "Irreducible prolapse; risk of strangulation"
+        },
+        {
+          label: "Oxford Rectal Prolapse Grade (proctography)",
+          note: "Radiological I–V scale on defaecating proctography: I–II recto-rectal intussusception, III–IV recto-anal intussusception, V overt external prolapse"
         }
       ]
     },
@@ -11657,19 +11669,19 @@ const DISEASES = [
       pathophysiology: "Sliding downward of anal cushions (rich vascular sinusoids in right anterior, right posterior, left lateral positions). Engorgement + degeneration of the Treitz muscle (suspensory ligament) → prolapse. Internal: above dentate line → columnar epithelium → painless bleeding. External: below dentate line → squamous epithelium → painful if thrombosed.",
       classification: [
         {
-          label: "Grade I",
+          label: "Goligher Grade I",
           note: "Bleed but do not prolapse"
         },
         {
-          label: "Grade II",
+          label: "Goligher Grade II",
           note: "Prolapse on defaecation but reduce spontaneously"
         },
         {
-          label: "Grade III",
+          label: "Goligher Grade III",
           note: "Prolapse requiring manual reduction"
         },
         {
-          label: "Grade IV",
+          label: "Goligher Grade IV",
           note: "Permanently prolapsed, irreducible; risk of strangulation"
         }
       ]
@@ -13832,15 +13844,15 @@ const DISEASES = [
       pathophysiology: "Dysregulated mucosal immune response to commensal bacteria in genetically susceptible individuals → TH2/TH17-mediated mucosal inflammation → crypt abscesses → mucosal ulceration. Limited to mucosa and submucosa. Disrupted epithelial barrier (goblet cell depletion).",
       classification: [
         {
-          label: "Proctitis",
+          label: "Montreal E1 — Proctitis",
           note: "Confined to rectum; 30–50% of UC; good prognosis; topical therapy effective"
         },
         {
-          label: "Left-sided colitis (distal UC)",
+          label: "Montreal E2 — Left-sided colitis (distal UC)",
           note: "Extends to splenic flexure; 30%"
         },
         {
-          label: "Pancolitis",
+          label: "Montreal E3 — Pancolitis (extensive)",
           note: "Extends beyond splenic flexure; 20%; highest CRC risk and surgical rates"
         }
       ]
@@ -19774,20 +19786,24 @@ const DISEASES = [
       pathophysiology: "KIT (CD117) or PDGFRA gain-of-function mutation → constitutive tyrosine kinase activation → uncontrolled cell proliferation. KIT: exon 11 (most common, best TKI response), exon 9 (needs higher imatinib dose), exon 13, 17. PDGFRA D842V: imatinib-resistant (avapritinib).",
       classification: [
         {
-          label: "Very low risk",
+          label: "Modified NIH — Very low risk",
           note: "<2 cm, <5 mitoses/50 HPF — gastric location; watch-and-wait possible for <2 cm"
         },
         {
-          label: "Low risk",
+          label: "Modified NIH — Low risk",
           note: "2–5 cm, <5 mitoses/50 HPF — resect"
         },
         {
-          label: "Intermediate risk",
+          label: "Modified NIH — Intermediate risk",
           note: "<5 cm, 6–10 mitoses/50 HPF; or 5–10 cm, <5 mitoses — resect + consider adjuvant"
         },
         {
-          label: "High risk",
+          label: "Modified NIH — High risk",
           note: ">5 cm, >5 mitoses; or any size with >10 mitoses; tumour rupture — adjuvant imatinib 3 years"
+        },
+        {
+          label: "AFIP / Miettinen criteria",
+          note: "Alternative prognostic scheme combining size, mitotic count AND site (gastric GISTs behave better than small-bowel of equal size) to predict progression risk"
         }
       ]
     },
@@ -20039,12 +20055,16 @@ const DISEASES = [
       pathophysiology: "Chronic acid + bile reflux → squamous epithelial injury → incomplete repair by columnar metaplasia (derived from gastric stem cells or sub-mucosal glands). CDX2 transcription factor drives intestinal differentiation. Progression: IM → LGD (SOX2 loss) → HGD (TP53 mutation) → intramucosal carcinoma → submucosal invasion.",
       classification: [
         {
+          label: "Prague C&M criteria",
+          note: "Standardised endoscopic report: C = circumferential extent (cm), M = maximal extent (cm) of columnar-lined oesophagus above the GEJ"
+        },
+        {
           label: "Short segment Barrett's (<3 cm)",
-          note: "1–3 cm above GEJ; lower OAC risk; less intensive surveillance"
+          note: "Prague M1–<3 cm above GEJ; lower OAC risk; less intensive surveillance"
         },
         {
           label: "Long segment Barrett's (≥3 cm)",
-          note: "More extensive columnar metaplasia; higher OAC risk; more intensive surveillance"
+          note: "Prague M≥3 cm; more extensive columnar metaplasia; higher OAC risk; more intensive surveillance"
         },
         {
           label: "Ultra-short segment Barrett's (<1 cm)",
@@ -31104,6 +31124,10 @@ const DISEASES = [
         {
           label: "VS: most unstable",
           note: "complete disruption anterior + posterior pelvic ring"
+        },
+        {
+          label: "Tile classification",
+          note: "A: stable; B: rotationally unstable but vertically stable (open-book/lateral compression); C: rotationally AND vertically unstable"
         }
       ]
     },
@@ -37905,6 +37929,10 @@ const DISEASES = [
         {
           label: "EHS Classification",
           note: "P (primary), R (recurrent); U (unilateral), B (bilateral); I/II/III by size"
+        },
+        {
+          label: "Nyhus Classification",
+          note: "Type I: indirect, normal ring; Type II: indirect, dilated ring, intact floor; Type IIIa: direct; Type IIIb: indirect with floor defect (incl. pantaloon/large); Type IV: recurrent (a–d)"
         }
       ]
     },

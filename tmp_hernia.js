@@ -31,7 +31,8 @@ const HERNIA_DISEASES = [
       "Combined (pantaloon): both direct and indirect components",
       "Complete: extends into scrotum",
       "Incomplete: within inguinal canal only",
-      "EHS Classification: P (primary), R (recurrent); U (unilateral), B (bilateral); I/II/III by size"
+      "EHS Classification: P (primary), R (recurrent); U (unilateral), B (bilateral); I/II/III by size",
+      "Nyhus Classification — Type I: indirect, normal ring; Type II: indirect, dilated ring, intact floor; Type IIIa: direct; Type IIIb: indirect with floor defect (incl. pantaloon/large); Type IV: recurrent (a–d)"
     ]
   },
   diagnosis: {

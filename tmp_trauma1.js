@@ -880,7 +880,8 @@ const TRAUMA_DISEASES_1 = [
     classification: [
       "Young-Burgess Classification: LC (lateral compression), APC (anteroposterior compression), VS (vertical shear), CM (combined mechanism)",
       "APC Type II/III (open book): unstable — large pelvic volume increase; major haemorrhage risk",
-      "VS: most unstable — complete disruption anterior + posterior pelvic ring"
+      "VS: most unstable — complete disruption anterior + posterior pelvic ring",
+      "Tile classification — A: stable; B: rotationally unstable but vertically stable (open-book/lateral compression); C: rotationally AND vertically unstable"
     ]
   },
   diagnosis: {

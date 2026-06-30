@@ -18,10 +18,10 @@ window._TMP_COLORECTAL1 = [
     epidemiology:"3rd commonest cancer; 4th commonest cancer death. 40 000 new cases/year UK. Male > female. Peak age 60–70 years. Risk factors: age, family history, IBD, smoking, obesity, red/processed meat, alcohol.",
     pathophysiology:"CIN pathway (85%): APC → KRAS → SMAD4 → TP53. MSI/MMR-deficient pathway (15%): MLH1 hypermethylation (sporadic) or germline MMR mutation (Lynch). Villous polyps have higher malignancy risk (40%) than tubular (5%).",
     classification:[
-      {label:"Stage I",note:"T1–T2 N0 M0; 5-year survival >90%"},
-      {label:"Stage II",note:"T3–T4 N0 M0; 5-year survival 70–85%"},
-      {label:"Stage III",note:"Any T, N1–N2, M0; 5-year survival 40–60%; adjuvant chemotherapy indicated"},
-      {label:"Stage IV",note:"Any T, any N, M1; 5-year survival 5–15% overall; resectable liver mets 30–50%"}
+      {label:"TNM/AJCC 8th — Stage I (Dukes A)",note:"T1–T2 N0 M0; 5-year survival >90%"},
+      {label:"TNM/AJCC 8th — Stage II (Dukes B)",note:"T3–T4 N0 M0; 5-year survival 70–85%"},
+      {label:"TNM/AJCC 8th — Stage III (Dukes C)",note:"Any T, N1–N2, M0; 5-year survival 40–60%; adjuvant chemotherapy indicated"},
+      {label:"TNM/AJCC 8th — Stage IV (Dukes D)",note:"Any T, any N, M1; 5-year survival 5–15% overall; resectable liver mets 30–50%"}
     ]
   },
   diagnosis:{
@@ -172,10 +172,12 @@ window._TMP_COLORECTAL1 = [
     epidemiology:"Diverticulosis: 5% at age 40, 60% at age 60. Diverticulitis: 10–25% lifetime risk with diverticulosis. Left colon (sigmoid) in Western populations; right colon in Asians.",
     pathophysiology:"Mucosal herniation through muscular wall at sites of nutrient artery penetration (false diverticula). Increased intraluminal pressure + low-fibre diet. Obstructed neck → bacterial overgrowth → microperformation → pericolic inflammation → abscess → free perforation.",
     classification:[
-      {label:"Hinchey I",note:"Pericolic or mesenteric abscess"},
+      {label:"Modified Hinchey 0 / Ia",note:"Stages the original Hinchey omits — 0 = mild clinical diverticulitis; Ia = confined pericolic inflammation/phlegmon, no abscess"},
+      {label:"Hinchey I (Ib)",note:"Pericolic or mesenteric abscess"},
       {label:"Hinchey II",note:"Pelvic or retroperitoneal abscess (communicates via tract)"},
       {label:"Hinchey III",note:"Generalised purulent peritonitis — microscopic perforation, no faecal content"},
-      {label:"Hinchey IV",note:"Generalised faecal peritonitis — free perforation with faecal content"}
+      {label:"Hinchey IV",note:"Generalised faecal peritonitis — free perforation with faecal content"},
+      {label:"WSES CT classification",note:"Maps CT findings to uncomplicated vs complicated (stage 1a–4) to guide non-operative vs operative care"}
     ]
   },
   diagnosis:{
@@ -245,9 +247,9 @@ window._TMP_COLORECTAL1 = [
     epidemiology:"Incidence 10–20/100 000/year in West; prevalence 240/100 000. Peak age 15–30 years (second peak 60–70). Slightly F>M. HLA-DRB1 associations.",
     pathophysiology:"Dysregulated mucosal immune response to commensal bacteria in genetically susceptible individuals → TH2/TH17-mediated mucosal inflammation → crypt abscesses → mucosal ulceration. Limited to mucosa and submucosa. Disrupted epithelial barrier (goblet cell depletion).",
     classification:[
-      {label:"Proctitis",note:"Confined to rectum; 30–50% of UC; good prognosis; topical therapy effective"},
-      {label:"Left-sided colitis (distal UC)",note:"Extends to splenic flexure; 30%"},
-      {label:"Pancolitis",note:"Extends beyond splenic flexure; 20%; highest CRC risk and surgical rates"}
+      {label:"Montreal E1 — Proctitis",note:"Confined to rectum; 30–50% of UC; good prognosis; topical therapy effective"},
+      {label:"Montreal E2 — Left-sided colitis (distal UC)",note:"Extends to splenic flexure; 30%"},
+      {label:"Montreal E3 — Pancolitis (extensive)",note:"Extends beyond splenic flexure; 20%; highest CRC risk and surgical rates"}
     ]
   },
   diagnosis:{
@@ -469,10 +471,10 @@ window._TMP_COLORECTAL1 = [
     epidemiology:"Prevalence 4–36% of population; peak age 45–65; equal sex distribution. Associated with straining, constipation, low-fibre diet, pregnancy.",
     pathophysiology:"Sliding downward of anal cushions (rich vascular sinusoids in right anterior, right posterior, left lateral positions). Engorgement + degeneration of the Treitz muscle (suspensory ligament) → prolapse. Internal: above dentate line → columnar epithelium → painless bleeding. External: below dentate line → squamous epithelium → painful if thrombosed.",
     classification:[
-      {label:"Grade I",note:"Bleed but do not prolapse"},
-      {label:"Grade II",note:"Prolapse on defaecation but reduce spontaneously"},
-      {label:"Grade III",note:"Prolapse requiring manual reduction"},
-      {label:"Grade IV",note:"Permanently prolapsed, irreducible; risk of strangulation"}
+      {label:"Goligher Grade I",note:"Bleed but do not prolapse"},
+      {label:"Goligher Grade II",note:"Prolapse on defaecation but reduce spontaneously"},
+      {label:"Goligher Grade III",note:"Prolapse requiring manual reduction"},
+      {label:"Goligher Grade IV",note:"Permanently prolapsed, irreducible; risk of strangulation"}
     ]
   },
   diagnosis:{

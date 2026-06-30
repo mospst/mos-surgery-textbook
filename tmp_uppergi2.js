@@ -164,10 +164,11 @@ window._TMP_UPPERGI2 = [
     epidemiology:"Incidence 1–2/100 000/year. Stomach 60%; small bowel 30%; rectum/colon 5%; oesophagus 5%. Median age 60 years; equal sex distribution.",
     pathophysiology:"KIT (CD117) or PDGFRA gain-of-function mutation → constitutive tyrosine kinase activation → uncontrolled cell proliferation. KIT: exon 11 (most common, best TKI response), exon 9 (needs higher imatinib dose), exon 13, 17. PDGFRA D842V: imatinib-resistant (avapritinib).",
     classification:[
-      {label:"Very low risk",note:"<2 cm, <5 mitoses/50 HPF — gastric location; watch-and-wait possible for <2 cm"},
-      {label:"Low risk",note:"2–5 cm, <5 mitoses/50 HPF — resect"},
-      {label:"Intermediate risk",note:"<5 cm, 6–10 mitoses/50 HPF; or 5–10 cm, <5 mitoses — resect + consider adjuvant"},
-      {label:"High risk",note:">5 cm, >5 mitoses; or any size with >10 mitoses; tumour rupture — adjuvant imatinib 3 years"}
+      {label:"Modified NIH — Very low risk",note:"<2 cm, <5 mitoses/50 HPF — gastric location; watch-and-wait possible for <2 cm"},
+      {label:"Modified NIH — Low risk",note:"2–5 cm, <5 mitoses/50 HPF — resect"},
+      {label:"Modified NIH — Intermediate risk",note:"<5 cm, 6–10 mitoses/50 HPF; or 5–10 cm, <5 mitoses — resect + consider adjuvant"},
+      {label:"Modified NIH — High risk",note:">5 cm, >5 mitoses; or any size with >10 mitoses; tumour rupture — adjuvant imatinib 3 years"},
+      {label:"AFIP / Miettinen criteria",note:"Alternative prognostic scheme combining size, mitotic count AND site (gastric GISTs behave better than small-bowel of equal size) to predict progression risk"}
     ]
   },
   diagnosis:{
@@ -236,8 +237,9 @@ window._TMP_UPPERGI2 = [
     epidemiology:"Prevalence 1–2% general population; 10–15% of GORD patients. M:F = 3:1. White males, older age, central obesity, smoking. Annual OAC risk: 0.2–0.5%.",
     pathophysiology:"Chronic acid + bile reflux → squamous epithelial injury → incomplete repair by columnar metaplasia (derived from gastric stem cells or sub-mucosal glands). CDX2 transcription factor drives intestinal differentiation. Progression: IM → LGD (SOX2 loss) → HGD (TP53 mutation) → intramucosal carcinoma → submucosal invasion.",
     classification:[
-      {label:"Short segment Barrett's (<3 cm)",note:"1–3 cm above GEJ; lower OAC risk; less intensive surveillance"},
-      {label:"Long segment Barrett's (≥3 cm)",note:"More extensive columnar metaplasia; higher OAC risk; more intensive surveillance"},
+      {label:"Prague C&M criteria",note:"Standardised endoscopic report: C = circumferential extent (cm), M = maximal extent (cm) of columnar-lined oesophagus above the GEJ"},
+      {label:"Short segment Barrett's (<3 cm)",note:"Prague M1–<3 cm above GEJ; lower OAC risk; less intensive surveillance"},
+      {label:"Long segment Barrett's (≥3 cm)",note:"Prague M≥3 cm; more extensive columnar metaplasia; higher OAC risk; more intensive surveillance"},
       {label:"Ultra-short segment Barrett's (<1 cm)",note:"Not classified as Barrett's per BSG 2013; does not warrant surveillance"}
     ]
   },
