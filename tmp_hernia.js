@@ -89,7 +89,7 @@ const HERNIA_DISEASES = [
       "Oblique incision 1cm above and parallel to inguinal ligament, from pubic tubercle to ASIS midpoint"
     ],
     steps: [
-      {n:1, t:"Approach", d:"Incise skin; divide Scarpa's fascia; open external oblique aponeurosis along fibres from external ring outward"},
+      {n:1, t:"Approach", d:"Incise skin; divide Scarpa's fascia; open external oblique aponeurosis along fibers from external ring outward"},
       {n:2, t:"Identify cord structures", d:"Retract spermatic cord on rubber sling; identify and preserve ilioinguinal nerve (on anterior cord surface)"},
       {n:3, t:"Hernia sac", d:"Indirect: find sac at anteromedial cord; open sac; reduce contents; ligate and transect sac at deep ring; Direct: reduce and invert"},
       {n:4, t:"Mesh placement", d:"Polypropylene mesh (6×11cm); cut keyhole for cord; place over posterior inguinal wall (covering deep ring) with medial overlap on pubic tubercle"},
@@ -114,9 +114,9 @@ const HERNIA_DISEASES = [
     "Perioperative: avoid constipation and coughing post-op — straining increases recurrence risk in early healing period"
   ],
   mistakes: [
-    "Not identifying ilioinguinal nerve — dividing it causes anaesthesia; trapping it causes chronic neuralgia",
+    "Not identifying ilioinguinal nerve — dividing it causes anesthesia; trapping it causes chronic neuralgia",
     "Medial mesh not anchored to pubic tubercle — medial recurrence",
-    "Tight keyhole strangling cord structures — testicular atrophy from ischaemic orchitis"
+    "Tight keyhole strangling cord structures — testicular atrophy from ischemic orchitis"
   ]
 },
 {
@@ -156,7 +156,7 @@ const HERNIA_DISEASES = [
       "Groin/upper thigh swelling, below and lateral to pubic tubercle",
       "May be asymptomatic and small — easily missed",
       "Acute presentation: irreducible swelling + severe pain + nausea/vomiting = strangulation",
-      "Richter's: partial bowel strangulation without SBO symptoms — may present with localised pain and swelling only"
+      "Richter's: partial bowel strangulation without SBO symptoms — may present with localized pain and swelling only"
     ],
     examination: [
       "Inspect: swelling below inguinal ligament, medial to femoral pulse",
@@ -204,14 +204,14 @@ const HERNIA_DISEASES = [
       {n:2, t:"Retract rectus", d:"Retract rectus medially; enter preperitoneal space (extraperitoneal); push peritoneum superiorly"},
       {n:3, t:"Identify hernia sac", d:"Identify sac from above through femoral ring; gentle upward traction on sac"},
       {n:4, t:"Divide lacunar ligament if needed", d:"If hernia will not reduce: divide medial wall of femoral ring (lacunar ligament) medially (not laterally — femoral vein is lateral)"},
-      {n:5, t:"Assess bowel", d:"Open sac; assess bowel viability (colour, Doppler, peristalsis); if questionable — warm towels × 5 min then reassess"},
+      {n:5, t:"Assess bowel", d:"Open sac; assess bowel viability (color, Doppler, peristalsis); if questionable — warm towels × 5 min then reassess"},
       {n:6, t:"Bowel decision", d:"Viable: reduce into abdomen; Non-viable: resect via this incision or separate laparotomy"},
       {n:7, t:"Repair femoral canal", d:"Approximate Cooper's ligament to inguinal ligament with 1 or 2 non-absorbable sutures to obliterate femoral ring; or plug mesh"},
       {n:8, t:"Closure", d:"Close anterior rectus sheath; skin closure"}
     ],
     pearls: [
       "Lacunar ligament division: always medially — femoral vein is directly lateral and easily damaged",
-      "Abnormal obturator artery (corona mortis variant): found in 15–30% — crosses medial aspect of femoral ring; risk of catastrophic haemorrhage",
+      "Abnormal obturator artery (corona mortis variant): found in 15–30% — crosses medial aspect of femoral ring; risk of catastrophic hemorrhage",
       "Non-viable bowel appearing viable: Richter's — partial strangulation can recover; full-thickness non-viable = resect"
     ]
   },
@@ -227,7 +227,7 @@ const HERNIA_DISEASES = [
   ],
   mistakes: [
     "Confusing femoral hernia with inguinal hernia — different approach required; inguinal repair misses femoral canal",
-    "Dividing femoral vein (lateral) when trying to divide lacunar ligament — catastrophic haemorrhage",
+    "Dividing femoral vein (lateral) when trying to divide lacunar ligament — catastrophic hemorrhage",
     "Discharging strangulated femoral hernia for elective repair — this is an emergency"
   ]
 },
@@ -287,7 +287,7 @@ const HERNIA_DISEASES = [
       {k:"<1cm defect", v:"Primary suture repair (Mayo: overlapping fascial layers) OR suture closure"},
       {k:"1–3cm defect", v:"Mesh repair: open IPOM (intraperitoneal onlay mesh) or retromuscular sublay"},
       {k:">3cm defect", v:"Laparoscopic IPOM or open component separation + mesh"},
-      {k:"Cirrhotics", v:"Treat ascites first; emergency repair for leaking/ruptured; elective repair after TIPS/diuretic optimisation"}
+      {k:"Cirrhotics", v:"Treat ascites first; emergency repair for leaking/ruptured; elective repair after TIPS/diuretic optimization"}
     ]
   },
   scoring: [],
@@ -351,10 +351,10 @@ const HERNIA_DISEASES = [
     "Occurs in 10–15% of laparotomies; higher with midline closure, obesity, wound infection",
     "Mesh repair: significantly lower recurrence than primary suture (10% vs 30–40%)",
     "Open retromuscular (Rives-Stoppa): gold standard for medium-large incisional hernias",
-    "Component separation (anterior or posterior): for large defects requiring fascial mobilisation",
+    "Component separation (anterior or posterior): for large defects requiring fascial mobilization",
     "Laparoscopic IPOM: good for moderate size; higher recurrence than open retromuscular for large defects"
   ],
-  differentials: ["Incisional hernia vs diastasis recti (no fascial defect in diastasis)","Seroma","Haematoma","Eventration","Suture granuloma"],
+  differentials: ["Incisional hernia vs diastasis recti (no fascial defect in diastasis)","Seroma","Hematoma","Eventration","Suture granuloma"],
   mnemonics: [
     {name:"EHS Classification W1-4 + L (location)", text:"W1: <4cm; W2: 4–10cm; W3: >10cm; W4: loss of domain (>20% abdominal cavity in hernia sac)"}
   ],
@@ -380,7 +380,7 @@ const HERNIA_DISEASES = [
       "Visible and/or palpable bulge at surgical scar with cough impulse",
       "Palpate defect edge; estimate size",
       "Assess reducibility",
-      "Valsalva manoeuvre reveals smaller defects",
+      "Valsalva maneuver reveals smaller defects",
       "Diastasis recti: midline bulge but no fascial defect (diffuse linea alba widening)"
     ],
     investigations: [
@@ -395,7 +395,7 @@ const HERNIA_DISEASES = [
       {k:"W1 <4cm", v:"Laparoscopic IPOM or open sublay mesh"},
       {k:"W2 4–10cm", v:"Open retromuscular (Rives-Stoppa) or laparoscopic IPOM"},
       {k:"W3 >10cm", v:"Open retromuscular + component separation (anterior or posterior); staged approach if obesity/contamination"},
-      {k:"W4 loss of domain", v:"Multidisciplinary: weight loss; botulinum toxin to paralysis flanks; staged repair with component separation + biologic mesh; progressive pneumoperitoneum"}
+      {k:"W4 loss of domain", v:"Multidisciplinary: weight loss; botulinum toxin to paralyzis flanks; staged repair with component separation + biologic mesh; progressive pneumoperitoneum"}
     ]
   },
   scoring: [],
@@ -404,13 +404,13 @@ const HERNIA_DISEASES = [
       "Abdominal support binder: symptomatic relief in elderly/frail; not curative",
       "Weight loss: reduce BMI to <35 before elective repair — dramatically reduces recurrence",
       "Smoking cessation: ≥4 weeks pre-op",
-      "Botulinum toxin injection to lateral abdominal wall: relaxes muscles, allows gradual fascial edge mobilisation — used pre-op for large hernias"
+      "Botulinum toxin injection to lateral abdominal wall: relaxes muscles, allows gradual fascial edge mobilization — used pre-op for large hernias"
     ],
     medical: [],
     surgical: [
       {name:"Open retromuscular (Rives-Stoppa) repair", when:"Standard for W2–W3 incisional hernias; gold standard for medium-large defects", notes:"Dissect retromuscular plane (posterior rectus sheath/transversalis fascia plane); extend 5–8cm beyond hernia edges; large polypropylene mesh placed in sublay position; close posterior fascia; close anterior fascia; drain"},
       {name:"Laparoscopic IPOM repair", when:"W1–W2; obese patients (avoids large open wounds); recurrent hernias", notes:"Composite mesh (absorbable visceral surface + polypropylene); overlap ≥5cm all sides; transfascial sutures + tacker fixation; reduce hernia contents first"},
-      {name:"Component separation — anterior (Ramirez)", when:"Large defect requiring fascial mobilisation; W3+; intact rectus muscles", notes:"Release external oblique aponeurosis 2–3cm lateral to linea semilunaris; advances medial fascia 5–8cm each side; preserves neurovascular supply to rectus (perforating vessels) — minimise lateral skin undermining"},
+      {name:"Component separation — anterior (Ramirez)", when:"Large defect requiring fascial mobilization; W3+; intact rectus muscles", notes:"Release external oblique aponeurosis 2–3cm lateral to linea semilunaris; advances medial fascia 5–8cm each side; preserves neurovascular supply to rectus (perforating vessels) — minimize lateral skin undermining"},
       {name:"Posterior component separation (TARs — transversus abdominis release)", when:"Preferred over anterior CST; avoids large skin flaps; better mesh placement", notes:"From retromuscular plane: incise posterior rectus sheath lateral to linea semilunaris; release transversus abdominis; creates large retromuscular/preperitoneal space for mesh placement"},
       {name:"Biological mesh", when:"Contaminated field (stoma, bowel repair, infected mesh removal)", notes:"Slowly resorbed; higher recurrence than synthetic; appropriate in infected/contaminated settings"}
     ]
@@ -419,7 +419,7 @@ const HERNIA_DISEASES = [
     title: "Transversus Abdominis Release (TAR) — Posterior Component Separation",
     prep: [
       "Prehabilitation: weight loss, smoking cessation, botulinum if large hernia",
-      "Mark hernia boundaries on skin; CT review in theatre",
+      "Mark hernia boundaries on skin; CT review in theater",
       "GA; supine; prep entire abdomen"
     ],
     steps: [
@@ -464,20 +464,20 @@ const HERNIA_DISEASES = [
   tags: ["hernia","emergency","strangulation","bowel"],
   hero: "Surgical emergency. Compromised blood supply to hernial contents. Bowel viability must be assessed at operation. Mortality 5–10x higher than elective hernia repair.",
   keypoints: [
-    "Incarceration: irreducible but no vascular compromise; Strangulation: vascular compromise → ischaemia",
-    "Clinical: painful, irreducible hernia + systemic signs of ischaemia (fever, leukocytosis, peritonism)",
+    "Incarceration: irreducible but no vascular compromise; Strangulation: vascular compromise → ischemia",
+    "Clinical: painful, irreducible hernia + systemic signs of ischemia (fever, leukocytosis, peritonism)",
     "Do NOT attempt forceful manual reduction of strangulated hernia (taxis) — risk of reducing non-viable bowel",
     "Assess bowel viability at surgery: viable = repair hernia; non-viable = resect bowel + DCS or primary anastomosis",
     "Femoral and obturator hernias have highest strangulation rate; inguinal lower"
   ],
-  differentials: ["Incarcerated hernia (no vascular compromise)","Acutely painful inguinal lymphadenopathy","Haematoma in hernia sac","Torsion of appendix epiploica"],
+  differentials: ["Incarcerated hernia (no vascular compromise)","Acutely painful inguinal lymphadenopathy","Hematoma in hernia sac","Torsion of appendix epiploica"],
   mnemonics: [
     {name:"Strangulation signs", text:"PINS: Pain (sudden severe) + Irreducible + Not transmitting cough impulse + Systemic signs (fever, vomiting) = strangulation until proven otherwise"}
   ],
   overview: {
-    definition: "Hernia in which the blood supply to the herniated contents is compromised, leading to ischaemia, necrosis, and perforation if untreated.",
+    definition: "Hernia in which the blood supply to the herniated contents is compromised, leading to ischemia, necrosis, and perforation if untreated.",
     epidemiology: "5% of inguinal hernia patients present as emergency; 20–40% of femoral hernias; 10–15% of umbilical hernias. Mortality: elective hernia repair <0.1%; strangulated hernia repair 5–10% (higher with bowel resection).",
-    pathophysiology: "Narrow hernia neck compresses venous outflow → venous congestion → arterial compromise → bowel ischaemia → necrosis → perforation → peritonitis. Femoral hernias: rigid bony/ligamentous walls → rapid vascular compromise. Richter's: partial-circumference bowel — no full SBO but strangulation occurs.",
+    pathophysiology: "Narrow hernia neck compresses venous outflow → venous congestion → arterial compromise → bowel ischemia → necrosis → perforation → peritonitis. Femoral hernias: rigid bony/ligamentous walls → rapid vascular compromise. Richter's: partial-circumference bowel — no full SBO but strangulation occurs.",
     classification: [
       "Strangulated inguinal hernia (most common absolute number)",
       "Strangulated femoral hernia (highest per-hernia incidence)",
@@ -491,7 +491,7 @@ const HERNIA_DISEASES = [
       "Sudden increase in pain over known hernia",
       "Previously reducible hernia now irreducible",
       "Nausea, vomiting (SBO if bowel strangulated)",
-      "Fever, increasing pain (ischaemia progressing)",
+      "Fever, increasing pain (ischemia progressing)",
       "Absence of bowel sounds from hernia if previously audible"
     ],
     examination: [
@@ -503,18 +503,18 @@ const HERNIA_DISEASES = [
     ],
     investigations: [
       {name:"Clinical diagnosis", role:"Classic presentation sufficient to proceed to emergency surgery"},
-      {name:"CT abdomen/pelvis", role:"Stable patients: confirms strangulation; shows bowel wall thickening, lack of contrast enhancement (ischaemia), free fluid, pneumoperitoneum; also assesses other hernias"},
-      {name:"FBC, U&E, LFTs, CRP, lactate", role:"Leukocytosis, elevated CRP, lactate (ischaemia) — guides urgency; pre-op baseline"},
+      {name:"CT abdomen/pelvis", role:"Stable patients: confirms strangulation; shows bowel wall thickening, lack of contrast enhancement (ischemia), free fluid, pneumoperitoneum; also assesses other hernias"},
+      {name:"CBC, electrolytes/BUN-Cr, LFTs, CRP, lactate", role:"Leukocytosis, elevated CRP, lactate (ischemia) — guides urgency; pre-op baseline"},
       {name:"Erect CXR", role:"Pneumoperitoneum if perforated"}
     ]
   },
   criteria: {
     title: "Bowel Viability Assessment Intraoperatively",
     items: [
-      {k:"Viable (keep)", v:"Pink/red colour; actively peristalts; palpable mesenteric pulse; bleeding from cut edge"},
+      {k:"Viable (keep)", v:"Pink/red color; actively peristalts; palpable mesenteric pulse; bleeding from cut edge"},
       {k:"Warm compress test", v:"If questionable — warm saline-soaked swabs × 5 minutes; reassess"},
       {k:"Doppler assessment", v:"Mesenteric Doppler — arterial flow present = viable"},
-      {k:"Non-viable (resect)", v:"Black, green, or grey; no peristalsis; no pulsation; no bleeding from cut edge"}
+      {k:"Non-viable (resect)", v:"Black, green, or gray; no peristalsis; no pulsation; no bleeding from cut edge"}
     ]
   },
   scoring: [],
@@ -527,7 +527,7 @@ const HERNIA_DISEASES = [
       "Analgesia"
     ],
     medical: [
-      "Resuscitate and optimise before theatre — but do NOT delay unduly",
+      "Resuscitate and optimize before theater — but do NOT delay unduly",
       "Bowel obstruction without signs of strangulation: controlled conservative approach acceptable short-term while monitoring",
       "Signs of strangulation: emergency surgery without delay"
     ],
@@ -548,13 +548,13 @@ const HERNIA_DISEASES = [
       {n:1, t:"Hernia exposure", d:"Expose hernia sac; DO NOT reduce contents blindly — open sac to assess contents FIRST"},
       {n:2, t:"Sac opening", d:"Open sac carefully; strangulated bowel visible; do not reduce until fully assessed"},
       {n:3, t:"Narrow neck release", d:"Identify narrow hernia neck; incise to allow gentle delivery of bowel into wound for assessment; in femoral hernia: divide lacunar ligament medially"},
-      {n:4, t:"Bowel assessment", d:"Inspect colour, peristalsis, Doppler; warm moist towels × 5 min if questionable"},
+      {n:4, t:"Bowel assessment", d:"Inspect color, peristalsis, Doppler; warm moist towels × 5 min if questionable"},
       {n:5, t:"Decision", d:"Viable → reduce into abdomen; Non-viable → resect via separate incision or laparotomy"},
       {n:6, t:"Hernia repair", d:"After bowel decision: repair hernia defect; mesh if clean field (polypropylene); biological mesh if contaminated; suture repair if heavily contaminated"},
       {n:7, t:"Drain", d:"Drain in sac/bed if contaminated; skin closure or leave open if grossly infected"}
     ],
     pearls: [
-      "Bowel colour at reduction can improve: strangulated bowel may look ischaemic but improve with 5-minute warm compress",
+      "Bowel color at reduction can improve: strangulated bowel may look ischemic but improve with 5-minute warm compress",
       "When in doubt, resect: a segment of bowel is cheaper than anastomotic failure",
       "Richter's hernia: the knuckle of bowel may return into sac before it can be assessed — verify with laparoscopy or laparotomy extension"
     ]
@@ -566,13 +566,13 @@ const HERNIA_DISEASES = [
   ],
   pearls: [
     "Strangulated hernia mortality: 5–10%; increases dramatically with bowel resection (15–20%) and perforation (>30%)",
-    "Early surgery: the 6-hour window for bowel viability — after 6h ischaemia, bowel recovery unlikely",
+    "Early surgery: the 6-hour window for bowel viability — after 6h ischemia, bowel recovery unlikely",
     "Post-reduction monitoring: if taxis performed (cautiously), patient MUST be admitted and monitored for peritonitis"
   ],
   mistakes: [
     "Forceful taxis on strangulated hernia — can reduce gangrenous bowel into abdomen, causing delayed peritonitis",
     "Repairing hernia defect before assessing bowel viability — delays recognition of non-viable content",
-    "Delaying emergency surgery to 'optimise' patient — strangulation progresses to perforation"
+    "Delaying emergency surgery to 'optimize' patient — strangulation progresses to perforation"
   ]
 },
 {
@@ -591,7 +591,7 @@ const HERNIA_DISEASES = [
     "Asymptomatic small PSH: conservative — support garments, weight loss",
     "Surgical options: local repair (high recurrence), stoma relocation, keyhole mesh repair (Sugarbaker or sandwich technique)"
   ],
-  differentials: ["Peristomal abscess","Stoma prolapse","Stomal oedema/varices","Peristomal pyoderma gangrenosum"],
+  differentials: ["Peristomal abscess","Stoma prolapse","Stomal edema/varices","Peristomal pyoderma gangrenosum"],
   mnemonics: [
     {name:"PSH repair options", text:"LOCAL (local fascial repair — high recurrence) vs RELOCATE (move stoma — creates new defect risk) vs MESH (Sugarbaker — best results)"}
   ],
@@ -640,7 +640,7 @@ const HERNIA_DISEASES = [
     conservative: [
       "Stoma support garments / hernia belts: symptomatic control in non-operative candidates",
       "Weight loss: reduces symptoms and surgical risk",
-      "Stoma nurse specialist: appliance optimisation, skin care, hernia belt fitting"
+      "Stoma nurse specialist: appliance optimization, skin care, hernia belt fitting"
     ],
     medical: [],
     surgical: [
@@ -661,7 +661,7 @@ const HERNIA_DISEASES = [
     steps: [
       {n:1, t:"Adhesiolysis", d:"Carefully lyse adhesions around stoma bowel and hernia sac; reduce hernia contents back into abdomen"},
       {n:2, t:"Measure defect", d:"Measure hernia defect at fascia level with laparoscopic ruler; mesh must exceed defect by ≥5cm on all sides"},
-      {n:3, t:"Mesh preparation", d:"Cut composite mesh (non-adhesive visceral surface + polypropylene outer): slit from edge to centre hole (keyhole for stoma bowel passage)"},
+      {n:3, t:"Mesh preparation", d:"Cut composite mesh (non-adhesive visceral surface + polypropylene outer): slit from edge to center hole (keyhole for stoma bowel passage)"},
       {n:4, t:"Sugarbaker placement", d:"Place mesh flat over hernia defect with stoma bowel exiting laterally through mesh slit (not through central hole) — Sugarbaker configuration reduces recurrence vs keyhole alone"},
       {n:5, t:"Mesh fixation", d:"Transfascial sutures at 4 corners + tacker fixation; ensure mesh is flat and wide overlap"},
       {n:6, t:"Check stoma function", d:"Confirm stoma bowel not kinked or compressed by mesh"}
@@ -704,7 +704,7 @@ const HERNIA_DISEASES = [
     "High strangulation rate (20%) due to narrow fascial defect",
     "Laparoscopic TEP or TAPP for repair; open sublay mesh also effective"
   ],
-  differentials: ["Lateral incisional hernia","Rectus sheath haematoma","Myofascial pain","Desmoid tumour","Lipoma of abdominal wall"],
+  differentials: ["Lateral incisional hernia","Rectus sheath hematoma","Myofascial pain","Desmoid tumor","Lipoma of abdominal wall"],
   mnemonics: [
     {name:"Spigelian location", text:"JUNCTION of rectus + transversus aponeurosis = semilunar line; BETWEEN umbilicus and ASIS = highest risk zone (below arcuate line)"}
   ],
@@ -853,7 +853,7 @@ const HERNIA_DISEASES = [
     conservative: [],
     medical: [
       "IV fluids, NG tube (SBO), antibiotics",
-      "Resuscitate frail elderly patient before theatre"
+      "Resuscitate frail elderly patient before theater"
     ],
     surgical: [
       {name:"Midline laparotomy", when:"Standard for strangulated obturator hernia — allows bowel assessment and resection", notes:"Reduce hernia by gentle traction from above (laparotomy); assess bowel viability; resect if non-viable; close obturator defect with suture or mesh via laparotomy"},
@@ -905,22 +905,22 @@ const HERNIA_DISEASES = [
   organ: "Retroperitoneum",
   severity: "high",
   tags: ["oncology","soft-tissue","retroperitoneum","rare"],
-  hero: "Most common retroperitoneal sarcoma is liposarcoma (50%) followed by leiomyosarcoma. Complete resection (R0/R1) is the only curative treatment. Radiotherapy is primary adjuvant. Specialist multidisciplinary centre mandatory.",
+  hero: "Most common retroperitoneal sarcoma is liposarcoma (50%) followed by leiomyosarcoma. Complete resection (R0/R1) is the only curative treatment. Radiotherapy is primary adjuvant. Specialist multidisciplinary center mandatory.",
   keypoints: [
     "Liposarcoma (50%) and leiomyosarcoma (25%) are the two most common histotypes",
     "Often large at presentation — retroperitoneal space is 'silent' and accommodates growth",
     "Complete surgical resection is the only potentially curative treatment",
     "Obtain tissue diagnosis (CT-guided biopsy) BEFORE surgery — histology changes management",
-    "Specialist sarcoma centre treatment essential — referral mandatory for suspected retroperitoneal mass"
+    "Specialist sarcoma center treatment essential — referral mandatory for suspected retroperitoneal mass"
   ],
-  differentials: ["Adrenal tumour","Lymphoma","Renal cell carcinoma","Desmoid tumour","Lymph node mass (metastatic)","Primary muscle tumour"],
+  differentials: ["Adrenal tumor","Lymphoma","Renal cell carcinoma","Desmoid tumor","Lymph node mass (metastatic)","Primary muscle tumor"],
   mnemonics: [
     {name:"Retroperitoneal sarcoma histotypes", text:"LILO: Liposarcoma (50%) + Leiomyosarcoma (25%) + Others (MFH/UPS, synovial, MPNST, solitary fibrous) = LILO rule of common types"}
   ],
   overview: {
-    definition: "Malignant mesenchymal tumour arising from retroperitoneal soft tissue or organs, most commonly well-differentiated/dedifferentiated liposarcoma and leiomyosarcoma.",
+    definition: "Malignant mesenchymal tumor arising from retroperitoneal soft tissue or organs, most commonly well-differentiated/dedifferentiated liposarcoma and leiomyosarcoma.",
     epidemiology: "Rare: 0.3/100,000/year. Retroperitoneal sarcomas: 15% of all soft tissue sarcomas. Peak age 50–60 yrs. Liposarcoma most common (50%); leiomyosarcoma (25%). 5-year survival: 30–50% depending on histotype.",
-    pathophysiology: "Liposarcoma: MDM2/CDK4 amplification (well-differentiated/dedifferentiated); TP53 loss. Leiomyosarcoma: smooth muscle origin (IVC, retroperitoneal veins). Local recurrence main pattern of failure; haematogenous metastases (lung) in high-grade.",
+    pathophysiology: "Liposarcoma: MDM2/CDK4 amplification (well-differentiated/dedifferentiated); TP53 loss. Leiomyosarcoma: smooth muscle origin (IVC, retroperitoneal veins). Local recurrence main pattern of failure; hematogenous metastases (lung) in high-grade.",
     classification: [
       "Histotype classification: liposarcoma (WD/DD), leiomyosarcoma, MFH/UPS, MPNST, others",
       "Grade: G1 (low-grade), G2/G3 (high-grade) using FNCLCC grading",
@@ -929,8 +929,8 @@ const HERNIA_DISEASES = [
   },
   diagnosis: {
     history: [
-      "Vague abdominal/back discomfort or fullness — often very late presentation (retroperitoneal space accommodates large tumours)",
-      "Mass effect: abdominal distension, early satiety (gastric displacement), lower limb oedema (IVC or iliac vein compression), ureteric obstruction",
+      "Vague abdominal/back discomfort or fullness — often very late presentation (retroperitoneal space accommodates large tumors)",
+      "Mass effect: abdominal distension, early satiety (gastric displacement), lower limb edema (IVC or iliac vein compression), ureteric obstruction",
       "Leg pain or neurological symptoms (lumbar plexus involvement)",
       "Incidental finding on imaging for another indication",
       "B symptoms (fever, weight loss, night sweats) — suggest high-grade or lymphoma"
@@ -938,16 +938,16 @@ const HERNIA_DISEASES = [
     examination: [
       "Palpable abdominal or flank mass — often non-tender",
       "Fixed, firm, irregular",
-      "Lower extremity oedema (IVC/iliac vein obstruction)",
+      "Lower extremity edema (IVC/iliac vein obstruction)",
       "Bilateral renal angle fullness"
     ],
     investigations: [
-      {name:"CT abdomen/pelvis (triphasic)", role:"First-line; characterises mass; fat density in liposarcoma; relationship to retroperitoneal organs; vascular involvement (IVC, aorta, iliac vessels)"},
-      {name:"MRI abdomen/pelvis", role:"Better soft tissue characterisation; vascular map; involvement of major vessels, spine, psoas"},
+      {name:"CT abdomen/pelvis (triphasic)", role:"First-line; characterizes mass; fat density in liposarcoma; relationship to retroperitoneal organs; vascular involvement (IVC, aorta, iliac vessels)"},
+      {name:"MRI abdomen/pelvis", role:"Better soft tissue characterization; vascular map; involvement of major vessels, spine, psoas"},
       {name:"CT chest", role:"Pulmonary metastases assessment (especially leiomyosarcoma, high-grade)"},
       {name:"CT-guided core needle biopsy", role:"Mandatory for diagnosis before surgery; histotype determines grading, systemic therapy, and resectability approach"},
-      {name:"PET-FDG", role:"High-grade tumours; staging; monitoring response to pre-operative therapy"},
-      {name:"MDT review at specialist sarcoma centre", role:"Mandatory before any treatment planning"}
+      {name:"PET-FDG", role:"High-grade tumors; staging; monitoring response to pre-operative therapy"},
+      {name:"MDT review at specialist sarcoma center", role:"Mandatory before any treatment planning"}
     ]
   },
   criteria: {
@@ -955,14 +955,14 @@ const HERNIA_DISEASES = [
     items: [
       {k:"Resectable", v:"Complete (R0/R1) resection feasible; no distant metastases; major vessel reconstruction possible"},
       {k:"Borderline resectable", v:"Major vessel involvement (aorta, IVC) requiring reconstruction; multi-visceral resection needed"},
-      {k:"Unresectable", v:"Extensive bilateral tumour involvement, distant metastases, unresectable vessel encasement"},
-      {k:"Histotype-specific", v:"WD liposarcoma: low-grade, resect liberally; LMS: aggressive systemic behaviour, need CT chest staging"}
+      {k:"Unresectable", v:"Extensive bilateral tumor involvement, distant metastases, unresectable vessel encasement"},
+      {k:"Histotype-specific", v:"WD liposarcoma: low-grade, resect liberally; LMS: aggressive systemic behavior, need CT chest staging"}
     ]
   },
   scoring: [],
   management: {
     conservative: [
-      "MDT specialist centre review: essential — improves outcomes",
+      "MDT specialist center review: essential — improves outcomes",
       "Surveillance post-resection: CT chest/abdomen/pelvis every 3–6 months × 2 years then annually"
     ],
     medical: [
@@ -971,10 +971,10 @@ const HERNIA_DISEASES = [
       "Pazopanib: second-line for non-adipocytic high-grade STS"
     ],
     surgical: [
-      {name:"Complete surgical resection (en-bloc)", when:"Potentially curative intent; no distant metastases; achievable R0/R1 margins", notes:"En-bloc resection of tumour + adjacent involved organs; ipsilateral kidney, colon, adrenal, spleen resected as needed (multi-visceral); preserve IVC if < 50% circumference — reconstruct if >50%; recurrence-free survival correlates with completeness of resection"},
+      {name:"Complete surgical resection (en-bloc)", when:"Potentially curative intent; no distant metastases; achievable R0/R1 margins", notes:"En-bloc resection of tumor + adjacent involved organs; ipsilateral kidney, colon, adrenal, spleen resected as needed (multi-visceral); preserve IVC if < 50% circumference — reconstruct if >50%; recurrence-free survival correlates with completeness of resection"},
       {name:"IVC resection and reconstruction", when:"Leiomyosarcoma of IVC or RPS with IVC involvement; IVC diameter >50% involvement", notes:"Infrarenal IVC: ligate (well tolerated); suprarenal: reconstruction with PTFE graft; cardiopulmonary bypass if suprarenal"},
-      {name:"Extended multi-visceral resection", when:"Large retroperitoneal liposarcoma with organ involvement", notes:"Right colectomy/left colectomy, nephrectomy, adrenalectomy, splenectomy combined; higher morbidity but not prohibitive in specialist centres"},
-      {name:"Palliative resection/debulking", when:"Low-grade well-differentiated liposarcoma with recurrent disease; no curative potential but reduces tumour burden", notes:"Debulking of WD liposarcoma may improve symptoms and survival despite incomplete resection"}
+      {name:"Extended multi-visceral resection", when:"Large retroperitoneal liposarcoma with organ involvement", notes:"Right colectomy/left colectomy, nephrectomy, adrenalectomy, splenectomy combined; higher morbidity but not prohibitive in specialist centers"},
+      {name:"Palliative resection/debulking", when:"Low-grade well-differentiated liposarcoma with recurrent disease; no curative potential but reduces tumor burden", notes:"Debulking of WD liposarcoma may improve symptoms and survival despite incomplete resection"}
     ]
   },
   technique: {
@@ -987,16 +987,16 @@ const HERNIA_DISEASES = [
     ],
     steps: [
       {n:1, t:"Incision", d:"Midline laparotomy or bilateral subcostal; full exposure of retroperitoneum"},
-      {n:2, t:"Mobilise colon", d:"Medial visceral rotation (Cattel-Braasch right side or Mattox left side manoeuvre); expose retroperitoneum fully"},
+      {n:2, t:"Mobilize colon", d:"Medial visceral rotation (Cattel-Braasch right side or Mattox left side maneuver); expose retroperitoneum fully"},
       {n:3, t:"Vascular assessment", d:"Identify aorta, IVC, iliac vessels; establish proximal and distal vascular control before dissection"},
-      {n:4, t:"En-bloc resection", d:"Resect tumour with macroscopic margin; take all adjacent organs adherent to tumour (kidney, colon, adrenal, psoas if involved); no finger fracture or piecemeal resection"},
+      {n:4, t:"En-bloc resection", d:"Resect tumor with macroscopic margin; take all adjacent organs adherent to tumor (kidney, colon, adrenal, psoas if involved); no finger fracture or piecemeal resection"},
       {n:5, t:"Vascular reconstruction if needed", d:"IVC: ligate infrarenal if <50% circumference involvement; PTFE or femoral vein graft for suprarenal or large defects"},
       {n:6, t:"Ureteric continuity", d:"If ureter resected: ipsilateral ureteroneocystostomy or ileal conduit depending on extent"},
-      {n:7, t:"Haemostasis and drain", d:"Meticulous retroperitoneal haemostasis; drain(s) to retroperitoneal space"}
+      {n:7, t:"Hemostasis and drain", d:"Meticulous retroperitoneal hemostasis; drain(s) to retroperitoneal space"}
     ],
     pearls: [
       "Compartmental resection: WD/DD liposarcoma — resect any macroscopically involved organ en-bloc; 'compartment surgery' principle",
-      "Psoas muscle: tumour on psoas = resect involved portion; complete psoas resection causes significant functional deficit",
+      "Psoas muscle: tumor on psoas = resect involved portion; complete psoas resection causes significant functional deficit",
       "Local recurrence rate: WD liposarcoma 50% at 5 years despite R0 resection — surveillance imaging every 6 months"
     ]
   },
@@ -1006,13 +1006,13 @@ const HERNIA_DISEASES = [
     {src:"NICE NG12: Suspected cancer — soft tissue sarcoma referral criteria"}
   ],
   pearls: [
-    "Do not biopsy retroperitoneal mass before CT characterisation — liposarcoma has characteristic fat density; biopsy may be avoidable",
+    "Do not biopsy retroperitoneal mass before CT characterization — liposarcoma has characteristic fat density; biopsy may be avoidable",
     "WD liposarcoma is technically unresectable in many cases but recurs as DD (dedifferentiated) — aggressive re-resection at recurrence still indicated",
     "All suspected retroperitoneal sarcomas must be referred to specialist sarcoma MDT — generalist resection associated with significantly higher recurrence and lower survival"
   ],
   mistakes: [
     "Operating on retroperitoneal mass without MDT review and histological diagnosis — wrong surgery for wrong diagnosis",
-    "Piecemeal resection of sarcoma — seeds tumour cells; positive microscopic margins universally",
+    "Piecemeal resection of sarcoma — seeds tumor cells; positive microscopic margins universally",
     "Not involving vascular surgery pre-operatively when IVC involvement on imaging"
   ]
 }

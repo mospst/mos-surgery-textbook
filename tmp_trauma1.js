@@ -1,4 +1,4 @@
-// TRAUMA BATCH 1 — IDs: trauma-laparotomy, acs, necrotising-fasciitis, splenic-trauma, liver-trauma, bowel-trauma, diaphragm-rupture, pelvic-fracture
+// TRAUMA BATCH 1 — IDs: trauma-laparotomy, acs, necrotizing-fasciitis, splenic-trauma, liver-trauma, bowel-trauma, diaphragm-rupture, pelvic-fracture
 const TRAUMA_DISEASES_1 = [
 {
   id: "trauma-laparotomy",
@@ -7,24 +7,24 @@ const TRAUMA_DISEASES_1 = [
   latin: "Laparotomia controlus damni",
   organ: "Abdomen",
   severity: "high",
-  tags: ["trauma","damage-control","haemorrhage","critical"],
-  hero: "Life-saving strategy for exsanguinating abdominal trauma: abbreviated surgery to control haemorrhage and contamination, temporary closure, resuscitation in ICU, planned re-look at 24–48 hours.",
+  tags: ["trauma","damage-control","hemorrhage","critical"],
+  hero: "Life-saving strategy for exsanguinating abdominal trauma: abbreviated surgery to control hemorrhage and contamination, temporary closure, resuscitation in ICU, planned re-look at 24–48 hours.",
   keypoints: [
-    "Damage control surgery (DCS): haemorrhage control + contamination control + temporary closure — NOT definitive repair",
-    "Indications: lethal triad (hypothermia <35°C, acidosis pH <7.2, coagulopathy INR >1.5), massive haemorrhage",
+    "Damage control surgery (DCS): hemorrhage control + contamination control + temporary closure — NOT definitive repair",
+    "Indications: lethal triad (hypothermia <35°C, acidosis pH <7.2, coagulopathy INR >1.5), massive hemorrhage",
     "Packing > anatomical repair in instability — pack all 4 quadrants",
     "REBOA (Resuscitative Endovascular Balloon Occlusion of Aorta) as bridge to laparotomy",
     "Planned relook at 24–48h after ICU resuscitation and correction of coagulopathy"
   ],
-  differentials: ["Haemorrhagic shock from pelvic fracture","Ruptured aortic aneurysm","Mesenteric ischaemia","Spontaneous intra-abdominal haemorrhage"],
+  differentials: ["Hemorrhagic shock from pelvic fracture","Ruptured aortic aneurysm","Mesenteric ischemia","Spontaneous intra-abdominal hemorrhage"],
   mnemonics: [
     {name:"Lethal Triad", text:"Hypothermia + Acidosis + Coagulopathy = The Triangle of Death → DCS not definitive repair"},
-    {name:"DCS stages", text:"DCS-0: ER resuscitation; DCS-1: OR haemorrhage control; DCS-2: ICU resuscitation; DCS-3: planned relook; DCS-4: definitive repair"}
+    {name:"DCS stages", text:"DCS-0: ER resuscitation; DCS-1: OR hemorrhage control; DCS-2: ICU resuscitation; DCS-3: planned relook; DCS-4: definitive repair"}
   ],
   overview: {
-    definition: "Staged operative approach to life-threatening abdominal trauma prioritising physiological survival over anatomical perfection, with planned return to theatre for definitive repair.",
+    definition: "Staged operative approach to life-threatening abdominal trauma prioritising physiological survival over anatomical perfection, with planned return to theater for definitive repair.",
     epidemiology: "Applies to ~10% of trauma laparotomies. Mortality in exsanguinating abdominal trauma without DCS: >90%. With DCS: 50–70% survival in otherwise fatal injuries.",
-    pathophysiology: "Major trauma → haemorrhage → hypothermia → impairs clotting enzymes (temp-dependent) → coagulopathy → ongoing bleeding → metabolic acidosis → worsening coagulopathy → lethal triad. Early DCS breaks this cycle.",
+    pathophysiology: "Major trauma → hemorrhage → hypothermia → impairs clotting enzymes (temp-dependent) → coagulopathy → ongoing bleeding → metabolic acidosis → worsening coagulopathy → lethal triad. Early DCS breaks this cycle.",
     classification: [
       "DCS-0: ER phase — damage control resuscitation (1:1:1 blood:FFP:platelets, permissive hypotension SBP 80–90mmHg)",
       "DCS-1: Operative phase — abbreviated surgery (30–60 min max)",
@@ -36,23 +36,23 @@ const TRAUMA_DISEASES_1 = [
   diagnosis: {
     history: [
       "Mechanism: high-energy blunt trauma (RTA, fall), penetrating injury (stab, gunshot)",
-      "Evidence of haemodynamic instability despite initial resuscitation",
-      "Massive haemorrhage — transfusion requirement >10 units pRBC in 24h",
+      "Evidence of hemodynamic instability despite initial resuscitation",
+      "Massive hemorrhage — transfusion requirement >10 units pRBC in 24h",
       "Known or suspected intra-abdominal injury with shock"
     ],
     examination: [
       "ATLS Primary Survey: Airway, Breathing, Circulation, Disability, Exposure",
       "Circulatory: HR >120, SBP <90, cool peripheries, altered consciousness",
-      "Abdominal: distension, bruising (seatbelt sign, Grey Turner, Cullen), evisceration",
+      "Abdominal: distension, bruising (seatbelt sign, Gray Turner, Cullen), evisceration",
       "FAST (Focused Assessment with Sonography in Trauma): free fluid in Morrison's pouch, splenorenal, pelvis, pericardium",
       "Temperature: hypothermia indicates massive transfusion/shock"
     ],
     investigations: [
-      {name:"FAST exam", role:"Bedside US — identifies free intra-abdominal fluid; positive FAST + haemodynamic instability = immediate laparotomy"},
-      {name:"Extended FAST (eFAST)", role:"Adds bilateral chest views for pneumo/haemothorax"},
-      {name:"Trauma CT (pan-scan: head/chest/abdomen/pelvis)", role:"Haemodynamically stable patients ONLY; identifies injuries, grade solid organ injuries, extravasation of contrast"},
+      {name:"FAST exam", role:"Bedside US — identifies free intra-abdominal fluid; positive FAST + hemodynamic instability = immediate laparotomy"},
+      {name:"Extended FAST (eFAST)", role:"Adds bilateral chest views for pneumo/hemothorax"},
+      {name:"Trauma CT (pan-scan: head/chest/abdomen/pelvis)", role:"Hemodynamically stable patients ONLY; identifies injuries, grade solid organ injuries, extravasation of contrast"},
       {name:"ABG", role:"pH, lactate, base excess — assess metabolic acidosis; lactate >5 = severe shock"},
-      {name:"FBC, coagulation, TEG/ROTEM", role:"Baseline + guides massive transfusion protocol; ROTEM guides fibrinogen/FFP/platelets"},
+      {name:"CBC, coagulation, TEG/ROTEM", role:"Baseline + guides massive transfusion protocol; ROTEM guides fibrinogen/FFP/platelets"},
       {name:"Diagnostic peritoneal aspirate (DPA)", role:"Rapid (<5 min) if FAST equivocal and patient too unstable for CT; >10mL frank blood = laparotomy"},
       {name:"Pelvic X-ray", role:"ATLS primary survey — pelvic ring disruption; pelvic binder application if fracture"}
     ]
@@ -62,9 +62,9 @@ const TRAUMA_DISEASES_1 = [
     items: [
       {k:"pH <7.2", v:"Severe metabolic acidosis"},
       {k:"Temperature <35°C", v:"Hypothermia impairing coagulation"},
-      {k:"INR >1.5 / fibrinogen <1.5", v:"Coagulopathy — haemostatic failure"},
+      {k:"INR >1.5 / fibrinogen <1.5", v:"Coagulopathy — hemostatic failure"},
       {k:">10 units pRBC in <24h", v:"Massive transfusion requirement"},
-      {k:"Unstable pelvis + abdominal exsanguination", v:"Combined injury, cannot achieve haemostasis"},
+      {k:"Unstable pelvis + abdominal exsanguination", v:"Combined injury, cannot achieve hemostasis"},
       {k:"Surgeon decision", v:"'No time to fix it properly' — abbreviated surgery saves life"}
     ]
   },
@@ -74,42 +74,42 @@ const TRAUMA_DISEASES_1 = [
       "Damage control resuscitation (DCR): concurrent with DCS",
       "1:1:1 ratio: pRBC:FFP:platelets (or whole blood if available)",
       "Tranexamic acid (TXA) 1g IV within 3 hours of injury (CRASH-2 trial) then 1g over 8h",
-      "Permissive hypotension: SBP 80–90mmHg until haemorrhage control (NOT in TBI)",
+      "Permissive hypotension: SBP 80–90mmHg until hemorrhage control (NOT in TBI)",
       "Avoid crystalloid — worsens dilutional coagulopathy"
     ],
     medical: [
-      "Calcium (CaCl₂ 1g IV): hypocalcaemia from massive transfusion — impairs myocardial function and coagulation",
+      "Calcium (CaCl₂ 1g IV): hypocalcemia from massive transfusion — impairs myocardial function and coagulation",
       "Fibrinogen concentrate or cryoprecipitate: fibrinogen <1.5g/L",
       "Vasopressors (noradrenaline): if vasodilatory shock component after volume",
       "Warm all fluids and blood products — rewarming"
     ],
     surgical: [
-      {name:"Emergency laparotomy — damage control phase (DCS-1)", when:"Haemodynamic instability + positive FAST, or penetrating abdominal trauma with instability", notes:"Midline incision xiphoid to pubis; manual compression/packing first; identify and control haemorrhage; control GI contamination; temporary closure"},
+      {name:"Emergency laparotomy — damage control phase (DCS-1)", when:"Hemodynamic instability + positive FAST, or penetrating abdominal trauma with instability", notes:"Midline incision xiphoid to pubis; manual compression/packing first; identify and control hemorrhage; control GI contamination; temporary closure"},
       {name:"Definitive laparotomy (DCS-4)", when:"After ICU resuscitation: pH >7.35, temp >36°C, coagulopathy corrected", notes:"Remove packs; definitive bowel anastomosis; vascular repair; abdominal wall closure"},
-      {name:"REBOA (Zone I or III)", when:"Haemorrhagic shock from abdominal/pelvic injury; bridge to laparotomy", notes:"Zone I (descending thoracic aorta) for abdominal haemorrhage; Zone III (infrarenal) for pelvic haemorrhage"},
-      {name:"Open abdomen (OA) management", when:"Cannot close fascia (bowel oedema, abdominal compartment syndrome risk, planned relook)", notes:"Bogotá bag, ABThera (negative pressure wound therapy); plan closure within 7–10 days; delayed primary closure preferred"}
+      {name:"REBOA (Zone I or III)", when:"Hemorrhagic shock from abdominal/pelvic injury; bridge to laparotomy", notes:"Zone I (descending thoracic aorta) for abdominal hemorrhage; Zone III (infrarenal) for pelvic hemorrhage"},
+      {name:"Open abdomen (OA) management", when:"Cannot close fascia (bowel edema, abdominal compartment syndrome risk, planned relook)", notes:"Bogotá bag, ABThera (negative pressure wound therapy); plan closure within 7–10 days; delayed primary closure preferred"}
     ]
   },
   technique: {
     title: "Damage Control Laparotomy — Step-by-Step",
     prep: [
-      "Notify OR team, anaesthetics, blood bank — activate massive transfusion protocol",
+      "Notify OR team, anesthetics, blood bank — activate massive transfusion protocol",
       "Supine; abdomen prepped from chin to knees (including chest for thoracotomy if needed)",
       "Two large-bore IVs, arterial line, central line — all while prepping"
     ],
     steps: [
-      {n:1, t:"Long midline incision", d:"Xiphisternum to pubis; enter peritoneum; immediately control haemorrhage manually"},
-      {n:2, t:"Four-quadrant packing", d:"Pack all 4 quadrants with large dry laparotomy packs; apply manual pressure; allow anaesthetics to catch up with resuscitation"},
+      {n:1, t:"Long midline incision", d:"Xiphisternum to pubis; enter peritoneum; immediately control hemorrhage manually"},
+      {n:2, t:"Four-quadrant packing", d:"Pack all 4 quadrants with large dry laparotomy packs; apply manual pressure; allow anesthetics to catch up with resuscitation"},
       {n:3, t:"Aortic compression", d:"If exsanguination: manual compression of aorta at diaphragmatic hiatus while packs applied"},
-      {n:4, t:"Systematic assessment", d:"Sequentially remove packs quadrant by quadrant; identify source of haemorrhage"},
-      {n:5, t:"Haemorrhage control", d:"Hepatic: perihepatic packing; splenic: splenectomy; mesenteric vessel: ligate/repair; major vessel: shunt (Argyle/Javid) — NOT definitive repair in DCS"},
+      {n:4, t:"Systematic assessment", d:"Sequentially remove packs quadrant by quadrant; identify source of hemorrhage"},
+      {n:5, t:"Hemorrhage control", d:"Hepatic: perihepatic packing; splenic: splenectomy; mesenteric vessel: ligate/repair; major vessel: shunt (Argyle/Javid) — NOT definitive repair in DCS"},
       {n:6, t:"GI contamination control", d:"Staple or ligate perforated bowel; skin staples or TAs; do NOT anastomose in DCS phase"},
       {n:7, t:"Temporary abdominal closure (TAC)", d:"ABThera (NPT) or Bogotá bag; fascia NOT closed; skin NOT closed; suction drains to collect blood/fluid"},
       {n:8, t:"Document injury map", d:"Accurate operative note of all injuries found, controlled, deferred — essential for relook team"}
     ],
     pearls: [
-      "Pack first, ask questions later — identify source after haemorrhage controlled, not before",
-      "Hepatic veins: if injury near IVC/hepatic veins → Pringle manoeuvre + packing; NOT extensive hepatic resection in DCS",
+      "Pack first, ask questions later — identify source after hemorrhage controlled, not before",
+      "Hepatic veins: if injury near IVC/hepatic veins → Pringle maneuver + packing; NOT extensive hepatic resection in DCS",
       "Relook at 24–48h: re-explore in reverse — packs removed, anastomoses fashioned, closure if possible",
       "Abdominal compartment syndrome (ACS): IAP >20mmHg with organ dysfunction — requires decompressive laparotomy"
     ]
@@ -118,15 +118,15 @@ const TRAUMA_DISEASES_1 = [
     {src:"ATLS 10th Edition: Abdominal and pelvic trauma"},
     {src:"EAST Practice Management Guidelines: Damage control surgery"},
     {src:"WSES Jerusalem Guidelines 2020: Penetrating abdominal trauma"},
-    {src:"CRASH-2 trial: Tranexamic acid in haemorrhagic shock"}
+    {src:"CRASH-2 trial: Tranexamic acid in hemorrhagic shock"}
   ],
   pearls: [
     "TXA within 3 hours saves lives — do not delay (CRASH-2); after 3h it may worsen outcomes",
-    "Hypothermia worsens coagulopathy: warm theatre, warm fluids, Bair hugger — temperature management is resuscitation",
-    "FAST negative + haemodynamic instability = think pelvic fracture (retroperitoneal bleed) or cardiac tamponade"
+    "Hypothermia worsens coagulopathy: warm theater, warm fluids, Bair hugger — temperature management is resuscitation",
+    "FAST negative + hemodynamic instability = think pelvic fracture (retroperitoneal bleed) or cardiac tamponade"
   ],
   mistakes: [
-    "Crystalloid resuscitation in haemorrhagic shock — worsens dilutional coagulopathy and acidosis",
+    "Crystalloid resuscitation in hemorrhagic shock — worsens dilutional coagulopathy and acidosis",
     "Attempting definitive repair in the presence of the lethal triad — patient will die on the table",
     "Forgetting TXA — given within 3 hours it significantly reduces mortality",
     "Delaying laparotomy to obtain CT in an unstable patient — FAST positive + unstable = go to OR"
@@ -145,20 +145,20 @@ const TRAUMA_DISEASES_1 = [
     "IAP >12mmHg = intra-abdominal hypertension (IAH); IAP >20mmHg + organ dysfunction = ACS",
     "Measure IAP via urinary bladder (transduced via Foley catheter) — gold standard",
     "Primary ACS: abdominal injury/surgery; secondary ACS: massive fluid resuscitation",
-    "Graded management: medical (optimise position, NGT, diuresis, neuromuscular blockade) → surgical decompression",
+    "Graded management: medical (optimize position, NGT, diuresis, neuromuscular blockade) → surgical decompression",
     "Open abdomen after decompression: TAC until swelling resolves, then closure"
   ],
-  differentials: ["Acute bowel obstruction","Ileus","Pneumoperitoneum","Intra-abdominal haematoma","Generalised peritonitis"],
+  differentials: ["Acute bowel obstruction","Ileus","Pneumoperitoneum","Intra-abdominal hematoma","Generalized peritonitis"],
   mnemonics: [
     {name:"ACS criteria", text:"IAP >20 + At least ONE new organ failure (renal, respiratory, cardiovascular)"},
     {name:"WSACS grades", text:"I: 12–15 | II: 16–20 | III: 21–25 | IV: >25 mmHg"}
   ],
   overview: {
     definition: "Sustained intra-abdominal pressure >20mmHg associated with new organ dysfunction/failure, most commonly renal, respiratory, and cardiovascular.",
-    epidemiology: "IAH in 30–50% ICU patients; ACS in 5–8%. High mortality (50–75%) if unrecognised. Occurs after major abdominal surgery, trauma with massive resuscitation, or packing.",
-    pathophysiology: "↑IAP → diaphragm elevation → ↑intrathoracic pressure → ↓venous return → ↓CO; renal vein compression → ↓GFR + oliguria; bowel wall oedema → mesenteric ischaemia; ↑ICP via ↑intrathoracic pressure.",
+    epidemiology: "IAH in 30–50% ICU patients; ACS in 5–8%. High mortality (50–75%) if unrecognized. Occurs after major abdominal surgery, trauma with massive resuscitation, or packing.",
+    pathophysiology: "↑IAP → diaphragm elevation → ↑intrathoracic pressure → ↓venous return → ↓CO; renal vein compression → ↓GFR + oliguria; bowel wall edema → mesenteric ischemia; ↑ICP via ↑intrathoracic pressure.",
     classification: [
-      "Primary ACS: direct abdominal pathology (haemoperitoneum, bowel distension, packing)",
+      "Primary ACS: direct abdominal pathology (hemoperitoneum, bowel distension, packing)",
       "Secondary ACS: no abdominal injury; massive resuscitation, sepsis, capillary leak",
       "Recurrent ACS: develops after previously treated ACS",
       "WSACS Grades I–IV by IAP level"
@@ -170,13 +170,13 @@ const TRAUMA_DISEASES_1 = [
       "Massive fluid resuscitation (>10L in 24h)",
       "Damage control packing in situ",
       "Burns (>40% TBSA)",
-      "Intra-abdominal haemorrhage or peritonitis"
+      "Intra-abdominal hemorrhage or peritonitis"
     ],
     examination: [
       "Tense, rigid abdomen (may be masked by sedation/neuromuscular blockade)",
       "Oliguria/anuria despite adequate filling",
       "Elevated peak airway pressures on ventilator",
-      "Haemodynamic instability",
+      "Hemodynamic instability",
       "New renal failure (rising creatinine, oliguria)"
     ],
     investigations: [
@@ -201,18 +201,18 @@ const TRAUMA_DISEASES_1 = [
     conservative: [
       "Head of bed ≤20° (Trendelenburg worsens IAP)",
       "Nasogastric + rectal decompression",
-      "Judicious diuresis/haemofiltration if volume overloaded",
+      "Judicious diuresis/hemofiltration if volume overloaded",
       "Neuromuscular blockade: reduces abdominal wall tension by 10–15mmHg",
-      "Percutaneous drainage: ascites/haematoma contributing to IAP"
+      "Percutaneous drainage: ascites/hematoma contributing to IAP"
     ],
     medical: [
       "Neuromuscular blockade (cisatracurium infusion): temporary 1–2h reduction in IAP; buys time for other measures",
-      "CVVH/haemofiltration: removes excess fluid in secondary ACS"
+      "CVVH/hemofiltration: removes excess fluid in secondary ACS"
     ],
     surgical: [
-      {name:"Decompressive laparotomy", when:"ACS (IAP >20 + organ failure) not responding to medical management within 1–2h", notes:"Midline laparotomy — immediate release of IAP; often dramatic improvement in haemodynamics and ventilator pressures; temporary abdominal closure (TAC)"},
-      {name:"Temporary abdominal closure (TAC) post-decompression", when:"After decompressive laparotomy — fascia cannot be closed due to bowel oedema", notes:"ABThera negative pressure wound therapy (preferred); Bogotá bag; Wittmann patch for staged closure; aim to close within 7–10 days"},
-      {name:"Fascia closure / abdominal wall reconstruction", when:"Oedema resolved, organs recovering (usually day 5–10)", notes:"Progressive fascial traction with Wittmann patch; if delayed fascial closure not possible — split skin graft over granulating bowel + delayed component separation"}
+      {name:"Decompressive laparotomy", when:"ACS (IAP >20 + organ failure) not responding to medical management within 1–2h", notes:"Midline laparotomy — immediate release of IAP; often dramatic improvement in hemodynamics and ventilator pressures; temporary abdominal closure (TAC)"},
+      {name:"Temporary abdominal closure (TAC) post-decompression", when:"After decompressive laparotomy — fascia cannot be closed due to bowel edema", notes:"ABThera negative pressure wound therapy (preferred); Bogotá bag; Wittmann patch for staged closure; aim to close within 7–10 days"},
+      {name:"Fascia closure / abdominal wall reconstruction", when:"Edema resolved, organs recovering (usually day 5–10)", notes:"Progressive fascial traction with Wittmann patch; if delayed fascial closure not possible — split skin graft over granulating bowel + delayed component separation"}
     ]
   },
   technique: {
@@ -241,19 +241,19 @@ const TRAUMA_DISEASES_1 = [
   ],
   pearls: [
     "ACS is diagnosed clinically + IAP — do not wait for CT to treat a deteriorating patient",
-    "Open abdomen after DCS or decompression: NPT reduces bowel oedema and facilitates closure",
+    "Open abdomen after DCS or decompression: NPT reduces bowel edema and facilitates closure",
     "Fascial closure rates of >80% achievable with early planned re-laparotomy strategy and NPT"
   ],
   mistakes: [
     "Measuring IAP with head of bed elevated — falsely elevated values",
     "Delayed decompression waiting for CT in deteriorating patient — laparotomy is both diagnostic and therapeutic",
-    "Forcing primary fascial closure in oedematous bowel — catastrophic dehiscence"
+    "Forcing primary fascial closure in edematous bowel — catastrophic dehiscence"
   ]
 },
 {
   id: "necrotising-fasciitis",
   dept: "trauma",
-  name: "Necrotising Fasciitis",
+  name: "Necrotizing Fasciitis",
   latin: "Fasciitis necrotisans",
   organ: "Soft tissue",
   severity: "high",
@@ -268,13 +268,13 @@ const TRAUMA_DISEASES_1 = [
   ],
   differentials: ["Severe cellulitis","Gas gangrene (Clostridial myonecrosis)","Pyomyositis","Calciphylaxis","Purpura fulminans","DVT with skin changes"],
   mnemonics: [
-    {name:"LRINEC Score", text:"CRP + WBC + Na + Glucose + Creatinine + Haemoglobin — score ≥6 = high risk NF"},
-    {name:"NF hallmarks", text:"SNAPP: Severe pain disproportionate to skin appearance + Necrosis + Anaesthesia (skin) + Purple/grey discolouration + Palpable crepitus"}
+    {name:"LRINEC Score", text:"CRP + WBC + Na + Glucose + Creatinine + Hemoglobin — score ≥6 = high risk NF"},
+    {name:"NF hallmarks", text:"SNAPP: Severe pain disproportionate to skin appearance + Necrosis + Anesthesia (skin) + Purple/gray discoloration + Palpable crepitus"}
   ],
   overview: {
-    definition: "Rapidly spreading necrotising infection of the superficial fascia and subcutaneous tissue, with sparing of muscle initially. Bacterial toxins cause vascular thrombosis, tissue necrosis, and systemic toxin-mediated shock.",
+    definition: "Rapidly spreading necrotizing infection of the superficial fascia and subcutaneous tissue, with sparing of muscle initially. Bacterial toxins cause vascular thrombosis, tissue necrosis, and systemic toxin-mediated shock.",
     epidemiology: "0.4/100,000/year. Mortality 20–40%. Risk factors: diabetes (most common), obesity, immunosuppression, chronic renal failure, alcoholism, malignancy, recent surgery or trauma.",
-    pathophysiology: "Bacteria (streptococcal exotoxins, endotoxins from polymicrobial) → vascular thrombosis of small subcutaneous vessels → ischaemia → fascial necrosis → gas production (CO₂/H₂) → crepitus. Toxin-mediated shock (TSS from GAS) can develop rapidly.",
+    pathophysiology: "Bacteria (streptococcal exotoxins, endotoxins from polymicrobial) → vascular thrombosis of small subcutaneous vessels → ischemia → fascial necrosis → gas production (CO₂/H₂) → crepitus. Toxin-mediated shock (TSS from GAS) can develop rapidly.",
     classification: [
       "Type I: Polymicrobial — mixed aerobic/anaerobic (Bacteroides, Clostridium, Enterobacteriaceae, Streptococcus); truncal, perineal; elderly/diabetic",
       "Type II: Monomicrobial — Group A Streptococcus (pyogenes) or MRSA; limbs; young, previously healthy; most virulent",
@@ -286,23 +286,23 @@ const TRAUMA_DISEASES_1 = [
   diagnosis: {
     history: [
       "Severe, disproportionate pain at site of infection (pain out of proportion to visible skin changes = cardinal feature)",
-      "Skin may look deceptively normal early — erythema, oedema, induration",
+      "Skin may look deceptively normal early — erythema, edema, induration",
       "Rapid progression over hours",
       "Diabetes, immunosuppression, recent minor trauma, insect bite, perianal abscess",
-      "Fever, malaise, confusion (systemic toxaemia)",
-      "Late: skin discolouration (grey/purple), bullae, crepitus, skin necrosis, anaesthesia"
+      "Fever, malaise, confusion (systemic toxemia)",
+      "Late: skin discoloration (gray/purple), bullae, crepitus, skin necrosis, anesthesia"
     ],
     examination: [
       "Systemic: fever, tachycardia, hypotension (septic shock in advanced cases)",
       "Local: erythema with woody induration beyond erythema margins",
       "Crepitus on palpation (gas in tissues) — pathognomonic but present late",
-      "Skin discolouration: bluish-grey with haemorrhagic bullae",
-      "Anaesthesia of overlying skin (cutaneous nerve destruction)",
-      "Fascial plane tracking: erythema/oedema spreading rapidly in subcutaneous plane"
+      "Skin discoloration: bluish-gray with hemorrhagic bullae",
+      "Anesthesia of overlying skin (cutaneous nerve destruction)",
+      "Fascial plane tracking: erythema/edema spreading rapidly in subcutaneous plane"
     ],
     investigations: [
       {name:"LRINEC Score", role:"CRP >150 (4pts) + WBC >15 (1pt), >25 (2pts) + Na <135 (2pts) + Glucose >10 (1pt) + Cr >141 (2pts) + Hb <11 (2pts); ≥6 = high risk (NPV 96%); do NOT rely on low score to exclude NF"},
-      {name:"FBC, U&E, CRP, LFTs, lactate", role:"Leucocytosis, elevated CRP, hyponatraemia, elevated creatinine, high lactate — severe sepsis markers"},
+      {name:"CBC, electrolytes/BUN-Cr, CRP, LFTs, lactate", role:"Leukocytosis, elevated CRP, hyponatremia, elevated creatinine, high lactate — severe sepsis markers"},
       {name:"CT soft tissue (with IV contrast)", role:"Gas tracking along fascial planes (pathognomonic); fascia thickening; abscess; defines extent; sensitivity 90%; do NOT delay surgery for CT if diagnosis clear clinically"},
       {name:"Wound swabs and blood cultures", role:"Before antibiotics; guide targeted therapy; often polymicrobial"},
       {name:"Tissue biopsy at surgery", role:"Send necrotic tissue for histology (thrombosis of vessels, PMN infiltration) and MC&S"}
@@ -313,7 +313,7 @@ const TRAUMA_DISEASES_1 = [
     items: [
       {k:"CRP (mg/L)", v:"<150=0; ≥150=4 points"},
       {k:"WBC (×10⁹/L)", v:"<15=0; 15–25=1; >25=2 points"},
-      {k:"Haemoglobin (g/dL)", v:">13.5=0; 11–13.5=1; <11=2 points"},
+      {k:"Hemoglobin (g/dL)", v:">13.5=0; 11–13.5=1; <11=2 points"},
       {k:"Sodium (mmol/L)", v:"≥135=0; <135=2 points"},
       {k:"Creatinine (μmol/L)", v:"≤141=0; >141=2 points"},
       {k:"Glucose (mmol/L)", v:"≤10=0; >10=1 point"},
@@ -334,14 +334,14 @@ const TRAUMA_DISEASES_1 = [
       "Vasopressors: noradrenaline for septic shock; vasopressin adjunct"
     ],
     surgical: [
-      {name:"Emergency surgical debridement", when:"NF diagnosed or clinically suspected — IMMEDIATE; time is the single most important prognostic factor", notes:"Wide excision of all necrotic tissue until viable bleeding margins; do NOT close; return to theatre every 24–48h for re-look + further debridement until wound clean"},
+      {name:"Emergency surgical debridement", when:"NF diagnosed or clinically suspected — IMMEDIATE; time is the single most important prognostic factor", notes:"Wide excision of all necrotic tissue until viable bleeding margins; do NOT close; return to theater every 24–48h for re-look + further debridement until wound clean"},
       {name:"Relook debridement (24–48 hourly)", when:"After initial debridement — reassess wound; NF spreads despite initial surgery", notes:"Continue debridements until no further necrotic tissue; culture-directed antibiotic change"},
       {name:"Reconstruction", when:"After 2–3 negative relooks with clean granulating wound", notes:"Split-thickness skin graft (STSG), VAC therapy, flap reconstruction if defect large; colostomy for perineal NF contamination"},
       {name:"Amputation", when:"Limb NF with extensive muscle involvement, uncontrolled sepsis, or irreversible vascular compromise", notes:"Life-saving; primary limb-sparing attempts may prolong sepsis and worsen mortality in extremis"}
     ]
   },
   technique: {
-    title: "Emergency Surgical Debridement for Necrotising Fasciitis",
+    title: "Emergency Surgical Debridement for Necrotizing Fasciitis",
     prep: [
       "IV access, resuscitation, blood cultures, antibiotics started",
       "GA; supine (or lithotomy for perineal NF)",
@@ -349,18 +349,18 @@ const TRAUMA_DISEASES_1 = [
     ],
     steps: [
       {n:1, t:"Skin incision", d:"Generous incision over area of maximal involvement; extend well beyond visible skin changes"},
-      {n:2, t:"Fascial assessment", d:"Fascia is grey, necrotic, non-bleeding — pathognomonic; dissects easily with finger ('dishwater fluid' — thin grey-brown fluid, no true pus)"},
+      {n:2, t:"Fascial assessment", d:"Fascia is gray, necrotic, non-bleeding — pathognomonic; dissects easily with finger ('dishwater fluid' — thin gray-brown fluid, no true pus)"},
       {n:3, t:"Radical excision", d:"Excise ALL necrotic fascia and subcutaneous tissue; take margins until reaching healthy, bleeding tissue that resists blunt dissection"},
       {n:4, t:"Fascial plane assessment", d:"Explore all fascial planes extending from visible wound — NF spreads far beyond skin changes"},
       {n:5, t:"Tissue samples", d:"Send necrotic tissue for histology and MC&S"},
       {n:6, t:"Open wound management", d:"Leave wound completely open; VAC (negative pressure wound therapy) or moist dressings; mark wound edges with marker pen to track progression"},
-      {n:7, t:"Relook at 24–48h", d:"Return to theatre; reassess; excise any further necrotic tissue; repeat until wound clean"}
+      {n:7, t:"Relook at 24–48h", d:"Return to theater; reassess; excise any further necrotic tissue; repeat until wound clean"}
     ],
     pearls: [
       "The fascial plane must be explored — skin may look normal while fascia is necrotic 10cm away",
       "'Dishwater fluid' = hallmark of NF at surgery; send for cultures",
       "Finger test: if finger sweeps easily through subcutaneous tissue with no resistance — NF confirmed",
-      "Fournier's: divert faecal stream (loop colostomy) if rectal source or perineal contamination"
+      "Fournier's: divert fecal stream (loop colostomy) if rectal source or perineal contamination"
     ]
   },
   guidelines: [
@@ -374,7 +374,7 @@ const TRAUMA_DISEASES_1 = [
     "Fournier's gangrene: suprapubic cystostomy if urethral involvement; colostomy if rectal/anal source"
   ],
   mistakes: [
-    "Waiting for culture results or imaging before taking to theatre — every hour's delay worsens mortality",
+    "Waiting for culture results or imaging before taking to theater — every hour's delay worsens mortality",
     "Inadequate initial debridement ('conservative' excision) — NF will progress overnight",
     "Not returning for planned relook — further necrosis occurs after initial debridement"
   ]
@@ -386,82 +386,82 @@ const TRAUMA_DISEASES_1 = [
   latin: "Trauma lienis",
   organ: "Spleen",
   severity: "high",
-  tags: ["trauma","spleen","haemorrhage","blunt"],
-  hero: "Most commonly injured solid organ in blunt abdominal trauma. Non-operative management (NOM) is now standard for haemodynamically stable patients. Preserve the spleen where possible — prevent OPSI.",
+  tags: ["trauma","spleen","hemorrhage","blunt"],
+  hero: "Most commonly injured solid organ in blunt abdominal trauma. Non-operative management (NOM) is now standard for hemodynamically stable patients. Preserve the spleen where possible — prevent OPSI.",
   keypoints: [
     "AAST Grade I–V; Grade I–III stable patients → NOM (ICU monitoring + serial examination)",
-    "NOM failure rate ~5%; indications for intervention: haemodynamic instability, failed NOM, Grade IV–V",
-    "Angioembolisation: for blush on CT, Grade III–V — avoids splenectomy",
-    "Splenectomy: for haemodynamic instability or failed embolisation",
+    "NOM failure rate ~5%; indications for intervention: hemodynamic instability, failed NOM, Grade IV–V",
+    "Angioembolization: for blush on CT, Grade III–V — avoids splenectomy",
+    "Splenectomy: for hemodynamic instability or failed embolization",
     "Post-splenectomy: OPSI risk — vaccinate against encapsulated organisms (pneumococcus, meningococcus, Hib)"
   ],
-  differentials: ["Left renal trauma","Left adrenal haematoma","Pancreatic tail injury","Left lower rib fractures","Mesenteric haematoma"],
+  differentials: ["Left renal trauma","Left adrenal hematoma","Pancreatic tail injury","Left lower rib fractures","Mesenteric hematoma"],
   mnemonics: [
     {name:"OPSI organisms", text:"Some People Have Meningitis: S.pneumoniae + Pneumococcus + H.influenzae + N.meningitidis"},
-    {name:"AAST Grade", text:"I: subcapsular haematoma <10%; II: haematoma 10–50%; III: >50% or laceration >3cm; IV: laceration involving hilar vessels; V: shattered/devascularised"}
+    {name:"AAST Grade", text:"I: subcapsular hematoma <10%; II: hematoma 10–50%; III: >50% or laceration >3cm; IV: laceration involving hilar vessels; V: shattered/devascularized"}
   ],
   overview: {
-    definition: "Parenchymal injury to the spleen from blunt or penetrating trauma, ranging from subcapsular haematoma to complete disruption.",
+    definition: "Parenchymal injury to the spleen from blunt or penetrating trauma, ranging from subcapsular hematoma to complete disruption.",
     epidemiology: "Most common solid organ injury in blunt abdominal trauma. RTA most common mechanism. Mortality from isolated splenic injury <1% with NOM, 5–10% requiring splenectomy.",
-    pathophysiology: "Blunt force → capsule/parenchyma laceration → haemoperitoneum or subcapsular haematoma. Delayed rupture: subcapsular haematoma expands days to weeks post-injury.",
+    pathophysiology: "Blunt force → capsule/parenchyma laceration → hemoperitoneum or subcapsular hematoma. Delayed rupture: subcapsular hematoma expands days to weeks post-injury.",
     classification: [
       "AAST Splenic Injury Scale Grades I–V",
-      "Grade I: subcapsular haematoma <10% surface area; laceration <1cm deep",
-      "Grade II: haematoma 10–50%; laceration 1–3cm",
-      "Grade III: haematoma >50% or expanding; laceration >3cm",
+      "Grade I: subcapsular hematoma <10% surface area; laceration <1cm deep",
+      "Grade II: hematoma 10–50%; laceration 1–3cm",
+      "Grade III: hematoma >50% or expanding; laceration >3cm",
       "Grade IV: laceration involving segmental or hilar vessels",
-      "Grade V: shattered spleen or hilar devascularisation"
+      "Grade V: shattered spleen or hilar devascularization"
     ]
   },
   diagnosis: {
     history: [
       "Blunt abdominal trauma: RTA (especially seatbelt), fall, direct blow",
-      "Left upper quadrant pain, left shoulder tip pain (Kehr's sign — diaphragmatic irritation from haemoperitoneum)",
+      "Left upper quadrant pain, left shoulder tip pain (Kehr's sign — diaphragmatic irritation from hemoperitoneum)",
       "Lower left rib fractures (associated in 30%)",
       "Penetrating trauma: stab or GSW to left flank/abdomen"
     ],
     examination: [
-      "ATLS assessment: haemodynamic status (HR, BP, capillary refill)",
-      "Abdominal tenderness: LUQ, generalised if haemoperitoneum",
+      "ATLS assessment: hemodynamic status (HR, BP, capillary refill)",
+      "Abdominal tenderness: LUQ, generalized if hemoperitoneum",
       "FAST: free fluid in LUQ (splenorenal/perisplenic) and pelvis",
       "Left lower rib tenderness (associated fractures)",
       "Signs of delayed rupture: well initially then deteriorates hours/days later"
     ],
     investigations: [
       {name:"FAST exam", role:"Rapid: free fluid LUQ or pelvis; unstable → direct to OR if positive"},
-      {name:"CT abdomen with IV contrast (portal venous phase)", role:"Haemodynamically STABLE patients; grades injury; identifies active extravasation (blush), pseudoaneurysm, vascular injury; sensitivity >95%"},
-      {name:"Vascular phase CT (arterial)", role:"Identifies active arterial blush — indication for angioembolisation"},
-      {name:"FBC, coagulation, crossmatch", role:"Baseline haemoglobin; coagulopathy assessment; type and screen/crossmatch"}
+      {name:"CT abdomen with IV contrast (portal venous phase)", role:"Hemodynamically STABLE patients; grades injury; identifies active extravasation (blush), pseudoaneurysm, vascular injury; sensitivity >95%"},
+      {name:"Vascular phase CT (arterial)", role:"Identifies active arterial blush — indication for angioembolization"},
+      {name:"CBC, coagulation, crossmatch", role:"Baseline hemoglobin; coagulopathy assessment; type and screen/crossmatch"}
     ]
   },
   criteria: {
     title: "AAST Splenic Injury Scale",
     items: [
-      {k:"Grade I", v:"Subcapsular haematoma <10% surface area; capsular laceration <1cm parenchymal depth"},
-      {k:"Grade II", v:"Subcapsular haematoma 10–50%; intraparenchymal haematoma <5cm; laceration 1–3cm"},
-      {k:"Grade III", v:"Subcapsular haematoma >50% or expanding; intraparenchymal haematoma >5cm; laceration >3cm"},
-      {k:"Grade IV", v:"Laceration involving segmental or hilar vessels with >25% devascularisation"},
-      {k:"Grade V", v:"Completely shattered spleen; hilar vascular injury devascularises entire spleen"}
+      {k:"Grade I", v:"Subcapsular hematoma <10% surface area; capsular laceration <1cm parenchymal depth"},
+      {k:"Grade II", v:"Subcapsular hematoma 10–50%; intraparenchymal hematoma <5cm; laceration 1–3cm"},
+      {k:"Grade III", v:"Subcapsular hematoma >50% or expanding; intraparenchymal hematoma >5cm; laceration >3cm"},
+      {k:"Grade IV", v:"Laceration involving segmental or hilar vessels with >25% devascularization"},
+      {k:"Grade V", v:"Completely shattered spleen; hilar vascular injury devascularizes entire spleen"}
     ]
   },
   scoring: [],
   management: {
     conservative: [
-      "NOM: Grade I–III stable patients (and selected Grade IV–V with angioembolisation)",
+      "NOM: Grade I–III stable patients (and selected Grade IV–V with angioembolization)",
       "ICU admission for Grade III–V NOM; step-down ward for Grade I–II",
       "Bed rest, serial abdominal examinations, Hb monitoring every 4–6h for 24–48h",
       "Activity restriction 4–6 weeks (Grade I–III); 6–12 weeks (Grade IV–V) before contact sports",
       "NPO initially; advance diet with stability"
     ],
     medical: [
-      "Blood transfusion if Hb <70g/L or symptomatic anaemia",
-      "TXA 1g IV if active haemorrhage (within 3 hours of injury)"
+      "Blood transfusion if Hb <70g/L or symptomatic anemia",
+      "TXA 1g IV if active hemorrhage (within 3 hours of injury)"
     ],
     surgical: [
-      {name:"Angioembolisation (proximal or selective)", when:"Grade III–V with active blush on CT; high-grade injury even without blush; NOM failure with stable enough for IR suite", notes:"Proximal embolisation (main splenic artery) reduces perfusion pressure while preserving ~70% splenic function via collaterals; selective embolisation for specific arterial bleeding"},
-      {name:"Splenorrhaphy (splenic repair)", when:"Intraoperative finding of Grade I–II injury; superficial lacerations amenable to repair", notes:"Topical haemostatic agents + argon beam coagulation; pledgeted sutures; mesh wrap (polyglactin mesh wrapping spleen)"},
-      {name:"Splenectomy", when:"Haemodynamic instability + positive FAST (immediate); failed NOM; Grade IV–V with hilar injury; failed angioembolisation; contaminated field (bowel injury)", notes:"Control splenic hilum first; divide short gastrics; divide splenorenal, splenocolic, splenophrenic ligaments; ligate splenic artery and vein at hilum"},
-      {name:"Post-splenectomy vaccination", when:"All splenectomy patients — prior to discharge or at 2 weeks if emergency splenectomy", notes:"Pneumococcus (Prevnar 13 + Pneumovax 23), Meningococcus ACWY + B, Haemophilus influenzae type b; annual influenza; penicillin V prophylaxis (2 years minimum or lifelong if high-risk)"}
+      {name:"Angioembolization (proximal or selective)", when:"Grade III–V with active blush on CT; high-grade injury even without blush; NOM failure with stable enough for IR suite", notes:"Proximal embolization (main splenic artery) reduces perfusion pressure while preserving ~70% splenic function via collaterals; selective embolization for specific arterial bleeding"},
+      {name:"Splenorrhaphy (splenic repair)", when:"Intraoperative finding of Grade I–II injury; superficial lacerations amenable to repair", notes:"Topical hemostatic agents + argon beam coagulation; pledgeted sutures; mesh wrap (polyglactin mesh wrapping spleen)"},
+      {name:"Splenectomy", when:"Hemodynamic instability + positive FAST (immediate); failed NOM; Grade IV–V with hilar injury; failed angioembolization; contaminated field (bowel injury)", notes:"Control splenic hilum first; divide short gastrics; divide splenorenal, splenocolic, splenophrenic ligaments; ligate splenic artery and vein at hilum"},
+      {name:"Post-splenectomy vaccination", when:"All splenectomy patients — prior to discharge or at 2 weeks if emergency splenectomy", notes:"Pneumococcus (Prevnar 13 + Pneumovax 23), Meningococcus ACWY + B, Hemophilus influenzae type b; annual influenza; penicillin V prophylaxis (2 years minimum or lifelong if high-risk)"}
     ]
   },
   technique: {
@@ -472,31 +472,31 @@ const TRAUMA_DISEASES_1 = [
       "Blood available; cell salvage if available"
     ],
     steps: [
-      {n:1, t:"Incision and access", d:"Midline laparotomy; manually compress splenic hilum immediately if active haemorrhage; pack LUQ"},
-      {n:2, t:"Splenic mobilisation", d:"Divide splenocolic ligament (inferiorly); divide splenorenal ligament (posterolaterally); divide splenophrenic ligament (superiorly)"},
+      {n:1, t:"Incision and access", d:"Midline laparotomy; manually compress splenic hilum immediately if active hemorrhage; pack LUQ"},
+      {n:2, t:"Splenic mobilization", d:"Divide splenocolic ligament (inferiorly); divide splenorenal ligament (posterolaterally); divide splenophrenic ligament (superiorly)"},
       {n:3, t:"Short gastric vessels", d:"Divide short gastric vessels between clips/ties — preserve greater curve of stomach"},
-      {n:4, t:"Hilum control", d:"Identify splenic artery and vein; double-ligate splenic artery (prevents further haemorrhage); ligate splenic vein separately"},
+      {n:4, t:"Hilum control", d:"Identify splenic artery and vein; double-ligate splenic artery (prevents further hemorrhage); ligate splenic vein separately"},
       {n:5, t:"Specimen removal", d:"Deliver spleen; check for accessory spleens (10% have them; irrelevant in trauma)"},
-      {n:6, t:"Haemostasis", d:"Inspect splenic bed; spleen bed bleeding common — pack or cauterise; drain optional"}
+      {n:6, t:"Hemostasis", d:"Inspect splenic bed; spleen bed bleeding common — pack or cauterise; drain optional"}
     ],
     pearls: [
       "Spleen can deliver 1–2L blood into peritoneum rapidly — compress hilum immediately on entry",
-      "Warm ischaemia time: spleen can be preserved while completing bowel repairs before finalising splenic management",
+      "Warm ischemia time: spleen can be preserved while completing bowel repairs before finalising splenic management",
       "Tail of pancreas: close to splenic hilum — identify and preserve to avoid post-op pancreatic fistula"
     ]
   },
   guidelines: [
     {src:"EAST 2012: Practice Management Guidelines for Non-operative Management of Blunt Splenic Injury"},
     {src:"WSES Jerusalem Guidelines 2017: Splenic Trauma"},
-    {src:"British Committee for Standards in Haematology: Guidelines for OPSI prevention"}
+    {src:"British Committee for Standards in Hematology: Guidelines for OPSI prevention"}
   ],
   pearls: [
-    "Delayed splenic rupture: subcapsular haematoma expands → rupture 2–28 days post-injury — warn patients",
-    "NOM failure: rising transfusion requirement, haemodynamic deterioration, peritonitis — do not persist",
+    "Delayed splenic rupture: subcapsular hematoma expands → rupture 2–28 days post-injury — warn patients",
+    "NOM failure: rising transfusion requirement, hemodynamic deterioration, peritonitis — do not persist",
     "OPSI risk highest in first 2 years post-splenectomy but lifelong — patient education critical"
   ],
   mistakes: [
-    "NOM in haemodynamically unstable patient — must operate; stability is non-negotiable criterion",
+    "NOM in hemodynamically unstable patient — must operate; stability is non-negotiable criterion",
     "Forgetting post-splenectomy vaccinations — OPSI mortality 50–70% if it occurs",
     "Pancreatic tail injury during splenectomy — stay close to splenic hilum, not to pancreas"
   ]
@@ -508,27 +508,27 @@ const TRAUMA_DISEASES_1 = [
   latin: "Trauma hepatis",
   organ: "Liver",
   severity: "high",
-  tags: ["trauma","liver","haemorrhage","blunt"],
-  hero: "Most common solid organ injury overall. 80% managed non-operatively. High-grade injuries (IV–V) may require angioembolisation or damage-control hepatic packing.",
+  tags: ["trauma","liver","hemorrhage","blunt"],
+  hero: "Most common solid organ injury overall. 80% managed non-operatively. High-grade injuries (IV–V) may require angioembolization or damage-control hepatic packing.",
   keypoints: [
-    "AAST Grade I–VI; Grade I–III stable → NOM; Grade IV–V → angioembolisation or surgery",
-    "Perihepatic packing is the primary surgical haemostatic manoeuvre — not formal hepatic resection",
-    "Pringle manoeuvre: compress hepatoduodenal ligament to control inflow (safe for 60min warm ischaemia)",
-    "NOM failure rate 5–10%; hepatic arterial blush on CT → angioembolisation",
-    "Bile leak (biloma), haemobilia, hepatic abscess: late complications of high-grade injury"
+    "AAST Grade I–VI; Grade I–III stable → NOM; Grade IV–V → angioembolization or surgery",
+    "Perihepatic packing is the primary surgical hemostatic maneuver — not formal hepatic resection",
+    "Pringle maneuver: compress hepatoduodenal ligament to control inflow (safe for 60min warm ischemia)",
+    "NOM failure rate 5–10%; hepatic arterial blush on CT → angioembolization",
+    "Bile leak (biloma), hemobilia, hepatic abscess: late complications of high-grade injury"
   ],
-  differentials: ["Splenic injury","Right renal trauma","Adrenal haematoma","Biliary tract injury","Hollow viscus injury"],
+  differentials: ["Splenic injury","Right renal trauma","Adrenal hematoma","Biliary tract injury","Hollow viscus injury"],
   mnemonics: [
-    {name:"Pringle manoeuvre", text:"Thumb + index finger compress hepatoduodenal ligament = portal triad control (artery + portal vein + bile duct)"}
+    {name:"Pringle maneuver", text:"Thumb + index finger compress hepatoduodenal ligament = portal triad control (artery + portal vein + bile duct)"}
   ],
   overview: {
     definition: "Hepatic parenchymal injury from blunt or penetrating trauma, ranging from superficial lacerations to major stellate injuries with hepatic vein/IVC involvement.",
     epidemiology: "Most common solid organ injury in penetrating abdominal trauma; 2nd most common in blunt trauma after spleen. Mortality: Grade I–III <1%; Grade IV–V 15–25%; Grade VI near 100%.",
-    pathophysiology: "Blunt: compressive force → parenchymal fracture along lobar/segmental lines, often following hepatic vein pattern. Penetrating: direct laceration. Venous haemorrhage (hepatic veins/IVC) is rapidly exsanguinating.",
+    pathophysiology: "Blunt: compressive force → parenchymal fracture along lobar/segmental lines, often following hepatic vein pattern. Penetrating: direct laceration. Venous hemorrhage (hepatic veins/IVC) is rapidly exsanguinating.",
     classification: [
-      "Grade I: haematoma <10% surface area; laceration <1cm",
-      "Grade II: haematoma 10–50%; laceration 1–3cm deep",
-      "Grade III: haematoma >50%; laceration >3cm; ruptured haematoma",
+      "Grade I: hematoma <10% surface area; laceration <1cm",
+      "Grade II: hematoma 10–50%; laceration 1–3cm deep",
+      "Grade III: hematoma >50%; laceration >3cm; ruptured hematoma",
       "Grade IV: parenchymal disruption 25–75% of hepatic lobe or 1–3 Couinaud segments",
       "Grade V: >75% of hepatic lobe or major hepatic vein/retrohepatic IVC involvement",
       "Grade VI: hepatic avulsion"
@@ -542,24 +542,24 @@ const TRAUMA_DISEASES_1 = [
       "Penetrating: GSW/stab to RUQ, lower thorax"
     ],
     examination: [
-      "ATLS: haemodynamic assessment",
+      "ATLS: hemodynamic assessment",
       "FAST: free fluid RUQ (Morrison's pouch), perisplenic, pelvis",
       "RUQ tenderness, peritonism",
       "Right lower rib tenderness"
     ],
     investigations: [
       {name:"FAST exam", role:"Free fluid in Morrison's pouch (hepatorenal space); unstable + FAST positive → OR"},
-      {name:"CT abdomen IV contrast (portal phase + delayed)", role:"Grades injury; identifies arterial blush (embolisation target); portal vein injury; bile duct injury; detects associated injuries"},
+      {name:"CT abdomen IV contrast (portal phase + delayed)", role:"Grades injury; identifies arterial blush (embolization target); portal vein injury; bile duct injury; detects associated injuries"},
       {name:"ERCP/MRCP", role:"Delayed — if bile leak or biloma on follow-up imaging; ERCP allows biliary stenting"},
-      {name:"Angiography (CT angiogram or formal)", role:"If arterial blush: confirms and facilitates transcatheter embolisation"}
+      {name:"Angiography (CT angiogram or formal)", role:"If arterial blush: confirms and facilitates transcatheter embolization"}
     ]
   },
   criteria: {
     title: "AAST Liver Injury Scale",
     items: [
-      {k:"Grade I–II", v:"Haematoma ≤50% surface area; laceration ≤3cm depth → NOM if stable"},
-      {k:"Grade III", v:"Laceration >3cm depth; haematoma >50% → NOM ± angioembolisation"},
-      {k:"Grade IV", v:"25–75% lobar disruption → angioembolisation or packing if unstable"},
+      {k:"Grade I–II", v:"Hematoma ≤50% surface area; laceration ≤3cm depth → NOM if stable"},
+      {k:"Grade III", v:"Laceration >3cm depth; hematoma >50% → NOM ± angioembolization"},
+      {k:"Grade IV", v:"25–75% lobar disruption → angioembolization or packing if unstable"},
       {k:"Grade V", v:">75% lobe disruption OR hepatic vein/IVC injury → packing; high mortality"},
       {k:"Grade VI", v:"Hepatic avulsion → near-universally fatal"}
     ]
@@ -578,11 +578,11 @@ const TRAUMA_DISEASES_1 = [
       "Antibiotics: prophylactic in penetrating trauma"
     ],
     surgical: [
-      {name:"Perihepatic packing (damage control)", when:"Haemodynamic instability; high-grade injury; massive haemorrhage; part of DCS laparotomy", notes:"Pack all 4 surfaces (superior, anterior, posterior, right lateral) with large laparotomy packs; do NOT attempt anatomic resection in DCS; TAC; relook at 24–48h"},
-      {name:"Pringle manoeuvre", when:"Active hepatic parenchymal haemorrhage requiring control during hepatic repair", notes:"Manual compression or hepatoduodenal ligament clamp (haemostatic bulldog); safe up to 60 min warm ischaemia; intermittent Pringle during repair reduces ischaemia"},
-      {name:"Angioembolisation (hepatic artery)", when:"Arterial blush on CT in stable/stabilised patient; NOM failure with arterial source; Grade III–IV with blush", notes:"Selective or lobar embolisation; risk: ischaemic cholangiopathy, hepatic necrosis — surveillance"},
-      {name:"Topical haemostasis and suture ligation", when:"Actively bleeding parenchymal lacerations during laparotomy", notes:"Argon beam coagulation, haemostatic agent (TachoComb, Surgicel, fibrin glue); horizontal mattress sutures for deep lacerations"},
-      {name:"Formal hepatic resection", when:"Devitalised lobe; failed packing/embolisation; elective setting for late complications (biloma, necrosis)", notes:"AVOID in acute trauma setting unless resection is required for haemostasis (very rare); anatomic resection after physiological recovery"}
+      {name:"Perihepatic packing (damage control)", when:"Hemodynamic instability; high-grade injury; massive hemorrhage; part of DCS laparotomy", notes:"Pack all 4 surfaces (superior, anterior, posterior, right lateral) with large laparotomy packs; do NOT attempt anatomic resection in DCS; TAC; relook at 24–48h"},
+      {name:"Pringle maneuver", when:"Active hepatic parenchymal hemorrhage requiring control during hepatic repair", notes:"Manual compression or hepatoduodenal ligament clamp (hemostatic bulldog); safe up to 60 min warm ischemia; intermittent Pringle during repair reduces ischemia"},
+      {name:"Angioembolization (hepatic artery)", when:"Arterial blush on CT in stable/stabilized patient; NOM failure with arterial source; Grade III–IV with blush", notes:"Selective or lobar embolization; risk: ischemic cholangiopathy, hepatic necrosis — surveillance"},
+      {name:"Topical hemostasis and suture ligation", when:"Actively bleeding parenchymal lacerations during laparotomy", notes:"Argon beam coagulation, hemostatic agent (TachoComb, Surgicel, fibrin glue); horizontal mattress sutures for deep lacerations"},
+      {name:"Formal hepatic resection", when:"Devitalised lobe; failed packing/embolization; elective setting for late complications (biloma, necrosis)", notes:"AVOID in acute trauma setting unless resection is required for hemostasis (very rare); anatomic resection after physiological recovery"}
     ]
   },
   technique: {
@@ -592,7 +592,7 @@ const TRAUMA_DISEASES_1 = [
       "Large laparotomy packs (count accurately — retained pack catastrophic)"
     ],
     steps: [
-      {n:1, t:"Initial compression", d:"Manual compression of liver between both hands — immediate haemorrhage control while packs prepared"},
+      {n:1, t:"Initial compression", d:"Manual compression of liver between both hands — immediate hemorrhage control while packs prepared"},
       {n:2, t:"Superior packing", d:"Pack between liver dome and diaphragm on right; also subhepatic space; compress both sides"},
       {n:3, t:"Right lateral packing", d:"Pack to right of liver (between liver and right abdominal wall)"},
       {n:4, t:"Inferior packing", d:"Pack subhepatic space (Morrison's pouch) with packs compressing liver superiorly toward diaphragm"},
@@ -600,7 +600,7 @@ const TRAUMA_DISEASES_1 = [
       {n:6, t:"TAC and ICU", d:"Do NOT attempt hepatic repair; close with TAC; document pack count; relook 24–48h when physiology corrected"}
     ],
     pearls: [
-      "Retrohepatic IVC injury: most lethal liver injury; avoid mobilising liver if haemostasis achieved with packing — retrolilvers IVC repair has near-100% mortality if attempted without cardiopulmonary bypass",
+      "Retrohepatic IVC injury: most lethal liver injury; avoid mobilizing liver if hemostasis achieved with packing — retrolilvers IVC repair has near-100% mortality if attempted without cardiopulmonary bypass",
       "Bile leak post-NOM: common in Grade III–IV; ERCP + biliary stenting curative in most; PTBD for failed ERCP",
       "Pack count essential — always document number inserted AND removed"
     ]
@@ -612,13 +612,13 @@ const TRAUMA_DISEASES_1 = [
   ],
   pearls: [
     "80% of liver injuries are managed non-operatively — resist the urge to operate on stable patients",
-    "Angioembolisation is the most important adjunct for high-grade injuries — reduces splenectomy equivalent for liver",
-    "Haemobilia: arteriovenous fistula → GI bleed; Quinke's triad: UGI bleed + jaundice + RUQ pain — treat with angioembolisation"
+    "Angioembolization is the most important adjunct for high-grade injuries — reduces splenectomy equivalent for liver",
+    "Hemobilia: arteriovenous fistula → GI bleed; Quinke's triad: UGI bleed + jaundice + RUQ pain — treat with angioembolization"
   ],
   mistakes: [
-    "Operative exploration of stable Grade III injury without CT — may convert to unstable with surgical haemorrhage",
+    "Operative exploration of stable Grade III injury without CT — may convert to unstable with surgical hemorrhage",
     "Attempting formal hepatectomy in DCS phase — too morbid; pack first",
-    "Mobilising liver with retrohepatic IVC injury — removes tamponade effect, causes catastrophic haemorrhage"
+    "Mobilizing liver with retrohepatic IVC injury — removes tamponade effect, causes catastrophic hemorrhage"
   ]
 },
 {
@@ -637,7 +637,7 @@ const TRAUMA_DISEASES_1 = [
     "Primary repair (simple closure) for small lacerations, <50% circumference; resection and anastomosis for larger injuries",
     "Damage control: staple bowel perforations, delay anastomosis until physiology corrected"
   ],
-  differentials: ["Mesenteric haematoma without bowel injury","Solid organ injury","Retroperitoneal haematoma","Traumatic pancreatitis","Bladder injury"],
+  differentials: ["Mesenteric hematoma without bowel injury","Solid organ injury","Retroperitoneal hematoma","Traumatic pancreatitis","Bladder injury"],
   mnemonics: [
     {name:"Chance triad", text:"Seat belt sign + Lumbar fracture (Chance vertebral fracture) + Bowel injury = high index of suspicion for bowel perforation"},
     {name:"Free fluid without solid organ injury", text:"= Bowel/mesenteric injury until proven otherwise — serial examination and low threshold for laparotomy"}
@@ -645,9 +645,9 @@ const TRAUMA_DISEASES_1 = [
   overview: {
     definition: "Full-thickness or mesenteric injury to any segment of the gastrointestinal tract from blunt or penetrating abdominal trauma.",
     epidemiology: "5–15% of blunt trauma laparotomies. Small bowel most common (50%); colon 30%; stomach 10%; duodenum 10%. Mortality increases with delayed diagnosis (>8h): 40% vs <5% if repaired early.",
-    pathophysiology: "Blunt: burst injury at fixed points (duodenojejunal flexure, terminal ileum near ileocaecal valve, mobile loops against spine); shearing of mesentery causing devascularisation. Penetrating: direct laceration.",
+    pathophysiology: "Blunt: burst injury at fixed points (duodenojejunal flexure, terminal ileum near ileocecal valve, mobile loops against spine); shearing of mesentery causing devascularization. Penetrating: direct laceration.",
     classification: [
-      "AAST Small Bowel Injury Scale: Grade I (contusion/haematoma <50% circumference) to Grade V (segmental devascularisation >2 vessels)",
+      "AAST Small Bowel Injury Scale: Grade I (contusion/hematoma <50% circumference) to Grade V (segmental devascularization >2 vessels)",
       "Colon: Grade I–V similarly",
       "Duodenal: Grades I–IV (Grade IV = complex involving papilla)"
     ]
@@ -666,10 +666,10 @@ const TRAUMA_DISEASES_1 = [
       "Evisceration: bowel visible through wound = mandatory laparotomy"
     ],
     investigations: [
-      {name:"CT abdomen/pelvis with IV contrast", role:"Free fluid without solid organ injury (suspicious); mesenteric stranding; pneumoperitoneum; bowel wall thickening; mesenteric haematoma; sensitivity 85–90% for bowel injury"},
+      {name:"CT abdomen/pelvis with IV contrast", role:"Free fluid without solid organ injury (suspicious); mesenteric stranding; pneumoperitoneum; bowel wall thickening; mesenteric hematoma; sensitivity 85–90% for bowel injury"},
       {name:"FAST exam", role:"Free fluid — non-specific; less useful than CT for hollow viscus; FAST negative does NOT exclude bowel injury"},
       {name:"Serial abdominal examination", role:"Most important tool when CT equivocal; re-examine every 2–4h; clinical deterioration = laparotomy"},
-      {name:"Diagnostic laparoscopy", role:"Equivocal CT + haemodynamically stable; can be converted to laparotomy if injury found"},
+      {name:"Diagnostic laparoscopy", role:"Equivocal CT + hemodynamically stable; can be converted to laparotomy if injury found"},
       {name:"Erect CXR", role:"Free air under diaphragm confirms hollow viscus perforation"},
       {name:"Lumbar spine X-ray/CT", role:"Chance fracture: flexion-distraction injury L1–3; high association with bowel injury"}
     ]
@@ -677,7 +677,7 @@ const TRAUMA_DISEASES_1 = [
   criteria: {
     title: "Indications for Laparotomy in Bowel Trauma",
     items: [
-      {k:"Haemodynamic instability", v:"Any penetrating or blunt trauma — mandatory"},
+      {k:"Hemodynamic instability", v:"Any penetrating or blunt trauma — mandatory"},
       {k:"Peritonitis", v:"Clinical signs of peritonism at any time point"},
       {k:"Evisceration", v:"Bowel or omentum visible through wound"},
       {k:"Pneumoperitoneum", v:"Free air on imaging"},
@@ -690,32 +690,32 @@ const TRAUMA_DISEASES_1 = [
   management: {
     conservative: [
       "Selected Grade I–II small bowel/colon contusions without full-thickness perforation: serial observation",
-      "Small mesenteric haematoma without bowel devascularisation: conservative management with close monitoring"
+      "Small mesenteric hematoma without bowel devascularization: conservative management with close monitoring"
     ],
     medical: [
       "IV antibiotics: broad-spectrum including anaerobic cover (metronidazole + cefuroxime or piperacillin-tazobactam)",
       "Analgesia, NGT decompression, IV fluids"
     ],
     surgical: [
-      {name:"Primary repair (simple closure)", when:"Laceration <50% circumference; no devascularisation; clean wound edges; no peritonitis/faecal contamination", notes:"2-layer closure in transverse orientation (reduces stricture); ensure well-vascularised edges"},
-      {name:"Segmental resection and primary anastomosis", when:"Laceration >50% circumference; devascularised segment; multiple adjacent injuries; 12–24h after trauma if delayed presentation with controlled peritonitis", notes:"Avoid in DCS phase — staple or loop both ends; return for anastomosis at relook"},
+      {name:"Primary repair (simple closure)", when:"Laceration <50% circumference; no devascularization; clean wound edges; no peritonitis/fecal contamination", notes:"2-layer closure in transverse orientation (reduces stricture); ensure well-vascularized edges"},
+      {name:"Segmental resection and primary anastomosis", when:"Laceration >50% circumference; devascularized segment; multiple adjacent injuries; 12–24h after trauma if delayed presentation with controlled peritonitis", notes:"Avoid in DCS phase — staple or loop both ends; return for anastomosis at relook"},
       {name:"Damage control — stapled ends/defunctioning", when:"Part of DCS; physiological compromise (lethal triad); extensive contamination", notes:"Staple/close ends without anastomosis; leave in abdomen or bring as stoma; anastomose at relook 24–48h"},
-      {name:"Diverting stoma (loop colostomy/ileostomy)", when:"Left colon injuries with high contamination, delayed presentation, extensive devascularisation; anastomosis not safe", notes:"Hartmann's procedure for sigmoid/rectal injuries with peritonitis; later reversal"},
+      {name:"Diverting stoma (loop colostomy/ileostomy)", when:"Left colon injuries with high contamination, delayed presentation, extensive devascularization; anastomosis not safe", notes:"Hartmann's procedure for sigmoid/rectal injuries with peritonitis; later reversal"},
       {name:"Duodenal repair", when:"Grade I–III: primary repair ± pyloric exclusion; Grade IV: complex reconstruction involving pancreas", notes:"Pyloric exclusion: staple pylorus closed + gastrojejunostomy to divert; protects duodenal repair while healing"}
     ]
   },
   technique: {
     title: "Systematic Bowel Inspection at Trauma Laparotomy",
     prep: [
-      "After haemorrhage control and packing — systematic bowel inspection",
+      "After hemorrhage control and packing — systematic bowel inspection",
       "Two assistants retract bowel; surgeon inspects from Treitz to rectum"
     ],
     steps: [
       {n:1, t:"Stomach and duodenum", d:"Inspect anterior and posterior stomach; Kocherise duodenum to inspect D1–D2; look for bile staining (duodenal/biliary injury)"},
-      {n:2, t:"Small bowel — systematic", d:"Begin at DJ flexure; run entire small bowel to ileocaecal valve; inspect mesenteric border (most common missed injury location)"},
-      {n:3, t:"Colon", d:"Inspect entire colon; retroperitoneal colon (ascending, descending): mobilise to inspect posterior wall if injury suspected"},
+      {n:2, t:"Small bowel — systematic", d:"Begin at DJ flexure; run entire small bowel to ileocecal valve; inspect mesenteric border (most common missed injury location)"},
+      {n:3, t:"Colon", d:"Inspect entire colon; retroperitoneal colon (ascending, descending): mobilize to inspect posterior wall if injury suspected"},
       {n:4, t:"Rectum", d:"Inspect rectum; rigid sigmoidoscopy if extraperitoneal rectal injury suspected"},
-      {n:5, t:"Mesentery", d:"Inspect for mesenteric haematoma, vascular injury, devascularised bowel (grey, non-peristaltic, no visible mesenteric pulse)"},
+      {n:5, t:"Mesentery", d:"Inspect for mesenteric hematoma, vascular injury, devascularized bowel (gray, non-peristaltic, no visible mesenteric pulse)"},
       {n:6, t:"Document all injuries", d:"Systematic documentation of location, grade, and management of each injury; essential for relook team"}
     ],
     pearls: [
@@ -731,7 +731,7 @@ const TRAUMA_DISEASES_1 = [
   ],
   pearls: [
     "Free fluid without solid organ injury on CT is a bowel injury until proven otherwise — low threshold for laparotomy",
-    "Delayed presentation >8h = gross faecal contamination = cover-defect stoma, not primary anastomosis",
+    "Delayed presentation >8h = gross fecal contamination = cover-defect stoma, not primary anastomosis",
     "Penetrating trauma: negative DPL (>100,000 RBC/mL) does not exclude retroperitoneal bowel injury"
   ],
   mistakes: [
@@ -754,16 +754,16 @@ const TRAUMA_DISEASES_1 = [
     "CXR findings: elevated hemi-diaphragm, intrathoracic bowel gas, NGT above diaphragm",
     "CT sensitivity 70–90%; MRI best for delayed/chronic",
     "Repair: abdominal approach acutely (reduce herniated contents + repair); thoracic approach for chronic/adhesions",
-    "Delayed diagnosis: classic chronic symptoms — postprandial pain, dyspnoea, respiratory distress from strangulated herniated viscera"
+    "Delayed diagnosis: classic chronic symptoms — postprandial pain, dyspnea, respiratory distress from strangulated herniated viscera"
   ],
-  differentials: ["Left pleural effusion/haemothorax","Tension pneumothorax","Phrenic nerve palsy (elevated hemidiaphragm)","Congenital diaphragmatic hernia","Subphrenic abscess"],
+  differentials: ["Left pleural effusion/hemothorax","Tension pneumothorax","Phrenic nerve palsy (elevated hemidiaphragm)","Congenital diaphragmatic hernia","Subphrenic abscess"],
   mnemonics: [
     {name:"Diaphragm rupture CXR", text:"NGT above diaphragm + Bowel gas in chest + Irregular hemi-diaphragm contour = rupture until proven otherwise"}
   ],
   overview: {
     definition: "Full-thickness disruption of the diaphragm from blunt or penetrating trauma allowing herniation of abdominal viscera into the thoracic cavity.",
     epidemiology: "0.8–8% of major blunt abdominal trauma. Left-sided in 75% (right protected by liver). Penetrating in 30% (smaller defects but still require repair). Mortality from associated injuries: 30–35%.",
-    pathophysiology: "Sudden increase in intra-abdominal pressure (blunt) or direct laceration (penetrating) → diaphragm tear → abdominal-thoracic pressure gradient drives viscera through defect → compression of ipsilateral lung + mediastinal shift → respiratory and haemodynamic compromise.",
+    pathophysiology: "Sudden increase in intra-abdominal pressure (blunt) or direct laceration (penetrating) → diaphragm tear → abdominal-thoracic pressure gradient drives viscera through defect → compression of ipsilateral lung + mediastinal shift → respiratory and hemodynamic compromise.",
     classification: [
       "Acute: diagnosed within 24h of injury",
       "Subacute: 24h to 30 days",
@@ -775,7 +775,7 @@ const TRAUMA_DISEASES_1 = [
       "High-energy blunt abdominal/thoracic trauma (RTA, fall from height)",
       "Penetrating left lower thorax or upper abdomen",
       "Acute: respiratory distress, hypotension, abdominal pain",
-      "Chronic: vague postprandial pain, dyspnoea, recurrent nausea/vomiting",
+      "Chronic: vague postprandial pain, dyspnea, recurrent nausea/vomiting",
       "Acute on chronic: sudden strangulation of herniated viscera — emergency"
     ],
     examination: [
@@ -788,7 +788,7 @@ const TRAUMA_DISEASES_1 = [
     investigations: [
       {name:"CXR", role:"Sensitivity 27–62%; findings: elevated/irregular left hemidiaphragm; intrathoracic stomach gas; NGT curling above diaphragm; lower thorax opacity"},
       {name:"CT chest/abdomen", role:"Sensitivity 70–90%; detects diaphragmatic defect; herniated organs; 'collar sign' (hourglass constriction of herniated organ); reconstructions improve sensitivity"},
-      {name:"MRI", role:"Best for subacute/chronic; direct visualisation of diaphragmatic defect; no radiation"},
+      {name:"MRI", role:"Best for subacute/chronic; direct visualization of diaphragmatic defect; no radiation"},
       {name:"Diagnostic laparoscopy/thoracoscopy", role:"If CT equivocal; can be both diagnostic and therapeutic if expertise available"},
       {name:"Upper GI contrast study", role:"Stomach or colon in thorax confirms diagnosis; may demonstrate collar sign"}
     ]
@@ -819,7 +819,7 @@ const TRAUMA_DISEASES_1 = [
   technique: {
     title: "Laparoscopic Diaphragm Repair (Elective/Delayed Small Defect)",
     prep: [
-      "General anaesthesia; double-lumen ET tube for selective lung ventilation (optional)",
+      "General anesthesia; double-lumen ET tube for selective lung ventilation (optional)",
       "Position: supine slight left lateral tilt",
       "Ports: camera port + 2–3 working ports"
     ],
@@ -848,7 +848,7 @@ const TRAUMA_DISEASES_1 = [
     "Penetrating thoracoabdominal injuries: below nipple line anteriorly or below tip of scapula posteriorly → assume diaphragm injury"
   ],
   mistakes: [
-    "Dismissing CXR finding as haemothorax/pleural effusion without considering diaphragm rupture",
+    "Dismissing CXR finding as hemothorax/pleural effusion without considering diaphragm rupture",
     "Not inserting chest drain after diaphragm repair — pneumothorax from laparoscopic CO₂ entry",
     "Conservative management of known diaphragm rupture — all require repair"
   ]
@@ -856,30 +856,30 @@ const TRAUMA_DISEASES_1 = [
 {
   id: "pelvic-fracture",
   dept: "trauma",
-  name: "Pelvic Fracture (Haemorrhage Control)",
+  name: "Pelvic Fracture (Hemorrhage Control)",
   latin: "Fractura pelvis cum haemorrhagia",
   organ: "Pelvis",
   severity: "high",
-  tags: ["trauma","pelvis","haemorrhage","orthopaedic"],
-  hero: "Unstable pelvic fractures can lose 3–5L blood retroperitoneally. Pelvic binder → preperitoneal pelvic packing + angioembolisation + external fixation. Do NOT open the retroperitoneum at laparotomy — releases tamponade.",
+  tags: ["trauma","pelvis","hemorrhage","orthopedic"],
+  hero: "Unstable pelvic fractures can lose 3–5L blood retroperitoneally. Pelvic binder → preperitoneal pelvic packing + angioembolization + external fixation. Do NOT open the retroperitoneum at laparotomy — releases tamponade.",
   keypoints: [
-    "Pelvic binder/sheet immediately for suspected unstable pelvic fracture (closes volume, reduces haemorrhage)",
-    "Haemorrhage sources: venous plexus (85%) + arterial (15%) — angioembolisation for arterial",
-    "REBOA Zone III (zone III = infrarenal aorta/iliac): bridge to haemorrhage control in extremis",
+    "Pelvic binder/sheet immediately for suspected unstable pelvic fracture (closes volume, reduces hemorrhage)",
+    "Hemorrhage sources: venous plexus (85%) + arterial (15%) — angioembolization for arterial",
+    "REBOA Zone III (zone III = infrarenal aorta/iliac): bridge to hemorrhage control in extremis",
     "Preperitoneal pelvic packing (PPP): surgical packing of presacral space without opening peritoneum",
-    "Never open retroperitoneum at laparotomy in pelvic fracture — tamponade released → catastrophic haemorrhage"
+    "Never open retroperitoneum at laparotomy in pelvic fracture — tamponade released → catastrophic hemorrhage"
   ],
-  differentials: ["Intra-abdominal haemorrhage (FAST positive)","Femoral artery injury","Urethral/bladder rupture","Retroperitoneal haematoma from aortic/iliac vessel injury"],
+  differentials: ["Intra-abdominal hemorrhage (FAST positive)","Femoral artery injury","Urethral/bladder rupture","Retroperitoneal hematoma from aortic/iliac vessel injury"],
   mnemonics: [
-    {name:"C-ABCDE for pelvic fracture", text:"C = Catastrophic haemorrhage control (pelvic binder) BEFORE airway in haemorrhagic pelvic fracture"}
+    {name:"C-ABCDE for pelvic fracture", text:"C = Catastrophic hemorrhage control (pelvic binder) BEFORE airway in hemorrhagic pelvic fracture"}
   ],
   overview: {
-    definition: "Fractures of the pelvic ring, often from high-energy mechanisms, associated with major haemorrhage from disrupted pelvic venous plexus and iliac vessels.",
-    epidemiology: "Mortality: stable pelvic fractures 5%; unstable (open book, vertical shear) 20–50%. Occurs in 10% of major blunt trauma. Most deaths from haemorrhage.",
-    pathophysiology: "Unstable pelvic ring disruption → pelvic volume expands up to 4× → venous sinuses bleed freely into retroperitoneum → unconstrained haemorrhage. Arterial injury (superior gluteal, internal iliac branches) in 15% — requires embolisation.",
+    definition: "Fractures of the pelvic ring, often from high-energy mechanisms, associated with major hemorrhage from disrupted pelvic venous plexus and iliac vessels.",
+    epidemiology: "Mortality: stable pelvic fractures 5%; unstable (open book, vertical shear) 20–50%. Occurs in 10% of major blunt trauma. Most deaths from hemorrhage.",
+    pathophysiology: "Unstable pelvic ring disruption → pelvic volume expands up to 4× → venous sinuses bleed freely into retroperitoneum → unconstrained hemorrhage. Arterial injury (superior gluteal, internal iliac branches) in 15% — requires embolization.",
     classification: [
       "Young-Burgess Classification: LC (lateral compression), APC (anteroposterior compression), VS (vertical shear), CM (combined mechanism)",
-      "APC Type II/III (open book): unstable — large pelvic volume increase; major haemorrhage risk",
+      "APC Type II/III (open book): unstable — large pelvic volume increase; major hemorrhage risk",
       "VS: most unstable — complete disruption anterior + posterior pelvic ring",
       "Tile classification — A: stable; B: rotationally unstable but vertically stable (open-book/lateral compression); C: rotationally AND vertically unstable"
     ]
@@ -889,29 +889,29 @@ const TRAUMA_DISEASES_1 = [
       "High-energy mechanism: RTA (pedestrian, motorcyclist), fall from height, industrial crush",
       "Hypotension without obvious thoracic/abdominal source",
       "Pelvic pain, instability, lower extremity shortening/rotation",
-      "Haematuria (urethral/bladder injury), blood at urethral meatus"
+      "Hematuria (urethral/bladder injury), blood at urethral meatus"
     ],
     examination: [
       "Pelvic instability: single gentle AP compression test (if unstable pelvis — do once only, binder immediately after)",
       "Lower limb leg length discrepancy, external rotation",
-      "Scrotal/labial haematoma, perineal bruising",
-      "Blood at urethral meatus (urethral injury — do NOT catheterise until urethrogram)",
+      "Scrotal/labial hematoma, perineal bruising",
+      "Blood at urethral meatus (urethral injury — do NOT catheterize until urethrogram)",
       "Rectal/vaginal examination: open fracture, lacerations"
     ],
     investigations: [
       {name:"Pelvic X-ray (ATLS primary survey)", role:"Immediate — identifies pelvic ring disruption; unstable pattern = binder before further imaging"},
-      {name:"FAST exam", role:"Assesses concurrent intra-abdominal haemorrhage; pelvic FAST (suprapubic) for pelvic fluid"},
-      {name:"CT pelvis (with IV contrast — arterial + portal phase)", role:"Define fracture pattern; identify arterial blush (embolisation target); bladder/urethral injury; associated pelvic injuries"},
+      {name:"FAST exam", role:"Assesses concurrent intra-abdominal hemorrhage; pelvic FAST (suprapubic) for pelvic fluid"},
+      {name:"CT pelvis (with IV contrast — arterial + portal phase)", role:"Define fracture pattern; identify arterial blush (embolization target); bladder/urethral injury; associated pelvic injuries"},
       {name:"Retrograde urethrogram", role:"Before Foley catheter if blood at urethral meatus or high-riding prostate"},
       {name:"CT cystogram", role:"Bladder injury assessment (intraperitoneal vs extraperitoneal rupture)"}
     ]
   },
   criteria: {
-    title: "Haemorrhage Control Algorithm for Unstable Pelvic Fracture",
+    title: "Hemorrhage Control Algorithm for Unstable Pelvic Fracture",
     items: [
       {k:"Step 1", v:"Pelvic binder/sheet (immediate, prehospital or ER)"},
       {k:"Step 2", v:"DCR: 1:1:1 blood:FFP:platelets + TXA"},
-      {k:"Step 3a (if FAST negative)", v:"Angioembolisation if arterial blush on CT; preperitoneal pelvic packing (PPP) if no IR"},
+      {k:"Step 3a (if FAST negative)", v:"Angioembolization if arterial blush on CT; preperitoneal pelvic packing (PPP) if no IR"},
       {k:"Step 3b (if FAST positive)", v:"Laparotomy first (intra-abdominal bleeding > retroperitoneal usually); PPP at end of laparotomy"},
       {k:"Step 4", v:"External fixation (C-clamp for posterior ring; anterior external fixator)"},
       {k:"Step 5", v:"Definitive internal fixation (ORIF) when physiologically stable — typically day 3–5"}
@@ -920,19 +920,19 @@ const TRAUMA_DISEASES_1 = [
   scoring: [],
   management: {
     conservative: [
-      "Stable pelvic fractures (LC-I, isolated pubic rami): conservative — analgesia, mobilise with crutches",
-      "Haemodynamically stable: CT angiogram + selective angioembolisation if blush"
+      "Stable pelvic fractures (LC-I, isolated pubic rami): conservative — analgesia, mobilize with crutches",
+      "Hemodynamically stable: CT angiogram + selective angioembolization if blush"
     ],
     medical: [
-      "Pelvic binder: immediate reduction of pelvic volume — reduces venous haemorrhage",
+      "Pelvic binder: immediate reduction of pelvic volume — reduces venous hemorrhage",
       "DCR: 1:1:1 blood products; TXA within 3 hours; calcium supplementation",
-      "Vasopressors (noradrenaline) if haemorrhage control incomplete"
+      "Vasopressors (noradrenaline) if hemorrhage control incomplete"
     ],
     surgical: [
-      {name:"Preperitoneal pelvic packing (PPP)", when:"Persistent haemodynamic instability from pelvic fracture; no IR available; or after laparotomy for concurrent abdominal injury", notes:"Pfannenstiel incision; enter preperitoneal (Retzius) space WITHOUT entering peritoneum; 3 packs each side into presacral/lateral pelvic spaces; temporary closure; relook 24–48h"},
-      {name:"Angioembolisation", when:"Arterial blush on CT + haemodynamic stability sufficient for IR; first-line for arterial pelvic haemorrhage", notes:"Bilateral internal iliac embolisation (with gelfoam — temporary) if no defined bleeding point; selective embolisation if point identified; pelvic ischaemia rare due to extensive collaterals"},
-      {name:"External fixation (C-clamp/anterior frame)", when:"Acute haemorrhage control; posterior ring stabilisation (C-clamp for VS/APC III); anterior frame for APC II+", notes:"Orthopaedic team; reduces pelvic volume and stabilises fracture; improves tamponade of venous bleeding"},
-      {name:"Laparotomy — avoid retroperitoneal entry", when:"Concurrent intra-abdominal injury requiring laparotomy; PPP can be added at end of laparotomy", notes:"CRITICAL: Do NOT open retroperitoneal haematoma from pelvic fracture — releases tamponade and causes exsanguination; only open if rapidly expanding or aortic/iliac injury suspected"}
+      {name:"Preperitoneal pelvic packing (PPP)", when:"Persistent hemodynamic instability from pelvic fracture; no IR available; or after laparotomy for concurrent abdominal injury", notes:"Pfannenstiel incision; enter preperitoneal (Retzius) space WITHOUT entering peritoneum; 3 packs each side into presacral/lateral pelvic spaces; temporary closure; relook 24–48h"},
+      {name:"Angioembolization", when:"Arterial blush on CT + hemodynamic stability sufficient for IR; first-line for arterial pelvic hemorrhage", notes:"Bilateral internal iliac embolization (with gelfoam — temporary) if no defined bleeding point; selective embolization if point identified; pelvic ischemia rare due to extensive collaterals"},
+      {name:"External fixation (C-clamp/anterior frame)", when:"Acute hemorrhage control; posterior ring stabilization (C-clamp for VS/APC III); anterior frame for APC II+", notes:"Orthopedic team; reduces pelvic volume and stabilizes fracture; improves tamponade of venous bleeding"},
+      {name:"Laparotomy — avoid retroperitoneal entry", when:"Concurrent intra-abdominal injury requiring laparotomy; PPP can be added at end of laparotomy", notes:"CRITICAL: Do NOT open retroperitoneal hematoma from pelvic fracture — releases tamponade and causes exsanguination; only open if rapidly expanding or aortic/iliac injury suspected"}
     ]
   },
   technique: {
@@ -948,29 +948,29 @@ const TRAUMA_DISEASES_1 = [
       {n:3, t:"Pelvic packing", d:"Insert 3 large laparotomy packs on each side into presacral space and lateral pelvic wall spaces (6 packs total)"},
       {n:4, t:"Tamponade", d:"Packs compress against fixed pelvic bones — mechanical tamponade of venous plexus"},
       {n:5, t:"Closure", d:"Close rectus sheath only; skin clips or skin closure; leave packs in situ; label clearly (number)"},
-      {n:6, t:"Post-op angiography", d:"After PPP: CT angiogram or direct angiography to identify arterial bleeding; embolise if blush present"},
+      {n:6, t:"Post-op angiography", d:"After PPP: CT angiogram or direct angiography to identify arterial bleeding; embolize if blush present"},
       {n:7, t:"Relook 24–48h", d:"Remove packs in ICU when physiology corrected; definitive fracture fixation planned"}
     ],
     pearls: [
-      "PPP is faster than angioembolisation (15–20 min vs 60–90 min) — first-line if haemodynamically crashing",
-      "PPP + angioembolisation are complementary — PPP stops venous; angioembolisation stops arterial",
-      "REBOA Zone III: infrarenal or iliac occlusion — bridge to PPP/angioembolisation in extremis"
+      "PPP is faster than angioembolization (15–20 min vs 60–90 min) — first-line if hemodynamically crashing",
+      "PPP + angioembolization are complementary — PPP stops venous; angioembolization stops arterial",
+      "REBOA Zone III: infrarenal or iliac occlusion — bridge to PPP/angioembolization in extremis"
     ]
   },
   guidelines: [
-    {src:"EAST Practice Management Guidelines: Pelvic fracture haemorrhage control"},
-    {src:"WSES 2020: Major haemorrhage in pelvic trauma"},
+    {src:"EAST Practice Management Guidelines: Pelvic fracture hemorrhage control"},
+    {src:"WSES 2020: Major hemorrhage in pelvic trauma"},
     {src:"ATLS 10th Edition: Pelvic trauma"},
     {src:"AO Foundation: Pelvic ring injuries management"}
   ],
   pearls: [
     "Pelvic binder must be applied at level of greater trochanters (NOT iliac crests) to close open book fracture",
-    "Urethral blood: retrograde urethrogram before catheterisation — urethral injury in 10% of anterior pelvic fractures",
-    "Do NOT open retroperitoneal haematoma in pelvic fracture at laparotomy — always packs + angioembolisation"
+    "Urethral blood: retrograde urethrogram before catheterization — urethral injury in 10% of anterior pelvic fractures",
+    "Do NOT open retroperitoneal hematoma in pelvic fracture at laparotomy — always packs + angioembolization"
   ],
   mistakes: [
     "Applying pelvic binder too high (at iliac crest) — does not reduce pelvic volume in open book fracture",
-    "Opening retroperitoneal haematoma at laparotomy — catastrophic haemorrhage",
+    "Opening retroperitoneal hematoma at laparotomy — catastrophic hemorrhage",
     "Inserting Foley catheter before excluding urethral injury — urethral transection results"
   ]
 }

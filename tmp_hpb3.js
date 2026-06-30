@@ -3,36 +3,36 @@ window._TMP_HPB3 = [
 {
   id:"hepatic-adenoma", dept:"hpb", name:"Hepatic Adenoma", latin:"Adenoma hepatis", organ:"Liver",
   severity:"medium", tags:["liver","adenoma","OCP","glycogen storage","bleeding","resection"],
-  hero:"Benign hepatocellular tumour strongly associated with oral contraceptive pill use; risk of haemorrhage and rare malignant transformation.",
+  hero:"Benign hepatocellular tumor strongly associated with oral contraceptive pill use; risk of hemorrhage and rare malignant transformation.",
   keypoints:[
     "OCP use (×30 risk), anabolic steroids, glycogen storage disease type Ia/III, and MODY3 are major risk factors",
     "Four molecular subtypes: HNF1α-inactivated (35–40%, steatotic, low malignancy risk); β-catenin-activated (10–15%, HIGH malignancy risk); inflammatory (45–55%, dilated sinusoids, can bleed); unclassified",
-    "Complication rate: haemorrhage 25% (risk increases with size >5 cm); malignant transformation 4–8% (β-catenin subtype)",
+    "Complication rate: hemorrhage 25% (risk increases with size >5 cm); malignant transformation 4–8% (β-catenin subtype)",
     "Management guided by size, sex, subtype: >5 cm or male → resect; <5 cm in female → OCP cessation and observation",
-    "MRI with hepatobiliary contrast is superior for characterisation and subtype differentiation"
+    "MRI with hepatobiliary contrast is superior for characterization and subtype differentiation"
   ],
-  differentials:["FNH (focal nodular hyperplasia)","HCC","Hepatic haemangioma","Hepatic metastasis","Regenerative nodule in cirrhosis"],
+  differentials:["FNH (focal nodular hyperplasia)","HCC","Hepatic hemangioma","Hepatic metastasis","Regenerative nodule in cirrhosis"],
   mnemonics:[{name:"Adenoma Subtypes — Risk",text:"HNF1α: Steatotic, low risk; Inflammatory: bleeds (telangiectatic); β-catenin: Malignant risk HIGH — resect regardless of size in males and ≥5 cm in females"}],
   overview:{
     definition:"Benign monoclonal proliferation of hepatocytes without bile ducts or portal tracts, occurring predominantly in women of reproductive age.",
     epidemiology:"Incidence 3–4/100 000 in women taking OCP; male adenomas rare but higher malignancy risk. 10× increased risk with OCP use >2 years.",
-    pathophysiology:"Oestrogen stimulation → hepatocyte proliferation → clonal expansion → absent portal tracts (no normal architecture). β-catenin activating mutations → unregulated cell cycle → malignant transformation. HNF1α mutations → steatosis (impaired lipid transport).",
+    pathophysiology:"Estrogen stimulation → hepatocyte proliferation → clonal expansion → absent portal tracts (no normal architecture). β-catenin activating mutations → unregulated cell cycle → malignant transformation. HNF1α mutations → steatosis (impaired lipid transport).",
     classification:[
       {label:"HNF1α-inactivated (H-HCA)",note:"35–40%; diffuse steatosis; LFABP absent on IHC; very low malignancy risk; multinodular adenomatosis in >10 nodules"},
       {label:"Inflammatory (I-HCA)",note:"45–55%; serum amyloid A and CRP positive on IHC; dilated sinusoids; high bleeding risk; associated with OCP, alcohol, obesity"},
       {label:"β-catenin-activated (b-HCA)",note:"10–15%; cytoplasmic/nuclear β-catenin; high malignancy risk; men > women; associated with anabolic steroids, GSD"},
-      {label:"Unclassified",note:"5–10%; normal IHC; intermediate behaviour"}
+      {label:"Unclassified",note:"5–10%; normal IHC; intermediate behavior"}
     ]
   },
   diagnosis:{
-    history:["Female 20–45 years, long-term OCP user (>2 years)","Acute RUQ pain (haemorrhage)","Incidental finding on US/CT","Male with anabolic steroid use or glycogen storage disease","Haemodynamic instability if haemoperitoneum (ruptured adenoma)"],
-    examination:["RUQ tenderness or mass","Haemoperitoneum: peritonism, hypotension, tachycardia","Often normal if incidental"],
+    history:["Female 20–45 years, long-term OCP user (>2 years)","Acute RUQ pain (hemorrhage)","Incidental finding on US/CT","Male with anabolic steroid use or glycogen storage disease","Hemodynamic instability if hemoperitoneum (ruptured adenoma)"],
+    examination:["RUQ tenderness or mass","Hemoperitoneum: peritonism, hypotension, tachycardia","Often normal if incidental"],
     investigations:[
       {name:"US abdomen",role:"Well-defined heterogeneous lesion; hyperechoic if steatotic (HNF1α); useful first-line; poor subtype differentiation"},
-      {name:"MRI liver (hepatobiliary contrast — gadoxetate)",role:"Best characterisation: HNF1α: homogeneous fat signal; I-HCA: strong arterial enhancement; β-catenin: heterogeneous; gadoxetate shows no uptake (no bile ducts) — distinguishes from FNH"},
-      {name:"CECT",role:"Arterial enhancement; haemorrhage (dense blood); rapid washout less prominent than HCC"},
+      {name:"MRI liver (hepatobiliary contrast — gadoxetate)",role:"Best characterization: HNF1α: homogeneous fat signal; I-HCA: strong arterial enhancement; β-catenin: heterogeneous; gadoxetate shows no uptake (no bile ducts) — distinguishes from FNH"},
+      {name:"CECT",role:"Arterial enhancement; hemorrhage (dense blood); rapid washout less prominent than HCC"},
       {name:"AFP",role:"Normal in adenoma; elevated suggests HCC transformation"},
-      {name:"Biopsy",role:"Molecular subtyping when subtype influences management (β-catenin IHC); risk of haemorrhage — use carefully"}
+      {name:"Biopsy",role:"Molecular subtyping when subtype influences management (β-catenin IHC); risk of hemorrhage — use carefully"}
     ]
   },
   criteria:{
@@ -42,34 +42,34 @@ window._TMP_HPB3 = [
       {k:"Female, OCP stopped, >5 cm or not regressing",v:"Resect"},
       {k:"Male, any size",v:"Resect — higher malignancy risk"},
       {k:"β-catenin subtype",v:"Resect regardless of size or sex"},
-      {k:"Ruptured/haemorrhaging",v:"Embolisation + stabilise → delayed resection; urgent resection if unstable"}
+      {k:"Ruptured/hemorrhaging",v:"Embolization + stabilize → delayed resection; urgent resection if unstable"}
     ]
   },
   scoring:[],
   management:{
-    conservative:["Stop OCP or anabolic steroids — >50% regress","Weight loss in obese patients","MRI surveillance at 6 months: reassess size","Avoid pregnancy in large unresected adenomas (oestrogen → growth → rupture risk)"],
+    conservative:["Stop OCP or anabolic steroids — >50% regress","Weight loss in obese patients","MRI surveillance at 6 months: reassess size","Avoid pregnancy in large unresected adenomas (estrogen → growth → rupture risk)"],
     medical:["No pharmacological treatment of proven benefit"],
     surgical:[
-      {name:"Hepatic resection",when:"Male; ≥5 cm; β-catenin subtype; failure to regress after OCP cessation; any size with haemorrhage",notes:"Laparoscopic or open; parenchymal-sparing; R0 to normal parenchyma — no lymphadenectomy needed"},
-      {name:"Transcatheter arterial embolisation (TAE)",when:"Acute haemorrhage with haemodynamic instability; bridge to elective resection",notes:"Arrest bleeding; definitive resection 4–6 weeks later when patient stable and anatomy clear"},
+      {name:"Hepatic resection",when:"Male; ≥5 cm; β-catenin subtype; failure to regress after OCP cessation; any size with hemorrhage",notes:"Laparoscopic or open; parenchymal-sparing; R0 to normal parenchyma — no lymphadenectomy needed"},
+      {name:"Transcatheter arterial embolization (TAE)",when:"Acute hemorrhage with hemodynamic instability; bridge to elective resection",notes:"Arrest bleeding; definitive resection 4–6 weeks later when patient stable and anatomy clear"},
       {name:"Liver transplantation",when:"Multiple adenomas >10 (adenomatosis) not amenable to resection; glycogen storage disease with massive adenomatosis",notes:"Rare; used when parenchymal-sparing resection not possible"}
     ]
   },
   technique:{
     title:"Laparoscopic Hepatic Resection for Adenoma",
-    prep:["MRI characterises lesion and proximity to major vessels","Preoperative embolisation if large (>10 cm) to reduce intraoperative bleeding","GA; supine or lateral decubitus; Pringle loop ready"],
+    prep:["MRI characterizes lesion and proximity to major vessels","Preoperative embolization if large (>10 cm) to reduce intraoperative bleeding","GA; supine or lateral decubitus; Pringle loop ready"],
     steps:[
       {n:1,t:"IOUS",d:"Confirm margins; identify major vessels and bile ducts; plan resection"},
       {n:2,t:"Parenchymal marking",d:"Mark 1 cm margins under IOUS guidance; bipolar or electrocautery"},
-      {n:3,t:"Transection",d:"Harmonic scalpel or CUSA; progressive haemostasis; Pringle if bleeding"},
+      {n:3,t:"Transection",d:"Harmonic scalpel or CUSA; progressive hemostasis; Pringle if bleeding"},
       {n:4,t:"Specimen extraction",d:"Retrieval bag; extend port if needed"},
-      {n:5,t:"Haemostasis",d:"Argon beam; fibrin sealants; drain if biliary ooze suspected"}
+      {n:5,t:"Hemostasis",d:"Argon beam; fibrin sealants; drain if biliary ooze suspected"}
     ],
     pearls:["Rupture risk is highest with lesions >5 cm, superficial, and during pregnancy — resect before pregnancy","FNH vs adenoma: gadoxetate-enhanced MRI — FNH shows hepatobiliary uptake (bright on HBP phase); adenoma does not","Multifocal adenomatosis (>10): genomic testing (HNF1α mutation); glycogen storage disease workup"]
   },
-  guidelines:[{src:"EASL Clinical Practice Guidelines on Benign Liver Tumours 2016"},{src:"IHPBA Consensus on Hepatocellular Adenoma 2011"},{src:"ESGAR/EFISDS Liver Imaging Guidelines 2021"}],
-  pearls:["OCP cessation leads to regression in >50% — mandatory first step before surgery in small asymptomatic adenomas","β-catenin-activated adenoma: highest malignancy risk — resect regardless of size","Gadoxetate MRI: adenoma dark on hepatobiliary phase (no uptake), FNH bright — most reliable differentiation","Haemorrhage: stabilise with TAE, resect electively 4–6 weeks later"],
-  mistakes:["Not stopping OCP before deciding to resect a <5 cm adenoma in women","Not subtyping — β-catenin changes management","Operating on acutely ruptured adenoma without prior embolisation — haemorrhage risk","Confusing with FNH — FNH does not require resection"]
+  guidelines:[{src:"EASL Clinical Practice Guidelines on Benign Liver Tumors 2016"},{src:"IHPBA Consensus on Hepatocellular Adenoma 2011"},{src:"ESGAR/EFISDS Liver Imaging Guidelines 2021"}],
+  pearls:["OCP cessation leads to regression in >50% — mandatory first step before surgery in small asymptomatic adenomas","β-catenin-activated adenoma: highest malignancy risk — resect regardless of size","Gadoxetate MRI: adenoma dark on hepatobiliary phase (no uptake), FNH bright — most reliable differentiation","Hemorrhage: stabilize with TAE, resect electively 4–6 weeks later"],
+  mistakes:["Not stopping OCP before deciding to resect a <5 cm adenoma in women","Not subtyping — β-catenin changes management","Operating on acutely ruptured adenoma without prior embolization — hemorrhage risk","Confusing with FNH — FNH does not require resection"]
 },
 {
   id:"hydatid-cyst", dept:"hpb", name:"Hydatid Cyst of the Liver", latin:"Echinococcosis hepatis", organ:"Liver",
@@ -82,7 +82,7 @@ window._TMP_HPB3 = [
     "Never aspirate without antiparasitic cover — anaphylaxis and secondary seeding",
     "Eosinophilia + calcified cyst + travel/endemic exposure = classic triad"
   ],
-  differentials:["Simple hepatic cyst","Pyogenic liver abscess","Amoebic abscess","Biliary cystadenoma/cystadenocarcinoma","Hepatic metastasis (cystic)"],
+  differentials:["Simple hepatic cyst","Pyogenic liver abscess","Amebic abscess","Biliary cystadenoma/cystadenocarcinoma","Hepatic metastasis (cystic)"],
   mnemonics:[{name:"PAIR = Treat, not operate",text:"Puncture, Aspiration, Injection (hypertonic saline/ethanol), Re-aspiration — with albendazole cover. Surgery for complicated/large/failed PAIR"}],
   overview:{
     definition:"Hepatic infection by the larval stage of Echinococcus granulosus (cystic echinococcosis) or E. multilocularis (alveolar echinococcosis).",
@@ -103,7 +103,7 @@ window._TMP_HPB3 = [
     investigations:[
       {name:"US abdomen",role:"Gold standard: double-line sign (CE1), daughter cysts (CE2), water lily sign (CE3a), calcification (CE5); guides PAIR"},
       {name:"CT abdomen",role:"Better delineation of number, location, biliary communication, complications; CE5 calcification"},
-      {name:"MRI",role:"Superior for biliary communication; daughter cysts; type characterisation"},
+      {name:"MRI",role:"Superior for biliary communication; daughter cysts; type characterization"},
       {name:"Echinococcus serology (ELISA, IHA)",role:"Sensitivity 80–90% for cystic; lower for alveolar; used for diagnosis + follow-up after treatment"},
       {name:"Eosinophil count",role:"Elevated (>500/μL) in 40%"},
       {name:"LFTs",role:"Elevated ALP/bilirubin if biliary communication or biliary cystobiliary fistula"}
@@ -113,7 +113,7 @@ window._TMP_HPB3 = [
     title:"WHO-IWGE Treatment Guidelines by CE Stage",
     items:[
       {k:"CE1, CE3a",v:"PAIR + albendazole 400 mg BD (start 4 days before, continue 1 month after)"},
-      {k:"CE2, CE3b (complex/multiseptate)",v:"Surgical treatment preferred; or MoCAS (modified catheterisation)"},
+      {k:"CE2, CE3b (complex/multiseptate)",v:"Surgical treatment preferred; or MoCAS (modified catheterization)"},
       {k:"CE4, CE5",v:"Watch and wait — inactive/dead cysts; albendazole only if CE4 transitional"},
       {k:"Complicated CE",v:"Biliary communication, rupture, infection → surgical drainage/resection"}
     ]
@@ -157,7 +157,7 @@ window._TMP_HPB3 = [
     "High-risk stigmata: obstructive jaundice, enhancing mural nodule ≥5 mm, MPD ≥10 mm — operate",
     "Mixed-type IPMN: both main and branch duct involvement — treat as MD-IPMN"
   ],
-  differentials:["Mucinous cystic neoplasm (MCN — no ductal communication, women, body/tail)","Serous cystadenoma (honeycomb, CEA low, no dysplasia)","Pancreatic pseudocyst (amylase high, trauma/pancreatitis history)","Solid pseudopapillary tumour (young women)","Pancreatic ductal adenocarcinoma"],
+  differentials:["Mucinous cystic neoplasm (MCN — no ductal communication, women, body/tail)","Serous cystadenoma (honeycomb, CEA low, no dysplasia)","Pancreatic pseudocyst (amylase high, trauma/pancreatitis history)","Solid pseudopapillary tumor (young women)","Pancreatic ductal adenocarcinoma"],
   mnemonics:[{name:"High-Risk Stigmata = Operate",text:"Jaundice + head cyst; Enhancing nodule ≥5mm; MPD ≥10mm; Positive cytology → DO NOT WAIT → Whipple or distal pancreatectomy"}],
   overview:{
     definition:"Intraductal neoplasm of the pancreas producing mucin, arising from the main pancreatic duct or its branches, with a spectrum from low-grade dysplasia to invasive carcinoma.",
@@ -170,11 +170,11 @@ window._TMP_HPB3 = [
     ]
   },
   diagnosis:{
-    history:["Incidental cystic pancreatic lesion on CT/MRI","Recurrent acute pancreatitis (mucin plugging)","New-onset diabetes or change in glycaemic control","Weight loss, steatorrhoea (advanced)","Family history of pancreatic cancer"],
+    history:["Incidental cystic pancreatic lesion on CT/MRI","Recurrent acute pancreatitis (mucin plugging)","New-onset diabetes or change in glycemic control","Weight loss, steatorrhea (advanced)","Family history of pancreatic cancer"],
     examination:["Usually normal; epigastric tenderness if pancreatitis","Jaundice (high-risk feature)"],
     investigations:[
-      {name:"MRCP/MRI pancreas",role:"Gold standard: characterise duct communication, ductal dilation, mural nodules, septa; preferred over CT for soft tissue detail"},
-      {name:"EUS",role:"Mural nodule characterisation; FNA for cyst fluid (CEA >192 ng/mL = mucinous; cytology for malignant cells); Doppler for nodule vascularity"},
+      {name:"MRCP/MRI pancreas",role:"Gold standard: characterize duct communication, ductal dilation, mural nodules, septa; preferred over CT for soft tissue detail"},
+      {name:"EUS",role:"Mural nodule characterization; FNA for cyst fluid (CEA >192 ng/mL = mucinous; cytology for malignant cells); Doppler for nodule vascularity"},
       {name:"CT pancreas (dual phase)",role:"Staging if surgery planned; invasion, vascular involvement, metastases"},
       {name:"Cyst fluid analysis",role:"CEA >192 = mucinous (IPMN or MCN); amylase >250 = communicates with duct; KRAS/GNAS mutation in fluid confirms IPMN"},
       {name:"CA 19-9",role:"Elevated in 30–40% malignant IPMN; used in monitoring"},
@@ -197,7 +197,7 @@ window._TMP_HPB3 = [
     surgical:[
       {name:"Pancreaticoduodenectomy (Whipple)",when:"MD-IPMN or invasive IPMN in pancreatic head; resectable",notes:"Total pancreatectomy if frozen section of transected duct shows HGD/invasive at margin"},
       {name:"Distal pancreatectomy ± splenectomy",when:"BD-IPMN or MD-IPMN in body/tail",notes:"Laparoscopic preferred for body/tail; check margin frozen section"},
-      {name:"Total pancreatectomy",when:"Diffuse main duct IPMN; multifocal high-grade disease; positive margins throughout",notes:"IDDM obligate; islet autotransplantation at specialist centres; serious QOL implications"},
+      {name:"Total pancreatectomy",when:"Diffuse main duct IPMN; multifocal high-grade disease; positive margins throughout",notes:"IDDM obligate; islet autotransplantation at specialist centers; serious QOL implications"},
       {name:"Middle pancreatectomy",when:"Small BD-IPMN in neck; preserves both head and tail",notes:"High fistula rate (10–30%); reserve for small lesions with functional concerns"}
     ]
   },
@@ -215,12 +215,12 @@ window._TMP_HPB3 = [
   },
   guidelines:[{src:"Fukuoka Consensus Guidelines 2017"},{src:"European Evidence-Based Guidelines on Pancreatic Cystic Neoplasms 2018"},{src:"IAP Sendai Guidelines 2006 (superseded by Fukuoka)"}],
   pearls:["Fish-mouth papilla (mucin extruding) = pathognomonic for MD-IPMN — proceed to surgery","BD-IPMN: most do not need surgery — surveillance with MRI; worrisome features trigger EUS","MD-IPMN: resect all fit patients — 45–65% have HGD or invasive cancer at resection","Synchronous PDAC: IPMN patients have 7–9× increased risk of concurrent or future PDAC — full pancreatic imaging mandatory"],
-  mistakes:["Not surveilling resected IPMN — remnant recurrence in 5%","Total pancreatectomy for LGD at margin — over-resection; poor QOL","Missing fish-mouth papilla on OGD — pathognomonic for MD-IPMN","Treating serous cystadenoma as IPMN — serous lesions rarely need resection"]
+  mistakes:["Not surveilling resected IPMN — remnant recurrence in 5%","Total pancreatectomy for LGD at margin — over-resection; poor QOL","Missing fish-mouth papilla on EGD — pathognomonic for MD-IPMN","Treating serous cystadenoma as IPMN — serous lesions rarely need resection"]
 },
 {
-  id:"pan-net", dept:"hpb", name:"Pancreatic Neuroendocrine Tumour", latin:"Tumor neuroendocrinus pancreaticus", organ:"Pancreas",
+  id:"pan-net", dept:"hpb", name:"Pancreatic Neuroendocrine Tumor", latin:"Tumor neuroendocrinus pancreaticus", organ:"Pancreas",
   severity:"medium", tags:["pancreas","NET","insulinoma","gastrinoma","MEN1","somatostatin","Whipple"],
-  hero:"Heterogeneous group of neoplasms arising from pancreatic islet cells; range from benign insulinoma to aggressive non-functional tumours with liver metastases.",
+  hero:"Heterogeneous group of neoplasms arising from pancreatic islet cells; range from benign insulinoma to aggressive non-functional tumors with liver metastases.",
   keypoints:[
     "Functional (40%): insulinoma (most common), gastrinoma, glucagonoma, VIPoma, somatostatinoma — defined by hormone excess syndrome",
     "Non-functional (60%): larger at presentation, usually incidental; no hormone syndrome",
@@ -228,14 +228,14 @@ window._TMP_HPB3 = [
     "Insulinoma: 90% benign, solitary, resectable; Whipple's triad for diagnosis",
     "MEN1 (multiple endocrine neoplasia type 1): 80–100% develop pNET — surveillance mandatory"
   ],
-  differentials:["Pancreatic ductal adenocarcinoma","Acinar cell carcinoma","Solid pseudopapillary tumour","Metastatic small cell carcinoma","Duodenal carcinoid"],
-  mnemonics:[{name:"Whipple's Triad (Insulinoma)",text:"Symptoms of hypoglycaemia with fasting; Blood glucose <2.2 mmol/L at time of symptoms; Relief with glucose administration"}],
+  differentials:["Pancreatic ductal adenocarcinoma","Acinar cell carcinoma","Solid pseudopapillary tumor","Metastatic small cell carcinoma","Duodenal carcinoid"],
+  mnemonics:[{name:"Whipple's Triad (Insulinoma)",text:"Symptoms of hypoglycemia with fasting; Blood glucose <2.2 mmol/L at time of symptoms; Relief with glucose administration"}],
   overview:{
     definition:"Epithelial neoplasms arising from the pluripotent neuroendocrine cells of the pancreas (islets of Langerhans and ductal cells), capable of hormone secretion.",
     epidemiology:"Incidence 1–4/100 000/year; increasing with cross-sectional imaging. F=M. 10% associated with MEN1, VHL, tuberous sclerosis, NF1.",
-    pathophysiology:"Somatic mutations in MEN1, DAXX/ATRX, mTOR pathway; chromosomal instability in higher-grade tumours. Functional tumours secrete hormones causing clinical syndromes. Liver is the dominant site of metastasis.",
+    pathophysiology:"Somatic mutations in MEN1, DAXX/ATRX, mTOR pathway; chromosomal instability in higher-grade tumors. Functional tumors secrete hormones causing clinical syndromes. Liver is the dominant site of metastasis.",
     classification:[
-      {label:"WHO G1 (well-differentiated)",note:"Ki-67 <3%; mitoses <2/10HPF; low malignant potential; 5-year survival >90% localised"},
+      {label:"WHO G1 (well-differentiated)",note:"Ki-67 <3%; mitoses <2/10HPF; low malignant potential; 5-year survival >90% localized"},
       {label:"WHO G2 (well-differentiated)",note:"Ki-67 3–20%; mitoses 2–20/10HPF; intermediate"},
       {label:"WHO G3 NET (well-differentiated)",note:"Ki-67 >20%; well-differentiated morphology; variable biology"},
       {label:"NEC G3 (poorly differentiated)",note:"Ki-67 >20%; small or large cell; aggressive; treat like SCLC/LCNEC"}
@@ -243,32 +243,32 @@ window._TMP_HPB3 = [
   },
   diagnosis:{
     history:[
-      "Insulinoma: Whipple's triad — hypoglycaemia symptoms (tremor, confusion, sweating) relieved by glucose; typically fasting or exercise-induced",
-      "Gastrinoma (Zollinger-Ellison): severe refractory peptic ulcers, diarrhoea, oesophagitis; often associated with MEN1",
+      "Insulinoma: Whipple's triad — hypoglycemia symptoms (tremor, confusion, sweating) relieved by glucose; typically fasting or exercise-induced",
+      "Gastrinoma (Zollinger-Ellison): severe refractory peptic ulcers, diarrhea, esophagitis; often associated with MEN1",
       "Glucagonoma: 4Ds — Dermatitis (necrolytic migratory erythema), Diabetes, DVT, Depression",
-      "VIPoma (Verner-Morrison): watery diarrhoea, hypokalaemia, achlorhydria (WDHA syndrome)",
+      "VIPoma (Verner-Morrison): watery diarrhea, hypokalemia, achlorhydria (WDHA syndrome)",
       "Non-functional: weight loss, abdominal mass, jaundice, incidental"
     ],
-    examination:["Hypoglycaemia signs (insulinoma)","Necrolytic migratory erythema (glucagonoma)","Hepatomegaly with metastases"],
+    examination:["Hypoglycemia signs (insulinoma)","Necrolytic migratory erythema (glucagonoma)","Hepatomegaly with metastases"],
     investigations:[
-      {name:"Fasting test (72-hour supervised)",role:"Insulinoma: hypoglycaemia with inappropriately elevated insulin + C-peptide; artificial insulin: C-peptide low, sulfonylurea screen negative"},
+      {name:"Fasting test (72-hour supervised)",role:"Insulinoma: hypoglycemia with inappropriately elevated insulin + C-peptide; artificial insulin: C-peptide low, sulfonylurea screen negative"},
       {name:"Fasting gastrin + secretin stimulation",role:"Gastrinoma: fasting gastrin >1000 pg/mL or rise >200 pg/mL with secretin"},
-      {name:"Chromogranin A (CgA)",role:"Pan-marker for neuroendocrine tumours; elevated in 70–80%; correlates with tumour burden"},
+      {name:"Chromogranin A (CgA)",role:"Pan-marker for neuroendocrine tumors; elevated in 70–80%; correlates with tumor burden"},
       {name:"24-hour urinary 5-HIAA",role:"Carcinoid/serotonin-secreting; not specific for pNET"},
-      {name:"MRI pancreas + liver",role:"Best sensitivity for small tumours; gadolinium + diffusion; liver metastases"},
-      {name:"CT (pancreatic protocol)",role:"Hypervascular tumours; arterial phase enhancement; liver metastases"},
+      {name:"MRI pancreas + liver",role:"Best sensitivity for small tumors; gadolinium + diffusion; liver metastases"},
+      {name:"CT (pancreatic protocol)",role:"Hypervascular tumors; arterial phase enhancement; liver metastases"},
       {name:"Ga-68 DOTATATE PET-CT",role:"Somatostatin receptor scintigraphy — excellent for G1/G2 NETs; staging; identifies metastases; guides PRRT eligibility"},
       {name:"EUS ± FNA",role:"Best for small pancreatic primaries <1 cm; biopsy for Ki-67 grading"},
-      {name:"MEN1 genetic testing",role:"If family history, multicentre, or parathyroid/pituitary involvement"}
+      {name:"MEN1 genetic testing",role:"If family history, multicenter, or parathyroid/pituitary involvement"}
     ]
   },
   criteria:{
     title:"Surgical Eligibility and Functional Syndrome Criteria",
     items:[
-      {k:"Whipple's Triad",v:"Hypoglycaemia + symptoms + relief with glucose — confirms insulinoma"},
-      {k:"Localised resectable G1/G2",v:"Resect with R0 intent"},
+      {k:"Whipple's Triad",v:"Hypoglycemia + symptoms + relief with glucose — confirms insulinoma"},
+      {k:"Localized resectable G1/G2",v:"Resect with R0 intent"},
       {k:"Insulinoma <2 cm in body/tail",v:"Laparoscopic distal pancreatectomy or enucleation"},
-      {k:"Gastrinoma",v:"Resect if localised; PPI covers hypersecretion; all resectable gastrinomas should undergo surgery"},
+      {k:"Gastrinoma",v:"Resect if localized; PPI covers hypersecretion; all resectable gastrinomas should undergo surgery"},
       {k:"Non-functional pNET <2 cm",v:"Controversial: can observe G1 lesions <1.5–2 cm without worrisome features (ENETS)"}
     ]
   },
@@ -277,29 +277,29 @@ window._TMP_HPB3 = [
     conservative:["Non-functional G1 <2 cm: active surveillance with MRI/EUS every 6 months — if stable ×2 years, annual thereafter","MEN1: surveillance for functional syndrome and growth","Nutritional support"],
     medical:["Functional syndromes: octreotide LAR or lanreotide (somatostatin analogues) — control hormonal symptoms and slow progression","mTOR inhibitors: everolimus (progression after SSA or for non-functional)","Sunitinib: VEGFR inhibitor — functional and non-functional advanced pNET","PRRT (peptide receptor radionuclide therapy — Lu-177 DOTATATE): for somatostatin receptor-positive; NETTER-1 trial: significant PFS improvement","Streptozocin-based chemotherapy: G3 well-differentiated pNET; or for aggressive G2","Cisplatin + etoposide: NEC (poorly differentiated) — as for SCLC"],
     surgical:[
-      {name:"Enucleation",when:"Insulinoma <2–3 cm; >3 mm from MPD; benign behaviour expected",notes:"Intraoperative US guides location; low morbidity; IOUS mandatory to confirm duct distance"},
-      {name:"Distal pancreatectomy ± splenectomy",when:"Body/tail tumour >2 cm or not amenable to enucleation; laparoscopic preferred",notes:"Spleen-preserving if not oncologically indicated"},
-      {name:"Pancreaticoduodenectomy",when:"Head tumour >2 cm; ductal involvement; G2–G3; lymph node metastases",notes:"Standard Whipple or PPPD"},
-      {name:"Cytoreductive surgery / liver metastasectomy",when:"Well-differentiated G1/G2 with resectable liver metastases; hepatic debulking (>70% tumour removal) improves survival",notes:"Combine with ablation (RFA) for smaller metastases"},
+      {name:"Enucleation",when:"Insulinoma <2–3 cm; >3 mm from MPD; benign behavior expected",notes:"Intraoperative US guides location; low morbidity; IOUS mandatory to confirm duct distance"},
+      {name:"Distal pancreatectomy ± splenectomy",when:"Body/tail tumor >2 cm or not amenable to enucleation; laparoscopic preferred",notes:"Spleen-preserving if not oncologically indicated"},
+      {name:"Pancreaticoduodenectomy",when:"Head tumor >2 cm; ductal involvement; G2–G3; lymph node metastases",notes:"Standard Whipple or PPPD"},
+      {name:"Cytoreductive surgery / liver metastasectomy",when:"Well-differentiated G1/G2 with resectable liver metastases; hepatic debulking (>70% tumor removal) improves survival",notes:"Combine with ablation (RFA) for smaller metastases"},
       {name:"PRRT (Lu-177 DOTATATE)",when:"Unresectable/metastatic, somatostatin receptor positive (DOTATATE PET positive)",notes:"Lu-177 DOTATATE — 4 cycles; NETTER-1: 79% PFS improvement; nephrotoxicity monitoring required"}
     ]
   },
   technique:{
     title:"Laparoscopic Distal Pancreatectomy for pNET",
-    prep:["IOUS probe available","Octreotide infusion in theatre for insulinoma (prevents rebound hypoglycaemia)","Blood glucose monitoring every 15 min intraoperatively (insulinoma)"],
+    prep:["IOUS probe available","Octreotide infusion in theater for insulinoma (prevents rebound hypoglycemia)","Blood glucose monitoring every 15 min intraoperatively (insulinoma)"],
     steps:[
       {n:1,t:"Port placement",d:"4 ports: 12 mm umbilical, 5 mm left lateral, 5 mm left upper quadrant, 5 mm right flank"},
-      {n:2,t:"IOUS",d:"Confirm tumour; check relationship to MPD and splenic vessels"},
+      {n:2,t:"IOUS",d:"Confirm tumor; check relationship to MPD and splenic vessels"},
       {n:3,t:"Lesser sac entry",d:"Divide gastrocolic omentum; expose pancreatic body/tail"},
-      {n:4,t:"Dissection",d:"Harmonic scalpel; mobilise pancreas from retroperitoneum; identify and control splenic artery and vein if splenectomy planned"},
-      {n:5,t:"Transection",d:"Endostapler (blue or purple load) through pancreatic neck; ensure ≥2 cm margin from tumour"},
+      {n:4,t:"Dissection",d:"Harmonic scalpel; mobilize pancreas from retroperitoneum; identify and control splenic artery and vein if splenectomy planned"},
+      {n:5,t:"Transection",d:"Endostapler (blue or purple load) through pancreatic neck; ensure ≥2 cm margin from tumor"},
       {n:6,t:"Retrieve specimen",d:"Bag; extract through umbilical port; blood glucose check confirms insulinoma removed (glucose rises)"}
     ],
-    pearls:["Intraoperative blood glucose rise after tumour removal = confirms insulinoma — glucose should rise within 5 min of resection","IOUS is mandatory — palpation alone misses small tumours","Spleen preservation reduces long-term immune complications — use if oncologically safe","Post-op: monitor for pancreatic fistula; drain amylase day 3"]
+    pearls:["Intraoperative blood glucose rise after tumor removal = confirms insulinoma — glucose should rise within 5 min of resection","IOUS is mandatory — palpation alone misses small tumors","Spleen preservation reduces long-term immune complications — use if oncologically safe","Post-op: monitor for pancreatic fistula; drain amylase day 3"]
   },
-  guidelines:[{src:"ENETS Consensus Guidelines 2016/2022"},{src:"NCCN Neuroendocrine Tumours 2023"},{src:"ESMO Gastroenteropancreatic NET Guidelines 2020"}],
-  pearls:["Insulinoma: 90% benign, solitary, <2 cm — enucleation or laparoscopic distal pancreatectomy is curative","Ga-68 DOTATATE PET: superior sensitivity to OctreoScan; mandatory for G1/G2 staging","PRRT (Lu-177 DOTATATE): 79% PFS improvement in metastatic G1/G2 pNET (NETTER-1 trial)","MEN1: all pNETs ≥2 cm should be resected; functional tumours regardless of size"],
-  mistakes:["Not grading with Ki-67 — changes management and prognosis completely","Not localising insulinoma intraoperatively with IOUS — missing small lesion","Using NEC chemotherapy (cisplatin/etoposide) for well-differentiated G3 pNET — wrong regimen","Not screening for MEN1 in young patients with multifocal pNET"]
+  guidelines:[{src:"ENETS Consensus Guidelines 2016/2022"},{src:"NCCN Neuroendocrine Tumors 2023"},{src:"ESMO Gastroenteropancreatic NET Guidelines 2020"}],
+  pearls:["Insulinoma: 90% benign, solitary, <2 cm — enucleation or laparoscopic distal pancreatectomy is curative","Ga-68 DOTATATE PET: superior sensitivity to OctreoScan; mandatory for G1/G2 staging","PRRT (Lu-177 DOTATATE): 79% PFS improvement in metastatic G1/G2 pNET (NETTER-1 trial)","MEN1: all pNETs ≥2 cm should be resected; functional tumors regardless of size"],
+  mistakes:["Not grading with Ki-67 — changes management and prognosis completely","Not localizing insulinoma intraoperatively with IOUS — missing small lesion","Using NEC chemotherapy (cisplatin/etoposide) for well-differentiated G3 pNET — wrong regimen","Not screening for MEN1 in young patients with multifocal pNET"]
 },
 {
   id:"itp", dept:"hpb", name:"Immune Thrombocytopenic Purpura", latin:"Purpura thrombocytopenica immunologica", organ:"Spleen",
@@ -329,9 +329,9 @@ window._TMP_HPB3 = [
     history:["Easy bruising, petechiae, purpura","Gum bleeding, epistaxis, menorrhagia","Platelet count typically <30 for bleeding symptoms","Recent viral illness (children)","Drug history (heparin, quinine, sulfonamides)","Exclude: HIV, HCV, H. pylori, SLE"],
     examination:["Petechiae (legs), purpura, ecchymoses","Mucosal bleeding: gum, oral, vaginal","Splenomegaly is rare — suggests secondary cause","No lymphadenopathy (vs lymphoma)"],
     investigations:[
-      {name:"FBC with film",role:"Isolated thrombocytopenia; normal WBC and Hb (unless haemorrhage); large platelets; exclude pseudothrombocytopenia"},
-      {name:"Peripheral blood film",role:"Excludes TTP (schistocytes), hypersplenism, leukaemia"},
-      {name:"Direct antiglobulin test (DAT)",role:"Exclude Evans syndrome (ITP + autoimmune haemolytic anaemia)"},
+      {name:"CBC with film",role:"Isolated thrombocytopenia; normal WBC and Hb (unless hemorrhage); large platelets; exclude pseudothrombocytopenia"},
+      {name:"Peripheral blood film",role:"Excludes TTP (schistocytes), hypersplenism, leukemia"},
+      {name:"Direct antiglobulin test (DAT)",role:"Exclude Evans syndrome (ITP + autoimmune hemolytic anemia)"},
       {name:"HIV, HCV, H. pylori serology",role:"Secondary causes — treat underlying infection first"},
       {name:"Bone marrow biopsy",role:"If atypical features (lymphadenopathy, older age, poor treatment response) — exclude myelodysplasia"},
       {name:"Antinuclear antibody, anti-dsDNA",role:"Exclude SLE-associated thrombocytopenia"},
@@ -375,37 +375,37 @@ window._TMP_HPB3 = [
 },
 {
   id:"hereditary-spherocytosis", dept:"hpb", name:"Hereditary Spherocytosis", latin:"Spherocytosis hereditaria", organ:"Spleen",
-  severity:"low", tags:["spleen","spherocytosis","haemolysis","anaemia","jaundice","splenectomy"],
-  hero:"Autosomal dominant haemolytic anaemia due to spectrin/ankyrin deficiency causing spherical RBCs that are trapped and destroyed by the spleen.",
+  severity:"low", tags:["spleen","spherocytosis","hemolysis","anemia","jaundice","splenectomy"],
+  hero:"Autosomal dominant hemolytic anemia due to spectrin/ankyrin deficiency causing spherical RBCs that are trapped and destroyed by the spleen.",
   keypoints:[
-    "Most common inherited haemolytic anaemia in Northern European populations (1:2000)",
-    "Triad: anaemia + jaundice (unconjugated hyperbilirubinaemia) + splenomegaly",
+    "Most common inherited hemolytic anemia in Northern European populations (1:2000)",
+    "Triad: anemia + jaundice (unconjugated hyperbilirubinemia) + splenomegaly",
     "Diagnosis: family history + MCHC >36 g/dL + spherocytes on film + direct Coombs negative + EMA (eosin-5'-maleimide) flow cytometry",
     "Pigment (calcium bilirubinate) gallstones develop in 50% — cholecystectomy concurrent with splenectomy if present",
     "Splenectomy curative — delay until age ≥6 years to reduce OPSI risk; partial splenectomy for young children"
   ],
-  differentials:["Autoimmune haemolytic anaemia (AIHA — direct Coombs positive)","G6PD deficiency (episodic, X-linked, precipitated by triggers)","Sickle cell disease","ABO incompatibility (neonatal)","Microangiopathic haemolytic anaemia (TTP/HUS)"],
-  mnemonics:[{name:"HS Triad",text:"Anaemia + Jaundice (unconjugated) + Splenomegaly — plus positive family history, spherocytes on film, negative Coombs = Hereditary Spherocytosis"}],
+  differentials:["Autoimmune hemolytic anemia (AIHA — direct Coombs positive)","G6PD deficiency (episodic, X-linked, precipitated by triggers)","Sickle cell disease","ABO incompatibility (neonatal)","Microangiopathic hemolytic anemia (TTP/HUS)"],
+  mnemonics:[{name:"HS Triad",text:"Anemia + Jaundice (unconjugated) + Splenomegaly — plus positive family history, spherocytes on film, negative Coombs = Hereditary Spherocytosis"}],
   overview:{
-    definition:"Inherited membrane defect causing spherocytic erythrocytes susceptible to splenic sequestration and haemolysis.",
+    definition:"Inherited membrane defect causing spherocytic erythrocytes susceptible to splenic sequestration and hemolysis.",
     epidemiology:"Prevalence 1:2000 in Northern Europeans; M=F. 75% autosomal dominant; 25% de novo or autosomal recessive.",
-    pathophysiology:"Mutations in spectrin (SPTA1, SPTB), ankyrin (ANK1), band 3 (SLC4A1), protein 4.2 → loss of RBC membrane surface area relative to volume → spherocytes → rigid, osmotically fragile → trapped in splenic sinusoids → haemolysis.",
+    pathophysiology:"Mutations in spectrin (SPTA1, SPTB), ankyrin (ANK1), band 3 (SLC4A1), protein 4.2 → loss of RBC membrane surface area relative to volume → spherocytes → rigid, osmotically fragile → trapped in splenic sinusoids → hemolysis.",
     classification:[
-      {label:"Mild HS",note:"Compensated haemolysis; Hb >11 g/dL; reticulocytes <6%; minimal splenomegaly"},
+      {label:"Mild HS",note:"Compensated hemolysis; Hb >11 g/dL; reticulocytes <6%; minimal splenomegaly"},
       {label:"Moderate HS",note:"Hb 8–11 g/dL; reticulocytes 6–10%; splenomegaly"},
       {label:"Severe HS",note:"Hb <8 g/dL; reticulocytes >10%; transfusion dependent; spectrin deficiency"},
-      {label:"Aplastic crisis",note:"Triggered by parvovirus B19 → temporary cessation of erythropoiesis → severe anaemia; resolves in 7–10 days"}
+      {label:"Aplastic crisis",note:"Triggered by parvovirus B19 → temporary cessation of erythropoiesis → severe anemia; resolves in 7–10 days"}
     ]
   },
   diagnosis:{
-    history:["Family history (75% autosomal dominant)","Neonatal jaundice requiring phototherapy","Recurrent anaemia, fatigue, jaundice","Episodic worsening (aplastic crisis with parvovirus B19, haemolytic crisis)","Gallstone complications"],
-    examination:["Pallor, jaundice (scleral icterus)","Splenomegaly (always present with haemolysis)","Pigment gallstones (50% by age 30)","Leg ulcers (rare)"],
+    history:["Family history (75% autosomal dominant)","Neonatal jaundice requiring phototherapy","Recurrent anemia, fatigue, jaundice","Episodic worsening (aplastic crisis with parvovirus B19, hemolytic crisis)","Gallstone complications"],
+    examination:["Pallor, jaundice (scleral icterus)","Splenomegaly (always present with hemolysis)","Pigment gallstones (50% by age 30)","Leg ulcers (rare)"],
     investigations:[
-      {name:"FBC",role:"Normocytic or microcytic anaemia; MCHC >36 g/dL (elevated due to spherocyte dehydration) — key diagnostic clue"},
+      {name:"CBC",role:"Normocytic or microcytic anemia; MCHC >36 g/dL (elevated due to spherocyte dehydration) — key diagnostic clue"},
       {name:"Peripheral blood film",role:"Spherocytes (round, no central pallor); polychromasia (reticulocytosis)"},
       {name:"Reticulocyte count",role:"Elevated (compensatory); reticulocyte Hb reduced in iron deficiency complicating HS"},
       {name:"Direct Coombs test (DAT)",role:"Negative — distinguishes from AIHA"},
-      {name:"Serum bilirubin (unconjugated), LDH, haptoglobin",role:"Elevated unconjugated bilirubin + LDH; low haptoglobin — haemolysis markers"},
+      {name:"Serum bilirubin (unconjugated), LDH, haptoglobin",role:"Elevated unconjugated bilirubin + LDH; low haptoglobin — hemolysis markers"},
       {name:"EMA (eosin-5'-maleimide) binding test",role:"Flow cytometry; reduced EMA binding = spectrin/band 3 deficiency; sensitivity 92%, specificity 99%; gold standard"},
       {name:"Osmotic fragility test",role:"Spherocytes lyse at higher NaCl concentration; largely replaced by EMA test"},
       {name:"US abdomen",role:"Splenomegaly; gallstones"}
@@ -422,8 +422,8 @@ window._TMP_HPB3 = [
   },
   scoring:[],
   management:{
-    conservative:["Folic acid 1–5 mg/day — replaces folate consumed by compensatory erythropoiesis","Monitoring: FBC 6-monthly; bilirubin; US for gallstones","Parvovirus aplastic crisis: supportive; transfusion if severe anaemia; self-limiting in 7–10 days"],
-    medical:["No pharmacological treatment that corrects the underlying defect","Iron chelation only if transfusion-related iron overload","Blood transfusion: aplastic crisis; severe haemolytic crisis"],
+    conservative:["Folic acid 1–5 mg/day — replaces folate consumed by compensatory erythropoiesis","Monitoring: CBC 6-monthly; bilirubin; US for gallstones","Parvovirus aplastic crisis: supportive; transfusion if severe anemia; self-limiting in 7–10 days"],
+    medical:["No pharmacological treatment that corrects the underlying defect","Iron chelation only if transfusion-related iron overload","Blood transfusion: aplastic crisis; severe hemolytic crisis"],
     surgical:[
       {name:"Laparoscopic splenectomy",when:"Moderate-severe HS (Hb <10); transfusion-dependent; delay until age ≥6; concurrent cholecystectomy if gallstones",notes:"Vaccination mandatory ≥2 weeks before; search for accessory spleen; post-op penicillin prophylaxis for life"},
       {name:"Partial splenectomy",when:"Children <6 years who are transfusion-dependent to preserve immune function; near-total splenectomy leaving 15–20% functional remnant",notes:"Partial remission; may recur — formal splenectomy later if needed"},
@@ -431,7 +431,7 @@ window._TMP_HPB3 = [
     ]
   },
   technique:{
-    title:"Laparoscopic Splenectomy for Haemolytic Anaemia",
+    title:"Laparoscopic Splenectomy for Hemolytic Anemia",
     prep:["Pre-op vaccination: pneumococcal, meningococcal, Hib","Cross-match 2 units pRBC","Target Hb >8 g/dL pre-op with transfusion if needed","Avoid operating during aplastic crisis"],
     steps:[
       {n:1,t:"Position",d:"Right lateral decubitus; 4 ports; harmonic scalpel"},
@@ -441,45 +441,45 @@ window._TMP_HPB3 = [
       {n:5,t:"Bag and morcellate",d:"Retrieval bag; morcellate through 12 mm port extension"},
       {n:6,t:"Concurrent cholecystectomy",d:"If gallstones: repositioning or same ports for cholecystectomy with Critical View of Safety"}
     ],
-    pearls:["Accessory spleen in 20% of HS patients — must remove all or haemolysis continues","Post-splenectomy reticulocyte count normalises within days — confirms successful removal","Aplastic crisis: do NOT operate acutely — supportive care; operate electively after recovery","After splenectomy: spherocytes persist on film (membrane defect unchanged) but no haemolysis — Hb normalises"]
+    pearls:["Accessory spleen in 20% of HS patients — must remove all or hemolysis continues","Post-splenectomy reticulocyte count normalizes within days — confirms successful removal","Aplastic crisis: do NOT operate acutely — supportive care; operate electively after recovery","After splenectomy: spherocytes persist on film (membrane defect unchanged) but no hemolysis — Hb normalizes"]
   },
-  guidelines:[{src:"British Society for Haematology HS Guidelines 2011"},{src:"Gallagher PG et al. — HS Review NEJM 2004"},{src:"Bianchi P et al. — EMA Test Haematologica 2005"}],
+  guidelines:[{src:"British Society for Hematology HS Guidelines 2011"},{src:"Gallagher PG et al. — HS Review NEJM 2004"},{src:"Bianchi P et al. — EMA Test Hematologica 2005"}],
   pearls:["MCHC >36 g/dL + negative Coombs + spherocytes = HS until proven otherwise","EMA flow cytometry: gold standard with 92% sensitivity — largely replaced osmotic fragility test","Concurrent cholecystectomy at splenectomy prevents future biliary complications in 50% who have gallstones","Aplastic crisis: parvovirus B19 — check IgM; transfuse if Hb <6; observe in hospital; self-limiting"],
   mistakes:["Diagnosing AIHA (treating with steroids) when Coombs is negative and family history positive","Not vaccinating before splenectomy in HS","Splenectomy in children <5 years — OPSI risk too high; partial splenectomy or delay","Failing to do concurrent cholecystectomy for asymptomatic gallstones at time of splenectomy — separate future operation needed"]
 },
 {
   id:"splenic-abscess", dept:"hpb", name:"Splenic Abscess", latin:"Abscessus lienis", organ:"Spleen",
   severity:"high", tags:["spleen","abscess","fever","drainage","splenectomy","endocarditis"],
-  hero:"Rare but potentially fatal suppurative collection within the spleen; most arise from haematogenous seeding in the context of endocarditis, bacteraemia, or immunosuppression.",
+  hero:"Rare but potentially fatal suppurative collection within the spleen; most arise from hematogenous seeding in the context of endocarditis, bacteremia, or immunosuppression.",
   keypoints:[
     "Rare: <0.7% of all intra-abdominal abscesses; high mortality if untreated (80%); with treatment 14–27%",
-    "Most common causes: haematogenous seeding (infective endocarditis, bacteraemia), contiguous spread, immunocompromised host",
+    "Most common causes: hematogenous seeding (infective endocarditis, bacteremia), contiguous spread, immunocompromised host",
     "Classic triad: fever + LUQ pain + splenomegaly — present in <50%",
     "CT diagnosis: hypodense splenic lesion ± gas ± ring enhancement; echocardiography to exclude endocarditis",
     "Treatment: IV antibiotics + splenectomy (traditional) or CT-guided percutaneous drainage (single, accessible lesions)"
   ],
-  differentials:["Splenic infarct","Splenic haematoma","Hydatid cyst of spleen","Splenic lymphoma","Pancreatic pseudocyst extending to spleen"],
-  mnemonics:[{name:"Splenic Abscess Aetiology",text:"Haematogenous (endocarditis, typhoid, IV drug use) + Direct spread (pancreatitis, gastric perforation) + Immunocompromised (Candida, Aspergillus) + Trauma"}],
+  differentials:["Splenic infarct","Splenic hematoma","Hydatid cyst of spleen","Splenic lymphoma","Pancreatic pseudocyst extending to spleen"],
+  mnemonics:[{name:"Splenic Abscess Etiology",text:"Hematogenous (endocarditis, typhoid, IV drug use) + Direct spread (pancreatitis, gastric perforation) + Immunocompromised (Candida, Aspergillus) + Trauma"}],
   overview:{
     definition:"Suppurative infection within the splenic parenchyma, forming a pus-filled cavity.",
-    epidemiology:"Incidence <0.7/1000 hospital admissions; male predominance. Most common organisms: Streptococcus/Staphylococcus (haematogenous), gram-negative organisms (contiguous), Candida (immunocompromised).",
-    pathophysiology:"Haematogenous seeding via splenic artery → bacterial colonisation of splenic parenchyma → abscess formation. Pre-existing splenic pathology (infarct, trauma, haematoma) predisposes. Fungal abscesses in neutropenic patients: multiple microabscesses.",
+    epidemiology:"Incidence <0.7/1000 hospital admissions; male predominance. Most common organisms: Streptococcus/Staphylococcus (hematogenous), gram-negative organisms (contiguous), Candida (immunocompromised).",
+    pathophysiology:"Hematogenous seeding via splenic artery → bacterial colonization of splenic parenchyma → abscess formation. Pre-existing splenic pathology (infarct, trauma, hematoma) predisposes. Fungal abscesses in neutropenic patients: multiple microabscesses.",
     classification:[
-      {label:"Haematogenous",note:"Most common (55–70%): infective endocarditis, bacteraemia, IV drug use, typhoid"},
+      {label:"Hematogenous",note:"Most common (55–70%): infective endocarditis, bacteremia, IV drug use, typhoid"},
       {label:"Contiguous",note:"Pancreatitis, perforated gastric ulcer, diverticulitis, subphrenic abscess"},
       {label:"Immunocompromised",note:"HIV, malignancy, post-transplant — fungal (Candida, Aspergillus), multiple microabscesses"},
-      {label:"Traumatic",note:"Haematoma superinfection; splenic infarct seeding"}
+      {label:"Traumatic",note:"Hematoma superinfection; splenic infarct seeding"}
     ]
   },
   diagnosis:{
-    history:["Fever, rigors, sweating","LUQ or left shoulder tip pain (diaphragmatic irritation)","Recent infective endocarditis, bacteraemia, IV drug use, typhoid","Immunosuppression: steroids, malignancy, HIV, transplant","Blunt abdominal trauma"],
-    examination:["Fever (>38°C in 90%)","LUQ tenderness, splenomegaly","Left pleural effusion (diaphragmatic irritation)","Signs of endocarditis: splinter haemorrhages, murmur, Osler's nodes"],
+    history:["Fever, rigors, sweating","LUQ or left shoulder tip pain (diaphragmatic irritation)","Recent infective endocarditis, bacteremia, IV drug use, typhoid","Immunosuppression: steroids, malignancy, HIV, transplant","Blunt abdominal trauma"],
+    examination:["Fever (>38°C in 90%)","LUQ tenderness, splenomegaly","Left pleural effusion (diaphragmatic irritation)","Signs of endocarditis: splinter hemorrhages, murmur, Osler's nodes"],
     investigations:[
-      {name:"FBC, CRP",role:"Leukocytosis, elevated CRP; anaemia if chronic"},
+      {name:"CBC, CRP",role:"Leukocytosis, elevated CRP; anemia if chronic"},
       {name:"Blood cultures",role:"Positive in 50–75%; take multiple sets; guide definitive antibiotic therapy; identify source"},
       {name:"US abdomen",role:"First-line: hypoechoic splenic lesion; poor sensitivity for small lesions and gas; guides FNA"},
       {name:"CT abdomen (contrast)",role:"Gold standard: hypodense lesion ± ring enhancement ± gas (gas = more severe); staging; guides drainage"},
-      {name:"Echocardiography (TTE/TOE)",role:"Exclude infective endocarditis as source — mandatory in haematogenous abscess"},
+      {name:"Echocardiography (TTE/TOE)",role:"Exclude infective endocarditis as source — mandatory in hematogenous abscess"},
       {name:"Blood cultures × 3",role:"Before antibiotics; Strep/Staph most common; Candida in immunocompromised"}
     ]
   },
@@ -487,7 +487,7 @@ window._TMP_HPB3 = [
     title:"Treatment Selection",
     items:[
       {k:"Percutaneous drainage",v:"Single accessible abscess; not Candida/multiloculated; patient stable; US/CT guidance"},
-      {k:"Splenectomy",v:"Multiple abscesses; failed percutaneous drainage; thick-walled; ruptured; Candida (multiloculated microabscesses); haemodynamically unstable"},
+      {k:"Splenectomy",v:"Multiple abscesses; failed percutaneous drainage; thick-walled; ruptured; Candida (multiloculated microabscesses); hemodynamically unstable"},
       {k:"IV antibiotics alone",v:"Microabscesses (<1 cm), fungal microabscesses with antifungal treatment — drainage not feasible"},
       {k:"Duration",v:"IV antibiotics 4–6 weeks; transition to oral after clinical improvement + drainage"}
     ]
@@ -498,7 +498,7 @@ window._TMP_HPB3 = [
     medical:["IV antibiotics: piperacillin-tazobactam + vancomycin initially; refine by cultures","Fungal: IV antifungal (micafungin or amphotericin B for severe; fluconazole for sensitive Candida)","Duration: minimum 4–6 weeks; IV until drainage resolved, then oral"],
     surgical:[
       {name:"CT-guided percutaneous drainage",when:"Single accessible abscess; patient stable; no fungal microabscesses",notes:"8–12 Fr pigtail; irrigate daily; remove when output <10 mL; failure rate 10–20% for thick-walled or multiloculated"},
-      {name:"Laparoscopic or open splenectomy",when:"Multiple/multiloculated; failed drainage; Candida microabscesses; ruptured abscess; haemodynamically unstable",notes:"Open preferred for haemodynamically unstable; laparoscopic for stable patients; vaccination required post-op"},
+      {name:"Laparoscopic or open splenectomy",when:"Multiple/multiloculated; failed drainage; Candida microabscesses; ruptured abscess; hemodynamically unstable",notes:"Open preferred for hemodynamically unstable; laparoscopic for stable patients; vaccination required post-op"},
       {name:"Partial splenectomy",when:"Single abscess in child; desire to preserve splenic function; technically feasible",notes:"Rarely performed; high recurrence if not fully drained"}
     ]
   },
@@ -507,7 +507,7 @@ window._TMP_HPB3 = [
     prep:["CT confirms anatomy and vascular supply","IV antibiotics started pre-operatively","Cross-match 2–4 units (inflamed spleen can bleed)","Right lateral decubitus position"],
     steps:[
       {n:1,t:"Port placement",d:"Right lateral decubitus; 4 ports; 30° laparoscope"},
-      {n:2,t:"Careful mobilisation",d:"Inflamed spleen may have adhesions to diaphragm and colon; careful harmonic dissection"},
+      {n:2,t:"Careful mobilization",d:"Inflamed spleen may have adhesions to diaphragm and colon; careful harmonic dissection"},
       {n:3,t:"Hilar control",d:"Divide splenic artery first; then vein; use 12 mm endostapler for hilum if inflamed"},
       {n:4,t:"Specimen retrieval",d:"Large retrieval bag; avoid spillage of pus; if bag fails → convert to open"},
       {n:5,t:"Abdominal washout",d:"Thorough irrigation; drain in left subphrenic space"},
@@ -530,7 +530,7 @@ window._TMP_HPB3 = [
     "Cholangiocarcinoma risk 10–15% lifetime; annual MRCP + CA 19-9 for surveillance; ERCP + brush cytology + FISH when stricture changes",
     "Small duct PSC (normal ERCP/MRCP): better prognosis; lower cholangiocarcinoma risk"
   ],
-  differentials:["Secondary sclerosing cholangitis (ischaemia, stones, post-surgical)","IgG4-related sclerosing cholangitis (responds to steroids — critical to exclude)","Primary biliary cholangitis (PBC — AMA positive, female, small duct)","Cholangiocarcinoma (develops within PSC)","Autoimmune hepatitis overlap syndrome"],
+  differentials:["Secondary sclerosing cholangitis (ischemia, stones, post-surgical)","IgG4-related sclerosing cholangitis (responds to steroids — critical to exclude)","Primary biliary cholangitis (PBC — AMA positive, female, small duct)","Cholangiocarcinoma (develops within PSC)","Autoimmune hepatitis overlap syndrome"],
   mnemonics:[{name:"PSC Associations",text:"PSC + IBD (UC 75%) + Cholangiocarcinoma (10–15% lifetime) + Colon cancer risk elevated + Gallbladder cancer risk + Hepatocellular carcinoma (end-stage cirrhosis)"}],
   overview:{
     definition:"Chronic immune-mediated cholangiopathy causing progressive concentric fibrosis and obliteration of intra- and extrahepatic bile ducts, leading to biliary cirrhosis and liver failure.",
@@ -569,8 +569,8 @@ window._TMP_HPB3 = [
   },
   scoring:[],
   management:{
-    conservative:["No proven disease-modifying therapy","Ursodeoxycholic acid: NOT recommended (ACE trial: high-dose 28–30 mg/kg → increased complications including death and transplant listing)","Pruritus: cholestyramine (first-line), rifampicin, naltrexone, MARS/plasmapheresis (refractory)","Fatigue: no specific treatment; exclude hypothyroidism, anaemia","Fat-soluble vitamin supplementation (A, D, E, K)","IBD management: mesalazine, biologics — does not affect PSC progression"],
-    medical:["Dominant stricture: ERCP balloon dilation (preferred over stenting — lower cholangitis risk)","Cholangitis: IV antibiotics + ERCP for decompression","Prophylactic antibiotics not routinely recommended unless recurrent cholangitis (ciprofloxacin 500 mg BD)","Investigational: vancomycin (paediatric PSC; some adult studies)"],
+    conservative:["No proven disease-modifying therapy","Ursodeoxycholic acid: NOT recommended (ACE trial: high-dose 28–30 mg/kg → increased complications including death and transplant listing)","Pruritus: cholestyramine (first-line), rifampicin, naltrexone, MARS/plasmapheresis (refractory)","Fatigue: no specific treatment; exclude hypothyroidism, anemia","Fat-soluble vitamin supplementation (A, D, E, K)","IBD management: mesalazine, biologics — does not affect PSC progression"],
+    medical:["Dominant stricture: ERCP balloon dilation (preferred over stenting — lower cholangitis risk)","Cholangitis: IV antibiotics + ERCP for decompression","Prophylactic antibiotics not routinely recommended unless recurrent cholangitis (ciprofloxacin 500 mg BD)","Investigational: vancomycin (pediatric PSC; some adult studies)"],
     surgical:[
       {name:"Liver transplantation",when:"MELD ≥12; recurrent cholangitis; intractable pruritus; decompensated cirrhosis; unresectable perihilar CCA meeting Mayo protocol criteria",notes:"5-year survival 85–90%; 15–20% PSC recurrence post-transplant; IBD may flare post-transplant; continue colonoscopy surveillance"},
       {name:"ERCP + balloon dilation",when:"Dominant stricture causing jaundice, cholangitis, rising bilirubin",notes:"Dilation preferred over stenting (lower infection risk); repeat every 3–6 months; brushings and FISH on all dominant strictures"},

@@ -16,7 +16,7 @@ const ENDOCRINE_DISEASES_1 = [
     "Neoadjuvant therapy converts inoperable → operable and allows BCS",
     "BRCA1/2 mutation → consider risk-reducing mastectomy"
   ],
-  differentials: ["Fibroadenoma","Fibrocystic change","Phyllodes tumour","Fat necrosis","Abscess","Lipoma","Metastasis"],
+  differentials: ["Fibroadenoma","Fibrocystic change","Phyllodes tumor","Fat necrosis","Abscess","Lipoma","Metastasis"],
   mnemonics: [
     {name:"Triple Assessment", text:"C-I-H: Clinical + Imaging (US/MMG) + Histology (core biopsy)"},
     {name:"TNM Stage I–IV", text:"I: <2cm N0; II: 2–5cm or N1; III: locally advanced; IV: metastatic"}
@@ -41,7 +41,7 @@ const ENDOCRINE_DISEASES_1 = [
       "Nipple inversion, skin changes (peau d'orange, tethering)",
       "Family history BRCA, previous chest radiation",
       "Axillary lymphadenopathy",
-      "Bone pain, dyspnoea, hepatomegaly (metastatic)"
+      "Bone pain, dyspnea, hepatomegaly (metastatic)"
     ],
     examination: [
       "Inspect: asymmetry, skin dimpling, nipple changes",
@@ -51,7 +51,7 @@ const ENDOCRINE_DISEASES_1 = [
     ],
     investigations: [
       {name:"Bilateral mammography", role:"First-line imaging >35 yrs; microcalcifications suggest DCIS"},
-      {name:"Ultrasound breast", role:"<35 yrs or dense breasts; characterise mass; guide biopsy"},
+      {name:"Ultrasound breast", role:"<35 yrs or dense breasts; characterize mass; guide biopsy"},
       {name:"MRI breast", role:"BRCA carriers, lobular cancers, implants, pre-op planning"},
       {name:"Core needle biopsy", role:"Histology + ER/PR/HER2 + Ki67 — mandatory before surgery"},
       {name:"Staging CT CAP", role:"If locally advanced or suspicious metastatic features"},
@@ -74,7 +74,7 @@ const ENDOCRINE_DISEASES_1 = [
   management: {
     conservative: [
       "Multidisciplinary team (MDT) decision mandatory",
-      "Neoadjuvant chemotherapy for HER2+, TNBC, large tumours",
+      "Neoadjuvant chemotherapy for HER2+, TNBC, large tumors",
       "Neoadjuvant endocrine therapy for ER+ postmenopausal",
       "Annual surveillance mammography post-treatment"
     ],
@@ -86,10 +86,10 @@ const ENDOCRINE_DISEASES_1 = [
       "Olaparib for BRCA-mutated metastatic"
     ],
     surgical: [
-      {name:"Breast-conserving surgery (BCS)", when:"Early disease (T1–2, favourable location); requires clear margins (≥1mm NST)", notes:"Followed by adjuvant whole-breast radiotherapy mandatory"},
-      {name:"Mastectomy (simple/modified radical)", when:"Large tumour, multifocal, patient preference, BRCA mutation, post-BCS re-excision failure", notes:"Modified radical includes axillary clearance level I–III"},
+      {name:"Breast-conserving surgery (BCS)", when:"Early disease (T1–2, favorable location); requires clear margins (≥1mm NST)", notes:"Followed by adjuvant whole-breast radiotherapy mandatory"},
+      {name:"Mastectomy (simple/modified radical)", when:"Large tumor, multifocal, patient preference, BRCA mutation, post-BCS re-excision failure", notes:"Modified radical includes axillary clearance level I–III"},
       {name:"Sentinel lymph node biopsy (SLNB)", when:"Clinically/radiologically node-negative — standard of care", notes:"Use blue dye + radioisotope (dual technique); if ≥1 macro-metastasis → ALND vs. adjuvant RT decision"},
-      {name:"Axillary lymph node dissection (ALND)", when:"Positive SLNB (selected patients), inflammatory breast cancer, clinically node-positive pre-treatment", notes:"Levels I–III; risks: lymphoedema, nerve injury, seroma"},
+      {name:"Axillary lymph node dissection (ALND)", when:"Positive SLNB (selected patients), inflammatory breast cancer, clinically node-positive pre-treatment", notes:"Levels I–III; risks: lymphedema, nerve injury, seroma"},
       {name:"Immediate breast reconstruction", when:"Post-mastectomy if patient desires; oncoplastic BCS for moderate defects", notes:"Implant (tissue expander → implant) or autologous (TRAM, DIEP, latissimus dorsi)"},
       {name:"Risk-reducing mastectomy", when:"BRCA1/2 carriers, >30% lifetime risk", notes:"Reduces risk ~95%; bilateral with/without reconstruction"}
     ]
@@ -106,7 +106,7 @@ const ENDOCRINE_DISEASES_1 = [
       {n:2, t:"Dissection", d:"Follow blue-stained lymphatics to blue and/or hot node"},
       {n:3, t:"Node identification", d:"Count ex vivo with gamma probe: >10% of hottest node = SLN"},
       {n:4, t:"Excision", d:"Remove all blue + hot nodes (usually 1–3); clip remaining lymphatics"},
-      {n:5, t:"Pathology", d:"Intraoperative touch imprint or frozen section (some centres); formal H&E ± IHC"},
+      {n:5, t:"Pathology", d:"Intraoperative touch imprint or frozen section (some centers); formal H&E ± IHC"},
       {n:6, t:"Decision", d:"If macro-metastasis: proceed to ALND or plan axillary RT per protocol"}
     ],
     pearls: [
@@ -126,7 +126,7 @@ const ENDOCRINE_DISEASES_1 = [
     "DCIS management: BCS + RT or mastectomy; no SLNB unless mastectomy/high-risk DCIS",
     "Occult primary (axillary met, no breast mass): MRI + biopsy → treat as stage II breast cancer",
     "Inflammatory breast cancer: neoadjuvant chemo → mastectomy (NOT BCS) → RT",
-    "Lymphoedema risk after ALND: lifelong; patient education critical"
+    "Lymphedema risk after ALND: lifelong; patient education critical"
   ],
   mistakes: [
     "Performing BCS without ensuring clear margins — re-excision or mastectomy required",
@@ -184,7 +184,7 @@ const ENDOCRINE_DISEASES_1 = [
       {name:"Ultrasound", role:"Rarely helpful unless mass lesion; used to guide biopsy"},
       {name:"MRI breast", role:"Extent assessment; non-mass enhancement in ducts"},
       {name:"Stereotactic vacuum-assisted core biopsy", role:"Standard for calcification-only lesions; wide-bore (11–14G)"},
-      {name:"Clip placement at biopsy", role:"Essential to localise lesion if calcifications removed by biopsy"}
+      {name:"Clip placement at biopsy", role:"Essential to localize lesion if calcifications removed by biopsy"}
     ]
   },
   criteria: {
@@ -208,23 +208,23 @@ const ENDOCRINE_DISEASES_1 = [
       "Aromatase inhibitors (anastrozole/exemestane) for postmenopausal ER+ DCIS"
     ],
     surgical: [
-      {name:"Breast-conserving surgery (wide local excision)", when:"Unifocal DCIS, achievable clear margins (≥2mm for DCIS vs ≥1mm for invasive)", notes:"Wire/ROLL/SAVI Scout localisation for impalpable lesions"},
+      {name:"Breast-conserving surgery (wide local excision)", when:"Unifocal DCIS, achievable clear margins (≥2mm for DCIS vs ≥1mm for invasive)", notes:"Wire/ROLL/SAVI Scout localization for impalpable lesions"},
       {name:"Mastectomy", when:"Multifocal/diffuse DCIS, inability to achieve clear margins, patient preference, BRCA mutation", notes:"Simple mastectomy (no ALND needed unless invasive component found)"},
       {name:"SLNB", when:"Mastectomy for DCIS (occult invasion ~10–15%); high-grade/large DCIS at BCS", notes:"Not routinely required for all DCIS — only if invasive upstaging likely"}
     ]
   },
   technique: {
-    title: "Wire-guided / ROLL Localisation for Impalpable DCIS",
+    title: "Wire-guided / ROLL Localization for Impalpable DCIS",
     prep: [
       "Radiologist places hookwire or injects radioactive seed (ROLL) in mammographic calcifications",
-      "Specimen X-ray in theatre to confirm calcification excision"
+      "Specimen X-ray in theater to confirm calcification excision"
     ],
     steps: [
       {n:1, t:"Incision", d:"Plan over calcification site; periareolar or radial incision for cosmesis"},
       {n:2, t:"Excision", d:"Excise tissue around wire/seed with ≥10mm margin all sides"},
       {n:3, t:"Specimen X-ray", d:"Confirm microcalcifications present and central in specimen"},
       {n:4, t:"Orientation", d:"Mark specimen with clips/sutures in ≥3 planes for pathologist"},
-      {n:5, t:"Frozen section / intraop cavity shaving", d:"Some centres shave cavity margins to reduce re-excision rate"},
+      {n:5, t:"Frozen section / intraop cavity shaving", d:"Some centers shave cavity margins to reduce re-excision rate"},
       {n:6, t:"Closure", d:"Consider oncoplastic reshaping if large volume excised"}
     ],
     pearls: [
@@ -254,12 +254,12 @@ const ENDOCRINE_DISEASES_1 = [
 {
   id: "phyllodes",
   dept: "endocrine",
-  name: "Phyllodes Tumour",
+  name: "Phyllodes Tumor",
   latin: "Tumor phyllodes mammae",
   organ: "Breast",
   severity: "moderate",
   tags: ["oncology","breast","rare","stromal"],
-  hero: "Rare fibroepithelial tumour of breast stroma. Wide local excision with clear margins is key — malignant variant metastasises haematogenously.",
+  hero: "Rare fibroepithelial tumor of breast stroma. Wide local excision with clear margins is key — malignant variant metastasises hematogenously.",
   keypoints: [
     "Classified: benign, borderline, malignant by histology",
     "Wide local excision with ≥1cm clear margins (or mastectomy if large)",
@@ -274,7 +274,7 @@ const ENDOCRINE_DISEASES_1 = [
   overview: {
     definition: "Fibroepithelial neoplasm with biphasic epithelial and cellular stromal components in leaf-like pattern. Spectrum: benign (60%), borderline (15%), malignant (25%).",
     epidemiology: "Rare: <1% of breast neoplasms. Median age 45 yrs (older than fibroadenoma). Commonest in Asian women.",
-    pathophysiology: "Stromal overgrowth with variable cellularity and mitotic activity. Malignant variant = breast sarcoma with haematogenous metastasis.",
+    pathophysiology: "Stromal overgrowth with variable cellularity and mitotic activity. Malignant variant = breast sarcoma with hematogenous metastasis.",
     classification: [
       "Benign: mild stromal cellularity, <5 mitoses/10HPF, no overgrowth",
       "Borderline: moderate cellularity, 5–9 mitoses/10HPF",
@@ -319,22 +319,22 @@ const ENDOCRINE_DISEASES_1 = [
       "No role for endocrine therapy (unlike breast carcinoma)"
     ],
     surgical: [
-      {name:"Wide local excision (WLE)", when:"All grades; aim ≥1cm margin all sides", notes:"Mastectomy if tumour:breast ratio unfavourable or margins unachievable"},
-      {name:"Mastectomy", when:"Large tumour (>5cm), recurrent disease, diffuse involvement", notes:"No need for ALND regardless of tumour grade — haematogenous spread"},
+      {name:"Wide local excision (WLE)", when:"All grades; aim ≥1cm margin all sides", notes:"Mastectomy if tumor:breast ratio unfavorable or margins unachievable"},
+      {name:"Mastectomy", when:"Large tumor (>5cm), recurrent disease, diffuse involvement", notes:"No need for ALND regardless of tumor grade — hematogenous spread"},
       {name:"Re-excision", when:"Positive or close (<1cm) margins", notes:"Local recurrence risk directly proportional to margin adequacy"}
     ]
   },
   technique: {
     title: "Wide Local Excision with 1cm Margin",
     prep: [
-      "Mark skin with 1cm radius around palpable/imaged tumour margin",
+      "Mark skin with 1cm radius around palpable/imaged tumor margin",
       "Consider oncoplastic reshaping if volume significant"
     ],
     steps: [
       {n:1, t:"Incision", d:"Periareolar or radial; place incision to allow re-excision or mastectomy if needed"},
       {n:2, t:"Dissection", d:"Excise en-bloc with 1cm healthy breast tissue on all surfaces including deep pectoral fascia if posteriorly located"},
       {n:3, t:"Orientation", d:"Orient specimen in ≥3 planes with clips/sutures for pathologist"},
-      {n:4, t:"Haemostasis", d:"Thorough haemostasis; closed suction drain if large cavity"},
+      {n:4, t:"Hemostasis", d:"Thorough hemostasis; closed suction drain if large cavity"},
       {n:5, t:"Cavity closure", d:"Advance tissue or use oncoplastic technique to avoid deformity"}
     ],
     pearls: [
@@ -345,17 +345,17 @@ const ENDOCRINE_DISEASES_1 = [
   },
   guidelines: [
     {src:"NCCN Soft Tissue Sarcoma: phyllodes section"},
-    {src:"WHO Classification of Breast Tumours 2019"},
-    {src:"Tan et al. Int J Surg 2016: Management of phyllodes tumours"}
+    {src:"WHO Classification of Breast Tumors 2019"},
+    {src:"Tan et al. Int J Surg 2016: Management of phyllodes tumors"}
   ],
   pearls: [
     "Rapidly growing breast mass in a 40+ year-old woman — think phyllodes, not fibroadenoma",
     "Do NOT perform ALND — axillary nodes not involved even in malignant phyllodes",
-    "Malignant phyllodes: 5-year survival ~60% if localised; pulmonary metastases common",
+    "Malignant phyllodes: 5-year survival ~60% if localized; pulmonary metastases common",
     "Previous excision with shelling technique is inadequate — re-excision with margins required"
   ],
   mistakes: [
-    "Shelling out the tumour (enucleation) — high local recurrence rate",
+    "Shelling out the tumor (enucleation) — high local recurrence rate",
     "Performing ALND — not indicated, wastes morbidity",
     "Not warning patient of local recurrence risk and need for surveillance"
   ]
@@ -397,10 +397,10 @@ const ENDOCRINE_DISEASES_1 = [
     history: [
       "Incidentally discovered thyroid nodule (most common)",
       "Palpable neck mass — painless, lower neck",
-      "Hoarseness (RLN invasion), dysphagia (oesophageal involvement)",
+      "Hoarseness (RLN invasion), dysphagia (esophageal involvement)",
       "Rapid growth suggests anaplastic",
       "Family history MTC, MEN2, or previous neck irradiation",
-      "Diarrhoea in MTC (calcitonin effect)"
+      "Diarrhea in MTC (calcitonin effect)"
     ],
     examination: [
       "Thyroid nodule: size, consistency (hard = suspicious), fixation, tenderness",
@@ -463,12 +463,12 @@ const ENDOCRINE_DISEASES_1 = [
       {n:1, t:"Incision & subplatysmal flaps", d:"Raise superior and inferior flaps in avascular subplatysmal plane"},
       {n:2, t:"Midline division", d:"Divide strap muscles in midline; retract laterally"},
       {n:3, t:"Superior pole", d:"Individually ligate superior thyroid vessels near the thyroid capsule (preserve external branch of SLN)"},
-      {n:4, t:"RLN identification", d:"Identify RLN in tracheo-oesophageal groove; trace to Berry's ligament. Use nerve monitor if available"},
-      {n:5, t:"Parathyroid identification", d:"Identify and preserve superior and inferior parathyroids with their pedicles; auto-transplant if devascularised"},
+      {n:4, t:"RLN identification", d:"Identify RLN in tracheo-esophageal groove; trace to Berry's ligament. Use nerve monitor if available"},
+      {n:5, t:"Parathyroid identification", d:"Identify and preserve superior and inferior parathyroids with their pedicles; auto-transplant if devascularized"},
       {n:6, t:"Inferior thyroid artery", d:"Ligate branches of ITA close to thyroid (not main trunk) to preserve parathyroid blood supply"},
       {n:7, t:"Berry's ligament", d:"Divide carefully — RLN enters larynx here; highest risk zone"},
       {n:8, t:"Tracheal division", d:"Divide isthmus and remove lobe; repeat contralateral side"},
-      {n:9, t:"Haemostasis and closure", d:"Meticulous haemostasis; reapproximate strap muscles; drain optional; subcuticular closure"}
+      {n:9, t:"Hemostasis and closure", d:"Meticulous hemostasis; reapproximate strap muscles; drain optional; subcuticular closure"}
     ],
     pearls: [
       "Nerve monitor: use throughout but do not rely solely — tactile identification essential",
@@ -489,8 +489,8 @@ const ENDOCRINE_DISEASES_1 = [
   ],
   mistakes: [
     "Not checking vocal cords pre-op — post-op hoarseness attribution unclear",
-    "Ligating main inferior thyroid artery trunk — devascularises parathyroids",
-    "Operating on MTC without first excluding phaeochromocytoma — anaesthetic catastrophe",
+    "Ligating main inferior thyroid artery trunk — devascularizes parathyroids",
+    "Operating on MTC without first excluding phaeochromocytoma — anesthetic catastrophe",
     "Berry picking lateral neck nodes — must do formal compartment dissection"
   ]
 },
@@ -522,7 +522,7 @@ const ENDOCRINE_DISEASES_1 = [
     classification: [
       "Graves hyperthyroidism",
       "Graves ophthalmopathy (GO) — active vs inactive, mild/moderate/severe",
-      "Graves dermopathy (pretibial myxoedema) — rare",
+      "Graves dermopathy (pretibial myxedema) — rare",
       "Graves acropachy — very rare"
     ]
   },
@@ -531,8 +531,8 @@ const ENDOCRINE_DISEASES_1 = [
       "Weight loss with increased appetite, heat intolerance, sweating",
       "Palpitations, tremor, anxiety, insomnia",
       "Neck swelling (goitre)",
-      "Eye symptoms: grittiness, diplopia, proptosis, periorbital oedema",
-      "Diarrhoea, oligomenorrhoea",
+      "Eye symptoms: grittiness, diplopia, proptosis, periorbital edema",
+      "Diarrhea, oligomenorrhea",
       "Family history of autoimmune thyroid disease"
     ],
     examination: [
@@ -540,7 +540,7 @@ const ENDOCRINE_DISEASES_1 = [
       "Proptosis, lid lag, lid retraction, chemosis (Graves ophthalmopathy)",
       "Tremor, proximal myopathy, hyperreflexia",
       "AF, tachycardia",
-      "Pretibial myxoedema (non-pitting oedema over shins)"
+      "Pretibial myxedema (non-pitting edema over shins)"
     ],
     investigations: [
       {name:"TSH, free T4, free T3", role:"Suppressed TSH + elevated fT4/fT3 confirms hyperthyroidism"},
@@ -584,7 +584,7 @@ const ENDOCRINE_DISEASES_1 = [
       "Render euthyroid: carbimazole 4–6 weeks pre-op (until TFTs normal)",
       "Lugol's iodine 0.1–0.2mL TDS for 10 days pre-op (reduces vascularity)",
       "Beta-blocker continued until morning of surgery",
-      "Anaesthetic team alert to thyroid storm risk"
+      "Anesthetic team alert to thyroid storm risk"
     ],
     steps: [
       {n:1, t:"Positioning", d:"Supine with extended neck; shoulder roll; table anti-Trendelenburg 15°"},
@@ -593,11 +593,11 @@ const ENDOCRINE_DISEASES_1 = [
       {n:4, t:"Vascularity management", d:"Highly vascular; control bleeding meticulously — Graves goitres bleed significantly"},
       {n:5, t:"RLN and parathyroid", d:"Routine identification — essential given enlarged gland distorts anatomy"},
       {n:6, t:"Total excision", d:"Remove all thyroid tissue to prevent recurrent hyperthyroidism"},
-      {n:7, t:"Drain", d:"Consider drain in large Graves goitres — haematoma risk"}
+      {n:7, t:"Drain", d:"Consider drain in large Graves goitres — hematoma risk"}
     ],
     pearls: [
       "Largest goitres bleed most — Lugol's iodine pre-op is essential",
-      "Ophthalmopathy may worsen post-RAI but stabilises or improves post-surgery",
+      "Ophthalmopathy may worsen post-RAI but stabilizes or improves post-surgery",
       "Post-op: start thyroxine 100mcg immediately; check TSH at 6 weeks"
     ]
   },
@@ -651,9 +651,9 @@ const ENDOCRINE_DISEASES_1 = [
   diagnosis: {
     history: [
       "Long-standing neck swelling, often slow-growing",
-      "Compressive symptoms: dysphagia (oesophageal), stridor (tracheal), voice change (RLN)",
+      "Compressive symptoms: dysphagia (esophageal), stridor (tracheal), voice change (RLN)",
       "Symptoms of hyperthyroidism (toxic MNG)",
-      "Rapid enlargement suggests haemorrhage into cyst or malignancy",
+      "Rapid enlargement suggests hemorrhage into cyst or malignancy",
       "Pemberton's sign history: facial flushing/venous congestion when arms raised (substernal goitre)"
     ],
     examination: [
@@ -680,7 +680,7 @@ const ENDOCRINE_DISEASES_1 = [
       {k:"Toxic MNG uncontrolled", v:"RAI failure or contraindicated"},
       {k:"Suspicious/malignant FNAC", v:"Bethesda V–VI"},
       {k:"Cosmetic deformity", v:"Patient preference"},
-      {k:"Rapid growth", v:"Concern for malignancy or haemorrhage"}
+      {k:"Rapid growth", v:"Concern for malignancy or hemorrhage"}
     ]
   },
   scoring: [],
@@ -711,7 +711,7 @@ const ENDOCRINE_DISEASES_1 = [
     ],
     steps: [
       {n:1, t:"Extended Kocher incision", d:"Slightly longer incision; divide strap muscles if needed for exposure"},
-      {n:2, t:"Mobilise superior lobe", d:"Divide superior pedicle first; free upper lobe and contralateral lobe"},
+      {n:2, t:"Mobilize superior lobe", d:"Divide superior pedicle first; free upper lobe and contralateral lobe"},
       {n:3, t:"Blunt finger dissection", d:"Index finger behind sternum; break down avascular mediastinal attachments to free substernal component"},
       {n:4, t:"Deliver substernal lobe", d:"Gentle traction + blunt dissection delivers lobe into neck; ligate inferior thyroid veins"},
       {n:5, t:"RLN identification", d:"Distorted anatomy — careful at inferior edge of substernal mass"},
@@ -747,21 +747,21 @@ const ENDOCRINE_DISEASES_1 = [
   organ: "Parathyroid",
   severity: "moderate",
   tags: ["endocrine","parathyroid","calcium"],
-  hero: "Most common cause of hypercalcaemia in outpatients. Single parathyroid adenoma in 85%. Minimally invasive parathyroidectomy is curative in >95%.",
+  hero: "Most common cause of hypercalcemia in outpatients. Single parathyroid adenoma in 85%. Minimally invasive parathyroidectomy is curative in >95%.",
   keypoints: [
     "Classic presentation: 'bones, stones, groans, moans' (now mostly asymptomatic)",
     "Single adenoma 85%, multigland disease 15%, carcinoma <1%",
-    "MIBI scan + US for localisation before focused parathyroidectomy",
+    "MIBI scan + US for localization before focused parathyroidectomy",
     "Intraoperative PTH (ioPTH): drop >50% from baseline = cure",
     "MEN1 and MEN2A: multigland disease — 3.5 gland resection"
   ],
-  differentials: ["Malignancy-associated hypercalcaemia","Sarcoidosis","Vitamin D toxicity","Thiazide diuretics","Familial hypocalciuric hypercalcaemia (FHH)","Secondary HPT"],
+  differentials: ["Malignancy-associated hypercalcemia","Sarcoidosis","Vitamin D toxicity","Thiazide diuretics","Familial hypocalciuric hypercalcemia (FHH)","Secondary HPT"],
   mnemonics: [
     {name:"Symptoms", text:"Bones (osteitis fibrosa cystica) + Stones (renal calculi) + Groans (GI: nausea, constipation) + Moans (psycho: depression, fatigue)"},
     {name:"FHH exclusion", text:"Urine calcium:creatinine clearance ratio <0.01 = FHH (avoid surgery in FHH!)"}
   ],
   overview: {
-    definition: "Autonomous overproduction of PTH from one or more hyperfunctioning parathyroid glands causing hypercalcaemia.",
+    definition: "Autonomous overproduction of PTH from one or more hyperfunctioning parathyroid glands causing hypercalcemia.",
     epidemiology: "Prevalence 1 in 500–1000. F:M = 3:1. Peak incidence post-menopause. 3rd most common endocrine disorder after diabetes and thyroid disease.",
     pathophysiology: "Single adenoma (85%): monoclonal expansion of chief cells; PTH drives osteoclastic bone resorption, renal tubular Ca²⁺ reabsorption, intestinal absorption via Vit D activation.",
     classification: [
@@ -774,7 +774,7 @@ const ENDOCRINE_DISEASES_1 = [
   },
   diagnosis: {
     history: [
-      "Often asymptomatic — incidental hypercalcaemia",
+      "Often asymptomatic — incidental hypercalcemia",
       "Renal: nephrolithiasis, nephrocalcinosis, polyuria, polydipsia",
       "Skeletal: bone pain, fragility fractures",
       "GI: nausea, vomiting, constipation, peptic ulcer (Zollinger-Ellison in MEN1)",
@@ -793,9 +793,9 @@ const ENDOCRINE_DISEASES_1 = [
       {name:"24-hour urine calcium", role:"Elevated in PHPT; low in FHH (UCCR <0.01 = FHH — do NOT operate)"},
       {name:"Serum phosphate", role:"Low-normal in PHPT"},
       {name:"Vitamin D (25-OH-D3)", role:"Replete Vit D before surgery — masking exacerbation"},
-      {name:"Tc-99m sestamibi (MIBI) scan", role:"Single photon emission CT (SPECT) for localisation — sensitivity 80%"},
-      {name:"Neck ultrasound", role:"Localisation; complementary to MIBI; detects 75%"},
-      {name:"4D-CT parathyroid", role:"Failed previous localisation; secondary/tertiary HPT; rapid phase contrast CT"},
+      {name:"Tc-99m sestamibi (MIBI) scan", role:"Single photon emission CT (SPECT) for localization — sensitivity 80%"},
+      {name:"Neck ultrasound", role:"Localization; complementary to MIBI; detects 75%"},
+      {name:"4D-CT parathyroid", role:"Failed previous localization; secondary/tertiary HPT; rapid phase contrast CT"},
       {name:"DEXA scan", role:"Bone mineral density — L-spine, hip, radius; guides surgical indication"}
     ]
   },
@@ -814,8 +814,8 @@ const ENDOCRINE_DISEASES_1 = [
   management: {
     conservative: [
       "Asymptomatic without surgical criteria: annual Ca²⁺, annual creatinine, DEXA every 1–2 years",
-      "Adequate hydration, avoid thiazides, immobilisation",
-      "Cinacalcet (calcimimetic) for hypercalcaemia control if not surgical candidate"
+      "Adequate hydration, avoid thiazides, immobilization",
+      "Cinacalcet (calcimimetic) for hypercalcemia control if not surgical candidate"
     ],
     medical: [
       "Cinacalcet: reduces PTH and Ca²⁺ but does not improve BMD significantly",
@@ -823,21 +823,21 @@ const ENDOCRINE_DISEASES_1 = [
       "Vitamin D repletion: replete to >50nmol/L before surgery (deficiency may mask extent)"
     ],
     surgical: [
-      {name:"Minimally invasive parathyroidectomy (MIP/focused parathyroidectomy)", when:"Concordant localisation (MIBI + US agree); single gland disease", notes:"Unilateral neck exploration + ioPTH confirmation; local/GA; day case"},
-      {name:"Bilateral neck exploration (BNE)", when:"Failed/discordant localisation; MEN1/2A; familial HPT; reoperative HPT; suspected multigland disease", notes:"All 4 glands identified and assessed; abnormal glands removed"},
-      {name:"3.5-gland parathyroidectomy", when:"MEN1 (all 4 glands usually enlarged) — subtotal parathyroidectomy", notes:"Leave 50mg vascularised remnant in sternocleidomastoid; mark with clip"},
+      {name:"Minimally invasive parathyroidectomy (MIP/focused parathyroidectomy)", when:"Concordant localization (MIBI + US agree); single gland disease", notes:"Unilateral neck exploration + ioPTH confirmation; local/GA; day case"},
+      {name:"Bilateral neck exploration (BNE)", when:"Failed/discordant localization; MEN1/2A; familial HPT; reoperative HPT; suspected multigland disease", notes:"All 4 glands identified and assessed; abnormal glands removed"},
+      {name:"3.5-gland parathyroidectomy", when:"MEN1 (all 4 glands usually enlarged) — subtotal parathyroidectomy", notes:"Leave 50mg vascularized remnant in sternocleidomastoid; mark with clip"},
       {name:"4-gland parathyroidectomy + auto-transplant", when:"MEN1 or severe multigland disease; forearm transplant", notes:"Implant into non-dominant forearm brachioradialis; allows monitoring and re-excision if recurrent"}
     ]
   },
   technique: {
     title: "Minimally Invasive Parathyroidectomy with ioPTH",
     prep: [
-      "Concordant MIBI + US localisation pre-op",
+      "Concordant MIBI + US localization pre-op",
       "Baseline iPTH taken at induction",
-      "Position as for thyroidectomy; local anaesthetic infiltration"
+      "Position as for thyroidectomy; local anesthetic infiltration"
     ],
     steps: [
-      {n:1, t:"Incision", d:"Small (2–3cm) incision over localised adenoma; oblique over medial SCM border"},
+      {n:1, t:"Incision", d:"Small (2–3cm) incision over localized adenoma; oblique over medial SCM border"},
       {n:2, t:"Exposure", d:"Dissect through lateral to strap muscles (Miami approach) or medial to muscles"},
       {n:3, t:"Adenoma identification", d:"Identify enlarged hypervascular parathyroid; confirm intraoperatively with gamma probe if radio-guided (MIRP)"},
       {n:4, t:"Excision", d:"Excise adenoma; clip pedicle; send for rapid frozen section (confirms parathyroid tissue)"},
@@ -847,7 +847,7 @@ const ENDOCRINE_DISEASES_1 = [
     pearls: [
       "ioPTH half-life: 3–5 minutes; measure at 5 and 10 min post-excision",
       "If ioPTH fails to drop: ectopic gland (mediastinum, thymus, intrathyroidal, intravasal) or multigland disease",
-      "'Hungry bone syndrome' post-op: severe hypocalcaemia from rapid bone remineralisation after prolonged PHPT"
+      "'Hungry bone syndrome' post-op: severe hypocalcemia from rapid bone remineralisation after prolonged PHPT"
     ]
   },
   guidelines: [
@@ -876,19 +876,19 @@ const ENDOCRINE_DISEASES_1 = [
   tags: ["endocrine","parathyroid","renal","dialysis"],
   hero: "Parathyroid hyperplasia secondary to chronic renal failure. Tertiary HPT: autonomous hyperfunction post-transplant. Surgery: 3.5-gland or 4-gland + forearm transplant.",
   keypoints: [
-    "Secondary HPT: hypocalcaemia/hyperphosphataemia → PTH elevation; multigland hyperplasia",
+    "Secondary HPT: hypocalcemia/hyperphosphatemia → PTH elevation; multigland hyperplasia",
     "Tertiary HPT: post-renal transplant autonomous hyperfunction — surgical if persistent >12 months",
     "Surgery: subtotal (3.5-gland) or total + forearm autotransplant",
     "Cinacalcet ± Vit D analogues first-line before surgery",
     "Hungry bone syndrome post-op — aggressive Ca²⁺ replacement"
   ],
-  differentials: ["Primary HPT","FHH","Malignancy-associated hypercalcaemia (tertiary)","Vitamin D toxicity"],
+  differentials: ["Primary HPT","FHH","Malignancy-associated hypercalcemia (tertiary)","Vitamin D toxicity"],
   mnemonics: [
     {name:"Secondary vs Tertiary", text:"Secondary = Ca²⁺LOW, PTH HIGH (reactive); Tertiary = Ca²⁺HIGH, PTH HIGH (autonomous = like primary now)"}
   ],
   overview: {
-    definition: "Secondary HPT: appropriate but excessive PTH secretion in response to hypocalcaemia in CKD. Tertiary: autonomous PTH overproduction persisting after renal transplant.",
-    epidemiology: "Secondary HPT: present in >70% CKD patients on dialysis. Tertiary HPT: ~25% renal transplant recipients with persistent hypercalcaemia.",
+    definition: "Secondary HPT: appropriate but excessive PTH secretion in response to hypocalcemia in CKD. Tertiary: autonomous PTH overproduction persisting after renal transplant.",
+    epidemiology: "Secondary HPT: present in >70% CKD patients on dialysis. Tertiary HPT: ~25% renal transplant recipients with persistent hypercalcemia.",
     pathophysiology: "CKD → low 1,25-Vit D (impaired 1α-hydroxylation) → low Ca²⁺ + high PO₄²⁻ → PTH → all 4 glands hyperplasia → bone disease (renal osteodystrophy). Tertiary: monoclonal expansion → autonomous excess PTH.",
     classification: [
       "Secondary HPT: CKD-MBD (mineral and bone disorder)",
@@ -897,11 +897,11 @@ const ENDOCRINE_DISEASES_1 = [
   },
   diagnosis: {
     history: [
-      "CKD on dialysis (haemodialysis or peritoneal dialysis)",
+      "CKD on dialysis (hemodialysis or peritoneal dialysis)",
       "Bone pain, pathological fractures",
       "Pruritus (metastatic calcification)",
-      "Calciphylaxis: ischaemic skin ulceration (severe — life-threatening)",
-      "Post-renal transplant: hypercalcaemia persisting >12 months"
+      "Calciphylaxis: ischemic skin ulceration (severe — life-threatening)",
+      "Post-renal transplant: hypercalcemia persisting >12 months"
     ],
     examination: [
       "Bone tenderness, deformity",
@@ -912,7 +912,7 @@ const ENDOCRINE_DISEASES_1 = [
       {name:"Calcium, phosphate, PTH", role:"Secondary: Ca²⁺ low/normal, PO₄ high, PTH very high (>500pg/mL); Tertiary: Ca²⁺ high, PTH high"},
       {name:"ALP", role:"Elevated in bone disease"},
       {name:"25-OH Vitamin D3", role:"Deficient in most CKD patients"},
-      {name:"Parathyroid US + MIBI", role:"Localisation; secondary HPT usually multigland — helps plan approach"},
+      {name:"Parathyroid US + MIBI", role:"Localization; secondary HPT usually multigland — helps plan approach"},
       {name:"Hand/wrist X-ray", role:"Subperiosteal resorption (pathognomonic of HPT), rugger-jersey spine"}
     ]
   },
@@ -923,7 +923,7 @@ const ENDOCRINE_DISEASES_1 = [
       {k:"Calciphylaxis", v:"Life-threatening — urgent parathyroidectomy"},
       {k:"Severe bone disease", v:"Fractures, pain uncontrolled"},
       {k:"Refractory pruritis or ectopic calcification", v:""},
-      {k:"Tertiary HPT", v:"Persistent hypercalcaemia >12 months post-renal transplant"}
+      {k:"Tertiary HPT", v:"Persistent hypercalcemia >12 months post-renal transplant"}
     ]
   },
   scoring: [],
@@ -936,12 +936,12 @@ const ENDOCRINE_DISEASES_1 = [
     ],
     medical: [
       "Cinacalcet 30–90mg daily: reduces PTH by 30–50%; may delay surgery",
-      "Etelcalcetide (IV calcimimetic): for haemodialysis patients"
+      "Etelcalcetide (IV calcimimetic): for hemodialysis patients"
     ],
     surgical: [
       {name:"Subtotal parathyroidectomy (3.5-gland)", when:"Secondary HPT; multigland hyperplasia", notes:"Remove 3.5 glands; leave 50mg of most normal-looking gland; mark remnant with clip/non-absorbable suture"},
-      {name:"Total parathyroidectomy + forearm autotransplant", when:"Secondary or tertiary HPT; preferred by many centres as allows future monitoring and re-excision under local anaesthetic", notes:"Implant 30–60mg minced tissue into brachioradialis forearm pocket; mark with clip; monitor PTH from draining arm"},
-      {name:"Total parathyroidectomy without autotransplant", when:"Rarely indicated — permanent hypoparathyroidism; only if risk of recurrence outweighs benefit (e.g. no likely transplant)", notes:"Permanent hypocalcaemia — aggressive lifelong Ca²⁺ + Vit D supplementation"}
+      {name:"Total parathyroidectomy + forearm autotransplant", when:"Secondary or tertiary HPT; preferred by many centers as allows future monitoring and re-excision under local anesthetic", notes:"Implant 30–60mg minced tissue into brachioradialis forearm pocket; mark with clip; monitor PTH from draining arm"},
+      {name:"Total parathyroidectomy without autotransplant", when:"Rarely indicated — permanent hypoparathyroidism; only if risk of recurrence outweighs benefit (e.g. no likely transplant)", notes:"Permanent hypocalcemia — aggressive lifelong Ca²⁺ + Vit D supplementation"}
     ]
   },
   technique: {
@@ -957,11 +957,11 @@ const ENDOCRINE_DISEASES_1 = [
       {n:3, t:"Excise remaining 3.5 glands", d:"Remove enlarged glands; send for frozen section to confirm parathyroid"},
       {n:4, t:"Mince transplant tissue", d:"Mince selected gland on ice into 1mm³ fragments in saline"},
       {n:5, t:"Forearm pocket preparation", d:"Small incision in non-dominant forearm; blunt dissection into brachioradialis"},
-      {n:6, t:"Implantation", d:"Place 30–60mg (10–20 fragments) into muscle; mark with haemoclip and non-absorbable suture at skin"},
+      {n:6, t:"Implantation", d:"Place 30–60mg (10–20 fragments) into muscle; mark with hemoclip and non-absorbable suture at skin"},
       {n:7, t:"Post-op calcium", d:"Monitor Ca²⁺ 4-hourly; aggressive IV Ca²⁺ gluconate for hungry bone syndrome"}
     ],
     pearls: [
-      "Ectopic parathyroids (10%): intrathymic, retrooesophageal, carotid bifurcation — must find all 4",
+      "Ectopic parathyroids (10%): intrathymic, retroesophageal, carotid bifurcation — must find all 4",
       "If only 3 glands found: explore thymus (4th gland usually intrathymic if missing)",
       "Cryopreserve additional parathyroid tissue for potential future re-implantation if persistent hypoparathyroidism"
     ]
@@ -972,14 +972,14 @@ const ENDOCRINE_DISEASES_1 = [
     {src:"AAES Guidelines: Secondary and Tertiary HPT 2016"}
   ],
   pearls: [
-    "Calciphylaxis is a surgical emergency — urgent parathyroidectomy (not waiting for medical optimisation)",
-    "Hungry bone syndrome worse after bilateral total parathyroidectomy — anticipate severe hypocalcaemia",
+    "Calciphylaxis is a surgical emergency — urgent parathyroidectomy (not waiting for medical optimization)",
+    "Hungry bone syndrome worse after bilateral total parathyroidectomy — anticipate severe hypocalcemia",
     "Mark forearm transplant site clearly — future PTH gradient sampling needed to confirm function"
   ],
   mistakes: [
     "Not finding all 4 glands — remnant disease is most common cause of recurrent HPT",
-    "Not cryopreserving extra tissue — cannot re-implant if patient develops permanent hypocalcaemia",
-    "Operating without pre-op dialysis optimisation — coagulopathy and fluid overload complicate surgery"
+    "Not cryopreserving extra tissue — cannot re-implant if patient develops permanent hypocalcemia",
+    "Operating without pre-op dialysis optimization — coagulopathy and fluid overload complicate surgery"
   ]
 }
 ];

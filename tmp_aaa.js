@@ -10,7 +10,7 @@ const AAA_DISEASE = [
   hero: "Permanent focal dilation of the abdominal aorta ≥3.0 cm or >50% of expected diameter.",
   flagship: true,
   keypoints: [
-    "Screening: UK NHS AAA Screening Programme offers one-time USS to all men aged 65",
+    "Screening: UK NHS AAA Screening Program offers one-time USS to all men aged 65",
     "Repair threshold: ≥5.5 cm (men) or ≥5.0 cm (women) or expansion >1 cm/year or symptomatic",
     "EVAR: lower 30-day mortality than open (1.4% vs 4.3%) but higher re-intervention rate",
     "Ruptured AAA: permissive hypotension (SBP 70–90 mmHg) until proximal aortic control",
@@ -38,11 +38,11 @@ const AAA_DISEASE = [
       {label:"Infrarenal",             note:"≥10 mm infrarenal neck below renal arteries; ≥85% of all AAAs; suitable for standard EVAR or open repair"},
       {label:"Juxtarenal",             note:"No adequate infrarenal neck; renal arteries involved in proximal seal zone; fenestrated EVAR (FEVAR) or open suprarenal clamp"},
       {label:"Pararenal",              note:"Arises at or involves renal artery origins; complex branched EVAR or open repair required"},
-      {label:"Suprarenal / Type IV TAAA", note:"Extends above SMA/coeliac; classified as Type IV thoracoabdominal aortic aneurysm; complex hybrid or open repair"},
+      {label:"Suprarenal / Type IV TAAA", note:"Extends above SMA/celiac; classified as Type IV thoracoabdominal aortic aneurysm; complex hybrid or open repair"},
       // By presentation (drives urgency)
       {label:"Intact",                 note:"Incidental or surveillance finding; manage by size thresholds and growth rate"},
-      {label:"Symptomatic",            note:"Back/flank pain or tenderness without haemodynamic compromise; urgent repair regardless of diameter"},
-      {label:"Ruptured",               note:"Haemodynamic compromise ± pulsatile mass; emergency EVAR or open laparotomy; mortality 40–50% in those reaching hospital"},
+      {label:"Symptomatic",            note:"Back/flank pain or tenderness without hemodynamic compromise; urgent repair regardless of diameter"},
+      {label:"Ruptured",               note:"Hemodynamic compromise ± pulsatile mass; emergency EVAR or open laparotomy; mortality 40–50% in those reaching hospital"},
       // By morphology
       {label:"Fusiform",               note:"Symmetrical circumferential dilatation of full aortic wall; most common type"},
       {label:"Saccular",               note:"Eccentric focal outpouching; higher rupture risk relative to diameter; repair recommended regardless of size"}
@@ -52,7 +52,7 @@ const AAA_DISEASE = [
     history: [
       "Often asymptomatic — incidental on imaging or screening",
       "Classic triad of rupture (≈50%): hypotension + back/flank pain + pulsatile abdominal mass",
-      "Distal embolisation: 'blue toe' syndrome",
+      "Distal embolization: 'blue toe' syndrome",
       "Aortocaval fistula: high-output cardiac failure + bruit",
       "Aortoenteric fistula: 'herald' upper GI bleed (post-graft)"
     ],
@@ -60,13 +60,13 @@ const AAA_DISEASE = [
       "Pulsatile, expansile epigastric mass (sensitivity ↓ with BMI >25)",
       "Auscultate for bruits (renal, iliac, femoral)",
       "Full peripheral pulse exam — document baseline pre-op",
-      "Cullen / Grey-Turner signs in late retroperitoneal rupture"
+      "Cullen / Gray-Turner signs in late retroperitoneal rupture"
     ],
     investigations: [
       { name: "Bedside USS / FAST", role: "First-line; sensitivity ~99% for diameter, poor for rupture" },
       { name: "CT angiogram", role: "Gold standard — sizing, neck anatomy, EVAR planning" },
       { name: "MRA", role: "Alternative if contrast contraindicated" },
-      { name: "FBC, U&E, coag, group & save (×6 if rupture)", role: "Pre-op work-up" }
+      { name: "CBC, electrolytes/BUN-Cr, coag, group & save (×6 if rupture)", role: "Pre-op work-up" }
     ]
   },
   criteria: {
@@ -88,16 +88,16 @@ const AAA_DISEASE = [
       "Statin therapy regardless of lipids — anti-inflammatory wall effect",
       "BP control to <130/80 mmHg (β-blockade preferred where tolerated)",
       "Aspirin 75 mg OD unless contraindicated",
-      "Cardiopulmonary optimisation if planning repair"
+      "Cardiopulmonary optimization if planning repair"
     ],
     medical: [
       "No medication shown to halt expansion definitively",
       "Trials of doxycycline (MMP inhibition) — neutral results (N-TA³CT)"
     ],
     surgical: [
-      { name: "EVAR", when: "Suitable neck (≥10 mm, <60° angulation, <32 mm), favourable iliacs", notes: "Lower 30-day mortality (1.4% vs 4.3% open) but higher reintervention (EVAR-1, DREAM)" },
+      { name: "EVAR", when: "Suitable neck (≥10 mm, <60° angulation, <32 mm), favorable iliacs", notes: "Lower 30-day mortality (1.4% vs 4.3% open) but higher reintervention (EVAR-1, DREAM)" },
       { name: "Open repair", when: "Hostile neck, young fit patients, connective tissue disease", notes: "Durable; equivalent long-term survival to EVAR by 8 years" },
-      { name: "F/B-EVAR", when: "Juxta- or suprarenal anatomy in unfit patients", notes: "High-volume aortic centres only" }
+      { name: "F/B-EVAR", when: "Juxta- or suprarenal anatomy in unfit patients", notes: "High-volume aortic centers only" }
     ]
   },
   technique: {
@@ -110,7 +110,7 @@ const AAA_DISEASE = [
     ],
     steps: [
       { n: 1, t: "Midline laparotomy", d: "Xiphoid to pubis. Self-retaining retractor (Omnitract/Bookwalter)." },
-      { n: 2, t: "Expose retroperitoneum", d: "Pack small bowel to right; mobilise ligament of Treitz; identify left renal vein." },
+      { n: 2, t: "Expose retroperitoneum", d: "Pack small bowel to right; mobilize ligament of Treitz; identify left renal vein." },
       { n: 3, t: "Proximal control", d: "Dissect aortic neck below left renal vein. Avoid lumbar veins. Pass tape." },
       { n: 4, t: "Distal control", d: "Expose both common iliacs. Beware ureters crossing anteriorly." },
       { n: 5, t: "Heparinise", d: "70–100 U/kg IV; ACT >250 sec before clamping." },
@@ -119,11 +119,11 @@ const AAA_DISEASE = [
       { n: 8, t: "Inlay graft", d: "Dacron tube or bifurcated graft. 3-0 Prolene continuous to healthy aortic cuff." },
       { n: 9, t: "Distal anastomosis", d: "Tube to aortic bifurcation, or limbs to iliacs/femorals as required." },
       { n: 10, t: "Restore flow", d: "Flush; release distal clamp first, then slowly release proximal. Anticipate declamping shock." },
-      { n: 11, t: "Haemostasis & closure", d: "Close aneurysm sac over graft; close retroperitoneum; mass closure of abdomen." }
+      { n: 11, t: "Hemostasis & closure", d: "Close aneurysm sac over graft; close retroperitoneum; mass closure of abdomen." }
     ],
     pearls: [
       "Always palpate femoral pulses post-declamping",
-      "If oliguria post-op, consider colonic ischaemia from IMA sacrifice",
+      "If oliguria post-op, consider colonic ischemia from IMA sacrifice",
       "Re-implant IMA if poor back-bleeding or compromised SMA"
     ]
   },
@@ -135,7 +135,7 @@ const AAA_DISEASE = [
   pearls: [
     "Repair threshold in women is 5.0 cm — they rupture at smaller diameters",
     "After EVAR, lifelong CT/USS surveillance mandatory (endoleak)",
-    "30-day mortality ruptured AAA reaching theatre ≈ 40% open / 25% EVAR"
+    "30-day mortality ruptured AAA reaching theater ≈ 40% open / 25% EVAR"
   ],
   mistakes: [
     "Failing to consider ruptured AAA in elderly with renal colic-like pain",

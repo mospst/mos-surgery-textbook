@@ -25,7 +25,7 @@ const HERNIA2_DISEASES = [
     "Incisional hernia (previous surgical scar)",
     "Lipoma of linea alba",
     "Diastasis recti (widening of linea alba — not a true hernia; no peritoneal defect)",
-    "Rectus sheath haematoma",
+    "Rectus sheath hematoma",
     "Metastatic umbilical/epigastric nodule (Sister Mary Joseph nodule)"
   ],
   mnemonics: [
@@ -45,7 +45,7 @@ const HERNIA2_DISEASES = [
   diagnosis: {
     history: [
       "Epigastric lump or bulge between xiphoid and umbilicus",
-      "Intermittent epigastric pain, especially after meals or with straining (localised pain from incarcerated fat)",
+      "Intermittent epigastric pain, especially after meals or with straining (localized pain from incarcerated fat)",
       "Pain may be severe relative to small hernia size — strangulated pre-peritoneal fat",
       "May be asymptomatic and found incidentally",
       "Symptoms worsening with increased intra-abdominal pressure (coughing, exercise)",
@@ -87,13 +87,13 @@ const HERNIA2_DISEASES = [
       { name: "Primary suture repair", when: "Small defect ≤1 cm, first occurrence, no obesity, simple anatomy", notes: "Mass closure of fascial defect with interrupted non-absorbable sutures (0-Prolene or 0-Nylon). Vertical or transverse closure of defect. Recurrence rate 10–15% for suture repair alone (higher in obese or multiple defects)." },
       { name: "Open mesh repair (preperitoneal or onlay)", when: "Defect >1 cm, recurrent, obese patient, multiple defects", notes: "Preperitoneal: place flat polypropylene mesh (>3 cm overlap on all sides) in preperitoneal plane — lower recurrence than suture alone. Onlay: mesh placed over primary suture repair above fascia; fixation with sutures/tacks; seroma risk higher than preperitoneal." },
       { name: "Laparoscopic IPOM (intraperitoneal onlay mesh)", when: "Multiple linea alba defects, recurrent hernia, obesity, large defect", notes: "Composite mesh (PTFE/polypropylene with anti-adhesive layer) placed intraperitoneally with minimum 3 cm overlap. Fixed with tacks or sutures. Risk: bowel adhesion to mesh if non-composite; requires anti-adhesive coating." },
-      { name: "Laparoscopic eTEP (enhanced-view totally extraperitoneal) or MILOS", when: "Preferred approach for linea alba defects in centres with expertise — avoids intraperitoneal mesh", notes: "Extraperitoneal dissection creates space for retromuscular mesh placement; excellent view of all linea alba defects; avoids intraperitoneal complications." }
+      { name: "Laparoscopic eTEP (enhanced-view totally extraperitoneal) or MILOS", when: "Preferred approach for linea alba defects in centers with expertise — avoids intraperitoneal mesh", notes: "Extraperitoneal dissection creates space for retromuscular mesh placement; excellent view of all linea alba defects; avoids intraperitoneal complications." }
     ]
   },
   technique: {
     title: "Open Preperitoneal Mesh Repair for Epigastric Hernia",
     prep: [
-      "GA or local anaesthetic (small hernia) + sedation",
+      "GA or local anesthetic (small hernia) + sedation",
       "Mark hernia site pre-operatively with patient supine — hernia may reduce under GA",
       "Prepare lightweight polypropylene mesh (e.g., Prolene soft, Ultrapro) cut to 5 × 5 cm"
     ],
@@ -106,7 +106,7 @@ const HERNIA2_DISEASES = [
       { n: 6, t: "Close wound", d: "Subcutaneous closure. Skin closure. No drain required for small hernia repair." }
     ],
     pearls: [
-      "Mark the hernia site before GA — it may completely reduce and become impalpable under anaesthesia, making finding the defect difficult",
+      "Mark the hernia site before GA — it may completely reduce and become impalpable under anesthesia, making finding the defect difficult",
       "Pre-peritoneal fat — do not excise unless necrotic; simply reduce and reposition; over-enthusiastic excision bleeds",
       "Multiple defects: palpate the entire linea alba under GA — finding and repairing all defects at the same operation",
       "Diastasis recti is NOT repaired with mesh unless there is an associated discrete fascial defect — mesh repair of diastasis alone leads to complications without benefit"
@@ -118,7 +118,7 @@ const HERNIA2_DISEASES = [
     { src: "NICE Guideline: Surgical Management of Inguinal and Other Hernias 2018" }
   ],
   pearls: [
-    "Pain disproportionate to hernia size is characteristic of epigastric hernia — incarcerated pre-peritoneal fat causes severe localised pain even from a tiny defect",
+    "Pain disproportionate to hernia size is characteristic of epigastric hernia — incarcerated pre-peritoneal fat causes severe localized pain even from a tiny defect",
     "Multiple epigastric defects in 20% — inspect entire linea alba at operation; repair all defects at same procedure",
     "Diastasis recti is not a hernia — patients need to understand this; physiotherapy not surgery is first-line",
     "Recurrence after suture repair alone is 10–15%; mesh repair is recommended for defects >1 cm to reduce recurrence"

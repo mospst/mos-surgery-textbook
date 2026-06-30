@@ -25,10 +25,10 @@ const TRANSPLANT_DISEASES = [
   overview: {
     definition: "Surgical replacement of a diseased native liver with a donor liver (deceased donor whole organ or living donor right lobe), restoring normal hepatic synthetic and metabolic function.",
     epidemiology: "~1000 liver transplants/year in UK. 5-year survival >75%. Most common indications: alcohol-related liver disease (ALD), NASH/NAFLD cirrhosis, PSC, autoimmune hepatitis, HCC, Wilson's, cryptogenic.",
-    pathophysiology: "ESLD: hepatocellular failure (synthetic dysfunction — coagulopathy, hypoalbuminaemia) + portal hypertension (varices, ascites, HRS, HE). Transplant reverses all hepatocellular failure manifestations; portal hypertension resolves with normal flow through new graft.",
+    pathophysiology: "ESLD: hepatocellular failure (synthetic dysfunction — coagulopathy, hypoalbuminemia) + portal hypertension (varices, ascites, HRS, HE). Transplant reverses all hepatocellular failure manifestations; portal hypertension resolves with normal flow through new graft.",
     classification: [
       "Deceased donor liver transplant (DDLT): whole organ; DBD (donation after brain death) vs DCD (donation after circulatory death)",
-      "Living donor liver transplant (LDLT): right lobe (segments V–VIII) for adults; left lobe for paediatric recipients",
+      "Living donor liver transplant (LDLT): right lobe (segments V–VIII) for adults; left lobe for pediatric recipients",
       "Split liver transplant: one deceased donor liver split for 2 recipients (right lobe adult; left lobe child)",
       "Auxiliary transplant: partial liver transplant alongside native liver (rare — for metabolic disease)"
     ]
@@ -44,7 +44,7 @@ const TRANSPLANT_DISEASES = [
     ],
     examination: [
       "Hepatomegaly or small cirrhotic liver",
-      "Splenomegaly, ascites, peripheral oedema, jaundice, palmar erythema, spider naevi",
+      "Splenomegaly, ascites, peripheral edema, jaundice, palmar erythema, spider naevi",
       "Encephalopathy grading (West Haven I–IV)",
       "Muscle wasting (sarcopenia — independently predicts post-transplant outcome)"
     ],
@@ -52,10 +52,10 @@ const TRANSPLANT_DISEASES = [
       {name:"MELD score", role:"Cr + Bili + INR — allocation and waitlist priority; MELD-Na adds sodium"},
       {name:"Child-Pugh score", role:"Older prognostic tool; A/B/C; used with MELD for assessment"},
       {name:"CT abdomen (triphasic) + chest", role:"Liver parenchyma, portal vein patency, hepatic vasculature, spleen size, HCC detection and staging"},
-      {name:"Liver biopsy (occasionally)", role:"Uncertain aetiology; assess fibrosis; donor liver quality assessment"},
+      {name:"Liver biopsy (occasionally)", role:"Uncertain etiology; assess fibrosis; donor liver quality assessment"},
       {name:"Cardiac assessment: ECHO + stress testing", role:"All transplant candidates; cardiac disease common in ESLD"},
       {name:"Pulmonary assessment: PFTs, V/Q if low SpO₂", role:"Hepatopulmonary syndrome (HPS): low SpO₂, intrapulmonary shunting; portopulmonary hypertension (PoPH): contraindication if mPAP >50"},
-      {name:"AFP + tumour staging for HCC", role:"Milan criteria assessment; AFP >1000 predicts poor outcomes"},
+      {name:"AFP + tumor staging for HCC", role:"Milan criteria assessment; AFP >1000 predicts poor outcomes"},
       {name:"Crossmatch/HLA, blood group", role:"Compatibility testing"}
     ]
   },
@@ -63,7 +63,7 @@ const TRANSPLANT_DISEASES = [
     title: "King's College Criteria (Acute Liver Failure — Transplant Listing)",
     items: [
       {k:"Paracetamol ALF", v:"pH <7.3 OR (INR >6.5 + Cr >300 + Grade 3–4 encephalopathy)"},
-      {k:"Non-paracetamol ALF", v:"INR >6.5 OR any 3 of: unfavourable aetiology (non-A/B/drug/unknown) + age <10 or >40 + seronegative hepatitis + drug reaction + jaundice >7 days before encephalopathy + Bili >300 + INR >3.5"},
+      {k:"Non-paracetamol ALF", v:"INR >6.5 OR any 3 of: unfavorable etiology (non-A/B/drug/unknown) + age <10 or >40 + seronegative hepatitis + drug reaction + jaundice >7 days before encephalopathy + Bili >300 + INR >3.5"},
       {k:"MELD ≥15", v:"Listing threshold for elective transplant (ESLD)"},
       {k:"Milan criteria (HCC)", v:"Single ≤5cm OR ≤3 nodules each ≤3cm; no vascular invasion; no extrahepatic disease"}
     ]
@@ -71,9 +71,9 @@ const TRANSPLANT_DISEASES = [
   scoring: [],
   management: {
     conservative: [
-      "MELD <15: optimise medical management; treat complications (ascites, HRS, SBP, varices, HE)",
+      "MELD <15: optimize medical management; treat complications (ascites, HRS, SBP, varices, HE)",
       "Bridge to transplant for HCC: TACE, ablation (RFA/MWA), SIRT",
-      "Nutritional optimisation: high-protein, high-calorie; BCAA supplements; avoid protein restriction in HE",
+      "Nutritional optimization: high-protein, high-calorie; BCAA supplements; avoid protein restriction in HE",
       "Alcohol: mandatory abstinence (minimum 6 months); addiction support"
     ],
     medical: [
@@ -84,15 +84,15 @@ const TRANSPLANT_DISEASES = [
     ],
     surgical: [
       {name:"Recipient hepatectomy", when:"Part of OLT procedure; technically most difficult phase in cirrhotic patients (coagulopathy, varices, adhesions)", notes:"Control of hepatic veins, IVC, portal vein; hepatic artery division; bile duct division; total hepatectomy; piggyback vs conventional caval replacement"},
-      {name:"Graft implantation — piggyback technique", when:"Preferred: recipient retrohepatic IVC preserved (piggyback); donor IVC anastomosed end-to-side or side-to-side to recipient IVC", notes:"Reduces vena cava clamping time; better haemodynamic stability; caval anastomosis + portal vein + hepatic artery + bile duct"},
-      {name:"Biliary reconstruction", when:"Part of OLT; standard: duct-to-duct (choledochocholedochostomy) over T-tube or with duct-to-duct primary closure", notes:"Roux-en-Y hepaticojejunostomy if duct size mismatch, diseased native duct (PSC), or paediatric"},
+      {name:"Graft implantation — piggyback technique", when:"Preferred: recipient retrohepatic IVC preserved (piggyback); donor IVC anastomosed end-to-side or side-to-side to recipient IVC", notes:"Reduces vena cava clamping time; better hemodynamic stability; caval anastomosis + portal vein + hepatic artery + bile duct"},
+      {name:"Biliary reconstruction", when:"Part of OLT; standard: duct-to-duct (choledochocholedochostomy) over T-tube or with duct-to-duct primary closure", notes:"Roux-en-Y hepaticojejunostomy if duct size mismatch, diseased native duct (PSC), or pediatric"},
       {name:"Living donor right hepatectomy", when:"LDLT for adult recipient — see living-donor-hepatectomy entry", notes:"Right lobe (>40% estimated liver remnant for donor safety)"}
     ]
   },
   technique: {
     title: "Key Anastomoses in Orthotopic Liver Transplantation",
     prep: [
-      "Cold ischaemia time: minimise (<12h DBD; <6h DCD)",
+      "Cold ischemia time: minimize (<12h DBD; <6h DCD)",
       "Back-table preparation: donor liver perfused, vessels prepared",
       "Venovenous bypass (optional in piggyback): decompresses portal and systemic circulation during anhepatic phase"
     ],
@@ -107,7 +107,7 @@ const TRANSPLANT_DISEASES = [
     pearls: [
       "Hepatic artery thrombosis (HAT): check Doppler intraop AND daily for first 7 days post-op; early HAT = retransplantation",
       "Primary non-function (PNF): graft never functions post-reperfusion; requires urgent retransplantation",
-      "Reperfusion syndrome: vasodilation from cold, acidic, hyperkalaemic graft blood; calcium + bicarbonate given before reperfusion"
+      "Reperfusion syndrome: vasodilation from cold, acidic, hyperkalemic graft blood; calcium + bicarbonate given before reperfusion"
     ]
   },
   guidelines: [
@@ -118,7 +118,7 @@ const TRANSPLANT_DISEASES = [
   ],
   pearls: [
     "MELD score determines waitlist priority — calculate and track all ESLD patients",
-    "Hepatic artery thrombosis: most common vascular complication (2–5%); early = surgical revision/retransplant; late = biliary ischaemia/stricture",
+    "Hepatic artery thrombosis: most common vascular complication (2–5%); early = surgical revision/retransplant; late = biliary ischemia/stricture",
     "Post-transplant lymphoproliferative disorder (PTLD): EBV-associated; reduce immunosuppression + rituximab"
   ],
   mistakes: [
@@ -139,7 +139,7 @@ const TRANSPLANT_DISEASES = [
   keypoints: [
     "Transplant kidney placed extraperitoneally in iliac fossa: renal vein to external iliac vein, renal artery to external iliac artery",
     "Ureter anastomosed to bladder (ureteroneocystostomy — Lich-Gregoir technique)",
-    "Delayed graft function (DGF): oliguria/anuria post-op; ATN from ischaemia; Doppler to exclude thrombosis",
+    "Delayed graft function (DGF): oliguria/anuria post-op; ATN from ischemia; Doppler to exclude thrombosis",
     "Rejection: hyperacute (minutes, ABO mismatch), acute (days-months, T-cell mediated), chronic (months-years, antibody-mediated)",
     "CMV disease: common post-transplant infection; prophylaxis with valganciclovir"
   ],
@@ -150,7 +150,7 @@ const TRANSPLANT_DISEASES = [
   overview: {
     definition: "Surgical implantation of a deceased or living donor kidney into a recipient's iliac fossa, restoring renal function in end-stage renal disease.",
     epidemiology: "3,500 kidney transplants/year UK. Most common solid organ transplant. 5-year graft survival: LDKT 85%; DDKT 75%. Living donor (LDKT) preferred (better survival, shorter wait).",
-    pathophysiology: "ESRD: inability to excrete waste products + fluid overload + electrolyte disturbance + anaemia (EPO deficiency) + bone disease. Transplant restores all functions. Technical complications (thrombosis, leak) can lose graft.",
+    pathophysiology: "ESRD: inability to excrete waste products + fluid overload + electrolyte disturbance + anemia (EPO deficiency) + bone disease. Transplant restores all functions. Technical complications (thrombosis, leak) can lose graft.",
     classification: [
       "Deceased donor kidney transplant (DDKT): DBD or DCD",
       "Living donor kidney transplant (LDKT): related or unrelated",
@@ -160,19 +160,19 @@ const TRANSPLANT_DISEASES = [
   },
   diagnosis: {
     history: [
-      "ESRD on dialysis (haemodialysis or peritoneal dialysis)",
+      "ESRD on dialysis (hemodialysis or peritoneal dialysis)",
       "Duration on waitlist; creatinine trajectory",
       "Previous transplants (sensitisation)",
       "Comorbidities: diabetes (DM as cause of ESRD affects outcome), cardiovascular disease",
       "Urine output (anuria vs oliguric — affects post-transplant assessment)"
     ],
     examination: [
-      "Fluid status: oedema, hypertension",
+      "Fluid status: edema, hypertension",
       "Previous surgical scars (previous transplants, AV fistula)",
       "Iliac fossa: identify planned transplant site"
     ],
     investigations: [
-      {name:"Renal function: GFR, creatinine, urea", role:"Baseline; GFR <10mL/min = transplant listing threshold in most centres"},
+      {name:"Renal function: GFR, creatinine, urea", role:"Baseline; GFR <10mL/min = transplant listing threshold in most centers"},
       {name:"Blood group (ABO) + HLA typing", role:"Compatibility matching; DSA (donor-specific antibodies) assessment for sensitised patients"},
       {name:"Cardiac assessment: ECHO, stress test", role:"High CVD risk in ESRD; screen before transplant listing"},
       {name:"Transplant Doppler USS post-op", role:"Assess renal artery and vein flow daily for first 7 days; early thrombosis = surgical emergency"},
@@ -193,7 +193,7 @@ const TRANSPLANT_DISEASES = [
     conservative: [
       "DGF (ATN): dialysis support until graft recovers function; serial Dopplers to exclude vascular cause",
       "Cardiovascular risk reduction: statin, antihypertensive (avoid ACEi/ARB early post-transplant — GFR dependent)",
-      "BK virus monitoring: regular urine and plasma PCR; reduce immunosuppression if BK viraemia"
+      "BK virus monitoring: regular urine and plasma PCR; reduce immunosuppression if BK viremia"
     ],
     medical: [
       "Induction immunosuppression: basiliximab (IL-2R antagonist, standard) or anti-thymocyte globulin (ATG, high-risk sensitised)",
@@ -204,7 +204,7 @@ const TRANSPLANT_DISEASES = [
     surgical: [
       {name:"Renal transplant implantation", when:"ESRD + donor available + recipient prepared", notes:"Extraperitoneal right iliac fossa (preferred — iliac vessels more accessible); renal vein end-to-side to external iliac vein (5-0 Prolene); renal artery end-to-side to external iliac artery (6-0 Prolene); ureteroneocystostomy (Lich-Gregoir) over JJ stent"},
       {name:"Urinary leak repair", when:"Urine leak post-transplant (perinephric fluid collection, rising creatinine, wound wetness); diagnose with nuclear medicine renogram or CT urogram", notes:"Most leak from uretero-vesical junction; surgical re-implantation or uretero-ureterostomy to native ureter; early diagnosis essential"},
-      {name:"Renal artery/vein thrombosis", when:"Anuria post-transplant + absent flow on Doppler = surgical emergency", notes:"Immediate surgical re-exploration and thrombectomy; success rate low if >6h warm ischaemia; graft loss common; urgent re-transplantation listing"},
+      {name:"Renal artery/vein thrombosis", when:"Anuria post-transplant + absent flow on Doppler = surgical emergency", notes:"Immediate surgical re-exploration and thrombectomy; success rate low if >6h warm ischemia; graft loss common; urgent re-transplantation listing"},
       {name:"Lymphocele drainage", when:"Pelvic lymphocele post-transplant: compressing ureter (obstructive uropathy) or vasculature", notes:"Internal marsupialization (laparoscopic fenestration into peritoneal cavity) = definitive; percutaneous drainage + sclerotherapy as bridge"}
     ]
   },
@@ -216,7 +216,7 @@ const TRANSPLANT_DISEASES = [
     ],
     steps: [
       {n:1, t:"Detrusor incision", d:"2–3cm incision through detrusor muscle only (extravesical); do not enter bladder mucosa; create trough"},
-      {n:2, t:"Mucosal incision", d:"Small (<1cm) mucosal opening at distal end of trough; visualise bladder lumen"},
+      {n:2, t:"Mucosal incision", d:"Small (<1cm) mucosal opening at distal end of trough; visualize bladder lumen"},
       {n:3, t:"Ureteric anastomosis", d:"Spatulate distal transplant ureter; end-to-end or end-to-side anastomosis to bladder mucosa; 4-0 Monocryl interrupted sutures"},
       {n:4, t:"Detrusor closure", d:"Close detrusor muscle over ureter with interrupted 3-0 Vicryl; creates antireflux tunnel (ureter tunnelled under detrusor)"},
       {n:5, t:"JJ stent check", d:"Confirm JJ stent passes from renal pelvis to bladder; cystoscopy at 6 weeks to remove stent"}
@@ -240,7 +240,7 @@ const TRANSPLANT_DISEASES = [
   mistakes: [
     "Delaying Doppler in anuria post-transplant — arterial/venous thrombosis is an emergency; 6h window for salvage",
     "Not removing JJ stent at 6 weeks — encrustation and ureteric obstruction",
-    "Perinephric haematoma post-transplant: small = observe; enlarging = urgent surgical exploration"
+    "Perinephric hematoma post-transplant: small = observe; enlarging = urgent surgical exploration"
   ]
 },
 {
@@ -261,25 +261,25 @@ const TRANSPLANT_DISEASES = [
   ],
   differentials: ["DM Type 1 managed with insulin pump","Islet cell transplantation (less invasive alternative)","Combined kidney transplant for Type 2 DM with ESRD"],
   mnemonics: [
-    {name:"SPK vs PAK vs PTA", text:"SPK: Simultaneous Pancreas + Kidney (best outcomes, ESRD + T1DM); PAK: Pancreas After Kidney; PTA: Pancreas Transplant Alone (T1DM, normal renal function but hypoglycaemic unawareness)"}
+    {name:"SPK vs PAK vs PTA", text:"SPK: Simultaneous Pancreas + Kidney (best outcomes, ESRD + T1DM); PAK: Pancreas After Kidney; PTA: Pancreas Transplant Alone (T1DM, normal renal function but hypoglycemic unawareness)"}
   ],
   overview: {
-    definition: "Transplantation of the deceased donor pancreas (with donor duodenal segment) to restore endogenous insulin production and achieve euglycaemia in Type 1 diabetes mellitus.",
+    definition: "Transplantation of the deceased donor pancreas (with donor duodenal segment) to restore endogenous insulin production and achieve euglycemia in Type 1 diabetes mellitus.",
     epidemiology: "~200 pancreas transplants/year UK. SPK accounts for 80%; PAK 15%; PTA 5%. 5-year graft survival: SPK 80% pancreas, 90% kidney; PAK 60%; PTA 55%.",
-    pathophysiology: "T1DM: autoimmune destruction of β-cells → absolute insulin deficiency → chronic hyperglycaemia → microvascular complications (retinopathy, neuropathy, nephropathy). Transplant restores euglycaemia and arrests progression of complications.",
+    pathophysiology: "T1DM: autoimmune destruction of β-cells → absolute insulin deficiency → chronic hyperglycemia → microvascular complications (retinopathy, neuropathy, nephropathy). Transplant restores euglycemia and arrests progression of complications.",
     classification: [
       "SPK: simultaneous pancreas-kidney (Type 1 DM + ESRD)",
       "PAK: pancreas after kidney (prior kidney transplant)",
-      "PTA: pancreas transplant alone (severe hypoglycaemic unawareness)"
+      "PTA: pancreas transplant alone (severe hypoglycemic unawareness)"
     ]
   },
   diagnosis: {
     history: [
       "Type 1 diabetes mellitus (C-peptide negative or absent)",
       "ESRD or CKD stage 4–5 (for SPK)",
-      "Hypoglycaemic unawareness (for PTA) — recurrent severe episodes",
+      "Hypoglycemic unawareness (for PTA) — recurrent severe episodes",
       "Brittle diabetes with unstable control despite optimal insulin therapy",
-      "Frequent hospitalisations for DKA or hypoglycaemia"
+      "Frequent hospitalizations for DKA or hypoglycemia"
     ],
     examination: [
       "Complications of DM: retinopathy, neuropathy (peripheral, autonomic), nephropathy",
@@ -291,7 +291,7 @@ const TRANSPLANT_DISEASES = [
       {name:"Cardiac assessment (ECG, ECHO, nuclear stress test)", role:"High CVD risk in DM; mandatory pre-listing"},
       {name:"HbA1c + glucose diary", role:"Control assessment; brittle DM evidence"},
       {name:"Renal function (for SPK)", role:"GFR assessment; listing criteria for SPK (usually GFR <20mL/min)"},
-      {name:"Post-transplant: blood glucose, amylase, lipase", role:"Monitor graft function; hyperglycaemia = rejection or thrombosis"},
+      {name:"Post-transplant: blood glucose, amylase, lipase", role:"Monitor graft function; hyperglycemia = rejection or thrombosis"},
       {name:"Post-transplant Doppler", role:"Daily for 7 days: pancreatic arterial and venous flow; thrombosis detection"}
     ]
   },
@@ -300,14 +300,14 @@ const TRANSPLANT_DISEASES = [
     items: [
       {k:"SPK", v:"Type 1 DM + ESRD (GFR <20mL/min or on dialysis)"},
       {k:"PAK", v:"Type 1 DM + previous functioning kidney transplant"},
-      {k:"PTA", v:"Type 1 DM + GFR >60mL/min + hypoglycaemic unawareness or severe instability"},
-      {k:"Contraindications", v:"Age >55, significant CAD unrevascularised, BMI >30, Type 2 DM (relative), active infection, non-compliance"}
+      {k:"PTA", v:"Type 1 DM + GFR >60mL/min + hypoglycemic unawareness or severe instability"},
+      {k:"Contraindications", v:"Age >55, significant CAD unrevascularized, BMI >30, Type 2 DM (relative), active infection, non-compliance"}
     ]
   },
   scoring: [],
   management: {
     conservative: [
-      "Pre-transplant: optimise metabolic control, treat complications, cardiac risk reduction",
+      "Pre-transplant: optimize metabolic control, treat complications, cardiac risk reduction",
       "Post-transplant: monitor glucose hourly for 24h; insulin infusion to target glucose 4–7mmol/L during first 24h (graft needs rest)",
       "Post-transplant thromboprophylaxis: heparin infusion + aspirin (graft thrombosis risk reduction)"
     ],
@@ -319,7 +319,7 @@ const TRANSPLANT_DISEASES = [
     surgical: [
       {name:"SPK transplantation", when:"T1DM + ESRD; deceased donor", notes:"Pancreas to right iliac fossa (or intraperitoneal), kidney to left iliac fossa (or same side); iliac vessel anastomoses; duodenojejunostomy for exocrine drainage; portal vs systemic venous drainage"},
       {name:"Enteric-drained pancreas transplant (preferred)", when:"Standard exocrine drainage: donor duodenum-to-recipient jejunum (side-to-side or end-to-side duodenojejunostomy)", notes:"Physiological; avoids bladder complications (urethritis, recurrent UTI, dehydration) of older bladder drainage technique"},
-      {name:"Bladder-drained pancreas transplant", when:"Selected cases; allows urinary amylase monitoring for rejection (still used in some centres for PTA)", notes:"Duodenovesicostomy; complications: urethritis, UTIs, haematuria, dehydration from bicarbonate loss in urine"},
+      {name:"Bladder-drained pancreas transplant", when:"Selected cases; allows urinary amylase monitoring for rejection (still used in some centers for PTA)", notes:"Duodenovesicostomy; complications: urethritis, UTIs, hematuria, dehydration from bicarbonate loss in urine"},
       {name:"Re-exploration for graft thrombosis", when:"Anuria + rising glucose + absent Doppler flow — urgent surgical re-exploration within hours", notes:"Thrombectomy rarely successful; usually pancreatectomy required; urgent re-listing for deceased donor"}
     ]
   },
@@ -351,7 +351,7 @@ const TRANSPLANT_DISEASES = [
   pearls: [
     "SPK offers dual immunological benefit — kidney rejection can be monitored as a surrogate for pancreas rejection",
     "Islet transplantation: alternative to whole organ for T1DM without ESRD; Edmonton protocol; less invasive but lower long-term insulin independence rate",
-    "Hypoglycaemic unawareness alone (normal renal function): PTA justified — can be life-saving for brittle T1DM"
+    "Hypoglycemic unawareness alone (normal renal function): PTA justified — can be life-saving for brittle T1DM"
   ],
   mistakes: [
     "Missing early graft thrombosis — daily Dopplers mandatory for first 7 days",
@@ -381,7 +381,7 @@ const TRANSPLANT_DISEASES = [
   ],
   overview: {
     definition: "Transplantation of a deceased donor small intestine to restore enteral autonomy in patients with permanent intestinal failure dependent on parenteral nutrition.",
-    epidemiology: "Rarest abdominal transplant. ~30–50/year in specialist centres UK/globally. 5-year patient survival: 50–60%. Most common indication: short bowel syndrome from mesenteric ischaemia, trauma, Crohn's, volvulus.",
+    epidemiology: "Rarest abdominal transplant. ~30–50/year in specialist centers UK/globally. 5-year patient survival: 50–60%. Most common indication: short bowel syndrome from mesenteric ischemia, trauma, Crohn's, volvulus.",
     pathophysiology: "Intestinal failure: insufficient absorptive capacity for hydration and nutrition → parenteral nutrition dependency. Long-term PN complications: liver disease (cholestasis → cirrhosis), CLABSI, venous thrombosis → SBT indication.",
     classification: [
       "Isolated small bowel transplant: intestinal failure with normal liver function",
@@ -416,15 +416,15 @@ const TRANSPLANT_DISEASES = [
       {k:"PN-related liver disease", v:"Progressive liver fibrosis/cirrhosis (PNALD) → composite liver-bowel"},
       {k:"Venous thrombosis", v:"Loss of central venous access (≥2 sites occluded)"},
       {k:"High-output ostomy", v:"Fluid and electrolyte imbalance unmanageable with PN"},
-      {k:"Quality of life", v:"Some centres list for intractable complications even without life-threatening events"}
+      {k:"Quality of life", v:"Some centers list for intractable complications even without life-threatening events"}
     ]
   },
   scoring: [],
   management: {
     conservative: [
-      "Maximise intestinal rehabilitation: teduglutide (GLP-2 analogue) increases villi absorption; avoid SBT if rehabilitation achievable",
+      "Maximize intestinal rehabilitation: teduglutide (GLP-2 analogue) increases villi absorption; avoid SBT if rehabilitation achievable",
       "Intestinal lengthening procedures (STEP/Bianchi): surgical alternative for dilated dysmotile bowel",
-      "Optimise PN regimen and central line care to delay need for SBT"
+      "Optimize PN regimen and central line care to delay need for SBT"
     ],
     medical: [
       "High-dose tacrolimus-based immunosuppression: higher target troughs than other transplants",
@@ -447,10 +447,10 @@ const TRANSPLANT_DISEASES = [
     steps: [
       {n:1, t:"SMA anastomosis", d:"Donor SMA (with aortic Carrel patch) to recipient infrarenal aorta; 5-0 Prolene end-to-side"},
       {n:2, t:"SMV anastomosis", d:"Donor SMV to recipient portal vein or SMV; end-to-side; 5-0 Prolene"},
-      {n:3, t:"Reperfusion", d:"Release venous then arterial clamp; assess bowel viability (peristalsis, colour, Doppler flow)"},
+      {n:3, t:"Reperfusion", d:"Release venous then arterial clamp; assess bowel viability (peristalsis, color, Doppler flow)"},
       {n:4, t:"Proximal enteric anastomosis", d:"Donor proximal jejunum to recipient remaining native jejunum or duodenum; end-to-end or end-to-side"},
       {n:5, t:"Distal chimney ileostomy", d:"Bring donor distal ileum out as loop ileostomy (allows endoscopic access for rejection monitoring via stoma)"},
-      {n:6, t:"Abdominal closure", d:"Large bowel oedema expected; planned staged closure with TAC often needed; biopsy loop stoma biweekly"}
+      {n:6, t:"Abdominal closure", d:"Large bowel edema expected; planned staged closure with TAC often needed; biopsy loop stoma biweekly"}
     ],
     pearls: [
       "Bowel is the most immunogenic transplanted organ — rejection rates up to 50% in first year",
@@ -466,12 +466,12 @@ const TRANSPLANT_DISEASES = [
   pearls: [
     "SBT should be offered early before PN-related liver failure develops — composite transplant has worse outcomes than isolated SBT",
     "Teduglutide (GLP-2 analogue): reduces PN requirements; may avoid need for transplant in some patients",
-    "Graft vs host disease: unique risk in SBT — donor Peyer's patch lymphocytes; manifestations: skin rash, diarrhoea, cytopenias"
+    "Graft vs host disease: unique risk in SBT — donor Peyer's patch lymphocytes; manifestations: skin rash, diarrhea, cytopenias"
   ],
   mistakes: [
-    "Late referral to SBT centre after PN liver failure already established — composite transplant much more complex",
+    "Late referral to SBT center after PN liver failure already established — composite transplant much more complex",
     "Insufficient immunosuppression monitoring — bowel rejection can be rapid and catastrophic",
-    "Closing abdomen under tension when bowel oedematous post-reperfusion — ACS risk"
+    "Closing abdomen under tension when bowel edematous post-reperfusion — ACS risk"
   ]
 },
 {
@@ -490,7 +490,7 @@ const TRANSPLANT_DISEASES = [
     "Volumetric CT: measure total liver volume and right lobe volume pre-operatively",
     "Middle hepatic vein: include or exclude is critical — compromised outflow → graft congestion → failure"
   ],
-  differentials: ["Deceased donor liver (DDLT) as alternative","Left lobe donation for paediatric recipient","Extended right lobe (with segment IV)"],
+  differentials: ["Deceased donor liver (DDLT) as alternative","Left lobe donation for pediatric recipient","Extended right lobe (with segment IV)"],
   mnemonics: [
     {name:"FLR calculation", text:"FLR% = (Total liver volume – Right lobe volume) / Total liver volume × 100; must be ≥30% for donor safety"}
   ],
@@ -500,7 +500,7 @@ const TRANSPLANT_DISEASES = [
     pathophysiology: "The liver's unique regenerative capacity allows safe resection of up to 70% of parenchyma — remnant liver hypertrophies to near-normal volume within 4–8 weeks. Donor FLR must be sufficient to maintain hepatic function during the regeneration period.",
     classification: [
       "Right hepatectomy (adult-to-adult): segments V–VIII; 50–65% of liver volume",
-      "Left lateral sectionectomy (adult-to-child paediatric LDLT): segments II–III; 15–20%",
+      "Left lateral sectionectomy (adult-to-child pediatric LDLT): segments II–III; 15–20%",
       "Left hepatectomy (segments II–IV): for small recipients or when right lobe too large"
     ]
   },
@@ -527,7 +527,7 @@ const TRANSPLANT_DISEASES = [
   criteria: {
     title: "Donor Selection Criteria",
     items: [
-      {k:"Age", v:"18–55 years (some centres up to 60)"},
+      {k:"Age", v:"18–55 years (some centers up to 60)"},
       {k:"ABO compatibility", v:"ABO-compatible (ABO-identical preferred); ABOi LDLT possible with desensitisation"},
       {k:"BMI", v:"<28 (>30 = contraindicated; steatosis risk)"},
       {k:"FLR", v:"≥30% for normal liver; ≥40% for steatosis 10–30%; steatosis >30% = contraindication"},
@@ -539,7 +539,7 @@ const TRANSPLANT_DISEASES = [
   management: {
     conservative: [
       "Pre-donation: weight loss if BMI borderline; alcohol cessation",
-      "Portal vein embolisation (PVE): if FLR borderline — embolise right portal vein → induce left lobe hypertrophy; reassess in 4–6 weeks",
+      "Portal vein embolization (PVE): if FLR borderline — embolize right portal vein → induce left lobe hypertrophy; reassess in 4–6 weeks",
       "Post-donation: routine monitoring; liver function recovers to near-normal within 4–8 weeks"
     ],
     medical: [
@@ -564,14 +564,14 @@ const TRANSPLANT_DISEASES = [
       {n:2, t:"Intraoperative cholangiogram", d:"Inject via cystic duct; delineate right duct anatomy and point of safe division (confirm MRCP findings)"},
       {n:3, t:"Hilar dissection", d:"Identify and dissect right hepatic artery (RHA) and right portal vein (RPV) without dividing; tag with vessel loops"},
       {n:4, t:"Parenchymal transection", d:"CUSA/harmonic along Cantlie's line; low CVP (CVP 0–5); ligate/clip all transected vessels and bile ducts; hepatic veins controlled last"},
-      {n:5, t:"Right hepatic vein control", d:"Isolate right hepatic vein at IVC; encircle with vessel loop; divide at IVC with vascular stapler or clamp and oversew after full mobilisation"},
+      {n:5, t:"Right hepatic vein control", d:"Isolate right hepatic vein at IVC; encircle with vessel loop; divide at IVC with vascular stapler or clamp and oversew after full mobilization"},
       {n:6, t:"Bile duct division", d:"Identify and divide right hepatic duct(s); clips on donor side; plan reconstruction for recipient"},
-      {n:7, t:"Graft retrieval", d:"After complete mobilisation: divide RHA, RPV, RHV, bile duct simultaneously; flush immediately with cold preservation solution"},
-      {n:8, t:"Donor remnant haemostasis", d:"Oversew all transection surface bleeding; inspect for bile leak; close biliary stump on donor with 4-0 PDS; drain near transection surface"}
+      {n:7, t:"Graft retrieval", d:"After complete mobilization: divide RHA, RPV, RHV, bile duct simultaneously; flush immediately with cold preservation solution"},
+      {n:8, t:"Donor remnant hemostasis", d:"Oversew all transection surface bleeding; inspect for bile leak; close biliary stump on donor with 4-0 PDS; drain near transection surface"}
     ],
     pearls: [
       "Donor safety first: if intraoperatively FLR appears inadequate or bleeding significant → abort, close donor safely; recipient receives deceased donor or remains on waitlist",
-      "Low CVP technique: reduces hepatic venous bleeding during parenchymal transection; anaesthetic team must collaborate",
+      "Low CVP technique: reduces hepatic venous bleeding during parenchymal transection; anesthetic team must collaborate",
       "Biliary complications: most common donor complication (2–5%); bile leak from transection surface — drain essential"
     ]
   },
@@ -582,7 +582,7 @@ const TRANSPLANT_DISEASES = [
   ],
   pearls: [
     "Donor mortality is real: 0.1–0.5% for right hepatectomy; must be fully disclosed in independent evaluation",
-    "FLR <30%: consider portal vein embolisation (PVE) to induce hypertrophy before donation",
+    "FLR <30%: consider portal vein embolization (PVE) to induce hypertrophy before donation",
     "Most common donor complication: biliary leak or stricture (5–10%); most managed endoscopically"
   ],
   mistakes: [

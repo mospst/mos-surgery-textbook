@@ -63,7 +63,7 @@ function loadDiseaseArray(fpath) {
   throw new Error(`Cannot extract array from ${fpath}`);
 }
 
-// ── Normalise classification items to {label, note} objects ──────────────
+// ── Normalize classification items to {label, note} objects ──────────────
 // Some tmp files store classification as plain strings like:
 //   "Infrarenal — ≥85% of cases; standard EVAR"
 //   "Primary ACS: direct abdominal pathology"
@@ -181,7 +181,7 @@ for (const fname of TMP_FILES) {
     if (SKIP_IDS.has(id))       { continue; }
     if (d.dept && DEPT_FIXES[d.dept]) { d.dept = DEPT_FIXES[d.dept]; }
 
-    // Normalise classification strings → {label, note} objects
+    // Normalize classification strings → {label, note} objects
     if (d.overview && d.overview.classification) {
       d.overview.classification = normalizeClassification(d.overview.classification);
     }
@@ -244,7 +244,7 @@ for (const d of Object.values(diseaseMap)) {
 // ── Patch operation video resources ───────────────────────────────────────
 // These links intentionally point to trusted searchable libraries rather than
 // random individual videos. Surgical videos move, disappear, and vary widely
-// in quality; curated sources are safer for exam prep and theatre preparation.
+// in quality; curated sources are safer for exam prep and theater preparation.
 // Google site-scoped search: robust fallback when a library's own search
 // either bot-blocks (e.g. SAGES returns 403) or has no stable query URL.
 // It always lands the user on relevant results instead of a bare homepage.
@@ -342,14 +342,14 @@ const VIDEO_BY_ID = {
 
 const VIDEO_QUERY_BY_ID = {
   aaa: 'open AAA repair OR EVAR',
-  appendicitis: 'laparoscopic appendicectomy',
+  appendicitis: 'laparoscopic appendectomy',
   cholecystitis: 'laparoscopic cholecystectomy critical view of safety',
   choledocholithiasis: 'ERCP common bile duct stone laparoscopic CBD exploration',
   'pancreatic-cancer': 'Whipple pancreaticoduodenectomy',
-  'liver-metastases': 'liver resection colorectal liver metastases Pringle manoeuvre',
+  'liver-metastases': 'liver resection colorectal liver metastases Pringle maneuver',
   hcc: 'hepatectomy HCC liver resection',
   'gastric-ca': 'gastrectomy D2 lymphadenectomy',
-  'oesophageal-cancer': 'Ivor Lewis oesophagectomy',
+  'oesophageal-cancer': 'Ivor Lewis esophagectomy',
   achalasia: 'Heller myotomy POEM',
   bariatric: 'sleeve gastrectomy Roux-en-Y gastric bypass',
   crc: 'right hemicolectomy sigmoid colectomy TME',
@@ -494,10 +494,10 @@ const IMAGE_QUERY_BY_ID = {
   carotid: 'carotid artery stenosis',
   dvt: 'deep vein thrombosis',
   'varicose-veins': 'varicose veins',
-  cli: 'critical limb ischaemia',
+  cli: 'critical limb ischemia',
   pad: 'peripheral arterial disease',
   'aortic-dissection': 'aortic dissection',
-  'mesenteric-isch': 'mesenteric ischaemia',
+  'mesenteric-isch': 'mesenteric ischemia',
   'popliteal-aneurysm': 'popliteal artery aneurysm',
   'thoracic-outlet': 'thoracic outlet syndrome',
   'visceral-aneurysm': 'splenic artery aneurysm',
@@ -514,8 +514,8 @@ const IMAGE_QUERY_BY_ID = {
   pud: 'peptic ulcer',
   ugib: 'upper gastrointestinal bleeding',
   'gastric-ca': 'gastric cancer',
-  barretts: 'Barrett oesophagus',
-  'oesophageal-cancer': 'oesophageal cancer',
+  barretts: 'Barrett esophagus',
+  'oesophageal-cancer': 'esophageal cancer',
   'breast-ca': 'breast cancer',
   dcis: 'ductal carcinoma in situ',
   'thyroid-ca': 'thyroid cancer',
@@ -547,7 +547,7 @@ const IMAGE_QUERY_BY_ID = {
 // Build a short image-search query when no curated one exists. Atlas search
 // engines do strict AND-matching, so a long descriptive phrase returns zero
 // hits. The disease name alone is the most reliable term these reference sites
-// actually index — strip the bracketed abbreviation (e.g. "(GORD)") and any
+// actually index — strip the bracketed abbreviation (e.g. "(GERD)") and any
 // slash/dash that joins two compound names into one over-specific phrase.
 const cleanImageQuery = (d) =>
   (d.name || '')
@@ -813,7 +813,7 @@ function buildSafetyChecklist(d, surgical, techniqueTitle) {
       phase: 'Pre-op brief',
       items: [
         `Confirm patient, procedure (${opName}), side/site, consent, allergies, and indication.`,
-        'Review imaging, staging, anatomy variants, and the planned incision/port strategy before anaesthesia.',
+        'Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.',
         'Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.',
         ...(prep.length ? prep : ['Discuss expected difficulty, senior help threshold, and conversion/bailout plan.'])
       ].slice(0, 6)
@@ -828,16 +828,16 @@ function buildSafetyChecklist(d, surgical, techniqueTitle) {
     {
       phase: 'Intra-op safety pause',
       items: [
-        'Confirm exposure, proximal/distal control where relevant, and haemostasis before irreversible steps.',
+        'Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.',
         'Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.',
-        'Check specimen orientation, margins, counts, drains, and haemostasis before closure.',
+        'Check specimen orientation, margins, counts, drains, and hemostasis before closure.',
         ...(pearls.length ? pearls : ['Escalate early rather than late when progress is unsafe.'])
       ].slice(0, 7)
     },
     {
       phase: 'Bailout / stop points',
       items: pitfalls.length ? pitfalls : [
-        'Convert, call senior help, drain, stage, or temporise if bleeding, unclear anatomy, sepsis, or physiology makes definitive surgery unsafe.',
+        'Convert, call senior help, drain, stage, or temporize if bleeding, unclear anatomy, sepsis, or physiology makes definitive surgery unsafe.',
         'Avoid pressing on with a textbook operation when the patient needs damage control or source control only.'
       ]
     },
@@ -845,7 +845,7 @@ function buildSafetyChecklist(d, surgical, techniqueTitle) {
       phase: 'Post-op watch',
       items: [
         'Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.',
-        `Actively monitor for bleeding, sepsis, leak, ischaemia, organ injury, and disease-specific complications after ${d.name}.`,
+        `Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after ${d.name}.`,
         'Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications.'
       ]
     }
@@ -921,12 +921,12 @@ const ALGORITHMS = [
     presentation: 'Severe abdominal pain, peritonism, sepsis, obstruction, bleeding, or diagnostic uncertainty.',
     urgency: 'time-critical',
     tags: ['acute abdomen', 'peritonitis', 'CT', 'laparotomy', 'source control'],
-    redFlags: ['Shock or rising lactate', 'Generalised peritonitis', 'Free air or portal venous gas', 'Pain out of proportion', 'Immunosuppressed or elderly with subtle signs'],
+    redFlags: ['Shock or rising lactate', 'Generalized peritonitis', 'Free air or portal venous gas', 'Pain out of proportion', 'Immunosuppressed or elderly with subtle signs'],
     steps: [
-      { n: 1, t: 'Resuscitate first', d: 'Assess ABCDE, IV access, bloods, VBG/ABG lactate, analgesia, antiemetic, catheter if sick, broad-spectrum antibiotics if sepsis/peritonitis.', actions: ['Do not delay resuscitation for imaging in a crashing patient', 'Call senior surgeon and anaesthesia early'] },
-      { n: 2, t: 'Decide unstable vs stable', d: 'Unstable with peritonitis or haemorrhage goes to urgent theatre/resuscitation-led source control. Stable patients get focused imaging.', actions: ['FAST/bedside ultrasound if unstable', 'CT abdomen/pelvis with IV contrast if stable'] },
-      { n: 3, t: 'Rule out lethal mimics', d: 'Think ruptured AAA, mesenteric ischaemia, ectopic pregnancy, MI, DKA, pancreatitis, perforated viscus.', actions: ['ECG/troponin if epigastric pain or risk', 'Pregnancy test when relevant', 'CTA if vascular concern'] },
-      { n: 4, t: 'Source-control decision', d: 'Operate or drain when sepsis/peritonitis, perforation, ischaemia, strangulation, uncontrolled bleeding, or failed non-operative care.', actions: ['Choose laparoscopy vs laparotomy based on physiology and diagnosis', 'Damage-control if acidotic, cold, coagulopathic, or unstable'] },
+      { n: 1, t: 'Resuscitate first', d: 'Assess ABCDE, IV access, bloods, VBG/ABG lactate, analgesia, antiemetic, catheter if sick, broad-spectrum antibiotics if sepsis/peritonitis.', actions: ['Do not delay resuscitation for imaging in a crashing patient', 'Call senior surgeon and anesthesia early'] },
+      { n: 2, t: 'Decide unstable vs stable', d: 'Unstable with peritonitis or hemorrhage goes to urgent theater/resuscitation-led source control. Stable patients get focused imaging.', actions: ['FAST/bedside ultrasound if unstable', 'CT abdomen/pelvis with IV contrast if stable'] },
+      { n: 3, t: 'Rule out lethal mimics', d: 'Think ruptured AAA, mesenteric ischemia, ectopic pregnancy, MI, DKA, pancreatitis, perforated viscus.', actions: ['ECG/troponin if epigastric pain or risk', 'Pregnancy test when relevant', 'CTA if vascular concern'] },
+      { n: 4, t: 'Source-control decision', d: 'Operate or drain when sepsis/peritonitis, perforation, ischemia, strangulation, uncontrolled bleeding, or failed non-operative care.', actions: ['Choose laparoscopy vs laparotomy based on physiology and diagnosis', 'Damage-control if acidotic, cold, coagulopathic, or unstable'] },
       { n: 5, t: 'Post-op reassessment', d: 'Recheck lactate, urine output, pain, drain output, antibiotics, VTE plan, nutrition, and whether re-look is needed.', actions: ['Document escalation triggers', 'Plan re-imaging if no improvement'] }
     ],
     linkedDiseaseIds: ['acute-abdomen','appendicitis','diverticulitis','pud','mesenteric-isch','aaa','bowel-perforation']
@@ -938,13 +938,13 @@ const ALGORITHMS = [
     presentation: 'Septic surgical patient with suspected intra-abdominal, soft tissue, biliary, or anastomotic source.',
     urgency: 'time-critical',
     tags: ['sepsis', 'source control', 'antibiotics', 'lactate', 'damage control'],
-    redFlags: ['Hypotension after fluid challenge', 'Lactate not clearing', 'Necrotising infection', 'Diffuse peritonitis', 'Organ failure'],
+    redFlags: ['Hypotension after fluid challenge', 'Lactate not clearing', 'Necrotizing infection', 'Diffuse peritonitis', 'Organ failure'],
     steps: [
-      { n: 1, t: 'Recognise sepsis', d: 'Look for infection plus organ dysfunction: hypotension, hypoxia, AKI, altered mentation, thrombocytopenia, high lactate.', actions: ['Blood cultures before antibiotics if this does not delay care', 'Start broad-spectrum antibiotics early'] },
+      { n: 1, t: 'Recognize sepsis', d: 'Look for infection plus organ dysfunction: hypotension, hypoxia, AKI, altered mentation, thrombocytopenia, high lactate.', actions: ['Blood cultures before antibiotics if this does not delay care', 'Start broad-spectrum antibiotics early'] },
       { n: 2, t: 'Resuscitate and monitor', d: 'Oxygen, IV access, fluids/blood as appropriate, catheter, serial lactate, urine output, vasopressor/ICU if shock persists.', actions: ['Avoid endless crystalloid', 'Use blood products when bleeding or coagulopathy dominates'] },
-      { n: 3, t: 'Find the source', d: 'CT with contrast when stable; bedside exam/imaging when unstable. Common sources: perforation, abscess, cholangitis, necrotising fasciitis, leak.', actions: ['Do not let imaging delay theatre for obvious peritonitis or necrotising infection'] },
-      { n: 4, t: 'Control the source', d: 'Drain pus, remove dead tissue, repair/resect perforation, decompress obstruction, drain biliary sepsis, or perform damage-control surgery.', actions: ['Percutaneous drainage if stable and suitable', 'Theatre if source cannot be controlled radiologically'] },
-      { n: 5, t: 'Reassess response', d: 'Failure to improve means missed source, inadequate drainage, resistant organism, leak/ischaemia, or need for re-look.', actions: ['Repeat exam and imaging', 'Escalate early'] }
+      { n: 3, t: 'Find the source', d: 'CT with contrast when stable; bedside exam/imaging when unstable. Common sources: perforation, abscess, cholangitis, necrotizing fasciitis, leak.', actions: ['Do not let imaging delay theater for obvious peritonitis or necrotizing infection'] },
+      { n: 4, t: 'Control the source', d: 'Drain pus, remove dead tissue, repair/resect perforation, decompress obstruction, drain biliary sepsis, or perform damage-control surgery.', actions: ['Percutaneous drainage if stable and suitable', 'Theater if source cannot be controlled radiologically'] },
+      { n: 5, t: 'Reassess response', d: 'Failure to improve means missed source, inadequate drainage, resistant organism, leak/ischemia, or need for re-look.', actions: ['Repeat exam and imaging', 'Escalate early'] }
     ],
     linkedDiseaseIds: ['bowel-perforation','diverticulitis','cholangitis','necrotising-fasciitis','intestinal-fistula','acs']
   },
@@ -955,12 +955,12 @@ const ALGORITHMS = [
     presentation: 'Colicky abdominal pain, vomiting, distension, obstipation, or radiological bowel dilatation.',
     urgency: 'urgent',
     tags: ['SBO', 'LBO', 'strangulation', 'CT', 'Gastrografin'],
-    redFlags: ['Continuous severe pain', 'Fever/tachycardia/leucocytosis', 'Peritonism', 'Closed-loop obstruction', 'Pneumatosis or portal venous gas'],
+    redFlags: ['Continuous severe pain', 'Fever/tachycardia/leukocytosis', 'Peritonism', 'Closed-loop obstruction', 'Pneumatosis or portal venous gas'],
     steps: [
-      { n: 1, t: 'Initial stabilisation', d: 'NPO, NG tube if vomiting/distended, IV fluids, electrolyte correction, analgesia, catheter if sick.', actions: ['Check lactate and renal function', 'Early senior review'] },
-      { n: 2, t: 'Define SBO vs LBO', d: 'CT abdomen/pelvis with IV contrast identifies transition point, cause, closed-loop, ischaemia, perforation, or malignancy.', actions: ['Avoid oral contrast if high-grade obstruction or aspiration risk'] },
-      { n: 3, t: 'Non-operative SBO pathway', d: 'Adhesive SBO without ischaemia/peritonitis can receive observation and water-soluble contrast challenge.', actions: ['If contrast reaches colon by 24 h, resolution likely', 'Failure or deterioration means surgery'] },
-      { n: 4, t: 'Large bowel decision', d: 'Assess caecal diameter, perforation risk, tumour vs volvulus, and whether stent, endoscopic detorsion, resection, or diversion is safest.', actions: ['Sigmoid volvulus: endoscopic decompression if no peritonitis', 'Right-sided/closed-loop or perforation: urgent surgery'] },
+      { n: 1, t: 'Initial stabilization', d: 'NPO, NG tube if vomiting/distended, IV fluids, electrolyte correction, analgesia, catheter if sick.', actions: ['Check lactate and renal function', 'Early senior review'] },
+      { n: 2, t: 'Define SBO vs LBO', d: 'CT abdomen/pelvis with IV contrast identifies transition point, cause, closed-loop, ischemia, perforation, or malignancy.', actions: ['Avoid oral contrast if high-grade obstruction or aspiration risk'] },
+      { n: 3, t: 'Non-operative SBO pathway', d: 'Adhesive SBO without ischemia/peritonitis can receive observation and water-soluble contrast challenge.', actions: ['If contrast reaches colon by 24 h, resolution likely', 'Failure or deterioration means surgery'] },
+      { n: 4, t: 'Large bowel decision', d: 'Assess cecal diameter, perforation risk, tumor vs volvulus, and whether stent, endoscopic detorsion, resection, or diversion is safest.', actions: ['Sigmoid volvulus: endoscopic decompression if no peritonitis', 'Right-sided/closed-loop or perforation: urgent surgery'] },
       { n: 5, t: 'Operate safely', d: 'Plan incision/laparoscopy, adhesiolysis, bowel viability, resection/anastomosis vs stoma based on physiology and contamination.', actions: ['Warm questionable bowel and reassess', 'Do not force an anastomosis in unstable septic patient'] }
     ],
     linkedDiseaseIds: ['small-bowel-obstruction','large-bowel-obstruction','sigmoid-volvulus','caecal-volvulus','crc','strangulated-hernia']
@@ -969,15 +969,15 @@ const ALGORITHMS = [
     id: 'gi-bleeding',
     title: 'GI Bleeding',
     scope: 'Upper, lower, and obscure GI bleeding',
-    presentation: 'Haematemesis, melaena, haematochezia, shock, anaemia, or occult/recurrent bleeding.',
+    presentation: 'Hematemesis, melena, hematochezia, shock, anemia, or occult/recurrent bleeding.',
     urgency: 'time-critical when unstable',
     tags: ['UGIB', 'LGIB', 'endoscopy', 'CTA', 'transfusion'],
-    redFlags: ['Shock or syncope', 'Ongoing haematemesis', 'Massive haematochezia', 'Anticoagulated patient', 'Cirrhosis/varices'],
+    redFlags: ['Shock or syncope', 'Ongoing hematemesis', 'Massive hematochezia', 'Anticoagulated patient', 'Cirrhosis/varices'],
     steps: [
-      { n: 1, t: 'Resuscitate and risk stratify', d: 'ABCDE, two large-bore IVs, group/crossmatch, FBC/coag/U&E/LFT, correct coagulopathy when appropriate.', actions: ['Restrictive transfusion unless exsanguinating or cardiac disease', 'Activate massive haemorrhage protocol if unstable'] },
-      { n: 2, t: 'Localise likely source', d: 'Haematemesis/melaena suggests upper GI; brisk upper GI bleeding can present as haematochezia.', actions: ['NG tube is selective, not mandatory', 'Always consider varices in liver disease'] },
+      { n: 1, t: 'Resuscitate and risk stratify', d: 'ABCDE, two large-bore IVs, group/crossmatch, CBC/coag/electrolytes/BUN-Cr/LFT, correct coagulopathy when appropriate.', actions: ['Restrictive transfusion unless exsanguinating or cardiac disease', 'Activate massive hemorrhage protocol if unstable'] },
+      { n: 2, t: 'Localize likely source', d: 'Hematemesis/melena suggests upper GI; brisk upper GI bleeding can present as hematochezia.', actions: ['NG tube is selective, not mandatory', 'Always consider varices in liver disease'] },
       { n: 3, t: 'Endoscopy first for most UGIB', d: 'PPI for suspected peptic ulcer; terlipressin/antibiotics if variceal; urgent endoscopy after resuscitation.', actions: ['Airway protection if massive bleed or encephalopathy', 'Escalate to IR/surgery if endoscopic control fails'] },
-      { n: 4, t: 'CTA for active severe LGIB', d: 'Unstable or ongoing lower GI bleeding benefits from CTA to guide embolisation or surgery.', actions: ['Colonoscopy after purge when stable', 'Do not operate without localisation unless life-saving'] },
+      { n: 4, t: 'CTA for active severe LGIB', d: 'Unstable or ongoing lower GI bleeding benefits from CTA to guide embolization or surgery.', actions: ['Colonoscopy after purge when stable', 'Do not operate without localization unless life-saving'] },
       { n: 5, t: 'Prevent rebleeding', d: 'Treat cause, manage anticoagulation, eradicate H pylori, band varices, arrange surveillance when indicated.', actions: ['Document rebleed plan and escalation threshold'] }
     ],
     linkedDiseaseIds: ['ugib','melena','rectal-bleeding','pud','portal-hypertension','angiodysplasia']
@@ -992,7 +992,7 @@ const ALGORITHMS = [
     redFlags: ['Fever/rigors/hypotension/confusion', 'Rising bilirubin with sepsis', 'Courvoisier sign', 'Weight loss', 'Coagulopathy'],
     steps: [
       { n: 1, t: 'Separate cholangitis from painless jaundice', d: 'Cholangitis is sepsis plus biliary obstruction and needs antibiotics plus urgent biliary drainage.', actions: ['Do not wait for full workup if septic', 'ERCP drainage is usually first-line'] },
-      { n: 2, t: 'Confirm obstructive pattern', d: 'LFTs, coagulation, ultrasound for duct dilatation/gallstones, then MRCP/CT pancreas protocol depending on suspicion.', actions: ['Correct vitamin K/coagulopathy if needed', 'Check tumour markers only after imaging context'] },
+      { n: 2, t: 'Confirm obstructive pattern', d: 'LFTs, coagulation, ultrasound for duct dilatation/gallstones, then MRCP/CT pancreas protocol depending on suspicion.', actions: ['Correct vitamin K/coagulopathy if needed', 'Check tumor markers only after imaging context'] },
       { n: 3, t: 'Stone pathway', d: 'CBD stone: ERCP clearance or laparoscopic CBD exploration, then cholecystectomy to prevent recurrence.', actions: ['Cholecystectomy after ERCP when fit', 'Early ERCP if cholangitis'] },
       { n: 4, t: 'Malignant pathway', d: 'Pancreatic head, cholangiocarcinoma, gallbladder cancer or metastatic nodes require staging CT, MDT, and resectability decision.', actions: ['Avoid unnecessary pre-op stent if early surgery possible', 'Drain if cholangitis, severe jaundice delaying therapy, or neoadjuvant treatment planned'] },
       { n: 5, t: 'Definitive treatment', d: 'Stone clearance/cholecystectomy, Whipple/hepatectomy/biliary resection, or palliation with stent/bypass depending on disease and fitness.', actions: ['Discuss in HPB MDT'] }
@@ -1010,7 +1010,7 @@ const ALGORITHMS = [
     steps: [
       { n: 1, t: 'Assess viability risk', d: 'Pain, tenderness, systemic toxicity, obstruction and skin changes suggest strangulation rather than simple incarceration.', actions: ['Analgesia and resuscitation', 'Do not repeatedly force reduction'] },
       { n: 2, t: 'Attempt reduction only when safe', d: 'Gentle taxis may be appropriate for early, non-toxic, non-peritonitic incarceration with no skin change.', actions: ['Observe after successful taxis', 'No taxis if strangulation suspected'] },
-      { n: 3, t: 'Image selectively', d: 'CT helps unclear anatomy, obesity, obstruction, obturator/spigelian hernia, or uncertain diagnosis; do not delay theatre in obvious strangulation.', actions: ['Check lactate and inflammatory markers'] },
+      { n: 3, t: 'Image selectively', d: 'CT helps unclear anatomy, obesity, obstruction, obturator/spigelian hernia, or uncertain diagnosis; do not delay theater in obvious strangulation.', actions: ['Check lactate and inflammatory markers'] },
       { n: 4, t: 'Operate and assess bowel', d: 'Open or laparoscopic approach depends on site and physiology. Inspect bowel after reduction; resect if non-viable.', actions: ['Warm borderline bowel and reassess', 'Avoid mesh in gross contamination unless specialist decision'] },
       { n: 5, t: 'Prevent recurrence safely', d: 'Use mesh when clean field and viable bowel; tissue repair or delayed reconstruction if contaminated/unstable.', actions: ['Document bowel viability and repair choice'] }
     ],
@@ -1028,7 +1028,7 @@ const ALGORITHMS = [
       { n: 1, t: 'Triple assessment', d: 'Clinical examination, imaging, and tissue diagnosis. All three must be concordant before reassurance.', actions: ['Mammography usually >40', 'Ultrasound for younger patients, dense breast, targeted lump/axilla'] },
       { n: 2, t: 'Biopsy correctly', d: 'Core biopsy for solid lesions; FNA mainly for cysts or selected nodes. Clip lesion if neoadjuvant therapy likely.', actions: ['Biopsy suspicious axillary nodes'] },
       { n: 3, t: 'Classify benign vs malignant', d: 'Fibroadenoma/cyst/abscess vs DCIS/invasive cancer/phyllodes. Discordant triple assessment needs repeat biopsy or excision.', actions: ['Do not reassure a suspicious clinical lump with benign imaging alone'] },
-      { n: 4, t: 'Stage and plan treatment', d: 'ER/PR/HER2, grade, nodal status, tumour size, patient preference, genetics, and fitness guide surgery/systemic therapy.', actions: ['MDT discussion', 'Consider neoadjuvant therapy for selected HER2+/triple-negative/node-positive disease'] },
+      { n: 4, t: 'Stage and plan treatment', d: 'ER/PR/HER2, grade, nodal status, tumor size, patient preference, genetics, and fitness guide surgery/systemic therapy.', actions: ['MDT discussion', 'Consider neoadjuvant therapy for selected HER2+/triple-negative/node-positive disease'] },
       { n: 5, t: 'Surgical pathway', d: 'Breast conservation plus radiotherapy or mastectomy; sentinel node biopsy or axillary treatment based on nodal status.', actions: ['Oncoplastic planning when margins/cosmesis matter'] }
     ],
     linkedDiseaseIds: ['breast-ca','dcis','phyllodes','breast-abscess']
@@ -1045,7 +1045,7 @@ const ALGORITHMS = [
       { n: 1, t: 'Check thyroid function first', d: 'TSH guides pathway. Hyperfunctioning nodules are rarely malignant and need radionuclide scan rather than immediate FNA.', actions: ['Check calcium if surgery likely', 'Assess voice/RLN symptoms'] },
       { n: 2, t: 'Risk-stratify ultrasound', d: 'Composition, echogenicity, margins, calcification, taller-than-wide shape, extrathyroidal extension and nodes guide FNA.', actions: ['Map central/lateral neck nodes'] },
       { n: 3, t: 'FNA and Bethesda', d: 'Benign surveillance, non-diagnostic repeat, indeterminate molecular/diagnostic lobectomy, suspicious/malignant surgical planning.', actions: ['Repeat inadequate sample under ultrasound guidance'] },
-      { n: 4, t: 'Plan operation', d: 'Lobectomy vs total thyroidectomy plus nodal surgery depends on cancer risk, size, bilateral disease, nodes, radiation history and patient factors.', actions: ['Discuss RLN, hypocalcaemia, lifelong thyroxine, scar'] },
+      { n: 4, t: 'Plan operation', d: 'Lobectomy vs total thyroidectomy plus nodal surgery depends on cancer risk, size, bilateral disease, nodes, radiation history and patient factors.', actions: ['Discuss RLN, hypocalcemia, lifelong thyroxine, scar'] },
       { n: 5, t: 'Post-op pathway', d: 'Calcium monitoring, histology risk stratification, radioiodine/endocrinology follow-up where indicated.', actions: ['Voice assessment if hoarse'] }
     ],
     linkedDiseaseIds: ['thyroid-ca','mng','graves','men2','phpt']
@@ -1054,10 +1054,10 @@ const ALGORITHMS = [
     id: 'colorectal-cancer-pathway',
     title: 'Colorectal Cancer Pathway',
     scope: 'Colorectal MDT',
-    presentation: 'CRC symptoms, positive FIT/screening, iron deficiency anaemia, obstruction, perforation, or metastatic disease.',
+    presentation: 'CRC symptoms, positive FIT/screening, iron deficiency anemia, obstruction, perforation, or metastatic disease.',
     urgency: 'urgent if obstructed, perforated, or bleeding',
     tags: ['CRC', 'colonoscopy', 'CT', 'MRI rectum', 'MDT', 'TME'],
-    redFlags: ['Large bowel obstruction', 'Perforation', 'Ongoing bleeding/anaemia', 'Weight loss', 'Synchronous liver lesions'],
+    redFlags: ['Large bowel obstruction', 'Perforation', 'Ongoing bleeding/anemia', 'Weight loss', 'Synchronous liver lesions'],
     steps: [
       { n: 1, t: 'Confirm diagnosis', d: 'Colonoscopy with biopsy, tattoo distal lesion when appropriate, complete colonic assessment for synchronous lesions.', actions: ['CT colonography if incomplete colonoscopy'] },
       { n: 2, t: 'Stage properly', d: 'CT chest/abdomen/pelvis for all; MRI pelvis for rectal cancer; CEA baseline; assess liver lesions carefully.', actions: ['Do not plan rectal surgery without pelvic MRI'] },
@@ -1073,13 +1073,13 @@ const ALGORITHMS = [
     scope: 'Trauma bay',
     presentation: 'Major trauma, unstable injured patient, polytrauma, penetrating injury, or high-energy mechanism.',
     urgency: 'immediate',
-    tags: ['ATLS 11', 'X-ABCDE', 'haemorrhage', 'airway', 'shock'],
-    redFlags: ['Exsanguinating haemorrhage', 'Airway obstruction', 'Tension pneumothorax', 'Pelvic haemorrhage', 'GCS deterioration'],
+    tags: ['ATLS 11', 'X-ABCDE', 'hemorrhage', 'airway', 'shock'],
+    redFlags: ['Exsanguinating hemorrhage', 'Airway obstruction', 'Tension pneumothorax', 'Pelvic hemorrhage', 'GCS deterioration'],
     steps: [
-      { n: 1, t: 'X: Exsanguinating haemorrhage', d: 'Control catastrophic external bleeding before airway when present.', actions: ['Direct pressure, tourniquet, haemostatic dressing, pelvic binder'] },
-      { n: 2, t: 'A: Airway with spine protection', d: 'Assess patency, protect cervical spine, prepare RSI or surgical airway if needed.', actions: ['Call anaesthesia early', 'Do not miss maxillofacial/neck injury'] },
-      { n: 3, t: 'B: Breathing', d: 'Treat immediately lethal chest injuries clinically.', actions: ['Needle/finger decompression for tension pneumothorax', 'Chest drain for haemothorax/pneumothorax'] },
-      { n: 4, t: 'C: Circulation', d: 'Control haemorrhage, activate MTP, give TXA if within 3 h, identify chest/abdomen/pelvis/long bone bleeding.', actions: ['FAST/eFAST', 'Pelvic binder', 'Theatre/IR/REBOA decision'] },
+      { n: 1, t: 'X: Exsanguinating hemorrhage', d: 'Control catastrophic external bleeding before airway when present.', actions: ['Direct pressure, tourniquet, hemostatic dressing, pelvic binder'] },
+      { n: 2, t: 'A: Airway with spine protection', d: 'Assess patency, protect cervical spine, prepare RSI or surgical airway if needed.', actions: ['Call anesthesia early', 'Do not miss maxillofacial/neck injury'] },
+      { n: 3, t: 'B: Breathing', d: 'Treat immediately lethal chest injuries clinically.', actions: ['Needle/finger decompression for tension pneumothorax', 'Chest drain for hemothorax/pneumothorax'] },
+      { n: 4, t: 'C: Circulation', d: 'Control hemorrhage, activate MTP, give TXA if within 3 h, identify chest/abdomen/pelvis/long bone bleeding.', actions: ['FAST/eFAST', 'Pelvic binder', 'Theater/IR/REBOA decision'] },
       { n: 5, t: 'D/E and re-evaluate', d: 'GCS/pupils/glucose, expose fully, prevent hypothermia, repeat primary survey after each intervention.', actions: ['CT only when stable enough', 'Document response to resuscitation'] }
     ],
     linkedDiseaseIds: ['atls-primary-survey','atls-haemorrhagic-shock','atls-airway','pelvic-fracture','chest-trauma','trauma-laparotomy']

@@ -27,12 +27,12 @@ const SOFTTISSUE_DISEASES = [
     "Pigmented basal cell carcinoma",
     "Dermatofibroma",
     "Blue naevus",
-    "Subungual haematoma (nail melanoma mimic)",
+    "Subungual hematoma (nail melanoma mimic)",
     "Spitz naevus (children)",
     "Amelanotic melanoma (mimics pyogenic granuloma)"
   ],
   mnemonics: [
-    { name: "ABCDE criteria", text: "Asymmetry, Border irregularity, Colour variation, Diameter >6 mm, Evolution (change over time)" },
+    { name: "ABCDE criteria", text: "Asymmetry, Border irregularity, Color variation, Diameter >6 mm, Evolution (change over time)" },
     { name: "Breslow margins", text: "In situ: 5 mm | <1 mm: 1 cm | 1–2 mm: 1–2 cm | >2 mm: 2 cm — 'Half-One-Two rule'" },
     { name: "Ugly Duckling Sign", text: "The lesion that looks different from all others on that patient deserves biopsy" }
   ],
@@ -78,7 +78,7 @@ const SOFTTISSUE_DISEASES = [
       { name: "MRI brain", role: "Stage IV; brain metastases present in 20% at diagnosis; affects treatment" },
       { name: "PET-CT", role: "Stage III–IV; detects occult nodal or distant metastases beyond CT" },
       { name: "LDH", role: "Independent prognostic marker in stage IV; elevated = worse prognosis (AJCC 8th ed M1d)" },
-      { name: "PD-L1 expression / tumour mutational burden (TMB)", role: "Optional; may guide immunotherapy response but not required for selection" }
+      { name: "PD-L1 expression / tumor mutational burden (TMB)", role: "Optional; may guide immunotherapy response but not required for selection" }
     ]
   },
   criteria: {
@@ -107,7 +107,7 @@ const SOFTTISSUE_DISEASES = [
       "Stage III BRAF V600 mutant: adjuvant dabrafenib + trametinib × 1 year (COMBI-AD) — 53% vs 36% 5-year RFS",
       "Stage IV first-line: ipilimumab 3 mg/kg + nivolumab 1 mg/kg q3w × 4 → nivolumab maintenance (CheckMate-067); 5-year OS 52%",
       "Stage IV first-line PD-L1 low: pembrolizumab 200 mg q3w (KEYNOTE-006); 5-year OS 43%",
-      "Stage IV BRAF V600 mutant: vemurafenib + cobimetinib OR dabrafenib + trametinib — rapid response for high tumour burden",
+      "Stage IV BRAF V600 mutant: vemurafenib + cobimetinib OR dabrafenib + trametinib — rapid response for high tumor burden",
       "T-VEC (talimogene laherparepvec): intralesional oncolytic virus for unresectable stage IIIB–IV; response 26%",
       "CNS metastases: ipilimumab + nivolumab has intracranial activity (CheckMate-204); stereotactic radiosurgery for limited lesions",
       "Anti-PD-1 for high-risk resected stage IIB/IIC: pembrolizumab (KEYNOTE-716) approved 2022"
@@ -126,17 +126,17 @@ const SOFTTISSUE_DISEASES = [
     prep: [
       "Preoperative lymphoscintigraphy (Tc-99m nanocolloid injection around primary scar/lesion) to map SN basin",
       "Mark SN basin(s) on skin",
-      "General anaesthesia; position to allow access to primary site AND all potential nodal basins",
+      "General anesthesia; position to allow access to primary site AND all potential nodal basins",
       "Patent blue V dye injection (1 mL intradermally around lesion/scar) 5–15 minutes before incision"
     ],
     steps: [
-      { n: 1, t: "WLE first", d: "Elliptical excision centred on biopsy scar or lesion with measured margins (use ruler). Orient along Langer's lines for closure. Excise to deep fascia (include fat, stop at fascia unless invaded)." },
+      { n: 1, t: "WLE first", d: "Elliptical excision centered on biopsy scar or lesion with measured margins (use ruler). Orient along Langer's lines for closure. Excise to deep fascia (include fat, stop at fascia unless invaded)." },
       { n: 2, t: "Close primary wound", d: "Direct closure where possible; skin graft or local flap if large defect. Close before SLNB to avoid disrupting lymphatics." },
       { n: 3, t: "Locate sentinel node", d: "Identify SN basin from lymphoscintigraphy. Use gamma probe to locate hot spot through skin. Mark incision over hottest area." },
       { n: 4, t: "Dissection to SN", d: "Incise skin and deepen with careful blunt dissection. Protect blue-stained afferent lymphatic channels — follow them to blue/hot node." },
       { n: 5, t: "Confirm SN identity", d: "Node is SN if: >10× background radioactivity (ex vivo), blue-stained, or has blue afferent lymphatic. Remove all hot AND blue nodes." },
       { n: 6, t: "Count ex vivo", d: "Check each removed node with probe. Remove additional nodes if residual activity >10% of hottest SN. Send all SNs as separate specimens for H&E + S100/HMB45/MelanA IHC." },
-      { n: 7, t: "Wound check", d: "Check nodal bed activity — should be <10% original. Irrigate, achieve haemostasis, close in layers." }
+      { n: 7, t: "Wound check", d: "Check nodal bed activity — should be <10% original. Irrigate, achieve hemostasis, close in layers." }
     ],
     pearls: [
       "Perform lymphoscintigraphy SAME DAY as surgery if possible — maps to surgeon before incision",
@@ -144,7 +144,7 @@ const SOFTTISSUE_DISEASES = [
       "For head/neck melanoma, drainage is unpredictable — always follow the scan, not anatomy",
       "If SLNB after previous WLE: re-inject around scar, not residual lesion",
       "Positive SLNB does not mandate CLND (MSLT-II): offer adjuvant systemic therapy instead",
-      "Desmoplastic melanoma: SLNB often negative even with deep tumours — RT to primary site reduces local recurrence"
+      "Desmoplastic melanoma: SLNB often negative even with deep tumors — RT to primary site reduces local recurrence"
     ]
   },
   guidelines: [
@@ -163,7 +163,7 @@ const SOFTTISSUE_DISEASES = [
     "BRAF status must be known before starting stage IV treatment — BRAF/MEK inhibitors work faster but resistance at ~12 months",
     "In-transit metastases can develop years after primary treatment — educate patients on self-examination",
     "Ocular melanoma does NOT express BRAF V600E — different biology, different treatment",
-    "Anorectal melanoma presents as haemorrhoids — always send rectal polyps/nodules for histology"
+    "Anorectal melanoma presents as hemorrhoids — always send rectal polyps/nodules for histology"
   ],
   mistakes: [
     "Shave biopsy of a pigmented lesion — prevents Breslow measurement, contraindicated",
@@ -184,7 +184,7 @@ const SOFTTISSUE_DISEASES = [
   organ: "Skin",
   severity: "moderate",
   tags: ["skin","bcc","mohs","excision"],
-  hero: "Most common human cancer; locally aggressive but rarely metastasises; excision with 4 mm margins or Mohs surgery for high-risk/face tumours.",
+  hero: "Most common human cancer; locally aggressive but rarely metastasises; excision with 4 mm margins or Mohs surgery for high-risk/face tumors.",
   keypoints: [
     "Most common cancer in humans; >90% on head and neck (sun-exposed areas)",
     "Standard excision: 4 mm margin for well-defined low-risk; Mohs micrographic surgery for high-risk (face, recurrent, morphoeic)",
@@ -208,8 +208,8 @@ const SOFTTISSUE_DISEASES = [
   ],
   overview: {
     definition: "Malignant neoplasm of basal keratinocytes of the epidermis/follicular epithelium. Locally invasive with perineural/perivascular spread but rarely metastasises (<0.1%).",
-    epidemiology: "Most common cancer in humans (>2 million cases/year in USA). UK: ~100,000/year. M:F 2:1. Incidence rising. Risk: cumulative UV exposure, fair skin (Fitzpatrick I–II), ionising radiation, immunosuppression, arsenic exposure, PTCH1/PTCH2 mutation (Gorlin syndrome).",
-    pathophysiology: "UV-induced mutation in PTCH1 tumour suppressor gene (chromosome 9q22) → constitutive Hedgehog (Hh) signalling via smoothened (SMO) → uncontrolled basal cell proliferation. Gorlin syndrome: germline PTCH1 mutation → multiple BCCs from early adulthood.",
+    epidemiology: "Most common cancer in humans (>2 million cases/year in USA). UK: ~100,000/year. M:F 2:1. Incidence rising. Risk: cumulative UV exposure, fair skin (Fitzpatrick I–II), ionizing radiation, immunosuppression, arsenic exposure, PTCH1/PTCH2 mutation (Gorlin syndrome).",
+    pathophysiology: "UV-induced mutation in PTCH1 tumor suppressor gene (chromosome 9q22) → constitutive Hedgehog (Hh) signalling via smoothened (SMO) → uncontrolled basal cell proliferation. Gorlin syndrome: germline PTCH1 mutation → multiple BCCs from early adulthood.",
     classification: [
       "Nodular (60%) — pearly translucent papule, rolled border, telangiectasia; most common",
       "Superficial (15%) — flat, erythematous, scaly; trunk and limbs",
@@ -232,7 +232,7 @@ const SOFTTISSUE_DISEASES = [
       "Nodular: pearly papule/nodule, rolled edges, central ulceration ('rodent ulcer'), surface telangiectasia",
       "Morphoeic: flat, scar-like plaque, ill-defined, waxy surface",
       "Superficial: erythematous scaly patch with fine translucent border",
-      "Dermoscopy: arborising vessels, blue-grey ovoid nests, leaf-like structures, spoke-wheel areas",
+      "Dermoscopy: arborising vessels, blue-gray ovoid nests, leaf-like structures, spoke-wheel areas",
       "Assess for perineural invasion: paraesthesia or facial nerve deficit in periorbital/facial BCC",
       "Document size and proximity to free margins (eyelid, lip, ear, nose)"
     ],
@@ -253,7 +253,7 @@ const SOFTTISSUE_DISEASES = [
       { k: "Recurrent", v: "Previously treated BCC — field change, satellites" },
       { k: "Margins", v: "Ill-defined clinically" },
       { k: "Perineural invasion", v: "PNI on histology or clinical symptoms" },
-      { k: "Immunosuppressed patient", v: "Higher recurrence, more aggressive behaviour" }
+      { k: "Immunosuppressed patient", v: "Higher recurrence, more aggressive behavior" }
     ]
   },
   scoring: [],
@@ -266,7 +266,7 @@ const SOFTTISSUE_DISEASES = [
       "Wait-and-scan policy: elderly frail patient with small superficial BCC — annual review acceptable"
     ],
     medical: [
-      "Vismodegib (Hedgehog inhibitor/SMO antagonist): locally advanced or metastatic BCC not amenable to surgery or RT; 43% RR; continuous dosing; side effects: muscle cramps, hair loss, dysgeusia, amenorrhoea",
+      "Vismodegib (Hedgehog inhibitor/SMO antagonist): locally advanced or metastatic BCC not amenable to surgery or RT; 43% RR; continuous dosing; side effects: muscle cramps, hair loss, dysgeusia, amenorrhea",
       "Sonidegib: alternative Hh inhibitor; 200 mg daily; similar efficacy",
       "Cemiplimab (anti-PD-1): FDA approved 2021 for locally advanced BCC after Hh inhibitor failure or not suitable; ORR 31%"
     ],
@@ -279,20 +279,20 @@ const SOFTTISSUE_DISEASES = [
   technique: {
     title: "Standard Excision with Primary Closure",
     prep: [
-      "Mark 4 mm clinical margin with skin marker before infiltration anaesthesia (adrenaline blanches tumour margins)",
+      "Mark 4 mm clinical margin with skin marker before infiltration anesthesia (adrenaline blanches tumor margins)",
       "Plan elliptical excision along Langer's lines (3:1 length-to-width ratio)",
       "Consider reconstructive options if on face — local flap vs skin graft planning"
     ],
     steps: [
-      { n: 1, t: "Mark margins", d: "With pen, mark 4 mm around visible tumour boundary before injecting local anaesthetic. Use calipers." },
+      { n: 1, t: "Mark margins", d: "With pen, mark 4 mm around visible tumor boundary before injecting local anesthetic. Use calipers." },
       { n: 2, t: "Excise ellipse", d: "Excise with scalpel perpendicular to skin at 90°; include subcutaneous fat. Orient specimen with suture (e.g. long stitch = lateral)." },
-      { n: 3, t: "Orient specimen", d: "Pin specimen on card and draw orientation diagram before sending to pathology. Critical for re-excision localisation if margins involved." },
-      { n: 4, t: "Achieve haemostasis", d: "Bipolar diathermy; inspect for deep extension before closing." },
-      { n: 5, t: "Repair defect", d: "Primary closure, local advancement flap, or split-skin graft depending on site and size. Minimise tension on facial closures." },
+      { n: 3, t: "Orient specimen", d: "Pin specimen on card and draw orientation diagram before sending to pathology. Critical for re-excision localization if margins involved." },
+      { n: 4, t: "Achieve hemostasis", d: "Bipolar diathermy; inspect for deep extension before closing." },
+      { n: 5, t: "Repair defect", d: "Primary closure, local advancement flap, or split-skin graft depending on site and size. Minimize tension on facial closures." },
       { n: 6, t: "Pathology review", d: "Await margins result. If involved: re-excise to clear or refer for Mohs. Clear margin at standard excision = 1 mm." }
     ],
     pearls: [
-      "Mark margins BEFORE injecting local anaesthetic — adrenaline blanches skin and obscures tumour boundary",
+      "Mark margins BEFORE injecting local anesthetic — adrenaline blanches skin and obscures tumor boundary",
       "Orient the specimen carefully — unclear orientation is the most common reason re-excision cannot be targeted",
       "For periorbital BCC: always get MRI before surgery — orbital invasion changes the operation completely",
       "Morphoeic BCC extends 5–15 mm beyond visible edge — standard 4 mm margin will be inadequate; use Mohs",
@@ -335,7 +335,7 @@ const SOFTTISSUE_DISEASES = [
     "Excision margins: 4 mm for low-risk; 6 mm for high-risk; Mohs MMS for high-risk head/neck",
     "SLNB controversial but recommended for high-risk SCC by BAD/NCCN — positivity rate ~5–10%",
     "Cemiplimab (anti-PD-1): first-line for locally advanced or metastatic SCC not amenable to surgery/RT",
-    "Marjolin's ulcer: SCC arising in chronic wound/burn scar — aggressive behaviour, nodal mets in 30–50%"
+    "Marjolin's ulcer: SCC arising in chronic wound/burn scar — aggressive behavior, nodal mets in 30–50%"
   ],
   differentials: [
     "Keratoacanthoma (rapid growth, central keratin plug — may spontaneously resolve, but treat as SCC)",
@@ -400,9 +400,9 @@ const SOFTTISSUE_DISEASES = [
       { k: "Diameter", v: ">2 cm (trunk/extremity); >1 cm (face, ear, lip)" },
       { k: "Depth/thickness", v: ">4 mm, invasion beyond dermis into subcutis" },
       { k: "Differentiation", v: "Poorly differentiated (grade 3)" },
-      { k: "Perineural invasion", v: "Histological PNI ≥0.1 mm calibre nerve" },
+      { k: "Perineural invasion", v: "Histological PNI ≥0.1 mm caliber nerve" },
       { k: "Vascular invasion", v: "Lymphovascular invasion on histology" },
-      { k: "Immunosuppression", v: "Transplant, HIV, haematological malignancy" },
+      { k: "Immunosuppression", v: "Transplant, HIV, hematological malignancy" },
       { k: "Location", v: "Ear, lip, anogenital, non-sun-exposed sites" },
       { k: "Recurrent", v: "Previously treated SCC at same site" }
     ]
@@ -431,7 +431,7 @@ const SOFTTISSUE_DISEASES = [
   technique: {
     title: "Excision with Margin Assessment for High-Risk SCC",
     prep: [
-      "Mark margins before local anaesthetic injection",
+      "Mark margins before local anesthetic injection",
       "Plan reconstruction — may require plastic surgery input for face/ear",
       "Discuss SLNB if high-risk features identified preoperatively"
     ],
@@ -502,9 +502,9 @@ const SOFTTISSUE_DISEASES = [
     { name: "HS triggers", text: "SOAPS: Smoking, Obesity, Androgens, Perspiration/friction, Stress — all worsen HS" }
   ],
   overview: {
-    definition: "Chronic, recurrent, inflammatory skin condition characterised by painful nodules, abscesses, sinus tracts, and scarring in apocrine gland-bearing areas (axillae, groin, perineum, inframammary). Classified as follicular occlusion disease, not primary apocrine pathology.",
+    definition: "Chronic, recurrent, inflammatory skin condition characterized by painful nodules, abscesses, sinus tracts, and scarring in apocrine gland-bearing areas (axillae, groin, perineum, inframammary). Classified as follicular occlusion disease, not primary apocrine pathology.",
     epidemiology: "Prevalence 0.4–1% of population. F:M = 3:1 for axillary; M:F = 1:2 for perianal. Onset puberty to 40 years. Risk: smoking (80% of patients), obesity (BMI >30), family history (30% — autosomal dominant inheritance), friction, hyperandrogenism. Associated with metabolic syndrome, IBD, arthropathy, SAPHO syndrome.",
-    pathophysiology: "Follicular hyperkeratosis → follicular occlusion → follicular rupture → dermal inflammatory reaction → secondary bacterial colonisation (Staphylococci, anaerobes, Gram-negatives) → abscess formation → sinus tract development → dermal fibrosis. Predominantly Th17/IL-17 inflammatory pathway. NOT a primary infection — antibiotics do not cure.",
+    pathophysiology: "Follicular hyperkeratosis → follicular occlusion → follicular rupture → dermal inflammatory reaction → secondary bacterial colonization (Staphylococci, anaerobes, Gram-negatives) → abscess formation → sinus tract development → dermal fibrosis. Predominantly Th17/IL-17 inflammatory pathway. NOT a primary infection — antibiotics do not cure.",
     classification: [
       "Hurley Stage I — single or multiple abscesses, no sinus tracts or scarring",
       "Hurley Stage II — recurrent abscesses, one or more sinus tracts and scars, separated by normal skin",
@@ -556,7 +556,7 @@ const SOFTTISSUE_DISEASES = [
       "Intralesional triamcinolone (10 mg/mL): individual acutely inflamed nodules — immediate relief",
       "Hormonal therapy (females): combined OCP (not progesterone-only — worsens HS); spironolactone 100–200 mg/day",
       "Zinc gluconate: anti-inflammatory; 90 mg/day",
-      "Deroofing procedure: unroof sinus tract with probe + scissors under local anaesthetic; leaves defect to heal by secondary intention; low recurrence for individual tracts"
+      "Deroofing procedure: unroof sinus tract with probe + scissors under local anesthetic; leaves defect to heal by secondary intention; low recurrence for individual tracts"
     ],
     medical: [
       "Adalimumab (Humira): only NICE/FDA-approved biologic; 160 mg week 0, 80 mg week 2, then 40 mg every week; IHS4 response 50% at 16 weeks (PIONEER I/II); continue long-term for responders",
@@ -585,11 +585,11 @@ const SOFTTISSUE_DISEASES = [
     ],
     steps: [
       { n: 1, t: "Excision", d: "Elliptical excision encompassing all marked disease. Depth: include skin, subcutaneous fat, apocrine gland-bearing tissue. Stop AT the investing fascia of axilla — do not violate deep fascia or axillary contents." },
-      { n: 2, t: "Haemostasis", d: "Meticulous haemostasis — axillary wound bleeds significantly. Avoid clips near axillary vessels. Bipolar diathermy preferred near nerve." },
+      { n: 2, t: "Hemostasis", d: "Meticulous hemostasis — axillary wound bleeds significantly. Avoid clips near axillary vessels. Bipolar diathermy preferred near nerve." },
       { n: 3, t: "Assess defect size", d: "Measure defect. <5 cm: consider primary closure with undermining. 5–10 cm: consider split-skin graft or local flap. >10 cm: perforator-based local flap or distant flap." },
       { n: 4, t: "Reconstruction", d: "Primary closure if achievable without tension. SSG (meshed 1.5:1) for large defects — graft take excellent in non-infected field. Perforator flap for complex reconstruction — better cosmesis, allows arm abduction." },
       { n: 5, t: "Drain", d: "Suction drain to dead space. Bolster dressing over graft if SSG." },
-      { n: 6, t: "Postoperative", d: "Arm immobilised in abducted position if SSG axilla × 5–7 days for graft take. Early physiotherapy after healing." }
+      { n: 6, t: "Postoperative", d: "Arm immobilized in abducted position if SSG axilla × 5–7 days for graft take. Early physiotherapy after healing." }
     ],
     pearls: [
       "Mark disease extent before GA — becomes impossible to see under drapes once patient positioned",
@@ -616,7 +616,7 @@ const SOFTTISSUE_DISEASES = [
     "Operating in acutely infected field — wait for quiescent phase",
     "Inadequate excision margins — HS disease extends beyond visible involvement; 1 cm into normal skin minimum",
     "Violating axillary contents during excision — fascia is the limit",
-    "Not counselling on lifestyle modification (smoking, obesity) before surgery — high recurrence without behavioural change"
+    "Not counselling on lifestyle modification (smoking, obesity) before surgery — high recurrence without behavioral change"
   ]
 },
 
@@ -644,11 +644,11 @@ const SOFTTISSUE_DISEASES = [
     "Retroperitoneal lymphoma",
     "Renal cell carcinoma (distinct origin on imaging)",
     "Adrenal cortical carcinoma",
-    "Teratoma/germ cell tumour",
+    "Teratoma/germ cell tumor",
     "Retroperitoneal fibrosis (benign)"
   ],
   mnemonics: [
-    { name: "Liposarcoma subtypes by behaviour", text: "WD = Well Done (low grade, good prognosis), DD = Deadly Dedifferentiated (high grade, 80% local recurrence), Myx = Myxoid (intermediate, translocation), Pleomorphic = Poorest (high grade, mets)" },
+    { name: "Liposarcoma subtypes by behavior", text: "WD = Well Done (low grade, good prognosis), DD = Deadly Dedifferentiated (high grade, 80% local recurrence), Myx = Myxoid (intermediate, translocation), Pleomorphic = Poorest (high grade, mets)" },
     { name: "MDM2/CDK4 amplification", text: "Think '12 chromosomes': chromosome 12q13-15 amplification in WD/DD liposarcoma — confirm with FISH for MDM2" }
   ],
   overview: {
@@ -667,14 +667,14 @@ const SOFTTISSUE_DISEASES = [
     history: [
       "Slowly growing retroperitoneal or thigh mass — often months to years before diagnosis",
       "Abdominal fullness, early satiety, constipation (retroperitoneal compression)",
-      "Leg oedema or varicocele (IVC/gonadal vein compression)",
+      "Leg edema or varicocele (IVC/gonadal vein compression)",
       "Back pain from neural/bone involvement",
       "Extremity: painless slowly enlarging deep thigh mass",
       "Prior history of liposarcoma (retroperitoneal — high recurrence rate)"
     ],
     examination: [
       "Retroperitoneal: large palpable abdominal/flank mass; may be ballotable; cannot get above it",
-      "Assess for associated lymphoedema, leg oedema (IVC compression)",
+      "Assess for associated lymphedema, leg edema (IVC compression)",
       "Extremity: deep mass in thigh; assess size, mobility, attachment to underlying structures",
       "Neurovascular assessment: sensation, motor, pulses distal to mass",
       "Baseline assessment of adjacent organ function (renal function — pre-op nephrectomy planning)"
@@ -703,7 +703,7 @@ const SOFTTISSUE_DISEASES = [
       "Palliation for unresectable recurrence — pain management, bowel/urinary support"
     ],
     medical: [
-      "Neoadjuvant chemotherapy: selected high-grade, large extremity sarcomas — doxorubicin + ifosfamide; aim tumour downstaging to allow limb-sparing surgery",
+      "Neoadjuvant chemotherapy: selected high-grade, large extremity sarcomas — doxorubicin + ifosfamide; aim tumor downstaging to allow limb-sparing surgery",
       "First-line systemic therapy (metastatic): doxorubicin 75 mg/m² — response rate 15–25%",
       "Trabectedin: approved for L-type sarcomas (liposarcoma/leiomyosarcoma) — second-line; PFS benefit; ORR 6–10%",
       "Eribulin: approved FDA for DDLPS/liposarcoma second-line (EORTC 62062); OS benefit vs dacarbazine",
@@ -711,8 +711,8 @@ const SOFTTISSUE_DISEASES = [
       "Neoadjuvant RT: retroperitoneal sarcoma (25 Gy × 5 fractions or 50 Gy) — reduces local recurrence after R0 in selected series; STRASS trial showed no OS benefit overall"
     ],
     surgical: [
-      { name: "En-bloc multivisceral resection", when: "Retroperitoneal liposarcoma — primary or recurrence", notes: "Standard approach: resect tumour en bloc with adherent organs (ipsilateral kidney, adrenal, colon, psoas muscle, retroperitoneal fat). Aim R0; R1 acceptable at vascular margins. Do not shell out from adjacent structures — leaves microsatellite disease." },
-      { name: "Wide local excision", when: "Extremity/truncal liposarcoma", notes: "Limb-sparing if achievable: 1–2 cm soft tissue margin; if not possible adjacent to NV bundle, peel off epineurium/adventitia (R1 preferred over amputation). Compartmentectomy for compartment-confined tumour." },
+      { name: "En-bloc multivisceral resection", when: "Retroperitoneal liposarcoma — primary or recurrence", notes: "Standard approach: resect tumor en bloc with adherent organs (ipsilateral kidney, adrenal, colon, psoas muscle, retroperitoneal fat). Aim R0; R1 acceptable at vascular margins. Do not shell out from adjacent structures — leaves microsatellite disease." },
+      { name: "Wide local excision", when: "Extremity/truncal liposarcoma", notes: "Limb-sparing if achievable: 1–2 cm soft tissue margin; if not possible adjacent to NV bundle, peel off epineurium/adventitia (R1 preferred over amputation). Compartmentectomy for compartment-confined tumor." },
       { name: "Inferior vena cava resection and reconstruction", when: "IVC involvement — leiomyosarcoma of IVC more common; can occur in retroperitoneal sarcoma", notes: "Below renal veins: resection without reconstruction if adequate collaterals; above renal veins: PTFE graft reconstruction; total hepatic exclusion if suprarenal" },
       { name: "Repeated resection for local recurrence", when: "WDLPS/DDLPS recurrence — median DFS after primary resection ~18 months", notes: "Repeated resection improves survival over palliation alone; quality of life acceptable; discuss at specialist sarcoma MDT" }
     ]
@@ -727,14 +727,14 @@ const SOFTTISSUE_DISEASES = [
     ],
     steps: [
       { n: 1, t: "Access and exposure", d: "Midline laparotomy or extended transverse/retroperitoneal approach. Full exploration: assess extent, adhesion, organ involvement, major vessel proximity." },
-      { n: 2, t: "Vascular control first", d: "Identify and control aorta, IVC, iliac vessels before mobilising tumour. Loop vessels proximally. Assess tumour-vessel interface — can usually peel off adventitia (R1) safely." },
-      { n: 3, t: "Medial mobilisation", d: "Medial visceral rotation (Mattox manoeuvre for left-sided, Cattel-Braasch for right) to expose retroperitoneal contents. Follow retroperitoneal fatty plane." },
-      { n: 4, t: "En-bloc resection", d: "Do NOT shell out tumour. Resect en bloc with: ipsilateral kidney/adrenal (left > right), mesocolon/colon if adherent, psoas muscle if involved, diaphragm if adherent. Pass specimen as one piece." },
-      { n: 5, t: "Assess margins", d: "Mark specimen for orientation. Intraoperative frozen section of close/suspicious margins. R0: no tumour at inked margin; R1: tumour cells at margin microscopically." },
-      { n: 6, t: "Reconstruction and closure", d: "Colorectal anastomosis (primary or defunctioning stoma). Retroperitonealise the wound. Place surgical clips at tumour bed to guide adjuvant RT planning. Ensure haemostasis. Close abdomen." }
+      { n: 2, t: "Vascular control first", d: "Identify and control aorta, IVC, iliac vessels before mobilizing tumor. Loop vessels proximally. Assess tumor-vessel interface — can usually peel off adventitia (R1) safely." },
+      { n: 3, t: "Medial mobilization", d: "Medial visceral rotation (Mattox maneuver for left-sided, Cattel-Braasch for right) to expose retroperitoneal contents. Follow retroperitoneal fatty plane." },
+      { n: 4, t: "En-bloc resection", d: "Do NOT shell out tumor. Resect en bloc with: ipsilateral kidney/adrenal (left > right), mesocolon/colon if adherent, psoas muscle if involved, diaphragm if adherent. Pass specimen as one piece." },
+      { n: 5, t: "Assess margins", d: "Mark specimen for orientation. Intraoperative frozen section of close/suspicious margins. R0: no tumor at inked margin; R1: tumor cells at margin microscopically." },
+      { n: 6, t: "Reconstruction and closure", d: "Colorectal anastomosis (primary or defunctioning stoma). Retroperitonealise the wound. Place surgical clips at tumor bed to guide adjuvant RT planning. Ensure hemostasis. Close abdomen." }
     ],
     pearls: [
-      "Never shell out a retroperitoneal sarcoma — en-bloc resection is standard; leaving tumour on adherent organs causes local recurrence in satellite deposits",
+      "Never shell out a retroperitoneal sarcoma — en-bloc resection is standard; leaving tumor on adherent organs causes local recurrence in satellite deposits",
       "Left-sided retroperitoneal liposarcoma: Gerota's fascia, left kidney, adrenal, and colonic mesentery removed en bloc — do not try to preserve these unless completely uninvolved",
       "Intraoperative ureteric identification: stent placed pre-op, or palpate stent in situ — prevents ureteric injury during medial dissection",
       "Vascular surgeons on standby for IVC involvement — controlled venorrhaphy or patch repair preferable to reconstruction"
@@ -768,7 +768,7 @@ const SOFTTISSUE_DISEASES = [
   organ: "Soft tissue/Vascular",
   severity: "critical",
   tags: ["sarcoma","IVC","vascular","oncology"],
-  hero: "Malignant smooth muscle tumour; retroperitoneal or IVC origin most challenging; complete resection with vascular reconstruction where needed is the only curative option.",
+  hero: "Malignant smooth muscle tumor; retroperitoneal or IVC origin most challenging; complete resection with vascular reconstruction where needed is the only curative option.",
   keypoints: [
     "Retroperitoneal LMS is distinct from uterine LMS — worse prognosis, different molecular profile",
     "IVC leiomyosarcoma: three segments (infra/supra-renal, renal, suprahepatic) — segment determines operability and complexity",
@@ -781,7 +781,7 @@ const SOFTTISSUE_DISEASES = [
     "Liposarcoma (fat attenuation on CT distinguishes WD type; MDM2 FISH)",
     "GIST (CD117/DOG1 positive; spindle cells; gastric origin common)",
     "Dedifferentiated liposarcoma (MDM2 amplification)",
-    "Solitary fibrous tumour",
+    "Solitary fibrous tumor",
     "Undifferentiated pleomorphic sarcoma",
     "Malignant PEComa",
     "Angiosarcoma (IVC origin rare but possible)"
@@ -791,8 +791,8 @@ const SOFTTISSUE_DISEASES = [
     { name: "LMS markers", text: "SMA (smooth muscle actin), Desmin, H-caldesmon — all positive in LMS; CD117 negative distinguishes from GIST" }
   ],
   overview: {
-    definition: "Malignant neoplasm of smooth muscle differentiation. Arises from smooth muscle of blood vessel walls (especially IVC), retroperitoneal soft tissue, uterus, and GI tract. High-grade tumour with significant metastatic potential.",
-    epidemiology: "Second most common retroperitoneal sarcoma after liposarcoma. F:M = 2:1 for uterine; M = F for retroperitoneal. Peak incidence 50–60 years. IVC LMS: one of the rarest large-vessel tumours (~300 cases reported).",
+    definition: "Malignant neoplasm of smooth muscle differentiation. Arises from smooth muscle of blood vessel walls (especially IVC), retroperitoneal soft tissue, uterus, and GI tract. High-grade tumor with significant metastatic potential.",
+    epidemiology: "Second most common retroperitoneal sarcoma after liposarcoma. F:M = 2:1 for uterine; M = F for retroperitoneal. Peak incidence 50–60 years. IVC LMS: one of the rarest large-vessel tumors (~300 cases reported).",
     pathophysiology: "Complex karyotype with multiple chromosomal losses (10q, 13q, RB1) and gains (1q21, 5p). RB1 pathway inactivation central to pathogenesis. No specific translocations unlike myxoid liposarcoma/Ewing sarcoma. High-grade: mitotic index >15/10 HPF, coagulative necrosis, marked pleomorphism.",
     classification: [
       "Retroperitoneal LMS — de novo smooth muscle; aggressive; high distant metastasis rate",
@@ -804,13 +804,13 @@ const SOFTTISSUE_DISEASES = [
   diagnosis: {
     history: [
       "Retroperitoneal mass: back/flank pain, abdominal fullness — same as liposarcoma but tends to be more adherent to major vessels",
-      "IVC LMS: Budd-Chiari syndrome (suprahepatic level), leg oedema/varicocele (infrarenal), nephrotic syndrome/renal impairment (renal level)",
+      "IVC LMS: Budd-Chiari syndrome (suprahepatic level), leg edema/varicocele (infrarenal), nephrotic syndrome/renal impairment (renal level)",
       "Uterine LMS: postmenopausal bleeding, rapidly growing uterine mass",
       "Systemic symptoms: weight loss, fatigue — more common than in WDLPS"
     ],
     examination: [
       "Palpable abdominal/retroperitoneal mass",
-      "IVC involvement: bilateral leg oedema, dilated abdominal veins, Budd-Chiari signs (jaundice, ascites, liver tenderness)",
+      "IVC involvement: bilateral leg edema, dilated abdominal veins, Budd-Chiari signs (jaundice, ascites, liver tenderness)",
       "Varicocele (often left-sided) — left gonadal vein compressed by IVC LMS at renal level"
     ],
     investigations: [
@@ -819,7 +819,7 @@ const SOFTTISSUE_DISEASES = [
       { name: "Echocardiography", role: "IVC LMS extending to right atrium — extent of cardiac involvement; assess right heart function" },
       { name: "Core needle biopsy", role: "Histological confirmation; SMA, desmin, h-caldesmon IHC positive; CD117 negative (distinguishes from GIST); Ki67 for grade" },
       { name: "Venogram (IVC)", role: "Defines IVC involvement extent, collateral circulation — guides reconstruction planning" },
-      { name: "PET-CT", role: "Staging; identifies occult metastases; FDG avid tumours have worse prognosis" }
+      { name: "PET-CT", role: "Staging; identifies occult metastases; FDG avid tumors have worse prognosis" }
     ]
   },
   criteria: {
@@ -844,9 +844,9 @@ const SOFTTISSUE_DISEASES = [
     ],
     surgical: [
       { name: "Complete excision of retroperitoneal LMS", when: "Resectable disease — primary treatment", notes: "R0 resection aim; less amenable to en-bloc multivisceral resection than liposarcoma due to vascular adherence; IVC/aorta involvement may limit R0" },
-      { name: "IVC resection and reconstruction", when: "Level I IVC LMS — primary approach", notes: "Isolate IVC above and below tumour with vascular clamps; lateral venorrhaphy for partial involvement; circumferential resection with PTFE 20 mm tube graft; anticoagulate peri-op" },
+      { name: "IVC resection and reconstruction", when: "Level I IVC LMS — primary approach", notes: "Isolate IVC above and below tumor with vascular clamps; lateral venorrhaphy for partial involvement; circumferential resection with PTFE 20 mm tube graft; anticoagulate peri-op" },
       { name: "IVC reconstruction with hepatic exclusion", when: "Level III IVC LMS", notes: "Portal hepatis dissection and clamping; outflow via temporary cavopulmonary shunt or veno-venous bypass; IVC excision and PTFE graft; high morbidity/mortality" },
-      { name: "Cardiopulmonary bypass for right atrial extension", when: "IVC LMS extending into right atrium", notes: "Cardiac surgery team involvement; CPB + deep hypothermic circulatory arrest for tumour extraction from RA" }
+      { name: "Cardiopulmonary bypass for right atrial extension", when: "IVC LMS extending into right atrium", notes: "Cardiac surgery team involvement; CPB + deep hypothermic circulatory arrest for tumor extraction from RA" }
     ]
   },
   technique: {
@@ -854,18 +854,18 @@ const SOFTTISSUE_DISEASES = [
     prep: [
       "Vascular surgery co-surgeon for IVC involvement",
       "PTFE 20 mm graft prepared on back table",
-      "Adequate venous access and haematology (massive transfusion protocol on standby)",
+      "Adequate venous access and hematology (massive transfusion protocol on standby)",
       "Bilateral leg venous pressure monitoring for IVC clamping tolerance"
     ],
     steps: [
       { n: 1, t: "Exposure", d: "Midline laparotomy. Right medial visceral rotation (Cattell-Braasch) to expose entire retroperitoneal IVC from iliac confluence to right atrium." },
-      { n: 2, t: "Vascular control", d: "Apply vascular clamps above and below tumour on IVC. Test with clamp — assess haemodynamic tolerance. Clamp lumbar veins entering IVC in operative field." },
-      { n: 3, t: "IVC excision", d: "Excise involved IVC segment with tumour en bloc. Preserve renal veins if possible; if right renal vein sacrifice needed, ensure left renal vein provides adequate drainage (± right nephrectomy)." },
+      { n: 2, t: "Vascular control", d: "Apply vascular clamps above and below tumor on IVC. Test with clamp — assess hemodynamic tolerance. Clamp lumbar veins entering IVC in operative field." },
+      { n: 3, t: "IVC excision", d: "Excise involved IVC segment with tumor en bloc. Preserve renal veins if possible; if right renal vein sacrifice needed, ensure left renal vein provides adequate drainage (± right nephrectomy)." },
       { n: 4, t: "Reconstruction", d: "End-to-end anastomosis with 20 mm ringed PTFE graft; 5-0 Prolene continuous suture; proximal anastomosis first. Or patch repair if partial wall involvement." },
       { n: 5, t: "De-clamp and check", d: "Flush graft before final suture to exclude air. De-clamp slowly. Check distal venous pressures. Anticoagulate (heparin intraoperatively, warfarin for 3–6 months post-op)." }
     ],
     pearls: [
-      "IVC clamping below the renal veins is well-tolerated haemodynamically in most patients — above renal veins is not",
+      "IVC clamping below the renal veins is well-tolerated hemodynamically in most patients — above renal veins is not",
       "Right-sided IVC LMS: may sacrifice right renal vein if short — IVC provides drainage directly. Never sacrifice left renal vein (only drainage for left kidney) without planned nephrectomy",
       "PTFE grafts for IVC reconstruction: ringed PTFE prevents kinking; long-term patency 70–80% at 5 years with anticoagulation"
     ]
@@ -885,7 +885,7 @@ const SOFTTISSUE_DISEASES = [
   mistakes: [
     "Attempting IVC LMS resection without vascular surgery — IVC reconstruction is a vascular operation",
     "Failing to assess contralateral renal drainage before sacrificing right renal vein",
-    "Not anticoagulating IVC graft — PTFE graft thrombosis leads to Budd-Chiari or bilateral leg oedema",
+    "Not anticoagulating IVC graft — PTFE graft thrombosis leads to Budd-Chiari or bilateral leg edema",
     "Confusing LMS with GIST on IHC — LMS: SMA+/CD117−; GIST: CD117+/DOG1+"
   ]
 },
@@ -893,15 +893,15 @@ const SOFTTISSUE_DISEASES = [
 {
   id: "desmoid",
   dept: "soft-tissue",
-  name: "Desmoid Tumour",
+  name: "Desmoid Tumor",
   latin: "Tumor desmoides / Fibromatosis aggressiva",
   organ: "Soft tissue/Mesentery",
   severity: "major",
   tags: ["sarcoma","FAP","APC","mesentery","active-surveillance"],
   hero: "Locally aggressive fibromatosis with no metastatic potential; paradigm shift to active surveillance first; surgery for progressors; sorafenib for FAP-related intra-abdominal desmoids.",
   keypoints: [
-    "Desmoid tumours do NOT metastasize — mortality from local complications (bowel obstruction, fistula, vascular compression)",
-    "Active surveillance first: 50% spontaneously stabilise or regress — avoid surgery as first-line",
+    "Desmoid tumors do NOT metastasize — mortality from local complications (bowel obstruction, fistula, vascular compression)",
+    "Active surveillance first: 50% spontaneously stabilize or regress — avoid surgery as first-line",
     "Sporadic: beta-catenin (CTNNB1) mutation; FAP-associated: APC mutation (chromosome 5q21)",
     "FAP-related: intra-abdominal mesenteric desmoids — can be lethal despite no metastasis; sorafenib is treatment of choice (NEXTGEN trial)",
     "Sorafenib: ORR 33%, disease control 81% (Alliance A091105 trial) — now first-line systemic therapy",
@@ -910,8 +910,8 @@ const SOFTTISSUE_DISEASES = [
   differentials: [
     "Retroperitoneal fibrosis (IgG4-related or drug-induced — no mass effect, diffuse)",
     "Low-grade fibrosarcoma",
-    "Solitary fibrous tumour",
-    "Mesenteric fibromatosis vs mesenteric carcinoid tumour",
+    "Solitary fibrous tumor",
+    "Mesenteric fibromatosis vs mesenteric carcinoid tumor",
     "Nodular fasciitis (rapid growth, self-limiting)",
     "Gardner fibroma (children, FAP-associated)"
   ],
@@ -920,9 +920,9 @@ const SOFTTISSUE_DISEASES = [
     { name: "FAP + Desmoid", text: "FAP patients who smoke, are female, or have family history of desmoids have highest risk — 'Female Smoker FAP = Desmoid risk'" }
   ],
   overview: {
-    definition: "Locally aggressive monoclonal fibroblastic proliferation arising from musculoaponeurotic structures. Classified as intermediate (locally aggressive) soft tissue tumour. No metastatic potential but significant local morbidity from invasion. Formally known as aggressive fibromatosis.",
+    definition: "Locally aggressive monoclonal fibroblastic proliferation arising from musculoaponeurotic structures. Classified as intermediate (locally aggressive) soft tissue tumor. No metastatic potential but significant local morbidity from invasion. Formally known as aggressive fibromatosis.",
     epidemiology: "Rare: ~5–6 per million per year. Bimodal: young women (15–40 years, hormonal association) and FAP patients. FAP: 10–20% develop desmoids; risk gene (APC position beyond codon 1310), triggers include surgery and pregnancy. Sporadic: CTNNB1 mutation in >85%.",
-    pathophysiology: "Two genetic pathways: (1) APC mutation (FAP) → constitutive beta-catenin nuclear signalling → fibroblastic proliferation. (2) Sporadic: somatic CTNNB1 mutation (encodes beta-catenin) → same downstream Wnt signalling activation. Oestrogen may promote growth (anti-oestrogen therapy used historically). Myofibroblastic phenotype: positive for SMA, negative for S100/CD34/CD117.",
+    pathophysiology: "Two genetic pathways: (1) APC mutation (FAP) → constitutive beta-catenin nuclear signalling → fibroblastic proliferation. (2) Sporadic: somatic CTNNB1 mutation (encodes beta-catenin) → same downstream Wnt signalling activation. Estrogen may promote growth (anti-estrogen therapy used historically). Myofibroblastic phenotype: positive for SMA, negative for S100/CD34/CD117.",
     classification: [
       "Intra-abdominal/mesenteric — FAP-associated; worst prognosis due to local complications",
       "Extra-abdominal — chest wall, shoulder girdle, extremity; sporadic; better outcome",
@@ -946,7 +946,7 @@ const SOFTTISSUE_DISEASES = [
       "Mesenteric desmoid: palpable mass, bowel obstruction signs, ureteric obstruction"
     ],
     investigations: [
-      { name: "MRI (preferred)", role: "Characterises extent; heterogeneous T2, band-like T1 dark areas (collagen); infiltrative margins; key for surgical planning" },
+      { name: "MRI (preferred)", role: "Characterizes extent; heterogeneous T2, band-like T1 dark areas (collagen); infiltrative margins; key for surgical planning" },
       { name: "CT abdomen/pelvis", role: "Mesenteric desmoid: assess bowel/ureteric involvement, vessel encasement, extent" },
       { name: "Core needle biopsy", role: "Histological confirmation (spindle cells, bland fibroblasts, no necrosis, no mitoses); beta-catenin nuclear staining (IHC); CTNNB1 mutation testing" },
       { name: "Colonoscopy / APC genetic testing", role: "All patients with intra-abdominal desmoid — exclude FAP; 10–20% of intra-abdominal desmoids are FAP-related" }
@@ -964,9 +964,9 @@ const SOFTTISSUE_DISEASES = [
   scoring: [],
   management: {
     conservative: [
-      "Active surveillance: MRI at 1, 3, 6, 12, 18, 24 months then annually; ~50% stabilise/regress — avoid surgery as first-line for most desmoids",
+      "Active surveillance: MRI at 1, 3, 6, 12, 18, 24 months then annually; ~50% stabilize/regress — avoid surgery as first-line for most desmoids",
       "NSAIDs: sulindac 150 mg BD — anti-fibrotic, modest effect; used in FAP-related desmoids as adjunct",
-      "Anti-oestrogen therapy (historical): tamoxifen 40–120 mg/day; toremifene; modest response; mainly for high oestrogen state (pregnancy, OCP)"
+      "Anti-estrogen therapy (historical): tamoxifen 40–120 mg/day; toremifene; modest response; mainly for high estrogen state (pregnancy, OCP)"
     ],
     medical: [
       "Sorafenib (multikinase inhibitor): first-line systemic therapy; 400 mg BD; ORR 33%, disease control 81% (Alliance A091105 RCT); now standard for progressive/symptomatic desmoid — proven superior to placebo",
@@ -977,7 +977,7 @@ const SOFTTISSUE_DISEASES = [
     ],
     surgical: [
       { name: "R0 resection", when: "Progressive despite sorafenib, symptomatic (bowel obstruction, fistula, ureteric obstruction), abdominal wall location where R0 achievable without major morbidity", notes: "Wide margins (1–2 cm) ideally; R0 preferred but R1 with negative microscopic margins acceptable (local recurrence not reliably reduced by wider margins — margin status less prognostic than previously thought in CTNNB1 T45S/S45F mutation)" },
-      { name: "Bowel resection for obstruction/fistula", when: "Mesenteric desmoid with bowel complication", notes: "Staged approach preferred; defunctioning stoma first if acute; definitive resection after optimisation; may require complex reconstruction" },
+      { name: "Bowel resection for obstruction/fistula", when: "Mesenteric desmoid with bowel complication", notes: "Staged approach preferred; defunctioning stoma first if acute; definitive resection after optimization; may require complex reconstruction" },
       { name: "Radiotherapy", when: "Extremity/truncal desmoid not amenable to surgery with adequate margins; R1 resection; recurrence after surgery", notes: "50–56 Gy external beam RT; local control 70–80%; avoid in children (growth plate); avoid intra-abdominal (radiation enteritis risk)" }
     ]
   },
@@ -993,30 +993,30 @@ const SOFTTISSUE_DISEASES = [
       { n: 2, t: "Excise full thickness", d: "Include all involved muscle (rectus, oblique as appropriate) and posterior sheath. Check peritoneal involvement — may need to enter abdomen." },
       { n: 3, t: "Orient specimen", d: "Mark orientation; send for frozen sections at margins if critical." },
       { n: 4, t: "Reconstruction", d: "Small defects (<3 cm): primary closure with overlapping fascial flaps. Larger: lightweight polypropylene or biological mesh (underlay or bridging). Avoid tight closure — mesh bridges gap without tension." },
-      { n: 5, t: "Drain", d: "Closed suction drain to dead space. Monitor for haematoma." }
+      { n: 5, t: "Drain", d: "Closed suction drain to dead space. Monitor for hematoma." }
     ],
     pearls: [
-      "Active surveillance first — 50% of desmoids stabilise; avoid surgery for asymptomatic stable disease",
+      "Active surveillance first — 50% of desmoids stabilize; avoid surgery for asymptomatic stable disease",
       "Sorafenib is now first-line systemic therapy for progressive desmoid — try before surgery for intra-abdominal disease",
       "Mesenteric desmoid in FAP: involves superior mesenteric vessels — unresectable in ~50%; medical treatment is primary approach",
       "R0 margins are important but do not guarantee non-recurrence — desmoid recurs even after R0, especially CTNNB1 T45S mutation"
     ]
   },
   guidelines: [
-    { src: "ESMO Clinical Practice Guidelines: Desmoid tumour 2022 (Kasper et al.)" },
+    { src: "ESMO Clinical Practice Guidelines: Desmoid tumor 2022 (Kasper et al.)" },
     { src: "Alliance A091105 trial: Gounder et al. NEJM 2018 — sorafenib vs placebo" },
     { src: "BSG/ACPGBI FAP Guidelines 2020 — desmoid management in FAP" }
   ],
   pearls: [
     "Desmoid does not metastasise — death from local bowel/vascular complications, not distant spread",
-    "Active surveillance is the standard first approach — 50% of desmoids regress or stabilise without treatment",
+    "Active surveillance is the standard first approach — 50% of desmoids regress or stabilize without treatment",
     "Sorafenib changed the treatment landscape in 2018 — first-line medical therapy for progressive desmoid",
     "Mesenteric desmoid in FAP patients: life-threatening; sorafenib + MDT; surgical resection rarely curative due to SMA involvement"
   ],
   mistakes: [
     "Surgery as first-line without trial of active surveillance — 50% of desmoids do not need treatment",
     "Not testing for FAP in all intra-abdominal desmoid patients — changes surveillance and management",
-    "Incomplete resection of mesenteric desmoid by non-specialist — better left to specialist sarcoma centre",
+    "Incomplete resection of mesenteric desmoid by non-specialist — better left to specialist sarcoma center",
     "Using RT for intra-abdominal desmoid — radiation enteritis risk is unacceptable"
   ]
 },
@@ -1045,7 +1045,7 @@ const SOFTTISSUE_DISEASES = [
     "Lymphoma (B-cell cutaneous — CD20 positive)",
     "Small cell lung carcinoma metastasis (CK20 negative, TTF-1 positive — opposite of MCC)",
     "Amelanotic melanoma (S100/HMB45 positive)",
-    "Glomus tumour (subungual, smaller, painful)",
+    "Glomus tumor (subungual, smaller, painful)",
     "Pyogenic granuloma (history of trauma, bleeds easily)"
   ],
   mnemonics: [
@@ -1053,9 +1053,9 @@ const SOFTTISSUE_DISEASES = [
     { name: "MCC IHC", text: "CK20 positive (dot-like paranuclear staining) + TTF-1 negative = MCC. TTF-1 positive = small cell lung met, not MCC. 'Twenty dot, no TTF'" }
   ],
   overview: {
-    definition: "Rare primary cutaneous neuroendocrine carcinoma arising from Merkel cells (mechanoreceptors) in the basal epidermis. Aggressive behaviour with high rates of nodal and distant metastasis. Disproportionately high mortality relative to incidence.",
+    definition: "Rare primary cutaneous neuroendocrine carcinoma arising from Merkel cells (mechanoreceptors) in the basal epidermis. Aggressive behavior with high rates of nodal and distant metastasis. Disproportionately high mortality relative to incidence.",
     epidemiology: "~3,000 cases/year in USA; rare in UK (~500/year). Incidence rising (3-fold increase since 1990). Elderly (median 75 years). Risk: immunosuppression (HIV, transplant: 10× increased risk), UV exposure, Merkel cell polyomavirus (MCPyV) infection, CLL (concurrent in 5% of MCC cases), white skin. M:F = 2:1.",
-    pathophysiology: "MCPyV (80%): viral integration into genome → large T-antigen expression → Rb and p53 pathway inactivation → cell transformation. UV-induced (MCPyV-negative, 20%): TP53 somatic mutations, RB1 loss, high tumour mutational burden (TMB). Neuroendocrine phenotype: CK20+, synaptophysin+, chromogranin+, TTF-1−.",
+    pathophysiology: "MCPyV (80%): viral integration into genome → large T-antigen expression → Rb and p53 pathway inactivation → cell transformation. UV-induced (MCPyV-negative, 20%): TP53 somatic mutations, RB1 loss, high tumor mutational burden (TMB). Neuroendocrine phenotype: CK20+, synaptophysin+, chromogranin+, TTF-1−.",
     classification: [
       "Stage I: <2 cm, node-negative — 80% 5-year survival",
       "Stage II: ≥2 cm, node-negative — 60% 5-year survival",
@@ -1065,7 +1065,7 @@ const SOFTTISSUE_DISEASES = [
   },
   diagnosis: {
     history: [
-      "Rapidly expanding red/violet/flesh-coloured skin nodule — often described as 'appeared and doubled in size over weeks'",
+      "Rapidly expanding red/violet/flesh-colored skin nodule — often described as 'appeared and doubled in size over weeks'",
       "Head/neck (50%) or extremities; sun-exposed areas",
       "Elderly patient (>70 years) or immunosuppressed",
       "History of CLL, organ transplant, HIV",
@@ -1082,19 +1082,19 @@ const SOFTTISSUE_DISEASES = [
     ],
     investigations: [
       { name: "Excision biopsy", role: "Histological diagnosis: CK20 (paranuclear dot pattern) + synaptophysin/chromogranin; TTF-1 negative (excludes small cell lung met)" },
-      { name: "MCPyV antibody titre (serum)", role: "MCPyV LT antibody: elevated at diagnosis, falling titre = recurrence surveillance marker; negative = MCPyV-negative tumour" },
+      { name: "MCPyV antibody titre (serum)", role: "MCPyV LT antibody: elevated at diagnosis, falling titre = recurrence surveillance marker; negative = MCPyV-negative tumor" },
       { name: "SLNB", role: "All clinically node-negative MCC after WLE — 25–35% SN positivity rate; staging and prognostic information" },
       { name: "CT chest/abdomen/pelvis", role: "Staging — lymph node and distant metastases (liver, lung, bone)" },
       { name: "FDG-PET-CT", role: "More sensitive than CT for nodal and distant staging; recommended in NCCN guidelines for stage II–IV" },
-      { name: "PD-L1 expression", role: "Does NOT predict immunotherapy response in MCC — unlike other tumours; use ICI regardless of PD-L1" }
+      { name: "PD-L1 expression", role: "Does NOT predict immunotherapy response in MCC — unlike other tumors; use ICI regardless of PD-L1" }
     ]
   },
   criteria: {
     title: "MCC AJCC 8th Edition — Key T Stage",
     items: [
-      { k: "T1", v: "Maximum tumour diameter ≤2 cm" },
-      { k: "T2", v: "Maximum tumour diameter 2–5 cm" },
-      { k: "T3", v: "Maximum tumour diameter >5 cm" },
+      { k: "T1", v: "Maximum tumor diameter ≤2 cm" },
+      { k: "T2", v: "Maximum tumor diameter 2–5 cm" },
+      { k: "T3", v: "Maximum tumor diameter >5 cm" },
       { k: "T4", v: "Invasion of bone, muscle, fascia, or cartilage" }
     ]
   },
@@ -1121,7 +1121,7 @@ const SOFTTISSUE_DISEASES = [
     title: "WLE + SLNB for Merkel Cell Carcinoma",
     prep: [
       "Lymphoscintigraphy and blue dye mapping (same technique as melanoma SLNB)",
-      "Plan for adjuvant RT — inform radiation oncology before WLE so surgical clips placed at tumour bed"
+      "Plan for adjuvant RT — inform radiation oncology before WLE so surgical clips placed at tumor bed"
     ],
     steps: [
       { n: 1, t: "WLE", d: "1–2 cm margins; depth to deep fascia. Place surgical clips at margins of excision bed for RT planning." },
@@ -1164,7 +1164,7 @@ const SOFTTISSUE_DISEASES = [
   organ: "Skin/Mucosa/Viscera",
   severity: "major",
   tags: ["skin","HHV8","HIV","immunosuppression","oncology"],
-  hero: "HHV-8 driven vascular tumour; primarily a medical disease — treat the underlying immunosuppression; systemic chemotherapy for advanced disease.",
+  hero: "HHV-8 driven vascular tumor; primarily a medical disease — treat the underlying immunosuppression; systemic chemotherapy for advanced disease.",
   keypoints: [
     "All forms driven by HHV-8 (KSHV — Kaposi's Sarcoma-associated Herpesvirus) infection",
     "Four epidemiological types: Classic, Endemic (African), Iatrogenic (transplant), AIDS-associated",
@@ -1178,18 +1178,18 @@ const SOFTTISSUE_DISEASES = [
     "Pyogenic granuloma (rapid growth, bleeds, single lesion)",
     "Bacillary angiomatosis (Bartonella — cat scratch exposure, looks identical to AIDS-KS on skin — differentiate by biopsy)",
     "Angiosarcoma (face/scalp in elderly — ecchymotic purple patch vs KS nodule)",
-    "Glomus tumour",
-    "Haemangioma",
-    "Haematoma or purpura (non-neoplastic)",
+    "Glomus tumor",
+    "Hemangioma",
+    "Hematoma or purpura (non-neoplastic)",
     "Dermatofibrosarcoma protuberans"
   ],
   mnemonics: [
     { name: "KS types — 4 Cs", text: "Classic (Mediterranean elderly men), Common in Africa (endemic), ChemoRT immunosuppression (iatrogenic), Counts low = AIDS (AIDS-KS)" },
-    { name: "HHV-8 = KSHV", text: "Kaposi's Sarcoma Herpesvirus — latent infection in endothelial cells; immune suppression triggers viral reactivation and tumour development" }
+    { name: "HHV-8 = KSHV", text: "Kaposi's Sarcoma Herpesvirus — latent infection in endothelial cells; immune suppression triggers viral reactivation and tumor development" }
   ],
   overview: {
-    definition: "Multifocal low-grade vascular tumour of endothelial cell origin, driven by HHV-8 (KSHV) infection. Not a true sarcoma despite the name — behaves as a multicentric vascular neoplasm rather than a solitary solid tumour.",
-    epidemiology: "Classic KS: rare; Mediterranean/Eastern European Jewish/Middle Eastern elderly men. Endemic KS: Sub-Saharan Africa; 30–50% of all soft tissue tumours in some regions; includes aggressive lymphadenopathic childhood form. Iatrogenic KS: organ transplant recipients (most common in renal Tx); 200–500× increased risk; regresses with immunosuppression reduction. AIDS-KS: most common AIDS-defining malignancy; pre-ART era: ~30% AIDS patients; ART era: <5%; CD4 <200 most at risk.",
+    definition: "Multifocal low-grade vascular tumor of endothelial cell origin, driven by HHV-8 (KSHV) infection. Not a true sarcoma despite the name — behaves as a multicentric vascular neoplasm rather than a solitary solid tumor.",
+    epidemiology: "Classic KS: rare; Mediterranean/Eastern European Jewish/Middle Eastern elderly men. Endemic KS: Sub-Saharan Africa; 30–50% of all soft tissue tumors in some regions; includes aggressive lymphadenopathic childhood form. Iatrogenic KS: organ transplant recipients (most common in renal Tx); 200–500× increased risk; regresses with immunosuppression reduction. AIDS-KS: most common AIDS-defining malignancy; pre-ART era: ~30% AIDS patients; ART era: <5%; CD4 <200 most at risk.",
     pathophysiology: "HHV-8 infects endothelial cells → LANA (latency-associated nuclear antigen) protein inhibits p53 and Rb → vLIPS (viral IL-6) and vFLIP → NF-κB activation and anti-apoptosis → spindle cell proliferation and aberrant angiogenesis. In immunosuppressed hosts, viral reactivation unopposed → KS development. ART reconstitutes CD4 → immune surveillance → KS regression in ~40%.",
     classification: [
       "Classic KS — purple/red plaques and nodules lower limbs; indolent; elderly Mediterranean men; HHV-8 seroprevalence 30–50% in endemic areas",
@@ -1204,31 +1204,31 @@ const SOFTTISSUE_DISEASES = [
       "Known low CD4 count; not on or poor adherence to ART",
       "Purple/red non-blanching macules, plaques, or nodules on skin",
       "Oral cavity lesions (palate, gums) — seen in AIDS-KS",
-      "Dyspnoea, haemoptysis (pulmonary KS — rare but high mortality)",
+      "Dyspnea, hemoptysis (pulmonary KS — rare but high mortality)",
       "Abdominal pain, bleeding PR, obstruction (GI KS — often asymptomatic but can present with GI complications)",
       "Transplant recipient with new skin lesions on calcineurin inhibitor"
     ],
     examination: [
       "Skin: violaceous (purple/red) macules, plaques, nodules — classical appearance; follow dermatomal distribution on extremities",
-      "Lymphoedema of legs/genitalia (lymph node involvement)",
+      "Lymphedema of legs/genitalia (lymph node involvement)",
       "Oral: palatal KS lesions — check in all HIV+ patients with skin KS",
       "Assess for visceral involvement: respiratory examination, abdominal palpation",
-      "Document T stage (extent of tumour), I stage (immune), S stage (systemic illness) — AIDS-KS TIS staging (ACTG)"
+      "Document T stage (extent of tumor), I stage (immune), S stage (systemic illness) — AIDS-KS TIS staging (ACTG)"
     ],
     investigations: [
-      { name: "Skin biopsy", role: "Histological confirmation: spindle cells, slit-like vascular spaces, extravasated red cells, haemosiderin; IHC: CD31, CD34 (endothelial), HHV-8 LANA (nuclear staining — pathognomonic)" },
-      { name: "HIV viral load and CD4 count", role: "Baseline immune status; guides ART optimisation; CD4 <200 = highest KS risk" },
+      { name: "Skin biopsy", role: "Histological confirmation: spindle cells, slit-like vascular spaces, extravasated red cells, hemosiderin; IHC: CD31, CD34 (endothelial), HHV-8 LANA (nuclear staining — pathognomonic)" },
+      { name: "HIV viral load and CD4 count", role: "Baseline immune status; guides ART optimization; CD4 <200 = highest KS risk" },
       { name: "HHV-8 serology", role: "Confirms HHV-8 exposure; used in transplant screening" },
       { name: "CT chest/abdomen/pelvis", role: "Assess visceral (pulmonary, GI) involvement; staging in AIDS-KS" },
       { name: "Upper/lower GI endoscopy", role: "GI KS: red/violaceous submucosal nodules; biopsy confirms; present in 40% of AIDS-KS; mostly asymptomatic" },
-      { name: "Bronchoscopy", role: "Pulmonary KS suspected (dyspnoea, haemoptysis): endobronchial cherry-red lesions; biopsy high-risk (bleeding)" }
+      { name: "Bronchoscopy", role: "Pulmonary KS suspected (dyspnea, hemoptysis): endobronchial cherry-red lesions; biopsy high-risk (bleeding)" }
     ]
   },
   criteria: {
     title: "AIDS-KS ACTG TIS Staging System",
     items: [
       { k: "T0 (good risk)", v: "Confined to skin/lymph nodes/minimal oral disease (flat only on palate)" },
-      { k: "T1 (poor risk)", v: "Tumour-associated oedema/ulceration, extensive oral, GI KS, visceral KS" },
+      { k: "T1 (poor risk)", v: "Tumor-associated edema/ulceration, extensive oral, GI KS, visceral KS" },
       { k: "I0 (good risk)", v: "CD4 ≥150 cells/μL" },
       { k: "I1 (poor risk)", v: "CD4 <150 cells/μL" },
       { k: "S0 (good risk)", v: "No history of OI, thrush; no B symptoms; KPS ≥70" },
@@ -1240,7 +1240,7 @@ const SOFTTISSUE_DISEASES = [
     conservative: [
       "Classic KS (elderly, indolent): observation if asymptomatic; local RT for symptomatic lesions (8–20 Gy) — excellent response",
       "Intralesional vinblastine: individual small KS lesions; 0.1 mg/cm² per lesion; effective for cosmetically troublesome lesions",
-      "Alitretinoin 0.1% gel: topical retinoid for cutaneous AIDS-KS — FDA-approved; ORR 35%"
+      "Alitertinoin 0.1% gel: topical retinoid for cutaneous AIDS-KS — FDA-approved; ORR 35%"
     ],
     medical: [
       "ART (antiretroviral therapy): FIRST treatment for AIDS-KS; immune reconstitution leads to KS regression in ~40% of T0/I0/S0 patients — start ART and observe for 2–3 months before adding chemotherapy in mild disease",
@@ -1254,7 +1254,7 @@ const SOFTTISSUE_DISEASES = [
     surgical: [
       { name: "Excision biopsy", when: "Diagnosis confirmation for atypical lesions", notes: "Not used as primary treatment — KS is a multifocal disease, local excision does not prevent disease progression" },
       { name: "Palliative excision", when: "Isolated painful or ulcerated nodule causing functional impairment (e.g., plantar lesion)", notes: "Adequate margin for symptom control; anticipate high rate of new lesions elsewhere" },
-      { name: "Lymph node dissection", when: "NOT performed — lymphadenopathic KS treated medically", notes: "Surgical lymph node dissection has no role in KS; lymphoedema managed conservatively (compression, elevation)" }
+      { name: "Lymph node dissection", when: "NOT performed — lymphadenopathic KS treated medically", notes: "Surgical lymph node dissection has no role in KS; lymphedema managed conservatively (compression, elevation)" }
     ]
   },
   technique: {
@@ -1265,9 +1265,9 @@ const SOFTTISSUE_DISEASES = [
     ],
     steps: [
       { n: 1, t: "Select lesion", d: "Choose a raised, non-necrotic nodular lesion — representative of active disease. Avoid ulcerated or necrotic areas (poor diagnostic yield)." },
-      { n: 2, t: "Anaesthesia", d: "Local infiltration 1% lidocaine + adrenaline." },
+      { n: 2, t: "Anesthesia", d: "Local infiltration 1% lidocaine + adrenaline." },
       { n: 3, t: "Punch biopsy (4–6 mm) or excision", d: "Full-thickness 4–6 mm punch biopsy including subcutis for HHV-8 LANA immunohistochemistry. Include full lesion depth — superficial samples may miss pathognomonic features." },
-      { n: 4, t: "Haemostasis", d: "KS lesions bleed easily — pressure and silver nitrate or direct suture." },
+      { n: 4, t: "Hemostasis", d: "KS lesions bleed easily — pressure and silver nitrate or direct suture." },
       { n: 5, t: "Processing", d: "Formalin-fixed paraffin-embedded. Request: H&E, CD31, CD34, HHV-8 LANA IHC. LANA nuclear staining = confirmatory for HHV-8." }
     ],
     pearls: [

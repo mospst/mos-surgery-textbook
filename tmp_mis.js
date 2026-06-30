@@ -16,7 +16,7 @@ const MIS_DISEASES = [
     "CO₂ is the insufflation gas of choice — non-combustible, highly soluble (low embolism risk), and rapidly buffered/exhaled",
     "Standard working pressure is 12–15 mmHg; ≤8 mmHg ('low-pressure') reduces cardiopulmonary stress and post-op shoulder-tip pain",
     "Raised intra-abdominal pressure reduces venous return (↓preload) and splints the diaphragm (↑airway pressures, ↓FRC)",
-    "Absorbed CO₂ causes hypercarbia and respiratory acidosis — the anaesthetist compensates by increasing minute ventilation",
+    "Absorbed CO₂ causes hypercarbia and respiratory acidosis — the anesthetist compensates by increasing minute ventilation",
     "Benefits over open: less pain, smaller wounds, fewer wound/respiratory complications, faster recovery, lower incisional-hernia rate",
     "Reverse-Trendelenburg + pneumoperitoneum together raise venous-stasis risk — mechanical VTE prophylaxis matters"
   ],
@@ -36,7 +36,7 @@ const MIS_DISEASES = [
     classification: [
       {label:"Conventional multiport laparoscopy", note:"3–5 ports; the standard general-surgical approach"},
       {label:"Single-incision (SILS)",            note:"All instruments through one umbilical platform; better cosmesis, harder triangulation"},
-      {label:"Laparoscopic-assisted / hybrid",     note:"Mobilisation done laparoscopically; resection/anastomosis through a small incision"},
+      {label:"Laparoscopic-assisted / hybrid",     note:"Mobilization done laparoscopically; resection/anastomosis through a small incision"},
       {label:"Robotic-assisted",                   note:"Wristed instruments + 3D vision on a console; same CO₂ physiology"},
       {label:"Gasless / low-pressure",             note:"Abdominal-wall lift or ≤8 mmHg for frail cardiorespiratory patients"}
     ]
@@ -49,21 +49,21 @@ const MIS_DISEASES = [
       { k: "Low-pressure technique", v: "7–8 mmHg (frail / cardiorespiratory disease)" },
       { k: "Flow rate (initial)", v: "Low (1 L/min) until correct placement confirmed" },
       { k: "End-tidal CO₂ target", v: "Maintained near-normal by ↑ minute ventilation" },
-      { k: "Relative caution", v: "Severe cardiac failure, raised ICP, untreated hypovolaemia" }
+      { k: "Relative caution", v: "Severe cardiac failure, raised ICP, untreated hypovolemia" }
     ]
   },
   management: {
     conservative: [
       "Patient selection: assess cardiorespiratory reserve before committing to pneumoperitoneum",
-      "Optimise before long head-down/head-up cases (fluid status, anaesthetic plan)",
+      "Optimize before long head-down/head-up cases (fluid status, anesthetic plan)",
       "Mechanical + pharmacological VTE prophylaxis for stasis from raised IAP and positioning"
     ],
     medical: [
-      "Anaesthetist increases minute ventilation to clear absorbed CO₂",
+      "Anesthetist increases minute ventilation to clear absorbed CO₂",
       "Treat insufflation bradycardia by desufflating and giving an antimuscarinic if needed"
     ],
     surgical: [
-      { name: "Low-pressure pneumoperitoneum", when: "Frail / cardiorespiratory patients", notes: "Reduces haemodynamic and ventilatory impact; may need deeper neuromuscular block for working space" },
+      { name: "Low-pressure pneumoperitoneum", when: "Frail / cardiorespiratory patients", notes: "Reduces hemodynamic and ventilatory impact; may need deeper neuromuscular block for working space" },
       { name: "Conversion to open", when: "Unsafe anatomy, instability, failure to progress", notes: "A sound surgical decision, not a complication" }
     ]
   },
@@ -83,7 +83,7 @@ const MIS_DISEASES = [
   ],
   related: [
     { id: "cholecystitis",  note: "Laparoscopic cholecystectomy — the index MIS operation" },
-    { id: "appendicitis",   note: "Laparoscopic appendicectomy — the commonest emergency MIS case" },
+    { id: "appendicitis",   note: "Laparoscopic appendectomy — the commonest emergency MIS case" },
     { id: "inguinal-hernia",note: "Laparoscopic inguinal hernia repair (TAPP / TEP)" }
   ]
 },
@@ -132,7 +132,7 @@ const MIS_DISEASES = [
     title: "Open (Hasson) umbilical entry",
     prep: [
       "GA, NG/orogastric tube and urinary catheter to decompress stomach and bladder",
-      "Confirm site; infiltrate local anaesthetic; supine, surgeon's positioning per case",
+      "Confirm site; infiltrate local anesthetic; supine, surgeon's positioning per case",
       "Check insufflator, light source, camera white-balance and instruments before incision"
     ],
     steps: [
@@ -156,7 +156,7 @@ const MIS_DISEASES = [
   ],
   pearls: [
     "Closing the fascia of 10 mm+ ports prevents Richter's-type port-site hernia",
-    "Previous midline surgery → favour open entry or Palmer's point",
+    "Previous midline surgery → favor open entry or Palmer's point",
     "Decompress stomach (NG) before LUQ entry to avoid gastric injury"
   ],
   mistakes: [
@@ -166,7 +166,7 @@ const MIS_DISEASES = [
   ],
   related: [
     { id: "cholecystitis",     note: "Standard 4-port access for laparoscopic cholecystectomy" },
-    { id: "appendicitis",      note: "3-port access for laparoscopic appendicectomy" },
+    { id: "appendicitis",      note: "3-port access for laparoscopic appendectomy" },
     { id: "trauma-laparotomy", note: "Why a hostile/scarred abdomen may mandate open entry" }
   ]
 },
@@ -181,7 +181,7 @@ const MIS_DISEASES = [
     "Monopolar diathermy: current flows from instrument tip through the patient to a return electrode pad — versatile but the highest stray-energy risk",
     "Bipolar diathermy: current passes only between the two limbs of the instrument — safer near vital structures, no patient return pad",
     "Advanced bipolar (vessel-sealing) reliably seals vessels up to ~7 mm with low thermal spread",
-    "Ultrasonic (harmonic) devices cut and coagulate by mechanical vibration at lower temperatures — minimal smoke, slower haemostasis of large vessels",
+    "Ultrasonic (harmonic) devices cut and coagulate by mechanical vibration at lower temperatures — minimal smoke, slower hemostasis of large vessels",
     "Insulation failure, direct coupling and capacitive coupling cause off-screen burns — keep the active tip in view",
     "Lateral thermal spread (a few mm) threatens the bile duct, ureter, bowel and nerves nearby"
   ],
@@ -193,7 +193,7 @@ const MIS_DISEASES = [
     "Clips / staplers — mechanical control of named vessels and bowel"
   ],
   overview: {
-    definition: "Devices that deliver electrical or ultrasonic energy to divide tissue and achieve haemostasis through laparoscopic instruments, where the surgeon cannot palpate or directly buttress bleeding.",
+    definition: "Devices that deliver electrical or ultrasonic energy to divide tissue and achieve hemostasis through laparoscopic instruments, where the surgeon cannot palpate or directly buttress bleeding.",
     pathophysiology: "Monopolar current completes a circuit through the patient to a dispersive pad; high current density at the small tip cuts/coagulates, but energy can divert via insulation defects (insulation failure), to a touching metal instrument (direct coupling), or induced across intact insulation (capacitive coupling) — burning tissue outside the camera's view. Ultrasonic devices convert ~55 kHz mechanical vibration into frictional heat (lower peak temperatures, less collateral spread), while advanced bipolar systems sense tissue impedance to form a collagen-elastin seal.",
     classification: [
       {label:"Monopolar", note:"Tip-to-return-pad circuit; cut & coag; stray-energy risk (insulation failure, coupling)"},
@@ -260,14 +260,14 @@ const MIS_DISEASES = [
     pathophysiology: "Blind or forced entry lacerates the aorta, iliac vessels or bowel. CO₂ entering an open vein (e.g. during insufflation into a vessel) forms an airlock in the right heart → outflow obstruction. Extraperitoneal CO₂ tracks through tissue planes producing subcutaneous emphysema or pneumothorax. Energy devices cause coagulative necrosis that declares itself days later as the burn perforates.",
     classification: [
       {label:"Access injury", note:"Major vessel or bowel injury, usually at primary entry; convert and repair"},
-      {label:"Insufflation: gas embolism", note:"CO₂ into the venous system; cardiovascular collapse; Durant's manoeuvre + 100% O₂"},
+      {label:"Insufflation: gas embolism", note:"CO₂ into the venous system; cardiovascular collapse; Durant's maneuver + 100% O₂"},
       {label:"Insufflation: emphysema/capnothorax", note:"Extraperitoneal CO₂ tracking; usually self-limiting; exclude tension pneumothorax"},
       {label:"Port-site complications", note:"Bleeding (inferior epigastric), hernia (unclosed fascia), metastasis (oncological cases)"},
       {label:"Energy/thermal injury", note:"Delayed bowel or duct injury from stray energy or lateral spread"}
     ]
   },
   criteria: {
-    title: "Recognising CO₂ gas embolism",
+    title: "Recognizing CO₂ gas embolism",
     items: [
       { k: "Sudden ↓ end-tidal CO₂", v: "Capnography drop is an early, sensitive sign" },
       { k: "Cardiovascular collapse", v: "Hypotension, arrhythmia, raised CVP" },
@@ -298,7 +298,7 @@ const MIS_DISEASES = [
   ],
   pearls: [
     "Disproportionate pain and tachycardia on day 3–5 after laparoscopy is a thermal bowel injury until proven otherwise",
-    "Durant's manoeuvre (left lateral, head down) traps a CO₂ airlock away from the RV outflow tract",
+    "Durant's maneuver (left lateral, head down) traps a CO₂ airlock away from the RV outflow tract",
     "Always close the fascia of 10 mm+ port and extraction sites"
   ],
   mistakes: [
@@ -359,18 +359,18 @@ const MIS_DISEASES = [
   ],
   pearls: [
     "Because haptics are absent, judge tissue tension by visual cues to avoid suture pull-through",
-    "Rehearse the emergency-undocking drill with the whole theatre team",
+    "Rehearse the emergency-undocking drill with the whole theater team",
     "Robotics shines where laparoscopy is hardest — suturing deep in the pelvis"
   ],
   mistakes: [
     "Pulling sutures too tight because there is no force feedback",
-    "Slow, unpractised undocking when a patient deteriorates",
+    "Slow, unpracticed undocking when a patient deteriorates",
     "Choosing the robot for a case where it adds cost and time without clinical benefit"
   ],
   related: [
     { id: "crc",              note: "Robotic TME for rectal cancer in the narrow pelvis" },
     { id: "inguinal-hernia",  note: "Robotic TAPP / complex abdominal-wall reconstruction" },
-    { id: "pancreatic-cancer",note: "Robotic pancreatic and HPB resections in selected centres" }
+    { id: "pancreatic-cancer",note: "Robotic pancreatic and HPB resections in selected centers" }
   ]
 },
 {
@@ -383,10 +383,10 @@ const MIS_DISEASES = [
   keypoints: [
     "Three core roles: investigate the acute/undiagnosed abdomen, stage intra-abdominal malignancy, and assess chronic pelvic/abdominal pain",
     "Cancer staging laparoscopy detects peritoneal and small surface metastases that CT/PET miss — sparing patients a non-therapeutic laparotomy",
-    "In the stable acute abdomen it can confirm a diagnosis (e.g. appendicitis, ischaemia) and convert to a therapeutic procedure",
-    "Particularly useful in women of reproductive age, where it distinguishes appendicitis from gynaecological pathology",
+    "In the stable acute abdomen it can confirm a diagnosis (e.g. appendicitis, ischemia) and convert to a therapeutic procedure",
+    "Particularly useful in women of reproductive age, where it distinguishes appendicitis from gynecological pathology",
     "Peritoneal washings/biopsy can be taken at the same time for cytology and histology",
-    "Not for the haemodynamically unstable patient — that is a laparotomy"
+    "Not for the hemodynamically unstable patient — that is a laparotomy"
   ],
   differentials: [
     "CT abdomen/pelvis — first-line cross-sectional imaging",
@@ -396,22 +396,22 @@ const MIS_DISEASES = [
   ],
   overview: {
     definition: "A minimally invasive operation to directly inspect the peritoneal cavity for diagnosis, staging, or decision-making, with the option to take biopsies/washings or proceed to definitive treatment.",
-    pathophysiology: "Standard CO₂ pneumoperitoneum gives a panoramic, magnified view of peritoneal surfaces, liver and pelvis. Surface deposits a few millimetres across — below the resolution of CT — become visible, refining oncological decisions and avoiding open exploration that would not change management.",
+    pathophysiology: "Standard CO₂ pneumoperitoneum gives a panoramic, magnified view of peritoneal surfaces, liver and pelvis. Surface deposits a few millimeters across — below the resolution of CT — become visible, refining oncological decisions and avoiding open exploration that would not change management.",
     classification: [
       {label:"Emergency diagnostic laparoscopy", note:"Stable acute/undiagnosed abdomen; confirm diagnosis and treat if able"},
-      {label:"Staging laparoscopy", note:"Gastric, pancreatic, oesophageal & ovarian cancer; detect occult peritoneal/liver metastases"},
+      {label:"Staging laparoscopy", note:"Gastric, pancreatic, esophageal & ovarian cancer; detect occult peritoneal/liver metastases"},
       {label:"Elective for chronic pain", note:"Assess chronic pelvic/abdominal pain, adhesions, endometriosis"},
-      {label:"Second-look laparoscopy", note:"Re-assess bowel viability after ischaemia or borderline resection"}
+      {label:"Second-look laparoscopy", note:"Re-assess bowel viability after ischemia or borderline resection"}
     ]
   },
   criteria: {
     title: "Common indications",
     items: [
-      { k: "Acute abdomen (stable)", v: "Equivocal RIF pain, ?appendicitis vs gynae, suspected ischaemia" },
-      { k: "Cancer staging", v: "Gastric, pancreatic, oesophageal, hepatobiliary, ovarian" },
+      { k: "Acute abdomen (stable)", v: "Equivocal RIF pain, ?appendicitis vs gynae, suspected ischemia" },
+      { k: "Cancer staging", v: "Gastric, pancreatic, esophageal, hepatobiliary, ovarian" },
       { k: "Trauma (selected)", v: "Stable penetrating injury to exclude peritoneal breach / diaphragm injury" },
       { k: "Chronic pain", v: "Adhesions, endometriosis, chronic pelvic pain" },
-      { k: "Contraindication", v: "Haemodynamic instability → laparotomy" }
+      { k: "Contraindication", v: "Hemodynamic instability → laparotomy" }
     ]
   },
   technique: {
@@ -427,10 +427,10 @@ const MIS_DISEASES = [
       { n: 3, t: "Place working ports", d: "Under vision, sited to reach the area of interest." },
       { n: 4, t: "Systematic inspection", d: "Liver and peritoneal surfaces, diaphragm, stomach, small/large bowel run, pelvis and adnexa." },
       { n: 5, t: "Sampling", d: "Peritoneal washings for cytology; biopsy suspicious deposits." },
-      { n: 6, t: "Decide", d: "Treat (e.g. appendicectomy), stage, or convert as indicated." }
+      { n: 6, t: "Decide", d: "Treat (e.g. appendectomy), stage, or convert as indicated." }
     ],
     pearls: [
-      "Run the whole small bowel from DJ flexure to caecum so nothing is missed",
+      "Run the whole small bowel from DJ flexure to cecum so nothing is missed",
       "Take washings before manipulation in cancer staging",
       "Tilt the table to let bowel fall away from the area of interest rather than retracting hard"
     ]
@@ -475,15 +475,15 @@ const MIS_DISEASES = [
     "Persevere laparoscopically — only if safe and progressing",
     "Strategic conversion — pre-emptive, controlled, before harm",
     "Reactive (emergency) conversion — forced by bleeding/injury/instability",
-    "Abort and stage — damage control, return when optimised"
+    "Abort and stage — damage control, return when optimized"
   ],
   overview: {
     definition: "The intra-operative decision to abandon the laparoscopic approach and complete the operation through an open incision, made when MIS is unsafe or not progressing.",
     pathophysiology: "Adhesions, distorted or unclear anatomy (e.g. a fibrotic Calot's triangle), bleeding that cannot be controlled laparoscopically, or patient physiology that cannot tolerate pneumoperitoneum all reduce the safety margin. Open access restores tactile feedback and direct vascular control, trading a larger wound for control of the situation.",
     classification: [
       {label:"Strategic (pre-emptive)", note:"Surgeon converts because difficulty is foreseen, before any injury — associated with better outcomes"},
-      {label:"Reactive (forced)", note:"Conversion driven by an event — haemorrhage, visceral injury, instability"},
-      {label:"Anatomical", note:"Adhesions, obscure anatomy, large/fixed tumour preventing safe laparoscopic completion"},
+      {label:"Reactive (forced)", note:"Conversion driven by an event — hemorrhage, visceral injury, instability"},
+      {label:"Anatomical", note:"Adhesions, obscure anatomy, large/fixed tumor preventing safe laparoscopic completion"},
       {label:"Physiological", note:"Patient cannot tolerate pneumoperitoneum or steep positioning"}
     ]
   },
@@ -492,7 +492,7 @@ const MIS_DISEASES = [
     items: [
       { k: "Failure to progress", v: "No advance after a reasonable, defined period" },
       { k: "Unclear anatomy", v: "Critical view / key structures cannot be safely identified" },
-      { k: "Haemorrhage", v: "Bleeding not controllable laparoscopically" },
+      { k: "Hemorrhage", v: "Bleeding not controllable laparoscopically" },
       { k: "Visceral injury", v: "Bowel/duct/vascular injury needing open repair" },
       { k: "Physiology", v: "Cardiorespiratory intolerance of pneumoperitoneum" },
       { k: "Equipment failure", v: "Insufflator/camera/energy device failure mid-case" }
@@ -514,7 +514,7 @@ const MIS_DISEASES = [
   ],
   related: [
     { id: "cholecystitis", note: "Difficult cholecystectomy: critical view, subtotal, or convert" },
-    { id: "crc",           note: "Conversion in laparoscopic colectomy for bulky/fixed tumours" },
+    { id: "crc",           note: "Conversion in laparoscopic colectomy for bulky/fixed tumors" },
     { id: "diverticulitis",note: "Hostile pelvis in complicated diverticular disease" }
   ]
 },
@@ -523,27 +523,27 @@ const MIS_DISEASES = [
   name: "Therapeutic Endoscopy (Principles)",
   organ: "Gastrointestinal tract lumen",
   severity: "moderate",
-  tags: ["endoscopy","EMR","ESD","stenting","haemostasis","MIS"],
+  tags: ["endoscopy","EMR","ESD","stenting","hemostasis","MIS"],
   hero: "Treating disease through the natural lumen with a flexible scope — the least invasive end of the MIS spectrum, from controlling a bleed to resecting early cancer.",
   keypoints: [
-    "Endoscopic haemostasis for GI bleeding combines therapies: injection (adrenaline), thermal/contact (heater probe, coagulation) and mechanical (clips, bands) — adrenaline alone is never enough",
+    "Endoscopic hemostasis for GI bleeding combines therapies: injection (adrenaline), thermal/contact (heater probe, coagulation) and mechanical (clips, bands) — adrenaline alone is never enough",
     "Polypectomy and EMR (endoscopic mucosal resection) remove mucosal/submucosal lesions; ESD (endoscopic submucosal dissection) takes larger lesions en-bloc",
-    "Self-expanding metal stents relieve malignant obstruction (oesophagus, gastric outlet, colon) and can bridge colonic-cancer obstruction to elective surgery",
-    "Variceal bleeding: band ligation (oesophageal) and the choices around gastric varices sit alongside pharmacological and radiological options",
+    "Self-expanding metal stents relieve malignant obstruction (esophagus, gastric outlet, colon) and can bridge colonic-cancer obstruction to elective surgery",
+    "Variceal bleeding: band ligation (esophageal) and the choices around gastric varices sit alongside pharmacological and radiological options",
     "Key risks: perforation, bleeding, and (for ERCP) post-ERCP pancreatitis",
     "Endoscopy is often the first therapeutic step before, instead of, or after surgery — know its limits"
   ],
   differentials: [
     "Endoscopic therapy — luminal, no incision, repeatable",
-    "Interventional radiology — embolisation/stenting via the vascular or percutaneous route",
+    "Interventional radiology — embolization/stenting via the vascular or percutaneous route",
     "Laparoscopic / open surgery — when endoscopy fails or disease is transmural",
     "Conservative / pharmacological management — selected stable patients"
   ],
   overview: {
-    definition: "The use of a flexible endoscope to deliver treatment within the GI lumen: haemostasis, resection of early neoplasia, dilatation/stenting of strictures, and biliary intervention (ERCP).",
-    pathophysiology: "Working through the natural orifice avoids any body-wall incision, minimising physiological insult and allowing repeat sessions. Submucosal injection lifts a lesion away from the muscularis to allow safe snare resection (EMR) or dissection (ESD); self-expanding stents exert radial force to re-canalise a malignant stricture. The trade-off is a confined two-dimensional working field, limited to mucosa/submucosa, with perforation and bleeding as principal hazards.",
+    definition: "The use of a flexible endoscope to deliver treatment within the GI lumen: hemostasis, resection of early neoplasia, dilatation/stenting of strictures, and biliary intervention (ERCP).",
+    pathophysiology: "Working through the natural orifice avoids any body-wall incision, minimizing physiological insult and allowing repeat sessions. Submucosal injection lifts a lesion away from the muscularis to allow safe snare resection (EMR) or dissection (ESD); self-expanding stents exert radial force to re-canalise a malignant stricture. The trade-off is a confined two-dimensional working field, limited to mucosa/submucosa, with perforation and bleeding as principal hazards.",
     classification: [
-      {label:"Haemostasis", note:"Injection + thermal + mechanical for non-variceal bleeding; banding for varices"},
+      {label:"Hemostasis", note:"Injection + thermal + mechanical for non-variceal bleeding; banding for varices"},
       {label:"Resection", note:"Polypectomy, EMR (piecemeal/en-bloc), ESD for en-bloc removal of larger early lesions"},
       {label:"Luminal patency", note:"Balloon dilatation; self-expanding metal stents for malignant obstruction"},
       {label:"Biliary / pancreatic (ERCP)", note:"Sphincterotomy, stone extraction, stenting; risk of post-ERCP pancreatitis"},
@@ -554,20 +554,20 @@ const MIS_DISEASES = [
     title: "Selected therapeutic-endoscopy applications & risks",
     items: [
       { k: "Non-variceal UGIB", v: "Dual therapy (e.g. adrenaline + clip/thermal); never adrenaline alone" },
-      { k: "Variceal bleeding", v: "Oesophageal band ligation; gastric varices per local protocol" },
+      { k: "Variceal bleeding", v: "Esophageal band ligation; gastric varices per local protocol" },
       { k: "Early GI neoplasia", v: "EMR / ESD for mucosal (and selected submucosal) lesions" },
-      { k: "Malignant obstruction", v: "SEMS for oesophageal, gastric-outlet and colonic obstruction" },
+      { k: "Malignant obstruction", v: "SEMS for esophageal, gastric-outlet and colonic obstruction" },
       { k: "Obstructing colon cancer", v: "Stent as a bridge to elective surgery in selected patients" },
       { k: "Main risks", v: "Perforation, bleeding, post-ERCP pancreatitis" }
     ]
   },
   guidelines: [
     { src: "BSG — British Society of Gastroenterology therapeutic-endoscopy guidelines" },
-    { src: "ESGE — European Society of Gastrointestinal Endoscopy (EMR/ESD, haemostasis, stenting)" }
+    { src: "ESGE — European Society of Gastrointestinal Endoscopy (EMR/ESD, hemostasis, stenting)" }
   ],
   pearls: [
     "For a bleeding peptic ulcer, combine two modalities — adrenaline injection plus a mechanical or thermal method",
-    "A colonic stent can convert an emergency obstructed cancer into an elective, optimised resection",
+    "A colonic stent can convert an emergency obstructed cancer into an elective, optimized resection",
     "Consent specifically for perforation and bleeding; for ERCP, for post-ERCP pancreatitis"
   ],
   mistakes: [
@@ -576,7 +576,7 @@ const MIS_DISEASES = [
     "Forgetting that endoscopic resection is limited to mucosa/submucosa — deeper invasion needs surgery"
   ],
   related: [
-    { id: "ugib",                       note: "Endoscopic haemostasis for upper-GI bleeding" },
+    { id: "ugib",                       note: "Endoscopic hemostasis for upper-GI bleeding" },
     { id: "crc",                        note: "Colonic stenting as a bridge to surgery in obstruction" },
     { id: "gastric-outlet-obstruction", note: "Enteral SEMS for malignant gastric-outlet obstruction" },
     { id: "barretts",                   note: "EMR/ESD and ablation for Barrett's dysplasia / early cancer" }
