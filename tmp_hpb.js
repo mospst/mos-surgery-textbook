@@ -76,6 +76,84 @@ window._TMP_HPB = [
   mistakes:["Over-using ERCP without cholangitis or obstruction","Delayed cholecystectomy allowing recurrent AP episodes","Routine prophylactic antibiotics in mild/moderate AP — increases resistant organisms","Early necrosectomy before 4 weeks — high mortality; undrained walled-off tissue","Inadequate fluid resuscitation in first 24–48 h"]
 },
 {
+  id:"biliary-colic", dept:"hpb", name:"Symptomatic Cholelithiasis (Biliary Colic)", latin:"Cholelithiasis symptomatica", organ:"Gallbladder",
+  severity:"low", tags:["gallbladder","gallstones","RUQ","biliary colic","elective","cholecystectomy"],
+  hero:"Intermittent right-upper-quadrant pain from transient cystic-duct obstruction by a gallstone, without inflammation or infection — the earliest symptomatic point on the gallstone-disease spectrum.",
+  keypoints:[
+    "Distinct from cholecystitis: pain is self-limiting (<6 h) with NO fever, NO leukocytosis, NEGATIVE Murphy's sign",
+    "Only 20% of gallstones ever become symptomatic; asymptomatic stones are NOT an indication for surgery",
+    "Ultrasound is first-line and confirms stones with >95% sensitivity",
+    "Definitive treatment is ELECTIVE laparoscopic cholecystectomy — timing is the key decision (see criteria)",
+    "Once symptomatic, recurrence is ~70% within 2 years and 1–2% per year develop a complication (cholecystitis, pancreatitis, choledocholithiasis)"
+  ],
+  differentials:["Acute cholecystitis (inflamed — persistent pain, fever, +Murphy's)","Peptic ulcer disease / GORD","Acute pancreatitis","Functional dyspepsia","Right-sided renal colic"],
+  mnemonics:[{name:"5 Fs",text:"Fat, Female, Fertile, Forty, Fair — classic risk profile (males and thin patients also affected)"},{name:"Colic ≠ Colicky",text:"Biliary 'colic' is a misnomer — the pain is CONSTANT for 1–6 h then subsides, not truly waxing/waning"}],
+  overview:{
+    definition:"Symptomatic gallstone disease in which a calculus transiently impacts the cystic duct or Hartmann's pouch, causing episodic biliary-type pain that resolves once the stone falls back — without the sustained obstruction, inflammation, or infection that define cholecystitis.",
+    epidemiology:"Gallstones present in 10–15% of Western adults; F:M = 2–3:1; incidence rises with age, obesity, rapid weight loss, pregnancy, and haemolytic disease. Only ~2–4% of stone carriers become symptomatic each year.",
+    pathophysiology:"Cholesterol supersaturation, gallbladder hypomotility, and cholesterol crystal nucleation form stones. A stone intermittently obstructing the cystic duct raises intraluminal pressure → gallbladder wall tension and visceral pain. When the stone disimpacts, pressure falls and pain resolves — no wall inflammation occurs (differentiating it from cholecystitis).",
+    classification:[
+      {label:"Asymptomatic cholelithiasis",note:"Incidental stones, no symptoms — expectant management; surgery only for specific high-risk groups (see criteria)"},
+      {label:"Biliary colic (uncomplicated symptomatic)",note:"Episodic biliary pain, normal bloods, normal gallbladder wall — elective cholecystectomy"},
+      {label:"Complicated gallstone disease",note:"Cholecystitis, choledocholithiasis, gallstone pancreatitis, cholangitis, gallstone ileus, Mirizzi — see dedicated entries"}
+    ]
+  },
+  diagnosis:{
+    history:["Episodic RUQ or epigastric pain, constant for 30 min–6 h then resolving","Radiation to right scapula tip or interscapular region","Often postprandial, especially after fatty meals; may wake patient at night","Nausea; bloating; NO fever or rigors","Prior similar self-limiting episodes"],
+    examination:["Usually normal between attacks","Mild RUQ tenderness during an attack","Murphy's sign NEGATIVE (positive = cholecystitis)","No fever, no jaundice — their presence signals a complication"],
+    investigations:[
+      {name:"Transabdominal US",role:"First-line: mobile echogenic foci with posterior acoustic shadowing; NORMAL wall thickness (<3 mm) and NO pericholecystic fluid — sensitivity >95% for stones"},
+      {name:"LFTs",role:"Should be NORMAL; elevated ALP/bilirubin suggests CBD stone (choledocholithiasis)"},
+      {name:"CBC, CRP",role:"Normal WBC/CRP confirm absence of inflammation — distinguishes from cholecystitis"},
+      {name:"Amylase/lipase",role:"Exclude gallstone pancreatitis if pain atypical or severe"},
+      {name:"MRCP",role:"If deranged LFTs or dilated CBD on US — non-invasively excludes choledocholithiasis before cholecystectomy"},
+      {name:"Endoscopic US (EUS)",role:"Highly sensitive for small CBD stones / microlithiasis when MRCP equivocal"}
+    ]
+  },
+  criteria:{
+    title:"Timing & Indications for Elective Cholecystectomy",
+    items:[
+      {k:"Golden window (symptomatic)",v:"Offer elective laparoscopic cholecystectomy promptly after first biliary-colic presentation — do NOT wait for a complication (NICE CG188)"},
+      {k:"Index-admission surgery",v:"If admitted with biliary colic, same-admission or early (within 6 weeks) lap chole reduces readmission and progression to cholecystitis/pancreatitis"},
+      {k:"After gallstone pancreatitis",v:"Cholecystectomy during the SAME admission once mild pancreatitis has settled — delay raises recurrence to ~30%"},
+      {k:"Asymptomatic — operate anyway if",v:"Porcelain gallbladder, gallbladder polyp ≥10 mm, stones >3 cm, haemolytic anaemia (e.g. spherocytosis), or transplant/bariatric candidate"},
+      {k:"Reasons to DELAY",v:"Active pregnancy (prefer 2nd trimester or defer to postpartum if mild), unfit/high anaesthetic risk, uncontrolled comorbidity, or need to first clear a CBD stone (ERCP/MRCP)"}
+    ]
+  },
+  scoring:[],
+  management:{
+    conservative:["Analgesia during attack: NSAID (e.g. diclofenac IM/PO) first-line — as effective as opioids and may reduce progression to cholecystitis","Antiemetic for nausea","Low-fat dietary advice reduces attack frequency but does NOT cure — not a substitute for surgery","Reassure asymptomatic incidental stones need no intervention"],
+    medical:["Ursodeoxycholic acid: only for small radiolucent cholesterol stones in patients unfit for surgery — slow, low efficacy, high recurrence off-treatment","No role for antibiotics (no infection present)"],
+    surgical:[
+      {name:"Elective laparoscopic cholecystectomy",when:"First-line for symptomatic stones; offer promptly after presentation — index admission or early elective list within ~6 weeks",notes:"Day-case in most fit patients; critical view of safety mandatory; on-table cholangiogram if any suspicion of CBD stone"},
+      {name:"Cholecystectomy + intraoperative CBD clearance",when:"Concurrent CBD stone on imaging — single-stage lap CBD exploration OR two-stage ERCP then lap chole",notes:"Choice depends on local expertise; single-stage avoids a second procedure"},
+      {name:"Open cholecystectomy",when:"Conversion for dense adhesions, unclear anatomy, or bile-duct injury concern",notes:"Not a failure — a safe decision; subtotal cholecystectomy if Calot's triangle unsafe"},
+      {name:"Expectant (no surgery)",when:"Asymptomatic incidental stones without high-risk features; or patient unfit/declines",notes:"Safety-net advice: return with fever, jaundice, or persistent pain (signals a complication)"}
+    ]
+  },
+  technique:{
+    title:"Elective Day-Case Laparoscopic Cholecystectomy",
+    prep:["Confirm normal LFTs and US; exclude CBD stone (MRCP if any doubt)","General anaesthesia; supine, reverse Trendelenburg with left tilt","4-port technique: 10 mm umbilical (camera), 10 mm epigastric, two 5 mm right subcostal","Antibiotic prophylaxis not routine for uncomplicated elective cases"],
+    steps:[
+      {n:1,t:"Establish pneumoperitoneum and ports",d:"Open (Hasson) umbilical entry; insufflate to 12–14 mmHg; place working ports under vision"},
+      {n:2,t:"Retract the gallbladder",d:"Fundus retracted cephalad over the liver; Hartmann's pouch retracted laterally to open Calot's triangle"},
+      {n:3,t:"Dissect the hepatocystic triangle",d:"Clear peritoneum and fibrofatty tissue; expose cystic duct and cystic artery"},
+      {n:4,t:"Achieve Critical View of Safety",d:"Only two structures entering the gallbladder, lower third separated from the liver bed — MANDATORY before any clip"},
+      {n:5,t:"Clip and divide cystic duct and artery",d:"Consider on-table cholangiogram if CBD stone suspected; clip and divide once anatomy confirmed"},
+      {n:6,t:"Detach gallbladder and retrieve",d:"Diathermy off the liver bed; haemostasis; retrieve in a bag; deflate and close; discharge same day if well"}
+    ],
+    pearls:["Elective setting is the safest time to operate — inflammation makes later surgery harder and more dangerous","Always achieve the Critical View of Safety before clipping — prevents bile-duct injury","Low threshold for intra-operative cholangiogram if LFTs were ever deranged","Warn the patient ~10–15% have persistent dyspepsia unrelated to stones (manage expectations pre-op)"]
+  },
+  guidelines:[{src:"NICE CG188 Gallstone Disease 2014"},{src:"SAGES Guidelines for Cholecystectomy 2022"},{src:"World Society of Emergency Surgery (WSES) Gallstone Guidelines 2016"}],
+  pearls:["Biliary colic = pain WITHOUT inflammation; normal WBC/CRP and negative Murphy's separate it from cholecystitis","Symptomatic stones warrant surgery even between attacks — recurrence and complication risk are high","Asymptomatic stones are generally left alone — surgery only for defined high-risk features","Deranged LFTs before cholecystectomy demand CBD imaging (MRCP/EUS) to avoid a retained duct stone"],
+  mistakes:["Operating on asymptomatic incidental stones without a high-risk indication","Labelling inflamed gallbladder (fever, +Murphy's, raised WBC) as 'colic' and delaying — that is cholecystitis","Missing a CBD stone by not checking LFTs before elective surgery","Endless dietary/medical temporising in a fit symptomatic patient — delays definitive cure and invites complications"],
+  related:[
+    {id:"cholecystitis", note:"The inflamed progression — persistent pain, fever, positive Murphy's; needs early (not elective) surgery"},
+    {id:"choledocholithiasis", note:"Stone migrates to the CBD — jaundice and deranged LFTs; needs ERCP/CBD clearance"},
+    {id:"ap", note:"Gallstone pancreatitis — a complication mandating same-admission cholecystectomy after recovery"}
+  ]
+},
+{
   id:"cholecystitis", dept:"hpb", name:"Acute Cholecystitis", latin:"Cholecystitis acuta", organ:"Gallbladder",
   severity:"medium", tags:["gallbladder","gallstones","RUQ","Murphy","laparoscopy"],
   hero:"Acute inflammation of the gallbladder wall, almost always due to cystic duct obstruction by calculi.",

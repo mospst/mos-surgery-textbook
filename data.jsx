@@ -4532,6 +4532,299 @@ const DISEASES = [
   },
 
   {
+    id: "biliary-colic",
+    dept: "hpb",
+    name: "Symptomatic Cholelithiasis (Biliary Colic)",
+    latin: "Cholelithiasis symptomatica",
+    organ: "Gallbladder",
+    severity: "low",
+    tags: ["gallbladder", "gallstones", "RUQ", "biliary colic", "elective", "cholecystectomy"],
+    hero: "Intermittent right-upper-quadrant pain from transient cystic-duct obstruction by a gallstone, without inflammation or infection — the earliest symptomatic point on the gallstone-disease spectrum.",
+    keypoints: [
+      "Distinct from cholecystitis: pain is self-limiting (<6 h) with NO fever, NO leukocytosis, NEGATIVE Murphy's sign",
+      "Only 20% of gallstones ever become symptomatic; asymptomatic stones are NOT an indication for surgery",
+      "Ultrasound is first-line and confirms stones with >95% sensitivity",
+      "Definitive treatment is ELECTIVE laparoscopic cholecystectomy — timing is the key decision (see criteria)",
+      "Once symptomatic, recurrence is ~70% within 2 years and 1–2% per year develop a complication (cholecystitis, pancreatitis, choledocholithiasis)"
+    ],
+    differentials: [
+      "Acute cholecystitis (inflamed — persistent pain, fever, +Murphy's)",
+      "Peptic ulcer disease / GORD",
+      "Acute pancreatitis",
+      "Functional dyspepsia",
+      "Right-sided renal colic"
+    ],
+    mnemonics: [
+      {
+        name: "5 Fs",
+        text: "Fat, Female, Fertile, Forty, Fair — classic risk profile (males and thin patients also affected)"
+      },
+      {
+        name: "Colic ≠ Colicky",
+        text: "Biliary 'colic' is a misnomer — the pain is CONSTANT for 1–6 h then subsides, not truly waxing/waning"
+      }
+    ],
+    overview: {
+      definition: "Symptomatic gallstone disease in which a calculus transiently impacts the cystic duct or Hartmann's pouch, causing episodic biliary-type pain that resolves once the stone falls back — without the sustained obstruction, inflammation, or infection that define cholecystitis.",
+      epidemiology: "Gallstones present in 10–15% of Western adults; F:M = 2–3:1; incidence rises with age, obesity, rapid weight loss, pregnancy, and haemolytic disease. Only ~2–4% of stone carriers become symptomatic each year.",
+      pathophysiology: "Cholesterol supersaturation, gallbladder hypomotility, and cholesterol crystal nucleation form stones. A stone intermittently obstructing the cystic duct raises intraluminal pressure → gallbladder wall tension and visceral pain. When the stone disimpacts, pressure falls and pain resolves — no wall inflammation occurs (differentiating it from cholecystitis).",
+      classification: [
+        {
+          label: "Asymptomatic cholelithiasis",
+          note: "Incidental stones, no symptoms — expectant management; surgery only for specific high-risk groups (see criteria)"
+        },
+        {
+          label: "Biliary colic (uncomplicated symptomatic)",
+          note: "Episodic biliary pain, normal bloods, normal gallbladder wall — elective cholecystectomy"
+        },
+        {
+          label: "Complicated gallstone disease",
+          note: "Cholecystitis, choledocholithiasis, gallstone pancreatitis, cholangitis, gallstone ileus, Mirizzi — see dedicated entries"
+        }
+      ]
+    },
+    diagnosis: {
+      history: [
+        "Episodic RUQ or epigastric pain, constant for 30 min–6 h then resolving",
+        "Radiation to right scapula tip or interscapular region",
+        "Often postprandial, especially after fatty meals; may wake patient at night",
+        "Nausea; bloating; NO fever or rigors",
+        "Prior similar self-limiting episodes"
+      ],
+      examination: [
+        "Usually normal between attacks",
+        "Mild RUQ tenderness during an attack",
+        "Murphy's sign NEGATIVE (positive = cholecystitis)",
+        "No fever, no jaundice — their presence signals a complication"
+      ],
+      investigations: [
+        {
+          name: "Transabdominal US",
+          role: "First-line: mobile echogenic foci with posterior acoustic shadowing; NORMAL wall thickness (<3 mm) and NO pericholecystic fluid — sensitivity >95% for stones"
+        },
+        {
+          name: "LFTs",
+          role: "Should be NORMAL; elevated ALP/bilirubin suggests CBD stone (choledocholithiasis)"
+        },
+        {
+          name: "CBC, CRP",
+          role: "Normal WBC/CRP confirm absence of inflammation — distinguishes from cholecystitis"
+        },
+        {
+          name: "Amylase/lipase",
+          role: "Exclude gallstone pancreatitis if pain atypical or severe"
+        },
+        {
+          name: "MRCP",
+          role: "If deranged LFTs or dilated CBD on US — non-invasively excludes choledocholithiasis before cholecystectomy"
+        },
+        {
+          name: "Endoscopic US (EUS)",
+          role: "Highly sensitive for small CBD stones / microlithiasis when MRCP equivocal"
+        }
+      ]
+    },
+    criteria: {
+      title: "Timing & Indications for Elective Cholecystectomy",
+      items: [
+        {
+          k: "Golden window (symptomatic)",
+          v: "Offer elective laparoscopic cholecystectomy promptly after first biliary-colic presentation — do NOT wait for a complication (NICE CG188)"
+        },
+        {
+          k: "Index-admission surgery",
+          v: "If admitted with biliary colic, same-admission or early (within 6 weeks) lap chole reduces readmission and progression to cholecystitis/pancreatitis"
+        },
+        {
+          k: "After gallstone pancreatitis",
+          v: "Cholecystectomy during the SAME admission once mild pancreatitis has settled — delay raises recurrence to ~30%"
+        },
+        {
+          k: "Asymptomatic — operate anyway if",
+          v: "Porcelain gallbladder, gallbladder polyp ≥10 mm, stones >3 cm, haemolytic anaemia (e.g. spherocytosis), or transplant/bariatric candidate"
+        },
+        {
+          k: "Reasons to DELAY",
+          v: "Active pregnancy (prefer 2nd trimester or defer to postpartum if mild), unfit/high anaesthetic risk, uncontrolled comorbidity, or need to first clear a CBD stone (ERCP/MRCP)"
+        }
+      ]
+    },
+    scoring: [],
+    management: {
+      conservative: [
+        "Analgesia during attack: NSAID (e.g. diclofenac IM/PO) first-line — as effective as opioids and may reduce progression to cholecystitis",
+        "Antiemetic for nausea",
+        "Low-fat dietary advice reduces attack frequency but does NOT cure — not a substitute for surgery",
+        "Reassure asymptomatic incidental stones need no intervention"
+      ],
+      medical: [
+        "Ursodeoxycholic acid: only for small radiolucent cholesterol stones in patients unfit for surgery — slow, low efficacy, high recurrence off-treatment",
+        "No role for antibiotics (no infection present)"
+      ],
+      surgical: [
+        {
+          name: "Elective laparoscopic cholecystectomy",
+          when: "First-line for symptomatic stones; offer promptly after presentation — index admission or early elective list within ~6 weeks",
+          notes: "Day-case in most fit patients; critical view of safety mandatory; on-table cholangiogram if any suspicion of CBD stone"
+        },
+        {
+          name: "Cholecystectomy + intraoperative CBD clearance",
+          when: "Concurrent CBD stone on imaging — single-stage lap CBD exploration OR two-stage ERCP then lap chole",
+          notes: "Choice depends on local expertise; single-stage avoids a second procedure"
+        },
+        {
+          name: "Open cholecystectomy",
+          when: "Conversion for dense adhesions, unclear anatomy, or bile-duct injury concern",
+          notes: "Not a failure — a safe decision; subtotal cholecystectomy if Calot's triangle unsafe"
+        },
+        {
+          name: "Expectant (no surgery)",
+          when: "Asymptomatic incidental stones without high-risk features; or patient unfit/declines",
+          notes: "Safety-net advice: return with fever, jaundice, or persistent pain (signals a complication)"
+        }
+      ]
+    },
+    technique: {
+      title: "Elective Day-Case Laparoscopic Cholecystectomy",
+      prep: [
+        "Confirm normal LFTs and US; exclude CBD stone (MRCP if any doubt)",
+        "General anaesthesia; supine, reverse Trendelenburg with left tilt",
+        "4-port technique: 10 mm umbilical (camera), 10 mm epigastric, two 5 mm right subcostal",
+        "Antibiotic prophylaxis not routine for uncomplicated elective cases"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Establish pneumoperitoneum and ports",
+          d: "Open (Hasson) umbilical entry; insufflate to 12–14 mmHg; place working ports under vision"
+        },
+        {
+          n: 2,
+          t: "Retract the gallbladder",
+          d: "Fundus retracted cephalad over the liver; Hartmann's pouch retracted laterally to open Calot's triangle"
+        },
+        {
+          n: 3,
+          t: "Dissect the hepatocystic triangle",
+          d: "Clear peritoneum and fibrofatty tissue; expose cystic duct and cystic artery"
+        },
+        {
+          n: 4,
+          t: "Achieve Critical View of Safety",
+          d: "Only two structures entering the gallbladder, lower third separated from the liver bed — MANDATORY before any clip"
+        },
+        {
+          n: 5,
+          t: "Clip and divide cystic duct and artery",
+          d: "Consider on-table cholangiogram if CBD stone suspected; clip and divide once anatomy confirmed"
+        },
+        {
+          n: 6,
+          t: "Detach gallbladder and retrieve",
+          d: "Diathermy off the liver bed; haemostasis; retrieve in a bag; deflate and close; discharge same day if well"
+        }
+      ],
+      pearls: [
+        "Elective setting is the safest time to operate — inflammation makes later surgery harder and more dangerous",
+        "Always achieve the Critical View of Safety before clipping — prevents bile-duct injury",
+        "Low threshold for intra-operative cholangiogram if LFTs were ever deranged",
+        "Warn the patient ~10–15% have persistent dyspepsia unrelated to stones (manage expectations pre-op)"
+      ]
+    },
+    guidelines: [
+      {
+        src: "NICE CG188 Gallstone Disease 2014"
+      },
+      {
+        src: "SAGES Guidelines for Cholecystectomy 2022"
+      },
+      {
+        src: "World Society of Emergency Surgery (WSES) Gallstone Guidelines 2016",
+        url: "https://wjes.biomedcentral.com/"
+      }
+    ],
+    pearls: [
+      "Biliary colic = pain WITHOUT inflammation; normal WBC/CRP and negative Murphy's separate it from cholecystitis",
+      "Symptomatic stones warrant surgery even between attacks — recurrence and complication risk are high",
+      "Asymptomatic stones are generally left alone — surgery only for defined high-risk features",
+      "Deranged LFTs before cholecystectomy demand CBD imaging (MRCP/EUS) to avoid a retained duct stone"
+    ],
+    mistakes: [
+      "Operating on asymptomatic incidental stones without a high-risk indication",
+      "Labelling inflamed gallbladder (fever, +Murphy's, raised WBC) as 'colic' and delaying — that is cholecystitis",
+      "Missing a CBD stone by not checking LFTs before elective surgery",
+      "Endless dietary/medical temporising in a fit symptomatic patient — delays definitive cure and invites complications"
+    ],
+    related: [
+      {
+        id: "cholecystitis",
+        note: "The inflamed progression — persistent pain, fever, positive Murphy's; needs early (not elective) surgery"
+      },
+      {
+        id: "choledocholithiasis",
+        note: "Stone migrates to the CBD — jaundice and deranged LFTs; needs ERCP/CBD clearance"
+      },
+      {
+        id: "ap",
+        note: "Gallstone pancreatitis — a complication mandating same-admission cholecystectomy after recovery"
+      }
+    ],
+    videoResources: [
+      {
+        title: "Search operation videos on WebSurg / IRCAD",
+        source: "WebSurg / IRCAD",
+        url: "https://www.google.com/search?q=elective%20laparoscopic%20cholecystectomy%20day%20case%20site%3Awebsurg.com",
+        tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
+        query: "elective laparoscopic cholecystectomy day case"
+      },
+      {
+        title: "Search animation-enhanced videos on TVASurg",
+        source: "Toronto Video Atlas of Surgery",
+        url: "https://www.google.com/search?q=elective%20laparoscopic%20cholecystectomy%20day%20case%20site%3Atvasurg.ca",
+        tags: ["video", "open-access", "animation", "anatomy"],
+        query: "elective laparoscopic cholecystectomy day case"
+      },
+      {
+        title: "Search operation videos on SAGES TV",
+        source: "SAGES TV",
+        url: "https://www.google.com/search?q=elective%20laparoscopic%20cholecystectomy%20day%20case%20site%3Asages.org",
+        tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
+        query: "elective laparoscopic cholecystectomy day case"
+      }
+    ],
+    anatomyResources: [
+      {
+        title: "Search radiology cases and anatomy",
+        source: "Radiopaedia",
+        url: "https://radiopaedia.org/search?q=gallstones",
+        tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
+        query: "gallstones"
+      },
+      {
+        title: "Search open anatomy/media images",
+        source: "Wikimedia Commons",
+        url: "https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search=gallstones",
+        tags: ["image", "open-license", "anatomy", "photo", "diagram"],
+        query: "gallstones"
+      },
+      {
+        title: "Search public-domain cancer illustrations",
+        source: "NCI Visuals Online",
+        url: "https://www.google.com/search?q=gallstones%20site%3Avisualsonline.cancer.gov",
+        tags: ["image", "public-domain", "cancer", "illustration"],
+        query: "gallstones"
+      },
+      {
+        title: "Search gross and histopathology image atlas",
+        source: "University of Utah WebPath",
+        url: "https://www.google.com/search?q=gallstones%20site%3Awebpath.med.utah.edu",
+        tags: ["image", "gross-pathology", "histology", "teaching"],
+        query: "gallstones"
+      }
+    ]
+  },
+
+  {
     id: "cholecystitis",
     dept: "hpb",
     name: "Acute Cholecystitis",
@@ -48236,6 +48529,209 @@ const PROCEDURES = [
     tags: ["pancreas", "gallstones", "alcohol", "amylase", "lipase", "SIRS", "procedure", "operative-steps"]
   },
   {
+    id: "proc-biliary-colic",
+    diseaseId: "biliary-colic",
+    dept: "hpb",
+    name: "Elective Day-Case Laparoscopic Cholecystectomy",
+    disease: "Symptomatic Cholelithiasis (Biliary Colic)",
+    organ: "Gallbladder",
+    severity: "low",
+    summary: "Intermittent right-upper-quadrant pain from transient cystic-duct obstruction by a gallstone, without inflammation or infection — the earliest symptomatic point on the gallstone-disease spectrum.",
+    indications: [
+      {
+        name: "Elective laparoscopic cholecystectomy",
+        when: "First-line for symptomatic stones; offer promptly after presentation — index admission or early elective list within ~6 weeks",
+        notes: "Day-case in most fit patients; critical view of safety mandatory; on-table cholangiogram if any suspicion of CBD stone"
+      },
+      {
+        name: "Cholecystectomy + intraoperative CBD clearance",
+        when: "Concurrent CBD stone on imaging — single-stage lap CBD exploration OR two-stage ERCP then lap chole",
+        notes: "Choice depends on local expertise; single-stage avoids a second procedure"
+      },
+      {
+        name: "Open cholecystectomy",
+        when: "Conversion for dense adhesions, unclear anatomy, or bile-duct injury concern",
+        notes: "Not a failure — a safe decision; subtotal cholecystectomy if Calot's triangle unsafe"
+      },
+      {
+        name: "Expectant (no surgery)",
+        when: "Asymptomatic incidental stones without high-risk features; or patient unfit/declines",
+        notes: "Safety-net advice: return with fever, jaundice, or persistent pain (signals a complication)"
+      }
+    ],
+    anatomyFocus: [
+      "Distinct from cholecystitis: pain is self-limiting (<6 h) with NO fever, NO leukocytosis, NEGATIVE Murphy's sign",
+      "Only 20% of gallstones ever become symptomatic; asymptomatic stones are NOT an indication for surgery",
+      "Differentiate from: Acute cholecystitis (inflamed — persistent pain, fever, +Murphy's), Peptic ulcer disease / GORD, Acute pancreatitis, Functional dyspepsia"
+    ],
+    prep: [
+      "Confirm normal LFTs and US; exclude CBD stone (MRCP if any doubt)",
+      "General anaesthesia; supine, reverse Trendelenburg with left tilt",
+      "4-port technique: 10 mm umbilical (camera), 10 mm epigastric, two 5 mm right subcostal",
+      "Antibiotic prophylaxis not routine for uncomplicated elective cases"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Establish pneumoperitoneum and ports",
+        d: "Open (Hasson) umbilical entry; insufflate to 12–14 mmHg; place working ports under vision"
+      },
+      {
+        n: 2,
+        t: "Retract the gallbladder",
+        d: "Fundus retracted cephalad over the liver; Hartmann's pouch retracted laterally to open Calot's triangle"
+      },
+      {
+        n: 3,
+        t: "Dissect the hepatocystic triangle",
+        d: "Clear peritoneum and fibrofatty tissue; expose cystic duct and cystic artery"
+      },
+      {
+        n: 4,
+        t: "Achieve Critical View of Safety",
+        d: "Only two structures entering the gallbladder, lower third separated from the liver bed — MANDATORY before any clip"
+      },
+      {
+        n: 5,
+        t: "Clip and divide cystic duct and artery",
+        d: "Consider on-table cholangiogram if CBD stone suspected; clip and divide once anatomy confirmed"
+      },
+      {
+        n: 6,
+        t: "Detach gallbladder and retrieve",
+        d: "Diathermy off the liver bed; haemostasis; retrieve in a bag; deflate and close; discharge same day if well"
+      }
+    ],
+    pearls: [
+      "Elective setting is the safest time to operate — inflammation makes later surgery harder and more dangerous",
+      "Always achieve the Critical View of Safety before clipping — prevents bile-duct injury",
+      "Low threshold for intra-operative cholangiogram if LFTs were ever deranged",
+      "Warn the patient ~10–15% have persistent dyspepsia unrelated to stones (manage expectations pre-op)",
+      "Biliary colic = pain WITHOUT inflammation; normal WBC/CRP and negative Murphy's separate it from cholecystitis",
+      "Symptomatic stones warrant surgery even between attacks — recurrence and complication risk are high"
+    ],
+    pitfalls: [
+      "Operating on asymptomatic incidental stones without a high-risk indication",
+      "Labelling inflamed gallbladder (fever, +Murphy's, raised WBC) as 'colic' and delaying — that is cholecystitis",
+      "Missing a CBD stone by not checking LFTs before elective surgery",
+      "Endless dietary/medical temporising in a fit symptomatic patient — delays definitive cure and invites complications"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Elective Day-Case Laparoscopic Cholecystectomy), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "Confirm normal LFTs and US; exclude CBD stone (MRCP if any doubt)",
+          "General anaesthesia; supine, reverse Trendelenburg with left tilt",
+          "4-port technique: 10 mm umbilical (camera), 10 mm epigastric, two 5 mm right subcostal"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "Distinct from cholecystitis: pain is self-limiting (<6 h) with NO fever, NO leukocytosis, NEGATIVE Murphy's sign",
+          "Only 20% of gallstones ever become symptomatic; asymptomatic stones are NOT an indication for surgery",
+          "Ultrasound is first-line and confirms stones with >95% sensitivity",
+          "Confirm this is not: Acute cholecystitis (inflamed — persistent pain, fever, +Murphy's), Peptic ulcer disease / GORD, Acute pancreatitis"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "Elective setting is the safest time to operate — inflammation makes later surgery harder and more dangerous",
+          "Always achieve the Critical View of Safety before clipping — prevents bile-duct injury",
+          "Low threshold for intra-operative cholangiogram if LFTs were ever deranged",
+          "Biliary colic = pain WITHOUT inflammation; normal WBC/CRP and negative Murphy's separate it from cholecystitis"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Operating on asymptomatic incidental stones without a high-risk indication",
+          "Labelling inflamed gallbladder (fever, +Murphy's, raised WBC) as 'colic' and delaying — that is cholecystitis",
+          "Missing a CBD stone by not checking LFTs before elective surgery",
+          "Endless dietary/medical temporising in a fit symptomatic patient — delays definitive cure and invites complications"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Symptomatic Cholelithiasis (Biliary Colic).",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [
+      {
+        title: "Search radiology cases and anatomy",
+        source: "Radiopaedia",
+        url: "https://radiopaedia.org/search?q=gallstones",
+        tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
+        query: "gallstones"
+      },
+      {
+        title: "Search open anatomy/media images",
+        source: "Wikimedia Commons",
+        url: "https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search=gallstones",
+        tags: ["image", "open-license", "anatomy", "photo", "diagram"],
+        query: "gallstones"
+      },
+      {
+        title: "Search public-domain cancer illustrations",
+        source: "NCI Visuals Online",
+        url: "https://www.google.com/search?q=gallstones%20site%3Avisualsonline.cancer.gov",
+        tags: ["image", "public-domain", "cancer", "illustration"],
+        query: "gallstones"
+      },
+      {
+        title: "Search gross and histopathology image atlas",
+        source: "University of Utah WebPath",
+        url: "https://www.google.com/search?q=gallstones%20site%3Awebpath.med.utah.edu",
+        tags: ["image", "gross-pathology", "histology", "teaching"],
+        query: "gallstones"
+      }
+    ],
+    videoResources: [
+      {
+        title: "Search operation videos on WebSurg / IRCAD",
+        source: "WebSurg / IRCAD",
+        url: "https://www.google.com/search?q=elective%20laparoscopic%20cholecystectomy%20day%20case%20site%3Awebsurg.com",
+        tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
+        query: "elective laparoscopic cholecystectomy day case"
+      },
+      {
+        title: "Search animation-enhanced videos on TVASurg",
+        source: "Toronto Video Atlas of Surgery",
+        url: "https://www.google.com/search?q=elective%20laparoscopic%20cholecystectomy%20day%20case%20site%3Atvasurg.ca",
+        tags: ["video", "open-access", "animation", "anatomy"],
+        query: "elective laparoscopic cholecystectomy day case"
+      },
+      {
+        title: "Search operation videos on SAGES TV",
+        source: "SAGES TV",
+        url: "https://www.google.com/search?q=elective%20laparoscopic%20cholecystectomy%20day%20case%20site%3Asages.org",
+        tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
+        query: "elective laparoscopic cholecystectomy day case"
+      }
+    ],
+    tags: [
+      "gallbladder",
+      "gallstones",
+      "RUQ",
+      "biliary colic",
+      "elective",
+      "cholecystectomy",
+      "procedure",
+      "operative-steps"
+    ]
+  },
+  {
     id: "proc-cholecystitis",
     diseaseId: "cholecystitis",
     dept: "hpb",
@@ -75908,7 +76404,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Aorta, infrarenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Anal Canal Cancer", "Abdominal Aortic Aneurysm", "Penetrating Abdominal Trauma", "Inguinal Hernia"],
+    options: [
+      "Crohn's Disease",
+      "Abdominal Aortic Aneurysm",
+      "Wound Dehiscence / Burst Abdomen",
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)"
+    ],
     answer: 1,
     explanation: "Permanent focal dilation of the abdominal aorta ≥3.0 cm or >50% of expected diameter.",
     anatomyFocus: [
@@ -75929,10 +76430,10 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lower limb arteries.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Damage Control Laparotomy",
-      "Conn's Syndrome",
+      "Trauma Airway Management (ATLS 11)",
+      "Phaeochromocytoma",
       "Chronic Limb-Threatening Ischemia",
-      "Small Bowel Tumors"
+      "Angiodysplasia"
     ],
     answer: 2,
     explanation: "Rest pain >2 weeks, tissue loss, or gangrene attributable to proven peripheral arterial insufficiency.",
@@ -75953,7 +76454,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Internal carotid artery.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Caustic Esophageal Injury", "Femoral Hernia", "Liver Abscess", "Carotid Stenosis"],
+    options: ["Zenker's Diverticulum", "Inguinal Hernia", "Portal Hypertension", "Carotid Stenosis"],
     answer: 3,
     explanation: "Atherosclerotic narrowing of the carotid bifurcation — the most common surgically treatable cause of ischemic stroke.",
     anatomyFocus: [
@@ -75975,9 +76476,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Deep Vein Thrombosis",
-      "Intraductal Papillary Mucinous Neoplasm",
+      "Hydatid Cyst of the Liver",
       "Popliteal Artery Aneurysm",
-      "Colorectal Liver Metastases"
+      "Gallbladder Cancer"
     ],
     answer: 0,
     explanation: "Thrombus in the deep venous system — risk of pulmonary embolism and long-term post-thrombotic syndrome.",
@@ -75999,10 +76500,10 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thoracic aorta.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Principles of Laparoscopy & Pneumoperitoneum",
+      "Kaposi's Sarcoma",
       "Thoracic Aortic Aneurysm",
-      "Barrett's Esophagus",
-      "Spigelian Hernia"
+      "Gastrointestinal Stromal Tumor",
+      "Parastomal Hernia"
     ],
     answer: 1,
     explanation: "Dilation of the thoracic aorta ≥4.5 cm with risk of rupture, dissection, or aorto-enteric fistula.",
@@ -76023,7 +76524,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thoracic/abdominal aorta.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Splenic Abscess", "Meckel's Diverticulum", "Acute Aortic Dissection", "Lung Cancer"],
+    options: [
+      "Hereditary Spherocytosis",
+      "Caustic Esophageal Injury",
+      "Acute Aortic Dissection",
+      "Living Donor Hepatectomy"
+    ],
     answer: 2,
     explanation: "Tear in the aortic intima creating a false lumen — Stanford Type A requires emergency cardiac surgery, Type B managed medically unless complicated.",
     anatomyFocus: [
@@ -76043,12 +76549,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lower limb arteries.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Chest Wall Tumor",
-      "Esophageal Perforation (Boerhaave)",
-      "Renal Trauma",
-      "Peripheral Arterial Disease"
-    ],
+    options: ["Mediastinal Mass", "Achalasia", "Acute Compartment Syndrome (Limb)", "Peripheral Arterial Disease"],
     answer: 3,
     explanation: "Atherosclerotic occlusive disease of lower limb arteries causing intermittent claudication; ABI <0.9 confirms diagnosis.",
     anatomyFocus: [
@@ -76070,9 +76571,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Acute Mesenteric Ischemia",
-      "Principles of Laparoscopy & Pneumoperitoneum",
-      "Pelvic Fracture (Hemorrhage Control)",
-      "Pancreatic Ductal Adenocarcinoma"
+      "Kaposi's Sarcoma",
+      "Traumatic Diaphragm Rupture",
+      "Choledocholithiasis"
     ],
     answer: 0,
     explanation: "Sudden reduction in mesenteric blood flow causing bowel infarction — mortality 60–80% without rapid diagnosis and intervention.",
@@ -76093,12 +76594,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Superficial veins, lower limb.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Hemorrhagic Shock (ATLS 11 Classification)",
-      "Varicose Veins",
-      "Radiation Enteritis",
-      "Graves' Disease"
-    ],
+    options: ["ATLS Primary Survey (X-ABCDE)", "Varicose Veins", "Short Bowel Syndrome", "Thyroid Cancer"],
     answer: 1,
     explanation: "Tortuous dilated superficial veins due to valvular incompetence; most commonly great saphenous vein (GSV) territory.",
     anatomyFocus: [
@@ -76118,7 +76614,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Renal artery.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Chest Wall Tumor", "Breast Cancer", "Renal Artery Stenosis", "Thoracic Outlet Syndrome"],
+    options: [
+      "Mediastinal Mass",
+      "Rectal Bleeding (Hematochezia)",
+      "Renal Artery Stenosis",
+      "Thoracic Outlet Syndrome"
+    ],
     answer: 2,
     explanation: "Narrowing of the renal artery causing renovascular hypertension and ischemic nephropathy; commonest causes are atherosclerosis and fibromuscular dysplasia.",
     anatomyFocus: [
@@ -76140,8 +76641,8 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Thoracic Aortic Aneurysm",
-      "Thyroid Cancer",
-      "Complications of Minimally Invasive Surgery",
+      "Phyllodes Tumor",
+      "Energy Devices in Minimally Invasive Surgery",
       "Popliteal Artery Aneurysm"
     ],
     answer: 3,
@@ -76163,7 +76664,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Carotid bifurcation.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Carotid Body Tumor", "Acute Cholecystitis", "Adrenal Incidentaloma", "Splenic Trauma"],
+    options: [
+      "Carotid Body Tumor",
+      "Symptomatic Cholelithiasis (Biliary Colic)",
+      "Adrenocortical Carcinoma",
+      "Necrotizing Fasciitis"
+    ],
     answer: 0,
     explanation: "Rare paraganglioma arising from chemoreceptor tissue at the carotid bifurcation; splays the ICA and ECA; Shamblin classification guides surgical risk.",
     anatomyFocus: [
@@ -76183,7 +76689,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Subclavian vessels / brachial plexus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Gastric Outlet Obstruction", "Thoracic Outlet Syndrome", "Parastomal Hernia", "Epigastric Hernia"],
+    options: ["Dysphagia", "Thoracic Outlet Syndrome", "Strangulated Hernia", "Incisional Hernia"],
     answer: 1,
     explanation: "Compression of neurovascular structures at the thoracic outlet — neurogenic TOS accounts for 95% of cases; vascular TOS is rare but more urgent.",
     anatomyFocus: [
@@ -76203,7 +76709,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Splenic/hepatic/SMA artery.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Bowel Perforation", "Radiation Enteritis", "Splanchnic Artery Aneurysm", "Phaeochromocytoma"],
+    options: [
+      "Lynch Syndrome (HNPCC)",
+      "Short Bowel Syndrome",
+      "Splanchnic Artery Aneurysm",
+      "Secondary / Tertiary Hyperparathyroidism"
+    ],
     answer: 2,
     explanation: "Most involve the splenic artery (60%); rupture risk highest in pregnancy; endovascular treatment is first-line for most.",
     anatomyFocus: [
@@ -76223,12 +76734,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Major vessels.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Gastro-Esophageal Reflux Disease (GERD)",
-      "Hepatic Adenoma",
-      "Multinodular Goitre",
-      "Vascular Trauma"
-    ],
+    options: ["Radiation Enteritis", "Colorectal Liver Metastases", "Graves' Disease", "Vascular Trauma"],
     answer: 3,
     explanation: "Injury to major vessels requiring hemorrhage control — temporary vascular shunting bridges to definitive repair; REBOA enables resuscitation in non-compressible hemorrhage.",
     anatomyFocus: [
@@ -76250,9 +76756,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Lymphedema — Surgical",
-      "Perforated Peptic Ulcer",
-      "Perianal Abscess & Fistula-in-Ano",
-      "Angiodysplasia"
+      "Small Bowel Tumors",
+      "Anal Fissure",
+      "Pseudo-Obstruction (Ogilvie's Syndrome)"
     ],
     answer: 0,
     explanation: "Chronic tissue swelling from lymphatic insufficiency — surgical options include LVA and vascularized lymph node transfer for functional restoration.",
@@ -76273,13 +76779,38 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Conversion to Open Surgery", "Acute Pancreatitis", "Thyroid Cancer", "Leiomyosarcoma"],
+    options: ["Diagnostic Laparoscopy", "Acute Pancreatitis", "Phyllodes Tumor", "Liposarcoma"],
     answer: 1,
     explanation: "Acute inflammatory process of the pancreas with varying degrees of regional and remote organ involvement.",
     anatomyFocus: [
       "80% mild (interstitial); 20% severe (necrotizing) — mortality up to 30% in infected necrotizing pancreatitis",
       "Gallstones (45%) and alcohol (35%) account for >80% of cases",
       "Diagnosis: characteristic pain + amylase/lipase ≥3× ULN ± CT findings"
+    ]
+  },
+  {
+    id: "img-biliary-colic",
+    dept: "hpb",
+    disease: "biliary-colic",
+    diseaseName: "Symptomatic Cholelithiasis (Biliary Colic)",
+    source: "Radiopaedia",
+    url: "https://radiopaedia.org/search?q=gallstones",
+    query: "gallstones",
+    tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
+    prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Gallbladder.",
+    stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
+    options: [
+      "Retroperitoneal Sarcoma",
+      "Hidradenitis Suppurativa",
+      "Symptomatic Cholelithiasis (Biliary Colic)",
+      "Breast Abscess"
+    ],
+    answer: 2,
+    explanation: "Intermittent right-upper-quadrant pain from transient cystic-duct obstruction by a gallstone, without inflammation or infection — the earliest symptomatic point on the gallstone-disease spectrum.",
+    anatomyFocus: [
+      "Distinct from cholecystitis: pain is self-limiting (<6 h) with NO fever, NO leukocytosis, NEGATIVE Murphy's sign",
+      "Only 20% of gallstones ever become symptomatic; asymptomatic stones are NOT an indication for surgery",
+      "Ultrasound is first-line and confirms stones with >95% sensitivity"
     ]
   },
   {
@@ -76293,8 +76824,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Gallbladder.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Melanoma", "Liposarcoma", "Acute Cholecystitis", "ATLS Primary Survey (X-ABCDE)"],
-    answer: 2,
+    options: [
+      "Primary Hyperparathyroidism",
+      "Symptomatic Cholelithiasis (Biliary Colic)",
+      "Hidradenitis Suppurativa",
+      "Acute Cholecystitis"
+    ],
+    answer: 3,
     explanation: "Acute inflammation of the gallbladder wall, almost always due to cystic duct obstruction by calculi.",
     anatomyFocus: [
       "95% calculous; 5% acalculous (ICU, post-major surgery, TPN, burns)",
@@ -76313,13 +76849,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Bile duct.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Secondary / Tertiary Hyperparathyroidism",
-      "Acute Cholecystitis",
-      "Liposarcoma",
-      "Acute Cholangitis"
-    ],
-    answer: 3,
+    options: ["Acute Cholangitis", "Bowel Perforation", "Small Bowel Obstruction", "Insulinoma"],
+    answer: 0,
     explanation: "Bacterial infection of the biliary tract due to biliary obstruction, ranging from mild to life-threatening suppurative cholangitis.",
     anatomyFocus: [
       "Charcot's triad: fever + RUQ pain + jaundice — present in only 50–70%",
@@ -76338,13 +76869,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Hepatocellular Carcinoma",
-      "Pseudo-Obstruction (Ogilvie's Syndrome)",
-      "Gastrointestinal Stromal Tumor",
-      "MEN1 (Multiple Endocrine Neoplasia Type 1)"
-    ],
-    answer: 0,
+    options: ["Hollow Viscus / Bowel Trauma", "Hepatocellular Carcinoma", "Splenic Trauma", "Parastomal Hernia"],
+    answer: 1,
     explanation: "Primary malignancy of hepatocytes, arising in >90% of cases in the setting of chronic liver disease or cirrhosis.",
     anatomyFocus: [
       "Third most common cause of cancer death worldwide; male:female = 3:1",
@@ -76363,8 +76889,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Bile duct.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Traumatic Diaphragm Rupture", "Choledocholithiasis", "Liver Trauma", "Spigelian Hernia"],
-    answer: 1,
+    options: [
+      "Deep Vein Thrombosis",
+      "Lynch Syndrome (HNPCC)",
+      "Choledocholithiasis",
+      "Laparoscopic Access Techniques"
+    ],
+    answer: 2,
     explanation: "Presence of gallstones within the common bile duct, causing obstruction and risk of cholangitis, pancreatitis, or secondary biliary cirrhosis.",
     anatomyFocus: [
       "Present in 10–15% of patients with symptomatic gallstones; increases with age",
@@ -76384,12 +76915,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Thoracic Aortic Aneurysm",
-      "Bowel Perforation",
-      "Pancreatic Ductal Adenocarcinoma",
-      "Energy Devices in Minimally Invasive Surgery"
+      "Umbilical Hernia",
+      "Esophageal Cancer",
+      "Rectal Bleeding (Hematochezia)",
+      "Pancreatic Ductal Adenocarcinoma"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Aggressive exocrine pancreatic malignancy with 5-year survival <12%; most patients present with locally advanced or metastatic disease.",
     anatomyFocus: [
       "Pancreatic head (75%): obstructive jaundice, Courvoisier's sign, weight loss — earlier presentation than body/tail",
@@ -76408,8 +76939,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Incisional Hernia", "Hiatus Hernia", "Breast Cancer", "Chronic Pancreatitis"],
-    answer: 3,
+    options: ["Chronic Pancreatitis", "Hollow Viscus / Bowel Trauma", "Vascular Trauma", "Liver Trauma"],
+    answer: 0,
     explanation: "Progressive fibroinflammatory disease of the pancreas leading to irreversible parenchymal damage, exocrine/endocrine insufficiency, and chronic pain.",
     anatomyFocus: [
       "Alcohol (70%) and smoking are major risk factors; CFTR mutations, autoimmune, tropical (cassava) are less common",
@@ -76429,12 +76960,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Bile duct.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Familial Adenomatous Polyposis",
       "Extrahepatic Cholangiocarcinoma",
-      "Traumatic Diaphragm Rupture",
-      "Lymphedema — Surgical",
-      "Hollow Viscus / Bowel Trauma"
+      "Adrenal Incidentaloma",
+      "Lynch Syndrome (HNPCC)"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Malignant tumor of the extrahepatic bile ducts; perihilar (Klatskin) tumors account for 60–70% and are the most surgically challenging.",
     anatomyFocus: [
       "Classified by location: intrahepatic (ICC), perihilar/Klatskin (60–70%), distal (20–30%)",
@@ -76453,8 +76984,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Lynch Syndrome (HNPCC)", "Intrahepatic Cholangiocarcinoma", "Insulinoma", "Bowel Perforation"],
-    answer: 1,
+    options: [
+      "Abdominal Compartment Syndrome",
+      "Hiatus Hernia",
+      "Intrahepatic Cholangiocarcinoma",
+      "Choledocholithiasis"
+    ],
+    answer: 2,
     explanation: "Primary hepatic malignancy arising from intrahepatic bile duct epithelium; the second most common primary liver cancer after HCC.",
     anatomyFocus: [
       "Incidence rising worldwide; associated with cirrhosis, HBV, HCV, PSC, biliary cysts, hepatolithiasis",
@@ -76473,8 +77009,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Necrotizing Fasciitis", "Achalasia", "Pancreatic Pseudocyst", "Pancreatic Ductal Adenocarcinoma"],
-    answer: 2,
+    options: ["Thymoma / Thymic Tumor", "Hydatid Cyst of the Liver", "Burns", "Pancreatic Pseudocyst"],
+    answer: 3,
     explanation: "Encapsulated fluid collection arising after acute pancreatitis or pancreatic duct disruption, lacking an epithelial lining.",
     anatomyFocus: [
       "Revised Atlanta 2012: pseudocysts are post-AP fluid collections with a well-defined wall, after 4 weeks; WON (walled-off necrosis) contains necrotic debris",
@@ -76494,12 +77030,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Portal vein/Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Esophageal Perforation",
-      "Intraductal Papillary Mucinous Neoplasm",
-      "Acute Compartment Syndrome (Limb)",
-      "Portal Hypertension"
+      "Portal Hypertension",
+      "Primary Sclerosing Cholangitis",
+      "Melena",
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Elevated portal venous pressure (HVPG >5 mmHg) arising from increased resistance and/or flow, leading to varices, ascites, and hepatic encephalopathy.",
     anatomyFocus: [
       "HVPG >10 mmHg = clinically significant PHT (risk of varices); >12 mmHg = variceal bleeding threshold",
@@ -76518,8 +77054,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Liver Abscess", "Abdominal Aortic Aneurysm", "Rectal Bleeding (Hematochezia)", "Breast Abscess"],
-    answer: 0,
+    options: ["Basal Cell Carcinoma", "Liver Abscess", "Femoral Hernia", "ATLS Primary Survey (X-ABCDE)"],
+    answer: 1,
     explanation: "Localized collection of pus within the hepatic parenchyma; pyogenic (bacterial) in 80% of cases in Western countries; amebic in developing world.",
     anatomyFocus: [
       "Pyogenic most common cause: biliary (40%), cryptogenic (20%), portal spread (15%); Klebsiella pneumoniae in Asia (associated with diabetes, gas-forming)",
@@ -76538,13 +77074,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Gallbladder.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Squamous Cell Carcinoma (Skin)",
-      "Gallbladder Cancer",
-      "Umbilical Hernia",
-      "Hemorrhagic Shock (ATLS 11 Classification)"
-    ],
-    answer: 1,
+    options: ["Rectal Prolapse", "Small Bowel Tumors", "Gallbladder Cancer", "Dysphagia"],
+    answer: 2,
     explanation: "Rare but aggressive biliary malignancy with poor prognosis; most are incidentally discovered after cholecystectomy for presumed benign disease.",
     anatomyFocus: [
       "Most common biliary malignancy; F:M = 3:1; associated with gallstones (90%), porcelain gallbladder, anomalous pancreatobiliary junction",
@@ -76564,12 +77095,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Hemorrhoids",
-      "Perforated Peptic Ulcer",
-      "Colorectal Liver Metastases",
-      "Gastric Outlet Obstruction"
+      "Squamous Cell Carcinoma (Skin)",
+      "Carotid Stenosis",
+      "Hidradenitis Suppurativa",
+      "Colorectal Liver Metastases"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "The liver is the most common site of colorectal cancer metastasis; resection offers the only chance of cure with 5-year survival of 30–50%.",
     anatomyFocus: [
       "25% of CRC patients have synchronous liver metastases; 50% develop metachronous within 3 years",
@@ -76588,8 +77119,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hidradenitis Suppurativa", "Deep Vein Thrombosis", "Liposarcoma", "Hepatic Adenoma"],
-    answer: 3,
+    options: ["Hepatic Adenoma", "Renal Trauma", "Primary Hyperparathyroidism", "Acute Appendicitis"],
+    answer: 0,
     explanation: "Benign hepatocellular tumor strongly associated with oral contraceptive pill use; risk of hemorrhage and rare malignant transformation.",
     anatomyFocus: [
       "OCP use (×30 risk), anabolic steroids, glycogen storage disease type Ia/III, and MODY3 are major risk factors",
@@ -76609,12 +77140,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Intrahepatic Cholangiocarcinoma",
       "Hydatid Cyst of the Liver",
-      "Traumatic Brain Injury (Surgical Perspective)",
-      "Secondary / Tertiary Hyperparathyroidism",
-      "Diverticulitis"
+      "Pancreatic Neuroendocrine Tumor",
+      "Lung Abscess"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Cystic infection of the liver caused by Echinococcus granulosus larval stage; endemic in pastoral areas; spillage causes anaphylaxis and secondary hydatidosis.",
     anatomyFocus: [
       "Echinococcus granulosus (cystic — commonest) vs E. multilocularis (alveolar — aggressive, infiltrative, poor prognosis)",
@@ -76633,13 +77164,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Pancreatic Pseudocyst",
-      "Intraductal Papillary Mucinous Neoplasm",
-      "Immune Thrombocytopenic Purpura",
-      "Mediastinal Mass"
-    ],
-    answer: 1,
+    options: ["Vascular Trauma", "Pilonidal Sinus", "Intraductal Papillary Mucinous Neoplasm", "Hiatus Hernia"],
+    answer: 2,
     explanation: "Mucin-producing pancreatic cystic neoplasm with malignant potential, classified by ductal involvement (main duct vs branch duct) and grades of dysplasia.",
     anatomyFocus: [
       "Main duct IPMN (MD-IPMN): dilation of MPD >5 mm; high malignancy rate (45–65%) — resect all if fit",
@@ -76658,8 +77184,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Lymphedema — Surgical", "Sigmoid Volvulus", "Pancreatic Neuroendocrine Tumor", "Achalasia"],
-    answer: 2,
+    options: [
+      "Hemorrhagic Shock (ATLS 11 Classification)",
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
+      "Varicose Veins",
+      "Pancreatic Neuroendocrine Tumor"
+    ],
+    answer: 3,
     explanation: "Heterogeneous group of neoplasms arising from pancreatic islet cells; range from benign insulinoma to aggressive non-functional tumors with liver metastases.",
     anatomyFocus: [
       "Functional (40%): insulinoma (most common), gastrinoma, glucagonoma, VIPoma, somatostatinoma — defined by hormone excess syndrome",
@@ -76679,12 +77210,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Spleen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Spinal Cord Injury (ATLS 11)",
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
-      "Renal Artery Stenosis",
-      "Immune Thrombocytopenic Purpura"
+      "Immune Thrombocytopenic Purpura",
+      "Necrotizing Fasciitis",
+      "Appendiceal Carcinoid (Well-Differentiated NET)",
+      "Gastric Outlet Obstruction"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Autoimmune disorder where IgG autoantibodies against platelet surface antigens (GPIIb/IIIa) lead to accelerated platelet destruction and impaired production.",
     anatomyFocus: [
       "Diagnosis of exclusion: thrombocytopenia (<100×10⁹/L) without other cause after excluding secondary causes",
@@ -76703,8 +77234,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Spleen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hereditary Spherocytosis", "Splenic Trauma", "Mucocele of the Appendix", "Melena"],
-    answer: 0,
+    options: ["Adrenocortical Carcinoma", "Hereditary Spherocytosis", "Lymphedema — Surgical", "Cecal Volvulus"],
+    answer: 1,
     explanation: "Autosomal dominant hemolytic anemia due to spectrin/ankyrin deficiency causing spherical RBCs that are trapped and destroyed by the spleen.",
     anatomyFocus: [
       "Most common inherited hemolytic anemia in Northern European populations (1:2000)",
@@ -76723,8 +77254,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Spleen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Adrenal Incidentaloma", "Splenic Abscess", "Acute Appendicitis", "Large Bowel Obstruction"],
-    answer: 1,
+    options: ["Pancreatic Pseudocyst", "Umbilical Hernia", "Splenic Abscess", "Acute Abdomen"],
+    answer: 2,
     explanation: "Rare but potentially fatal suppurative collection within the spleen; most arise from hematogenous seeding in the context of endocarditis, bacteremia, or immunosuppression.",
     anatomyFocus: [
       "Rare: <0.7% of all intra-abdominal abscesses; high mortality if untreated (80%); with treatment 14–27%",
@@ -76743,8 +77274,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Bile duct.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Portal Hypertension", "Incisional Hernia", "Primary Sclerosing Cholangitis", "Dysphagia"],
-    answer: 2,
+    options: [
+      "Principles of Laparoscopy & Pneumoperitoneum",
+      "Angiodysplasia",
+      "Leiomyosarcoma",
+      "Primary Sclerosing Cholangitis"
+    ],
+    answer: 3,
     explanation: "Progressive fibro-inflammatory cholangiopathy affecting intra- and extrahepatic bile ducts, associated with IBD, and carrying a 10–15% lifetime risk of cholangiocarcinoma.",
     anatomyFocus: [
       "75–90% of PSC patients have concurrent IBD (ulcerative colitis in 75%, Crohn's in 10–25%)",
@@ -76763,8 +77299,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Appendix.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Laparoscopic Access Techniques", "Splenic Abscess", "Desmoid Tumor", "Acute Appendicitis"],
-    answer: 3,
+    options: [
+      "Acute Appendicitis",
+      "Merkel Cell Carcinoma",
+      "Rectal Bleeding (Hematochezia)",
+      "Pulmonary Carcinoid"
+    ],
+    answer: 0,
     explanation: "Acute inflammation of the vermiform appendix; the most common abdominal surgical emergency; lifetime risk 8% in men, 7% in women.",
     anatomyFocus: [
       "Alvarado score: ≥7 = high probability (operate); 4–6 = equivocal (consider CT); ≤3 = low probability",
@@ -76784,12 +77325,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Gastro-Esophageal Reflux Disease (GERD)",
       "Diverticulitis",
-      "Kaposi's Sarcoma",
-      "Rectal Bleeding (Hematochezia)",
-      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)"
+      "Gastrointestinal Stromal Tumor",
+      "Choledocholithiasis"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Inflammation or infection of colonic diverticula, ranging from uncomplicated (80%) to complicated (abscess, perforation, fistula, obstruction).",
     anatomyFocus: [
       "Diverticulosis in 60% over 60 years; acute diverticulitis in 10–25% of those with diverticula",
@@ -76808,8 +77349,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Acute Abdomen", "Colon Cancer", "Barrett's Esophagus", "Pancreatic Ductal Adenocarcinoma"],
-    answer: 1,
+    options: ["Inguinal Hernia", "Mesothelioma", "Colon Cancer", "MEN1 (Multiple Endocrine Neoplasia Type 1)"],
+    answer: 2,
     explanation: "Adenocarcinoma of the colon arising from adenomatous polyps; third most common cancer worldwide with 5-year survival 65% overall but >90% for stage I.",
     anatomyFocus: [
       "Adenoma-carcinoma sequence: tubular → tubulovillous → villous → adenocarcinoma over 10–15 years",
@@ -76828,13 +77369,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Rectum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Femoral Hernia",
-      "Thymoma / Thymic Tumor",
-      "Rectal Prolapse",
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
-    ],
-    answer: 2,
+    options: ["Pulmonary Carcinoid", "Splenic Abscess", "Upper GI Hemorrhage", "Rectal Prolapse"],
+    answer: 3,
     explanation: "Full-thickness protrusion of the rectum through the anal sphincter; associated with fecal incontinence and pelvic floor dysfunction; surgical repair is definitive.",
     anatomyFocus: [
       "Full-thickness (all layers of rectal wall) vs mucosal prolapse (only mucosa — treatment differs)",
@@ -76853,13 +77389,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
-      "Primary Sclerosing Cholangitis",
-      "Esophageal Cancer",
-      "Hemorrhoids"
-    ],
-    answer: 3,
+    options: ["Hemorrhoids", "Phyllodes Tumor", "Mediastinal Mass", "Spigelian Hernia"],
+    answer: 0,
     explanation: "Symptomatic enlarged vascular cushions of the anal canal; most common anorectal condition presenting with painless bright red rectal bleeding.",
     anatomyFocus: [
       "Internal hemorrhoids arise above dentate line (no somatic sensation); external below (painful if thrombosed)",
@@ -76878,8 +77409,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Anal Fistula", "Thyroid Cancer", "Chest Wall Tumor", "Obturator Hernia"],
-    answer: 0,
+    options: ["Hepatocellular Carcinoma", "Anal Fistula", "Living Donor Hepatectomy", "Pneumothorax"],
+    answer: 1,
     explanation: "Abnormal communication between the anal canal (usually at the dentate line) and the perianal skin, arising from cryptoglandular infection in 90% of cases.",
     anatomyFocus: [
       "Parks classification: intersphincteric (45%), transsphincteric (30%), suprasphincteric (20%), extrasphincteric (5%)",
@@ -76898,8 +77429,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Choledocholithiasis", "Anal Fissure", "Lung Cancer", "Pleural Empyema"],
-    answer: 1,
+    options: [
+      "Acute Cholecystitis",
+      "Principles of Laparoscopy & Pneumoperitoneum",
+      "Anal Fissure",
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)"
+    ],
+    answer: 2,
     explanation: "Linear tear in the squamous epithelium of the lower anal canal, causing severe pain during and after defecation and bright red bleeding.",
     anatomyFocus: [
       "90% posterior midline; 10% anterior midline; lateral position suggests secondary cause (Crohn's, HIV, TB, syphilis)",
@@ -76919,12 +77455,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anorectum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Acute Cholangitis",
-      "Laparoscopic Access Techniques",
-      "Perianal Abscess & Fistula-in-Ano",
-      "Inguinal Hernia"
+      "Hepatocellular Carcinoma",
+      "Ulcerative Colitis",
+      "Splenic Abscess",
+      "Perianal Abscess & Fistula-in-Ano"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Abscess: urgent incision and drainage; fistula: Parks classification guides management — lay-open for intersphincteric/low transsphincteric; seton for high transsphincteric/suprasphincteric.",
     anatomyFocus: [
       "Cryptoglandular origin (90%): anal crypt → intersphincteric space → abscess tract",
@@ -76943,8 +77479,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Sacrococcyx.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Choledocholithiasis", "Ulcerative Colitis", "Primary Sclerosing Cholangitis", "Pilonidal Sinus"],
-    answer: 3,
+    options: ["Pilonidal Sinus", "Splanchnic Artery Aneurysm", "Liposarcoma", "Angiodysplasia"],
+    answer: 0,
     explanation: "Chronic cutaneous condition of the natal cleft involving hair-containing sinuses and abscess formation; affects young adults; high recurrence after simple excision.",
     anatomyFocus: [
       "Acquired, not congenital: hair penetrates skin via suction effect in natal cleft; more common in hirsute, obese young men",
@@ -76963,8 +77499,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Sigmoid Volvulus", "Splanchnic Artery Aneurysm", "Leiomyosarcoma", "Angiodysplasia"],
-    answer: 0,
+    options: ["Pectus Excavatum / Carinatum", "Sigmoid Volvulus", "Melanoma", "Upper GI Hemorrhage"],
+    answer: 1,
     explanation: "Axial rotation of the sigmoid colon on its mesentery causing closed-loop obstruction; commonest in elderly, institutionalised, or high-fiber diet populations.",
     anatomyFocus: [
       "Accounts for 5% of LBO in West; 50% in Africa/Asia; predisposed by redundant sigmoid on narrow mesentery",
@@ -76983,8 +77519,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Cecum/Right colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Pulmonary Carcinoid", "Cecal Volvulus", "Basal Cell Carcinoma", "Esophageal Cancer"],
-    answer: 1,
+    options: [
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
+      "Graves' Disease",
+      "Cecal Volvulus",
+      "Therapeutic Endoscopy (Principles)"
+    ],
+    answer: 2,
     explanation: "Emergency right hemicolectomy is definitive treatment; endoscopic decompression high failure rate (40%) and recurrence; viable cecum → right hemicolectomy; ischemic → resection without anastomosis.",
     anatomyFocus: [
       "Cecal volvulus accounts for 40% of all colonic volvulus; sigmoid volvulus is 60%",
@@ -77003,13 +77544,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Breast Abscess",
-      "Multinodular Goitre",
-      "Large Bowel Obstruction",
-      "Hemorrhagic Shock (ATLS 11 Classification)"
-    ],
-    answer: 2,
+    options: ["Hepatic Adenoma", "Hiatus Hernia", "Kaposi's Sarcoma", "Large Bowel Obstruction"],
+    answer: 3,
     explanation: "Most common cause is colorectal cancer (60%); CT confirms; colonic stent as bridge to surgery for left-sided cancer; emergency Hartmann's or on-table lavage for perforated/unfit patients.",
     anatomyFocus: [
       "60% CRC, 15% diverticular stricture, 10% volvulus, 5% extrinsic compression",
@@ -77028,13 +77564,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Hydatid Cyst of the Liver",
-      "Achalasia",
-      "Principles of Laparoscopy & Pneumoperitoneum",
-      "Ulcerative Colitis"
-    ],
-    answer: 3,
+    options: ["Ulcerative Colitis", "Radiation Enteritis", "Splenic Abscess", "Anal Canal Cancer"],
+    answer: 0,
     explanation: "Chronic relapsing mucosal inflammation of the colon, always involving the rectum and extending proximally in a continuous pattern; cure achievable with colectomy.",
     anatomyFocus: [
       "Confined to mucosa; always involves rectum; extends proximally continuous — distinguishes from Crohn's",
@@ -77053,13 +77584,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Crohn's Disease",
-      "Gastro-Esophageal Reflux Disease (GERD)",
-      "Primary Sclerosing Cholangitis",
-      "Anal Canal Cancer"
-    ],
-    answer: 0,
+    options: ["Zenker's Diverticulum", "Crohn's Disease", "Pulmonary Carcinoid", "Gastric Volvulus"],
+    answer: 1,
     explanation: "Transmural granulomatous inflammation that can affect any segment of the GI tract from mouth to anus, with a relapsing course and high surgical morbidity.",
     anatomyFocus: [
       "Transmural inflammation → skip lesions, string sign on imaging, rose-thorn ulcers; can affect any part of GI tract",
@@ -77078,13 +77604,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anal canal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Caustic Esophageal Injury",
-      "Anal Canal Cancer",
-      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
-      "Small Bowel Obstruction"
-    ],
-    answer: 1,
+    options: ["Leiomyosarcoma", "Gastric Volvulus", "Anal Canal Cancer", "Inguinal Hernia"],
+    answer: 2,
     explanation: "Squamous cell carcinoma; primary treatment is chemoradiotherapy (Nigro protocol — 5-FU + mitomycin C + RT); surgery (APR) reserved for persistent/recurrent disease after CRT.",
     anatomyFocus: [
       "90% squamous cell carcinoma; HPV-16/18 in >80% of cases",
@@ -77103,8 +77624,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small/Large bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Desmoid Tumor", "Small Bowel Obstruction", "Intestinal Fistula", "Femoral Hernia"],
-    answer: 2,
+    options: [
+      "Varicose Veins",
+      "Epigastric Hernia",
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
+      "Intestinal Fistula"
+    ],
+    answer: 3,
     explanation: "Optimize nutrition (TPN if high-output), treat sepsis, and allow 4–6 weeks for spontaneous closure; 50% close spontaneously; surgery for those that do not — SNAP protocol.",
     anatomyFocus: [
       "90% are iatrogenic (post-operative); 10% spontaneous (Crohn's, cancer, radiation, diverticulitis)",
@@ -77124,12 +77650,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Appendix.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Varicose Veins",
-      "Strangulated Hernia",
-      "Breast Abscess",
-      "Appendiceal Carcinoid (Well-Differentiated NET)"
+      "Appendiceal Carcinoid (Well-Differentiated NET)",
+      "Acute Cholecystitis",
+      "Desmoid Tumor",
+      "Chronic Limb-Threatening Ischemia"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Most common appendiceal tumor and most common GI NET; >95% are cured by simple appendectomy if ≤2 cm; right hemicolectomy for >2 cm or positive margins.",
     anatomyFocus: [
       "Most commonly found incidentally at appendectomy — located at tip in 75%",
@@ -77148,13 +77674,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Appendix.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Mucocele of the Appendix",
-      "Acute Cholangitis",
-      "Merkel Cell Carcinoma",
-      "Chronic Limb-Threatening Ischemia"
-    ],
-    answer: 0,
+    options: ["Gastric Cancer", "Mucocele of the Appendix", "Cecal Volvulus", "Popliteal Artery Aneurysm"],
+    answer: 1,
     explanation: "Spectrum from benign retention cyst to LAMN/HAMN/appendiceal mucinous adenocarcinoma; ruptured LAMN seeds peritoneum with mucin causing pseudomyxoma peritonei (PMP); intact removal mandatory.",
     anatomyFocus: [
       "Mucocele is a descriptive term — histological classification determines prognosis and management: Simple retention cyst → LAMN (low-grade) → HAMN (high-grade) → appendiceal mucinous adenocarcinoma",
@@ -77173,13 +77694,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Upper GI Hemorrhage",
-      "Familial Adenomatous Polyposis",
-      "Cecal Volvulus",
-      "Popliteal Artery Aneurysm"
-    ],
-    answer: 1,
+    options: ["Melena", "Breast Abscess", "Familial Adenomatous Polyposis", "Pancreatic Neuroendocrine Tumor"],
+    answer: 2,
     explanation: "Autosomal dominant syndrome caused by APC gene mutation; >100 colonic adenomas; 100% risk of colorectal cancer by age 40 without prophylactic colectomy.",
     anatomyFocus: [
       "APC (adenomatous polyposis coli) gene mutation on chromosome 5q21; autosomal dominant; 25% de novo",
@@ -77199,12 +77715,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Breast Cancer",
-      "ATLS Primary Survey (X-ABCDE)",
-      "Lynch Syndrome (HNPCC)",
-      "Immune Thrombocytopenic Purpura"
+      "Intestinal Fistula",
+      "Femoral Hernia",
+      "Acute Compartment Syndrome (Limb)",
+      "Lynch Syndrome (HNPCC)"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Autosomal dominant cancer predisposition syndrome due to germline MMR gene mutations; most common hereditary CRC syndrome; accounts for 3–5% of all colorectal cancers.",
     anatomyFocus: [
       "MMR (mismatch repair) gene mutations: MLH1, MSH2 (most common), MSH6, PMS2; causes MSI-H tumors",
@@ -77223,8 +77739,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Intestinal Fistula", "Umbilical Hernia", "Renal Trauma", "Bowel Perforation"],
-    answer: 3,
+    options: ["Bowel Perforation", "Lynch Syndrome (HNPCC)", "Spinal Cord Injury (ATLS 11)", "Cecal Volvulus"],
+    answer: 0,
     explanation: "Full-thickness breach of the GI tract wall, releasing luminal contents into the peritoneal cavity; erect CXR shows subdiaphragmatic free air; CT is gold standard; surgery is almost always required.",
     anatomyFocus: [
       "Erect CXR: free air under diaphragm (pneumoperitoneum) — present in ~70% of perforations; CT detects >95%",
@@ -77244,12 +77760,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Splenic Trauma",
       "Pseudo-Obstruction (Ogilvie's Syndrome)",
-      "Lynch Syndrome (HNPCC)",
-      "Trauma Airway Management (ATLS 11)",
-      "Cecal Volvulus"
+      "Ulcerative Colitis",
+      "Familial Adenomatous Polyposis"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Acute colonic dilatation without mechanical obstruction (Ogilvie's syndrome); treat underlying cause + neostigmine 2 mg IV in HDU monitoring; colonoscopic decompression if neostigmine fails; cecal diameter >12 cm = perfo",
     anatomyFocus: [
       "Cecal diameter >12 cm = high perforation risk; >9 cm + failure to improve = escalate management",
@@ -77268,8 +77784,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with GI tract (cecum/ascending colon).",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Liver Trauma", "Angiodysplasia", "Ulcerative Colitis", "Familial Adenomatous Polyposis"],
-    answer: 1,
+    options: ["Traumatic Diaphragm Rupture", "Chest Wall Tumor", "Angiodysplasia", "Popliteal Artery Aneurysm"],
+    answer: 2,
     explanation: "Most common GI vascular malformation; responsible for ~6% of lower GI bleeds and ~8% of upper GI bleeds; most common location = cecum and ascending colon; APC endotherapy is first-line treatment.",
     anatomyFocus: [
       "Heyde's syndrome: aortic stenosis + angiodysplasia → GI bleeding; von Willebrand multimers destroyed by turbulent flow across stenotic valve → hemostatic failure",
@@ -77289,12 +77805,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Pelvic Fracture (Hemorrhage Control)",
-      "Pectus Excavatum / Carinatum",
-      "Small Bowel Tumors",
-      "Popliteal Artery Aneurysm"
+      "Pulmonary Carcinoid",
+      "Mediastinal Mass",
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
+      "Small Bowel Tumors"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Rare tumors accounting for <5% of GI cancers despite representing 90% of mucosal surface; most arise in the duodenum; adenocarcinoma and NETs each account for ~40%; Whipple's for resectable duodenal adenocarcinoma; imati",
     anatomyFocus: [
       "Small bowel tumors are rare but diagnosis is often delayed — 'great masquerader' of GI disease; mean symptom-to-diagnosis delay 6–12 months",
@@ -77314,12 +77830,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach/Duodenum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
-      "Chest Wall Tumor",
-      "Breast Abscess",
-      "Perforated Peptic Ulcer"
+      "Perforated Peptic Ulcer",
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
+      "Laparoscopic Access Techniques",
+      "Principles of Laparoscopy & Pneumoperitoneum"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Free perforation of a gastric or duodenal ulcer causing sudden-onset peritonitis; a surgical emergency with mortality 5–10% if treated promptly.",
     anatomyFocus: [
       "Duodenal perforation (70%) > gastric perforation (30%); posterior DU bleeds (GDA), anterior DU perforates",
@@ -77339,12 +77855,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Living Donor Hepatectomy",
       "Gastric Cancer",
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
-      "Energy Devices in Minimally Invasive Surgery",
-      "Laparoscopic Access Techniques"
+      "Familial Adenomatous Polyposis",
+      "Adrenocortical Carcinoma"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Adenocarcinoma of the stomach, often presenting at advanced stage in Western countries; D2 lymphadenectomy and perioperative FLOT chemotherapy are standard of care.",
     anatomyFocus: [
       "5th most common cancer globally; H. pylori accounts for 70% of non-cardia gastric cancer",
@@ -77363,8 +77879,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Upper GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Lung Cancer", "Upper GI Hemorrhage", "Lynch Syndrome (HNPCC)", "Adrenal Incidentaloma"],
-    answer: 1,
+    options: ["Small Bowel Neuroendocrine Tumor", "Intestinal Fistula", "Upper GI Hemorrhage", "Renal Trauma"],
+    answer: 2,
     explanation: "Bleeding from a source proximal to the ligament of Treitz; peptic ulcer disease accounts for 35%; variceal bleeding has 20% 6-week mortality.",
     anatomyFocus: [
       "Most common cause: peptic ulcer disease (35%); variceal (20%); Mallory-Weiss (5%); esophagitis (10%); malignancy (5%)",
@@ -77383,13 +77899,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Small Bowel Neuroendocrine Tumor",
-      "Appendiceal Carcinoid (Well-Differentiated NET)",
-      "Esophageal Cancer",
-      "Traumatic Brain Injury (Surgical Perspective)"
-    ],
-    answer: 2,
+    options: ["Anal Canal Cancer", "Conversion to Open Surgery", "Phaeochromocytoma", "Esophageal Cancer"],
+    answer: 3,
     explanation: "Two main histological types — SCC (proximal/mid, smoking/alcohol) and adenocarcinoma (lower third/GEJ, Barrett's/obesity); only 25–30% resectable at presentation.",
     anatomyFocus: [
       "SCC: mid/proximal esophagus; smoking, alcohol, achalasia, caustic stricture, Plummer-Vinson; chemoradiotherapy can cure",
@@ -77408,8 +77919,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Diaphragm.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Intestinal Fistula", "Therapeutic Endoscopy (Principles)", "Conn's Syndrome", "Hiatus Hernia"],
-    answer: 3,
+    options: ["Hiatus Hernia", "Breast Abscess", "Liposarcoma", "Pilonidal Sinus"],
+    answer: 0,
     explanation: "Herniation of abdominal contents through the esophageal hiatus of the diaphragm; Type I (sliding) in 95%; giant paraesophageal hernia risks strangulation.",
     anatomyFocus: [
       "Type I (sliding, 95%): GEJ slides above hiatus; associated with GERD; most asymptomatic",
@@ -77428,8 +77939,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Achalasia", "ATLS Primary Survey (X-ABCDE)", "Leiomyosarcoma", "Sigmoid Volvulus"],
-    answer: 0,
+    options: [
+      "Adrenocortical Carcinoma",
+      "Achalasia",
+      "Complications of Minimally Invasive Surgery",
+      "Rectal Bleeding (Hematochezia)"
+    ],
+    answer: 1,
     explanation: "Progressive neurodegenerative loss of esophageal peristalsis and failure of LOS relaxation; functional obstruction causing dysphagia, regurgitation, and aspiration.",
     anatomyFocus: [
       "Primary achalasia: idiopathic loss of Auerbach plexus myenteric neurons; ganglion cell depletion → aperistalsis + incomplete LOS relaxation",
@@ -77449,12 +77965,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Adrenal Incidentaloma",
+      "Carotid Body Tumor",
+      "Abdominal Compartment Syndrome",
       "Esophageal Perforation (Boerhaave)",
-      "Robotic-Assisted Surgery",
-      "Breast Cancer"
+      "Acute Compartment Syndrome (Limb)"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Spontaneous full-thickness esophageal rupture from sudden rise in intraluminal pressure; Mackler triad; mortality 30–40% — the 'great masquerader' of chest pain.",
     anatomyFocus: [
       "Mackler triad: vomiting → chest pain → subcutaneous emphysema — present in only 30%; diagnosis often delayed",
@@ -77473,8 +77989,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach/small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Carotid Body Tumor", "Necrotizing Fasciitis", "Bariatric Surgery", "Renal Trauma"],
-    answer: 2,
+    options: [
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+      "Burns",
+      "Hepatic Adenoma",
+      "Bariatric Surgery"
+    ],
+    answer: 3,
     explanation: "Surgical treatment of morbid obesity; Roux-en-Y gastric bypass (RYGB) and sleeve gastrectomy (SG) are most performed procedures; diabetes remission in 70–80%.",
     anatomyFocus: [
       "Eligibility: BMI ≥40 (or ≥35 with obesity-related comorbidity); failed conservative management; specialist center",
@@ -77494,12 +78015,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Inguinal Hernia",
-      "Acute Compartment Syndrome (Limb)",
-      "Hydatid Cyst of the Liver",
-      "Gastric Volvulus"
+      "Gastric Volvulus",
+      "Splenic Abscess",
+      "Pseudo-Obstruction (Ogilvie's Syndrome)",
+      "Cushing's Syndrome (Adrenal)"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Life-threatening gastric rotation; Borchardt's triad (retching, epigastric pain, inability to pass NGT); emergency decompression ± surgery; underlying paraesophageal hernia must be repaired.",
     anatomyFocus: [
       "Borchardt's triad: severe epigastric pain + unproductive retching + inability to pass NGT — pathognomonic for gastric volvulus",
@@ -77519,12 +78040,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Hydatid Cyst of the Liver",
       "Small Bowel Obstruction",
-      "Primary Sclerosing Cholangitis",
-      "Angiodysplasia",
-      "Adrenocortical Carcinoma"
+      "Penetrating Abdominal Trauma",
+      "Chest Wall Tumor"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "60% due to adhesions from previous surgery; non-operative management (NGT, IV fluids) succeeds in 60–70%; operate for complete obstruction, failure to resolve at 48–72h, or signs of strangulation.",
     anatomyFocus: [
       "Most common cause: adhesions (60%); second: hernia (external) (15%); third: malignancy (10%)",
@@ -77544,12 +78065,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach/Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Intraductal Papillary Mucinous Neoplasm",
+      "Lung Abscess",
+      "Sigmoid Volvulus",
       "Gastrointestinal Stromal Tumor",
-      "Chest Trauma (Surgical Perspective)",
-      "Pectus Excavatum / Carinatum"
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Mesenchymal tumor arising from interstitial cells of Cajal; 60–70% in stomach; KIT (CD117) mutation defines majority; imatinib (TKI) is transformative treatment.",
     anatomyFocus: [
       "KIT (CD117) mutation in 85%; PDGFRA mutation in 10%; KIT/PDGFRA wild-type (5%) — molecular testing mandatory",
@@ -77568,8 +78089,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Mediastinal Mass", "Cecal Volvulus", "Barrett's Esophagus", "Breast Abscess"],
-    answer: 2,
+    options: ["Intestinal Fistula", "Basal Cell Carcinoma", "Caustic Esophageal Injury", "Barrett's Esophagus"],
+    answer: 3,
     explanation: "Columnar metaplasia of the lower esophagus in response to chronic acid reflux; intestinal metaplasia is the precursor to esophageal adenocarcinoma (0.2–0.5%/year).",
     anatomyFocus: [
       "Definition: ≥1 cm columnar-lined esophagus with intestinal metaplasia confirmed on biopsy",
@@ -77588,13 +78109,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Appendiceal Carcinoid (Well-Differentiated NET)",
-      "Squamous Cell Carcinoma (Skin)",
-      "Caustic Esophageal Injury",
-      "Zenker's Diverticulum"
-    ],
-    answer: 3,
+    options: ["Zenker's Diverticulum", "Pancreatic Ductal Adenocarcinoma", "Epigastric Hernia", "Melena"],
+    answer: 0,
     explanation: "Pharyngeal pulsion diverticulum arising at Killian's dehiscence (between cricopharyngeus and inferior pharyngeal constrictor); causes dysphagia and regurgitation of undigested food.",
     anatomyFocus: [
       "Pulsion diverticulum at Killian's triangle: between thyropharyngeus and cricopharyngeus — posterior midline weak spot",
@@ -77613,8 +78129,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Caustic Esophageal Injury", "Chronic Pancreatitis", "Strangulated Hernia", "Melena"],
-    answer: 0,
+    options: [
+      "Liver Transplantation",
+      "Caustic Esophageal Injury",
+      "Phaeochromocytoma",
+      "Secondary / Tertiary Hyperparathyroidism"
+    ],
+    answer: 1,
     explanation: "Corrosive injury to esophagus and stomach from ingestion of alkali or acid; causes can range from mild mucosal erythema to full-thickness necrosis requiring emergency resection.",
     anatomyFocus: [
       "Alkali (lye, drain cleaners): liquefactive necrosis — deeper penetration; stomach less affected (neutral pH)",
@@ -77633,8 +78154,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Pancreas Transplantation", "Meckel's Diverticulum", "Conn's Syndrome", "Phaeochromocytoma"],
-    answer: 1,
+    options: [
+      "Multinodular Goitre",
+      "Primary Sclerosing Cholangitis",
+      "Meckel's Diverticulum",
+      "Living Donor Hepatectomy"
+    ],
+    answer: 2,
     explanation: "The most common congenital GI malformation; remnant of the vitello-intestinal duct; complications occur in 2–4% (bleeding, obstruction, inflammation).",
     anatomyFocus: [
       "Rule of 2s: 2% population, 2 feet from ileocecal valve, 2 inches long, 2:1 male:female, 2 types of ectopic tissue (gastric most common), 2 years most common age for complications",
@@ -77654,12 +78180,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Primary Hyperparathyroidism",
-      "Acute Appendicitis",
-      "Small Bowel Neuroendocrine Tumor",
-      "Lung Cancer"
+      "Short Bowel Syndrome",
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+      "Rectal Bleeding (Hematochezia)",
+      "Small Bowel Neuroendocrine Tumor"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Well-differentiated neuroendocrine tumor of the small bowel (terminal ileum most common); carcinoid syndrome occurs with liver metastases; mesenteric fibrosis causes bowel ischemia.",
     anatomyFocus: [
       "Terminal ileum accounts for 45% of all GI-NETs; often small (<2 cm) but multifocal in 30%",
@@ -77678,8 +78204,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Small Bowel Neuroendocrine Tumor", "Inguinal Hernia", "Breast Cancer", "Short Bowel Syndrome"],
-    answer: 3,
+    options: [
+      "Short Bowel Syndrome",
+      "Familial Adenomatous Polyposis",
+      "Small Bowel Tumors",
+      "Traumatic Diaphragm Rupture"
+    ],
+    answer: 0,
     explanation: "Malabsorption syndrome resulting from loss of functional intestinal length; TPN dependence; teduglutide (GLP-2 analogue) can achieve enteral autonomy in selected patients.",
     anatomyFocus: [
       "Short bowel syndrome (SBS): <200 cm small bowel in adults after resection or functional loss (SBS requiring TPN: <100 cm with end jejunostomy, <50 cm with intact colon)",
@@ -77698,13 +78229,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Radiation Enteritis",
-      "Lynch Syndrome (HNPCC)",
-      "Rectal Bleeding (Hematochezia)",
-      "Pelvic Fracture (Hemorrhage Control)"
-    ],
-    answer: 0,
+    options: ["Lung Cancer", "Radiation Enteritis", "Achalasia", "Acute Cholangitis"],
+    answer: 1,
     explanation: "Intestinal injury from ionizing radiation, acute (during therapy) or chronic (months to years post-RT); affects small bowel and rectum most commonly in pelvic RT.",
     anatomyFocus: [
       "Acute radiation enteritis (during RT): self-limiting; managed conservatively (anti-diarrheal, elemental diet)",
@@ -77723,8 +78249,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus/LOS.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Pneumothorax", "Gastro-Esophageal Reflux Disease (GERD)", "Achalasia", "Hepatocellular Carcinoma"],
-    answer: 1,
+    options: ["Acute Appendicitis", "Burns", "Gastro-Esophageal Reflux Disease (GERD)", "Gastric Cancer"],
+    answer: 2,
     explanation: "Pathological reflux of gastric contents into the esophagus; affects ~25% of the population; PPIs are highly effective first-line; Nissen fundoplication reserved for refractory or complicated disease; Barrett's surveillan",
     anatomyFocus: [
       "Los Angeles Classification: Grade A–D based on mucosal break extent; Grade C/D = significant esophagitis",
@@ -77743,8 +78269,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdomen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Diverticulitis", "Acute Compartment Syndrome (Limb)", "Acute Abdomen", "Gastric Cancer"],
-    answer: 2,
+    options: [
+      "Conn's Syndrome",
+      "Squamous Cell Carcinoma (Skin)",
+      "Perianal Abscess & Fistula-in-Ano",
+      "Acute Abdomen"
+    ],
+    answer: 3,
     explanation: "Sudden severe abdominal pain requiring urgent assessment; first question is 'is the patient critically unwell?'; life-threatening causes include ruptured AAA, perforated viscus, and mesenteric ischemia.",
     anatomyFocus: [
       "First-pass assessment: critically unwell (immediate resuscitation + theater) vs. needs investigation — this single decision drives everything",
@@ -77763,8 +78294,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus/Pharynx.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Cushing's Syndrome (Adrenal)", "Hidradenitis Suppurativa", "Pilonidal Sinus", "Dysphagia"],
-    answer: 3,
+    options: [
+      "Dysphagia",
+      "Pectus Excavatum / Carinatum",
+      "Hydatid Cyst of the Liver",
+      "Pancreas Transplantation"
+    ],
+    answer: 0,
     explanation: "Difficulty swallowing — treat as upper GI malignancy until proven otherwise; EGD is the first investigation; progressive solid-then-liquid dysphagia = mechanical obstruction; pure liquid dysphagia = motility disorder.",
     anatomyFocus: [
       "Treat as upper GI malignancy until proven otherwise — any new dysphagia needs urgent EGD",
@@ -77784,12 +78320,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach/Duodenum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
       "Gastric Outlet Obstruction",
-      "Pulmonary Carcinoid",
-      "Intraductal Papillary Mucinous Neoplasm",
-      "Small Bowel Transplantation"
+      "Liposarcoma",
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Mechanical obstruction at the pylorus or proximal duodenum; presents with profuse vomiting of undigested food, succussion splash, and hypochloremic hypokalemic metabolic alkalosis — the classic biochemical derangement.",
     anatomyFocus: [
       "Classic biochemistry: hypochloremic, hypokalemic metabolic alkalosis — vomiting loses HCl; kidneys compensate by retaining H+ and excreting K+",
@@ -77808,8 +78344,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Upper GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Breast Abscess", "Melena", "Leiomyosarcoma", "Inguinal Hernia"],
-    answer: 1,
+    options: ["Mesothelioma", "Liver Trauma", "Melena", "Hollow Viscus / Bowel Trauma"],
+    answer: 2,
     explanation: "Passage of black tarry stools from degradation of blood by intestinal enzymes — almost always upper GI bleeding (>90%); Glasgow-Blatchford Score ≤1 = safe early discharge; urgent EGD within 24 h.",
     anatomyFocus: [
       "Glasgow-Blatchford Score (GBS): stratifies need for intervention; GBS 0 = very low risk (outpatient EGD); GBS ≥7 = high risk",
@@ -77829,12 +78365,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lower GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Thymoma / Thymic Tumor",
-      "Hollow Viscus / Bowel Trauma",
-      "Rectal Bleeding (Hematochezia)",
-      "Traumatic Diaphragm Rupture"
+      "Pleural Empyema",
+      "Gastric Outlet Obstruction",
+      "Robotic-Assisted Surgery",
+      "Rectal Bleeding (Hematochezia)"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Passage of fresh blood per rectum — 95% resolve spontaneously; use Oakland Score to risk-stratify; colonoscopy is definitive investigation; always exclude colorectal malignancy in older patients.",
     anatomyFocus: [
       "Oakland Score ≤8 = low risk (95% of these can be safely discharged with outpatient colonoscopy)",
@@ -77853,8 +78389,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Breast.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Mesothelioma", "Esophageal Perforation (Boerhaave)", "Diagnostic Laparoscopy", "Breast Cancer"],
-    answer: 3,
+    options: ["Breast Cancer", "Burns", "Pneumothorax", "Symptomatic Cholelithiasis (Biliary Colic)"],
+    answer: 0,
     explanation: "Most common cancer in women.",
     anatomyFocus: [
       "Triple assessment: clinical + imaging + histology",
@@ -77873,8 +78409,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Breast.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["DCIS", "Acute Compartment Syndrome (Limb)", "Pleural Empyema", "Acute Cholecystitis"],
-    answer: 0,
+    options: ["Lung Abscess", "DCIS", "Necrotizing Fasciitis", "Breast Cancer"],
+    answer: 1,
     explanation: "Non-invasive breast cancer confined to ducts.",
     anatomyFocus: [
       "Often detected by screening mammogram (microcalcifications)",
@@ -77893,8 +78429,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Breast.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Mediastinal Mass", "Phyllodes Tumor", "Splenic Trauma", "Breast Cancer"],
-    answer: 1,
+    options: ["Caustic Esophageal Injury", "Thymoma / Thymic Tumor", "Phyllodes Tumor", "DCIS"],
+    answer: 2,
     explanation: "Rare fibroepithelial tumor of breast stroma.",
     anatomyFocus: [
       "Classified: benign, borderline, malignant by histology",
@@ -77913,8 +78449,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thyroid.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Meckel's Diverticulum", "Esophageal Perforation", "Thyroid Cancer", "DCIS"],
-    answer: 2,
+    options: [
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
+      "Melena",
+      "Energy Devices in Minimally Invasive Surgery",
+      "Thyroid Cancer"
+    ],
+    answer: 3,
     explanation: "Most common endocrine malignancy.",
     anatomyFocus: [
       "Papillary (PTC) 80%: 'Orphan Annie' nuclei, psammoma bodies, excellent prognosis",
@@ -77934,12 +78475,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thyroid.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
-      "Rectal Bleeding (Hematochezia)",
-      "Complications of Minimally Invasive Surgery",
-      "Graves' Disease"
+      "Graves' Disease",
+      "Therapeutic Endoscopy (Principles)",
+      "Hydatid Cyst of the Liver",
+      "Acute Mesenteric Ischemia"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Autoimmune hyperthyroidism from TSH-receptor stimulating antibodies.",
     anatomyFocus: [
       "TSH-receptor antibodies (TRAb) are diagnostic",
@@ -77958,13 +78499,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thyroid.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Multinodular Goitre",
-      "Intraductal Papillary Mucinous Neoplasm",
-      "Acute Mesenteric Ischemia",
-      "Small Bowel Tumors"
-    ],
-    answer: 0,
+    options: ["Thoracic Aortic Aneurysm", "Multinodular Goitre", "Pleural Empyema", "Bariatric Surgery"],
+    answer: 1,
     explanation: "Commonest thyroid disorder worldwide.",
     anatomyFocus: [
       "Most MNG are euthyroid; toxic MNG causes autonomous hyperthyroidism",
@@ -77983,8 +78519,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Parathyroid.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Thoracic Aortic Aneurysm", "Primary Hyperparathyroidism", "Mesothelioma", "Gastric Volvulus"],
-    answer: 1,
+    options: [
+      "Pancreatic Neuroendocrine Tumor",
+      "Hereditary Spherocytosis",
+      "Primary Hyperparathyroidism",
+      "Barrett's Esophagus"
+    ],
+    answer: 2,
     explanation: "Most common cause of hypercalcemia in outpatients.",
     anatomyFocus: [
       "Classic presentation: 'bones, stones, groans, moans' (now mostly asymptomatic)",
@@ -78004,12 +78545,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Parathyroid.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Immune Thrombocytopenic Purpura",
-      "Splenic Abscess",
-      "Secondary / Tertiary Hyperparathyroidism",
-      "Zenker's Diverticulum"
+      "ATLS Primary Survey (X-ABCDE)",
+      "Lung Cancer",
+      "Gastric Cancer",
+      "Secondary / Tertiary Hyperparathyroidism"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Parathyroid hyperplasia secondary to chronic renal failure.",
     anatomyFocus: [
       "Secondary HPT: hypocalcemia/hyperphosphatemia → PTH elevation; multigland hyperplasia",
@@ -78029,12 +78570,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Adrenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Hemorrhagic Shock (ATLS 11 Classification)",
-      "Pneumothorax",
-      "Upper GI Hemorrhage",
-      "Phaeochromocytoma"
+      "Phaeochromocytoma",
+      "Secondary / Tertiary Hyperparathyroidism",
+      "Penetrating Abdominal Trauma",
+      "Perianal Abscess & Fistula-in-Ano"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Catecholamine-secreting tumor of adrenal medulla.",
     anatomyFocus: [
       "Rule of 10s: 10% malignant, 10% bilateral, 10% extra-adrenal (paraganglioma), 10% familial, 10% in children",
@@ -78053,13 +78594,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Adrenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Conn's Syndrome",
-      "Secondary / Tertiary Hyperparathyroidism",
-      "Chest Trauma (Surgical Perspective)",
-      "Pilonidal Sinus"
-    ],
-    answer: 0,
+    options: ["Radiation Enteritis", "Conn's Syndrome", "Insulinoma", "Thyroid Cancer"],
+    answer: 1,
     explanation: "Primary aldosteronism is the most common surgically correctable cause of hypertension.",
     anatomyFocus: [
       "Hypertension + hypokalemia + suppressed renin → measure aldosterone:renin ratio",
@@ -78079,12 +78615,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Adrenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Gastro-Esophageal Reflux Disease (GERD)",
+      "Esophageal Cancer",
+      "Adrenal Incidentaloma",
       "Cushing's Syndrome (Adrenal)",
-      "Insulinoma",
-      "Thyroid Cancer"
+      "Lymphedema — Surgical"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "ACTH-independent hypercortisolism from adrenal adenoma or carcinoma.",
     anatomyFocus: [
       "Classify ACTH-dependent vs ACTH-independent first",
@@ -78103,8 +78639,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Adrenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hiatus Hernia", "Adrenal Incidentaloma", "Adrenocortical Carcinoma", "Lymphedema — Surgical"],
-    answer: 2,
+    options: ["Ulcerative Colitis", "Vascular Trauma", "Gastric Cancer", "Adrenocortical Carcinoma"],
+    answer: 3,
     explanation: "Rare but aggressive malignancy.",
     anatomyFocus: [
       "Any adrenal mass >4cm suspicious; >6cm high malignancy risk",
@@ -78123,8 +78659,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Adrenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Crohn's Disease", "Vascular Trauma", "Upper GI Hemorrhage", "Adrenal Incidentaloma"],
-    answer: 3,
+    options: ["Adrenal Incidentaloma", "Splenic Trauma", "Splenic Abscess", "Peripheral Arterial Disease"],
+    answer: 0,
     explanation: "Adrenal mass found incidentally.",
     anatomyFocus: [
       "Found in 4–5% of abdominal CT scans",
@@ -78143,8 +78679,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Insulinoma", "Liver Trauma", "Primary Sclerosing Cholangitis", "Peripheral Arterial Disease"],
-    answer: 0,
+    options: ["Deep Vein Thrombosis", "Insulinoma", "Lung Cancer", "Laparoscopic Access Techniques"],
+    answer: 1,
     explanation: "Most common functioning pancreatic NET.",
     anatomyFocus: [
       "Whipple's triad: symptoms + BG <2.5mmol/L + relief with glucose administration",
@@ -78164,12 +78700,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Multi-organ.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Deep Vein Thrombosis",
+      "Spigelian Hernia",
+      "Acute Pancreatitis",
       "MEN1 (Multiple Endocrine Neoplasia Type 1)",
-      "Pneumothorax",
-      "Energy Devices in Minimally Invasive Surgery"
+      "Crohn's Disease"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Autosomal dominant syndrome: parathyroid (95%) + pituitary (30%) + pancreatic/duodenal NETs (50%).",
     anatomyFocus: [
       "Diagnostic: 2 of 3 classic tumors OR 1 with known MEN1 family history",
@@ -78189,12 +78725,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Multi-organ.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Obturator Hernia",
       "Acute Pancreatitis",
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
-      "Anal Canal Cancer"
+      "Hemorrhoids",
+      "Acute Cholangitis",
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "RET proto-oncogene mutation.",
     anatomyFocus: [
       "MEN2A: medullary thyroid cancer + phaeochromocytoma (50%) + PHPT (20%)",
@@ -78213,8 +78749,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Breast.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Acute Pancreatitis", "Anal Fistula", "Hepatocellular Carcinoma", "Breast Abscess"],
-    answer: 3,
+    options: ["Breast Abscess", "Liposarcoma", "Liver Trauma", "MEN1 (Multiple Endocrine Neoplasia Type 1)"],
+    answer: 0,
     explanation: "Loculated breast infection most common in lactating women.",
     anatomyFocus: [
       "Most common: puerperal (lactational) — S. aureus (including MRSA)",
@@ -78234,12 +78770,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Whole patient — systematic trauma assessment.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Renal Artery Stenosis",
       "ATLS Primary Survey (X-ABCDE)",
-      "Leiomyosarcoma",
-      "Secondary / Tertiary Hyperparathyroidism",
-      "Burns"
+      "Traumatic Brain Injury (Surgical Perspective)",
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "X-ABCDE: X = eXsanguinating external hemorrhage controlled first (tourniquet/wound packing), then A–Airway, B–Breathing, C–Circulation, D–Disability, E–Exposure.",
     anatomyFocus: [
       "X-ABCDE: X = eXsanguinating/external hemorrhage (tourniquet, wound packing) BEFORE airway — same concept as ATLS <C>ABCDE",
@@ -78259,12 +78795,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Cardiovascular system — acute circulatory failure.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Renal Artery Stenosis",
+      "Hepatocellular Carcinoma",
+      "Barrett's Esophagus",
       "Hemorrhagic Shock (ATLS 11 Classification)",
-      "Traumatic Brain Injury (Surgical Perspective)",
-      "Breast Abscess"
+      "Complications of Minimally Invasive Surgery"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "ATLS 11th ed.",
     anatomyFocus: [
       "Class I (<15% volume, <750mL): HR <100, normal BP — no transfusion needed; crystalloid only if symptomatic",
@@ -78283,13 +78819,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Spinal cord, vertebral column.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Choledocholithiasis",
-      "Zenker's Diverticulum",
-      "Spinal Cord Injury (ATLS 11)",
-      "Robotic-Assisted Surgery"
-    ],
-    answer: 2,
+    options: ["Anal Fistula", "Esophageal Cancer", "Thymoma / Thymic Tumor", "Spinal Cord Injury (ATLS 11)"],
+    answer: 3,
     explanation: "ATLS 11 replaces 'full spinal immobilization' with 'spinal motion restriction' (SMR).",
     anatomyFocus: [
       "ATLS 11 change: 'Spinal motion restriction' (SMR) replaces blanket immobilization — collar only when clinically indicated (NEXUS/CCR criteria)",
@@ -78308,8 +78839,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Upper airway, trachea.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Anal Fissure", "Hiatus Hernia", "Esophageal Perforation", "Trauma Airway Management (ATLS 11)"],
-    answer: 3,
+    options: [
+      "Trauma Airway Management (ATLS 11)",
+      "Acute Cholangitis",
+      "Phyllodes Tumor",
+      "Hidradenitis Suppurativa"
+    ],
+    answer: 0,
     explanation: "ATLS 11 airway algorithm: attempt oxygenation first → RSI (video laryngoscopy preferred) → if failed → supraglottic airway device (LMA) → if CICO → surgical cricothyroidotomy (scalpel-finger-bougie).",
     anatomyFocus: [
       "GCS ≤8, respiratory rate <10 or >29, SpO₂ <90 on O₂, facial fractures/burns/inhalation injury = indication for early definitive airway",
@@ -78328,8 +78864,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdomen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Damage Control Laparotomy", "Hepatocellular Carcinoma", "Thyroid Cancer", "Liposarcoma"],
-    answer: 0,
+    options: [
+      "Acute Compartment Syndrome (Limb)",
+      "Damage Control Laparotomy",
+      "Esophageal Cancer",
+      "Trauma Airway Management (ATLS 11)"
+    ],
+    answer: 1,
     explanation: "Life-saving strategy for exsanguinating abdominal trauma: abbreviated surgery to control hemorrhage and contamination, temporary closure, resuscitation in ICU, planned re-look at 24–48 hours.",
     anatomyFocus: [
       "Damage control surgery (DCS): hemorrhage control + contamination control + temporary closure — NOT definitive repair",
@@ -78349,12 +78890,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdomen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Acute Compartment Syndrome (Limb)",
+      "Principles of Laparoscopy & Pneumoperitoneum",
+      "Bariatric Surgery",
       "Abdominal Compartment Syndrome",
-      "Hiatus Hernia",
-      "Trauma Airway Management (ATLS 11)"
+      "Multinodular Goitre"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Intra-abdominal pressure >20mmHg with new organ dysfunction.",
     anatomyFocus: [
       "IAP >12mmHg = intra-abdominal hypertension (IAH); IAP >20mmHg + organ dysfunction = ACS",
@@ -78374,12 +78915,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Abdominal Aortic Aneurysm",
+      "Hydatid Cyst of the Liver",
       "Laparoscopic Access Techniques",
-      "Gastric Volvulus",
-      "Necrotizing Fasciitis",
-      "Primary Hyperparathyroidism"
+      "Necrotizing Fasciitis"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Rapidly progressive life-threatening soft tissue infection with fascial necrosis.",
     anatomyFocus: [
       "NF = surgical emergency — debridement within hours of diagnosis, not hours after admission",
@@ -78399,12 +78940,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Spleen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Abdominal Aortic Aneurysm",
-      "Intraductal Papillary Mucinous Neoplasm",
-      "Energy Devices in Minimally Invasive Surgery",
-      "Splenic Trauma"
+      "Splenic Trauma",
+      "Acute Aortic Dissection",
+      "Intrahepatic Cholangiocarcinoma",
+      "Mucocele of the Appendix"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Most commonly injured solid organ in blunt abdominal trauma.",
     anatomyFocus: [
       "AAST Grade I–V; Grade I–III stable patients → NOM (ICU monitoring + serial examination)",
@@ -78424,12 +78965,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Appendiceal Carcinoid (Well-Differentiated NET)",
       "Liver Trauma",
-      "Acute Aortic Dissection",
-      "Pancreatic Pseudocyst",
-      "Familial Adenomatous Polyposis"
+      "Liver Transplantation",
+      "Secondary / Tertiary Hyperparathyroidism"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Most common solid organ injury overall.",
     anatomyFocus: [
       "AAST Grade I–VI; Grade I–III stable → NOM; Grade IV–V → angioembolization or surgery",
@@ -78449,12 +78990,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small/Large bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Mucocele of the Appendix",
+      "Hidradenitis Suppurativa",
+      "Popliteal Artery Aneurysm",
       "Hollow Viscus / Bowel Trauma",
-      "Pancreas Transplantation",
-      "Phaeochromocytoma"
+      "Obturator Hernia"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Missed hollow viscus injury causes peritonitis and death.",
     anatomyFocus: [
       "Blunt small bowel injury: often missed on initial CT; free fluid without solid organ injury = bowel injury until proven otherwise",
@@ -78474,12 +79015,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Diaphragm.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Liposarcoma",
-      "Popliteal Artery Aneurysm",
-      "Traumatic Diaphragm Rupture",
-      "Retroperitoneal Sarcoma"
+      "Ulcerative Colitis",
+      "Pectus Excavatum / Carinatum",
+      "Lynch Syndrome (HNPCC)",
+      "Traumatic Diaphragm Rupture"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Often missed on initial imaging; CXR has poor sensitivity.",
     anatomyFocus: [
       "Left-sided in 75% (right protected by liver); penetrating in 30%",
@@ -78499,12 +79040,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pelvis.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Crohn's Disease",
-      "Pulmonary Carcinoid",
-      "Bowel Perforation",
-      "Pelvic Fracture (Hemorrhage Control)"
+      "Pelvic Fracture (Hemorrhage Control)",
+      "Cecal Volvulus",
+      "Hepatocellular Carcinoma",
+      "Primary Sclerosing Cholangitis"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Unstable pelvic fractures can lose 3–5L blood retroperitoneally.",
     anatomyFocus: [
       "Pelvic binder/sheet immediately for suspected unstable pelvic fracture (closes volume, reduces hemorrhage)",
@@ -78524,12 +79065,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdominal wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Pelvic Fracture (Hemorrhage Control)",
       "Wound Dehiscence / Burst Abdomen",
-      "Large Bowel Obstruction",
-      "Choledocholithiasis",
-      "Acute Appendicitis"
+      "Familial Adenomatous Polyposis",
+      "Intraductal Papillary Mucinous Neoplasm"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Complete burst abdomen (evisceration) is a surgical emergency.",
     anatomyFocus: [
       "Burst abdomen: fascial dehiscence with or without evisceration; distinct from superficial wound dehiscence",
@@ -78549,12 +79090,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdomen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Pelvic Fracture (Hemorrhage Control)",
+      "Liver Transplantation",
+      "Perforated Peptic Ulcer",
       "Penetrating Abdominal Trauma",
-      "Lynch Syndrome (HNPCC)",
-      "Pancreatic Neuroendocrine Tumor"
+      "Cecal Volvulus"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "GSW through peritoneal cavity = mandatory laparotomy.",
     anatomyFocus: [
       "GSW (gunshot wounds): unpredictable trajectory — mandatory laparotomy if peritoneal cavity traversed",
@@ -78574,12 +79115,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Chest.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Pancreas Transplantation",
-      "Gastric Cancer",
-      "Chest Trauma (Surgical Perspective)",
-      "Large Bowel Obstruction"
+      "Retroperitoneal Sarcoma",
+      "Rectal Prolapse",
+      "Splanchnic Artery Aneurysm",
+      "Chest Trauma (Surgical Perspective)"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "85% of chest injuries managed with intercostal drain insertion alone.",
     anatomyFocus: [
       "ATLS: identify and treat immediately life-threatening chest injuries — Tension PTX, Open PTX, Massive Hemothorax, Flail Chest, Cardiac Tamponade",
@@ -78598,8 +79139,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin/systemic.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Melanoma", "Hemorrhoids", "Splanchnic Artery Aneurysm", "Burns"],
-    answer: 3,
+    options: ["Burns", "Acute Abdomen", "Hemothorax", "Acute Compartment Syndrome (Limb)"],
+    answer: 0,
     explanation: "Immediate priorities: stop the burning process, airway assessment, fluid resuscitation (Parkland formula), wound care.",
     anatomyFocus: [
       "Rule of Nines: head 9%, each arm 9%, each leg 18%, trunk front 18%, trunk back 18%, perineum 1%",
@@ -78618,8 +79159,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Extremity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Acute Compartment Syndrome (Limb)", "Dysphagia", "Lung Abscess", "Burns"],
-    answer: 0,
+    options: [
+      "Pancreatic Neuroendocrine Tumor",
+      "Acute Compartment Syndrome (Limb)",
+      "Chronic Pancreatitis",
+      "Anal Fissure"
+    ],
+    answer: 1,
     explanation: "Rising pressure within closed fascial compartment causes ischemia.",
     anatomyFocus: [
       "Compartment pressure >30mmHg (or within 30mmHg of diastolic BP) = fasciotomy",
@@ -78638,13 +79184,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Kidney.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Immune Thrombocytopenic Purpura",
-      "Renal Trauma",
-      "Extrahepatic Cholangiocarcinoma",
-      "Perianal Abscess & Fistula-in-Ano"
-    ],
-    answer: 1,
+    options: ["Splanchnic Artery Aneurysm", "Thoracic Aortic Aneurysm", "Renal Trauma", "Breast Abscess"],
+    answer: 2,
     explanation: "Most renal injuries (95%) managed non-operatively.",
     anatomyFocus: [
       "Blunt trauma: 80%; most common solid organ injury after spleen and liver",
@@ -78664,12 +79205,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Brain.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Splanchnic Artery Aneurysm",
-      "Thoracic Aortic Aneurysm",
-      "Traumatic Brain Injury (Surgical Perspective)",
-      "Renal Transplantation"
+      "Thyroid Cancer",
+      "Dysphagia",
+      "Small Bowel Transplantation",
+      "Traumatic Brain Injury (Surgical Perspective)"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "General surgeon must recognize surgical TBI requiring urgent neurosurgical intervention.",
     anatomyFocus: [
       "Extradural hematoma (EDH): temporal, arterial (middle meningeal artery), lucid interval → deterioration; CT: biconvex hyperdense; emergency craniotomy",
@@ -78688,13 +79229,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Kidney.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Hemorrhagic Shock (ATLS 11 Classification)",
-      "Adrenocortical Carcinoma",
-      "Traumatic Brain Injury (Surgical Perspective)",
-      "Renal Transplantation"
-    ],
-    answer: 3,
+    options: ["Renal Transplantation", "Esophageal Cancer", "Mediastinal Mass", "Chest Wall Tumor"],
+    answer: 0,
     explanation: "Definitive treatment for end-stage renal disease.",
     anatomyFocus: [
       "Transplant kidney placed extraperitoneally in iliac fossa: renal vein to external iliac vein, renal artery to external iliac artery",
@@ -78713,8 +79249,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Liver Transplantation", "Hiatus Hernia", "Chest Wall Tumor", "Pectus Excavatum / Carinatum"],
-    answer: 0,
+    options: [
+      "ATLS Primary Survey (X-ABCDE)",
+      "Liver Transplantation",
+      "Extrahepatic Cholangiocarcinoma",
+      "Choledocholithiasis"
+    ],
+    answer: 1,
     explanation: "Only curative treatment for end-stage liver disease and acute liver failure.",
     anatomyFocus: [
       "Indications: ESLD (MELD ≥15), acute liver failure, HCC within Milan criteria, metabolic liver disease",
@@ -78734,12 +79275,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Hemorrhagic Shock (ATLS 11 Classification)",
+      "Abdominal Aortic Aneurysm",
+      "Pancreatic Pseudocyst",
       "Pancreas Transplantation",
-      "Intrahepatic Cholangiocarcinoma",
-      "Pancreatic Ductal Adenocarcinoma"
+      "Intraductal Papillary Mucinous Neoplasm"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Achieves insulin independence in Type 1 diabetes.",
     anatomyFocus: [
       "Indications: Type 1 DM with ESRD (SPK — simultaneous pancreas-kidney), or Type 1 DM alone (PAK — pancreas after kidney, PTA — pancreas transplant alone)",
@@ -78759,12 +79300,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Abdominal Aortic Aneurysm",
-      "Portal Hypertension",
-      "Small Bowel Transplantation",
-      "Pancreatic Neuroendocrine Tumor"
+      "Thymoma / Thymic Tumor",
+      "Gastro-Esophageal Reflux Disease (GERD)",
+      "Therapeutic Endoscopy (Principles)",
+      "Small Bowel Transplantation"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Last resort for irreversible intestinal failure.",
     anatomyFocus: [
       "Indication: irreversible intestinal failure with life-threatening PN complications (liver failure, recurrent sepsis, thrombosis of central veins)",
@@ -78783,8 +79324,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Esophageal Perforation", "Acute Abdomen", "Thyroid Cancer", "Living Donor Hepatectomy"],
-    answer: 3,
+    options: [
+      "Living Donor Hepatectomy",
+      "Phyllodes Tumor",
+      "Anal Canal Cancer",
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)"
+    ],
+    answer: 0,
     explanation: "Right hepatectomy for living donor liver transplant (LDLT).",
     anatomyFocus: [
       "Right hepatectomy (segments V–VIII + right hepatic vein) most common for adult-to-adult LDLT",
@@ -78803,8 +79349,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lung.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Lung Cancer", "Acute Abdomen", "Perianal Abscess & Fistula-in-Ano", "Inguinal Hernia"],
-    answer: 0,
+    options: ["Carotid Body Tumor", "Lung Cancer", "Strangulated Hernia", "Small Bowel Neuroendocrine Tumor"],
+    answer: 1,
     explanation: "Leading cause of cancer death worldwide.",
     anatomyFocus: [
       "NSCLC (85%): adenocarcinoma (most common), squamous, large-cell; SCLC (15%): extensive spread at diagnosis",
@@ -78823,8 +79369,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleural cavity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Carotid Body Tumor", "Pneumothorax", "Parastomal Hernia", "Short Bowel Syndrome"],
-    answer: 1,
+    options: ["Colon Cancer", "Pancreatic Pseudocyst", "Pneumothorax", "Carotid Body Tumor"],
+    answer: 2,
     explanation: "Air in the pleural space.",
     anatomyFocus: [
       "Tension pneumothorax: clinical diagnosis — do NOT wait for CXR; immediate 2nd ICS midclavicular needle decompression",
@@ -78843,8 +79389,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleural cavity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Rectal Prolapse", "Portal Hypertension", "Pleural Empyema", "Carotid Body Tumor"],
-    answer: 2,
+    options: [
+      "Retroperitoneal Sarcoma",
+      "Damage Control Laparotomy",
+      "Therapeutic Endoscopy (Principles)",
+      "Pleural Empyema"
+    ],
+    answer: 3,
     explanation: "Infected pleural fluid (frank pus, organisms on culture, or pH <7.2).",
     anatomyFocus: [
       "Most common causes: parapneumonic (post-pneumonia), post-thoracic surgery, esophageal perforation, hematogenous",
@@ -78863,8 +79414,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleura.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Melanoma", "Abdominal Compartment Syndrome", "Popliteal Artery Aneurysm", "Mesothelioma"],
-    answer: 3,
+    options: [
+      "Mesothelioma",
+      "Pancreas Transplantation",
+      "Hollow Viscus / Bowel Trauma",
+      "Traumatic Brain Injury (Surgical Perspective)"
+    ],
+    answer: 0,
     explanation: "Aggressive malignancy of pleural mesothelial cells, invariably linked to asbestos exposure.",
     anatomyFocus: [
       "Asbestos exposure in 80%: latent period 20–50 years",
@@ -78884,12 +79440,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thymus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Esophageal Cancer",
       "Thymoma / Thymic Tumor",
-      "Small Bowel Transplantation",
-      "Traumatic Diaphragm Rupture",
-      "Renal Transplantation"
+      "Popliteal Artery Aneurysm",
+      "Trauma Airway Management (ATLS 11)"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Most common anterior mediastinal tumor in adults.",
     anatomyFocus: [
       "Most common anterior mediastinal mass in adults (40%)",
@@ -78908,8 +79464,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hiatus Hernia", "Esophageal Perforation", "Popliteal Artery Aneurysm", "Damage Control Laparotomy"],
-    answer: 1,
+    options: ["Gallbladder Cancer", "Spigelian Hernia", "Esophageal Perforation", "Large Bowel Obstruction"],
+    answer: 2,
     explanation: "Highest mortality of any GI perforation (20–40%).",
     anatomyFocus: [
       "Boerhaave's syndrome: spontaneous full-thickness tear, distal left posterolateral esophagus; post-vomiting; Mackler's triad",
@@ -78928,8 +79484,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleural cavity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Colorectal Liver Metastases", "Obturator Hernia", "Hemothorax", "Ulcerative Colitis"],
-    answer: 2,
+    options: ["Small Bowel Tumors", "Pleural Empyema", "Basal Cell Carcinoma", "Hemothorax"],
+    answer: 3,
     explanation: "Blood in the pleural space.",
     anatomyFocus: [
       "Massive hemothorax: >1500mL blood (half total blood volume) — hemodynamic shock + absent breath sounds + dull percussion",
@@ -78948,8 +79504,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lung.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Perforated Peptic Ulcer", "Pleural Empyema", "Squamous Cell Carcinoma (Skin)", "Lung Abscess"],
-    answer: 3,
+    options: [
+      "Lung Abscess",
+      "Primary Sclerosing Cholangitis",
+      "Gastric Outlet Obstruction",
+      "Mucocele of the Appendix"
+    ],
+    answer: 0,
     explanation: "Cavitating lung infection with pus.",
     anatomyFocus: [
       "Primary lung abscess: aspiration of oral flora (Bacteroides, Peptostreptococcus, microaerophilic Streptococcus)",
@@ -78968,8 +79529,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Mediastinum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Mediastinal Mass", "Acute Appendicitis", "Melena", "Familial Adenomatous Polyposis"],
-    answer: 0,
+    options: ["Liver Abscess", "Mediastinal Mass", "Small Bowel Tumors", "Chest Trauma (Surgical Perspective)"],
+    answer: 1,
     explanation: "Location defines differential: anterior (4Ts: thymoma/teratoma/lymphoma/thyroid), middle (lymphoma/cyst/tracheal), posterior (neurogenic tumors).",
     anatomyFocus: [
       "Anterior (4Ts): thymoma, teratoma/GCT, terrible lymphoma, thyroid/parathyroid",
@@ -78988,8 +79549,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Chest wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Gallbladder Cancer", "Chest Wall Tumor", "Perforated Peptic Ulcer", "Burns"],
-    answer: 1,
+    options: ["Desmoid Tumor", "DCIS", "Chest Wall Tumor", "Ulcerative Colitis"],
+    answer: 2,
     explanation: "Primary chest wall tumors are rare.",
     anatomyFocus: [
       "60% of chest wall tumors are malignant; 40% benign",
@@ -79008,8 +79569,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Chest wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Merkel Cell Carcinoma", "Phyllodes Tumor", "Pectus Excavatum / Carinatum", "Crohn's Disease"],
-    answer: 2,
+    options: [
+      "Chest Wall Tumor",
+      "Peripheral Arterial Disease",
+      "Parastomal Hernia",
+      "Pectus Excavatum / Carinatum"
+    ],
+    answer: 3,
     explanation: "Congenital chest wall deformity.",
     anatomyFocus: [
       "Pectus excavatum: anterior chest wall depression; M:F = 3:1; 1 in 400 births",
@@ -79028,8 +79594,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lung.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Chest Wall Tumor", "Peripheral Arterial Disease", "Spigelian Hernia", "Pulmonary Carcinoid"],
-    answer: 3,
+    options: ["Pulmonary Carcinoid", "Vascular Trauma", "Anal Fissure", "Adrenal Incidentaloma"],
+    answer: 0,
     explanation: "Low-grade neuroendocrine tumor of the lung.",
     anatomyFocus: [
       "Typical carcinoid (TC): <2 mitoses/2mm², no necrosis; 10-year survival >90%",
@@ -79049,12 +79615,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Diaphragm.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Acute Compartment Syndrome (Limb)",
       "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
-      "Vascular Trauma",
-      "Perianal Abscess & Fistula-in-Ano",
-      "Insulinoma"
+      "Meckel's Diverticulum",
+      "Acute Mesenteric Ischemia"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Herniation of abdominal viscera into the thorax through a congenital diaphragmatic defect.",
     anatomyFocus: [
       "Bochdalek hernia: posterolateral defect (failure of pleuroperitoneal canal closure); ~85% of CDH; left-sided in ~85%; neonatal respiratory distress with pulmonary hypoplasia",
@@ -79073,13 +79639,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Groin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Liver Transplantation",
-      "Inguinal Hernia",
-      "Gastro-Esophageal Reflux Disease (GERD)",
-      "Popliteal Artery Aneurysm"
-    ],
-    answer: 1,
+    options: ["Renal Transplantation", "Basal Cell Carcinoma", "Inguinal Hernia", "Acute Abdomen"],
+    answer: 2,
     explanation: "Most common hernia.",
     anatomyFocus: [
       "Indirect: lateral to inferior epigastric vessels; through deep inguinal ring; congenital patent processus vaginalis",
@@ -79098,8 +79659,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Femoral canal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Liver Transplantation", "Squamous Cell Carcinoma (Skin)", "Femoral Hernia", "Dysphagia"],
-    answer: 2,
+    options: ["Angiodysplasia", "Portal Hypertension", "Splenic Trauma", "Femoral Hernia"],
+    answer: 3,
     explanation: "High risk of strangulation — all femoral hernias should be repaired promptly.",
     anatomyFocus: [
       "Boundaries of femoral canal: anterior (inguinal ligament), medial (lacunar ligament), lateral (femoral vein), posterior (pectineal ligament/Cooper's ligament)",
@@ -79118,8 +79679,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Umbilicus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Small Bowel Tumors", "Liver Abscess", "Liver Trauma", "Umbilical Hernia"],
-    answer: 3,
+    options: [
+      "Umbilical Hernia",
+      "Acute Cholangitis",
+      "Hidradenitis Suppurativa",
+      "Pelvic Fracture (Hemorrhage Control)"
+    ],
+    answer: 0,
     explanation: "Common in adults, especially obese or multiparous women.",
     anatomyFocus: [
       "True umbilical hernia: through umbilical ring (in adults, often previously closed then re-opened); vs paraumbilical hernia (through linea alba immediately adjacent to umbilicus)",
@@ -79138,8 +79704,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdominal wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Incisional Hernia", "Hepatocellular Carcinoma", "Liposarcoma", "Wound Dehiscence / Burst Abdomen"],
-    answer: 0,
+    options: ["Radiation Enteritis", "Incisional Hernia", "Acute Cholecystitis", "Breast Abscess"],
+    answer: 1,
     explanation: "Develops in 10–15% of all laparotomies.",
     anatomyFocus: [
       "Occurs in 10–15% of laparotomies; higher with midline closure, obesity, wound infection",
@@ -79159,12 +79725,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anterior abdominal wall (linea alba).",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Gastro-Esophageal Reflux Disease (GERD)",
+      "Peripheral Arterial Disease",
+      "Adrenal Incidentaloma",
       "Epigastric Hernia",
-      "Acute Cholangitis",
-      "ATLS Primary Survey (X-ABCDE)"
+      "Symptomatic Cholelithiasis (Biliary Colic)"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Protrusion through a defect in the linea alba between xiphisternum and umbilicus; most contain pre-peritoneal fat (not peritoneal sac); repair by suture (small) or mesh (≥1 cm or symptomatic recurrence).",
     anatomyFocus: [
       "Epigastric hernias occur through defects in the linea alba above the umbilicus, between the xiphoid and umbilicus",
@@ -79183,8 +79749,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Any hernia site.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Peripheral Arterial Disease", "Insulinoma", "Strangulated Hernia", "Acute Cholecystitis"],
-    answer: 2,
+    options: [
+      "Parastomal Hernia",
+      "Cushing's Syndrome (Adrenal)",
+      "Therapeutic Endoscopy (Principles)",
+      "Strangulated Hernia"
+    ],
+    answer: 3,
     explanation: "Surgical emergency.",
     anatomyFocus: [
       "Incarceration: irreducible but no vascular compromise; Strangulation: vascular compromise → ischemia",
@@ -79203,8 +79774,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stoma site.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Strangulated Hernia", "Adrenocortical Carcinoma", "Damage Control Laparotomy", "Parastomal Hernia"],
-    answer: 3,
+    options: [
+      "Parastomal Hernia",
+      "Traumatic Brain Injury (Surgical Perspective)",
+      "Popliteal Artery Aneurysm",
+      "Living Donor Hepatectomy"
+    ],
+    answer: 0,
     explanation: "Hernia alongside a stoma, developing in 30–50% of colostomies.",
     anatomyFocus: [
       "Occurs in 30–50% of colostomies; 5–15% of ileostomies within 5 years",
@@ -79223,8 +79799,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lateral abdominal wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Spigelian Hernia", "Renal Transplantation", "Popliteal Artery Aneurysm", "Lung Cancer"],
-    answer: 0,
+    options: [
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
+      "Spigelian Hernia",
+      "Traumatic Diaphragm Rupture",
+      "Laparoscopic Access Techniques"
+    ],
+    answer: 1,
     explanation: "Rare hernia through the semilunar line (Spigel's fascia) at the lateral edge of the rectus sheath.",
     anatomyFocus: [
       "Herniates through semilunar line (Spigel's fascia) at junction of rectus abdominis and transversus abdominis aponeurosis",
@@ -79243,13 +79824,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Obturator foramen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Breast Abscess",
-      "Obturator Hernia",
-      "Pelvic Fracture (Hemorrhage Control)",
-      "Energy Devices in Minimally Invasive Surgery"
-    ],
-    answer: 1,
+    options: ["Acute Aortic Dissection", "Umbilical Hernia", "Obturator Hernia", "Peripheral Arterial Disease"],
+    answer: 2,
     explanation: "Rare hernia through obturator foramen.",
     anatomyFocus: [
       "Elderly thin women: 6:1 F:M ratio; multiparous; lost the fat pad obturating foramen",
@@ -79268,13 +79844,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Retroperitoneum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Acute Aortic Dissection",
-      "Umbilical Hernia",
-      "Retroperitoneal Sarcoma",
-      "Peripheral Arterial Disease"
-    ],
-    answer: 2,
+    options: ["Chest Wall Tumor", "Kaposi's Sarcoma", "Hepatocellular Carcinoma", "Retroperitoneal Sarcoma"],
+    answer: 3,
     explanation: "Most common retroperitoneal sarcoma is liposarcoma (50%) followed by leiomyosarcoma.",
     anatomyFocus: [
       "Liposarcoma (50%) and leiomyosarcoma (25%) are the two most common histotypes",
@@ -79293,13 +79864,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Pulmonary Carcinoid",
-      "Principles of Laparoscopy & Pneumoperitoneum",
-      "Pancreatic Ductal Adenocarcinoma",
-      "Melanoma"
-    ],
-    answer: 3,
+    options: ["Melanoma", "Incisional Hernia", "Large Bowel Obstruction", "Adrenocortical Carcinoma"],
+    answer: 0,
     explanation: "Wide local excision with sentinel lymph node biopsy; adjuvant immunotherapy/targeted therapy for stage III–IV.",
     anatomyFocus: [
       "Breslow thickness is the single most important prognostic factor",
@@ -79318,8 +79884,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Basal Cell Carcinoma", "Epigastric Hernia", "Ulcerative Colitis", "Adrenal Incidentaloma"],
-    answer: 0,
+    options: ["Deep Vein Thrombosis", "Basal Cell Carcinoma", "Large Bowel Obstruction", "Strangulated Hernia"],
+    answer: 1,
     explanation: "Most common human cancer; locally aggressive but rarely metastasises; excision with 4 mm margins or Mohs surgery for high-risk/face tumors.",
     anatomyFocus: [
       "Most common cancer in humans; >90% on head and neck (sun-exposed areas)",
@@ -79338,8 +79904,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Deep Vein Thrombosis", "Squamous Cell Carcinoma (Skin)", "Ulcerative Colitis", "Parastomal Hernia"],
-    answer: 1,
+    options: ["Thyroid Cancer", "Graves' Disease", "Squamous Cell Carcinoma (Skin)", "Diverticulitis"],
+    answer: 2,
     explanation: "Second most common skin cancer; significant metastatic potential (~5%); excise with 4–6 mm margins; high-risk features require SLNB and adjuvant RT.",
     anatomyFocus: [
       "Arises from keratinocytes; major risk is cumulative UV; immunosuppressed patients have 100× increased risk",
@@ -79358,8 +79924,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin/Apocrine glands.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Graves' Disease", "Multinodular Goitre", "Hidradenitis Suppurativa", "Colon Cancer"],
-    answer: 2,
+    options: ["Pleural Empyema", "Achalasia", "Kaposi's Sarcoma", "Hidradenitis Suppurativa"],
+    answer: 3,
     explanation: "Chronic inflammatory follicular disease of apocrine gland-bearing skin; medical management first; radical wide excision with primary closure or flap for Hurley III.",
     anatomyFocus: [
       "Follicular occlusion — NOT primary apocrine infection — causes HS; apocrine involvement is secondary",
@@ -79378,8 +79944,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue/Retroperitoneum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Mesothelioma", "Esophageal Perforation (Boerhaave)", "Kaposi's Sarcoma", "Liposarcoma"],
-    answer: 3,
+    options: ["Liposarcoma", "Hidradenitis Suppurativa", "Mesothelioma", "Diverticulitis"],
+    answer: 0,
     explanation: "Most common retroperitoneal sarcoma; surgery is the only curative modality; aim for R0 resection; dedifferentiated subtype has worst prognosis.",
     anatomyFocus: [
       "Most common retroperitoneal soft tissue sarcoma (40–45% of all retroperitoneal STS)",
@@ -79398,8 +79964,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue/Vascular.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Leiomyosarcoma", "Hidradenitis Suppurativa", "Thymoma / Thymic Tumor", "Colon Cancer"],
-    answer: 0,
+    options: ["Liver Abscess", "Leiomyosarcoma", "Pneumothorax", "Ulcerative Colitis"],
+    answer: 1,
     explanation: "Malignant smooth muscle tumor; retroperitoneal or IVC origin most challenging; complete resection with vascular reconstruction where needed is the only curative option.",
     anatomyFocus: [
       "Retroperitoneal LMS is distinct from uterine LMS — worse prognosis, different molecular profile",
@@ -79418,8 +79984,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue/Mesentery.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Gallbladder Cancer", "Desmoid Tumor", "Pleural Empyema", "Crohn's Disease"],
-    answer: 1,
+    options: ["Colorectal Liver Metastases", "Hiatus Hernia", "Desmoid Tumor", "Kaposi's Sarcoma"],
+    answer: 2,
     explanation: "Locally aggressive fibromatosis with no metastatic potential; paradigm shift to active surveillance first; surgery for progressors; sorafenib for FAP-related intra-abdominal desmoids.",
     anatomyFocus: [
       "Desmoid tumors do NOT metastasize — mortality from local complications (bowel obstruction, fistula, vascular compression)",
@@ -79438,8 +80004,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hepatic Adenoma", "Achalasia", "Merkel Cell Carcinoma", "Kaposi's Sarcoma"],
-    answer: 2,
+    options: [
+      "Conversion to Open Surgery",
+      "Pseudo-Obstruction (Ogilvie's Syndrome)",
+      "Pectus Excavatum / Carinatum",
+      "Merkel Cell Carcinoma"
+    ],
+    answer: 3,
     explanation: "Rare but aggressive cutaneous neuroendocrine carcinoma; Merkel cell polyomavirus (MCPyV) in 80%; excellent response to immunotherapy (avelumab/pembrolizumab).",
     anatomyFocus: [
       "Merkel cell carcinoma (MCC): red/violet dome-shaped rapidly growing nodule; head/neck or extremities in elderly or immunosuppressed",
@@ -79458,8 +80029,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin/Mucosa/Viscera.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Therapeutic Endoscopy (Principles)", "Angiodysplasia", "Pulmonary Carcinoid", "Kaposi's Sarcoma"],
-    answer: 3,
+    options: [
+      "Kaposi's Sarcoma",
+      "Immune Thrombocytopenic Purpura",
+      "Thyroid Cancer",
+      "Small Bowel Transplantation"
+    ],
+    answer: 0,
     explanation: "HHV-8 driven vascular tumor; primarily a medical disease — treat the underlying immunosuppression; systemic chemotherapy for advanced disease.",
     anatomyFocus: [
       "All forms driven by HHV-8 (KSHV — Kaposi's Sarcoma-associated Herpesvirus) infection",
@@ -80258,7 +80834,8 @@ const QUIZ_BANK = [
   {"id":"q-atls-shock-1","dept":"trauma","disease":"atls-haemorrhagic-shock","format":"mcq","stem":"A trauma patient has HR 128, SBP 88, GCS 12, RR 32, and base deficit −8. Which ATLS shock class?","options":["Class I","Class II","Class III","Class IV","Neurogenic shock"],"answer":2,"explanation":"Class III hemorrhagic shock: 30–40% blood volume loss (1500–2000mL). HR >120, SBP <90, GCS 11–13, RR 30–40, BD −6 to −10. Requires blood transfusion + MTP activation. Class IV: HR >140, SBP <70, GCS <10."},
   {"id":"q-atls-spinal-1","dept":"trauma","disease":"atls-spinal-trauma","format":"mcq","stem":"NEXUS criteria: which combination allows clinical clearance of the C-spine without imaging?","options":["GCS 15 + no midline tenderness alone","All 5 criteria negative: no tenderness, no neuro deficit, normal alertness, no intoxication, no distracting injury","Normal GCS + no intoxication","Age <65 + no mechanism","Normal plain X-ray C-spine"],"answer":1,"explanation":"NEXUS: ALL 5 criteria must be negative to clinically clear the C-spine. 1) No posterior midline C-spine tenderness. 2) No focal neurological deficit. 3) Normal alertness. 4) No intoxication. 5) No painful distracting injury. Sensitivity 99.6%. Any single positive criterion = CT C-spine required."},
   {"id":"q-atls-airway-1","dept":"trauma","disease":"atls-airway","format":"mcq","stem":"After 3 failed RSI attempts in a trauma patient, SpO₂ is falling to 78%. Bag-mask ventilation is also failing. ATLS 11 immediate next step?","options":["Try a 4th intubation attempt with a smaller tube","Insert a nasopharyngeal airway","Declare CICO — immediate scalpel-finger-bougie cricothyroidotomy","Insert LMA and call for senior help","Needle cricothyroidotomy with IV cannula"],"answer":2,"explanation":"CICO (Cannot Intubate Cannot Oxygenate): declare CICO after 3 failed attempts + failed supraglottic oxygenation. Immediate scalpel-finger-bougie cricothyroidotomy (ATLS 11 preferred technique): 4cm vertical skin incision → stab through cricothyroid membrane → finger to confirm → bougie → 6.0 ETT → inflate → ETCO₂. No further laryngoscopy attempts."},
-  {"id":"q-congenital-diaphragmatic-hernia-1","dept":"thoracic","disease":"congenital-diaphragmatic-hernia","format":"mcq","stem":"A 55-year-old has an incidental rounded right-sided anterior cardiophrenic opacity on CXR; CT shows transverse colon herniating through an anterior retrosternal diaphragmatic defect. Which congenital diaphragmatic hernia is this?","options":["Bochdalek hernia (posterolateral)","Morgagni hernia (anterior retrosternal)","Sliding hiatus hernia","Traumatic diaphragmatic rupture","Diaphragmatic eventration"],"answer":1,"explanation":"Morgagni hernia: anterior retrosternal defect at the foramen of Morgagni; ~90% right-sided (the pericardium shields the left foramen); usually asymptomatic and found incidentally in adults. Bochdalek is posterolateral, mostly left-sided, and typically presents in neonates with pulmonary hypoplasia. Adult Morgagni is repaired (commonly laparoscopically) to prevent colonic obstruction/strangulation. Distinct from hiatus hernia, which herniates through the oesophageal hiatus."}
+  {"id":"q-congenital-diaphragmatic-hernia-1","dept":"thoracic","disease":"congenital-diaphragmatic-hernia","format":"mcq","stem":"A 55-year-old has an incidental rounded right-sided anterior cardiophrenic opacity on CXR; CT shows transverse colon herniating through an anterior retrosternal diaphragmatic defect. Which congenital diaphragmatic hernia is this?","options":["Bochdalek hernia (posterolateral)","Morgagni hernia (anterior retrosternal)","Sliding hiatus hernia","Traumatic diaphragmatic rupture","Diaphragmatic eventration"],"answer":1,"explanation":"Morgagni hernia: anterior retrosternal defect at the foramen of Morgagni; ~90% right-sided (the pericardium shields the left foramen); usually asymptomatic and found incidentally in adults. Bochdalek is posterolateral, mostly left-sided, and typically presents in neonates with pulmonary hypoplasia. Adult Morgagni is repaired (commonly laparoscopically) to prevent colonic obstruction/strangulation. Distinct from hiatus hernia, which herniates through the oesophageal hiatus."},
+  {"id":"q-biliary-colic-1","dept":"hpb","disease":"biliary-colic","format":"mcq","stem":"A fit 42-year-old woman has had three episodes of self-limiting RUQ pain (2–4 h, resolving spontaneously) after fatty meals. She is afebrile, Murphy's negative, WBC and LFTs normal. US shows gallstones with a normal-thickness gallbladder wall. Best management?","options":["Reassure and low-fat diet only","Ursodeoxycholic acid dissolution therapy","Elective laparoscopic cholecystectomy","Urgent (same-day) cholecystectomy for acute cholecystitis","IV antibiotics and admit"],"answer":2,"explanation":"This is uncomplicated symptomatic cholelithiasis (biliary colic): episodic pain, NO inflammation (afebrile, Murphy's negative, normal WBC/LFTs, normal wall). Definitive treatment is ELECTIVE laparoscopic cholecystectomy — offered promptly after presentation because recurrence and complication risk are high. Diet/ursodeoxycholic acid are not curative; there is no inflammation to warrant urgent surgery or antibiotics."}
 ];
 // end QUIZ_BANK
 

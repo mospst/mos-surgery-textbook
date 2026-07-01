@@ -114,8 +114,8 @@ const ID_ORDER = [
   'aaa','cli','carotid','dvt','taa','aortic-dissection','pad','mesenteric-isch',
   'varicose-veins','renal-artery-stenosis','popliteal-aneurysm','carotid-body-tumour',
   'thoracic-outlet','visceral-aneurysm','vascular-trauma','lymphoedema',
-  // HPB & SPLEEN (22)
-  'ap','cholecystitis','cholangitis','hcc','choledocholithiasis','pancreatic-cancer',
+  // HPB & SPLEEN (23)
+  'ap','biliary-colic','cholecystitis','cholangitis','hcc','choledocholithiasis','pancreatic-cancer',
   'chronic-pancreatitis','cholangiocarcinoma','icc','pancreatic-pseudocyst',
   'portal-hypertension','liver-abscess','gallbladder-cancer','liver-metastases',
   'hepatic-adenoma','hydatid-cyst','ipmn','pan-net','itp','hereditary-spherocytosis',
@@ -305,6 +305,7 @@ const VIDEO_BY_DEPT = {
 
 const VIDEO_BY_ID = {
   appendicitis: ['sages', 'websurg'],
+  'biliary-colic': ['sages', 'websurg'],
   cholecystitis: ['sages', 'websurg', 'tvasurg'],
   choledocholithiasis: ['sages', 'websurg'],
   'pancreatic-cancer': ['tvasurg', 'jomi', 'websurg'],
@@ -343,6 +344,7 @@ const VIDEO_BY_ID = {
 const VIDEO_QUERY_BY_ID = {
   aaa: 'open AAA repair OR EVAR',
   appendicitis: 'laparoscopic appendectomy',
+  'biliary-colic': 'elective laparoscopic cholecystectomy day case',
   cholecystitis: 'laparoscopic cholecystectomy critical view of safety',
   choledocholithiasis: 'ERCP common bile duct stone laparoscopic CBD exploration',
   'pancreatic-cancer': 'Whipple pancreaticoduodenectomy',
@@ -501,6 +503,7 @@ const IMAGE_QUERY_BY_ID = {
   'popliteal-aneurysm': 'popliteal artery aneurysm',
   'thoracic-outlet': 'thoracic outlet syndrome',
   'visceral-aneurysm': 'splenic artery aneurysm',
+  'biliary-colic': 'gallstones',
   cholecystitis: 'cholecystitis',
   cholangitis: 'cholangitis',
   choledocholithiasis: 'choledocholithiasis',
