@@ -13611,7 +13611,7 @@ const DISEASES = [
     name: "Cecal Volvulus",
     latin: "Volvulus caeci",
     organ: "Cecum/Right colon",
-    severity: "high",
+    severity: "critical",
     tags: ["colorectal", "obstruction", "volvulus", "emergency"],
     hero: "Emergency right hemicolectomy is definitive treatment; endoscopic decompression high failure rate (40%) and recurrence; viable cecum → right hemicolectomy; ischemic → resection without anastomosis.",
     keypoints: [
@@ -13885,7 +13885,7 @@ const DISEASES = [
     name: "Large Bowel Obstruction",
     latin: "Ileus mechanicus coli",
     organ: "Colon",
-    severity: "high",
+    severity: "critical",
     tags: ["colorectal", "obstruction", "emergency", "stent", "hartmann"],
     hero: "Most common cause is colorectal cancer (60%); CT confirms; colonic stent as bridge to surgery for left-sided cancer; emergency Hartmann's or on-table lavage for perforated/unfit patients.",
     keypoints: [
@@ -14752,7 +14752,7 @@ const DISEASES = [
     name: "Anal Canal Cancer",
     latin: "Carcinoma canalis analis",
     organ: "Anal canal",
-    severity: "high",
+    severity: "critical",
     tags: ["colorectal", "anal", "HPV", "chemoradiotherapy", "oncology"],
     hero: "Squamous cell carcinoma; primary treatment is chemoradiotherapy (Nigro protocol — 5-FU + mitomycin C + RT); surgery (APR) reserved for persistent/recurrent disease after CRT.",
     keypoints: [
@@ -15042,7 +15042,7 @@ const DISEASES = [
     name: "Intestinal Fistula",
     latin: "Fistula intestinalis",
     organ: "Small/Large bowel",
-    severity: "high",
+    severity: "critical",
     tags: ["colorectal", "fistula", "nutrition", "TPN", "FRIENDS"],
     hero: "Optimize nutrition (TPN if high-output), treat sepsis, and allow 4–6 weeks for spontaneous closure; 50% close spontaneously; surgery for those that do not — SNAP protocol.",
     keypoints: [
@@ -19787,7 +19787,7 @@ const DISEASES = [
     name: "Gastric Volvulus",
     latin: "Volvulus ventriculi",
     organ: "Stomach",
-    severity: "high",
+    severity: "critical",
     tags: ["upper-gi", "stomach", "volvulus", "emergency", "paraesophageal"],
     hero: "Life-threatening gastric rotation; Borchardt's triad (retching, epigastric pain, inability to pass NGT); emergency decompression ± surgery; underlying paraesophageal hernia must be repaired.",
     keypoints: [
@@ -20052,7 +20052,7 @@ const DISEASES = [
     name: "Small Bowel Obstruction",
     latin: "Ileus mechanicus intestini tenuis",
     organ: "Small bowel",
-    severity: "high",
+    severity: "critical",
     tags: ["upper-gi", "small-bowel", "obstruction", "adhesions", "laparotomy"],
     hero: "60% due to adhesions from previous surgery; non-operative management (NGT, IV fluids) succeeds in 60–70%; operate for complete obstruction, failure to resolve at 48–72h, or signs of strangulation.",
     keypoints: [
@@ -41681,7 +41681,7 @@ const DISEASES = [
     name: "Melanoma",
     latin: "Melanoma malignum",
     organ: "Skin",
-    severity: "high",
+    severity: "critical",
     tags: ["skin", "oncology", "sentinel-node", "immunotherapy"],
     hero: "Wide local excision with sentinel lymph node biopsy; adjuvant immunotherapy/targeted therapy for stage III–IV.",
     keypoints: [
@@ -42955,7 +42955,7 @@ const DISEASES = [
     name: "Liposarcoma",
     latin: "Liposarcoma",
     organ: "Soft tissue/Retroperitoneum",
-    severity: "high",
+    severity: "critical",
     tags: ["sarcoma", "retroperitoneum", "oncology", "resection"],
     hero: "Most common retroperitoneal sarcoma; surgery is the only curative modality; aim for R0 resection; dedifferentiated subtype has worst prognosis.",
     keypoints: [
@@ -43238,7 +43238,7 @@ const DISEASES = [
     name: "Leiomyosarcoma",
     latin: "Leiomyosarcoma",
     organ: "Soft tissue/Vascular",
-    severity: "high",
+    severity: "critical",
     tags: ["sarcoma", "IVC", "vascular", "oncology"],
     hero: "Malignant smooth muscle tumor; retroperitoneal or IVC origin most challenging; complete resection with vascular reconstruction where needed is the only curative option.",
     keypoints: [
@@ -43762,7 +43762,7 @@ const DISEASES = [
     name: "Merkel Cell Carcinoma",
     latin: "Carcinoma cellulare Merkel",
     organ: "Skin",
-    severity: "high",
+    severity: "critical",
     tags: ["skin", "MCC", "neuroendocrine", "immunotherapy", "SLNB"],
     hero: "Rare but aggressive cutaneous neuroendocrine carcinoma; Merkel cell polyomavirus (MCPyV) in 80%; excellent response to immunotherapy (avelumab/pembrolizumab).",
     keypoints: [
@@ -55024,7 +55024,7 @@ const PROCEDURES = [
     name: "Emergency Right Hemicolectomy for Cecal Volvulus",
     disease: "Cecal Volvulus",
     organ: "Cecum/Right colon",
-    severity: "high",
+    severity: "critical",
     summary: "Emergency right hemicolectomy is definitive treatment; endoscopic decompression high failure rate (40%) and recurrence; viable cecum → right hemicolectomy; ischemic → resection without anastomosis.",
     indications: [
       {
@@ -55218,7 +55218,7 @@ const PROCEDURES = [
     name: "Hartmann's Procedure for Left-Sided LBO",
     disease: "Large Bowel Obstruction",
     organ: "Colon",
-    severity: "high",
+    severity: "critical",
     summary: "Most common cause is colorectal cancer (60%); CT confirms; colonic stent as bridge to surgery for left-sided cancer; emergency Hartmann's or on-table lavage for perforated/unfit patients.",
     indications: [
       {
@@ -55802,7 +55802,7 @@ const PROCEDURES = [
     name: "Examination Under Anesthetic (EUA) and Biopsy for Anal Canal Mass",
     disease: "Anal Canal Cancer",
     organ: "Anal canal",
-    severity: "high",
+    severity: "critical",
     summary: "Squamous cell carcinoma; primary treatment is chemoradiotherapy (Nigro protocol — 5-FU + mitomycin C + RT); surgery (APR) reserved for persistent/recurrent disease after CRT.",
     indications: [
       {
@@ -55975,7 +55975,7 @@ const PROCEDURES = [
     name: "Definitive ECF Surgery — Fistula Resection and Anastomosis",
     disease: "Intestinal Fistula",
     organ: "Small/Large bowel",
-    severity: "high",
+    severity: "critical",
     summary: "Optimize nutrition (TPN if high-output), treat sepsis, and allow 4–6 weeks for spontaneous closure; 50% close spontaneously; surgery for those that do not — SNAP protocol.",
     indications: [
       {
@@ -59293,7 +59293,7 @@ const PROCEDURES = [
     name: "Laparoscopic Repair of Paraesophageal Hernia + Gastropexy",
     disease: "Gastric Volvulus",
     organ: "Stomach",
-    severity: "high",
+    severity: "critical",
     summary: "Life-threatening gastric rotation; Borchardt's triad (retching, epigastric pain, inability to pass NGT); emergency decompression ± surgery; underlying paraesophageal hernia must be repaired.",
     indications: [
       {
@@ -59476,7 +59476,7 @@ const PROCEDURES = [
     name: "Emergency Laparotomy for Adhesional SBO with Strangulation",
     disease: "Small Bowel Obstruction",
     organ: "Small bowel",
-    severity: "high",
+    severity: "critical",
     summary: "60% due to adhesions from previous surgery; non-operative management (NGT, IV fluids) succeeds in 60–70%; operate for complete obstruction, failure to resolve at 48–72h, or signs of strangulation.",
     indications: [
       {
@@ -74259,7 +74259,7 @@ const PROCEDURES = [
     name: "Wide Local Excision + SLNB Technique",
     disease: "Melanoma",
     organ: "Skin",
-    severity: "high",
+    severity: "critical",
     summary: "Wide local excision with sentinel lymph node biopsy; adjuvant immunotherapy/targeted therapy for stage III–IV.",
     indications: [
       {
@@ -75004,7 +75004,7 @@ const PROCEDURES = [
     name: "Retroperitoneal Liposarcoma Resection",
     disease: "Liposarcoma",
     organ: "Soft tissue/Retroperitoneum",
-    severity: "high",
+    severity: "critical",
     summary: "Most common retroperitoneal sarcoma; surgery is the only curative modality; aim for R0 resection; dedifferentiated subtype has worst prognosis.",
     indications: [
       {
@@ -75191,7 +75191,7 @@ const PROCEDURES = [
     name: "IVC Level I LMS Resection with Reconstruction",
     disease: "Leiomyosarcoma",
     organ: "Soft tissue/Vascular",
-    severity: "high",
+    severity: "critical",
     summary: "Malignant smooth muscle tumor; retroperitoneal or IVC origin most challenging; complete resection with vascular reconstruction where needed is the only curative option.",
     indications: [
       {
@@ -75549,7 +75549,7 @@ const PROCEDURES = [
     name: "WLE + SLNB for Merkel Cell Carcinoma",
     disease: "Merkel Cell Carcinoma",
     organ: "Skin",
-    severity: "high",
+    severity: "critical",
     summary: "Rare but aggressive cutaneous neuroendocrine carcinoma; Merkel cell polyomavirus (MCPyV) in 80%; excellent response to immunotherapy (avelumab/pembrolizumab).",
     indications: [
       {

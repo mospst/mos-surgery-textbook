@@ -22,12 +22,12 @@ const ID_FIXES = {
 };
 const SKIP_IDS = new Set(['rectal-cancer','ischaemic-colitis','ogilvie','gerd']);
 const DEPT_FIXES = { 'soft-tissue':'softtissue', 'upper-gi':'uppergi', 'uppergı':'uppergi' };
-// The UI (severity badge CSS + "High severity" filter) only understands three
-// tiers: low / moderate / high. Some source entries use a richer vocabulary that
-// has no matching CSS class, so those badges render unstyled and "critical"
-// diseases fall out of the High filter. Normalize the outliers onto the 3-tier
-// scale here so display and filtering stay consistent.
-const SEVERITY_FIX = { minor:'low', medium:'moderate', major:'moderate', critical:'high' };
+// The UI (severity badge CSS + filter chips) understands four tiers:
+// low / moderate / high / critical. Some source entries use synonyms that have
+// no matching CSS class, so those badges render unstyled. Normalize only the
+// synonyms onto the canonical scale here — "critical" is a real, distinct tier
+// and is intentionally left untouched.
+const SEVERITY_FIX = { minor:'low', medium:'moderate', major:'moderate' };
 
 // ── Universal file loader ─────────────────────────────────────────────────
 function loadDiseaseArray(fpath) {

@@ -241,6 +241,7 @@ function DeptView({ deptId, goto, bookmarks, toggle, srs }) {
 
   const filtered = uM(() => {
     if (filter === "all") return diseases;
+    if (filter === "critical") return diseases.filter((d) => d.severity === "critical");
     if (filter === "high") return diseases.filter((d) => d.severity === "high");
     if (filter === "bookmarked") return diseases.filter((d) => bookmarks.includes(d.id));
     if (filter === "due") return diseases.filter((d) => { const s = srs[d.id]; return !s || new Date(s.nextReview) <= new Date(); });
@@ -248,6 +249,7 @@ function DeptView({ deptId, goto, bookmarks, toggle, srs }) {
   }, [filter, diseases, bookmarks, srs]);
 
   const dueCount = diseases.filter((d) => { const s = srs[d.id]; return !s || new Date(s.nextReview) <= new Date(); }).length;
+  const critCount = diseases.filter((d) => d.severity === "critical").length;
 
   return (
     <>
@@ -260,6 +262,7 @@ function DeptView({ deptId, goto, bookmarks, toggle, srs }) {
 
       <div className="filter-bar">
         <button className={`chip ${filter==="all"?"active":""}`} onClick={() => setFilter("all")}>All ({diseases.length})</button>
+        {critCount > 0 && <button className={`chip crit ${filter==="critical"?"active":""}`} onClick={() => setFilter("critical")}>Critical ({critCount})</button>}
         <button className={`chip ${filter==="high"?"active":""}`} onClick={() => setFilter("high")}>High severity</button>
         <button className={`chip ${filter==="bookmarked"?"active":""}`} onClick={() => setFilter("bookmarked")}>Bookmarked</button>
         {dueCount > 0 && <button className={`chip due ${filter==="due"?"active":""}`} onClick={() => setFilter("due")}>Due review ({dueCount})</button>}

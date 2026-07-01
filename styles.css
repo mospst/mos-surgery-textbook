@@ -25,6 +25,8 @@
   --blue-soft: #e8f1fc;
   --vital: #ff3b30;          /* alarm red — used for high severity & corrections */
   --vital-soft: #ffeceb;
+  --crit: #9b0d20;           /* deep crimson — critical severity (above high) */
+  --crit-soft: #f7dde1;
   --sage: #34c759;           /* success */
   --sage-soft: #e6f8ec;
   --amber: #ff9500;          /* caution */
@@ -499,6 +501,8 @@ input, select { font-family: inherit; }
   background: var(--ink-soft);
   box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
 }
+.disease-row .severity.critical { color: var(--crit); font-weight: 700; }
+.disease-row .severity.critical::before { background: var(--crit); box-shadow: 0 0 0 3px var(--crit-soft); }
 .disease-row .severity.high { color: var(--vital); }
 .disease-row .severity.high::before { background: var(--vital); box-shadow: 0 0 0 3px var(--vital-soft); }
 .disease-row .severity.moderate { color: var(--amber); }
@@ -2286,6 +2290,8 @@ ul.clean li::before {
 .nav-count.due { background: var(--vital-soft); color: var(--vital); }
 .chip.due { border-color: var(--amber); color: #8a4900; background: #fff3e0; }
 .chip.due.active { background: var(--amber); color: #fff; }
+.chip.crit { border-color: var(--crit); color: var(--crit); background: var(--crit-soft); }
+.chip.crit.active { background: var(--crit); color: #fff; }
 
 /* ─── SUBSEC HEAD ─────────────────────────────────────────────────────────── */
 .subsec-head { font-size: 12px; color: var(--accent); margin: 24px 0 8px; font-weight: 600; letter-spacing: -0.005em; }
