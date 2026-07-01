@@ -161,9 +161,9 @@ const ID_ORDER = [
   // SKIN & SOFT TISSUE (9)
   'melanoma','bcc','scc-skin','hidradenitis','liposarcoma','leiomyosarcoma',
   'desmoid','merkel-cell','kaposi',
-  // MINIMALLY INVASIVE SURGERY (8)
+  // MINIMALLY INVASIVE SURGERY (9)
   'mis-principles','lap-access','mis-energy','mis-complications','robotic-surgery',
-  'diagnostic-laparoscopy','conversion-to-open','therapeutic-endoscopy',
+  'diagnostic-laparoscopy','conversion-to-open','therapeutic-endoscopy','peg',
 ];
 
 // ── Load all diseases ─────────────────────────────────────────────────────
@@ -374,7 +374,8 @@ const VIDEO_QUERY_BY_ID = {
   'living-donor-hepatectomy': 'living donor right hepatectomy',
   'lung-cancer': 'VATS lobectomy',
   pneumothorax: 'VATS bullectomy pleurodesis',
-  melanoma: 'wide local excision sentinel lymph node biopsy melanoma'
+  melanoma: 'wide local excision sentinel lymph node biopsy melanoma',
+  peg: 'percutaneous endoscopic gastrostomy PEG tube placement pull technique'
 };
 
 for (const d of Object.values(diseaseMap)) {
@@ -523,6 +524,7 @@ const IMAGE_QUERY_BY_ID = {
   'perianal-abscess': 'perianal abscess',
   pud: 'peptic ulcer',
   ugib: 'upper gastrointestinal bleeding',
+  peg: 'gastrostomy',
   'gastric-ca': 'gastric cancer',
   barretts: 'Barrett esophagus',
   'oesophageal-cancer': 'esophageal cancer',

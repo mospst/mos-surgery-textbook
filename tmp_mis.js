@@ -644,6 +644,98 @@ const MIS_DISEASES = [
     { id: "gastric-outlet-obstruction", note: "Enteral SEMS for malignant gastric-outlet obstruction" },
     { id: "barretts",                   note: "EMR/ESD and ablation for Barrett's dysplasia / early cancer" }
   ]
+},
+{
+  id: "peg", dept: "mis",
+  name: "Percutaneous Endoscopic Gastrostomy (PEG)",
+  latin: "Gastrostomia endoscopica percutanea",
+  organ: "Stomach (anterior wall) — abdominal wall interface",
+  severity: "moderate",
+  tags: ["endoscopy","enteral access","feeding","PEG","nutrition","MIS"],
+  hero: "Endoscopically guided placement of a feeding tube through the abdominal wall into the stomach — the standard route for enteral nutrition when swallowing is unsafe but the gut still works.",
+  keypoints: [
+    "Indication is a functioning gut plus anticipated enteral feeding beyond ~4 weeks — a nasogastric tube covers shorter needs",
+    "Transillumination of the abdominal wall AND a clear finger-indentation seen endoscopically are the two safety signs that must both be present before puncture ('safe tract')",
+    "Three techniques: Pull (Ponsky–Gauderer, commonest), Push (Sachs–Vine, over a guidewire), and Introducer/Direct (Russell, with gastropexy) — the tube is pulled/pushed through the mouth in the first two, placed directly through the wall in the third",
+    "Push and Introducer methods avoid dragging the tube past an obstructing pharyngeal/oesophageal tumour, reducing the theoretical risk of tumour seeding at the stoma",
+    "Give a single dose of IV prophylactic antibiotic (e.g. co-amoxiclav / cephalosporin) before the procedure — it reduces peristomal wound infection, the commonest complication",
+    "Buried bumper syndrome and colocutaneous fistula are the feared delayed complications; the tract takes ~2–4 weeks to mature before a dislodged tube can be safely replaced blindly",
+    "Ethical/consent nuance: in advanced dementia PEG feeding does not improve survival or reduce aspiration — decision needs an MDT and clear goals of care"
+  ],
+  differentials: [
+    "Nasogastric (NG) tube — non-surgical, for short-term (<4 weeks) feeding",
+    "Nasojejunal (NJ) tube — post-pyloric feeding when gastric feeding not tolerated / high aspiration risk",
+    "PEG with jejunal extension (PEG-J) or direct PEJ — post-pyloric feeding via a gastrostomy",
+    "Radiologically inserted gastrostomy (RIG) — image-guided, when endoscopy impossible (e.g. tight pharyngeal tumour, inability to transilluminate)",
+    "Surgical (open/laparoscopic) gastrostomy — when percutaneous and radiological routes fail or during another laparotomy",
+    "Total parenteral nutrition (TPN) — reserved for a non-functioning or inaccessible gut"
+  ],
+  overview: {
+    definition: "Placement of a feeding tube directly into the stomach through the anterior abdominal wall under endoscopic guidance, providing durable enteral access for nutrition, hydration and medication in patients who cannot maintain adequate oral intake but have a functioning gastrointestinal tract.",
+    epidemiology: "One of the commonest therapeutic endoscopic procedures; leading indications are neurological dysphagia (stroke, motor neurone disease, advanced Parkinson's) and head-and-neck or oesophageal cancer requiring prolonged nutritional support during treatment.",
+    pathophysiology: "A functioning stomach and small bowel are apposed to the abdominal wall; endoscopic insufflation pushes the anterior gastric wall against the peritoneum, and transillumination plus finger indentation confirm no interposed viscus (colon, liver, small bowel). A trocar punctures the apposed walls; the tube is secured by an internal bumper/balloon and an external flange, and a fibrous tract forms over 2–4 weeks that seals the stomach to the abdominal wall.",
+    classification: [
+      {label:"Pull (Ponsky–Gauderer)", note:"Commonest; a guidewire is snared endoscopically and brought out through the mouth, and the tube is pulled down the oesophagus and out through the abdominal wall"},
+      {label:"Push (Sachs–Vine)", note:"A stiff tube is pushed over an endoscopically placed guidewire from mouth to stomach and out through the wall; useful where a bulky tube shouldn't be dragged retrograde through the pharynx/oesophagus"},
+      {label:"Introducer / Direct (Russell)", note:"Tube introduced directly through the abdominal wall using a peel-away sheath after gastropexy (T-fasteners); no oral passage of the tube — preferred with obstructing pharyngo-oesophageal tumours to avoid stomal seeding"},
+      {label:"PEG-J / direct PEJ", note:"Jejunal extension through a PEG (or direct percutaneous endoscopic jejunostomy) for post-pyloric feeding in gastroparesis or high aspiration risk"}
+    ]
+  },
+  criteria: {
+    title: "Indications, Contraindications & Timing",
+    items: [
+      { k: "Core indication", v: "Functioning gut + anticipated enteral feeding > ~4 weeks (dysphagia from stroke/MND, head-and-neck or oesophageal cancer, severe facial trauma)" },
+      { k: "Absolute contraindications", v: "Inability to appose gastric to abdominal wall (no transillumination), uncorrectable coagulopathy, active peritonitis, gastric outlet obstruction, expected survival < weeks with no benefit" },
+      { k: "Relative contraindications", v: "Ascites, previous upper-GI/gastric surgery, morbid obesity, hepatomegaly, gastric varices, peritoneal dialysis, ventriculoperitoneal shunt" },
+      { k: "Antibiotic prophylaxis", v: "Single IV dose (co-amoxiclav or cephalosporin) 30 min pre-procedure — reduces peristomal infection" },
+      { k: "First feed timing", v: "Water/feed can usually start ~4 hours post-procedure (early feeding is safe per RCT evidence)" },
+      { k: "Tract maturation", v: "≈ 2–4 weeks; a tube dislodged before this should NOT be blindly reinserted — risk of intraperitoneal misplacement (get contrast check / endoscopy)" },
+      { k: "Dementia caveat", v: "No survival or aspiration benefit in advanced dementia — an MDT / goals-of-care decision, not a default" }
+    ]
+  },
+  technique: {
+    title: "Pull-Type PEG (Ponsky–Gauderer) — with Push variant note",
+    prep: [
+      "Consent covering bleeding, perforation, peristomal infection, buried bumper and colonic injury; confirm fasting and stop/adjust anticoagulation",
+      "Single dose IV antibiotic prophylaxis; check platelets/clotting",
+      "Position supine; sedation and pharyngeal anaesthesia; two operators (endoscopist + abdominal operator)"
+    ],
+    steps: [
+      { n: 1, t: "Diagnostic endoscopy", d: "Pass the scope, exclude obstruction/malignancy contraindicating placement, and insufflate to appose the anterior gastric wall to the abdominal wall" },
+      { n: 2, t: "Identify the safe tract", d: "Darken the room: confirm 1:1 transillumination of the abdominal wall AND clear endoscopic finger-indentation at the chosen site (usually left upper quadrant) — both must be present" },
+      { n: 3, t: "Puncture & guidewire", d: "Infiltrate local anaesthetic, make a small skin incision, and pass the trocar/cannula into the insufflated stomach; thread a guidewire, snare it endoscopically and withdraw it out through the mouth" },
+      { n: 4, t: "Pull the tube (or Push)", d: "Pull: attach the PEG tube to the oral end of the wire and pull it down the oesophagus and out through the abdominal wall until the internal bumper seats against the mucosa. Push variant: railroad a stiff tapered tube over the wire from mouth to stoma instead of pulling" },
+      { n: 5, t: "Confirm & secure", d: "Re-scope to confirm the internal bumper lies loosely against the mucosa (not too tight — avoids buried bumper); fit the external flange leaving a few mm of play; record the cm marking at the skin" },
+      { n: 6, t: "Document & feed", d: "Record technique, tube size and skin marking; start water/feed at ~4 h; daily stoma care and rotate/advance the tube once the tract matures to prevent buried bumper" }
+    ],
+    pearls: [
+      "No transillumination or no finger-indentation = abort and consider RIG — never puncture blind",
+      "Leave the external bumper slightly loose (a few mm): over-tight approximation is the direct cause of buried bumper syndrome",
+      "For an obstructing pharyngo-oesophageal tumour, choose the Introducer (Russell) or Push method to avoid dragging the tube — and the tumour — across the stoma"
+    ]
+  },
+  guidelines: [
+    { src: "BSG — British Society of Gastroenterology: percutaneous endoscopic gastrostomy / enteral feeding" },
+    { src: "ESGE / ESPEN — endoscopic and clinical-nutrition guidelines on PEG placement and care" },
+    { src: "NICE CG32 — Nutrition support in adults" }
+  ],
+  pearls: [
+    "Both safety signs — transillumination and finger-indentation — must be present before puncture; if either is absent, switch to a radiologically inserted gastrostomy (RIG)",
+    "Early feeding (~4 h) is supported by RCT evidence; you do not need to wait 24 hours",
+    "Rotate and re-seat the tube regularly once the tract is mature to prevent the internal bumper eroding into the wall (buried bumper)"
+  ],
+  mistakes: [
+    "Puncturing without confirming transillumination AND finger-indentation — the mechanism of colonic/small-bowel injury and colocutaneous fistula",
+    "Fixing the external bumper too tightly, causing pressure necrosis and buried bumper syndrome",
+    "Blindly reinserting a tube dislodged within the first 2–4 weeks before the tract has matured — risks feeding into the peritoneum",
+    "Offering PEG as a default in advanced dementia despite no survival or aspiration benefit"
+  ],
+  related: [
+    { id: "therapeutic-endoscopy",       note: "PEG is the enteral-access application of therapeutic endoscopy" },
+    { id: "dysphagia",                   note: "Neurological dysphagia is the leading indication for long-term PEG feeding" },
+    { id: "oesophageal-cancer",          note: "Nutritional support during treatment; use Push/Introducer to avoid stomal seeding" },
+    { id: "gastric-outlet-obstruction",  note: "A contraindication to gastric feeding — consider post-pyloric PEG-J instead" }
+  ]
 }
 ];
 
