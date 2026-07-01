@@ -810,6 +810,22 @@ const TIMING_BY_ID = {
 
   // SKIN & SOFT TISSUE
   melanoma: { window: "Wide local excision within 4–6 weeks of the diagnostic biopsy; sentinel node biopsy at the same time for ≥T1b", detail: "Prompt but not emergent. Margins are set by Breslow thickness. SLNB must be done at or before WLE, as WLE disrupts lymphatic drainage." },
+
+  // ONCOLOGIC RESECTIONS — neoadjuvant sequencing / defined intervals
+  crc: { window: "Elective resection within ~31 days of the decision to treat; obstructing/perforated → emergency. Rectal cancer: surgery ~8–12 weeks after neoadjuvant chemoradiation", detail: "Restage after neoadjuvant therapy before operating. A complete clinical response on the rectum may be watched ('watch-and-wait', reassessed to ~26 weeks) rather than resected." },
+  'oesophageal-cancer': { window: "Esophagectomy ~4–8 weeks after neoadjuvant chemoradiation (CROSS regimen)", detail: "The interval lets acute radiation inflammation settle while avoiding fibrosis. Restaging PET/CT before surgery to exclude interval metastases." },
+  'gastric-ca': { window: "Gastrectomy after neoadjuvant chemotherapy (perioperative FLOT), typically 4–6 weeks after the last cycle", detail: "Perioperative chemo improves survival over surgery alone. Emergency surgery only for perforation or uncontrollable bleeding." },
+  'pancreatic-cancer': { window: "Resectable → surgery promptly (Whipple); borderline/locally advanced → neoadjuvant FOLFIRINOX then restage at ~2–4 months", detail: "Neoadjuvant therapy treats micrometastatic disease and improves R0 rates in borderline tumors. Reassess resectability on restaging imaging before committing to surgery." },
+  'breast-ca': { window: "Surgery within ~4–6 weeks of diagnosis; if neoadjuvant chemotherapy, operate ~3–6 weeks after the last cycle", detail: "Neoadjuvant therapy downstages large/node-positive or HER2+/triple-negative tumors and enables breast conservation. Sequence radiotherapy after surgery." },
+  hcc: { window: "Resection/ablation promptly once staged; transplant candidates within Milan criteria are listed, with bridging/downstaging therapy while waiting", detail: "Decisions follow the BCLC algorithm and liver function (Child–Pugh). Bridging (TACE/ablation) limits waitlist dropout from tumor progression." },
+  'lung-cancer': { window: "Resection within ~4–8 weeks of diagnosis for early-stage disease; neoadjuvant chemo-immunotherapy then surgery for selected stage II–III", detail: "Timely surgery matters — prolonged delay allows upstaging. Confirm mediastinal staging (EBUS) before resection." },
+  'liver-metastases': { window: "Colorectal liver metastases → resection after ~4–6 cycles of chemotherapy (or upfront if clearly resectable); portal vein embolization first if the future liver remnant is too small", detail: "Avoid over-treating with chemo (steatohepatitis, disappearing metastases). Synchronous disease: liver-first, bowel-first, or simultaneous depending on the dominant tumor." },
+
+  // TRANSPLANT — cold-ischemia windows (graft viability clock)
+  'renal-tx': { window: "Kidney cold-ischemia time ideally <18–24 h (DBD); keep DCD grafts shorter", detail: "Each additional hour of cold ischemia raises delayed graft function. Machine perfusion extends the safe window versus static cold storage." },
+  'liver-tx': { window: "Liver cold-ischemia time ideally <8 h (tolerable up to ~12 h)", detail: "Prolonged cold ischemia raises primary non-function and ischemic cholangiopathy, especially in DCD grafts. Normothermic machine perfusion is extending the limit." },
+  'pancreas-tx': { window: "Pancreas cold-ischemia time ideally <12 h", detail: "The pancreas is highly sensitive to ischemia; prolonged CIT increases graft thrombosis and pancreatitis. Prioritize short cold times when accepting the organ." },
+  'small-bowel-tx': { window: "Intestinal cold-ischemia time kept short — ideally <6–9 h", detail: "The intestine is the most ischemia-sensitive abdominal graft; the mucosa deteriorates quickly, so short cold times and rapid revascularization are essential." },
 };
 let timingInjected = 0;
 for (const [id, t] of Object.entries(TIMING_BY_ID)) {

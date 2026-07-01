@@ -5749,7 +5749,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "hepatocellular carcinoma"
       }
-    ]
+    ],
+    timing: {
+      window: "Resection/ablation promptly once staged; transplant candidates within Milan criteria are listed, with bridging/downstaging therapy while waiting",
+      detail: "Decisions follow the BCLC algorithm and liver function (Child–Pugh). Bridging (TACE/ablation) limits waitlist dropout from tumor progression."
+    }
   },
 
   {
@@ -6336,7 +6340,11 @@ const DISEASES = [
         id: "robotic-surgery",
         note: "Robotic pancreatic and HPB resections in selected centers"
       }
-    ]
+    ],
+    timing: {
+      window: "Resectable → surgery promptly (Whipple); borderline/locally advanced → neoadjuvant FOLFIRINOX then restage at ~2–4 months",
+      detail: "Neoadjuvant therapy treats micrometastatic disease and improves R0 rates in borderline tumors. Reassess resectability on restaging imaging before committing to surgery."
+    }
   },
 
   {
@@ -8590,7 +8598,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "liver metastases"
       }
-    ]
+    ],
+    timing: {
+      window: "Colorectal liver metastases → resection after ~4–6 cycles of chemotherapy (or upfront if clearly resectable); portal vein embolization first if the future liver remnant is too small",
+      detail: "Avoid over-treating with chemo (steatohepatitis, disappearing metastases). Synchronous disease: liver-first, bowel-first, or simultaneous depending on the dominant tumor."
+    }
   },
 
   {
@@ -11706,7 +11718,11 @@ const DISEASES = [
         id: "therapeutic-endoscopy",
         note: "Colonic stenting as a bridge to surgery in obstruction"
       }
-    ]
+    ],
+    timing: {
+      window: "Elective resection within ~31 days of the decision to treat; obstructing/perforated → emergency. Rectal cancer: surgery ~8–12 weeks after neoadjuvant chemoradiation",
+      detail: "Restage after neoadjuvant therapy before operating. A complete clinical response on the rectum may be watched ('watch-and-wait', reassessed to ~26 weeks) rather than resected."
+    }
   },
 
   {
@@ -18126,7 +18142,11 @@ const DISEASES = [
         id: "diagnostic-laparoscopy",
         note: "Staging laparoscopy detects occult peritoneal metastases"
       }
-    ]
+    ],
+    timing: {
+      window: "Gastrectomy after neoadjuvant chemotherapy (perioperative FLOT), typically 4–6 weeks after the last cycle",
+      detail: "Perioperative chemo improves survival over surgery alone. Emergency surgery only for perforation or uncontrollable bleeding."
+    }
   },
 
   {
@@ -18693,7 +18713,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "esophageal cancer"
       }
-    ]
+    ],
+    timing: {
+      window: "Esophagectomy ~4–8 weeks after neoadjuvant chemoradiation (CROSS regimen)",
+      detail: "The interval lets acute radiation inflammation settle while avoiding fibrosis. Restaging PET/CT before surgery to exclude interval metastases."
+    }
   },
 
   {
@@ -24546,7 +24570,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "breast cancer"
       }
-    ]
+    ],
+    timing: {
+      window: "Surgery within ~4–6 weeks of diagnosis; if neoadjuvant chemotherapy, operate ~3–6 weeks after the last cycle",
+      detail: "Neoadjuvant therapy downstages large/node-positive or HER2+/triple-negative tumors and enables breast conservation. Sequence radiotherapy after surgery."
+    }
   },
 
   {
@@ -34363,7 +34391,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "kidney transplant"
       }
-    ]
+    ],
+    timing: {
+      window: "Kidney cold-ischemia time ideally <18–24 h (DBD); keep DCD grafts shorter",
+      detail: "Each additional hour of cold ischemia raises delayed graft function. Machine perfusion extends the safe window versus static cold storage."
+    }
   },
 
   {
@@ -34644,7 +34676,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "liver transplant"
       }
-    ]
+    ],
+    timing: {
+      window: "Liver cold-ischemia time ideally <8 h (tolerable up to ~12 h)",
+      detail: "Prolonged cold ischemia raises primary non-function and ischemic cholangiopathy, especially in DCD grafts. Normothermic machine perfusion is extending the limit."
+    }
   },
 
   {
@@ -34899,7 +34935,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "Pancreas Transplantation"
       }
-    ]
+    ],
+    timing: {
+      window: "Pancreas cold-ischemia time ideally <12 h",
+      detail: "The pancreas is highly sensitive to ischemia; prolonged CIT increases graft thrombosis and pancreatitis. Prioritize short cold times when accepting the organ."
+    }
   },
 
   {
@@ -35146,7 +35186,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "Small Bowel Transplantation"
       }
-    ]
+    ],
+    timing: {
+      window: "Intestinal cold-ischemia time kept short — ideally <6–9 h",
+      detail: "The intestine is the most ischemia-sensitive abdominal graft; the mucosa deteriorates quickly, so short cold times and rapid revascularization are essential."
+    }
   },
 
   {
@@ -35733,7 +35777,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "lung cancer"
       }
-    ]
+    ],
+    timing: {
+      window: "Resection within ~4–8 weeks of diagnosis for early-stage disease; neoadjuvant chemo-immunotherapy then surgery for selected stage II–III",
+      detail: "Timely surgery matters — prolonged delay allows upstaging. Confirm mediastinal staging (EBUS) before resection."
+    }
   },
 
   {
