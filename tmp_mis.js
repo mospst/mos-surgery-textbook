@@ -67,6 +67,27 @@ const MIS_DISEASES = [
       { name: "Conversion to open", when: "Unsafe anatomy, instability, failure to progress", notes: "A sound surgical decision, not a complication" }
     ]
   },
+  technique: {
+    title: "Establishing and Maintaining Safe Pneumoperitoneum",
+    prep: [
+      "Assess cardiorespiratory reserve; plan a low-pressure technique for frail patients",
+      "Decompress the stomach (NG) and bladder (catheter) before entry to reduce injury risk",
+      "Set the insufflator: CO2, low initial flow (~1 L/min), pressure limit 12–15 mmHg (7–8 mmHg if frail)"
+    ],
+    steps: [
+      { n: 1, t: "Gain access", d: "Enter the peritoneum (open/Hasson or Veress — see access techniques) and connect the CO2 line" },
+      { n: 2, t: "Confirm correct placement", d: "Start at low flow; a low opening pressure (<8–10 mmHg) with even, symmetrical distension confirms intraperitoneal placement before increasing flow" },
+      { n: 3, t: "Insufflate to working pressure", d: "Raise the flow to reach 12–15 mmHg; watch for insufflation bradycardia (peritoneal stretch) — pause or desufflate and give an antimuscarinic if it occurs" },
+      { n: 4, t: "Communicate physiology with anesthesia", d: "Absorbed CO2 causes hypercarbia — the anesthetist increases minute ventilation; watch airway pressures and saturations in steep Trendelenburg" },
+      { n: 5, t: "Titrate during the case", d: "Use the lowest pressure that gives adequate working space; deep neuromuscular block can create space without raising pressure; mechanical VTE prophylaxis for positioning-related stasis" },
+      { n: 6, t: "Desufflate at the end", d: "Actively expel CO2 through the ports before closure to reduce referred shoulder-tip pain; close fascia at all ≥10 mm port sites" }
+    ],
+    pearls: [
+      "Never raise the flow before confirming intraperitoneal placement — high-flow extraperitoneal or intravascular insufflation is dangerous",
+      "Most cardiopulmonary changes of pneumoperitoneum reverse promptly on desufflation",
+      "Expel residual CO2 at the end — it is the cause of post-laparoscopy shoulder-tip pain"
+    ]
+  },
   guidelines: [
     { src: "SAGES — Guidelines for diagnostic, energy & minimally invasive surgery" },
     { src: "AUGIS / ALSGBI — Fundamentals of laparoscopic surgery (UK)" }
@@ -353,6 +374,27 @@ const MIS_DISEASES = [
       { k: "Best fit", v: "Confined fields needing fine suturing (pelvis, mediastinum)" }
     ]
   },
+  technique: {
+    title: "Robotic Case Set-up: Docking and Console Operation",
+    prep: [
+      "Confirm the case suits the robot (a confined field needing fine suturing — pelvis, foregut, HPB); brief the whole team, including the emergency-undocking drill",
+      "Standard CO2 pneumoperitoneum physiology applies — same cardiorespiratory considerations as laparoscopy",
+      "Position and secure the patient for the whole case — the table cannot be moved once the cart is docked"
+    ],
+    steps: [
+      { n: 1, t: "Port placement", d: "Place robotic ports with adequate spacing (usually ≥8 cm apart) oriented toward the target anatomy; add an assistant port" },
+      { n: 2, t: "Position the patient-side cart", d: "Bring the cart in along the planned boom line and dock the arms to the ports without collisions" },
+      { n: 3, t: "Dock and insert instruments", d: "Attach the arms; introduce the 3D endoscope and wristed instruments under vision; confirm every instrument tip is seen before moving" },
+      { n: 4, t: "Move to the console", d: "The surgeon sits at the console with immersive 3D vision; confirm clutching, camera control and instrument association" },
+      { n: 5, t: "Operate", d: "Use wristed articulation, tremor filtration and motion scaling; because there is NO haptic feedback, judge tissue tension by visual cues to avoid suture pull-through" },
+      { n: 6, t: "Undock safely / emergency drill", d: "At the end (or if the patient deteriorates) withdraw instruments under vision and undock the arms rapidly; be ready to convert to laparoscopy or open" }
+    ],
+    pearls: [
+      "Rehearse emergency undocking with the team — a deteriorating patient needs the cart off fast",
+      "No force feedback: set knots by visual tension cues, not feel",
+      "Space the ports well — poorly placed ports cause external arm collisions"
+    ]
+  },
   guidelines: [
     { src: "SAGES / MIRA — Robotic surgery consensus and credentialing" },
     { src: "NICE / specialty bodies — Robotic platforms in colorectal & bariatric surgery" }
@@ -559,6 +601,27 @@ const MIS_DISEASES = [
       { k: "Malignant obstruction", v: "SEMS for esophageal, gastric-outlet and colonic obstruction" },
       { k: "Obstructing colon cancer", v: "Stent as a bridge to elective surgery in selected patients" },
       { k: "Main risks", v: "Perforation, bleeding, post-ERCP pancreatitis" }
+    ]
+  },
+  technique: {
+    title: "Endoscopic Hemostasis for GI Bleeding (Principles)",
+    prep: [
+      "Resuscitate and correct coagulopathy first; secure the airway for a massive upper-GI or variceal bleed",
+      "Pre-treat: IV PPI (suspected ulcer) or terlipressin + prophylactic antibiotics (suspected varices)",
+      "Have injection, thermal and mechanical tools all available before starting"
+    ],
+    steps: [
+      { n: 1, t: "Locate and clean", d: "Systematic endoscopy; wash clots and debris to expose the bleeding point; grade an ulcer (Forrest) or identify varices" },
+      { n: 2, t: "Injection (first modality)", d: "Submucosal adrenaline (1:10,000) around a bleeding ulcer slows flow and improves the view — but never rely on it alone" },
+      { n: 3, t: "Add a definitive modality", d: "Combine with mechanical (through-the-scope or over-the-scope clips) or thermal (heater probe/coagulation) for durable hemostasis" },
+      { n: 4, t: "Variceal bleeding", d: "Esophageal varices: band-ligate each column; gastric varices: cyanoacrylate injection per protocol" },
+      { n: 5, t: "Confirm and document", d: "Confirm bleeding has stopped; record the lesion and therapy for the next team" },
+      { n: 6, t: "Plan escalation", d: "Rebleed → one repeat endoscopy, then IR embolization or surgery; TIPSS for uncontrolled variceal bleeding" }
+    ],
+    pearls: [
+      "Two modalities beat one — adrenaline injection plus a clip or thermal method for a high-risk ulcer",
+      "Consent specifically for perforation and bleeding (and post-ERCP pancreatitis for biliary work)",
+      "Know the limit: endoscopic resection reaches mucosa/submucosa only — deeper disease needs surgery"
     ]
   },
   guidelines: [

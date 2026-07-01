@@ -16181,6 +16181,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Emergency Laparotomy for Bowel Perforation (Source Control)",
+      prep: [
+        "Resuscitate in parallel — IV access, fluids, broad-spectrum antibiotics and cross-match; do not delay antibiotics for imaging",
+        "GA; supine; catheter and NG; consent for a stoma and a possible relook",
+        "Prophylactic antibiotics on induction; warm the patient and the fluids"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Midline laparotomy",
+          d: "Generous midline incision for access to all four quadrants; send peritoneal fluid for culture"
+        },
+        {
+          n: 2,
+          t: "Identify the source",
+          d: "Systematic inspection to localize the perforation (stomach/duodenum, small bowel, colon); control gross contamination with packs"
+        },
+        {
+          n: 3,
+          t: "Source control — upper GI",
+          d: "Perforated peptic ulcer: omental (Graham) patch over the defect, or primary repair if small; biopsy a gastric ulcer to exclude malignancy"
+        },
+        {
+          n: 4,
+          t: "Source control — colon",
+          d: "Perforated diverticulitis or left colon cancer: Hartmann's (resect, end colostomy, close rectal stump) in fecal peritonitis; primary anastomosis only in a clean, stable field"
+        },
+        {
+          n: 5,
+          t: "Peritoneal lavage",
+          d: "Copious warm saline washout (5–10 L) until the effluent is clear; remove all debris"
+        },
+        {
+          n: 6,
+          t: "Drains and closure",
+          d: "Place drains near the repair as indicated; mass closure of the abdomen; leave a laparostomy for damage-control if the patient is unstable"
+        }
+      ],
+      pearls: [
+        "In fecal peritonitis (Hinchey IV) avoid a primary anastomosis — the leak rate in a contaminated field is very high",
+        "Always send peritoneal fluid for culture and biopsy a gastric ulcer edge",
+        "Choose damage-control (leave the abdomen open, relook in 24–48 h) over a long definitive operation if the patient is unstable or coagulopathic"
+      ]
+    },
     guidelines: [
       {
         src: "WSES Guidelines on Perforated Diverticulitis 2020",
@@ -16210,23 +16255,23 @@ const DISEASES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Bowel%20Perforation%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Emergency%20Laparotomy%20for%20Bowel%20Perforation%20(Source%20Control)%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Bowel Perforation"
+        query: "Emergency Laparotomy for Bowel Perforation (Source Control)"
       },
       {
         title: "Search advanced colorectal/MIS videos on AIS Channel",
         source: "AIS Channel",
-        url: "https://www.google.com/search?q=Bowel%20Perforation%20site%3Aaischannel.com",
+        url: "https://www.google.com/search?q=Emergency%20Laparotomy%20for%20Bowel%20Perforation%20(Source%20Control)%20site%3Aaischannel.com",
         tags: ["video", "free-account", "expert", "MIS", "colorectal"],
-        query: "Bowel Perforation"
+        query: "Emergency Laparotomy for Bowel Perforation (Source Control)"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Bowel%20Perforation%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Emergency%20Laparotomy%20for%20Bowel%20Perforation%20(Source%20Control)%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Bowel Perforation"
+        query: "Emergency Laparotomy for Bowel Perforation (Source Control)"
       }
     ],
     anatomyResources: [
@@ -16415,6 +16460,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Colonoscopic Decompression for Acute Colonic Pseudo-Obstruction",
+      prep: [
+        "First exclude mechanical obstruction and perforation on CT; correct K+/Mg2+/Ca2+ and stop opioids and anticholinergics",
+        "Try conservative measures ± IV neostigmine (with cardiac monitoring and atropine to hand) before scoping",
+        "Reserve decompression for cecum >12 cm, failure of neostigmine, or a contraindication to neostigmine"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Minimal-prep colonoscopy",
+          d: "No oral bowel prep (obstructive picture); scope carefully with minimal insufflation — use CO2 to limit further distension"
+        },
+        {
+          n: 2,
+          t: "Aspirate as you advance",
+          d: "Continuously suction gas and liquid stool to decompress; advance as far as safely possible (ideally to the cecum or hepatic flexure)"
+        },
+        {
+          n: 3,
+          t: "Inspect the mucosa",
+          d: "Look for ischemia (dusky or black mucosa) — if present, stop and refer for surgery"
+        },
+        {
+          n: 4,
+          t: "Place a decompression tube",
+          d: "Leave a flatus/decompression tube over a guidewire to the right colon or splenic flexure to keep the colon decompressed"
+        },
+        {
+          n: 5,
+          t: "Confirm decompression",
+          d: "Post-procedure AXR to confirm a reduced cecal diameter; secure the tube on free drainage"
+        },
+        {
+          n: 6,
+          t: "Monitor for recurrence",
+          d: "Serial abdominal girth and AXR; recurrence (~40%) may need repeat decompression; escalate to cecostomy or surgery if it fails or ischemia/perforation develops"
+        }
+      ],
+      pearls: [
+        "Suction far more than you insufflate — and use CO2; the goal is to decompress, not distend",
+        "Dusky mucosa means ischemia: abandon decompression and go to surgery",
+        "Recurrence is common; a left-in decompression tube reduces it"
+      ]
+    },
     guidelines: [
       {
         src: "ASCRS Pseudo-obstruction Clinical Practice Guidelines 2021"
@@ -16442,23 +16532,23 @@ const DISEASES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Pseudo-Obstruction%20(Ogilvie's%20Syndrome)%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Colonoscopic%20Decompression%20for%20Acute%20Colonic%20Pseudo-Obstruction%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Pseudo-Obstruction (Ogilvie's Syndrome)"
+        query: "Colonoscopic Decompression for Acute Colonic Pseudo-Obstruction"
       },
       {
         title: "Search advanced colorectal/MIS videos on AIS Channel",
         source: "AIS Channel",
-        url: "https://www.google.com/search?q=Pseudo-Obstruction%20(Ogilvie's%20Syndrome)%20site%3Aaischannel.com",
+        url: "https://www.google.com/search?q=Colonoscopic%20Decompression%20for%20Acute%20Colonic%20Pseudo-Obstruction%20site%3Aaischannel.com",
         tags: ["video", "free-account", "expert", "MIS", "colorectal"],
-        query: "Pseudo-Obstruction (Ogilvie's Syndrome)"
+        query: "Colonoscopic Decompression for Acute Colonic Pseudo-Obstruction"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Pseudo-Obstruction%20(Ogilvie's%20Syndrome)%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Colonoscopic%20Decompression%20for%20Acute%20Colonic%20Pseudo-Obstruction%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Pseudo-Obstruction (Ogilvie's Syndrome)"
+        query: "Colonoscopic Decompression for Acute Colonic Pseudo-Obstruction"
       }
     ],
     anatomyResources: [
@@ -16649,6 +16739,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Endoscopic Argon Plasma Coagulation (APC) of Angiodysplasia",
+      prep: [
+        "Localize the lesion (colonoscopy / EGD; capsule ± enteroscopy for the small bowel); correct anemia and coagulopathy",
+        "Consent for perforation and bleeding; APC is a non-contact thermal therapy",
+        "Standard endoscopy set-up with an APC unit, argon supply and a grounding pad on the patient"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Identify the lesion",
+          d: "Find the cherry-red flat vascular tuft; clean the field so the target is clearly seen"
+        },
+        {
+          n: 2,
+          t: "Position the probe",
+          d: "Advance the APC catheter to within a few millimeters of the lesion — non-contact; do not touch the mucosa"
+        },
+        {
+          n: 3,
+          t: "Apply argon coagulation",
+          d: "Short pulses of argon-plasma energy paint the lesion white; work from the periphery toward the center of larger lesions"
+        },
+        {
+          n: 4,
+          t: "Avoid deep injury",
+          d: "Keep pulses brief and superficial, especially in the thin-walled cecum and right colon, to avoid a transmural burn or perforation"
+        },
+        {
+          n: 5,
+          t: "Treat all lesions",
+          d: "Systematically treat every visible lesion — angiodysplasia is often multiple"
+        },
+        {
+          n: 6,
+          t: "Aftercare and follow-up",
+          d: "Continue iron replacement; warn of a 30–40% rebleed rate; repeat APC if bleeding recurs; consider octreotide/thalidomide or valve replacement for Heyde's in refractory disease"
+        }
+      ],
+      pearls: [
+        "Keep it non-contact and superficial — the right colon wall is thin and perforates easily",
+        "Treat every lesion; missing additional lesions is a common cause of rebleeding",
+        "In aortic stenosis with recurrent bleeding (Heyde's), aortic valve replacement stops the bleeding"
+      ]
+    },
     guidelines: [
       {
         src: "BSG Obscure Gastrointestinal Bleeding Guidelines 2021"
@@ -16675,23 +16810,23 @@ const DISEASES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Angiodysplasia%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Endoscopic%20Argon%20Plasma%20Coagulation%20(APC)%20of%20Angiodysplasia%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Angiodysplasia"
+        query: "Endoscopic Argon Plasma Coagulation (APC) of Angiodysplasia"
       },
       {
         title: "Search advanced colorectal/MIS videos on AIS Channel",
         source: "AIS Channel",
-        url: "https://www.google.com/search?q=Angiodysplasia%20site%3Aaischannel.com",
+        url: "https://www.google.com/search?q=Endoscopic%20Argon%20Plasma%20Coagulation%20(APC)%20of%20Angiodysplasia%20site%3Aaischannel.com",
         tags: ["video", "free-account", "expert", "MIS", "colorectal"],
-        query: "Angiodysplasia"
+        query: "Endoscopic Argon Plasma Coagulation (APC) of Angiodysplasia"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Angiodysplasia%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Endoscopic%20Argon%20Plasma%20Coagulation%20(APC)%20of%20Angiodysplasia%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Angiodysplasia"
+        query: "Endoscopic Argon Plasma Coagulation (APC) of Angiodysplasia"
       }
     ],
     anatomyResources: [
@@ -16920,6 +17055,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Segmental Small Bowel Resection with Anastomosis",
+      prep: [
+        "Staging CT and histology where possible; optimize nutrition; mark a stoma site if there is any risk of a stoma",
+        "GA; supine; catheter and NG; prophylactic antibiotics and VTE prophylaxis",
+        "Laparoscopic or open depending on tumor size, location and surgeon experience"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Explore and localize",
+          d: "Run the whole small bowel from DJ flexure to cecum; identify the tumor and any second lesion; assess liver and peritoneum for metastases"
+        },
+        {
+          n: 2,
+          t: "Plan the resection",
+          d: "Choose proximal and distal transection points with adequate margins (~5–10 cm) and a wedge of mesentery for the draining nodes"
+        },
+        {
+          n: 3,
+          t: "Divide the mesentery",
+          d: "Score the mesentery and ligate/seal vessels down to the bowel wall, taking the lymphovascular pedicle for oncological clearance"
+        },
+        {
+          n: 4,
+          t: "Resect the segment",
+          d: "Divide the bowel proximally and distally (linear staplers or clamps) and remove the specimen; orient it for pathology"
+        },
+        {
+          n: 5,
+          t: "Anastomosis",
+          d: "Restore continuity with a tension-free, well-perfused stapled or hand-sewn anastomosis; close the mesenteric defect to prevent internal herniation"
+        },
+        {
+          n: 6,
+          t: "Match operation to tumor",
+          d: "Confirm hemostasis and anastomotic integrity; a terminal-ileal NET needs a right hemicolectomy, and a duodenal/periampullary adenocarcinoma needs a pancreaticoduodenectomy (Whipple's), not a segmental resection"
+        }
+      ],
+      pearls: [
+        "Take the mesenteric lymphovascular pedicle — nodal clearance matters for staging and cure",
+        "Close the mesenteric defect to prevent an internal hernia",
+        "Match the operation to the tumor: terminal-ileal NET → right hemicolectomy; duodenal adenocarcinoma → Whipple's"
+      ]
+    },
     guidelines: [
       {
         src: "ENETS Consensus Guidelines for Small Bowel NETs 2021",
@@ -16952,23 +17132,23 @@ const DISEASES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Small%20Bowel%20Tumors%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Segmental%20Small%20Bowel%20Resection%20with%20Anastomosis%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Small Bowel Tumors"
+        query: "Segmental Small Bowel Resection with Anastomosis"
       },
       {
         title: "Search advanced colorectal/MIS videos on AIS Channel",
         source: "AIS Channel",
-        url: "https://www.google.com/search?q=Small%20Bowel%20Tumors%20site%3Aaischannel.com",
+        url: "https://www.google.com/search?q=Segmental%20Small%20Bowel%20Resection%20with%20Anastomosis%20site%3Aaischannel.com",
         tags: ["video", "free-account", "expert", "MIS", "colorectal"],
-        query: "Small Bowel Tumors"
+        query: "Segmental Small Bowel Resection with Anastomosis"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Small%20Bowel%20Tumors%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Segmental%20Small%20Bowel%20Resection%20with%20Anastomosis%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Small Bowel Tumors"
+        query: "Segmental Small Bowel Resection with Anastomosis"
       }
     ],
     anatomyResources: [
@@ -21985,6 +22165,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Laparoscopic Nissen Fundoplication (360° Wrap)",
+      prep: [
+        "Confirm pathological reflux objectively (24-h pH / DeMeester) and exclude achalasia with manometry BEFORE surgery",
+        "GA; supine, split-legs / reverse Trendelenburg; surgeon between the legs",
+        "Five upper-abdominal ports; liver retractor on the left lobe"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Expose the hiatus",
+          d: "Retract the left liver lobe; divide the gastrohepatic ligament; identify both crura and the anterior/posterior vagus nerves"
+        },
+        {
+          n: 2,
+          t: "Mobilize the esophagus",
+          d: "Dissect the esophagus circumferentially into the mediastinum to gain ≥2–3 cm of intra-abdominal length; preserve the vagi"
+        },
+        {
+          n: 3,
+          t: "Divide short gastric vessels",
+          d: "Take the short gastrics along the greater curve to fully mobilize the fundus for a tension-free wrap"
+        },
+        {
+          n: 4,
+          t: "Crural repair",
+          d: "Approximate the crura posteriorly with non-absorbable sutures, calibrating the hiatus over a bougie"
+        },
+        {
+          n: 5,
+          t: "Create the wrap",
+          d: "Pass the fundus behind the esophagus; 'shoeshine' maneuver to confirm it slides freely; construct a short (1.5–2 cm), floppy 360° wrap over the bougie"
+        },
+        {
+          n: 6,
+          t: "Secure and check",
+          d: "Two or three sutures including esophageal muscle; ensure the wrap is loose and not twisted; hemostasis; remove the bougie"
+        }
+      ],
+      pearls: [
+        "Always calibrate the wrap over a bougie — a wrap that is too tight or too long causes dysphagia and gas-bloat",
+        "Manometry first: an unrecognized achalasia plus a total Nissen produces severe dysphagia",
+        "For significant dysmotility choose a partial (Toupet 270°) wrap instead of a Nissen"
+      ]
+    },
     guidelines: [
       {
         src: "BSG GERD and Barrett's Esophagus Guidelines 2021"
@@ -22012,23 +22237,23 @@ const DISEASES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Gastro-Esophageal%20Reflux%20Disease%20(GERD)%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Laparoscopic%20Nissen%20Fundoplication%20(360%C2%B0%20Wrap)%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Gastro-Esophageal Reflux Disease (GERD)"
+        query: "Laparoscopic Nissen Fundoplication (360° Wrap)"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Gastro-Esophageal%20Reflux%20Disease%20(GERD)%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Laparoscopic%20Nissen%20Fundoplication%20(360%C2%B0%20Wrap)%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Gastro-Esophageal Reflux Disease (GERD)"
+        query: "Laparoscopic Nissen Fundoplication (360° Wrap)"
       },
       {
         title: "Search animation-enhanced videos on TVASurg",
         source: "Toronto Video Atlas of Surgery",
-        url: "https://www.google.com/search?q=Gastro-Esophageal%20Reflux%20Disease%20(GERD)%20site%3Atvasurg.ca",
+        url: "https://www.google.com/search?q=Laparoscopic%20Nissen%20Fundoplication%20(360%C2%B0%20Wrap)%20site%3Atvasurg.ca",
         tags: ["video", "open-access", "animation", "anatomy"],
-        query: "Gastro-Esophageal Reflux Disease (GERD)"
+        query: "Laparoscopic Nissen Fundoplication (360° Wrap)"
       }
     ],
     anatomyResources: [
@@ -22224,6 +22449,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Diagnostic Laparoscopy for the Equivocal Acute Abdomen",
+      prep: [
+        "Only in the hemodynamically stable patient — instability mandates a laparotomy, not laparoscopy",
+        "GA; decompress the stomach (NG) and bladder (catheter) to reduce entry-injury risk",
+        "Supine, able to tilt the table; consent for proceeding to a therapeutic procedure or conversion to open"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Establish pneumoperitoneum",
+          d: "Open (Hasson) umbilical entry is safest, especially after previous surgery; insufflate CO2 to 12–15 mmHg"
+        },
+        {
+          n: 2,
+          t: "Camera port and initial survey",
+          d: "Inspect the entry site for injury; take a panoramic look at all four quadrants before adding working ports"
+        },
+        {
+          n: 3,
+          t: "Working ports under vision",
+          d: "Site additional ports directly, aimed toward the suspected pathology"
+        },
+        {
+          n: 4,
+          t: "Systematic inspection",
+          d: "Liver, gallbladder, stomach, the whole small bowel from DJ flexure to cecum, colon, appendix, pelvis and adnexa; note free fluid, pus or blood"
+        },
+        {
+          n: 5,
+          t: "Sample",
+          d: "Aspirate and send fluid for microscopy/culture; peritoneal washings for cytology if malignancy is suspected; biopsy suspicious deposits"
+        },
+        {
+          n: 6,
+          t: "Treat or convert",
+          d: "Proceed to definitive treatment if feasible (e.g. appendectomy, perforation repair) or convert to open if unsafe or beyond laparoscopic control"
+        }
+      ],
+      pearls: [
+        "In reproductive-age women it reliably separates appendicitis from ovarian/tubal pathology — always inspect the adnexa",
+        "Run the entire small bowel so a second pathology is not missed",
+        "Converting to open is sound surgical judgement, not a failure"
+      ]
+    },
     guidelines: [
       {
         src: "WSES Guidelines on Acute Abdomen 2020",
@@ -22252,23 +22522,23 @@ const DISEASES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Acute%20Abdomen%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Diagnostic%20Laparoscopy%20for%20the%20Equivocal%20Acute%20Abdomen%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Acute Abdomen"
+        query: "Diagnostic Laparoscopy for the Equivocal Acute Abdomen"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Acute%20Abdomen%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Diagnostic%20Laparoscopy%20for%20the%20Equivocal%20Acute%20Abdomen%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Acute Abdomen"
+        query: "Diagnostic Laparoscopy for the Equivocal Acute Abdomen"
       },
       {
         title: "Search animation-enhanced videos on TVASurg",
         source: "Toronto Video Atlas of Surgery",
-        url: "https://www.google.com/search?q=Acute%20Abdomen%20site%3Atvasurg.ca",
+        url: "https://www.google.com/search?q=Diagnostic%20Laparoscopy%20for%20the%20Equivocal%20Acute%20Abdomen%20site%3Atvasurg.ca",
         tags: ["video", "open-access", "animation", "anatomy"],
-        query: "Acute Abdomen"
+        query: "Diagnostic Laparoscopy for the Equivocal Acute Abdomen"
       }
     ],
     anatomyResources: [
@@ -22463,6 +22733,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Upper GI Endoscopy (EGD) for Dysphagia",
+      prep: [
+        "Confirm fasted ≥6 h; consent including the risk of perforation",
+        "Left lateral position; pulse oximetry and capnography; throat spray ± conscious sedation (midazolam ± fentanyl)",
+        "If a pharyngeal pouch (Zenker's) is suspected, obtain a barium swallow first — blind scope passage can perforate the pouch"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Intubate the esophagus under vision",
+          d: "Pass the scope through the cricopharyngeus as the patient swallows; never push blindly against resistance"
+        },
+        {
+          n: 2,
+          t: "Assess the level and nature of hold-up",
+          d: "Note stricture, mass, ring or extrinsic compression; record the distance from the incisors"
+        },
+        {
+          n: 3,
+          t: "Biopsy suspicious lesions",
+          d: "Take 6–8 biopsies from the edge of any tumor or ulcer; take mid-esophageal biopsies for eosinophilic esophagitis even if the mucosa looks normal"
+        },
+        {
+          n: 4,
+          t: "Assess stomach and duodenum",
+          d: "Retroflex to view the fundus and GOJ; exclude a co-existing gastric or duodenal cause"
+        },
+        {
+          n: 5,
+          t: "Therapeutic step for benign stricture",
+          d: "Balloon or bougie dilatation of a confirmed benign peptic/anastomotic stricture under direct or fluoroscopic vision"
+        },
+        {
+          n: 6,
+          t: "Plan onward",
+          d: "A malignant stricture needs staging CT/EUS before any dilatation or stenting — do not dilate a resectable tumor"
+        }
+      ],
+      pearls: [
+        "Barium swallow before the scope if Zenker's is suspected — the scope can perforate the pouch",
+        "Do not dilate a malignant stricture before staging — contraindicated in a resectable tumor",
+        "Take mid-esophageal biopsies in a young atopic male even if the mucosa looks normal — eosinophilic esophagitis"
+      ]
+    },
     guidelines: [
       {
         src: "NICE NG12: Suspected Cancer Referral Guidelines",
@@ -22490,23 +22805,23 @@ const DISEASES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Dysphagia%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Upper%20GI%20Endoscopy%20(EGD)%20for%20Dysphagia%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Dysphagia"
+        query: "Upper GI Endoscopy (EGD) for Dysphagia"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Dysphagia%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Upper%20GI%20Endoscopy%20(EGD)%20for%20Dysphagia%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Dysphagia"
+        query: "Upper GI Endoscopy (EGD) for Dysphagia"
       },
       {
         title: "Search animation-enhanced videos on TVASurg",
         source: "Toronto Video Atlas of Surgery",
-        url: "https://www.google.com/search?q=Dysphagia%20site%3Atvasurg.ca",
+        url: "https://www.google.com/search?q=Upper%20GI%20Endoscopy%20(EGD)%20for%20Dysphagia%20site%3Atvasurg.ca",
         tags: ["video", "open-access", "animation", "anatomy"],
-        query: "Dysphagia"
+        query: "Upper GI Endoscopy (EGD) for Dysphagia"
       }
     ],
     anatomyResources: [
@@ -22706,6 +23021,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Laparoscopic Gastrojejunostomy (Bypass for Gastric Outlet Obstruction)",
+      prep: [
+        "Correct the hypochloremic hypokalemic metabolic alkalosis and dehydration FIRST — never operate on an unresuscitated GOO patient",
+        "NG decompression of the dilated stomach; GA; supine",
+        "Confirm cause and resectability on CT/EGD — bypass is for unresectable malignant obstruction, or benign disease unfit for resection"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Access and exposure",
+          d: "Laparoscopic ports (or an upper midline if open); expose the antrum and greater curve and lift the transverse colon to find the DJ flexure"
+        },
+        {
+          n: 2,
+          t: "Select a jejunal loop",
+          d: "Choose a proximal jejunal loop ~20–40 cm from the DJ flexure that reaches the stomach without tension (antecolic route is usual)"
+        },
+        {
+          n: 3,
+          t: "Approximate stomach and jejunum",
+          d: "Bring the loop to the dependent greater-curve antrum; align isoperistaltically; place stay sutures"
+        },
+        {
+          n: 4,
+          t: "Create the anastomosis",
+          d: "Enterotomy and gastrotomy; wide (≥4 cm) side-to-side stapled or hand-sewn anastomosis, sited dependently so the atonic stomach drains"
+        },
+        {
+          n: 5,
+          t: "Close the common enterotomy",
+          d: "Close the stapler-insertion defect in one or two layers; check staple-line hemostasis"
+        },
+        {
+          n: 6,
+          t: "Test and finish",
+          d: "Check for leak and tension; a Braun entero-enterostomy can reduce bile reflux; NG down, no routine drain"
+        }
+      ],
+      pearls: [
+        "Metabolic alkalosis must be corrected before anesthesia — it impairs cardiac conduction and respiratory drive",
+        "Make the anastomosis wide and dependent so the dilated, atonic stomach empties",
+        "For malignant GOO with short life expectancy, an endoscopic duodenal SEMS may be preferable to surgery"
+      ]
+    },
     guidelines: [
       {
         src: "BSG Benign Gastric Outlet Obstruction Guidelines"
@@ -22734,23 +23094,23 @@ const DISEASES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Gastric%20Outlet%20Obstruction%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Laparoscopic%20Gastrojejunostomy%20(Bypass%20for%20Gastric%20Outlet%20Obstruction)%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Gastric Outlet Obstruction"
+        query: "Laparoscopic Gastrojejunostomy (Bypass for Gastric Outlet Obstruction)"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Gastric%20Outlet%20Obstruction%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Laparoscopic%20Gastrojejunostomy%20(Bypass%20for%20Gastric%20Outlet%20Obstruction)%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Gastric Outlet Obstruction"
+        query: "Laparoscopic Gastrojejunostomy (Bypass for Gastric Outlet Obstruction)"
       },
       {
         title: "Search animation-enhanced videos on TVASurg",
         source: "Toronto Video Atlas of Surgery",
-        url: "https://www.google.com/search?q=Gastric%20Outlet%20Obstruction%20site%3Atvasurg.ca",
+        url: "https://www.google.com/search?q=Laparoscopic%20Gastrojejunostomy%20(Bypass%20for%20Gastric%20Outlet%20Obstruction)%20site%3Atvasurg.ca",
         tags: ["video", "open-access", "animation", "anatomy"],
-        query: "Gastric Outlet Obstruction"
+        query: "Laparoscopic Gastrojejunostomy (Bypass for Gastric Outlet Obstruction)"
       }
     ],
     anatomyResources: [
@@ -22995,6 +23355,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Endoscopic Hemostasis for Upper GI Bleeding (EGD)",
+      prep: [
+        "Resuscitate first (two large-bore cannulae, transfuse toward Hb ≥70 g/L, correct coagulopathy); protect the airway in a massive or variceal bleed",
+        "Pre-endoscopy: IV PPI for a suspected ulcer; terlipressin + prophylactic ceftriaxone if variceal bleeding is suspected",
+        "EGD within 24 h — within 12 h and only after resuscitation if unstable or variceal"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Identify the source",
+          d: "Systematic scope of esophagus, stomach and duodenum; wash clots; grade an ulcer by the Forrest classification"
+        },
+        {
+          n: 2,
+          t: "Non-variceal — dual therapy",
+          d: "For Forrest Ia/Ib/IIa: adrenaline injection to slow bleeding PLUS a second modality — mechanical (clips/OTSC) or thermal (heater probe/coagulation). Adrenaline alone is never enough"
+        },
+        {
+          n: 3,
+          t: "Variceal — band ligation",
+          d: "Esophageal varices: band-ligate each column; gastric varices: cyanoacrylate glue per local protocol"
+        },
+        {
+          n: 4,
+          t: "Confirm hemostasis",
+          d: "Ensure bleeding has stopped; document the lesion and therapy for the next team"
+        },
+        {
+          n: 5,
+          t: "Post-procedure",
+          d: "High-dose IV PPI for 72 h for high-risk ulcers; continue terlipressin/antibiotics for varices; plan H. pylori eradication"
+        },
+        {
+          n: 6,
+          t: "Escalate if it fails",
+          d: "Rebleed → one repeat endoscopy, then IR embolization (e.g. GDA for a duodenal ulcer) or surgery; TIPSS for uncontrolled variceal bleeding"
+        }
+      ],
+      pearls: [
+        "Adrenaline injection alone has a high rebleed rate — always add a mechanical or thermal method",
+        "Start terlipressin and ceftriaxone BEFORE the scope if varices are suspected — it saves lives",
+        "Do not over-transfuse a variceal bleeder (target Hb ~70–80 g/L) — higher targets raise portal pressure and rebleeding"
+      ]
+    },
     guidelines: [
       {
         src: "BSG Acute Upper GI Bleeding Guidelines 2021"
@@ -23023,23 +23428,23 @@ const DISEASES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Melena%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Endoscopic%20Hemostasis%20for%20Upper%20GI%20Bleeding%20(EGD)%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Melena"
+        query: "Endoscopic Hemostasis for Upper GI Bleeding (EGD)"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Melena%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Endoscopic%20Hemostasis%20for%20Upper%20GI%20Bleeding%20(EGD)%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Melena"
+        query: "Endoscopic Hemostasis for Upper GI Bleeding (EGD)"
       },
       {
         title: "Search animation-enhanced videos on TVASurg",
         source: "Toronto Video Atlas of Surgery",
-        url: "https://www.google.com/search?q=Melena%20site%3Atvasurg.ca",
+        url: "https://www.google.com/search?q=Endoscopic%20Hemostasis%20for%20Upper%20GI%20Bleeding%20(EGD)%20site%3Atvasurg.ca",
         tags: ["video", "open-access", "animation", "anatomy"],
-        query: "Melena"
+        query: "Endoscopic Hemostasis for Upper GI Bleeding (EGD)"
       }
     ],
     anatomyResources: [
@@ -23307,6 +23712,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Colonoscopy and Endoscopic Hemostasis for Lower GI Bleeding",
+      prep: [
+        "Resuscitate and risk-stratify (Oakland score); most (95%) settle spontaneously",
+        "Bowel preparation for a planned colonoscopy once the patient is stable; unstable or actively bleeding → CT angiography first, not colonoscopy",
+        "Reverse anticoagulation with hematology guidance before intervention"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Rule out an upper source",
+          d: "Hematochezia with hemodynamic compromise: exclude a massive upper GI bleed (EGD) first — brisk UGIB can present as fresh PR blood"
+        },
+        {
+          n: 2,
+          t: "Intubate to the cecum",
+          d: "Complete colonoscopy with careful washing; identify the bleeding point (diverticulum, angiodysplasia, tumor, post-polypectomy)"
+        },
+        {
+          n: 3,
+          t: "Diverticular bleed",
+          d: "Through-the-scope clips to the culprit diverticulum, or adrenaline injection plus a clip; band ligation is an alternative"
+        },
+        {
+          n: 4,
+          t: "Angiodysplasia",
+          d: "Argon plasma coagulation (APC) — non-contact thermal coagulation of the vascular tuft"
+        },
+        {
+          n: 5,
+          t: "Anorectal source",
+          d: "Rubber-band ligation of bleeding grade I–III hemorrhoids seen on proctoscopy; refer for hemorrhoidectomy if grade III–IV or banding fails"
+        },
+        {
+          n: 6,
+          t: "Escalate if it fails",
+          d: "Ongoing bleeding with a CT-angiogram blush → IR super-selective embolization; failed endoscopy + IR with instability → segmental resection (subtotal colectomy only if the source is unlocalized)"
+        }
+      ],
+      pearls: [
+        "Do not colonoscope during a massive active bleed — views are poor; CT angiography then IR is the pathway",
+        "Always exclude colorectal cancer in a patient >45 with rectal bleeding",
+        "Reverse anticoagulation before any endoscopic hemostasis to reduce procedural bleeding"
+      ]
+    },
     guidelines: [
       {
         src: "BSG Acute Lower GI Bleeding Guidelines 2019"
@@ -23334,23 +23784,23 @@ const DISEASES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Rectal%20Bleeding%20(Hematochezia)%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Colonoscopy%20and%20Endoscopic%20Hemostasis%20for%20Lower%20GI%20Bleeding%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Rectal Bleeding (Hematochezia)"
+        query: "Colonoscopy and Endoscopic Hemostasis for Lower GI Bleeding"
       },
       {
         title: "Search advanced colorectal/MIS videos on AIS Channel",
         source: "AIS Channel",
-        url: "https://www.google.com/search?q=Rectal%20Bleeding%20(Hematochezia)%20site%3Aaischannel.com",
+        url: "https://www.google.com/search?q=Colonoscopy%20and%20Endoscopic%20Hemostasis%20for%20Lower%20GI%20Bleeding%20site%3Aaischannel.com",
         tags: ["video", "free-account", "expert", "MIS", "colorectal"],
-        query: "Rectal Bleeding (Hematochezia)"
+        query: "Colonoscopy and Endoscopic Hemostasis for Lower GI Bleeding"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Rectal%20Bleeding%20(Hematochezia)%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Colonoscopy%20and%20Endoscopic%20Hemostasis%20for%20Lower%20GI%20Bleeding%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Rectal Bleeding (Hematochezia)"
+        query: "Colonoscopy and Endoscopic Hemostasis for Lower GI Bleeding"
       }
     ],
     anatomyResources: [
@@ -43464,6 +43914,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Establishing and Maintaining Safe Pneumoperitoneum",
+      prep: [
+        "Assess cardiorespiratory reserve; plan a low-pressure technique for frail patients",
+        "Decompress the stomach (NG) and bladder (catheter) before entry to reduce injury risk",
+        "Set the insufflator: CO2, low initial flow (~1 L/min), pressure limit 12–15 mmHg (7–8 mmHg if frail)"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Gain access",
+          d: "Enter the peritoneum (open/Hasson or Veress — see access techniques) and connect the CO2 line"
+        },
+        {
+          n: 2,
+          t: "Confirm correct placement",
+          d: "Start at low flow; a low opening pressure (<8–10 mmHg) with even, symmetrical distension confirms intraperitoneal placement before increasing flow"
+        },
+        {
+          n: 3,
+          t: "Insufflate to working pressure",
+          d: "Raise the flow to reach 12–15 mmHg; watch for insufflation bradycardia (peritoneal stretch) — pause or desufflate and give an antimuscarinic if it occurs"
+        },
+        {
+          n: 4,
+          t: "Communicate physiology with anesthesia",
+          d: "Absorbed CO2 causes hypercarbia — the anesthetist increases minute ventilation; watch airway pressures and saturations in steep Trendelenburg"
+        },
+        {
+          n: 5,
+          t: "Titrate during the case",
+          d: "Use the lowest pressure that gives adequate working space; deep neuromuscular block can create space without raising pressure; mechanical VTE prophylaxis for positioning-related stasis"
+        },
+        {
+          n: 6,
+          t: "Desufflate at the end",
+          d: "Actively expel CO2 through the ports before closure to reduce referred shoulder-tip pain; close fascia at all ≥10 mm port sites"
+        }
+      ],
+      pearls: [
+        "Never raise the flow before confirming intraperitoneal placement — high-flow extraperitoneal or intravascular insufflation is dangerous",
+        "Most cardiopulmonary changes of pneumoperitoneum reverse promptly on desufflation",
+        "Expel residual CO2 at the end — it is the cause of post-laparoscopy shoulder-tip pain"
+      ]
+    },
     guidelines: [
       {
         src: "SAGES — Guidelines for diagnostic, energy & minimally invasive surgery"
@@ -43965,6 +44460,51 @@ const DISEASES = [
         }
       ]
     },
+    technique: {
+      title: "Robotic Case Set-up: Docking and Console Operation",
+      prep: [
+        "Confirm the case suits the robot (a confined field needing fine suturing — pelvis, foregut, HPB); brief the whole team, including the emergency-undocking drill",
+        "Standard CO2 pneumoperitoneum physiology applies — same cardiorespiratory considerations as laparoscopy",
+        "Position and secure the patient for the whole case — the table cannot be moved once the cart is docked"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Port placement",
+          d: "Place robotic ports with adequate spacing (usually ≥8 cm apart) oriented toward the target anatomy; add an assistant port"
+        },
+        {
+          n: 2,
+          t: "Position the patient-side cart",
+          d: "Bring the cart in along the planned boom line and dock the arms to the ports without collisions"
+        },
+        {
+          n: 3,
+          t: "Dock and insert instruments",
+          d: "Attach the arms; introduce the 3D endoscope and wristed instruments under vision; confirm every instrument tip is seen before moving"
+        },
+        {
+          n: 4,
+          t: "Move to the console",
+          d: "The surgeon sits at the console with immersive 3D vision; confirm clutching, camera control and instrument association"
+        },
+        {
+          n: 5,
+          t: "Operate",
+          d: "Use wristed articulation, tremor filtration and motion scaling; because there is NO haptic feedback, judge tissue tension by visual cues to avoid suture pull-through"
+        },
+        {
+          n: 6,
+          t: "Undock safely / emergency drill",
+          d: "At the end (or if the patient deteriorates) withdraw instruments under vision and undock the arms rapidly; be ready to convert to laparoscopy or open"
+        }
+      ],
+      pearls: [
+        "Rehearse emergency undocking with the team — a deteriorating patient needs the cart off fast",
+        "No force feedback: set knots by visual tension cues, not feel",
+        "Space the ports well — poorly placed ports cause external arm collisions"
+      ]
+    },
     guidelines: [
       {
         src: "SAGES / MIRA — Robotic surgery consensus and credentialing"
@@ -44333,6 +44873,51 @@ const DISEASES = [
           k: "Main risks",
           v: "Perforation, bleeding, post-ERCP pancreatitis"
         }
+      ]
+    },
+    technique: {
+      title: "Endoscopic Hemostasis for GI Bleeding (Principles)",
+      prep: [
+        "Resuscitate and correct coagulopathy first; secure the airway for a massive upper-GI or variceal bleed",
+        "Pre-treat: IV PPI (suspected ulcer) or terlipressin + prophylactic antibiotics (suspected varices)",
+        "Have injection, thermal and mechanical tools all available before starting"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Locate and clean",
+          d: "Systematic endoscopy; wash clots and debris to expose the bleeding point; grade an ulcer (Forrest) or identify varices"
+        },
+        {
+          n: 2,
+          t: "Injection (first modality)",
+          d: "Submucosal adrenaline (1:10,000) around a bleeding ulcer slows flow and improves the view — but never rely on it alone"
+        },
+        {
+          n: 3,
+          t: "Add a definitive modality",
+          d: "Combine with mechanical (through-the-scope or over-the-scope clips) or thermal (heater probe/coagulation) for durable hemostasis"
+        },
+        {
+          n: 4,
+          t: "Variceal bleeding",
+          d: "Esophageal varices: band-ligate each column; gastric varices: cyanoacrylate injection per protocol"
+        },
+        {
+          n: 5,
+          t: "Confirm and document",
+          d: "Confirm bleeding has stopped; record the lesion and therapy for the next team"
+        },
+        {
+          n: 6,
+          t: "Plan escalation",
+          d: "Rebleed → one repeat endoscopy, then IR embolization or surgery; TIPSS for uncontrolled variceal bleeding"
+        }
+      ],
+      pearls: [
+        "Two modalities beat one — adrenaline injection plus a clip or thermal method for a high-risk ulcer",
+        "Consent specifically for perforation and bleeding (and post-ERCP pancreatitis for biliary work)",
+        "Know the limit: endoscopic resection reaches mucosa/submucosa only — deeper disease needs surgery"
       ]
     },
     guidelines: [
@@ -55618,7 +56203,7 @@ const PROCEDURES = [
     id: "proc-bowel-perforation",
     diseaseId: "bowel-perforation",
     dept: "colorectal",
-    name: "Laparoscopic washout ± Graham patch",
+    name: "Emergency Laparotomy for Bowel Perforation (Source Control)",
     disease: "Bowel Perforation",
     organ: "GI tract",
     severity: "high",
@@ -55650,9 +56235,47 @@ const PROCEDURES = [
       "Most common cause: diverticular disease (sigmoid) in UK adults; PUD perforation accounts for ~5% of PUD cases",
       "Differentiate from: Perforated peptic ulcer (sudden epigastric pain, board-like abdomen, air under diaphragm), Perforated diverticulitis (LIF pain, elderly, known diverticulosis), Perforated appendix (RIF, younger patient, delayed presentation), Perforated colorectal cancer (elderly, change in bowel habit, weight loss)"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "Resuscitate in parallel — IV access, fluids, broad-spectrum antibiotics and cross-match; do not delay antibiotics for imaging",
+      "GA; supine; catheter and NG; consent for a stoma and a possible relook",
+      "Prophylactic antibiotics on induction; warm the patient and the fluids"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Midline laparotomy",
+        d: "Generous midline incision for access to all four quadrants; send peritoneal fluid for culture"
+      },
+      {
+        n: 2,
+        t: "Identify the source",
+        d: "Systematic inspection to localize the perforation (stomach/duodenum, small bowel, colon); control gross contamination with packs"
+      },
+      {
+        n: 3,
+        t: "Source control — upper GI",
+        d: "Perforated peptic ulcer: omental (Graham) patch over the defect, or primary repair if small; biopsy a gastric ulcer to exclude malignancy"
+      },
+      {
+        n: 4,
+        t: "Source control — colon",
+        d: "Perforated diverticulitis or left colon cancer: Hartmann's (resect, end colostomy, close rectal stump) in fecal peritonitis; primary anastomosis only in a clean, stable field"
+      },
+      {
+        n: 5,
+        t: "Peritoneal lavage",
+        d: "Copious warm saline washout (5–10 L) until the effluent is clear; remove all debris"
+      },
+      {
+        n: 6,
+        t: "Drains and closure",
+        d: "Place drains near the repair as indicated; mass closure of the abdomen; leave a laparostomy for damage-control if the patient is unstable"
+      }
+    ],
     pearls: [
+      "In fecal peritonitis (Hinchey IV) avoid a primary anastomosis — the leak rate in a contaminated field is very high",
+      "Always send peritoneal fluid for culture and biopsy a gastric ulcer edge",
+      "Choose damage-control (leave the abdomen open, relook in 24–48 h) over a long definitive operation if the patient is unstable or coagulopathic",
       "Start IV antibiotics and resuscitation before CT — don't delay antibiotics waiting for imaging",
       "Graham patch repair failure rate ~5% — always send fluid for culture; eradicate H. pylori post-operatively",
       "Boey score predicts PUD mortality — Boey 3 has >90% mortality; involve ICU/anesthetics early"
@@ -55666,10 +56289,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (Laparoscopic washout ± Graham patch), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Emergency Laparotomy for Bowel Perforation (Source Control)), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "Resuscitate in parallel — IV access, fluids, broad-spectrum antibiotics and cross-match; do not delay antibiotics for imaging",
+          "GA; supine; catheter and NG; consent for a stoma and a possible relook",
+          "Prophylactic antibiotics on induction; warm the patient and the fluids"
         ]
       },
       {
@@ -55687,8 +56312,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "Start IV antibiotics and resuscitation before CT — don't delay antibiotics waiting for imaging",
-          "Graham patch repair failure rate ~5% — always send fluid for culture; eradicate H. pylori post-operatively"
+          "In fecal peritonitis (Hinchey IV) avoid a primary anastomosis — the leak rate in a contaminated field is very high",
+          "Always send peritoneal fluid for culture and biopsy a gastric ulcer edge",
+          "Choose damage-control (leave the abdomen open, relook in 24–48 h) over a long definitive operation if the patient is unstable or coagulopathic",
+          "Start IV antibiotics and resuscitation before CT — don't delay antibiotics waiting for imaging"
         ]
       },
       {
@@ -55742,23 +56369,23 @@ const PROCEDURES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Bowel%20Perforation%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Emergency%20Laparotomy%20for%20Bowel%20Perforation%20(Source%20Control)%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Bowel Perforation"
+        query: "Emergency Laparotomy for Bowel Perforation (Source Control)"
       },
       {
         title: "Search advanced colorectal/MIS videos on AIS Channel",
         source: "AIS Channel",
-        url: "https://www.google.com/search?q=Bowel%20Perforation%20site%3Aaischannel.com",
+        url: "https://www.google.com/search?q=Emergency%20Laparotomy%20for%20Bowel%20Perforation%20(Source%20Control)%20site%3Aaischannel.com",
         tags: ["video", "free-account", "expert", "MIS", "colorectal"],
-        query: "Bowel Perforation"
+        query: "Emergency Laparotomy for Bowel Perforation (Source Control)"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Bowel%20Perforation%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Emergency%20Laparotomy%20for%20Bowel%20Perforation%20(Source%20Control)%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Bowel Perforation"
+        query: "Emergency Laparotomy for Bowel Perforation (Source Control)"
       }
     ],
     tags: [
@@ -55776,7 +56403,7 @@ const PROCEDURES = [
     id: "proc-pseudo-obstruction",
     diseaseId: "pseudo-obstruction",
     dept: "colorectal",
-    name: "Colonoscopic decompression",
+    name: "Colonoscopic Decompression for Acute Colonic Pseudo-Obstruction",
     disease: "Pseudo-Obstruction (Ogilvie's Syndrome)",
     organ: "Colon",
     severity: "high",
@@ -55803,9 +56430,47 @@ const PROCEDURES = [
       "Neostigmine 2 mg IV slowly over 3–5 min in HDU: 80–90% response rate; monitor ECG for bradycardia; atropine at bedside",
       "Differentiate from: Mechanical large bowel obstruction (CT: transition point, distended proximal bowel only; vs. pseudo-obstruction: entire colon dilated), Toxic megacolon (IBD or C. difficile; fever, tachycardia, leukocytosis, transverse colon >6 cm; emergency colectomy), Sigmoid volvulus (AXR: coffee bean sign; endoscopic decompression first), Cecal volvulus (CT: cecum displaced to LUQ; usually needs surgery)"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "First exclude mechanical obstruction and perforation on CT; correct K+/Mg2+/Ca2+ and stop opioids and anticholinergics",
+      "Try conservative measures ± IV neostigmine (with cardiac monitoring and atropine to hand) before scoping",
+      "Reserve decompression for cecum >12 cm, failure of neostigmine, or a contraindication to neostigmine"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Minimal-prep colonoscopy",
+        d: "No oral bowel prep (obstructive picture); scope carefully with minimal insufflation — use CO2 to limit further distension"
+      },
+      {
+        n: 2,
+        t: "Aspirate as you advance",
+        d: "Continuously suction gas and liquid stool to decompress; advance as far as safely possible (ideally to the cecum or hepatic flexure)"
+      },
+      {
+        n: 3,
+        t: "Inspect the mucosa",
+        d: "Look for ischemia (dusky or black mucosa) — if present, stop and refer for surgery"
+      },
+      {
+        n: 4,
+        t: "Place a decompression tube",
+        d: "Leave a flatus/decompression tube over a guidewire to the right colon or splenic flexure to keep the colon decompressed"
+      },
+      {
+        n: 5,
+        t: "Confirm decompression",
+        d: "Post-procedure AXR to confirm a reduced cecal diameter; secure the tube on free drainage"
+      },
+      {
+        n: 6,
+        t: "Monitor for recurrence",
+        d: "Serial abdominal girth and AXR; recurrence (~40%) may need repeat decompression; escalate to cecostomy or surgery if it fails or ischemia/perforation develops"
+      }
+    ],
     pearls: [
+      "Suction far more than you insufflate — and use CO2; the goal is to decompress, not distend",
+      "Dusky mucosa means ischemia: abandon decompression and go to surgery",
+      "Recurrence is common; a left-in decompression tube reduces it",
       "Distinguish from toxic megacolon: pseudo-obstruction = no fever/leukocytosis + not IBD/C.diff; toxic mega = fever + leukocytosis + IBD/C.diff cause",
       "Neostigmine works in 80% — if it fails, colonoscopic decompression next; surgery for perforation/ischemia only",
       "Atropine must be at bedside before neostigmine — bradycardia occurs in ~10% (usually transient)"
@@ -55819,10 +56484,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (Colonoscopic decompression), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Colonoscopic Decompression for Acute Colonic Pseudo-Obstruction), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "First exclude mechanical obstruction and perforation on CT; correct K+/Mg2+/Ca2+ and stop opioids and anticholinergics",
+          "Try conservative measures ± IV neostigmine (with cardiac monitoring and atropine to hand) before scoping",
+          "Reserve decompression for cecum >12 cm, failure of neostigmine, or a contraindication to neostigmine"
         ]
       },
       {
@@ -55840,8 +56507,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "Distinguish from toxic megacolon: pseudo-obstruction = no fever/leukocytosis + not IBD/C.diff; toxic mega = fever + leukocytosis + IBD/C.diff cause",
-          "Neostigmine works in 80% — if it fails, colonoscopic decompression next; surgery for perforation/ischemia only"
+          "Suction far more than you insufflate — and use CO2; the goal is to decompress, not distend",
+          "Dusky mucosa means ischemia: abandon decompression and go to surgery",
+          "Recurrence is common; a left-in decompression tube reduces it",
+          "Distinguish from toxic megacolon: pseudo-obstruction = no fever/leukocytosis + not IBD/C.diff; toxic mega = fever + leukocytosis + IBD/C.diff cause"
         ]
       },
       {
@@ -55895,23 +56564,23 @@ const PROCEDURES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Pseudo-Obstruction%20(Ogilvie's%20Syndrome)%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Colonoscopic%20Decompression%20for%20Acute%20Colonic%20Pseudo-Obstruction%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Pseudo-Obstruction (Ogilvie's Syndrome)"
+        query: "Colonoscopic Decompression for Acute Colonic Pseudo-Obstruction"
       },
       {
         title: "Search advanced colorectal/MIS videos on AIS Channel",
         source: "AIS Channel",
-        url: "https://www.google.com/search?q=Pseudo-Obstruction%20(Ogilvie's%20Syndrome)%20site%3Aaischannel.com",
+        url: "https://www.google.com/search?q=Colonoscopic%20Decompression%20for%20Acute%20Colonic%20Pseudo-Obstruction%20site%3Aaischannel.com",
         tags: ["video", "free-account", "expert", "MIS", "colorectal"],
-        query: "Pseudo-Obstruction (Ogilvie's Syndrome)"
+        query: "Colonoscopic Decompression for Acute Colonic Pseudo-Obstruction"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Pseudo-Obstruction%20(Ogilvie's%20Syndrome)%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Colonoscopic%20Decompression%20for%20Acute%20Colonic%20Pseudo-Obstruction%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Pseudo-Obstruction (Ogilvie's Syndrome)"
+        query: "Colonoscopic Decompression for Acute Colonic Pseudo-Obstruction"
       }
     ],
     tags: [
@@ -55929,7 +56598,7 @@ const PROCEDURES = [
     id: "proc-angiodysplasia",
     diseaseId: "angiodysplasia",
     dept: "colorectal",
-    name: "Endoscopic APC (argon plasma coagulation)",
+    name: "Endoscopic Argon Plasma Coagulation (APC) of Angiodysplasia",
     disease: "Angiodysplasia",
     organ: "GI tract (cecum/ascending colon)",
     severity: "medium",
@@ -55961,9 +56630,47 @@ const PROCEDURES = [
       "Majority present with occult bleeding (iron-deficiency anemia); only 10–15% present with acute hematochezia",
       "Differentiate from: Diverticular disease (painless massive bleed in elderly; right-sided diverticula can cause major hemorrhage), Colorectal cancer (change in bowel habit, weight loss, iron-deficiency anemia), IBD (UC: bloody diarrhea; Crohn's: less commonly frank bleed), Hemorrhoids (anorectal; on surface of stool; proctoscopy confirms)"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "Localize the lesion (colonoscopy / EGD; capsule ± enteroscopy for the small bowel); correct anemia and coagulopathy",
+      "Consent for perforation and bleeding; APC is a non-contact thermal therapy",
+      "Standard endoscopy set-up with an APC unit, argon supply and a grounding pad on the patient"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Identify the lesion",
+        d: "Find the cherry-red flat vascular tuft; clean the field so the target is clearly seen"
+      },
+      {
+        n: 2,
+        t: "Position the probe",
+        d: "Advance the APC catheter to within a few millimeters of the lesion — non-contact; do not touch the mucosa"
+      },
+      {
+        n: 3,
+        t: "Apply argon coagulation",
+        d: "Short pulses of argon-plasma energy paint the lesion white; work from the periphery toward the center of larger lesions"
+      },
+      {
+        n: 4,
+        t: "Avoid deep injury",
+        d: "Keep pulses brief and superficial, especially in the thin-walled cecum and right colon, to avoid a transmural burn or perforation"
+      },
+      {
+        n: 5,
+        t: "Treat all lesions",
+        d: "Systematically treat every visible lesion — angiodysplasia is often multiple"
+      },
+      {
+        n: 6,
+        t: "Aftercare and follow-up",
+        d: "Continue iron replacement; warn of a 30–40% rebleed rate; repeat APC if bleeding recurs; consider octreotide/thalidomide or valve replacement for Heyde's in refractory disease"
+      }
+    ],
     pearls: [
+      "Keep it non-contact and superficial — the right colon wall is thin and perforates easily",
+      "Treat every lesion; missing additional lesions is a common cause of rebleeding",
+      "In aortic stenosis with recurrent bleeding (Heyde's), aortic valve replacement stops the bleeding",
       "Always consider Heyde's syndrome in elderly patients with aortic stenosis and recurrent GI bleed — AVR/TAVR stops the bleeding",
       "Capsule endoscopy is the most effective investigation for small bowel angiodysplasia — use after negative EGD + colonoscopy",
       "APC is safe, effective, and repeatable — most patients require multiple treatment sessions"
@@ -55977,10 +56684,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (Endoscopic APC (argon plasma coagulation)), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Endoscopic Argon Plasma Coagulation (APC) of Angiodysplasia), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "Localize the lesion (colonoscopy / EGD; capsule ± enteroscopy for the small bowel); correct anemia and coagulopathy",
+          "Consent for perforation and bleeding; APC is a non-contact thermal therapy",
+          "Standard endoscopy set-up with an APC unit, argon supply and a grounding pad on the patient"
         ]
       },
       {
@@ -55998,8 +56707,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "Always consider Heyde's syndrome in elderly patients with aortic stenosis and recurrent GI bleed — AVR/TAVR stops the bleeding",
-          "Capsule endoscopy is the most effective investigation for small bowel angiodysplasia — use after negative EGD + colonoscopy"
+          "Keep it non-contact and superficial — the right colon wall is thin and perforates easily",
+          "Treat every lesion; missing additional lesions is a common cause of rebleeding",
+          "In aortic stenosis with recurrent bleeding (Heyde's), aortic valve replacement stops the bleeding",
+          "Always consider Heyde's syndrome in elderly patients with aortic stenosis and recurrent GI bleed — AVR/TAVR stops the bleeding"
         ]
       },
       {
@@ -56053,23 +56764,23 @@ const PROCEDURES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Angiodysplasia%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Endoscopic%20Argon%20Plasma%20Coagulation%20(APC)%20of%20Angiodysplasia%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Angiodysplasia"
+        query: "Endoscopic Argon Plasma Coagulation (APC) of Angiodysplasia"
       },
       {
         title: "Search advanced colorectal/MIS videos on AIS Channel",
         source: "AIS Channel",
-        url: "https://www.google.com/search?q=Angiodysplasia%20site%3Aaischannel.com",
+        url: "https://www.google.com/search?q=Endoscopic%20Argon%20Plasma%20Coagulation%20(APC)%20of%20Angiodysplasia%20site%3Aaischannel.com",
         tags: ["video", "free-account", "expert", "MIS", "colorectal"],
-        query: "Angiodysplasia"
+        query: "Endoscopic Argon Plasma Coagulation (APC) of Angiodysplasia"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Angiodysplasia%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Endoscopic%20Argon%20Plasma%20Coagulation%20(APC)%20of%20Angiodysplasia%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Angiodysplasia"
+        query: "Endoscopic Argon Plasma Coagulation (APC) of Angiodysplasia"
       }
     ],
     tags: [
@@ -56087,7 +56798,7 @@ const PROCEDURES = [
     id: "proc-small-bowel-tumours",
     diseaseId: "small-bowel-tumours",
     dept: "colorectal",
-    name: "Segmental small bowel resection",
+    name: "Segmental Small Bowel Resection with Anastomosis",
     disease: "Small Bowel Tumors",
     organ: "Small bowel",
     severity: "medium",
@@ -56119,9 +56830,47 @@ const PROCEDURES = [
       "Adenocarcinoma most common in duodenum (55–80% of small bowel adenocarcinomas); GIST and NET more common in jejunum/ileum",
       "Differentiate from: Crohn's disease stricture (IBD history, skip lesions, transmural inflammation — may co-exist with adenocarcinoma), Adhesional small bowel obstruction (prior surgery, CT shows transition point at adhesion site), External hernia causing obstruction (check hernial orifices), Meckel's diverticulum (heterotopic gastric mucosa, intussusception lead point in children)"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "Staging CT and histology where possible; optimize nutrition; mark a stoma site if there is any risk of a stoma",
+      "GA; supine; catheter and NG; prophylactic antibiotics and VTE prophylaxis",
+      "Laparoscopic or open depending on tumor size, location and surgeon experience"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Explore and localize",
+        d: "Run the whole small bowel from DJ flexure to cecum; identify the tumor and any second lesion; assess liver and peritoneum for metastases"
+      },
+      {
+        n: 2,
+        t: "Plan the resection",
+        d: "Choose proximal and distal transection points with adequate margins (~5–10 cm) and a wedge of mesentery for the draining nodes"
+      },
+      {
+        n: 3,
+        t: "Divide the mesentery",
+        d: "Score the mesentery and ligate/seal vessels down to the bowel wall, taking the lymphovascular pedicle for oncological clearance"
+      },
+      {
+        n: 4,
+        t: "Resect the segment",
+        d: "Divide the bowel proximally and distally (linear staplers or clamps) and remove the specimen; orient it for pathology"
+      },
+      {
+        n: 5,
+        t: "Anastomosis",
+        d: "Restore continuity with a tension-free, well-perfused stapled or hand-sewn anastomosis; close the mesenteric defect to prevent internal herniation"
+      },
+      {
+        n: 6,
+        t: "Match operation to tumor",
+        d: "Confirm hemostasis and anastomotic integrity; a terminal-ileal NET needs a right hemicolectomy, and a duodenal/periampullary adenocarcinoma needs a pancreaticoduodenectomy (Whipple's), not a segmental resection"
+      }
+    ],
     pearls: [
+      "Take the mesenteric lymphovascular pedicle — nodal clearance matters for staging and cure",
+      "Close the mesenteric defect to prevent an internal hernia",
+      "Match the operation to the tumor: terminal-ileal NET → right hemicolectomy; duodenal adenocarcinoma → Whipple's",
       "Crohn's disease increases small bowel adenocarcinoma risk 150-fold — any change in pain pattern, obstruction, or new mass in Crohn's patient warrants urgent imaging",
       "GIST: always check c-KIT/PDGFRA mutational status — PDGFRA D842V mutation is imatinib-resistant (use avapritinib)",
       "Carcinoid syndrome only develops with hepatic metastases (bypasses hepatic serotonin metabolism)"
@@ -56135,10 +56884,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (Segmental small bowel resection), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Segmental Small Bowel Resection with Anastomosis), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "Staging CT and histology where possible; optimize nutrition; mark a stoma site if there is any risk of a stoma",
+          "GA; supine; catheter and NG; prophylactic antibiotics and VTE prophylaxis",
+          "Laparoscopic or open depending on tumor size, location and surgeon experience"
         ]
       },
       {
@@ -56156,8 +56907,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "Crohn's disease increases small bowel adenocarcinoma risk 150-fold — any change in pain pattern, obstruction, or new mass in Crohn's patient warrants urgent imaging",
-          "GIST: always check c-KIT/PDGFRA mutational status — PDGFRA D842V mutation is imatinib-resistant (use avapritinib)"
+          "Take the mesenteric lymphovascular pedicle — nodal clearance matters for staging and cure",
+          "Close the mesenteric defect to prevent an internal hernia",
+          "Match the operation to the tumor: terminal-ileal NET → right hemicolectomy; duodenal adenocarcinoma → Whipple's",
+          "Crohn's disease increases small bowel adenocarcinoma risk 150-fold — any change in pain pattern, obstruction, or new mass in Crohn's patient warrants urgent imaging"
         ]
       },
       {
@@ -56211,23 +56964,23 @@ const PROCEDURES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Small%20Bowel%20Tumors%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Segmental%20Small%20Bowel%20Resection%20with%20Anastomosis%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Small Bowel Tumors"
+        query: "Segmental Small Bowel Resection with Anastomosis"
       },
       {
         title: "Search advanced colorectal/MIS videos on AIS Channel",
         source: "AIS Channel",
-        url: "https://www.google.com/search?q=Small%20Bowel%20Tumors%20site%3Aaischannel.com",
+        url: "https://www.google.com/search?q=Segmental%20Small%20Bowel%20Resection%20with%20Anastomosis%20site%3Aaischannel.com",
         tags: ["video", "free-account", "expert", "MIS", "colorectal"],
-        query: "Small Bowel Tumors"
+        query: "Segmental Small Bowel Resection with Anastomosis"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Small%20Bowel%20Tumors%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Segmental%20Small%20Bowel%20Resection%20with%20Anastomosis%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Small Bowel Tumors"
+        query: "Segmental Small Bowel Resection with Anastomosis"
       }
     ],
     tags: [
@@ -59730,7 +60483,7 @@ const PROCEDURES = [
     id: "proc-gord",
     diseaseId: "gord",
     dept: "uppergi",
-    name: "Laparoscopic Nissen fundoplication (360° posterior wrap)",
+    name: "Laparoscopic Nissen Fundoplication (360° Wrap)",
     disease: "Gastro-Esophageal Reflux Disease (GERD)",
     organ: "Esophagus/LOS",
     severity: "low",
@@ -59762,9 +60515,47 @@ const PROCEDURES = [
       "Gold standard investigation: 24-hour ambulatory pH monitoring — quantifies reflux burden; Demeester score >14.72 = pathological",
       "Differentiate from: Esophageal adenocarcinoma (progressive dysphagia, weight loss, Barrett's background), Peptic ulcer disease (epigastric pain, worse with hunger/empty stomach, relieved by food), Achalasia (dysphagia liquids = solids, regurgitation, bird-beak on barium), Coronary artery disease (exertional, radiation to arm/jaw, ECG changes — always exclude in atypical chest pain)"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "Confirm pathological reflux objectively (24-h pH / DeMeester) and exclude achalasia with manometry BEFORE surgery",
+      "GA; supine, split-legs / reverse Trendelenburg; surgeon between the legs",
+      "Five upper-abdominal ports; liver retractor on the left lobe"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Expose the hiatus",
+        d: "Retract the left liver lobe; divide the gastrohepatic ligament; identify both crura and the anterior/posterior vagus nerves"
+      },
+      {
+        n: 2,
+        t: "Mobilize the esophagus",
+        d: "Dissect the esophagus circumferentially into the mediastinum to gain ≥2–3 cm of intra-abdominal length; preserve the vagi"
+      },
+      {
+        n: 3,
+        t: "Divide short gastric vessels",
+        d: "Take the short gastrics along the greater curve to fully mobilize the fundus for a tension-free wrap"
+      },
+      {
+        n: 4,
+        t: "Crural repair",
+        d: "Approximate the crura posteriorly with non-absorbable sutures, calibrating the hiatus over a bougie"
+      },
+      {
+        n: 5,
+        t: "Create the wrap",
+        d: "Pass the fundus behind the esophagus; 'shoeshine' maneuver to confirm it slides freely; construct a short (1.5–2 cm), floppy 360° wrap over the bougie"
+      },
+      {
+        n: 6,
+        t: "Secure and check",
+        d: "Two or three sutures including esophageal muscle; ensure the wrap is loose and not twisted; hemostasis; remove the bougie"
+      }
+    ],
     pearls: [
+      "Always calibrate the wrap over a bougie — a wrap that is too tight or too long causes dysphagia and gas-bloat",
+      "Manometry first: an unrecognized achalasia plus a total Nissen produces severe dysphagia",
+      "For significant dysmotility choose a partial (Toupet 270°) wrap instead of a Nissen",
       "Demeester score >14.72 = pathological reflux on 24-h pH study — objective confirmation before surgery",
       "Always do manometry before fundoplication — undiagnosed achalasia + total Nissen = severe dysphagia",
       "Barrett's esophagus: surveillance EGD every 2–3 years (no dysplasia); radiofrequency ablation (RFA) for low-grade dysplasia; EET/esophagectomy for high-grade dysplasia"
@@ -59778,10 +60569,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (Laparoscopic Nissen fundoplication (360° posterior wrap)), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Laparoscopic Nissen Fundoplication (360° Wrap)), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "Confirm pathological reflux objectively (24-h pH / DeMeester) and exclude achalasia with manometry BEFORE surgery",
+          "GA; supine, split-legs / reverse Trendelenburg; surgeon between the legs",
+          "Five upper-abdominal ports; liver retractor on the left lobe"
         ]
       },
       {
@@ -59799,8 +60592,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "Demeester score >14.72 = pathological reflux on 24-h pH study — objective confirmation before surgery",
-          "Always do manometry before fundoplication — undiagnosed achalasia + total Nissen = severe dysphagia"
+          "Always calibrate the wrap over a bougie — a wrap that is too tight or too long causes dysphagia and gas-bloat",
+          "Manometry first: an unrecognized achalasia plus a total Nissen produces severe dysphagia",
+          "For significant dysmotility choose a partial (Toupet 270°) wrap instead of a Nissen",
+          "Demeester score >14.72 = pathological reflux on 24-h pH study — objective confirmation before surgery"
         ]
       },
       {
@@ -59854,23 +60649,23 @@ const PROCEDURES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Gastro-Esophageal%20Reflux%20Disease%20(GERD)%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Laparoscopic%20Nissen%20Fundoplication%20(360%C2%B0%20Wrap)%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Gastro-Esophageal Reflux Disease (GERD)"
+        query: "Laparoscopic Nissen Fundoplication (360° Wrap)"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Gastro-Esophageal%20Reflux%20Disease%20(GERD)%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Laparoscopic%20Nissen%20Fundoplication%20(360%C2%B0%20Wrap)%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Gastro-Esophageal Reflux Disease (GERD)"
+        query: "Laparoscopic Nissen Fundoplication (360° Wrap)"
       },
       {
         title: "Search animation-enhanced videos on TVASurg",
         source: "Toronto Video Atlas of Surgery",
-        url: "https://www.google.com/search?q=Gastro-Esophageal%20Reflux%20Disease%20(GERD)%20site%3Atvasurg.ca",
+        url: "https://www.google.com/search?q=Laparoscopic%20Nissen%20Fundoplication%20(360%C2%B0%20Wrap)%20site%3Atvasurg.ca",
         tags: ["video", "open-access", "animation", "anatomy"],
-        query: "Gastro-Esophageal Reflux Disease (GERD)"
+        query: "Laparoscopic Nissen Fundoplication (360° Wrap)"
       }
     ],
     tags: ["GERD", "reflux", "PPI", "fundoplication", "Los Angeles", "Barrett's", "heartburn", "procedure"]
@@ -59879,7 +60674,7 @@ const PROCEDURES = [
     id: "proc-acute-abdomen",
     diseaseId: "acute-abdomen",
     dept: "uppergi",
-    name: "Emergency laparotomy",
+    name: "Diagnostic Laparoscopy for the Equivocal Acute Abdomen",
     disease: "Acute Abdomen",
     organ: "Abdomen",
     severity: "high",
@@ -59906,9 +60701,47 @@ const PROCEDURES = [
       "Ruptured AAA: tachycardia + hypotension ± pulsatile mass — activate major hemorrhage protocol, straight to CT/theater",
       "Differentiate from: Ruptured AAA (pulsatile mass, hemodynamic compromise), Perforated peptic ulcer (sudden onset, board-like abdomen), Mesenteric ischemia (AF, pain out of proportion, raised lactate), Acute pancreatitis (epigastric radiating to back, raised lipase/amylase)"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "Only in the hemodynamically stable patient — instability mandates a laparotomy, not laparoscopy",
+      "GA; decompress the stomach (NG) and bladder (catheter) to reduce entry-injury risk",
+      "Supine, able to tilt the table; consent for proceeding to a therapeutic procedure or conversion to open"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Establish pneumoperitoneum",
+        d: "Open (Hasson) umbilical entry is safest, especially after previous surgery; insufflate CO2 to 12–15 mmHg"
+      },
+      {
+        n: 2,
+        t: "Camera port and initial survey",
+        d: "Inspect the entry site for injury; take a panoramic look at all four quadrants before adding working ports"
+      },
+      {
+        n: 3,
+        t: "Working ports under vision",
+        d: "Site additional ports directly, aimed toward the suspected pathology"
+      },
+      {
+        n: 4,
+        t: "Systematic inspection",
+        d: "Liver, gallbladder, stomach, the whole small bowel from DJ flexure to cecum, colon, appendix, pelvis and adnexa; note free fluid, pus or blood"
+      },
+      {
+        n: 5,
+        t: "Sample",
+        d: "Aspirate and send fluid for microscopy/culture; peritoneal washings for cytology if malignancy is suspected; biopsy suspicious deposits"
+      },
+      {
+        n: 6,
+        t: "Treat or convert",
+        d: "Proceed to definitive treatment if feasible (e.g. appendectomy, perforation repair) or convert to open if unsafe or beyond laparoscopic control"
+      }
+    ],
     pearls: [
+      "In reproductive-age women it reliably separates appendicitis from ovarian/tubal pathology — always inspect the adnexa",
+      "Run the entire small bowel so a second pathology is not missed",
+      "Converting to open is sound surgical judgement, not a failure",
       "Never withhold analgesia — IV morphine titrated does not mask diagnosis and improves patient cooperation",
       "Lactate >4 mmol/L + peritonitis = theater without delay; don't wait for CT",
       "Elderly patients and those on steroids may have blunted peritonism — a soft abdomen does NOT exclude perforation"
@@ -59923,10 +60756,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (Emergency laparotomy), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Diagnostic Laparoscopy for the Equivocal Acute Abdomen), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "Only in the hemodynamically stable patient — instability mandates a laparotomy, not laparoscopy",
+          "GA; decompress the stomach (NG) and bladder (catheter) to reduce entry-injury risk",
+          "Supine, able to tilt the table; consent for proceeding to a therapeutic procedure or conversion to open"
         ]
       },
       {
@@ -59944,8 +60779,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "Never withhold analgesia — IV morphine titrated does not mask diagnosis and improves patient cooperation",
-          "Lactate >4 mmol/L + peritonitis = theater without delay; don't wait for CT"
+          "In reproductive-age women it reliably separates appendicitis from ovarian/tubal pathology — always inspect the adnexa",
+          "Run the entire small bowel so a second pathology is not missed",
+          "Converting to open is sound surgical judgement, not a failure",
+          "Never withhold analgesia — IV morphine titrated does not mask diagnosis and improves patient cooperation"
         ]
       },
       {
@@ -60000,23 +60837,23 @@ const PROCEDURES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Acute%20Abdomen%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Diagnostic%20Laparoscopy%20for%20the%20Equivocal%20Acute%20Abdomen%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Acute Abdomen"
+        query: "Diagnostic Laparoscopy for the Equivocal Acute Abdomen"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Acute%20Abdomen%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Diagnostic%20Laparoscopy%20for%20the%20Equivocal%20Acute%20Abdomen%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Acute Abdomen"
+        query: "Diagnostic Laparoscopy for the Equivocal Acute Abdomen"
       },
       {
         title: "Search animation-enhanced videos on TVASurg",
         source: "Toronto Video Atlas of Surgery",
-        url: "https://www.google.com/search?q=Acute%20Abdomen%20site%3Atvasurg.ca",
+        url: "https://www.google.com/search?q=Diagnostic%20Laparoscopy%20for%20the%20Equivocal%20Acute%20Abdomen%20site%3Atvasurg.ca",
         tags: ["video", "open-access", "animation", "anatomy"],
-        query: "Acute Abdomen"
+        query: "Diagnostic Laparoscopy for the Equivocal Acute Abdomen"
       }
     ],
     tags: [
@@ -60034,7 +60871,7 @@ const PROCEDURES = [
     id: "proc-dysphagia",
     diseaseId: "dysphagia",
     dept: "uppergi",
-    name: "EGD + dilatation",
+    name: "Upper GI Endoscopy (EGD) for Dysphagia",
     disease: "Dysphagia",
     organ: "Esophagus/Pharynx",
     severity: "medium",
@@ -60066,9 +60903,47 @@ const PROCEDURES = [
       "Solids only → progressive to liquids: mechanical obstruction (cancer, stricture, Schatzki ring)",
       "Differentiate from: Esophageal carcinoma (progressive solids → liquids, weight loss, >50 y), Achalasia (failure of LOS relaxation, bird-beak on barium swallow), Benign peptic stricture (long-standing GERD history), Pharyngeal pouch / Zenker's diverticulum (regurgitation, gurgling)"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "Confirm fasted ≥6 h; consent including the risk of perforation",
+      "Left lateral position; pulse oximetry and capnography; throat spray ± conscious sedation (midazolam ± fentanyl)",
+      "If a pharyngeal pouch (Zenker's) is suspected, obtain a barium swallow first — blind scope passage can perforate the pouch"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Intubate the esophagus under vision",
+        d: "Pass the scope through the cricopharyngeus as the patient swallows; never push blindly against resistance"
+      },
+      {
+        n: 2,
+        t: "Assess the level and nature of hold-up",
+        d: "Note stricture, mass, ring or extrinsic compression; record the distance from the incisors"
+      },
+      {
+        n: 3,
+        t: "Biopsy suspicious lesions",
+        d: "Take 6–8 biopsies from the edge of any tumor or ulcer; take mid-esophageal biopsies for eosinophilic esophagitis even if the mucosa looks normal"
+      },
+      {
+        n: 4,
+        t: "Assess stomach and duodenum",
+        d: "Retroflex to view the fundus and GOJ; exclude a co-existing gastric or duodenal cause"
+      },
+      {
+        n: 5,
+        t: "Therapeutic step for benign stricture",
+        d: "Balloon or bougie dilatation of a confirmed benign peptic/anastomotic stricture under direct or fluoroscopic vision"
+      },
+      {
+        n: 6,
+        t: "Plan onward",
+        d: "A malignant stricture needs staging CT/EUS before any dilatation or stenting — do not dilate a resectable tumor"
+      }
+    ],
     pearls: [
+      "Barium swallow before the scope if Zenker's is suspected — the scope can perforate the pouch",
+      "Do not dilate a malignant stricture before staging — contraindicated in a resectable tumor",
+      "Take mid-esophageal biopsies in a young atopic male even if the mucosa looks normal — eosinophilic esophagitis",
       "All new dysphagia = 2-week wait EGD referral until cancer excluded",
       "Oropharyngeal dysphagia in the elderly is neurological until proven otherwise — SALT before endoscopy",
       "Achalasia untreated for years → megaesophagus and 16x increased risk of esophageal squamous cell carcinoma"
@@ -60082,10 +60957,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (EGD + dilatation), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Upper GI Endoscopy (EGD) for Dysphagia), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "Confirm fasted ≥6 h; consent including the risk of perforation",
+          "Left lateral position; pulse oximetry and capnography; throat spray ± conscious sedation (midazolam ± fentanyl)",
+          "If a pharyngeal pouch (Zenker's) is suspected, obtain a barium swallow first — blind scope passage can perforate the pouch"
         ]
       },
       {
@@ -60103,8 +60980,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "All new dysphagia = 2-week wait EGD referral until cancer excluded",
-          "Oropharyngeal dysphagia in the elderly is neurological until proven otherwise — SALT before endoscopy"
+          "Barium swallow before the scope if Zenker's is suspected — the scope can perforate the pouch",
+          "Do not dilate a malignant stricture before staging — contraindicated in a resectable tumor",
+          "Take mid-esophageal biopsies in a young atopic male even if the mucosa looks normal — eosinophilic esophagitis",
+          "All new dysphagia = 2-week wait EGD referral until cancer excluded"
         ]
       },
       {
@@ -60158,23 +61037,23 @@ const PROCEDURES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Dysphagia%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Upper%20GI%20Endoscopy%20(EGD)%20for%20Dysphagia%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Dysphagia"
+        query: "Upper GI Endoscopy (EGD) for Dysphagia"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Dysphagia%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Upper%20GI%20Endoscopy%20(EGD)%20for%20Dysphagia%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Dysphagia"
+        query: "Upper GI Endoscopy (EGD) for Dysphagia"
       },
       {
         title: "Search animation-enhanced videos on TVASurg",
         source: "Toronto Video Atlas of Surgery",
-        url: "https://www.google.com/search?q=Dysphagia%20site%3Atvasurg.ca",
+        url: "https://www.google.com/search?q=Upper%20GI%20Endoscopy%20(EGD)%20for%20Dysphagia%20site%3Atvasurg.ca",
         tags: ["video", "open-access", "animation", "anatomy"],
-        query: "Dysphagia"
+        query: "Upper GI Endoscopy (EGD) for Dysphagia"
       }
     ],
     tags: [
@@ -60192,7 +61071,7 @@ const PROCEDURES = [
     id: "proc-gastric-outlet-obstruction",
     diseaseId: "gastric-outlet-obstruction",
     dept: "uppergi",
-    name: "Endoscopic balloon dilation",
+    name: "Laparoscopic Gastrojejunostomy (Bypass for Gastric Outlet Obstruction)",
     disease: "Gastric Outlet Obstruction",
     organ: "Stomach/Duodenum",
     severity: "high",
@@ -60224,9 +61103,47 @@ const PROCEDURES = [
       "Succussion splash: sloshing sound on shaking the abdomen — retained gastric contents; pathognomonic of GOO or gastroparesis",
       "Differentiate from: Gastric cancer (antrum/pylorus) — most common malignant cause, Peptic ulcer disease with stricturing — most common benign cause, Pancreatic cancer / pancreatic pseudocyst — extrinsic compression, Gastroparesis — functional (diabetes, post-vagotomy); no mechanical obstruction on imaging"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "Correct the hypochloremic hypokalemic metabolic alkalosis and dehydration FIRST — never operate on an unresuscitated GOO patient",
+      "NG decompression of the dilated stomach; GA; supine",
+      "Confirm cause and resectability on CT/EGD — bypass is for unresectable malignant obstruction, or benign disease unfit for resection"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Access and exposure",
+        d: "Laparoscopic ports (or an upper midline if open); expose the antrum and greater curve and lift the transverse colon to find the DJ flexure"
+      },
+      {
+        n: 2,
+        t: "Select a jejunal loop",
+        d: "Choose a proximal jejunal loop ~20–40 cm from the DJ flexure that reaches the stomach without tension (antecolic route is usual)"
+      },
+      {
+        n: 3,
+        t: "Approximate stomach and jejunum",
+        d: "Bring the loop to the dependent greater-curve antrum; align isoperistaltically; place stay sutures"
+      },
+      {
+        n: 4,
+        t: "Create the anastomosis",
+        d: "Enterotomy and gastrotomy; wide (≥4 cm) side-to-side stapled or hand-sewn anastomosis, sited dependently so the atonic stomach drains"
+      },
+      {
+        n: 5,
+        t: "Close the common enterotomy",
+        d: "Close the stapler-insertion defect in one or two layers; check staple-line hemostasis"
+      },
+      {
+        n: 6,
+        t: "Test and finish",
+        d: "Check for leak and tension; a Braun entero-enterostomy can reduce bile reflux; NG down, no routine drain"
+      }
+    ],
     pearls: [
+      "Metabolic alkalosis must be corrected before anesthesia — it impairs cardiac conduction and respiratory drive",
+      "Make the anastomosis wide and dependent so the dilated, atonic stomach empties",
+      "For malignant GOO with short life expectancy, an endoscopic duodenal SEMS may be preferable to surgery",
       "Correct electrolytes before any surgical or endoscopic intervention — alkalosis impairs cardiac conduction",
       "Succussion splash + large-volume bilious vomiting = GOO until proven otherwise; NG tube immediately",
       "Malignant vs. benign GOO: CT chest/abdomen/pelvis is mandatory before endoscopy to guide management"
@@ -60240,10 +61157,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (Endoscopic balloon dilation), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Laparoscopic Gastrojejunostomy (Bypass for Gastric Outlet Obstruction)), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "Correct the hypochloremic hypokalemic metabolic alkalosis and dehydration FIRST — never operate on an unresuscitated GOO patient",
+          "NG decompression of the dilated stomach; GA; supine",
+          "Confirm cause and resectability on CT/EGD — bypass is for unresectable malignant obstruction, or benign disease unfit for resection"
         ]
       },
       {
@@ -60261,8 +61180,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "Correct electrolytes before any surgical or endoscopic intervention — alkalosis impairs cardiac conduction",
-          "Succussion splash + large-volume bilious vomiting = GOO until proven otherwise; NG tube immediately"
+          "Metabolic alkalosis must be corrected before anesthesia — it impairs cardiac conduction and respiratory drive",
+          "Make the anastomosis wide and dependent so the dilated, atonic stomach empties",
+          "For malignant GOO with short life expectancy, an endoscopic duodenal SEMS may be preferable to surgery",
+          "Correct electrolytes before any surgical or endoscopic intervention — alkalosis impairs cardiac conduction"
         ]
       },
       {
@@ -60316,23 +61237,23 @@ const PROCEDURES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Gastric%20Outlet%20Obstruction%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Laparoscopic%20Gastrojejunostomy%20(Bypass%20for%20Gastric%20Outlet%20Obstruction)%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Gastric Outlet Obstruction"
+        query: "Laparoscopic Gastrojejunostomy (Bypass for Gastric Outlet Obstruction)"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Gastric%20Outlet%20Obstruction%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Laparoscopic%20Gastrojejunostomy%20(Bypass%20for%20Gastric%20Outlet%20Obstruction)%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Gastric Outlet Obstruction"
+        query: "Laparoscopic Gastrojejunostomy (Bypass for Gastric Outlet Obstruction)"
       },
       {
         title: "Search animation-enhanced videos on TVASurg",
         source: "Toronto Video Atlas of Surgery",
-        url: "https://www.google.com/search?q=Gastric%20Outlet%20Obstruction%20site%3Atvasurg.ca",
+        url: "https://www.google.com/search?q=Laparoscopic%20Gastrojejunostomy%20(Bypass%20for%20Gastric%20Outlet%20Obstruction)%20site%3Atvasurg.ca",
         tags: ["video", "open-access", "animation", "anatomy"],
-        query: "Gastric Outlet Obstruction"
+        query: "Laparoscopic Gastrojejunostomy (Bypass for Gastric Outlet Obstruction)"
       }
     ],
     tags: [
@@ -60350,7 +61271,7 @@ const PROCEDURES = [
     id: "proc-melena",
     diseaseId: "melena",
     dept: "uppergi",
-    name: "Endoscopic hemostasis (EGD)",
+    name: "Endoscopic Hemostasis for Upper GI Bleeding (EGD)",
     disease: "Melena",
     organ: "Upper GI tract",
     severity: "high",
@@ -60382,9 +61303,47 @@ const PROCEDURES = [
       "Elevated urea:creatinine ratio (>100:1 in mmol/L) suggests upper GI source — blood protein absorbed in small bowel raises urea",
       "Differentiate from: Peptic ulcer disease (most common — 35–50% of UGIB; raised urea, NSAID/H. pylori history), Esophageal varices (stigmata of liver disease; spider naevi, ascites, jaundice), Mallory-Weiss tear (vomiting then hematemesis; classically post-alcohol binge; usually self-limiting), Upper GI malignancy (weight loss, dysphagia, older patient)"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "Resuscitate first (two large-bore cannulae, transfuse toward Hb ≥70 g/L, correct coagulopathy); protect the airway in a massive or variceal bleed",
+      "Pre-endoscopy: IV PPI for a suspected ulcer; terlipressin + prophylactic ceftriaxone if variceal bleeding is suspected",
+      "EGD within 24 h — within 12 h and only after resuscitation if unstable or variceal"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Identify the source",
+        d: "Systematic scope of esophagus, stomach and duodenum; wash clots; grade an ulcer by the Forrest classification"
+      },
+      {
+        n: 2,
+        t: "Non-variceal — dual therapy",
+        d: "For Forrest Ia/Ib/IIa: adrenaline injection to slow bleeding PLUS a second modality — mechanical (clips/OTSC) or thermal (heater probe/coagulation). Adrenaline alone is never enough"
+      },
+      {
+        n: 3,
+        t: "Variceal — band ligation",
+        d: "Esophageal varices: band-ligate each column; gastric varices: cyanoacrylate glue per local protocol"
+      },
+      {
+        n: 4,
+        t: "Confirm hemostasis",
+        d: "Ensure bleeding has stopped; document the lesion and therapy for the next team"
+      },
+      {
+        n: 5,
+        t: "Post-procedure",
+        d: "High-dose IV PPI for 72 h for high-risk ulcers; continue terlipressin/antibiotics for varices; plan H. pylori eradication"
+      },
+      {
+        n: 6,
+        t: "Escalate if it fails",
+        d: "Rebleed → one repeat endoscopy, then IR embolization (e.g. GDA for a duodenal ulcer) or surgery; TIPSS for uncontrolled variceal bleeding"
+      }
+    ],
     pearls: [
+      "Adrenaline injection alone has a high rebleed rate — always add a mechanical or thermal method",
+      "Start terlipressin and ceftriaxone BEFORE the scope if varices are suspected — it saves lives",
+      "Do not over-transfuse a variceal bleeder (target Hb ~70–80 g/L) — higher targets raise portal pressure and rebleeding",
       "GBS 0 = very low risk; can be discharged safely for outpatient EGD — prevents unnecessary admission",
       "Hematochezia (bright red PR) from an upper GI source = massive hemorrhage (>1000 mL); urgent resuscitation and EGD",
       "Forrest classification guides endotherapy: Ia (spurting artery) = mandatory dual endotherapy; Forrest III (clean base ulcer) = no endotherapy"
@@ -60398,10 +61357,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (Endoscopic hemostasis (EGD)), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Endoscopic Hemostasis for Upper GI Bleeding (EGD)), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "Resuscitate first (two large-bore cannulae, transfuse toward Hb ≥70 g/L, correct coagulopathy); protect the airway in a massive or variceal bleed",
+          "Pre-endoscopy: IV PPI for a suspected ulcer; terlipressin + prophylactic ceftriaxone if variceal bleeding is suspected",
+          "EGD within 24 h — within 12 h and only after resuscitation if unstable or variceal"
         ]
       },
       {
@@ -60419,8 +61380,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "GBS 0 = very low risk; can be discharged safely for outpatient EGD — prevents unnecessary admission",
-          "Hematochezia (bright red PR) from an upper GI source = massive hemorrhage (>1000 mL); urgent resuscitation and EGD"
+          "Adrenaline injection alone has a high rebleed rate — always add a mechanical or thermal method",
+          "Start terlipressin and ceftriaxone BEFORE the scope if varices are suspected — it saves lives",
+          "Do not over-transfuse a variceal bleeder (target Hb ~70–80 g/L) — higher targets raise portal pressure and rebleeding",
+          "GBS 0 = very low risk; can be discharged safely for outpatient EGD — prevents unnecessary admission"
         ]
       },
       {
@@ -60474,23 +61437,23 @@ const PROCEDURES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Melena%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Endoscopic%20Hemostasis%20for%20Upper%20GI%20Bleeding%20(EGD)%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Melena"
+        query: "Endoscopic Hemostasis for Upper GI Bleeding (EGD)"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Melena%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Endoscopic%20Hemostasis%20for%20Upper%20GI%20Bleeding%20(EGD)%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Melena"
+        query: "Endoscopic Hemostasis for Upper GI Bleeding (EGD)"
       },
       {
         title: "Search animation-enhanced videos on TVASurg",
         source: "Toronto Video Atlas of Surgery",
-        url: "https://www.google.com/search?q=Melena%20site%3Atvasurg.ca",
+        url: "https://www.google.com/search?q=Endoscopic%20Hemostasis%20for%20Upper%20GI%20Bleeding%20(EGD)%20site%3Atvasurg.ca",
         tags: ["video", "open-access", "animation", "anatomy"],
-        query: "Melena"
+        query: "Endoscopic Hemostasis for Upper GI Bleeding (EGD)"
       }
     ],
     tags: [
@@ -60508,7 +61471,7 @@ const PROCEDURES = [
     id: "proc-rectal-bleeding",
     diseaseId: "rectal-bleeding",
     dept: "colorectal",
-    name: "Colonoscopic hemostasis",
+    name: "Colonoscopy and Endoscopic Hemostasis for Lower GI Bleeding",
     disease: "Rectal Bleeding (Hematochezia)",
     organ: "Lower GI tract",
     severity: "medium",
@@ -60540,9 +61503,47 @@ const PROCEDURES = [
       "Most common cause of acute lower GI bleed: diverticular disease (~40%); most common in Western countries",
       "Differentiate from: Diverticular disease (painless massive bleed, older patient, known diverticulosis), Hemorrhoids (on surface of stool/toilet pan; after defecation; pruritus, prolapse), Colorectal carcinoma (change in bowel habit, weight loss, mucus, ≥50 y — always exclude), Inflammatory bowel disease (UC: bloody diarrhea; Crohn's: less common frank bleed)"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "Resuscitate and risk-stratify (Oakland score); most (95%) settle spontaneously",
+      "Bowel preparation for a planned colonoscopy once the patient is stable; unstable or actively bleeding → CT angiography first, not colonoscopy",
+      "Reverse anticoagulation with hematology guidance before intervention"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Rule out an upper source",
+        d: "Hematochezia with hemodynamic compromise: exclude a massive upper GI bleed (EGD) first — brisk UGIB can present as fresh PR blood"
+      },
+      {
+        n: 2,
+        t: "Intubate to the cecum",
+        d: "Complete colonoscopy with careful washing; identify the bleeding point (diverticulum, angiodysplasia, tumor, post-polypectomy)"
+      },
+      {
+        n: 3,
+        t: "Diverticular bleed",
+        d: "Through-the-scope clips to the culprit diverticulum, or adrenaline injection plus a clip; band ligation is an alternative"
+      },
+      {
+        n: 4,
+        t: "Angiodysplasia",
+        d: "Argon plasma coagulation (APC) — non-contact thermal coagulation of the vascular tuft"
+      },
+      {
+        n: 5,
+        t: "Anorectal source",
+        d: "Rubber-band ligation of bleeding grade I–III hemorrhoids seen on proctoscopy; refer for hemorrhoidectomy if grade III–IV or banding fails"
+      },
+      {
+        n: 6,
+        t: "Escalate if it fails",
+        d: "Ongoing bleeding with a CT-angiogram blush → IR super-selective embolization; failed endoscopy + IR with instability → segmental resection (subtotal colectomy only if the source is unlocalized)"
+      }
+    ],
     pearls: [
+      "Do not colonoscope during a massive active bleed — views are poor; CT angiography then IR is the pathway",
+      "Always exclude colorectal cancer in a patient >45 with rectal bleeding",
+      "Reverse anticoagulation before any endoscopic hemostasis to reduce procedural bleeding",
       "Always exclude colorectal cancer in patients >45 with rectal bleeding — 2-week wait referral if no obvious benign cause",
       "Oakland Score ≤8 = safe discharge; this tool saves unnecessary hospitalization for low-risk patients",
       "Diverticular bleed: massive, painless, self-limiting — if it stops, colonoscopy when bowel prepared; if ongoing, CT angiogram"
@@ -60556,10 +61557,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (Colonoscopic hemostasis), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Colonoscopy and Endoscopic Hemostasis for Lower GI Bleeding), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "Resuscitate and risk-stratify (Oakland score); most (95%) settle spontaneously",
+          "Bowel preparation for a planned colonoscopy once the patient is stable; unstable or actively bleeding → CT angiography first, not colonoscopy",
+          "Reverse anticoagulation with hematology guidance before intervention"
         ]
       },
       {
@@ -60577,8 +61580,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "Always exclude colorectal cancer in patients >45 with rectal bleeding — 2-week wait referral if no obvious benign cause",
-          "Oakland Score ≤8 = safe discharge; this tool saves unnecessary hospitalization for low-risk patients"
+          "Do not colonoscope during a massive active bleed — views are poor; CT angiography then IR is the pathway",
+          "Always exclude colorectal cancer in a patient >45 with rectal bleeding",
+          "Reverse anticoagulation before any endoscopic hemostasis to reduce procedural bleeding",
+          "Always exclude colorectal cancer in patients >45 with rectal bleeding — 2-week wait referral if no obvious benign cause"
         ]
       },
       {
@@ -60632,23 +61637,23 @@ const PROCEDURES = [
       {
         title: "Search operation videos on SAGES TV",
         source: "SAGES TV",
-        url: "https://www.google.com/search?q=Rectal%20Bleeding%20(Hematochezia)%20site%3Asages.org",
+        url: "https://www.google.com/search?q=Colonoscopy%20and%20Endoscopic%20Hemostasis%20for%20Lower%20GI%20Bleeding%20site%3Asages.org",
         tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
-        query: "Rectal Bleeding (Hematochezia)"
+        query: "Colonoscopy and Endoscopic Hemostasis for Lower GI Bleeding"
       },
       {
         title: "Search advanced colorectal/MIS videos on AIS Channel",
         source: "AIS Channel",
-        url: "https://www.google.com/search?q=Rectal%20Bleeding%20(Hematochezia)%20site%3Aaischannel.com",
+        url: "https://www.google.com/search?q=Colonoscopy%20and%20Endoscopic%20Hemostasis%20for%20Lower%20GI%20Bleeding%20site%3Aaischannel.com",
         tags: ["video", "free-account", "expert", "MIS", "colorectal"],
-        query: "Rectal Bleeding (Hematochezia)"
+        query: "Colonoscopy and Endoscopic Hemostasis for Lower GI Bleeding"
       },
       {
         title: "Search operation videos on WebSurg / IRCAD",
         source: "WebSurg / IRCAD",
-        url: "https://www.google.com/search?q=Rectal%20Bleeding%20(Hematochezia)%20site%3Awebsurg.com",
+        url: "https://www.google.com/search?q=Colonoscopy%20and%20Endoscopic%20Hemostasis%20for%20Lower%20GI%20Bleeding%20site%3Awebsurg.com",
         tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
-        query: "Rectal Bleeding (Hematochezia)"
+        query: "Colonoscopy and Endoscopic Hemostasis for Lower GI Bleeding"
       }
     ],
     tags: [
@@ -74180,7 +75185,7 @@ const PROCEDURES = [
     id: "proc-mis-principles",
     diseaseId: "mis-principles",
     dept: "mis",
-    name: "Low-pressure pneumoperitoneum",
+    name: "Establishing and Maintaining Safe Pneumoperitoneum",
     disease: "Principles of Laparoscopy & Pneumoperitoneum",
     organ: "Peritoneal cavity & cardiorespiratory system",
     severity: "moderate",
@@ -74202,9 +75207,47 @@ const PROCEDURES = [
       "Standard working pressure is 12–15 mmHg; ≤8 mmHg ('low-pressure') reduces cardiopulmonary stress and post-op shoulder-tip pain",
       "Differentiate from: Open surgery — chosen when adhesions, instability, or anatomy make MIS unsafe, Hybrid / laparoscopic-assisted — pneumoperitoneum plus a small extraction incision, Robotic-assisted laparoscopy — same physiology, different platform"
     ],
-    prep: [],
-    steps: [],
+    prep: [
+      "Assess cardiorespiratory reserve; plan a low-pressure technique for frail patients",
+      "Decompress the stomach (NG) and bladder (catheter) before entry to reduce injury risk",
+      "Set the insufflator: CO2, low initial flow (~1 L/min), pressure limit 12–15 mmHg (7–8 mmHg if frail)"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Gain access",
+        d: "Enter the peritoneum (open/Hasson or Veress — see access techniques) and connect the CO2 line"
+      },
+      {
+        n: 2,
+        t: "Confirm correct placement",
+        d: "Start at low flow; a low opening pressure (<8–10 mmHg) with even, symmetrical distension confirms intraperitoneal placement before increasing flow"
+      },
+      {
+        n: 3,
+        t: "Insufflate to working pressure",
+        d: "Raise the flow to reach 12–15 mmHg; watch for insufflation bradycardia (peritoneal stretch) — pause or desufflate and give an antimuscarinic if it occurs"
+      },
+      {
+        n: 4,
+        t: "Communicate physiology with anesthesia",
+        d: "Absorbed CO2 causes hypercarbia — the anesthetist increases minute ventilation; watch airway pressures and saturations in steep Trendelenburg"
+      },
+      {
+        n: 5,
+        t: "Titrate during the case",
+        d: "Use the lowest pressure that gives adequate working space; deep neuromuscular block can create space without raising pressure; mechanical VTE prophylaxis for positioning-related stasis"
+      },
+      {
+        n: 6,
+        t: "Desufflate at the end",
+        d: "Actively expel CO2 through the ports before closure to reduce referred shoulder-tip pain; close fascia at all ≥10 mm port sites"
+      }
+    ],
     pearls: [
+      "Never raise the flow before confirming intraperitoneal placement — high-flow extraperitoneal or intravascular insufflation is dangerous",
+      "Most cardiopulmonary changes of pneumoperitoneum reverse promptly on desufflation",
+      "Expel residual CO2 at the end — it is the cause of post-laparoscopy shoulder-tip pain",
       "Shoulder-tip pain after laparoscopy is referred diaphragmatic irritation from residual CO₂ — expel gas at the end of the case",
       "Most cardiopulmonary changes reverse promptly on desufflation",
       "Deep neuromuscular blockade can buy working space without raising pressure"
@@ -74218,10 +75261,12 @@ const PROCEDURES = [
       {
         phase: "Pre-op brief",
         items: [
-          "Confirm patient, procedure (Low-pressure pneumoperitoneum), side/site, consent, allergies, and indication.",
+          "Confirm patient, procedure (Establishing and Maintaining Safe Pneumoperitoneum), side/site, consent, allergies, and indication.",
           "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
           "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
-          "Discuss expected difficulty, senior help threshold, and conversion/bailout plan."
+          "Assess cardiorespiratory reserve; plan a low-pressure technique for frail patients",
+          "Decompress the stomach (NG) and bladder (catheter) before entry to reduce injury risk",
+          "Set the insufflator: CO2, low initial flow (~1 L/min), pressure limit 12–15 mmHg (7–8 mmHg if frail)"
         ]
       },
       {
@@ -74239,8 +75284,10 @@ const PROCEDURES = [
           "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
           "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
           "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
-          "Shoulder-tip pain after laparoscopy is referred diaphragmatic irritation from residual CO₂ — expel gas at the end of the case",
-          "Most cardiopulmonary changes reverse promptly on desufflation"
+          "Never raise the flow before confirming intraperitoneal placement — high-flow extraperitoneal or intravascular insufflation is dangerous",
+          "Most cardiopulmonary changes of pneumoperitoneum reverse promptly on desufflation",
+          "Expel residual CO2 at the end — it is the cause of post-laparoscopy shoulder-tip pain",
+          "Shoulder-tip pain after laparoscopy is referred diaphragmatic irritation from residual CO₂ — expel gas at the end of the case"
         ]
       },
       {
@@ -74490,6 +75537,125 @@ const PROCEDURES = [
     ]
   },
   {
+    id: "proc-robotic-surgery",
+    diseaseId: "robotic-surgery",
+    dept: "mis",
+    name: "Robotic Case Set-up: Docking and Console Operation",
+    disease: "Robotic-Assisted Surgery",
+    organ: "Multiple (platform-based)",
+    severity: "moderate",
+    summary: "Master–slave telemanipulation that adds wristed instruments, 3D vision and tremor filtration to laparoscopy — at the cost of tactile feedback, time and money.",
+    indications: [],
+    anatomyFocus: [
+      "The surgeon operates from a console; the patient-side cart holds wristed instruments and a 3D endoscope (master–slave, not autonomous)",
+      "Advantages: 3D stereoscopic vision, EndoWrist articulation, tremor filtration, motion scaling, ergonomics — best in confined fields (pelvis, mediastinum)",
+      "Differentiate from: Conventional laparoscopy — cheaper, faster set-up, retains some haptics, 2D vision, Open surgery — full haptics, no docking, larger wound, Robotic-assisted — 3D + wristed instruments, no haptics, costly"
+    ],
+    prep: [
+      "Confirm the case suits the robot (a confined field needing fine suturing — pelvis, foregut, HPB); brief the whole team, including the emergency-undocking drill",
+      "Standard CO2 pneumoperitoneum physiology applies — same cardiorespiratory considerations as laparoscopy",
+      "Position and secure the patient for the whole case — the table cannot be moved once the cart is docked"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Port placement",
+        d: "Place robotic ports with adequate spacing (usually ≥8 cm apart) oriented toward the target anatomy; add an assistant port"
+      },
+      {
+        n: 2,
+        t: "Position the patient-side cart",
+        d: "Bring the cart in along the planned boom line and dock the arms to the ports without collisions"
+      },
+      {
+        n: 3,
+        t: "Dock and insert instruments",
+        d: "Attach the arms; introduce the 3D endoscope and wristed instruments under vision; confirm every instrument tip is seen before moving"
+      },
+      {
+        n: 4,
+        t: "Move to the console",
+        d: "The surgeon sits at the console with immersive 3D vision; confirm clutching, camera control and instrument association"
+      },
+      {
+        n: 5,
+        t: "Operate",
+        d: "Use wristed articulation, tremor filtration and motion scaling; because there is NO haptic feedback, judge tissue tension by visual cues to avoid suture pull-through"
+      },
+      {
+        n: 6,
+        t: "Undock safely / emergency drill",
+        d: "At the end (or if the patient deteriorates) withdraw instruments under vision and undock the arms rapidly; be ready to convert to laparoscopy or open"
+      }
+    ],
+    pearls: [
+      "Rehearse emergency undocking with the team — a deteriorating patient needs the cart off fast",
+      "No force feedback: set knots by visual tension cues, not feel",
+      "Space the ports well — poorly placed ports cause external arm collisions",
+      "Because haptics are absent, judge tissue tension by visual cues to avoid suture pull-through",
+      "Rehearse the emergency-undocking drill with the whole theater team",
+      "Robotics shines where laparoscopy is hardest — suturing deep in the pelvis"
+    ],
+    pitfalls: [
+      "Pulling sutures too tight because there is no force feedback",
+      "Slow, unpracticed undocking when a patient deteriorates",
+      "Choosing the robot for a case where it adds cost and time without clinical benefit"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Robotic Case Set-up: Docking and Console Operation), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "Confirm the case suits the robot (a confined field needing fine suturing — pelvis, foregut, HPB); brief the whole team, including the emergency-undocking drill",
+          "Standard CO2 pneumoperitoneum physiology applies — same cardiorespiratory considerations as laparoscopy",
+          "Position and secure the patient for the whole case — the table cannot be moved once the cart is docked"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "The surgeon operates from a console; the patient-side cart holds wristed instruments and a 3D endoscope (master–slave, not autonomous)",
+          "Advantages: 3D stereoscopic vision, EndoWrist articulation, tremor filtration, motion scaling, ergonomics — best in confined fields (pelvis, mediastinum)",
+          "Disadvantages: loss of haptic (tactile) feedback, higher cost, longer set-up/docking, table-position fixed once docked",
+          "Confirm this is not: Conventional laparoscopy — cheaper, faster set-up, retains some haptics, 2D vision, Open surgery — full haptics, no docking, larger wound, Robotic-assisted — 3D + wristed instruments, no haptics, costly"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "Rehearse emergency undocking with the team — a deteriorating patient needs the cart off fast",
+          "No force feedback: set knots by visual tension cues, not feel",
+          "Space the ports well — poorly placed ports cause external arm collisions",
+          "Because haptics are absent, judge tissue tension by visual cues to avoid suture pull-through"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Pulling sutures too tight because there is no force feedback",
+          "Slow, unpracticed undocking when a patient deteriorates",
+          "Choosing the robot for a case where it adds cost and time without clinical benefit"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Robotic-Assisted Surgery.",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [],
+    videoResources: [],
+    tags: ["robotic", "da-Vinci", "wristed", "console", "MIS", "procedure", "operative-steps"]
+  },
+  {
     id: "proc-diagnostic-laparoscopy",
     diseaseId: "diagnostic-laparoscopy",
     dept: "mis",
@@ -74607,6 +75773,125 @@ const PROCEDURES = [
     imageResources: [],
     videoResources: [],
     tags: ["diagnostic", "staging", "acute-abdomen", "laparoscopy", "MIS", "procedure", "operative-steps"]
+  },
+  {
+    id: "proc-therapeutic-endoscopy",
+    diseaseId: "therapeutic-endoscopy",
+    dept: "mis",
+    name: "Endoscopic Hemostasis for GI Bleeding (Principles)",
+    disease: "Therapeutic Endoscopy (Principles)",
+    organ: "Gastrointestinal tract lumen",
+    severity: "moderate",
+    summary: "Treating disease through the natural lumen with a flexible scope — the least invasive end of the MIS spectrum, from controlling a bleed to resecting early cancer.",
+    indications: [],
+    anatomyFocus: [
+      "Endoscopic hemostasis for GI bleeding combines therapies: injection (adrenaline), thermal/contact (heater probe, coagulation) and mechanical (clips, bands) — adrenaline alone is never enough",
+      "Polypectomy and EMR (endoscopic mucosal resection) remove mucosal/submucosal lesions; ESD (endoscopic submucosal dissection) takes larger lesions en-bloc",
+      "Differentiate from: Endoscopic therapy — luminal, no incision, repeatable, Interventional radiology — embolization/stenting via the vascular or percutaneous route, Laparoscopic / open surgery — when endoscopy fails or disease is transmural, Conservative / pharmacological management — selected stable patients"
+    ],
+    prep: [
+      "Resuscitate and correct coagulopathy first; secure the airway for a massive upper-GI or variceal bleed",
+      "Pre-treat: IV PPI (suspected ulcer) or terlipressin + prophylactic antibiotics (suspected varices)",
+      "Have injection, thermal and mechanical tools all available before starting"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Locate and clean",
+        d: "Systematic endoscopy; wash clots and debris to expose the bleeding point; grade an ulcer (Forrest) or identify varices"
+      },
+      {
+        n: 2,
+        t: "Injection (first modality)",
+        d: "Submucosal adrenaline (1:10,000) around a bleeding ulcer slows flow and improves the view — but never rely on it alone"
+      },
+      {
+        n: 3,
+        t: "Add a definitive modality",
+        d: "Combine with mechanical (through-the-scope or over-the-scope clips) or thermal (heater probe/coagulation) for durable hemostasis"
+      },
+      {
+        n: 4,
+        t: "Variceal bleeding",
+        d: "Esophageal varices: band-ligate each column; gastric varices: cyanoacrylate injection per protocol"
+      },
+      {
+        n: 5,
+        t: "Confirm and document",
+        d: "Confirm bleeding has stopped; record the lesion and therapy for the next team"
+      },
+      {
+        n: 6,
+        t: "Plan escalation",
+        d: "Rebleed → one repeat endoscopy, then IR embolization or surgery; TIPSS for uncontrolled variceal bleeding"
+      }
+    ],
+    pearls: [
+      "Two modalities beat one — adrenaline injection plus a clip or thermal method for a high-risk ulcer",
+      "Consent specifically for perforation and bleeding (and post-ERCP pancreatitis for biliary work)",
+      "Know the limit: endoscopic resection reaches mucosa/submucosa only — deeper disease needs surgery",
+      "For a bleeding peptic ulcer, combine two modalities — adrenaline injection plus a mechanical or thermal method",
+      "A colonic stent can convert an emergency obstructed cancer into an elective, optimized resection",
+      "Consent specifically for perforation and bleeding; for ERCP, for post-ERCP pancreatitis"
+    ],
+    pitfalls: [
+      "Relying on adrenaline injection alone for a high-risk bleeding ulcer (high rebleed rate)",
+      "Over-insufflating a near-obstructed colon and causing perforation",
+      "Forgetting that endoscopic resection is limited to mucosa/submucosa — deeper invasion needs surgery"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Endoscopic Hemostasis for GI Bleeding (Principles)), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "Resuscitate and correct coagulopathy first; secure the airway for a massive upper-GI or variceal bleed",
+          "Pre-treat: IV PPI (suspected ulcer) or terlipressin + prophylactic antibiotics (suspected varices)",
+          "Have injection, thermal and mechanical tools all available before starting"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "Endoscopic hemostasis for GI bleeding combines therapies: injection (adrenaline), thermal/contact (heater probe, coagulation) and mechanical (clips, bands) — adrenaline alone is never enough",
+          "Polypectomy and EMR (endoscopic mucosal resection) remove mucosal/submucosal lesions; ESD (endoscopic submucosal dissection) takes larger lesions en-bloc",
+          "Self-expanding metal stents relieve malignant obstruction (esophagus, gastric outlet, colon) and can bridge colonic-cancer obstruction to elective surgery",
+          "Confirm this is not: Endoscopic therapy — luminal, no incision, repeatable, Interventional radiology — embolization/stenting via the vascular or percutaneous route, Laparoscopic / open surgery — when endoscopy fails or disease is transmural"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "Two modalities beat one — adrenaline injection plus a clip or thermal method for a high-risk ulcer",
+          "Consent specifically for perforation and bleeding (and post-ERCP pancreatitis for biliary work)",
+          "Know the limit: endoscopic resection reaches mucosa/submucosa only — deeper disease needs surgery",
+          "For a bleeding peptic ulcer, combine two modalities — adrenaline injection plus a mechanical or thermal method"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Relying on adrenaline injection alone for a high-risk bleeding ulcer (high rebleed rate)",
+          "Over-insufflating a near-obstructed colon and causing perforation",
+          "Forgetting that endoscopic resection is limited to mucosa/submucosa — deeper invasion needs surgery"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Therapeutic Endoscopy (Principles).",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [],
+    videoResources: [],
+    tags: ["endoscopy", "EMR", "ESD", "stenting", "hemostasis", "MIS", "procedure", "operative-steps"]
   }
 ];
 
