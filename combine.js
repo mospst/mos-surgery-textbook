@@ -22,6 +22,12 @@ const ID_FIXES = {
 };
 const SKIP_IDS = new Set(['rectal-cancer','ischaemic-colitis','ogilvie','gerd']);
 const DEPT_FIXES = { 'soft-tissue':'softtissue', 'upper-gi':'uppergi', 'uppergı':'uppergi' };
+// The UI (severity badge CSS + "High severity" filter) only understands three
+// tiers: low / moderate / high. Some source entries use a richer vocabulary that
+// has no matching CSS class, so those badges render unstyled and "critical"
+// diseases fall out of the High filter. Normalize the outliers onto the 3-tier
+// scale here so display and filtering stay consistent.
+const SEVERITY_FIX = { minor:'low', medium:'moderate', major:'moderate', critical:'high' };
 
 // ── Universal file loader ─────────────────────────────────────────────────
 function loadDiseaseArray(fpath) {
@@ -180,6 +186,7 @@ for (const fname of TMP_FILES) {
     if (ID_FIXES[id])           { d.id = ID_FIXES[id].id; d.dept = ID_FIXES[id].dept; id = d.id; }
     if (SKIP_IDS.has(id))       { continue; }
     if (d.dept && DEPT_FIXES[d.dept]) { d.dept = DEPT_FIXES[d.dept]; }
+    if (d.severity && SEVERITY_FIX[d.severity]) { d.severity = SEVERITY_FIX[d.severity]; }
 
     // Normalize classification strings → {label, note} objects
     if (d.overview && d.overview.classification) {
@@ -621,7 +628,15 @@ for (const q of [...baseQuiz, ...extraQuiz]) {
   // Later entries win so tmp_quiz.js can intentionally correct a question.
   quizById.set(q.id, q);
 }
-const mergedQuiz = [...quizById.values()];
+// Drop orphaned quiz questions whose `disease` no longer exists in the display
+// list (e.g. questions left behind when excluded urology/pediatric/gynecology
+// diseases were removed). Questions with no `disease` field (general questions)
+// are always kept. This auto-prunes any future orphan without manual edits.
+const VALID_IDS = new Set(ID_ORDER);
+const preFilter = quizById.size;
+const mergedQuiz = [...quizById.values()].filter(q => !q.disease || VALID_IDS.has(q.disease));
+const droppedQuiz = preFilter - mergedQuiz.length;
+if (droppedQuiz > 0) console.log(`Orphaned quiz questions dropped: ${droppedQuiz}`);
 const QUIZ_BANK_BLOCK = 'const QUIZ_BANK = [\n'
   + mergedQuiz.map(q => '  ' + JSON.stringify(q)).join(',\n')
   + '\n];\n// end QUIZ_BANK';

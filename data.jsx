@@ -4866,7 +4866,7 @@ const DISEASES = [
     name: "Acute Cholecystitis",
     latin: "Cholecystitis acuta",
     organ: "Gallbladder",
-    severity: "medium",
+    severity: "moderate",
     tags: ["gallbladder", "gallstones", "RUQ", "Murphy", "laparoscopy"],
     hero: "Acute inflammation of the gallbladder wall, almost always due to cystic duct obstruction by calculi.",
     keypoints: [
@@ -5762,7 +5762,7 @@ const DISEASES = [
     name: "Choledocholithiasis",
     latin: "Choledocholithiasis",
     organ: "Bile duct",
-    severity: "medium",
+    severity: "moderate",
     tags: ["CBD stones", "ERCP", "jaundice", "biliary", "MRCP"],
     hero: "Presence of gallstones within the common bile duct, causing obstruction and risk of cholangitis, pancreatitis, or secondary biliary cirrhosis.",
     keypoints: [
@@ -6353,7 +6353,7 @@ const DISEASES = [
     name: "Chronic Pancreatitis",
     latin: "Pancreatitis chronica",
     organ: "Pancreas",
-    severity: "medium",
+    severity: "moderate",
     tags: ["pancreas", "alcohol", "pain", "calcification", "ERCP", "surgery"],
     hero: "Progressive fibroinflammatory disease of the pancreas leading to irreversible parenchymal damage, exocrine/endocrine insufficiency, and chronic pain.",
     keypoints: [
@@ -7215,7 +7215,7 @@ const DISEASES = [
     name: "Pancreatic Pseudocyst",
     latin: "Pseudocysta pancreatica",
     organ: "Pancreas",
-    severity: "medium",
+    severity: "moderate",
     tags: ["pancreas", "pseudocyst", "ERCP", "EUS", "drainage", "cystgastrostomy"],
     hero: "Encapsulated fluid collection arising after acute pancreatitis or pancreatic duct disruption, lacking an epithelial lining.",
     keypoints: [
@@ -7765,7 +7765,7 @@ const DISEASES = [
     name: "Liver Abscess",
     latin: "Abscessus hepatis",
     organ: "Liver",
-    severity: "medium",
+    severity: "moderate",
     tags: ["liver", "abscess", "pyogenic", "amebic", "drainage", "E. coli", "Klebsiella"],
     hero: "Localized collection of pus within the hepatic parenchyma; pyogenic (bacterial) in 80% of cases in Western countries; amebic in developing world.",
     keypoints: [
@@ -8611,7 +8611,7 @@ const DISEASES = [
     name: "Hepatic Adenoma",
     latin: "Adenoma hepatis",
     organ: "Liver",
-    severity: "medium",
+    severity: "moderate",
     tags: ["liver", "adenoma", "OCP", "glycogen storage", "bleeding", "resection"],
     hero: "Benign hepatocellular tumor strongly associated with oral contraceptive pill use; risk of hemorrhage and rare malignant transformation.",
     keypoints: [
@@ -8870,7 +8870,7 @@ const DISEASES = [
     name: "Hydatid Cyst of the Liver",
     latin: "Echinococcosis hepatis",
     organ: "Liver",
-    severity: "medium",
+    severity: "moderate",
     tags: ["liver", "hydatid", "Echinococcus", "PAIR", "albendazole", "anaphylaxis"],
     hero: "Cystic infection of the liver caused by Echinococcus granulosus larval stage; endemic in pastoral areas; spillage causes anaphylaxis and secondary hydatidosis.",
     keypoints: [
@@ -9151,7 +9151,7 @@ const DISEASES = [
     name: "Intraductal Papillary Mucinous Neoplasm",
     latin: "Neoplasma mucinosum papillare intraductale",
     organ: "Pancreas",
-    severity: "medium",
+    severity: "moderate",
     tags: ["pancreas", "IPMN", "mucin", "Fukuoka", "Sendai", "cystic neoplasm", "Whipple"],
     hero: "Mucin-producing pancreatic cystic neoplasm with malignant potential, classified by ductal involvement (main duct vs branch duct) and grades of dysplasia.",
     keypoints: [
@@ -9406,7 +9406,7 @@ const DISEASES = [
     name: "Pancreatic Neuroendocrine Tumor",
     latin: "Tumor neuroendocrinus pancreaticus",
     organ: "Pancreas",
-    severity: "medium",
+    severity: "moderate",
     tags: ["pancreas", "NET", "insulinoma", "gastrinoma", "MEN1", "somatostatin", "Whipple"],
     hero: "Heterogeneous group of neoplasms arising from pancreatic islet cells; range from benign insulinoma to aggressive non-functional tumors with liver metastases.",
     keypoints: [
@@ -9704,7 +9704,7 @@ const DISEASES = [
     name: "Immune Thrombocytopenic Purpura",
     latin: "Purpura thrombocytopenica immunologica",
     organ: "Spleen",
-    severity: "medium",
+    severity: "moderate",
     tags: ["spleen", "ITP", "platelets", "splenectomy", "rituximab", "steroids"],
     hero: "Autoimmune disorder where IgG autoantibodies against platelet surface antigens (GPIIb/IIIa) lead to accelerated platelet destruction and impaired production.",
     keypoints: [
@@ -10811,7 +10811,7 @@ const DISEASES = [
     name: "Acute Appendicitis",
     latin: "Appendicitis acuta",
     organ: "Appendix",
-    severity: "medium",
+    severity: "moderate",
     tags: ["appendix", "Alvarado", "McBurney", "laparoscopic", "perforation", "abscess"],
     hero: "Acute inflammation of the vermiform appendix; the most common abdominal surgical emergency; lifetime risk 8% in men, 7% in women.",
     keypoints: [
@@ -11116,7 +11116,7 @@ const DISEASES = [
     name: "Diverticulitis",
     latin: "Diverticulitis coli",
     organ: "Colon",
-    severity: "medium",
+    severity: "moderate",
     tags: ["sigmoid", "diverticula", "Hinchey", "Hartmann", "abscess", "peritonitis"],
     hero: "Inflammation or infection of colonic diverticula, ranging from uncomplicated (80%) to complicated (abscess, perforation, fistula, obstruction).",
     keypoints: [
@@ -13611,7 +13611,7 @@ const DISEASES = [
     name: "Cecal Volvulus",
     latin: "Volvulus caeci",
     organ: "Cecum/Right colon",
-    severity: "critical",
+    severity: "high",
     tags: ["colorectal", "obstruction", "volvulus", "emergency"],
     hero: "Emergency right hemicolectomy is definitive treatment; endoscopic decompression high failure rate (40%) and recurrence; viable cecum → right hemicolectomy; ischemic → resection without anastomosis.",
     keypoints: [
@@ -13885,7 +13885,7 @@ const DISEASES = [
     name: "Large Bowel Obstruction",
     latin: "Ileus mechanicus coli",
     organ: "Colon",
-    severity: "critical",
+    severity: "high",
     tags: ["colorectal", "obstruction", "emergency", "stent", "hartmann"],
     hero: "Most common cause is colorectal cancer (60%); CT confirms; colonic stent as bridge to surgery for left-sided cancer; emergency Hartmann's or on-table lavage for perforated/unfit patients.",
     keypoints: [
@@ -14192,7 +14192,7 @@ const DISEASES = [
     name: "Ulcerative Colitis",
     latin: "Colitis ulcerosa",
     organ: "Colon",
-    severity: "medium",
+    severity: "moderate",
     tags: ["IBD", "colitis", "pancolitis", "toxic megacolon", "colectomy", "infliximab", "mesalazine"],
     hero: "Chronic relapsing mucosal inflammation of the colon, always involving the rectum and extending proximally in a continuous pattern; cure achievable with colectomy.",
     keypoints: [
@@ -14462,7 +14462,7 @@ const DISEASES = [
     name: "Crohn's Disease",
     latin: "Morbus Crohn",
     organ: "GI tract",
-    severity: "medium",
+    severity: "moderate",
     tags: ["IBD", "Crohn", "skip lesions", "fistula", "stricture", "biologic", "resection", "perianal"],
     hero: "Transmural granulomatous inflammation that can affect any segment of the GI tract from mouth to anus, with a relapsing course and high surgical morbidity.",
     keypoints: [
@@ -14752,7 +14752,7 @@ const DISEASES = [
     name: "Anal Canal Cancer",
     latin: "Carcinoma canalis analis",
     organ: "Anal canal",
-    severity: "critical",
+    severity: "high",
     tags: ["colorectal", "anal", "HPV", "chemoradiotherapy", "oncology"],
     hero: "Squamous cell carcinoma; primary treatment is chemoradiotherapy (Nigro protocol — 5-FU + mitomycin C + RT); surgery (APR) reserved for persistent/recurrent disease after CRT.",
     keypoints: [
@@ -15042,7 +15042,7 @@ const DISEASES = [
     name: "Intestinal Fistula",
     latin: "Fistula intestinalis",
     organ: "Small/Large bowel",
-    severity: "critical",
+    severity: "high",
     tags: ["colorectal", "fistula", "nutrition", "TPN", "FRIENDS"],
     hero: "Optimize nutrition (TPN if high-output), treat sepsis, and allow 4–6 weeks for spontaneous closure; 50% close spontaneously; surgery for those that do not — SNAP protocol.",
     keypoints: [
@@ -15591,7 +15591,7 @@ const DISEASES = [
     name: "Mucocele of the Appendix",
     latin: "Mucocele appendicis",
     organ: "Appendix",
-    severity: "major",
+    severity: "moderate",
     tags: ["colorectal", "appendix", "mucinous", "LAMN", "PMP"],
     hero: "Spectrum from benign retention cyst to LAMN/HAMN/appendiceal mucinous adenocarcinoma; ruptured LAMN seeds peritoneum with mucin causing pseudomyxoma peritonei (PMP); intact removal mandatory.",
     keypoints: [
@@ -16970,7 +16970,7 @@ const DISEASES = [
     name: "Angiodysplasia",
     latin: "Angiodysplasia gastrointestinalis",
     organ: "GI tract (cecum/ascending colon)",
-    severity: "medium",
+    severity: "moderate",
     tags: [
       "angiodysplasia",
       "AVM",
@@ -17248,7 +17248,7 @@ const DISEASES = [
     name: "Small Bowel Tumors",
     latin: "Neoplasma intestini tenuis",
     organ: "Small bowel",
-    severity: "medium",
+    severity: "moderate",
     tags: [
       "small bowel tumor",
       "adenocarcinoma",
@@ -18981,7 +18981,7 @@ const DISEASES = [
     name: "Achalasia",
     latin: "Achalasia oesophagi",
     organ: "Esophagus",
-    severity: "medium",
+    severity: "moderate",
     tags: ["esophagus", "achalasia", "dysphagia", "LOS", "Heller", "POEM", "manometry"],
     hero: "Progressive neurodegenerative loss of esophageal peristalsis and failure of LOS relaxation; functional obstruction causing dysphagia, regurgitation, and aspiration.",
     keypoints: [
@@ -19525,7 +19525,7 @@ const DISEASES = [
     name: "Bariatric Surgery",
     latin: "Chirurgia bariatrica",
     organ: "Stomach/small bowel",
-    severity: "medium",
+    severity: "moderate",
     tags: ["obesity", "gastric bypass", "sleeve gastrectomy", "Roux-en-Y", "anastomotic leak", "dumping"],
     hero: "Surgical treatment of morbid obesity; Roux-en-Y gastric bypass (RYGB) and sleeve gastrectomy (SG) are most performed procedures; diabetes remission in 70–80%.",
     keypoints: [
@@ -19787,7 +19787,7 @@ const DISEASES = [
     name: "Gastric Volvulus",
     latin: "Volvulus ventriculi",
     organ: "Stomach",
-    severity: "critical",
+    severity: "high",
     tags: ["upper-gi", "stomach", "volvulus", "emergency", "paraesophageal"],
     hero: "Life-threatening gastric rotation; Borchardt's triad (retching, epigastric pain, inability to pass NGT); emergency decompression ± surgery; underlying paraesophageal hernia must be repaired.",
     keypoints: [
@@ -20052,7 +20052,7 @@ const DISEASES = [
     name: "Small Bowel Obstruction",
     latin: "Ileus mechanicus intestini tenuis",
     organ: "Small bowel",
-    severity: "critical",
+    severity: "high",
     tags: ["upper-gi", "small-bowel", "obstruction", "adhesions", "laparotomy"],
     hero: "60% due to adhesions from previous surgery; non-operative management (NGT, IV fluids) succeeds in 60–70%; operate for complete obstruction, failure to resolve at 48–72h, or signs of strangulation.",
     keypoints: [
@@ -20346,7 +20346,7 @@ const DISEASES = [
     name: "Gastrointestinal Stromal Tumor",
     latin: "Tumor stromalis gastrointestinalis",
     organ: "Stomach/Small bowel",
-    severity: "medium",
+    severity: "moderate",
     tags: ["GIST", "KIT", "imatinib", "resection", "CD117", "spindle cell"],
     hero: "Mesenchymal tumor arising from interstitial cells of Cajal; 60–70% in stomach; KIT (CD117) mutation defines majority; imatinib (TKI) is transformative treatment.",
     keypoints: [
@@ -20615,7 +20615,7 @@ const DISEASES = [
     name: "Barrett's Esophagus",
     latin: "Oesophagus Barrett",
     organ: "Esophagus",
-    severity: "medium",
+    severity: "moderate",
     tags: ["Barrett", "esophagus", "adenocarcinoma", "RFA", "EMR", "surveillance", "intestinal metaplasia"],
     hero: "Columnar metaplasia of the lower esophagus in response to chronic acid reflux; intestinal metaplasia is the precursor to esophageal adenocarcinoma (0.2–0.5%/year).",
     keypoints: [
@@ -21406,7 +21406,7 @@ const DISEASES = [
     name: "Meckel's Diverticulum",
     latin: "Diverticulum Meckeli",
     organ: "Small bowel",
-    severity: "medium",
+    severity: "moderate",
     tags: ["ileum", "Meckel", "rule of 2s", "heterotopic gastric", "bleeding", "99mTc", "diverticulectomy"],
     hero: "The most common congenital GI malformation; remnant of the vitello-intestinal duct; complications occur in 2–4% (bleeding, obstruction, inflammation).",
     keypoints: [
@@ -21648,7 +21648,7 @@ const DISEASES = [
     name: "Small Bowel Neuroendocrine Tumor",
     latin: "Tumor neuroendocrinus intestini tenuis",
     organ: "Small bowel",
-    severity: "medium",
+    severity: "moderate",
     tags: ["carcinoid", "NET", "serotonin", "carcinoid syndrome", "mesenteric fibrosis", "SSA", "PRRT"],
     hero: "Well-differentiated neuroendocrine tumor of the small bowel (terminal ileum most common); carcinoid syndrome occurs with liver metastases; mesenteric fibrosis causes bowel ischemia.",
     keypoints: [
@@ -22177,7 +22177,7 @@ const DISEASES = [
     name: "Radiation Enteritis",
     latin: "Enteritis post-radiationes",
     organ: "Small bowel",
-    severity: "medium",
+    severity: "moderate",
     tags: ["radiation", "small bowel", "stricture", "fistula", "pelvic", "chronic", "resection"],
     hero: "Intestinal injury from ionizing radiation, acute (during therapy) or chronic (months to years post-RT); affects small bowel and rectum most commonly in pelvic RT.",
     keypoints: [
@@ -22998,7 +22998,7 @@ const DISEASES = [
     name: "Dysphagia",
     latin: "Dysphagia",
     organ: "Esophagus/Pharynx",
-    severity: "medium",
+    severity: "moderate",
     tags: ["dysphagia", "EGD", "esophageal cancer", "achalasia", "manometry", "Plummer-Vinson"],
     hero: "Difficulty swallowing — treat as upper GI malignancy until proven otherwise; EGD is the first investigation; progressive solid-then-liquid dysphagia = mechanical obstruction; pure liquid dysphagia = motility disorder.",
     keypoints: [
@@ -23902,7 +23902,7 @@ const DISEASES = [
     name: "Rectal Bleeding (Hematochezia)",
     latin: "Haematochezia",
     organ: "Lower GI tract",
-    severity: "medium",
+    severity: "moderate",
     tags: ["rectal bleeding", "lower GI bleed", "Oakland score", "colonoscopy", "diverticular", "hematochezia"],
     hero: "Passage of fresh blood per rectum — 95% resolve spontaneously; use Oakland Score to risk-stratify; colonoscopy is definitive investigation; always exclude colorectal malignancy in older patients.",
     keypoints: [
@@ -40168,7 +40168,7 @@ const DISEASES = [
     name: "Epigastric Hernia",
     latin: "Hernia epigastrica",
     organ: "Anterior abdominal wall (linea alba)",
-    severity: "minor",
+    severity: "low",
     tags: ["hernia", "linea-alba", "repair", "mesh"],
     hero: "Protrusion through a defect in the linea alba between xiphisternum and umbilicus; most contain pre-peritoneal fat (not peritoneal sac); repair by suture (small) or mesh (≥1 cm or symptomatic recurrence).",
     keypoints: [
@@ -41681,7 +41681,7 @@ const DISEASES = [
     name: "Melanoma",
     latin: "Melanoma malignum",
     organ: "Skin",
-    severity: "critical",
+    severity: "high",
     tags: ["skin", "oncology", "sentinel-node", "immunotherapy"],
     hero: "Wide local excision with sentinel lymph node biopsy; adjuvant immunotherapy/targeted therapy for stage III–IV.",
     keypoints: [
@@ -42351,7 +42351,7 @@ const DISEASES = [
     name: "Squamous Cell Carcinoma (Skin)",
     latin: "Carcinoma spinocellulare cutis",
     organ: "Skin",
-    severity: "major",
+    severity: "moderate",
     tags: ["skin", "scc", "excision", "sentinel-node"],
     hero: "Second most common skin cancer; significant metastatic potential (~5%); excise with 4–6 mm margins; high-risk features require SLNB and adjuvant RT.",
     keypoints: [
@@ -42665,7 +42665,7 @@ const DISEASES = [
     name: "Hidradenitis Suppurativa",
     latin: "Hidradenitis suppurativa",
     organ: "Skin/Apocrine glands",
-    severity: "major",
+    severity: "moderate",
     tags: ["skin", "HS", "flap", "reconstruction", "chronic"],
     hero: "Chronic inflammatory follicular disease of apocrine gland-bearing skin; medical management first; radical wide excision with primary closure or flap for Hurley III.",
     keypoints: [
@@ -42955,7 +42955,7 @@ const DISEASES = [
     name: "Liposarcoma",
     latin: "Liposarcoma",
     organ: "Soft tissue/Retroperitoneum",
-    severity: "critical",
+    severity: "high",
     tags: ["sarcoma", "retroperitoneum", "oncology", "resection"],
     hero: "Most common retroperitoneal sarcoma; surgery is the only curative modality; aim for R0 resection; dedifferentiated subtype has worst prognosis.",
     keypoints: [
@@ -43238,7 +43238,7 @@ const DISEASES = [
     name: "Leiomyosarcoma",
     latin: "Leiomyosarcoma",
     organ: "Soft tissue/Vascular",
-    severity: "critical",
+    severity: "high",
     tags: ["sarcoma", "IVC", "vascular", "oncology"],
     hero: "Malignant smooth muscle tumor; retroperitoneal or IVC origin most challenging; complete resection with vascular reconstruction where needed is the only curative option.",
     keypoints: [
@@ -43504,7 +43504,7 @@ const DISEASES = [
     name: "Desmoid Tumor",
     latin: "Tumor desmoides / Fibromatosis aggressiva",
     organ: "Soft tissue/Mesentery",
-    severity: "major",
+    severity: "moderate",
     tags: ["sarcoma", "FAP", "APC", "mesentery", "active-surveillance"],
     hero: "Locally aggressive fibromatosis with no metastatic potential; paradigm shift to active surveillance first; surgery for progressors; sorafenib for FAP-related intra-abdominal desmoids.",
     keypoints: [
@@ -43762,7 +43762,7 @@ const DISEASES = [
     name: "Merkel Cell Carcinoma",
     latin: "Carcinoma cellulare Merkel",
     organ: "Skin",
-    severity: "critical",
+    severity: "high",
     tags: ["skin", "MCC", "neuroendocrine", "immunotherapy", "SLNB"],
     hero: "Rare but aggressive cutaneous neuroendocrine carcinoma; Merkel cell polyomavirus (MCPyV) in 80%; excellent response to immunotherapy (avelumab/pembrolizumab).",
     keypoints: [
@@ -44025,7 +44025,7 @@ const DISEASES = [
     name: "Kaposi's Sarcoma",
     latin: "Sarcoma Kaposi",
     organ: "Skin/Mucosa/Viscera",
-    severity: "major",
+    severity: "moderate",
     tags: ["skin", "HHV8", "HIV", "immunosuppression", "oncology"],
     hero: "HHV-8 driven vascular tumor; primarily a medical disease — treat the underlying immunosuppression; systemic chemotherapy for advanced disease.",
     keypoints: [
@@ -48946,7 +48946,7 @@ const PROCEDURES = [
     name: "Laparoscopic Cholecystectomy — Critical View of Safety",
     disease: "Acute Cholecystitis",
     organ: "Gallbladder",
-    severity: "medium",
+    severity: "moderate",
     summary: "Acute inflammation of the gallbladder wall, almost always due to cystic duct obstruction by calculi.",
     indications: [
       {
@@ -49539,7 +49539,7 @@ const PROCEDURES = [
     name: "ERCP + Biliary Sphincterotomy",
     disease: "Choledocholithiasis",
     organ: "Bile duct",
-    severity: "medium",
+    severity: "moderate",
     summary: "Presence of gallstones within the common bile duct, causing obstruction and risk of cholangitis, pancreatitis, or secondary biliary cirrhosis.",
     indications: [
       {
@@ -49939,7 +49939,7 @@ const PROCEDURES = [
     name: "Frey Procedure",
     disease: "Chronic Pancreatitis",
     organ: "Pancreas",
-    severity: "medium",
+    severity: "moderate",
     summary: "Progressive fibroinflammatory disease of the pancreas leading to irreversible parenchymal damage, exocrine/endocrine insufficiency, and chronic pain.",
     indications: [
       {
@@ -50515,7 +50515,7 @@ const PROCEDURES = [
     name: "EUS-Guided Cystogastrostomy with LAMS",
     disease: "Pancreatic Pseudocyst",
     organ: "Pancreas",
-    severity: "medium",
+    severity: "moderate",
     summary: "Encapsulated fluid collection arising after acute pancreatitis or pancreatic duct disruption, lacking an epithelial lining.",
     indications: [
       {
@@ -50912,7 +50912,7 @@ const PROCEDURES = [
     name: "Percutaneous Catheter Drainage of Liver Abscess",
     disease: "Liver Abscess",
     organ: "Liver",
-    severity: "medium",
+    severity: "moderate",
     summary: "Localized collection of pus within the hepatic parenchyma; pyogenic (bacterial) in 80% of cases in Western countries; amebic in developing world.",
     indications: [
       {
@@ -51505,7 +51505,7 @@ const PROCEDURES = [
     name: "Laparoscopic Hepatic Resection for Adenoma",
     disease: "Hepatic Adenoma",
     organ: "Liver",
-    severity: "medium",
+    severity: "moderate",
     summary: "Benign hepatocellular tumor strongly associated with oral contraceptive pill use; risk of hemorrhage and rare malignant transformation.",
     indications: [
       {
@@ -51697,7 +51697,7 @@ const PROCEDURES = [
     name: "Conservative Surgical Cystectomy",
     disease: "Hydatid Cyst of the Liver",
     organ: "Liver",
-    severity: "medium",
+    severity: "moderate",
     summary: "Cystic infection of the liver caused by Echinococcus granulosus larval stage; endemic in pastoral areas; spillage causes anaphylaxis and secondary hydatidosis.",
     indications: [
       {
@@ -51900,7 +51900,7 @@ const PROCEDURES = [
     name: "Intraoperative Frozen Section for IPMN",
     disease: "Intraductal Papillary Mucinous Neoplasm",
     organ: "Pancreas",
-    severity: "medium",
+    severity: "moderate",
     summary: "Mucin-producing pancreatic cystic neoplasm with malignant potential, classified by ductal involvement (main duct vs branch duct) and grades of dysplasia.",
     indications: [
       {
@@ -52088,7 +52088,7 @@ const PROCEDURES = [
     name: "Laparoscopic Distal Pancreatectomy for pNET",
     disease: "Pancreatic Neuroendocrine Tumor",
     organ: "Pancreas",
-    severity: "medium",
+    severity: "moderate",
     summary: "Heterogeneous group of neoplasms arising from pancreatic islet cells; range from benign insulinoma to aggressive non-functional tumors with liver metastases.",
     indications: [
       {
@@ -52281,7 +52281,7 @@ const PROCEDURES = [
     name: "Laparoscopic Splenectomy for ITP",
     disease: "Immune Thrombocytopenic Purpura",
     organ: "Spleen",
-    severity: "medium",
+    severity: "moderate",
     summary: "Autoimmune disorder where IgG autoantibodies against platelet surface antigens (GPIIb/IIIa) lead to accelerated platelet destruction and impaired production.",
     indications: [
       {
@@ -53062,7 +53062,7 @@ const PROCEDURES = [
     name: "Laparoscopic Appendectomy",
     disease: "Acute Appendicitis",
     organ: "Appendix",
-    severity: "medium",
+    severity: "moderate",
     summary: "Acute inflammation of the vermiform appendix; the most common abdominal surgical emergency; lifetime risk 8% in men, 7% in women.",
     indications: [
       {
@@ -53259,7 +53259,7 @@ const PROCEDURES = [
     name: "Laparoscopic Elective Sigmoid Colectomy",
     disease: "Diverticulitis",
     organ: "Colon",
-    severity: "medium",
+    severity: "moderate",
     summary: "Inflammation or infection of colonic diverticula, ranging from uncomplicated (80%) to complicated (abscess, perforation, fistula, obstruction).",
     indications: [
       {
@@ -55024,7 +55024,7 @@ const PROCEDURES = [
     name: "Emergency Right Hemicolectomy for Cecal Volvulus",
     disease: "Cecal Volvulus",
     organ: "Cecum/Right colon",
-    severity: "critical",
+    severity: "high",
     summary: "Emergency right hemicolectomy is definitive treatment; endoscopic decompression high failure rate (40%) and recurrence; viable cecum → right hemicolectomy; ischemic → resection without anastomosis.",
     indications: [
       {
@@ -55218,7 +55218,7 @@ const PROCEDURES = [
     name: "Hartmann's Procedure for Left-Sided LBO",
     disease: "Large Bowel Obstruction",
     organ: "Colon",
-    severity: "critical",
+    severity: "high",
     summary: "Most common cause is colorectal cancer (60%); CT confirms; colonic stent as bridge to surgery for left-sided cancer; emergency Hartmann's or on-table lavage for perforated/unfit patients.",
     indications: [
       {
@@ -55416,7 +55416,7 @@ const PROCEDURES = [
     name: "Stage 1: Emergency Subtotal Colectomy",
     disease: "Ulcerative Colitis",
     organ: "Colon",
-    severity: "medium",
+    severity: "moderate",
     summary: "Chronic relapsing mucosal inflammation of the colon, always involving the rectum and extending proximally in a continuous pattern; cure achievable with colectomy.",
     indications: [
       {
@@ -55614,7 +55614,7 @@ const PROCEDURES = [
     name: "Heineke-Mikulicz Strictureplasty",
     disease: "Crohn's Disease",
     organ: "GI tract",
-    severity: "medium",
+    severity: "moderate",
     summary: "Transmural granulomatous inflammation that can affect any segment of the GI tract from mouth to anus, with a relapsing course and high surgical morbidity.",
     indications: [
       {
@@ -55802,7 +55802,7 @@ const PROCEDURES = [
     name: "Examination Under Anesthetic (EUA) and Biopsy for Anal Canal Mass",
     disease: "Anal Canal Cancer",
     organ: "Anal canal",
-    severity: "critical",
+    severity: "high",
     summary: "Squamous cell carcinoma; primary treatment is chemoradiotherapy (Nigro protocol — 5-FU + mitomycin C + RT); surgery (APR) reserved for persistent/recurrent disease after CRT.",
     indications: [
       {
@@ -55975,7 +55975,7 @@ const PROCEDURES = [
     name: "Definitive ECF Surgery — Fistula Resection and Anastomosis",
     disease: "Intestinal Fistula",
     organ: "Small/Large bowel",
-    severity: "critical",
+    severity: "high",
     summary: "Optimize nutrition (TPN if high-output), treat sepsis, and allow 4–6 weeks for spontaneous closure; 50% close spontaneously; surgery for those that do not — SNAP protocol.",
     indications: [
       {
@@ -56340,7 +56340,7 @@ const PROCEDURES = [
     name: "Laparoscopic Appendectomy for Mucocele — Safe Technique",
     disease: "Mucocele of the Appendix",
     organ: "Appendix",
-    severity: "major",
+    severity: "moderate",
     summary: "Spectrum from benign retention cyst to LAMN/HAMN/appendiceal mucinous adenocarcinoma; ruptured LAMN seeds peritoneum with mucin causing pseudomyxoma peritonei (PMP); intact removal mandatory.",
     indications: [
       {
@@ -57305,7 +57305,7 @@ const PROCEDURES = [
     name: "Endoscopic Argon Plasma Coagulation (APC) of Angiodysplasia",
     disease: "Angiodysplasia",
     organ: "GI tract (cecum/ascending colon)",
-    severity: "medium",
+    severity: "moderate",
     summary: "Most common GI vascular malformation; responsible for ~6% of lower GI bleeds and ~8% of upper GI bleeds; most common location = cecum and ascending colon; APC endotherapy is first-line treatment.",
     indications: [
       {
@@ -57505,7 +57505,7 @@ const PROCEDURES = [
     name: "Segmental Small Bowel Resection with Anastomosis",
     disease: "Small Bowel Tumors",
     organ: "Small bowel",
-    severity: "medium",
+    severity: "moderate",
     summary: "Rare tumors accounting for <5% of GI cancers despite representing 90% of mucosal surface; most arise in the duodenum; adenocarcinoma and NETs each account for ~40%; Whipple's for resectable duodenal adenocarcinoma; imati",
     indications: [
       {
@@ -58699,7 +58699,7 @@ const PROCEDURES = [
     name: "Laparoscopic Heller Myotomy + Dor Fundoplication",
     disease: "Achalasia",
     organ: "Esophagus",
-    severity: "medium",
+    severity: "moderate",
     summary: "Progressive neurodegenerative loss of esophageal peristalsis and failure of LOS relaxation; functional obstruction causing dysphagia, regurgitation, and aspiration.",
     indications: [
       {
@@ -59095,7 +59095,7 @@ const PROCEDURES = [
     name: "Laparoscopic Roux-en-Y Gastric Bypass",
     disease: "Bariatric Surgery",
     organ: "Stomach/small bowel",
-    severity: "medium",
+    severity: "moderate",
     summary: "Surgical treatment of morbid obesity; Roux-en-Y gastric bypass (RYGB) and sleeve gastrectomy (SG) are most performed procedures; diabetes remission in 70–80%.",
     indications: [
       {
@@ -59293,7 +59293,7 @@ const PROCEDURES = [
     name: "Laparoscopic Repair of Paraesophageal Hernia + Gastropexy",
     disease: "Gastric Volvulus",
     organ: "Stomach",
-    severity: "critical",
+    severity: "high",
     summary: "Life-threatening gastric rotation; Borchardt's triad (retching, epigastric pain, inability to pass NGT); emergency decompression ± surgery; underlying paraesophageal hernia must be repaired.",
     indications: [
       {
@@ -59476,7 +59476,7 @@ const PROCEDURES = [
     name: "Emergency Laparotomy for Adhesional SBO with Strangulation",
     disease: "Small Bowel Obstruction",
     organ: "Small bowel",
-    severity: "critical",
+    severity: "high",
     summary: "60% due to adhesions from previous surgery; non-operative management (NGT, IV fluids) succeeds in 60–70%; operate for complete obstruction, failure to resolve at 48–72h, or signs of strangulation.",
     indications: [
       {
@@ -59674,7 +59674,7 @@ const PROCEDURES = [
     name: "Laparoscopic Gastric Wedge Resection for GIST",
     disease: "Gastrointestinal Stromal Tumor",
     organ: "Stomach/Small bowel",
-    severity: "medium",
+    severity: "moderate",
     summary: "Mesenchymal tumor arising from interstitial cells of Cajal; 60–70% in stomach; KIT (CD117) mutation defines majority; imatinib (TKI) is transformative treatment.",
     indications: [
       {
@@ -59857,7 +59857,7 @@ const PROCEDURES = [
     name: "Radiofrequency Ablation (HALO360) for Barrett's",
     disease: "Barrett's Esophagus",
     organ: "Esophagus",
-    severity: "medium",
+    severity: "moderate",
     summary: "Columnar metaplasia of the lower esophagus in response to chronic acid reflux; intestinal metaplasia is the precursor to esophageal adenocarcinoma (0.2–0.5%/year).",
     indications: [
       {
@@ -60436,7 +60436,7 @@ const PROCEDURES = [
     name: "Laparoscopic Meckel's Diverticulectomy",
     disease: "Meckel's Diverticulum",
     organ: "Small bowel",
-    severity: "medium",
+    severity: "moderate",
     summary: "The most common congenital GI malformation; remnant of the vitello-intestinal duct; complications occur in 2–4% (bleeding, obstruction, inflammation).",
     indications: [
       {
@@ -60626,7 +60626,7 @@ const PROCEDURES = [
     name: "Ileal NET Resection with Mesenteric Lymphadenectomy",
     disease: "Small Bowel Neuroendocrine Tumor",
     organ: "Small bowel",
-    severity: "medium",
+    severity: "moderate",
     summary: "Well-differentiated neuroendocrine tumor of the small bowel (terminal ileum most common); carcinoid syndrome occurs with liver metastases; mesenteric fibrosis causes bowel ischemia.",
     indications: [
       {
@@ -61007,7 +61007,7 @@ const PROCEDURES = [
     name: "Defunctioning Loop Ileostomy for Radiation Complications",
     disease: "Radiation Enteritis",
     organ: "Small bowel",
-    severity: "medium",
+    severity: "moderate",
     summary: "Intestinal injury from ionizing radiation, acute (during therapy) or chronic (months to years post-RT); affects small bowel and rectum most commonly in pelvic RT.",
     indications: [
       {
@@ -61578,7 +61578,7 @@ const PROCEDURES = [
     name: "Upper GI Endoscopy (EGD) for Dysphagia",
     disease: "Dysphagia",
     organ: "Esophagus/Pharynx",
-    severity: "medium",
+    severity: "moderate",
     summary: "Difficulty swallowing — treat as upper GI malignancy until proven otherwise; EGD is the first investigation; progressive solid-then-liquid dysphagia = mechanical obstruction; pure liquid dysphagia = motility disorder.",
     indications: [
       {
@@ -62178,7 +62178,7 @@ const PROCEDURES = [
     name: "Colonoscopy and Endoscopic Hemostasis for Lower GI Bleeding",
     disease: "Rectal Bleeding (Hematochezia)",
     organ: "Lower GI tract",
-    severity: "medium",
+    severity: "moderate",
     summary: "Passage of fresh blood per rectum — 95% resolve spontaneously; use Oakland Score to risk-stratify; colonoscopy is definitive investigation; always exclude colorectal malignancy in older patients.",
     indications: [
       {
@@ -73166,7 +73166,7 @@ const PROCEDURES = [
     name: "Open Preperitoneal Mesh Repair for Epigastric Hernia",
     disease: "Epigastric Hernia",
     organ: "Anterior abdominal wall (linea alba)",
-    severity: "minor",
+    severity: "low",
     summary: "Protrusion through a defect in the linea alba between xiphisternum and umbilicus; most contain pre-peritoneal fat (not peritoneal sac); repair by suture (small) or mesh (≥1 cm or symptomatic recurrence).",
     indications: [
       {
@@ -74259,7 +74259,7 @@ const PROCEDURES = [
     name: "Wide Local Excision + SLNB Technique",
     disease: "Melanoma",
     organ: "Skin",
-    severity: "critical",
+    severity: "high",
     summary: "Wide local excision with sentinel lymph node biopsy; adjuvant immunotherapy/targeted therapy for stage III–IV.",
     indications: [
       {
@@ -74634,7 +74634,7 @@ const PROCEDURES = [
     name: "Excision with Margin Assessment for High-Risk SCC",
     disease: "Squamous Cell Carcinoma (Skin)",
     organ: "Skin",
-    severity: "major",
+    severity: "moderate",
     summary: "Second most common skin cancer; significant metastatic potential (~5%); excise with 4–6 mm margins; high-risk features require SLNB and adjuvant RT.",
     indications: [
       {
@@ -74816,7 +74816,7 @@ const PROCEDURES = [
     name: "Radical Wide Excision — Axillary HS",
     disease: "Hidradenitis Suppurativa",
     organ: "Skin/Apocrine glands",
-    severity: "major",
+    severity: "moderate",
     summary: "Chronic inflammatory follicular disease of apocrine gland-bearing skin; medical management first; radical wide excision with primary closure or flap for Hurley III.",
     indications: [
       {
@@ -75004,7 +75004,7 @@ const PROCEDURES = [
     name: "Retroperitoneal Liposarcoma Resection",
     disease: "Liposarcoma",
     organ: "Soft tissue/Retroperitoneum",
-    severity: "critical",
+    severity: "high",
     summary: "Most common retroperitoneal sarcoma; surgery is the only curative modality; aim for R0 resection; dedifferentiated subtype has worst prognosis.",
     indications: [
       {
@@ -75191,7 +75191,7 @@ const PROCEDURES = [
     name: "IVC Level I LMS Resection with Reconstruction",
     disease: "Leiomyosarcoma",
     organ: "Soft tissue/Vascular",
-    severity: "critical",
+    severity: "high",
     summary: "Malignant smooth muscle tumor; retroperitoneal or IVC origin most challenging; complete resection with vascular reconstruction where needed is the only curative option.",
     indications: [
       {
@@ -75373,7 +75373,7 @@ const PROCEDURES = [
     name: "Abdominal Wall Desmoid Resection with Mesh Reconstruction",
     disease: "Desmoid Tumor",
     organ: "Soft tissue/Mesentery",
-    severity: "major",
+    severity: "moderate",
     summary: "Locally aggressive fibromatosis with no metastatic potential; paradigm shift to active surveillance first; surgery for progressors; sorafenib for FAP-related intra-abdominal desmoids.",
     indications: [
       {
@@ -75549,7 +75549,7 @@ const PROCEDURES = [
     name: "WLE + SLNB for Merkel Cell Carcinoma",
     disease: "Merkel Cell Carcinoma",
     organ: "Skin",
-    severity: "critical",
+    severity: "high",
     summary: "Rare but aggressive cutaneous neuroendocrine carcinoma; Merkel cell polyomavirus (MCPyV) in 80%; excellent response to immunotherapy (avelumab/pembrolizumab).",
     indications: [
       {
@@ -75718,7 +75718,7 @@ const PROCEDURES = [
     name: "Punch/Excision Biopsy for KS Diagnosis",
     disease: "Kaposi's Sarcoma",
     organ: "Skin/Mucosa/Viscera",
-    severity: "major",
+    severity: "moderate",
     summary: "HHV-8 driven vascular tumor; primarily a medical disease — treat the underlying immunosuppression; systemic chemotherapy for advanced disease.",
     indications: [
       {
@@ -80903,12 +80903,7 @@ const QUIZ_BANK = [
   {"id":"q-lung-1","dept":"thoracic","disease":"lung-cancer","format":"mcq","stem":"68-year-old ex-smoker. 3 cm RUL NSCLC, T2a N0 M0 (Stage IB), ECOG 1. Best management?","options":["Radical radiotherapy","Lobectomy ± adjuvant chemotherapy","SBRT only","Chemotherapy then reassess","Wedge resection only"],"answer":1,"explanation":"Stage I–II NSCLC with good PS — lobectomy is gold standard. Adjuvant chemotherapy considered for tumors >4 cm (Stage IIA). SBRT for medically inoperable patients."},
   {"id":"q-inguinal-1","dept":"hernia","disease":"inguinal-hernia","format":"flashcard","front":"What is Hesselbach's triangle and what hernia passes through it?","back":"Bounded by inferior epigastric artery (lateral), rectus abdominis (medial), inguinal ligament (inferior). Direct inguinal hernias protrude through this triangle medial to the inferior epigastric artery."},
   {"id":"q-bowel-1","dept":"uppergi","disease":"small-bowel-obstruction","format":"mcq","stem":"67-year-old woman, previous open hysterectomy, colicky pain, vomiting, distension, absolute constipation 24h. Most common cause and first-line management?","options":["Hernia — emergency surgery","Adhesions — NGT + IV fluids ± water-soluble contrast","Malignancy — CT and oncology","Gallstone ileus — surgery","Volvulus — endoscopic decompression"],"answer":1,"explanation":"Adhesions (previous surgery) account for ~60–70% of SBO. Conservative management with NGT, IV fluids. Gastrografin challenge has diagnostic and therapeutic value. Surgery if fails in 24–48h or signs of strangulation."},
-  {"id":"q-torsion-1","dept":"urology","disease":"testicular-torsion","format":"mcq","stem":"A 16-year-old presents with sudden severe left scrotal pain, 4 hours duration. Testis is high-riding and tender. Most appropriate management?","options":["Doppler USS then decide","Analgesia and review in 24h","Urgent surgical exploration and bilateral orchidopexy","IV antibiotics for epididymo-orchitis","Urine culture and discharge"],"answer":2,"explanation":"Testicular torsion is a surgical emergency — do not delay for USS if clinical suspicion is high. Viability is >95% if explored within 6h, falls to ~50% at 12h and near zero at 24h. Bilateral orchidopexy at same sitting."},
   {"id":"q-melanoma-1","dept":"softtissue","disease":"melanoma","format":"flashcard","front":"What margin is recommended for a 2 mm Breslow thickness melanoma?","back":"2 cm wide local excision margin. Breslow <1 mm → 1 cm; 1–2 mm → 1–2 cm; >2 mm → 2 cm. SLNB indicated for Breslow ≥0.8 mm or T1b features. (NICE/MSLT guidelines)"},
-  {"id":"q-pyloric-1","dept":"pediatric","disease":"pyloric-stenosis","format":"mcq","stem":"A 5-week-old male presents with non-bilious projectile vomiting after every feed. Bloods show Na 136, K 3.0, Cl 88, HCO₃ 32, pH 7.52. Most appropriate next step?","options":["Ramstedt pyloromyotomy immediately","NG feeds and observe","Resuscitation with normal saline + KCl, then Ramstedt pyloromyotomy","Upper GI contrast study first","Proton pump inhibitor"],"answer":2,"explanation":"Pyloric stenosis is a metabolic emergency, not a surgical emergency. Correct hypochloremic hypokalemic metabolic alkalosis with 0.9% NaCl + KCl before surgery. Ramstedt pyloromyotomy after correction."},
-  {"id":"q-rcc-1","dept":"urology","disease":"rcc","format":"mcq","stem":"A 58-year-old woman has an incidental 3.8 cm right renal mass, enhancing on CT, suspicious for RCC. No nodal or metastatic disease. Best management?","options":["Active surveillance","Partial nephrectomy (nephron-sparing)","Radical nephrectomy","Ablation (cryotherapy/RFA)","Sunitinib"],"answer":1,"explanation":"T1b RCC (3–7 cm) — partial nephrectomy is preferred over radical when technically feasible, preserving renal function with equivalent oncological outcomes. Ablation for patients unfit for surgery."},
-  {"id":"q-ovarian-1","dept":"gynecology","disease":"ovarian-cancer","format":"flashcard","front":"What is the primary surgical goal in advanced ovarian cancer and what outcome does it predict?","back":"Optimal cytoreduction — no residual disease (R0) or <1 cm residual. R0 resection strongly correlates with improved progression-free and overall survival. Primary debulking or interval debulking after NACT."},
-  {"id":"q-nec-paed-1","dept":"pediatric","disease":"nec","format":"mcq","stem":"A 28-week premature neonate develops abdominal distension, bloody stools, and pneumatosis intestinalis on AXR (Bell stage II). Initial management?","options":["Immediate laparotomy","NBM, NG decompression, broad-spectrum IV antibiotics, TPN","Contrast enema","Probiotics only","Peritoneal drain only"],"answer":1,"explanation":"Bell stage II NEC — initial management is medical: NBM, NG tube, IV antibiotics (covering gram-negatives and anaerobes), TPN. Surgery (laparotomy or peritoneal drain) for stage III: perforation, deterioration, or failed medical management."},
   {"id":"q-cli-1","dept":"vascular","disease":"cli","format":"mcq","stem":"A 68-year-old smoker has rest pain, a non-healing toe ulcer, and ABI 0.3. Which Rutherford category applies?","options":["Category 1 (mild claudication)","Category 3 (moderate claudication)","Category 4 (rest pain)","Category 5 (minor tissue loss)","Category 6 (major tissue loss)"],"answer":3,"explanation":"Rest pain = Rutherford 4; minor tissue loss (ulcer <digital level) = Rutherford 5; major tissue loss = 6. This patient has rest pain + non-healing toe ulcer → Rutherford 5 (CLI with minor tissue loss)."},
   {"id":"q-carotid-1","dept":"vascular","disease":"carotid","format":"mcq","stem":"A 72-year-old has a 75% symptomatic ICA stenosis (TIA 3 weeks ago). Best management?","options":["Antiplatelet therapy alone","Carotid endarterectomy within 2 weeks","Carotid stenting (CAS) as first choice","Anticoagulation with warfarin","Repeat imaging in 3 months"],"answer":1,"explanation":"NASCET/ECST: symptomatic ICA stenosis ≥50% benefits from CEA. Benefit is greatest when done within 2 weeks of index event (NNT drops from 20 to 5). CAS is second-line for high surgical-risk patients."},
   {"id":"q-dvt-1","dept":"vascular","disease":"dvt","format":"mcq","stem":"A patient with DVT has a Wells score of 5. D-dimer is positive. What is the next step?","options":["Start LMWH and discharge","Compression duplex USS of the leg","CT pulmonary angiography","Thrombophilia screen before anticoagulation","Inpatient thrombolysis"],"answer":1,"explanation":"Positive D-dimer + high Wells pre-test probability → compression duplex USS to confirm DVT before initiating definitive anticoagulation. Do not delay treatment if USS confirms clot."},
