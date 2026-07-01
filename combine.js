@@ -144,10 +144,10 @@ const ID_ORDER = [
   'traumatic-brain',
   // TRANSPLANT (7)
   'renal-tx','liver-tx','pancreas-tx','small-bowel-tx','living-donor-hepatectomy',
-  // THORACIC (12)
+  // THORACIC (13)
   'lung-cancer','pneumothorax','empyema','mesothelioma','thymoma',
   'oesophageal-perforation','haemothorax','lung-abscess','mediastinal-mass',
-  'chest-wall-tumour','pectus','lung-carcinoid',
+  'chest-wall-tumour','pectus','lung-carcinoid','congenital-diaphragmatic-hernia',
   // HERNIA & ABDOMINAL WALL (10)
   'inguinal-hernia','femoral-hernia','umbilical-hernia','incisional-hernia',
   'epigastric-hernia','strangulated-hernia','parastomal-hernia','spigelian-hernia',

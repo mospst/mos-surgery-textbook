@@ -37855,6 +37855,299 @@ const DISEASES = [
     ]
   },
 
+  {
+    id: "congenital-diaphragmatic-hernia",
+    dept: "thoracic",
+    name: "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+    latin: "Hernia diaphragmatica congenita",
+    organ: "Diaphragm",
+    severity: "moderate",
+    tags: ["thoracic", "diaphragm", "congenital", "hernia", "bochdalek", "morgagni"],
+    hero: "Herniation of abdominal viscera into the thorax through a congenital diaphragmatic defect. Bochdalek (posterolateral, ~85% of CDH) presents mostly in neonates; Morgagni (anterior/retrosternal, rare) is frequently found incidentally in adults. Distinct from acquired hiatus hernia — the defect is a true developmental failure of diaphragm formation.",
+    keypoints: [
+      "Bochdalek hernia: posterolateral defect (failure of pleuroperitoneal canal closure); ~85% of CDH; left-sided in ~85%; neonatal respiratory distress with pulmonary hypoplasia",
+      "Morgagni hernia: anterior retrosternal defect (foramen of Morgagni, between sternal and costal diaphragm origins); ~2–3% of CDH; right-sided in ~90%; often asymptomatic and found in adults",
+      "Adult presentation: usually Morgagni — incidental CXR/CT finding, vague GI or respiratory symptoms, occasionally obstruction/strangulation of herniated colon or omentum",
+      "Key distinction from hiatus hernia: CDH herniates through a true diaphragmatic defect away from the oesophageal hiatus; hiatus hernia is acquired widening of the hiatus itself",
+      "Adult symptomatic or complicated CDH is a surgical indication — repair (open or laparoscopic/thoracoscopic) prevents visceral strangulation"
+    ],
+    differentials: [
+      "Hiatus hernia (sliding or paraoesophageal)",
+      "Traumatic diaphragmatic rupture",
+      "Eventration of the diaphragm",
+      "Diaphragmatic paralysis (phrenic nerve palsy)",
+      "Mediastinal or pericardial fat pad",
+      "Lung sequestration or congenital lung malformation (neonate)"
+    ],
+    mnemonics: [
+      {
+        name: "Bochdalek vs Morgagni location",
+        text: "BOCHDALEK = Back and to the (L)eft, Large and common; MORGAGNI = Medial/anterior, on the Right, Minor and rare"
+      },
+      {
+        name: "Morgagni RAMP",
+        text: "Morgagni: Right-sided, Anterior, Middle-age/adult, Parasternal (retrosternal) — often incidental"
+      }
+    ],
+    overview: {
+      definition: "A congenital defect in the diaphragm allowing abdominal contents to herniate into the thoracic cavity. Two classic anatomical types: Bochdalek (posterolateral) and Morgagni (anterior retrosternal). Unlike a hiatus hernia, the herniation occurs through a developmental diaphragmatic defect rather than the oesophageal hiatus.",
+      epidemiology: "CDH overall incidence ~1 in 2,500–3,000 live births. Bochdalek accounts for ~85% and typically presents in the neonatal period; Morgagni accounts for ~2–3% and, being frequently asymptomatic, is disproportionately discovered in adults on imaging. Morgagni shows a mild female and right-sided predominance.",
+      pathophysiology: "Bochdalek: failure of the pleuroperitoneal membrane to close the pleuroperitoneal canal by ~8 weeks gestation → posterolateral defect → visceral herniation → ipsilateral (and contralateral) pulmonary hypoplasia and pulmonary hypertension in neonates. Morgagni: persistent defect at the anterior sternocostal triangle (foramen of Morgagni) where the septum transversum meets the costal margin → herniation of omentum, transverse colon, or stomach into the anterior mediastinum. In adults, raised intra-abdominal pressure (obesity, pregnancy, chronic cough) may unmask or enlarge a Morgagni defect.",
+      classification: [
+        {
+          label: "Bochdalek (posterolateral)",
+          note: "~85% of CDH; left-sided ~85%; large defect; neonatal respiratory distress from pulmonary hypoplasia; rarely presents late in adulthood"
+        },
+        {
+          label: "Morgagni (anterior retrosternal)",
+          note: "~2–3% of CDH; right-sided ~90% (heart shields the left foramen); small defect; usually asymptomatic; most adult CDH presentations"
+        },
+        {
+          label: "Central / septum transversum defect",
+          note: "Rare; deficiency of the central tendon"
+        },
+        {
+          label: "Diaphragmatic eventration",
+          note: "Not a true hernia — thinned but intact diaphragm with abnormal elevation; important differential"
+        },
+        {
+          label: "Hiatus hernia (for contrast)",
+          note: "Acquired herniation of stomach through the oesophageal hiatus — a separate acquired entity, not classed as CDH"
+        }
+      ]
+    },
+    diagnosis: {
+      history: [
+        "Adult Morgagni: often incidental on CXR/CT; vague retrosternal or epigastric discomfort, postprandial fullness, mild dyspnea or cough",
+        "Recurrent chest infections or basal atelectasis from herniated viscera",
+        "Bowel obstruction symptoms (colicky pain, vomiting, distension) if colon herniates and obstructs — a surgical emergency",
+        "Neonatal Bochdalek (brief note): severe respiratory distress at birth, scaphoid abdomen, cyanosis — managed by paediatric/neonatal surgery, outside this adult-focused entry",
+        "History of connective tissue disorder or prior diaphragmatic surgery increases index of suspicion"
+      ],
+      examination: [
+        "Often normal in the adult; reduced air entry at a lung base",
+        "Bowel sounds audible over the thorax if bowel has herniated",
+        "Signs of bowel obstruction or strangulation if complicated (tenderness, distension, tachycardia)",
+        "Neonate: scaphoid abdomen, displaced apex beat, respiratory distress (brief note only)"
+      ],
+      investigations: [
+        {
+          name: "Chest X-ray (PA and lateral)",
+          role: "Morgagni: rounded anterior cardiophrenic opacity, often right-sided; may show bowel gas or air-fluid level in the thorax; Bochdalek: retrocardiac gas-filled loops"
+        },
+        {
+          name: "CT chest/abdomen with contrast",
+          role: "Investigation of choice in adults — defines defect location and size, identifies herniated contents (omentum, colon, stomach), and detects obstruction/strangulation"
+        },
+        {
+          name: "Contrast study (barium/gastrografin)",
+          role: "Delineates whether stomach or colon is within the hernia; useful for surgical planning"
+        },
+        {
+          name: "MRI",
+          role: "Problem-solving for soft-tissue characterization or when radiation is undesirable; clarifies eventration vs true defect"
+        },
+        {
+          name: "Echocardiography",
+          role: "Neonatal Bochdalek — assess pulmonary hypertension and cardiac function (brief note; paediatric setting)"
+        }
+      ]
+    },
+    criteria: {
+      title: "Distinguishing Features: Bochdalek vs Morgagni vs Hiatus Hernia",
+      items: [
+        {
+          k: "Bochdalek — location",
+          v: "Posterolateral; left-sided ~85%; large defect"
+        },
+        {
+          k: "Bochdalek — presentation",
+          v: "Neonatal respiratory distress + pulmonary hypoplasia; rare late/adult presentation"
+        },
+        {
+          k: "Morgagni — location",
+          v: "Anterior retrosternal (foramen of Morgagni); right-sided ~90%; small defect"
+        },
+        {
+          k: "Morgagni — presentation",
+          v: "Usually asymptomatic; incidental in adults; risk of colonic obstruction"
+        },
+        {
+          k: "Hiatus hernia — location",
+          v: "Through the oesophageal hiatus; acquired, not congenital"
+        },
+        {
+          k: "Surgical trigger (adult CDH)",
+          v: "Symptomatic, enlarging, or complicated (obstruction/strangulation) → repair"
+        }
+      ]
+    },
+    scoring: [],
+    management: {
+      conservative: [
+        "Truly asymptomatic, incidentally found small Morgagni hernia in a high-risk/elderly patient: individualized observation may be reasonable, though elective repair is generally advised because of strangulation risk",
+        "Optimize comorbidities and reduce raised intra-abdominal pressure (weight loss, cough control) where surgery is deferred"
+      ],
+      medical: [
+        "No definitive medical therapy — congenital defects do not resolve pharmacologically",
+        "Symptom control (e.g. for reflux or constipation) is adjunctive only, not a substitute for repair in symptomatic disease",
+        "Neonatal Bochdalek (brief note): pre-operative stabilization with gentle ventilation, permissive hypercapnia, pulmonary hypertension management ± ECMO before repair — paediatric domain"
+      ],
+      surgical: [
+        {
+          name: "Laparoscopic Morgagni repair",
+          when: "Preferred approach for adult Morgagni hernia; symptomatic or to prevent strangulation",
+          notes: "Transabdominal reduction of hernia contents, excision or inversion of the sac, and closure of the defect with sutures ± prosthetic mesh for larger defects; low morbidity, short stay"
+        },
+        {
+          name: "Open transabdominal repair",
+          when: "Complicated hernia (obstruction/strangulation, need for bowel resection), large defects, or hostile abdomen",
+          notes: "Subcostal or midline laparotomy; reduce viscera, resect non-viable bowel, primary or mesh closure of the defect"
+        },
+        {
+          name: "Thoracoscopic / thoracotomy repair",
+          when: "Selected Bochdalek or when dense intrathoracic adhesions favor a chest approach",
+          notes: "Thoracic access to reduce viscera and close the posterolateral defect; mesh for large defects"
+        },
+        {
+          name: "Neonatal Bochdalek repair (brief note)",
+          when: "After cardiopulmonary stabilization of the neonate",
+          notes: "Paediatric/neonatal surgery — reduction and defect closure (primary or patch); outside the scope of this adult-focused entry"
+        }
+      ]
+    },
+    technique: {
+      title: "Laparoscopic Repair of Adult Morgagni Hernia",
+      prep: [
+        "GA; supine, mild reverse Trendelenburg with surgeon between the legs or on the patient's side",
+        "Prophylactic antibiotics; nasogastric decompression",
+        "Availability of prosthetic mesh for defects too large for tension-free primary closure"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Port placement",
+          d: "Standard upper-abdominal laparoscopic ports; establish pneumoperitoneum and inspect the anterior diaphragm"
+        },
+        {
+          n: 2,
+          t: "Reduce contents",
+          d: "Gently reduce herniated omentum and transverse colon from the anterior mediastinum back into the abdomen"
+        },
+        {
+          n: 3,
+          t: "Assess the sac",
+          d: "Identify the retrosternal defect; excise or invert the hernial sac (excision reduces recurrence but risks pneumomediastinum/pericardial injury)"
+        },
+        {
+          n: 4,
+          t: "Close the defect",
+          d: "Approximate the defect edges with non-absorbable sutures, anchoring anteriorly to the posterior rectus sheath / costal margin where the anterior rim is deficient"
+        },
+        {
+          n: 5,
+          t: "Reinforce if large",
+          d: "Place prosthetic mesh with adequate overlap for defects that cannot be closed tension-free; secure with tackers/sutures avoiding the pericardium"
+        },
+        {
+          n: 6,
+          t: "Check and close",
+          d: "Confirm hemostasis and bowel viability; remove ports under vision; close"
+        }
+      ],
+      pearls: [
+        "Right-sided anterior cardiophrenic mass on CXR in an adult is Morgagni hernia until proven otherwise",
+        "Beware the pericardium and internal mammary vessels when closing the anterior defect",
+        "Excising the sac lowers recurrence but proceed cautiously to avoid pneumomediastinum or cardiac injury"
+      ]
+    },
+    guidelines: [
+      {
+        src: "SAGES guidance on diaphragmatic and hiatal hernia repair"
+      },
+      {
+        src: "CDH EURO Consortium consensus (neonatal Bochdalek — reference for paediatric management)"
+      },
+      {
+        src: "Bailey & Love / Sabiston — congenital diaphragmatic hernia sections (textbook source for Bochdalek vs Morgagni)"
+      }
+    ],
+    pearls: [
+      "Bochdalek = Big, Back (posterolateral), and mostly Left; Morgagni = Minor, Middle/anterior, and mostly Right",
+      "Most adult CDH encountered by general/thoracic surgeons is Morgagni discovered incidentally",
+      "Standard textbook sources for this comparison are Bailey & Love's Short Practice of Surgery and Sabiston Textbook of Surgery"
+    ],
+    mistakes: [
+      "Labeling every diaphragmatic herniation a 'hiatus hernia' — CDH is a distinct congenital defect away from the oesophageal hiatus",
+      "Assuming an incidental Morgagni hernia is harmless — herniated colon can obstruct or strangulate",
+      "Injuring the pericardium or internal mammary vessels during anterior defect closure",
+      "Confusing diaphragmatic eventration (intact thinned muscle) with a true defect — management differs"
+    ],
+    related: [
+      {
+        id: "hiatus-hernia",
+        note: "Acquired herniation through the oesophageal hiatus — the main differential; contrast with the true congenital defect of CDH"
+      },
+      {
+        id: "diaphragm-rupture",
+        note: "Traumatic diaphragmatic defect — an acquired mimic of CDH on imaging"
+      }
+    ],
+    videoResources: [
+      {
+        title: "Search peer-reviewed operative videos on JOMI",
+        source: "JOMI",
+        url: "https://jomi.com/search?q=Laparoscopic%20Repair%20of%20Adult%20Morgagni%20Hernia",
+        tags: ["video", "peer-reviewed", "incision-to-closure", "mixed-access"],
+        query: "Laparoscopic Repair of Adult Morgagni Hernia"
+      },
+      {
+        title: "Search operation videos on WebSurg / IRCAD",
+        source: "WebSurg / IRCAD",
+        url: "https://www.google.com/search?q=Laparoscopic%20Repair%20of%20Adult%20Morgagni%20Hernia%20site%3Awebsurg.com",
+        tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
+        query: "Laparoscopic Repair of Adult Morgagni Hernia"
+      },
+      {
+        title: "Search operation videos on SAGES TV",
+        source: "SAGES TV",
+        url: "https://www.google.com/search?q=Laparoscopic%20Repair%20of%20Adult%20Morgagni%20Hernia%20site%3Asages.org",
+        tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
+        query: "Laparoscopic Repair of Adult Morgagni Hernia"
+      }
+    ],
+    anatomyResources: [
+      {
+        title: "Search radiology cases and anatomy",
+        source: "Radiopaedia",
+        url: "https://radiopaedia.org/search?q=Congenital%20Diaphragmatic%20Hernia",
+        tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
+        query: "Congenital Diaphragmatic Hernia"
+      },
+      {
+        title: "Search open anatomy/media images",
+        source: "Wikimedia Commons",
+        url: "https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search=Congenital%20Diaphragmatic%20Hernia",
+        tags: ["image", "open-license", "anatomy", "photo", "diagram"],
+        query: "Congenital Diaphragmatic Hernia"
+      },
+      {
+        title: "Search anatomy explanations and diagrams",
+        source: "TeachMeAnatomy",
+        url: "https://teachmeanatomy.info/?s=Congenital%20Diaphragmatic%20Hernia",
+        tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
+        query: "Congenital Diaphragmatic Hernia"
+      },
+      {
+        title: "Search cross-sectional anatomy atlas",
+        source: "IMAIOS e-Anatomy",
+        url: "https://www.google.com/search?q=Congenital%20Diaphragmatic%20Hernia%20site%3Aimaios.com",
+        tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
+        query: "Congenital Diaphragmatic Hernia"
+      }
+    ]
+  },
+
 
   // ══════════════════════ HERNIA & ABDOMINAL WALL ══════════════════════,
 
@@ -70198,6 +70491,208 @@ const PROCEDURES = [
     tags: ["thoracic", "neuroendocrine", "lung", "rare", "procedure", "operative-steps"]
   },
   {
+    id: "proc-congenital-diaphragmatic-hernia",
+    diseaseId: "congenital-diaphragmatic-hernia",
+    dept: "thoracic",
+    name: "Laparoscopic Repair of Adult Morgagni Hernia",
+    disease: "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+    organ: "Diaphragm",
+    severity: "moderate",
+    summary: "Herniation of abdominal viscera into the thorax through a congenital diaphragmatic defect.",
+    indications: [
+      {
+        name: "Laparoscopic Morgagni repair",
+        when: "Preferred approach for adult Morgagni hernia; symptomatic or to prevent strangulation",
+        notes: "Transabdominal reduction of hernia contents, excision or inversion of the sac, and closure of the defect with sutures ± prosthetic mesh for larger defects; low morbidity, short stay"
+      },
+      {
+        name: "Open transabdominal repair",
+        when: "Complicated hernia (obstruction/strangulation, need for bowel resection), large defects, or hostile abdomen",
+        notes: "Subcostal or midline laparotomy; reduce viscera, resect non-viable bowel, primary or mesh closure of the defect"
+      },
+      {
+        name: "Thoracoscopic / thoracotomy repair",
+        when: "Selected Bochdalek or when dense intrathoracic adhesions favor a chest approach",
+        notes: "Thoracic access to reduce viscera and close the posterolateral defect; mesh for large defects"
+      },
+      {
+        name: "Neonatal Bochdalek repair (brief note)",
+        when: "After cardiopulmonary stabilization of the neonate",
+        notes: "Paediatric/neonatal surgery — reduction and defect closure (primary or patch); outside the scope of this adult-focused entry"
+      }
+    ],
+    anatomyFocus: [
+      "Bochdalek hernia: posterolateral defect (failure of pleuroperitoneal canal closure); ~85% of CDH; left-sided in ~85%; neonatal respiratory distress with pulmonary hypoplasia",
+      "Morgagni hernia: anterior retrosternal defect (foramen of Morgagni, between sternal and costal diaphragm origins); ~2–3% of CDH; right-sided in ~90%; often asymptomatic and found in adults",
+      "Differentiate from: Hiatus hernia (sliding or paraoesophageal), Traumatic diaphragmatic rupture, Eventration of the diaphragm, Diaphragmatic paralysis (phrenic nerve palsy)"
+    ],
+    prep: [
+      "GA; supine, mild reverse Trendelenburg with surgeon between the legs or on the patient's side",
+      "Prophylactic antibiotics; nasogastric decompression",
+      "Availability of prosthetic mesh for defects too large for tension-free primary closure"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Port placement",
+        d: "Standard upper-abdominal laparoscopic ports; establish pneumoperitoneum and inspect the anterior diaphragm"
+      },
+      {
+        n: 2,
+        t: "Reduce contents",
+        d: "Gently reduce herniated omentum and transverse colon from the anterior mediastinum back into the abdomen"
+      },
+      {
+        n: 3,
+        t: "Assess the sac",
+        d: "Identify the retrosternal defect; excise or invert the hernial sac (excision reduces recurrence but risks pneumomediastinum/pericardial injury)"
+      },
+      {
+        n: 4,
+        t: "Close the defect",
+        d: "Approximate the defect edges with non-absorbable sutures, anchoring anteriorly to the posterior rectus sheath / costal margin where the anterior rim is deficient"
+      },
+      {
+        n: 5,
+        t: "Reinforce if large",
+        d: "Place prosthetic mesh with adequate overlap for defects that cannot be closed tension-free; secure with tackers/sutures avoiding the pericardium"
+      },
+      {
+        n: 6,
+        t: "Check and close",
+        d: "Confirm hemostasis and bowel viability; remove ports under vision; close"
+      }
+    ],
+    pearls: [
+      "Right-sided anterior cardiophrenic mass on CXR in an adult is Morgagni hernia until proven otherwise",
+      "Beware the pericardium and internal mammary vessels when closing the anterior defect",
+      "Excising the sac lowers recurrence but proceed cautiously to avoid pneumomediastinum or cardiac injury",
+      "Bochdalek = Big, Back (posterolateral), and mostly Left; Morgagni = Minor, Middle/anterior, and mostly Right",
+      "Most adult CDH encountered by general/thoracic surgeons is Morgagni discovered incidentally",
+      "Standard textbook sources for this comparison are Bailey & Love's Short Practice of Surgery and Sabiston Textbook of Surgery"
+    ],
+    pitfalls: [
+      "Labeling every diaphragmatic herniation a 'hiatus hernia' — CDH is a distinct congenital defect away from the oesophageal hiatus",
+      "Assuming an incidental Morgagni hernia is harmless — herniated colon can obstruct or strangulate",
+      "Injuring the pericardium or internal mammary vessels during anterior defect closure",
+      "Confusing diaphragmatic eventration (intact thinned muscle) with a true defect — management differs"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Laparoscopic Repair of Adult Morgagni Hernia), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "GA; supine, mild reverse Trendelenburg with surgeon between the legs or on the patient's side",
+          "Prophylactic antibiotics; nasogastric decompression",
+          "Availability of prosthetic mesh for defects too large for tension-free primary closure"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "Bochdalek hernia: posterolateral defect (failure of pleuroperitoneal canal closure); ~85% of CDH; left-sided in ~85%; neonatal respiratory distress with pulmonary hypoplasia",
+          "Morgagni hernia: anterior retrosternal defect (foramen of Morgagni, between sternal and costal diaphragm origins); ~2–3% of CDH; right-sided in ~90%; often asymptomatic and found in adults",
+          "Adult presentation: usually Morgagni — incidental CXR/CT finding, vague GI or respiratory symptoms, occasionally obstruction/strangulation of herniated colon or omentum",
+          "Confirm this is not: Hiatus hernia (sliding or paraoesophageal), Traumatic diaphragmatic rupture, Eventration of the diaphragm"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "Right-sided anterior cardiophrenic mass on CXR in an adult is Morgagni hernia until proven otherwise",
+          "Beware the pericardium and internal mammary vessels when closing the anterior defect",
+          "Excising the sac lowers recurrence but proceed cautiously to avoid pneumomediastinum or cardiac injury",
+          "Bochdalek = Big, Back (posterolateral), and mostly Left; Morgagni = Minor, Middle/anterior, and mostly Right"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Labeling every diaphragmatic herniation a 'hiatus hernia' — CDH is a distinct congenital defect away from the oesophageal hiatus",
+          "Assuming an incidental Morgagni hernia is harmless — herniated colon can obstruct or strangulate",
+          "Injuring the pericardium or internal mammary vessels during anterior defect closure",
+          "Confusing diaphragmatic eventration (intact thinned muscle) with a true defect — management differs"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Congenital Diaphragmatic Hernia (Bochdalek & Morgagni).",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [
+      {
+        title: "Search radiology cases and anatomy",
+        source: "Radiopaedia",
+        url: "https://radiopaedia.org/search?q=Congenital%20Diaphragmatic%20Hernia",
+        tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
+        query: "Congenital Diaphragmatic Hernia"
+      },
+      {
+        title: "Search open anatomy/media images",
+        source: "Wikimedia Commons",
+        url: "https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search=Congenital%20Diaphragmatic%20Hernia",
+        tags: ["image", "open-license", "anatomy", "photo", "diagram"],
+        query: "Congenital Diaphragmatic Hernia"
+      },
+      {
+        title: "Search anatomy explanations and diagrams",
+        source: "TeachMeAnatomy",
+        url: "https://teachmeanatomy.info/?s=Congenital%20Diaphragmatic%20Hernia",
+        tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
+        query: "Congenital Diaphragmatic Hernia"
+      },
+      {
+        title: "Search cross-sectional anatomy atlas",
+        source: "IMAIOS e-Anatomy",
+        url: "https://www.google.com/search?q=Congenital%20Diaphragmatic%20Hernia%20site%3Aimaios.com",
+        tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
+        query: "Congenital Diaphragmatic Hernia"
+      }
+    ],
+    videoResources: [
+      {
+        title: "Search peer-reviewed operative videos on JOMI",
+        source: "JOMI",
+        url: "https://jomi.com/search?q=Laparoscopic%20Repair%20of%20Adult%20Morgagni%20Hernia",
+        tags: ["video", "peer-reviewed", "incision-to-closure", "mixed-access"],
+        query: "Laparoscopic Repair of Adult Morgagni Hernia"
+      },
+      {
+        title: "Search operation videos on WebSurg / IRCAD",
+        source: "WebSurg / IRCAD",
+        url: "https://www.google.com/search?q=Laparoscopic%20Repair%20of%20Adult%20Morgagni%20Hernia%20site%3Awebsurg.com",
+        tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
+        query: "Laparoscopic Repair of Adult Morgagni Hernia"
+      },
+      {
+        title: "Search operation videos on SAGES TV",
+        source: "SAGES TV",
+        url: "https://www.google.com/search?q=Laparoscopic%20Repair%20of%20Adult%20Morgagni%20Hernia%20site%3Asages.org",
+        tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
+        query: "Laparoscopic Repair of Adult Morgagni Hernia"
+      }
+    ],
+    tags: [
+      "thoracic",
+      "diaphragm",
+      "congenital",
+      "hernia",
+      "bochdalek",
+      "morgagni",
+      "procedure",
+      "operative-steps"
+    ]
+  },
+  {
     id: "proc-inguinal-hernia",
     diseaseId: "inguinal-hernia",
     dept: "hernia",
@@ -74128,7 +74623,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Aorta, infrarenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Anal Canal Cancer", "Abdominal Aortic Aneurysm", "Penetrating Abdominal Trauma", "Femoral Hernia"],
+    options: ["Anal Canal Cancer", "Abdominal Aortic Aneurysm", "Penetrating Abdominal Trauma", "Inguinal Hernia"],
     answer: 1,
     explanation: "Permanent focal dilation of the abdominal aorta ≥3.0 cm or >50% of expected diameter.",
     anatomyFocus: [
@@ -74173,7 +74668,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Internal carotid artery.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Caustic Esophageal Injury", "Umbilical Hernia", "Liver Abscess", "Carotid Stenosis"],
+    options: ["Caustic Esophageal Injury", "Femoral Hernia", "Liver Abscess", "Carotid Stenosis"],
     answer: 3,
     explanation: "Atherosclerotic narrowing of the carotid bifurcation — the most common surgically treatable cause of ischemic stroke.",
     anatomyFocus: [
@@ -74219,10 +74714,10 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thoracic aorta.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Laparoscopic Access Techniques",
+      "Principles of Laparoscopy & Pneumoperitoneum",
       "Thoracic Aortic Aneurysm",
       "Barrett's Esophagus",
-      "Obturator Hernia"
+      "Spigelian Hernia"
     ],
     answer: 1,
     explanation: "Dilation of the thoracic aorta ≥4.5 cm with risk of rupture, dissection, or aorto-enteric fistula.",
@@ -74290,7 +74785,7 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Acute Mesenteric Ischemia",
-      "Laparoscopic Access Techniques",
+      "Principles of Laparoscopy & Pneumoperitoneum",
       "Pelvic Fracture (Hemorrhage Control)",
       "Pancreatic Ductal Adenocarcinoma"
     ],
@@ -74361,7 +74856,7 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "Thoracic Aortic Aneurysm",
       "Thyroid Cancer",
-      "Robotic-Assisted Surgery",
+      "Complications of Minimally Invasive Surgery",
       "Popliteal Artery Aneurysm"
     ],
     answer: 3,
@@ -74403,7 +74898,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Subclavian vessels / brachial plexus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Gastric Outlet Obstruction", "Thoracic Outlet Syndrome", "Spigelian Hernia", "Strangulated Hernia"],
+    options: ["Gastric Outlet Obstruction", "Thoracic Outlet Syndrome", "Parastomal Hernia", "Epigastric Hernia"],
     answer: 1,
     explanation: "Compression of neurovascular structures at the thoracic outlet — neurogenic TOS accounts for 95% of cases; vascular TOS is rare but more urgent.",
     anatomyFocus: [
@@ -74493,7 +74988,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Therapeutic Endoscopy (Principles)", "Acute Pancreatitis", "Thyroid Cancer", "Desmoid Tumor"],
+    options: ["Conversion to Open Surgery", "Acute Pancreatitis", "Thyroid Cancer", "Leiomyosarcoma"],
     answer: 1,
     explanation: "Acute inflammatory process of the pancreas with varying degrees of regional and remote organ involvement.",
     anatomyFocus: [
@@ -74513,7 +75008,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Gallbladder.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Basal Cell Carcinoma", "Leiomyosarcoma", "Acute Cholecystitis", "ATLS Primary Survey (X-ABCDE)"],
+    options: ["Melanoma", "Liposarcoma", "Acute Cholecystitis", "ATLS Primary Survey (X-ABCDE)"],
     answer: 2,
     explanation: "Acute inflammation of the gallbladder wall, almost always due to cystic duct obstruction by calculi.",
     anatomyFocus: [
@@ -74536,7 +75031,7 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "Secondary / Tertiary Hyperparathyroidism",
       "Acute Cholecystitis",
-      "Leiomyosarcoma",
+      "Liposarcoma",
       "Acute Cholangitis"
     ],
     answer: 3,
@@ -74583,7 +75078,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Bile duct.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Traumatic Diaphragm Rupture", "Choledocholithiasis", "Liver Trauma", "Obturator Hernia"],
+    options: ["Traumatic Diaphragm Rupture", "Choledocholithiasis", "Liver Trauma", "Spigelian Hernia"],
     answer: 1,
     explanation: "Presence of gallstones within the common bile duct, causing obstruction and risk of cholangitis, pancreatitis, or secondary biliary cirrhosis.",
     anatomyFocus: [
@@ -74607,7 +75102,7 @@ const IMAGE_QUIZ_BANK = [
       "Thoracic Aortic Aneurysm",
       "Bowel Perforation",
       "Pancreatic Ductal Adenocarcinoma",
-      "Complications of Minimally Invasive Surgery"
+      "Energy Devices in Minimally Invasive Surgery"
     ],
     answer: 2,
     explanation: "Aggressive exocrine pancreatic malignancy with 5-year survival <12%; most patients present with locally advanced or metastatic disease.",
@@ -74628,7 +75123,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Epigastric Hernia", "Hiatus Hernia", "Breast Cancer", "Chronic Pancreatitis"],
+    options: ["Incisional Hernia", "Hiatus Hernia", "Breast Cancer", "Chronic Pancreatitis"],
     answer: 3,
     explanation: "Progressive fibroinflammatory disease of the pancreas leading to irreversible parenchymal damage, exocrine/endocrine insufficiency, and chronic pain.",
     anatomyFocus: [
@@ -74759,9 +75254,9 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Gallbladder.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Hidradenitis Suppurativa",
+      "Squamous Cell Carcinoma (Skin)",
       "Gallbladder Cancer",
-      "Incisional Hernia",
+      "Umbilical Hernia",
       "Hemorrhagic Shock (ATLS 11 Classification)"
     ],
     answer: 1,
@@ -74808,7 +75303,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Liposarcoma", "Deep Vein Thrombosis", "Leiomyosarcoma", "Hepatic Adenoma"],
+    options: ["Hidradenitis Suppurativa", "Deep Vein Thrombosis", "Liposarcoma", "Hepatic Adenoma"],
     answer: 3,
     explanation: "Benign hepatocellular tumor strongly associated with oral contraceptive pill use; risk of hemorrhage and rare malignant transformation.",
     anatomyFocus: [
@@ -74963,7 +75458,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Bile duct.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Portal Hypertension", "Epigastric Hernia", "Primary Sclerosing Cholangitis", "Dysphagia"],
+    options: ["Portal Hypertension", "Incisional Hernia", "Primary Sclerosing Cholangitis", "Dysphagia"],
     answer: 2,
     explanation: "Progressive fibro-inflammatory cholangiopathy affecting intra- and extrahepatic bile ducts, associated with IBD, and carrying a 10–15% lifetime risk of cholangiocarcinoma.",
     anatomyFocus: [
@@ -74983,12 +75478,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Appendix.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Energy Devices in Minimally Invasive Surgery",
-      "Splenic Abscess",
-      "Merkel Cell Carcinoma",
-      "Acute Appendicitis"
-    ],
+    options: ["Laparoscopic Access Techniques", "Splenic Abscess", "Desmoid Tumor", "Acute Appendicitis"],
     answer: 3,
     explanation: "Acute inflammation of the vermiform appendix; the most common abdominal surgical emergency; lifetime risk 8% in men, 7% in women.",
     anatomyFocus: [
@@ -75010,9 +75500,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Diverticulitis",
-      "Principles of Laparoscopy & Pneumoperitoneum",
+      "Kaposi's Sarcoma",
       "Rectal Bleeding (Hematochezia)",
-      "Inguinal Hernia"
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)"
     ],
     answer: 0,
     explanation: "Inflammation or infection of colonic diverticula, ranging from uncomplicated (80%) to complicated (abscess, perforation, fistula, obstruction).",
@@ -75054,7 +75544,7 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Rectum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Umbilical Hernia",
+      "Femoral Hernia",
       "Thymoma / Thymic Tumor",
       "Rectal Prolapse",
       "MEN2 (Multiple Endocrine Neoplasia Type 2)"
@@ -75078,7 +75568,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Inguinal Hernia", "Primary Sclerosing Cholangitis", "Esophageal Cancer", "Hemorrhoids"],
+    options: [
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+      "Primary Sclerosing Cholangitis",
+      "Esophageal Cancer",
+      "Hemorrhoids"
+    ],
     answer: 3,
     explanation: "Symptomatic enlarged vascular cushions of the anal canal; most common anorectal condition presenting with painless bright red rectal bleeding.",
     anatomyFocus: [
@@ -75098,7 +75593,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Anal Fistula", "Thyroid Cancer", "Chest Wall Tumor", "Retroperitoneal Sarcoma"],
+    options: ["Anal Fistula", "Thyroid Cancer", "Chest Wall Tumor", "Obturator Hernia"],
     answer: 0,
     explanation: "Abnormal communication between the anal canal (usually at the dentate line) and the perianal skin, arising from cryptoglandular infection in 90% of cases.",
     anatomyFocus: [
@@ -75140,9 +75635,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Acute Cholangitis",
-      "Energy Devices in Minimally Invasive Surgery",
+      "Laparoscopic Access Techniques",
       "Perianal Abscess & Fistula-in-Ano",
-      "Femoral Hernia"
+      "Inguinal Hernia"
     ],
     answer: 2,
     explanation: "Abscess: urgent incision and drainage; fistula: Parks classification guides management — lay-open for intersphincteric/low transsphincteric; seton for high transsphincteric/suprasphincteric.",
@@ -75183,7 +75678,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Sigmoid Volvulus", "Splanchnic Artery Aneurysm", "Desmoid Tumor", "Angiodysplasia"],
+    options: ["Sigmoid Volvulus", "Splanchnic Artery Aneurysm", "Leiomyosarcoma", "Angiodysplasia"],
     answer: 0,
     explanation: "Axial rotation of the sigmoid colon on its mesentery causing closed-loop obstruction; commonest in elderly, institutionalised, or high-fiber diet populations.",
     anatomyFocus: [
@@ -75203,7 +75698,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Cecum/Right colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Pulmonary Carcinoid", "Cecal Volvulus", "Squamous Cell Carcinoma (Skin)", "Esophageal Cancer"],
+    options: ["Pulmonary Carcinoid", "Cecal Volvulus", "Basal Cell Carcinoma", "Esophageal Cancer"],
     answer: 1,
     explanation: "Emergency right hemicolectomy is definitive treatment; endoscopic decompression high failure rate (40%) and recurrence; viable cecum → right hemicolectomy; ischemic → resection without anastomosis.",
     anatomyFocus: [
@@ -75248,7 +75743,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hydatid Cyst of the Liver", "Achalasia", "Laparoscopic Access Techniques", "Ulcerative Colitis"],
+    options: [
+      "Hydatid Cyst of the Liver",
+      "Achalasia",
+      "Principles of Laparoscopy & Pneumoperitoneum",
+      "Ulcerative Colitis"
+    ],
     answer: 3,
     explanation: "Chronic relapsing mucosal inflammation of the colon, always involving the rectum and extending proximally in a continuous pattern; cure achievable with colectomy.",
     anatomyFocus: [
@@ -75293,7 +75793,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anal canal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Caustic Esophageal Injury", "Anal Canal Cancer", "Inguinal Hernia", "Small Bowel Obstruction"],
+    options: [
+      "Caustic Esophageal Injury",
+      "Anal Canal Cancer",
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+      "Small Bowel Obstruction"
+    ],
     answer: 1,
     explanation: "Squamous cell carcinoma; primary treatment is chemoradiotherapy (Nigro protocol — 5-FU + mitomycin C + RT); surgery (APR) reserved for persistent/recurrent disease after CRT.",
     anatomyFocus: [
@@ -75313,7 +75818,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small/Large bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Merkel Cell Carcinoma", "Small Bowel Obstruction", "Intestinal Fistula", "Umbilical Hernia"],
+    options: ["Desmoid Tumor", "Small Bowel Obstruction", "Intestinal Fistula", "Femoral Hernia"],
     answer: 2,
     explanation: "Optimize nutrition (TPN if high-output), treat sepsis, and allow 4–6 weeks for spontaneous closure; 50% close spontaneously; surgery for those that do not — SNAP protocol.",
     anatomyFocus: [
@@ -75335,7 +75840,7 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Varicose Veins",
-      "Parastomal Hernia",
+      "Strangulated Hernia",
       "Breast Abscess",
       "Appendiceal Carcinoid (Well-Differentiated NET)"
     ],
@@ -75361,7 +75866,7 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "Mucocele of the Appendix",
       "Acute Cholangitis",
-      "Kaposi's Sarcoma",
+      "Merkel Cell Carcinoma",
       "Chronic Limb-Threatening Ischemia"
     ],
     answer: 0,
@@ -75433,7 +75938,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Intestinal Fistula", "Incisional Hernia", "Renal Trauma", "Bowel Perforation"],
+    options: ["Intestinal Fistula", "Umbilical Hernia", "Renal Trauma", "Bowel Perforation"],
     answer: 3,
     explanation: "Full-thickness breach of the GI tract wall, releasing luminal contents into the peritoneal cavity; erect CXR shows subdiaphragmatic free air; CT is gold standard; surgery is almost always required.",
     anatomyFocus: [
@@ -75523,7 +76028,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach/Duodenum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Inguinal Hernia", "Chest Wall Tumor", "Breast Abscess", "Perforated Peptic Ulcer"],
+    options: [
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+      "Chest Wall Tumor",
+      "Breast Abscess",
+      "Perforated Peptic Ulcer"
+    ],
     answer: 3,
     explanation: "Free perforation of a gastric or duodenal ulcer causing sudden-onset peritonitis; a surgical emergency with mortality 5–10% if treated promptly.",
     anatomyFocus: [
@@ -75546,8 +76056,8 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "Gastric Cancer",
       "MEN2 (Multiple Endocrine Neoplasia Type 2)",
-      "Complications of Minimally Invasive Surgery",
-      "Energy Devices in Minimally Invasive Surgery"
+      "Energy Devices in Minimally Invasive Surgery",
+      "Laparoscopic Access Techniques"
     ],
     answer: 0,
     explanation: "Adenocarcinoma of the stomach, often presenting at advanced stage in Western countries; D2 lymphadenectomy and perioperative FLOT chemotherapy are standard of care.",
@@ -75613,7 +76123,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Diaphragm.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Intestinal Fistula", "Conn's Syndrome", "Hereditary Spherocytosis", "Hiatus Hernia"],
+    options: ["Intestinal Fistula", "Therapeutic Endoscopy (Principles)", "Conn's Syndrome", "Hiatus Hernia"],
     answer: 3,
     explanation: "Herniation of abdominal contents through the esophageal hiatus of the diaphragm; Type I (sliding) in 95%; giant paraesophageal hernia risks strangulation.",
     anatomyFocus: [
@@ -75633,7 +76143,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Achalasia", "ATLS Primary Survey (X-ABCDE)", "Desmoid Tumor", "Sigmoid Volvulus"],
+    options: ["Achalasia", "ATLS Primary Survey (X-ABCDE)", "Leiomyosarcoma", "Sigmoid Volvulus"],
     answer: 0,
     explanation: "Progressive neurodegenerative loss of esophageal peristalsis and failure of LOS relaxation; functional obstruction causing dysphagia, regurgitation, and aspiration.",
     anatomyFocus: [
@@ -75656,7 +76166,7 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "Adrenal Incidentaloma",
       "Esophageal Perforation (Boerhaave)",
-      "Diagnostic Laparoscopy",
+      "Robotic-Assisted Surgery",
       "Breast Cancer"
     ],
     answer: 1,
@@ -75699,7 +76209,7 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Femoral Hernia",
+      "Inguinal Hernia",
       "Acute Compartment Syndrome (Limb)",
       "Hydatid Cyst of the Liver",
       "Gastric Volvulus"
@@ -75795,7 +76305,7 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Appendiceal Carcinoid (Well-Differentiated NET)",
-      "Hidradenitis Suppurativa",
+      "Squamous Cell Carcinoma (Skin)",
       "Caustic Esophageal Injury",
       "Zenker's Diverticulum"
     ],
@@ -75818,7 +76328,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Caustic Esophageal Injury", "Chronic Pancreatitis", "Parastomal Hernia", "Melena"],
+    options: ["Caustic Esophageal Injury", "Chronic Pancreatitis", "Strangulated Hernia", "Melena"],
     answer: 0,
     explanation: "Corrosive injury to esophagus and stomach from ingestion of alkali or acid; causes can range from mild mucosal erythema to full-thickness necrosis requiring emergency resection.",
     anatomyFocus: [
@@ -75883,7 +76393,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Small Bowel Neuroendocrine Tumor", "Femoral Hernia", "Breast Cancer", "Short Bowel Syndrome"],
+    options: ["Small Bowel Neuroendocrine Tumor", "Inguinal Hernia", "Breast Cancer", "Short Bowel Syndrome"],
     answer: 3,
     explanation: "Malabsorption syndrome resulting from loss of functional intestinal length; TPN dependence; teduglutide (GLP-2 analogue) can achieve enteral autonomy in selected patients.",
     anatomyFocus: [
@@ -75968,7 +76478,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus/Pharynx.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Cushing's Syndrome (Adrenal)", "Liposarcoma", "Pilonidal Sinus", "Dysphagia"],
+    options: ["Cushing's Syndrome (Adrenal)", "Hidradenitis Suppurativa", "Pilonidal Sinus", "Dysphagia"],
     answer: 3,
     explanation: "Difficulty swallowing — treat as upper GI malignancy until proven otherwise; EGD is the first investigation; progressive solid-then-liquid dysphagia = mechanical obstruction; pure liquid dysphagia = motility disorder.",
     anatomyFocus: [
@@ -76013,7 +76523,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Upper GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Breast Abscess", "Melena", "Desmoid Tumor", "Femoral Hernia"],
+    options: ["Breast Abscess", "Melena", "Leiomyosarcoma", "Inguinal Hernia"],
     answer: 1,
     explanation: "Passage of black tarry stools from degradation of blood by intestinal enzymes — almost always upper GI bleeding (>90%); Glasgow-Blatchford Score ≤1 = safe early discharge; urgent EGD within 24 h.",
     anatomyFocus: [
@@ -76058,7 +76568,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Breast.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Mesothelioma", "Esophageal Perforation (Boerhaave)", "Conversion to Open Surgery", "Breast Cancer"],
+    options: ["Mesothelioma", "Esophageal Perforation (Boerhaave)", "Diagnostic Laparoscopy", "Breast Cancer"],
     answer: 3,
     explanation: "Most common cancer in women.",
     anatomyFocus: [
@@ -76141,7 +76651,7 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "MEN1 (Multiple Endocrine Neoplasia Type 1)",
       "Rectal Bleeding (Hematochezia)",
-      "Robotic-Assisted Surgery",
+      "Complications of Minimally Invasive Surgery",
       "Graves' Disease"
     ],
     answer: 3,
@@ -76372,7 +76882,7 @@ const IMAGE_QUIZ_BANK = [
       "Deep Vein Thrombosis",
       "MEN1 (Multiple Endocrine Neoplasia Type 1)",
       "Pneumothorax",
-      "Complications of Minimally Invasive Surgery"
+      "Energy Devices in Minimally Invasive Surgery"
     ],
     answer: 1,
     explanation: "Autosomal dominant syndrome: parathyroid (95%) + pituitary (30%) + pancreatic/duodenal NETs (50%).",
@@ -76394,7 +76904,7 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Multi-organ.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Retroperitoneal Sarcoma",
+      "Obturator Hernia",
       "Acute Pancreatitis",
       "MEN2 (Multiple Endocrine Neoplasia Type 2)",
       "Anal Canal Cancer"
@@ -76440,7 +76950,7 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "ATLS Primary Survey (X-ABCDE)",
-      "Desmoid Tumor",
+      "Leiomyosarcoma",
       "Secondary / Tertiary Hyperparathyroidism",
       "Burns"
     ],
@@ -76492,7 +77002,7 @@ const IMAGE_QUIZ_BANK = [
       "Choledocholithiasis",
       "Zenker's Diverticulum",
       "Spinal Cord Injury (ATLS 11)",
-      "Diagnostic Laparoscopy"
+      "Robotic-Assisted Surgery"
     ],
     answer: 2,
     explanation: "ATLS 11 replaces 'full spinal immobilization' with 'spinal motion restriction' (SMR).",
@@ -76533,7 +77043,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdomen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Damage Control Laparotomy", "Hepatocellular Carcinoma", "Thyroid Cancer", "Leiomyosarcoma"],
+    options: ["Damage Control Laparotomy", "Hepatocellular Carcinoma", "Thyroid Cancer", "Liposarcoma"],
     answer: 0,
     explanation: "Life-saving strategy for exsanguinating abdominal trauma: abbreviated surgery to control hemorrhage and contamination, temporary closure, resuscitation in ICU, planned re-look at 24–48 hours.",
     anatomyFocus: [
@@ -76579,7 +77089,7 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Energy Devices in Minimally Invasive Surgery",
+      "Laparoscopic Access Techniques",
       "Gastric Volvulus",
       "Necrotizing Fasciitis",
       "Primary Hyperparathyroidism"
@@ -76606,7 +77116,7 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "Abdominal Aortic Aneurysm",
       "Intraductal Papillary Mucinous Neoplasm",
-      "Complications of Minimally Invasive Surgery",
+      "Energy Devices in Minimally Invasive Surgery",
       "Splenic Trauma"
     ],
     answer: 3,
@@ -76678,7 +77188,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Diaphragm.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Leiomyosarcoma", "Popliteal Artery Aneurysm", "Traumatic Diaphragm Rupture", "Melanoma"],
+    options: [
+      "Liposarcoma",
+      "Popliteal Artery Aneurysm",
+      "Traumatic Diaphragm Rupture",
+      "Retroperitoneal Sarcoma"
+    ],
     answer: 2,
     explanation: "Often missed on initial imaging; CXR has poor sensitivity.",
     anatomyFocus: [
@@ -76798,7 +77313,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin/systemic.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Basal Cell Carcinoma", "Hemorrhoids", "Splanchnic Artery Aneurysm", "Burns"],
+    options: ["Melanoma", "Hemorrhoids", "Splanchnic Artery Aneurysm", "Burns"],
     answer: 3,
     explanation: "Immediate priorities: stop the burning process, airway assessment, fluid resuscitation (Parkland formula), wound care.",
     anatomyFocus: [
@@ -77003,7 +77518,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lung.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Lung Cancer", "Dysphagia", "Pilonidal Sinus", "Femoral Hernia"],
+    options: ["Lung Cancer", "Acute Abdomen", "Perianal Abscess & Fistula-in-Ano", "Inguinal Hernia"],
     answer: 0,
     explanation: "Leading cause of cancer death worldwide.",
     anatomyFocus: [
@@ -77023,7 +77538,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleural cavity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Thoracic Outlet Syndrome", "Pneumothorax", "Spigelian Hernia", "Radiation Enteritis"],
+    options: ["Carotid Body Tumor", "Pneumothorax", "Parastomal Hernia", "Short Bowel Syndrome"],
     answer: 1,
     explanation: "Air in the pleural space.",
     anatomyFocus: [
@@ -77043,7 +77558,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleural cavity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hemorrhoids", "Liver Abscess", "Pleural Empyema", "Thoracic Outlet Syndrome"],
+    options: ["Rectal Prolapse", "Portal Hypertension", "Pleural Empyema", "Carotid Body Tumor"],
     answer: 2,
     explanation: "Infected pleural fluid (frank pus, organisms on culture, or pH <7.2).",
     anatomyFocus: [
@@ -77063,7 +77578,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleura.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Basal Cell Carcinoma", "Necrotizing Fasciitis", "Carotid Body Tumor", "Mesothelioma"],
+    options: ["Melanoma", "Abdominal Compartment Syndrome", "Popliteal Artery Aneurysm", "Mesothelioma"],
     answer: 3,
     explanation: "Aggressive malignancy of pleural mesothelial cells, invariably linked to asbestos exposure.",
     anatomyFocus: [
@@ -77085,9 +77600,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Thymoma / Thymic Tumor",
-      "Living Donor Hepatectomy",
-      "Pelvic Fracture (Hemorrhage Control)",
-      "Liver Transplantation"
+      "Small Bowel Transplantation",
+      "Traumatic Diaphragm Rupture",
+      "Renal Transplantation"
     ],
     answer: 0,
     explanation: "Most common anterior mediastinal tumor in adults.",
@@ -77108,7 +77623,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Achalasia", "Esophageal Perforation", "Carotid Body Tumor", "Abdominal Compartment Syndrome"],
+    options: ["Hiatus Hernia", "Esophageal Perforation", "Popliteal Artery Aneurysm", "Damage Control Laparotomy"],
     answer: 1,
     explanation: "Highest mortality of any GI perforation (20–40%).",
     anatomyFocus: [
@@ -77128,7 +77643,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleural cavity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hepatic Adenoma", "Retroperitoneal Sarcoma", "Hemothorax", "Crohn's Disease"],
+    options: ["Colorectal Liver Metastases", "Obturator Hernia", "Hemothorax", "Ulcerative Colitis"],
     answer: 2,
     explanation: "Blood in the pleural space.",
     anatomyFocus: [
@@ -77148,7 +77663,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lung.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Gastric Cancer", "Pleural Empyema", "Hidradenitis Suppurativa", "Lung Abscess"],
+    options: ["Perforated Peptic Ulcer", "Pleural Empyema", "Squamous Cell Carcinoma (Skin)", "Lung Abscess"],
     answer: 3,
     explanation: "Cavitating lung infection with pus.",
     anatomyFocus: [
@@ -77168,7 +77683,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Mediastinum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Mediastinal Mass", "Diverticulitis", "Rectal Bleeding (Hematochezia)", "Lynch Syndrome (HNPCC)"],
+    options: ["Mediastinal Mass", "Acute Appendicitis", "Melena", "Familial Adenomatous Polyposis"],
     answer: 0,
     explanation: "Location defines differential: anterior (4Ts: thymoma/teratoma/lymphoma/thyroid), middle (lymphoma/cyst/tracheal), posterior (neurogenic tumors).",
     anatomyFocus: [
@@ -77188,12 +77703,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Chest wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Colorectal Liver Metastases",
-      "Chest Wall Tumor",
-      "Gastric Cancer",
-      "Acute Compartment Syndrome (Limb)"
-    ],
+    options: ["Gallbladder Cancer", "Chest Wall Tumor", "Perforated Peptic Ulcer", "Burns"],
     answer: 1,
     explanation: "Primary chest wall tumors are rare.",
     anatomyFocus: [
@@ -77213,7 +77723,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Chest wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Kaposi's Sarcoma", "Thyroid Cancer", "Pectus Excavatum / Carinatum", "Anal Canal Cancer"],
+    options: ["Merkel Cell Carcinoma", "Phyllodes Tumor", "Pectus Excavatum / Carinatum", "Crohn's Disease"],
     answer: 2,
     explanation: "Congenital chest wall deformity.",
     anatomyFocus: [
@@ -77233,13 +77743,38 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lung.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Chest Wall Tumor", "Acute Mesenteric Ischemia", "Obturator Hernia", "Pulmonary Carcinoid"],
+    options: ["Chest Wall Tumor", "Peripheral Arterial Disease", "Spigelian Hernia", "Pulmonary Carcinoid"],
     answer: 3,
     explanation: "Low-grade neuroendocrine tumor of the lung.",
     anatomyFocus: [
       "Typical carcinoid (TC): <2 mitoses/2mm², no necrosis; 10-year survival >90%",
       "Atypical carcinoid (AC): 2–10 mitoses/2mm² OR necrosis; 10-year survival 50–70%",
       "Often presents with recurrent hemoptysis, recurrent pneumonia (central), or incidental peripheral nodule"
+    ]
+  },
+  {
+    id: "img-congenital-diaphragmatic-hernia",
+    dept: "thoracic",
+    disease: "congenital-diaphragmatic-hernia",
+    diseaseName: "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+    source: "Radiopaedia",
+    url: "https://radiopaedia.org/search?q=Congenital%20Diaphragmatic%20Hernia",
+    query: "Congenital Diaphragmatic Hernia",
+    tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
+    prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Diaphragm.",
+    stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
+    options: [
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+      "Vascular Trauma",
+      "Perianal Abscess & Fistula-in-Ano",
+      "Insulinoma"
+    ],
+    answer: 0,
+    explanation: "Herniation of abdominal viscera into the thorax through a congenital diaphragmatic defect.",
+    anatomyFocus: [
+      "Bochdalek hernia: posterolateral defect (failure of pleuroperitoneal canal closure); ~85% of CDH; left-sided in ~85%; neonatal respiratory distress with pulmonary hypoplasia",
+      "Morgagni hernia: anterior retrosternal defect (foramen of Morgagni, between sternal and costal diaphragm origins); ~2–3% of CDH; right-sided in ~90%; often asymptomatic and found in adults",
+      "Adult presentation: usually Morgagni — incidental CXR/CT finding, vague GI or respiratory symptoms, occasionally obstruction/strangulation of herniated colon or omentum"
     ]
   },
   {
@@ -77253,8 +77788,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Groin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Inguinal Hernia", "Acute Cholecystitis", "Cecal Volvulus", "Breast Abscess"],
-    answer: 0,
+    options: [
+      "Liver Transplantation",
+      "Inguinal Hernia",
+      "Gastro-Esophageal Reflux Disease (GERD)",
+      "Popliteal Artery Aneurysm"
+    ],
+    answer: 1,
     explanation: "Most common hernia.",
     anatomyFocus: [
       "Indirect: lateral to inferior epigastric vessels; through deep inguinal ring; congenital patent processus vaginalis",
@@ -77273,13 +77813,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Femoral canal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Liver Transplantation",
-      "Femoral Hernia",
-      "Gastro-Esophageal Reflux Disease (GERD)",
-      "Popliteal Artery Aneurysm"
-    ],
-    answer: 1,
+    options: ["Liver Transplantation", "Squamous Cell Carcinoma (Skin)", "Femoral Hernia", "Dysphagia"],
+    answer: 2,
     explanation: "High risk of strangulation — all femoral hernias should be repaired promptly.",
     anatomyFocus: [
       "Boundaries of femoral canal: anterior (inguinal ligament), medial (lacunar ligament), lateral (femoral vein), posterior (pectineal ligament/Cooper's ligament)",
@@ -77298,8 +77833,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Umbilicus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Liver Transplantation", "Hidradenitis Suppurativa", "Umbilical Hernia", "Dysphagia"],
-    answer: 2,
+    options: ["Small Bowel Tumors", "Liver Abscess", "Liver Trauma", "Umbilical Hernia"],
+    answer: 3,
     explanation: "Common in adults, especially obese or multiparous women.",
     anatomyFocus: [
       "True umbilical hernia: through umbilical ring (in adults, often previously closed then re-opened); vs paraumbilical hernia (through linea alba immediately adjacent to umbilicus)",
@@ -77318,8 +77853,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdominal wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Small Bowel Tumors", "Liver Abscess", "Liver Trauma", "Incisional Hernia"],
-    answer: 3,
+    options: ["Incisional Hernia", "Hepatocellular Carcinoma", "Liposarcoma", "Wound Dehiscence / Burst Abdomen"],
+    answer: 0,
     explanation: "Develops in 10–15% of all laparotomies.",
     anatomyFocus: [
       "Occurs in 10–15% of laparotomies; higher with midline closure, obesity, wound infection",
@@ -77339,12 +77874,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anterior abdominal wall (linea alba).",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Gastro-Esophageal Reflux Disease (GERD)",
       "Epigastric Hernia",
-      "Hepatocellular Carcinoma",
-      "Leiomyosarcoma",
-      "Wound Dehiscence / Burst Abdomen"
+      "Acute Cholangitis",
+      "ATLS Primary Survey (X-ABCDE)"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Protrusion through a defect in the linea alba between xiphisternum and umbilicus; most contain pre-peritoneal fat (not peritoneal sac); repair by suture (small) or mesh (≥1 cm or symptomatic recurrence).",
     anatomyFocus: [
       "Epigastric hernias occur through defects in the linea alba above the umbilicus, between the xiphoid and umbilicus",
@@ -77363,13 +77898,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Any hernia site.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Gastro-Esophageal Reflux Disease (GERD)",
-      "Strangulated Hernia",
-      "Acute Cholangitis",
-      "ATLS Primary Survey (X-ABCDE)"
-    ],
-    answer: 1,
+    options: ["Peripheral Arterial Disease", "Insulinoma", "Strangulated Hernia", "Acute Cholecystitis"],
+    answer: 2,
     explanation: "Surgical emergency.",
     anatomyFocus: [
       "Incarceration: irreducible but no vascular compromise; Strangulation: vascular compromise → ischemia",
@@ -77388,8 +77918,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stoma site.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Peripheral Arterial Disease", "Insulinoma", "Parastomal Hernia", "Acute Cholecystitis"],
-    answer: 2,
+    options: ["Strangulated Hernia", "Adrenocortical Carcinoma", "Damage Control Laparotomy", "Parastomal Hernia"],
+    answer: 3,
     explanation: "Hernia alongside a stoma, developing in 30–50% of colostomies.",
     anatomyFocus: [
       "Occurs in 30–50% of colostomies; 5–15% of ileostomies within 5 years",
@@ -77408,8 +77938,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lateral abdominal wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Strangulated Hernia", "Adrenocortical Carcinoma", "Damage Control Laparotomy", "Spigelian Hernia"],
-    answer: 3,
+    options: ["Spigelian Hernia", "Renal Transplantation", "Popliteal Artery Aneurysm", "Lung Cancer"],
+    answer: 0,
     explanation: "Rare hernia through the semilunar line (Spigel's fascia) at the lateral edge of the rectus sheath.",
     anatomyFocus: [
       "Herniates through semilunar line (Spigel's fascia) at junction of rectus abdominis and transversus abdominis aponeurosis",
@@ -77428,8 +77958,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Obturator foramen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Obturator Hernia", "Renal Transplantation", "Popliteal Artery Aneurysm", "Lung Cancer"],
-    answer: 0,
+    options: [
+      "Breast Abscess",
+      "Obturator Hernia",
+      "Pelvic Fracture (Hemorrhage Control)",
+      "Energy Devices in Minimally Invasive Surgery"
+    ],
+    answer: 1,
     explanation: "Rare hernia through obturator foramen.",
     anatomyFocus: [
       "Elderly thin women: 6:1 F:M ratio; multiparous; lost the fat pad obturating foramen",
@@ -77449,12 +77984,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Retroperitoneum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Breast Abscess",
+      "Acute Aortic Dissection",
+      "Umbilical Hernia",
       "Retroperitoneal Sarcoma",
-      "Pelvic Fracture (Hemorrhage Control)",
-      "Complications of Minimally Invasive Surgery"
+      "Peripheral Arterial Disease"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Most common retroperitoneal sarcoma is liposarcoma (50%) followed by leiomyosarcoma.",
     anatomyFocus: [
       "Liposarcoma (50%) and leiomyosarcoma (25%) are the two most common histotypes",
@@ -77473,8 +78008,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Peripheral Arterial Disease", "Hidradenitis Suppurativa", "Melanoma", "Acute Mesenteric Ischemia"],
-    answer: 2,
+    options: [
+      "Pulmonary Carcinoid",
+      "Principles of Laparoscopy & Pneumoperitoneum",
+      "Pancreatic Ductal Adenocarcinoma",
+      "Melanoma"
+    ],
+    answer: 3,
     explanation: "Wide local excision with sentinel lymph node biopsy; adjuvant immunotherapy/targeted therapy for stage III–IV.",
     anatomyFocus: [
       "Breslow thickness is the single most important prognostic factor",
@@ -77493,13 +78033,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Pulmonary Carcinoid",
-      "Laparoscopic Access Techniques",
-      "Pancreatic Ductal Adenocarcinoma",
-      "Basal Cell Carcinoma"
-    ],
-    answer: 3,
+    options: ["Basal Cell Carcinoma", "Epigastric Hernia", "Ulcerative Colitis", "Adrenal Incidentaloma"],
+    answer: 0,
     explanation: "Most common human cancer; locally aggressive but rarely metastasises; excision with 4 mm margins or Mohs surgery for high-risk/face tumors.",
     anatomyFocus: [
       "Most common cancer in humans; >90% on head and neck (sun-exposed areas)",
@@ -77518,13 +78053,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Squamous Cell Carcinoma (Skin)",
-      "Strangulated Hernia",
-      "Ulcerative Colitis",
-      "Adrenal Incidentaloma"
-    ],
-    answer: 0,
+    options: ["Deep Vein Thrombosis", "Squamous Cell Carcinoma (Skin)", "Ulcerative Colitis", "Parastomal Hernia"],
+    answer: 1,
     explanation: "Second most common skin cancer; significant metastatic potential (~5%); excise with 4–6 mm margins; high-risk features require SLNB and adjuvant RT.",
     anatomyFocus: [
       "Arises from keratinocytes; major risk is cumulative UV; immunosuppressed patients have 100× increased risk",
@@ -77543,8 +78073,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin/Apocrine glands.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Deep Vein Thrombosis", "Hidradenitis Suppurativa", "Ulcerative Colitis", "Spigelian Hernia"],
-    answer: 1,
+    options: ["Graves' Disease", "Multinodular Goitre", "Hidradenitis Suppurativa", "Colon Cancer"],
+    answer: 2,
     explanation: "Chronic inflammatory follicular disease of apocrine gland-bearing skin; medical management first; radical wide excision with primary closure or flap for Hurley III.",
     anatomyFocus: [
       "Follicular occlusion — NOT primary apocrine infection — causes HS; apocrine involvement is secondary",
@@ -77563,8 +78093,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue/Retroperitoneum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Graves' Disease", "Multinodular Goitre", "Liposarcoma", "Colon Cancer"],
-    answer: 2,
+    options: ["Mesothelioma", "Esophageal Perforation (Boerhaave)", "Kaposi's Sarcoma", "Liposarcoma"],
+    answer: 3,
     explanation: "Most common retroperitoneal sarcoma; surgery is the only curative modality; aim for R0 resection; dedifferentiated subtype has worst prognosis.",
     anatomyFocus: [
       "Most common retroperitoneal soft tissue sarcoma (40–45% of all retroperitoneal STS)",
@@ -77583,8 +78113,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue/Vascular.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Mesothelioma", "Esophageal Perforation (Boerhaave)", "Kaposi's Sarcoma", "Leiomyosarcoma"],
-    answer: 3,
+    options: ["Leiomyosarcoma", "Hidradenitis Suppurativa", "Thymoma / Thymic Tumor", "Colon Cancer"],
+    answer: 0,
     explanation: "Malignant smooth muscle tumor; retroperitoneal or IVC origin most challenging; complete resection with vascular reconstruction where needed is the only curative option.",
     anatomyFocus: [
       "Retroperitoneal LMS is distinct from uterine LMS — worse prognosis, different molecular profile",
@@ -77603,8 +78133,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue/Mesentery.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Desmoid Tumor", "Hidradenitis Suppurativa", "Thymoma / Thymic Tumor", "Colon Cancer"],
-    answer: 0,
+    options: ["Gallbladder Cancer", "Desmoid Tumor", "Pleural Empyema", "Crohn's Disease"],
+    answer: 1,
     explanation: "Locally aggressive fibromatosis with no metastatic potential; paradigm shift to active surveillance first; surgery for progressors; sorafenib for FAP-related intra-abdominal desmoids.",
     anatomyFocus: [
       "Desmoid tumors do NOT metastasize — mortality from local complications (bowel obstruction, fistula, vascular compression)",
@@ -77623,8 +78153,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Gallbladder Cancer", "Merkel Cell Carcinoma", "Pleural Empyema", "Crohn's Disease"],
-    answer: 1,
+    options: ["Hepatic Adenoma", "Achalasia", "Merkel Cell Carcinoma", "Kaposi's Sarcoma"],
+    answer: 2,
     explanation: "Rare but aggressive cutaneous neuroendocrine carcinoma; Merkel cell polyomavirus (MCPyV) in 80%; excellent response to immunotherapy (avelumab/pembrolizumab).",
     anatomyFocus: [
       "Merkel cell carcinoma (MCC): red/violet dome-shaped rapidly growing nodule; head/neck or extremities in elderly or immunosuppressed",
@@ -77643,8 +78173,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin/Mucosa/Viscera.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hepatic Adenoma", "Achalasia", "Kaposi's Sarcoma", "Merkel Cell Carcinoma"],
-    answer: 2,
+    options: ["Therapeutic Endoscopy (Principles)", "Angiodysplasia", "Pulmonary Carcinoid", "Kaposi's Sarcoma"],
+    answer: 3,
     explanation: "HHV-8 driven vascular tumor; primarily a medical disease — treat the underlying immunosuppression; systemic chemotherapy for advanced disease.",
     anatomyFocus: [
       "All forms driven by HHV-8 (KSHV — Kaposi's Sarcoma-associated Herpesvirus) infection",
@@ -78442,7 +78972,8 @@ const QUIZ_BANK = [
   {"id":"q-atls-survey-1","dept":"trauma","disease":"atls-primary-survey","format":"mcq","stem":"Modern trauma primary surveys add a step before 'A' for airway. In PHTLS/UK courses this is 'X'. In ATLS it is written '<C>'. What does this pre-step represent?","options":["Cervical spine assessment","eXsanguinating / Catastrophic external hemorrhage control","Chest decompression","Consciousness assessment","C-spine CT clearance"],"answer":1,"explanation":"X-ABCDE (PHTLS, TCCC, UK trauma) and <C>ABCDE (ATLS 10/11) both place hemorrhage control FIRST: X = eXsanguinating hemorrhage; <C> = Catastrophic hemorrhage. Tourniquet for limb bleeding; wound packing for junctional. This pre-step is performed before airway. Key distinction: in X-ABCDE, 'C' retains its original meaning of Circulation."},
   {"id":"q-atls-shock-1","dept":"trauma","disease":"atls-haemorrhagic-shock","format":"mcq","stem":"A trauma patient has HR 128, SBP 88, GCS 12, RR 32, and base deficit −8. Which ATLS shock class?","options":["Class I","Class II","Class III","Class IV","Neurogenic shock"],"answer":2,"explanation":"Class III hemorrhagic shock: 30–40% blood volume loss (1500–2000mL). HR >120, SBP <90, GCS 11–13, RR 30–40, BD −6 to −10. Requires blood transfusion + MTP activation. Class IV: HR >140, SBP <70, GCS <10."},
   {"id":"q-atls-spinal-1","dept":"trauma","disease":"atls-spinal-trauma","format":"mcq","stem":"NEXUS criteria: which combination allows clinical clearance of the C-spine without imaging?","options":["GCS 15 + no midline tenderness alone","All 5 criteria negative: no tenderness, no neuro deficit, normal alertness, no intoxication, no distracting injury","Normal GCS + no intoxication","Age <65 + no mechanism","Normal plain X-ray C-spine"],"answer":1,"explanation":"NEXUS: ALL 5 criteria must be negative to clinically clear the C-spine. 1) No posterior midline C-spine tenderness. 2) No focal neurological deficit. 3) Normal alertness. 4) No intoxication. 5) No painful distracting injury. Sensitivity 99.6%. Any single positive criterion = CT C-spine required."},
-  {"id":"q-atls-airway-1","dept":"trauma","disease":"atls-airway","format":"mcq","stem":"After 3 failed RSI attempts in a trauma patient, SpO₂ is falling to 78%. Bag-mask ventilation is also failing. ATLS 11 immediate next step?","options":["Try a 4th intubation attempt with a smaller tube","Insert a nasopharyngeal airway","Declare CICO — immediate scalpel-finger-bougie cricothyroidotomy","Insert LMA and call for senior help","Needle cricothyroidotomy with IV cannula"],"answer":2,"explanation":"CICO (Cannot Intubate Cannot Oxygenate): declare CICO after 3 failed attempts + failed supraglottic oxygenation. Immediate scalpel-finger-bougie cricothyroidotomy (ATLS 11 preferred technique): 4cm vertical skin incision → stab through cricothyroid membrane → finger to confirm → bougie → 6.0 ETT → inflate → ETCO₂. No further laryngoscopy attempts."}
+  {"id":"q-atls-airway-1","dept":"trauma","disease":"atls-airway","format":"mcq","stem":"After 3 failed RSI attempts in a trauma patient, SpO₂ is falling to 78%. Bag-mask ventilation is also failing. ATLS 11 immediate next step?","options":["Try a 4th intubation attempt with a smaller tube","Insert a nasopharyngeal airway","Declare CICO — immediate scalpel-finger-bougie cricothyroidotomy","Insert LMA and call for senior help","Needle cricothyroidotomy with IV cannula"],"answer":2,"explanation":"CICO (Cannot Intubate Cannot Oxygenate): declare CICO after 3 failed attempts + failed supraglottic oxygenation. Immediate scalpel-finger-bougie cricothyroidotomy (ATLS 11 preferred technique): 4cm vertical skin incision → stab through cricothyroid membrane → finger to confirm → bougie → 6.0 ETT → inflate → ETCO₂. No further laryngoscopy attempts."},
+  {"id":"q-congenital-diaphragmatic-hernia-1","dept":"thoracic","disease":"congenital-diaphragmatic-hernia","format":"mcq","stem":"A 55-year-old has an incidental rounded right-sided anterior cardiophrenic opacity on CXR; CT shows transverse colon herniating through an anterior retrosternal diaphragmatic defect. Which congenital diaphragmatic hernia is this?","options":["Bochdalek hernia (posterolateral)","Morgagni hernia (anterior retrosternal)","Sliding hiatus hernia","Traumatic diaphragmatic rupture","Diaphragmatic eventration"],"answer":1,"explanation":"Morgagni hernia: anterior retrosternal defect at the foramen of Morgagni; ~90% right-sided (the pericardium shields the left foramen); usually asymptomatic and found incidentally in adults. Bochdalek is posterolateral, mostly left-sided, and typically presents in neonates with pulmonary hypoplasia. Adult Morgagni is repaired (commonly laparoscopically) to prevent colonic obstruction/strangulation. Distinct from hiatus hernia, which herniates through the oesophageal hiatus."}
 ];
 // end QUIZ_BANK
 

@@ -1429,5 +1429,131 @@ const THORACIC_DISEASES = [
     "Wedge resection without systematic lymph node dissection — under-stages nodal involvement",
     "Confusing LCNEC with typical carcinoid — LCNEC is high-grade and requires aggressive systemic therapy like SCLC"
   ]
+},
+{
+  id: "congenital-diaphragmatic-hernia",
+  dept: "thoracic",
+  name: "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+  latin: "Hernia diaphragmatica congenita",
+  organ: "Diaphragm",
+  severity: "moderate",
+  tags: ["thoracic","diaphragm","congenital","hernia","bochdalek","morgagni"],
+  hero: "Herniation of abdominal viscera into the thorax through a congenital diaphragmatic defect. Bochdalek (posterolateral, ~85% of CDH) presents mostly in neonates; Morgagni (anterior/retrosternal, rare) is frequently found incidentally in adults. Distinct from acquired hiatus hernia — the defect is a true developmental failure of diaphragm formation.",
+  keypoints: [
+    "Bochdalek hernia: posterolateral defect (failure of pleuroperitoneal canal closure); ~85% of CDH; left-sided in ~85%; neonatal respiratory distress with pulmonary hypoplasia",
+    "Morgagni hernia: anterior retrosternal defect (foramen of Morgagni, between sternal and costal diaphragm origins); ~2–3% of CDH; right-sided in ~90%; often asymptomatic and found in adults",
+    "Adult presentation: usually Morgagni — incidental CXR/CT finding, vague GI or respiratory symptoms, occasionally obstruction/strangulation of herniated colon or omentum",
+    "Key distinction from hiatus hernia: CDH herniates through a true diaphragmatic defect away from the oesophageal hiatus; hiatus hernia is acquired widening of the hiatus itself",
+    "Adult symptomatic or complicated CDH is a surgical indication — repair (open or laparoscopic/thoracoscopic) prevents visceral strangulation"
+  ],
+  differentials: ["Hiatus hernia (sliding or paraoesophageal)","Traumatic diaphragmatic rupture","Eventration of the diaphragm","Diaphragmatic paralysis (phrenic nerve palsy)","Mediastinal or pericardial fat pad","Lung sequestration or congenital lung malformation (neonate)"],
+  mnemonics: [
+    {name:"Bochdalek vs Morgagni location", text:"BOCHDALEK = Back and to the (L)eft, Large and common; MORGAGNI = Medial/anterior, on the Right, Minor and rare"},
+    {name:"Morgagni RAMP", text:"Morgagni: Right-sided, Anterior, Middle-age/adult, Parasternal (retrosternal) — often incidental"}
+  ],
+  overview: {
+    definition: "A congenital defect in the diaphragm allowing abdominal contents to herniate into the thoracic cavity. Two classic anatomical types: Bochdalek (posterolateral) and Morgagni (anterior retrosternal). Unlike a hiatus hernia, the herniation occurs through a developmental diaphragmatic defect rather than the oesophageal hiatus.",
+    epidemiology: "CDH overall incidence ~1 in 2,500–3,000 live births. Bochdalek accounts for ~85% and typically presents in the neonatal period; Morgagni accounts for ~2–3% and, being frequently asymptomatic, is disproportionately discovered in adults on imaging. Morgagni shows a mild female and right-sided predominance.",
+    pathophysiology: "Bochdalek: failure of the pleuroperitoneal membrane to close the pleuroperitoneal canal by ~8 weeks gestation → posterolateral defect → visceral herniation → ipsilateral (and contralateral) pulmonary hypoplasia and pulmonary hypertension in neonates. Morgagni: persistent defect at the anterior sternocostal triangle (foramen of Morgagni) where the septum transversum meets the costal margin → herniation of omentum, transverse colon, or stomach into the anterior mediastinum. In adults, raised intra-abdominal pressure (obesity, pregnancy, chronic cough) may unmask or enlarge a Morgagni defect.",
+    classification: [
+      {label:"Bochdalek (posterolateral)", note:"~85% of CDH; left-sided ~85%; large defect; neonatal respiratory distress from pulmonary hypoplasia; rarely presents late in adulthood"},
+      {label:"Morgagni (anterior retrosternal)", note:"~2–3% of CDH; right-sided ~90% (heart shields the left foramen); small defect; usually asymptomatic; most adult CDH presentations"},
+      {label:"Central / septum transversum defect", note:"Rare; deficiency of the central tendon"},
+      {label:"Diaphragmatic eventration", note:"Not a true hernia — thinned but intact diaphragm with abnormal elevation; important differential"},
+      {label:"Hiatus hernia (for contrast)", note:"Acquired herniation of stomach through the oesophageal hiatus — a separate acquired entity, not classed as CDH"}
+    ]
+  },
+  diagnosis: {
+    history: [
+      "Adult Morgagni: often incidental on CXR/CT; vague retrosternal or epigastric discomfort, postprandial fullness, mild dyspnea or cough",
+      "Recurrent chest infections or basal atelectasis from herniated viscera",
+      "Bowel obstruction symptoms (colicky pain, vomiting, distension) if colon herniates and obstructs — a surgical emergency",
+      "Neonatal Bochdalek (brief note): severe respiratory distress at birth, scaphoid abdomen, cyanosis — managed by paediatric/neonatal surgery, outside this adult-focused entry",
+      "History of connective tissue disorder or prior diaphragmatic surgery increases index of suspicion"
+    ],
+    examination: [
+      "Often normal in the adult; reduced air entry at a lung base",
+      "Bowel sounds audible over the thorax if bowel has herniated",
+      "Signs of bowel obstruction or strangulation if complicated (tenderness, distension, tachycardia)",
+      "Neonate: scaphoid abdomen, displaced apex beat, respiratory distress (brief note only)"
+    ],
+    investigations: [
+      {name:"Chest X-ray (PA and lateral)", role:"Morgagni: rounded anterior cardiophrenic opacity, often right-sided; may show bowel gas or air-fluid level in the thorax; Bochdalek: retrocardiac gas-filled loops"},
+      {name:"CT chest/abdomen with contrast", role:"Investigation of choice in adults — defines defect location and size, identifies herniated contents (omentum, colon, stomach), and detects obstruction/strangulation"},
+      {name:"Contrast study (barium/gastrografin)", role:"Delineates whether stomach or colon is within the hernia; useful for surgical planning"},
+      {name:"MRI", role:"Problem-solving for soft-tissue characterization or when radiation is undesirable; clarifies eventration vs true defect"},
+      {name:"Echocardiography", role:"Neonatal Bochdalek — assess pulmonary hypertension and cardiac function (brief note; paediatric setting)"}
+    ]
+  },
+  criteria: {
+    title: "Distinguishing Features: Bochdalek vs Morgagni vs Hiatus Hernia",
+    items: [
+      {k:"Bochdalek — location", v:"Posterolateral; left-sided ~85%; large defect"},
+      {k:"Bochdalek — presentation", v:"Neonatal respiratory distress + pulmonary hypoplasia; rare late/adult presentation"},
+      {k:"Morgagni — location", v:"Anterior retrosternal (foramen of Morgagni); right-sided ~90%; small defect"},
+      {k:"Morgagni — presentation", v:"Usually asymptomatic; incidental in adults; risk of colonic obstruction"},
+      {k:"Hiatus hernia — location", v:"Through the oesophageal hiatus; acquired, not congenital"},
+      {k:"Surgical trigger (adult CDH)", v:"Symptomatic, enlarging, or complicated (obstruction/strangulation) → repair"}
+    ]
+  },
+  scoring: [],
+  management: {
+    conservative: [
+      "Truly asymptomatic, incidentally found small Morgagni hernia in a high-risk/elderly patient: individualized observation may be reasonable, though elective repair is generally advised because of strangulation risk",
+      "Optimize comorbidities and reduce raised intra-abdominal pressure (weight loss, cough control) where surgery is deferred"
+    ],
+    medical: [
+      "No definitive medical therapy — congenital defects do not resolve pharmacologically",
+      "Symptom control (e.g. for reflux or constipation) is adjunctive only, not a substitute for repair in symptomatic disease",
+      "Neonatal Bochdalek (brief note): pre-operative stabilization with gentle ventilation, permissive hypercapnia, pulmonary hypertension management ± ECMO before repair — paediatric domain"
+    ],
+    surgical: [
+      {name:"Laparoscopic Morgagni repair", when:"Preferred approach for adult Morgagni hernia; symptomatic or to prevent strangulation", notes:"Transabdominal reduction of hernia contents, excision or inversion of the sac, and closure of the defect with sutures ± prosthetic mesh for larger defects; low morbidity, short stay"},
+      {name:"Open transabdominal repair", when:"Complicated hernia (obstruction/strangulation, need for bowel resection), large defects, or hostile abdomen", notes:"Subcostal or midline laparotomy; reduce viscera, resect non-viable bowel, primary or mesh closure of the defect"},
+      {name:"Thoracoscopic / thoracotomy repair", when:"Selected Bochdalek or when dense intrathoracic adhesions favor a chest approach", notes:"Thoracic access to reduce viscera and close the posterolateral defect; mesh for large defects"},
+      {name:"Neonatal Bochdalek repair (brief note)", when:"After cardiopulmonary stabilization of the neonate", notes:"Paediatric/neonatal surgery — reduction and defect closure (primary or patch); outside the scope of this adult-focused entry"}
+    ]
+  },
+  technique: {
+    title: "Laparoscopic Repair of Adult Morgagni Hernia",
+    prep: [
+      "GA; supine, mild reverse Trendelenburg with surgeon between the legs or on the patient's side",
+      "Prophylactic antibiotics; nasogastric decompression",
+      "Availability of prosthetic mesh for defects too large for tension-free primary closure"
+    ],
+    steps: [
+      {n:1, t:"Port placement", d:"Standard upper-abdominal laparoscopic ports; establish pneumoperitoneum and inspect the anterior diaphragm"},
+      {n:2, t:"Reduce contents", d:"Gently reduce herniated omentum and transverse colon from the anterior mediastinum back into the abdomen"},
+      {n:3, t:"Assess the sac", d:"Identify the retrosternal defect; excise or invert the hernial sac (excision reduces recurrence but risks pneumomediastinum/pericardial injury)"},
+      {n:4, t:"Close the defect", d:"Approximate the defect edges with non-absorbable sutures, anchoring anteriorly to the posterior rectus sheath / costal margin where the anterior rim is deficient"},
+      {n:5, t:"Reinforce if large", d:"Place prosthetic mesh with adequate overlap for defects that cannot be closed tension-free; secure with tackers/sutures avoiding the pericardium"},
+      {n:6, t:"Check and close", d:"Confirm hemostasis and bowel viability; remove ports under vision; close"}
+    ],
+    pearls: [
+      "Right-sided anterior cardiophrenic mass on CXR in an adult is Morgagni hernia until proven otherwise",
+      "Beware the pericardium and internal mammary vessels when closing the anterior defect",
+      "Excising the sac lowers recurrence but proceed cautiously to avoid pneumomediastinum or cardiac injury"
+    ]
+  },
+  guidelines: [
+    {src:"SAGES guidance on diaphragmatic and hiatal hernia repair"},
+    {src:"CDH EURO Consortium consensus (neonatal Bochdalek — reference for paediatric management)"},
+    {src:"Bailey & Love / Sabiston — congenital diaphragmatic hernia sections (textbook source for Bochdalek vs Morgagni)"}
+  ],
+  pearls: [
+    "Bochdalek = Big, Back (posterolateral), and mostly Left; Morgagni = Minor, Middle/anterior, and mostly Right",
+    "Most adult CDH encountered by general/thoracic surgeons is Morgagni discovered incidentally",
+    "Standard textbook sources for this comparison are Bailey & Love's Short Practice of Surgery and Sabiston Textbook of Surgery"
+  ],
+  mistakes: [
+    "Labeling every diaphragmatic herniation a 'hiatus hernia' — CDH is a distinct congenital defect away from the oesophageal hiatus",
+    "Assuming an incidental Morgagni hernia is harmless — herniated colon can obstruct or strangulate",
+    "Injuring the pericardium or internal mammary vessels during anterior defect closure",
+    "Confusing diaphragmatic eventration (intact thinned muscle) with a true defect — management differs"
+  ],
+  related: [
+    {id:"hiatus-hernia", note:"Acquired herniation through the oesophageal hiatus — the main differential; contrast with the true congenital defect of CDH"},
+    {id:"diaphragm-rupture", note:"Traumatic diaphragmatic defect — an acquired mimic of CDH on imaging"}
+  ]
 }
 ];
