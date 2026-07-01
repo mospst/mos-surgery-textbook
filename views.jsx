@@ -525,9 +525,16 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
         )}
 
         {/* MANAGEMENT */}
-        {(mg.conservative?.length || mg.medical?.length || mg.surgical?.length) ? (
+        {(d.timing || mg.conservative?.length || mg.medical?.length || mg.surgical?.length) ? (
           <div className="detail-section" id="sec-management">
             <SectionHead num="05" title="Management" />
+            {d.timing && (
+              <div className="tier timing">
+                <div className="tier-label">Timing · Golden Period</div>
+                <div className="timing-window">{d.timing.window}</div>
+                {d.timing.detail && <div className="timing-detail">{d.timing.detail}</div>}
+              </div>
+            )}
             {mg.conservative?.length > 0 && (
               <div className="tier conservative">
                 <div className="tier-label">Conservative</div>

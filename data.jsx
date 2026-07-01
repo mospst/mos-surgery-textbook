@@ -335,7 +335,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "abdominal aortic aneurysm"
       }
-    ]
+    ],
+    timing: {
+      window: "Ruptured AAA → immediate repair (door-to-intervention <90 min); elective repair at ≥5.5 cm (men) / ≥5.0 cm (women) or growth >1 cm/yr",
+      detail: "If unstable, do not delay for imaging — permissive hypotension (SBP ~70–90) straight to theatre/EVAR. Below-threshold aneurysms are surveilled, not operated."
+    }
   },
 
   {
@@ -610,7 +614,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "critical limb ischemia"
       }
-    ]
+    ],
+    timing: {
+      window: "Acute limb ischemia (Rutherford IIb) — revascularize within 6 h; irreversible (III, paralyzed/insensate) → primary amputation. Chronic CLTI → revascularize within ~2 weeks of tissue loss",
+      detail: "6-h skeletal-muscle tolerance to warm ischemia. Delay risks reperfusion injury, compartment syndrome, and limb loss."
+    }
   },
 
   {
@@ -882,7 +890,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "carotid artery stenosis"
       }
-    ]
+    ],
+    timing: {
+      window: "Symptomatic carotid stenosis (50–99%) — carotid endarterectomy within 2 weeks of the index TIA/stroke",
+      detail: "Recurrent-stroke risk is highest in the first 14 days, so early surgery gives the greatest benefit. Beyond 12 weeks the benefit falls sharply."
+    }
   },
 
   {
@@ -1148,7 +1160,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "deep vein thrombosis"
       }
-    ]
+    ],
+    timing: {
+      window: "Phlegmasia cerulea dolens → urgent thrombolysis/thrombectomy within hours to save the limb; iliofemoral DVT → consider catheter-directed thrombolysis within 14 days",
+      detail: "Anticoagulate immediately on diagnosis. Threatened venous gangrene is a limb emergency."
+    }
   },
 
   {
@@ -1679,7 +1695,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "aortic dissection"
       }
-    ]
+    ],
+    timing: {
+      window: "Type A (ascending) = surgical emergency within hours; uncomplicated Type B = medical, intervene only for malperfusion/rupture",
+      detail: "Type A mortality rises ~1–2% per hour untreated. Type B: strict impulse control (SBP <120, HR <60); TEVAR for complications."
+    }
   },
 
   {
@@ -2229,7 +2249,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "mesenteric ischemia"
       }
-    ]
+    ],
+    timing: {
+      window: "Acute mesenteric ischemia — revascularize within ~6 h ('golden window') before transmural infarction",
+      detail: "Each hour of delay increases bowel loss and mortality (up to 60–80%). Fast-track CT angiogram; do not wait for lactate to rise."
+    }
   },
 
   {
@@ -3980,7 +4004,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "Vascular Trauma"
       }
-    ]
+    ],
+    timing: {
+      window: "Hard signs → theatre immediately; limb tolerates ~6 h ischemia — restore flow (temporary shunt if needed) before definitive repair",
+      detail: "Damage-control shunt buys time for orthopedic fixation. Warm ischemia >6 h → high fasciotomy/amputation rate."
+    }
   },
 
   {
@@ -4528,7 +4556,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Acute Pancreatitis"
       }
-    ]
+    ],
+    timing: {
+      window: "Gallstone pancreatitis → cholecystectomy same admission after mild attack settles; infected necrosis → delay necrosectomy ≥4 weeks for wall-off",
+      detail: "Same-admission cholecystectomy cuts recurrence from ~30% to <5%. Necrosectomy before 4 weeks carries high mortality — use the step-up approach."
+    }
   },
 
   {
@@ -4821,7 +4853,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "gallstones"
       }
-    ]
+    ],
+    timing: {
+      window: "Symptomatic gallstones — elective laparoscopic cholecystectomy, ideally same admission or within 6 weeks of presentation",
+      detail: "Prompt surgery pre-empts progression to cholecystitis, pancreatitis, or CBD stones. Asymptomatic stones are not an indication."
+    }
   },
 
   {
@@ -5111,7 +5147,11 @@ const DISEASES = [
         id: "conversion-to-open",
         note: "Difficult cholecystectomy: critical view, subtotal, or convert"
       }
-    ]
+    ],
+    timing: {
+      window: "Early laparoscopic cholecystectomy within 72 h of symptom onset (acceptable up to 7–10 days)",
+      detail: "Early beats interval surgery — shorter stay, fewer complications, no recurrence interval. After ~10 days dense adhesions raise conversion risk; a 6-week interval is the alternative."
+    }
   },
 
   {
@@ -5385,7 +5425,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "cholangitis"
       }
-    ]
+    ],
+    timing: {
+      window: "Biliary decompression (ERCP): Grade III urgent <12 h, Grade II <24–48 h, Grade I within 72 h",
+      detail: "Resuscitate first, but never delay drainage in a septic (Reynolds' pentad) patient. Interval cholecystectomy after recovery."
+    }
   },
 
   {
@@ -5985,7 +6029,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "choledocholithiasis"
       }
-    ]
+    ],
+    timing: {
+      window: "CBD stone with cholangitis/obstruction → ERCP within 24–72 h; then cholecystectomy same admission",
+      detail: "Clear the duct before or during cholecystectomy. Urgency is driven by sepsis/obstruction, not the stone alone."
+    }
   },
 
   {
@@ -11043,7 +11091,11 @@ const DISEASES = [
         id: "diagnostic-laparoscopy",
         note: "Confirm and treat appendicitis at the same sitting"
       }
-    ]
+    ],
+    timing: {
+      window: "Appendicectomy is urgent but not immediate — an in-hospital delay of up to 12–24 h with antibiotics is safe; perforation risk rises thereafter",
+      detail: "Start antibiotics at diagnosis. Complicated/perforated with a walled-off abscess → drainage + interval appendicectomy."
+    }
   },
 
   {
@@ -11332,7 +11384,11 @@ const DISEASES = [
         id: "conversion-to-open",
         note: "Hostile pelvis in complicated diverticular disease"
       }
-    ]
+    ],
+    timing: {
+      window: "Hinchey III/IV (purulent/feculent peritonitis) → emergency surgery; uncomplicated → antibiotics, elective resection only for recurrent/complicated disease",
+      detail: "Do not rush elective resection after a single episode. Emergency Hartmann's for generalized peritonitis or failed source control."
+    }
   },
 
   {
@@ -13526,7 +13582,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Sigmoid Volvulus"
       }
-    ]
+    ],
+    timing: {
+      window: "Endoscopic detorsion first-line within hours if no ischemia; then semi-elective sigmoidectomy the same admission",
+      detail: "Gangrene/peritonitis → emergency laparotomy, no endoscopy. Detorsion alone recurs in ~60% — resect during the same admission."
+    }
   },
 
   {
@@ -13796,7 +13856,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Cecal Volvulus"
       }
-    ]
+    ],
+    timing: {
+      window: "Caecal volvulus → surgery (right hemicolectomy or caecopexy) usually needed; endoscopic reduction rarely succeeds",
+      detail: "Higher ischemia risk than sigmoid — do not delay for repeated endoscopic attempts."
+    }
   },
 
   {
@@ -14099,7 +14163,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Large Bowel Obstruction"
       }
-    ]
+    ],
+    timing: {
+      window: "Caecum >10–12 cm, peritonism, or closed-loop physiology → emergency decompression within hours",
+      detail: "A competent ileocaecal valve makes a closed loop that risks caecal perforation. Malignant LBO → resection or stent as a bridge."
+    }
   },
 
   {
@@ -16596,7 +16664,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Bowel Perforation"
       }
-    ]
+    ],
+    timing: {
+      window: "Perforation with peritonitis → source control within ~6 h (Surviving Sepsis) — resuscitate and operate in parallel",
+      detail: "Every hour of delayed source control in septic shock increases mortality. Damage-control laparotomy if unstable."
+    }
   },
 
   {
@@ -17764,7 +17836,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "peptic ulcer"
       }
-    ]
+    ],
+    timing: {
+      window: "Perforated peptic ulcer → surgery within 24 h (ideally <12 h); each hour of delay raises mortality",
+      detail: "Resuscitate, IV PPI, antibiotics, then omental (Graham) patch. Non-operative management only for highly selected sealed perforations."
+    }
   },
 
   {
@@ -18333,7 +18409,11 @@ const DISEASES = [
         id: "therapeutic-endoscopy",
         note: "Endoscopic hemostasis for upper-GI bleeding"
       }
-    ]
+    ],
+    timing: {
+      window: "Endoscopy within 24 h of resuscitation; unstable or suspected variceal bleed → within 12 h",
+      detail: "Resuscitate first (restrictive transfusion, Hb ~70). Risk-stratify (Glasgow-Blatchford/Rockall). Variceal bleed: terlipressin + antibiotics + band ligation."
+    }
   },
 
   {
@@ -19408,7 +19488,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Esophageal Perforation"
       }
-    ]
+    ],
+    timing: {
+      window: "Esophageal perforation — primary repair within 24 h ('golden 24 hours') for the best outcome",
+      detail: "After 24 h tissues are friable → repair over a T-tube, stent, or diversion. Delay sharply increases mediastinitis and mortality."
+    }
   },
 
   {
@@ -19931,7 +20015,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Gastric Volvulus"
       }
-    ]
+    ],
+    timing: {
+      window: "Acute gastric volvulus (Borchardt's triad) → emergency decompression/surgery within hours — strangulation risk",
+      detail: "Attempt NG decompression, then operate. Ischemia/necrosis of the stomach is a surgical emergency."
+    }
   },
 
   {
@@ -20221,7 +20309,11 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Small Bowel Obstruction"
       }
-    ]
+    ],
+    timing: {
+      window: "Non-operative trial up to 48–72 h if no strangulation; strangulation or closed-loop → emergency surgery",
+      detail: "Fever, tachycardia, peritonism, rising lactate, or CT wall changes abort the trial — operate now."
+    }
   },
 
   {
@@ -22869,7 +22961,11 @@ const DISEASES = [
         id: "diagnostic-laparoscopy",
         note: "Diagnostic laparoscopy in the equivocal acute abdomen"
       }
-    ]
+    ],
+    timing: {
+      window: "Peritonitis or hemodynamic instability → source control within ~6 h; stable equivocal cases → active observation with serial review",
+      detail: "Resuscitate in parallel with diagnosis. Do not let imaging delay theatre in a patient with generalized peritonitis."
+    }
   },
 
   {
@@ -23441,7 +23537,11 @@ const DISEASES = [
         id: "therapeutic-endoscopy",
         note: "Enteral SEMS for malignant gastric-outlet obstruction"
       }
-    ]
+    ],
+    timing: {
+      window: "Decompress and correct fluids/electrolytes first; definitive surgery/stenting once the metabolic alkalosis is corrected",
+      detail: "Benign GOO: optimize then operate. Malignant GOO: stent or bypass depending on prognosis — timing is need-driven, not emergent."
+    }
   },
 
   {
@@ -29121,7 +29221,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "ATLS Primary Survey"
       }
-    ]
+    ],
+    timing: {
+      window: "The 'golden hour' — complete resuscitation and definitive-care decisions within the first 60 min of injury",
+      detail: "Systematic ABCDE; treat life-threats as you find them. Transfer to definitive care without delay for non-essential imaging."
+    }
   },
 
   {
@@ -30242,7 +30346,11 @@ const DISEASES = [
         id: "diagnostic-laparoscopy",
         note: "When direct vision is not enough — proceed to laparotomy"
       }
-    ]
+    ],
+    timing: {
+      window: "Damage-control laparotomy in <60–90 min for the unstable patient — abbreviated surgery before the lethal triad sets in",
+      detail: "Control hemorrhage and contamination, pack, temporary closure; resuscitate in ICU; definitive repair at 24–48 h once warm and non-coagulopathic."
+    }
   },
 
   {
@@ -30486,7 +30594,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "Abdominal Compartment Syndrome"
       }
-    ]
+    ],
+    timing: {
+      window: "Sustained intra-abdominal pressure >20 mmHg with new organ dysfunction → decompressive laparotomy without delay",
+      detail: "Try medical measures first (sedation, drainage, neuromuscular blockade); decompress when they fail — do not wait for anuria or respiratory collapse."
+    }
   },
 
   {
@@ -30771,7 +30883,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "Necrotizing Fasciitis"
       }
-    ]
+    ],
+    timing: {
+      window: "Surgical debridement within hours of diagnosis — every hour of delay increases mortality",
+      detail: "Do not wait for imaging or for antibiotics to 'work'. Broad-spectrum antibiotics + emergency wide excision; planned relook at 24 h."
+    }
   },
 
   {
@@ -31037,7 +31153,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "splenic injury"
       }
-    ]
+    ],
+    timing: {
+      window: "Hemodynamically unstable → immediate splenectomy; stable high-grade with contrast blush → angioembolization with close non-operative monitoring",
+      detail: "Instability, not CT grade, drives the decision. Non-operative failure usually declares within 24 h."
+    }
   },
 
   {
@@ -32080,7 +32200,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "Pelvic Fracture"
       }
-    ]
+    ],
+    timing: {
+      window: "Unstable pelvic fracture → binder immediately, then angioembolization or preperitoneal packing within the first hour",
+      detail: "Mechanical stabilization buys time. Activate massive transfusion and coordinate early hemorrhage control."
+    }
   },
 
   {
@@ -33185,7 +33309,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "Burns"
       }
-    ]
+    ],
+    timing: {
+      window: "Fluid resuscitation (Parkland) timed from the moment of injury, not arrival; circumferential full-thickness burns → escharotomy within hours",
+      detail: "Mistimed fluids under-resuscitate and cause shock. Escharotomy relieves limb/chest compartment compromise. Refer major burns early."
+    }
   },
 
   {
@@ -33447,7 +33575,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "Acute Compartment Syndrome"
       }
-    ]
+    ],
+    timing: {
+      window: "Fasciotomy within 6 h of onset; irreversible muscle/nerve damage by ~6–8 h",
+      detail: "Clinical diagnosis (pain out of proportion, pain on passive stretch) — do not wait for pulselessness, which is a late sign. ΔP <30 mmHg confirms."
+    }
   },
 
   {
@@ -33967,7 +34099,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "Traumatic Brain Injury"
       }
-    ]
+    ],
+    timing: {
+      window: "Extradural/subdural with mass effect → evacuation within ~1–4 h; prevent secondary insult (hypoxia/hypotension) from the outset",
+      detail: "'Talk and deteriorate' = extradural until proven otherwise. Maintain cerebral perfusion pressure and treat raised ICP — the injured brain does not tolerate delay."
+    }
   },
 
 
@@ -35869,7 +36005,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "pneumothorax"
       }
-    ]
+    ],
+    timing: {
+      window: "Tension pneumothorax → immediate needle/finger decompression, no imaging; simple PTX → drain by size and symptoms",
+      detail: "Tension is a clinical diagnosis and cannot wait for a chest X-ray. Definitive chest drain after decompression."
+    }
   },
 
   {
@@ -36131,7 +36271,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "empyema"
       }
-    ]
+    ],
+    timing: {
+      window: "Stage II/III empyema → drainage / VATS decortication early (within days), before an organized peel forms",
+      detail: "Chest drain ± intrapleural fibrinolytics for stage II; the organizing stage needs decortication. Delay traps the lung."
+    }
   },
 
   {
@@ -36979,7 +37123,11 @@ const DISEASES = [
         tags: ["anatomy", "cross-sectional", "CT", "MRI", "mixed-access"],
         query: "Esophageal Perforation"
       }
-    ]
+    ],
+    timing: {
+      window: "Primary repair within 24 h of perforation ('golden period'); later → stent, drainage, or diversion",
+      detail: "Contained cervical perforations may be managed non-operatively. Thoracic/abdominal perforation with sepsis → operate; mediastinitis mortality climbs with delay."
+    }
   },
 
   {
@@ -40488,7 +40636,11 @@ const DISEASES = [
         tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
         query: "Strangulated Hernia"
       }
-    ]
+    ],
+    timing: {
+      window: "Strangulation (irreducible + tender + systemic signs) → emergency surgery within hours to salvage bowel",
+      detail: "Do not forcibly reduce a strangulated hernia — you may reduce dead bowel. Obstruction without strangulation is urgent, not immediate."
+    }
   },
 
   {
@@ -41198,7 +41350,11 @@ const DISEASES = [
         tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
         query: "Obturator Hernia"
       }
-    ]
+    ],
+    timing: {
+      window: "Often presents late as small-bowel obstruction in thin elderly women — operate promptly once diagnosed; high strangulation rate",
+      detail: "Frequently found on CT (or at laparotomy for obstruction). Delay carries a high bowel-resection and mortality rate."
+    }
   },
 
   {
@@ -41839,7 +41995,11 @@ const DISEASES = [
         tags: ["image", "public-domain", "cancer", "illustration"],
         query: "melanoma"
       }
-    ]
+    ],
+    timing: {
+      window: "Wide local excision within 4–6 weeks of the diagnostic biopsy; sentinel node biopsy at the same time for ≥T1b",
+      detail: "Prompt but not emergent. Margins are set by Breslow thickness. SLNB must be done at or before WLE, as WLE disrupts lymphatic drainage."
+    }
   },
 
   {

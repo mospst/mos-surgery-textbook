@@ -725,6 +725,25 @@ ul.clean li::before {
 .tier.surgical .tier-label { background: var(--vital-soft); color: var(--vital); }
 .tier.surgical .tier-label::before { background: var(--vital); }
 
+/* Timing / golden-period band — sits at the top of Management */
+.tier.timing { border-left: 3px solid var(--teal); }
+.tier.timing .tier-label { background: #e2f4f8; color: var(--teal); }
+.tier.timing .tier-label::before { background: var(--teal); }
+.timing-window {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.014em;
+  color: var(--ink);
+}
+.timing-detail {
+  font-size: 14px;
+  color: var(--ink-mute);
+  line-height: 1.5;
+  margin-top: 8px;
+  letter-spacing: -0.005em;
+}
+
 .surg-option {
   padding: 16px 0;
   border-bottom: 1px solid var(--rule);
