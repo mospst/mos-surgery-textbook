@@ -1070,5 +1070,180 @@ const ENDOCRINE_DISEASES_2 = [
     "Not excluding inflammatory carcinoma in non-lactating women — delayed diagnosis",
     "Forgetting Zuska's disease management requires duct excision — aspiration/I&D alone → recurrence"
   ]
+},
+{
+  id: "mivat", dept: "endocrine",
+  name: "Minimally Invasive Video-Assisted Thyroidectomy (MIVAT)",
+  latin: "Thyroidectomia videoadiuvata minime invasiva",
+  organ: "Thyroid gland",
+  severity: "moderate",
+  tags: ["thyroid","MIVAT","video-assisted","minimally invasive","endocrine","cosmesis"],
+  hero: "A small (~1.5–2 cm) central-neck incision through which a thyroid lobe is removed under endoscopic magnification with gasless retraction — the best-validated minimal-access thyroidectomy for small, low-risk glands.",
+  keypoints: [
+    "A minimal-access, gasless technique done through a single tiny central incision with a 30° endoscope for magnified vision — not the same as a remote-access (axillary/transoral) approach that hides the scar elsewhere",
+    "Strict selection is what makes it safe: small gland (thyroid volume < ~25 mL), small nodule (< ~35 mm), no thyroiditis, no prior neck surgery/irradiation, and a benign or low-risk small papillary cancer",
+    "Endoscopic magnification actually improves identification of the recurrent laryngeal nerve and parathyroids compared with the naked eye in a small field",
+    "Delivers better cosmesis, less postoperative pain and faster recovery than conventional thyroidectomy, with equivalent complication rates in trained hands",
+    "Conversion to a conventional collar incision is a sensible outcome, not a failure, if the gland is larger/more adherent than expected",
+    "Not suitable for large multinodular goitres, Graves', substantial substernal extension or bulky/aggressive cancer — those need conventional or open extended surgery"
+  ],
+  differentials: [
+    "Conventional (open Kocher collar) thyroidectomy — the reference standard; no size limit, larger scar",
+    "Remote-access endoscopic thyroidectomy (transaxillary, BABA, transoral TOETVA) — moves the scar off the neck; longer dissection, different risk profile",
+    "Robotic thyroidectomy — a remote-access variant using a robot; high cost",
+    "Radiofrequency/ablation of benign nodules — non-surgical alternative for selected benign nodules",
+    "Active surveillance — for very low-risk papillary microcarcinoma in appropriate patients"
+  ],
+  overview: {
+    definition: "A minimally invasive thyroidectomy performed through a single small (~1.5–2 cm) central cervical incision using endoscopic visualisation and external (gasless) retraction, keeping the operation in the anatomical central-neck plane while reducing incision length.",
+    epidemiology: "Developed by Miccoli and colleagues; the most extensively validated minimal-access thyroidectomy, used electively in high-volume endocrine units for carefully selected small, low-risk glands.",
+    pathophysiology: "For small benign or low-risk thyroid disease the morbidity of conventional surgery is driven partly by the incision and tissue handling. A short central incision with endoscopic magnification allows the same central-compartment dissection — controlling the superior/inferior thyroid vessels and protecting the recurrent laryngeal nerve and parathyroids — with less trauma and a smaller scar, provided the gland is small enough to deliver through the tiny opening.",
+    classification: [
+      {label:"Central minimal-access (MIVAT)", note:"Single small central incision, gasless, endoscope-assisted — the technique described here"},
+      {label:"Remote-access (transaxillary/BABA)", note:"Incision moved to axilla/breast to avoid a neck scar — a different, longer approach"},
+      {label:"Transoral (TOETVA)", note:"Scarless, via a lower-lip vestibular approach — an alternative remote-access route"},
+      {label:"Extent", note:"Applicable to lobectomy or, in selected cases, total thyroidectomy"}
+    ]
+  },
+  criteria: {
+    title: "Selection Criteria & Limits",
+    items: [
+      { k: "Gland/nodule size", v: "Thyroid volume < ~25–30 mL and dominant nodule < ~35 mm — the incision cannot deliver a larger gland" },
+      { k: "Pathology", v: "Benign nodule, indeterminate nodule for diagnostic lobectomy, or low-risk small (< ~20 mm) papillary carcinoma without extrathyroidal spread or nodal disease" },
+      { k: "Contraindications", v: "Thyroiditis (Hashimoto/Graves), previous neck surgery or irradiation, substernal/substantial goitre, bulky or aggressive malignancy, lateral nodal disease" },
+      { k: "Conversion trigger", v: "Unexpected size, adhesions, bleeding or nerve concern → convert to conventional collar incision (a judgement, not a complication)" },
+      { k: "Benefit profile", v: "Better cosmesis, less pain, quicker recovery; complication rates equivalent to open when selection is respected" }
+    ]
+  },
+  technique: {
+    title: "MIVAT — Endoscope-Assisted Lobectomy",
+    prep: [
+      "US ± FNA to confirm size and benign/low-risk cytology; laryngoscopy to document baseline cord function",
+      "Supine, neck slightly extended (less hyperextension than open); no CO₂ insufflation (gasless)",
+      "Set up a 30° 5 mm endoscope, small retractors and energy device"
+    ],
+    steps: [
+      { n: 1, t: "Small central incision", d: "~1.5–2 cm incision ~2 cm above the sternal notch; divide the linea alba between strap muscles" },
+      { n: 2, t: "Create the space", d: "Retract the strap muscles laterally with external retractors (gasless) and introduce the endoscope for a magnified view of the thyroid lobe" },
+      { n: 3, t: "Divide the superior pedicle", d: "Under endoscopic magnification, seal and divide the superior thyroid vessels close to the gland, protecting the external branch of the superior laryngeal nerve" },
+      { n: 4, t: "Identify RLN & parathyroids", d: "Use magnification to trace the recurrent laryngeal nerve and preserve the parathyroids with their blood supply (± intra-operative nerve monitoring)" },
+      { n: 5, t: "Mobilise & deliver", d: "Divide the middle and inferior vessels, free the lobe from the trachea and deliver it through the incision under direct vision" },
+      { n: 6, t: "Haemostasis & closure", d: "Confirm haemostasis, check cords/parathyroids, and close the strap muscles and skin for an inconspicuous scar" }
+    ],
+    pearls: [
+      "Respect the selection limits absolutely — MIVAT is safe because of who you choose, not because of the instruments",
+      "Use the magnification to your advantage: RLN and parathyroid identification is often better than with the naked eye in a small field",
+      "Convert early and without ego if the gland is bigger or more adherent than the scans suggested"
+    ]
+  },
+  guidelines: [
+    { src: "Miccoli et al. — original MIVAT technique and outcome series" },
+    { src: "ETA / AAES — statements on minimally invasive and remote-access thyroidectomy selection" },
+    { src: "British Association of Endocrine & Thyroid Surgeons (BAETS) standards" }
+  ],
+  pearls: [
+    "MIVAT keeps the operation in the normal central plane — it shortens the scar without lengthening the dissection the way remote-access routes do",
+    "Equivalent safety to open surgery depends entirely on strict patient selection",
+    "Endoscopic magnification is a genuine oncological/safety aid, not just a cosmetic gimmick"
+  ],
+  mistakes: [
+    "Attempting MIVAT on a large goitre, Graves' or a previously operated/irradiated neck — the classic selection error",
+    "Persisting with the minimal-access approach when conversion is clearly the safer course",
+    "Under-appreciating superior laryngeal nerve injury during pedicle division despite the magnified view",
+    "Treating bulky or nodal-positive cancer with a technique that cannot deliver an adequate compartment clearance"
+  ],
+  related: [
+    { id: "thyroid-ca", note: "Selected small, low-risk papillary cancers are eligible for MIVAT" },
+    { id: "mng",        note: "Large multinodular goitre is a contraindication — needs conventional surgery" },
+    { id: "graves",     note: "Thyroiditis/Graves' precludes MIVAT" },
+    { id: "phpt",       note: "The same minimal-access, endoscope-assisted philosophy is applied to parathyroidectomy" }
+  ]
+},
+{
+  id: "nipple-sparing-mastectomy", dept: "endocrine",
+  name: "Nipple-Sparing Mastectomy",
+  latin: "Mastectomia conservans complexum areolo-papillarem",
+  organ: "Breast",
+  severity: "high",
+  tags: ["breast","mastectomy","nipple-sparing","oncoplastic","reconstruction","risk-reducing"],
+  hero: "Total removal of the breast parenchyma while preserving the entire skin envelope AND the nipple-areola complex — the most cosmetically favourable mastectomy, for the right tumour and the right breast.",
+  keypoints: [
+    "Removes all breast tissue but keeps the whole skin envelope and the nipple-areola complex (NAC), giving the best reconstructive cosmesis of any mastectomy",
+    "Two main uses: risk-reducing mastectomy in high-risk women (e.g. BRCA carriers) and selected breast cancers that are not close to the nipple",
+    "The oncological crux is the retroareolar (sub-nipple) margin — a frozen-section or defined-margin biopsy from behind the nipple must be tumour-free; a positive result mandates excising the NAC",
+    "Selection favours a peripheral tumour ≥ ~2 cm from the nipple, no clinical/radiological nipple involvement, no inflammatory cancer and no skin involvement",
+    "NAC necrosis is the signature complication — driven by incision choice, flap thickness and smoking; an inframammary or lateral radial incision preserves nipple blood supply better than a periareolar one",
+    "Immediate reconstruction (implant or autologous) is the norm because the preserved envelope and nipple only pay off with a well-supported mound"
+  ],
+  differentials: [
+    "Skin-sparing mastectomy — preserves the skin envelope but removes the NAC (used when the nipple is involved/too close)",
+    "Simple (total) mastectomy — removes breast, NAC and excess skin; no immediate reconstruction assumed",
+    "Modified radical mastectomy — total mastectomy plus axillary clearance for node-positive disease",
+    "Breast-conserving surgery (wide local excision) + radiotherapy — for suitable single tumours; preserves most of the breast",
+    "Risk-reducing surgery vs surveillance/chemoprevention — the non-surgical alternative in high-risk women"
+  ],
+  overview: {
+    definition: "A mastectomy that excises the entire breast parenchyma while preserving the skin envelope and the nipple-areola complex, almost always combined with immediate reconstruction, performed for risk reduction or for appropriately selected breast cancer.",
+    epidemiology: "Increasingly offered as reconstructive techniques and oncological evidence have matured; particularly common in BRCA1/2 and other high-risk carriers undergoing bilateral risk-reducing surgery.",
+    pathophysiology: "The residual cancer risk after mastectomy comes from breast tissue left behind, including ducts within the nipple. Preserving the NAC therefore requires that the retroareolar ducts be free of tumour (assessed by intra-operative margin sampling) and that the case be selected so occult nipple involvement is unlikely. Nipple viability depends on the dermal and subdermal plexus, so incision placement and flap thickness determine the risk of NAC ischaemia and necrosis.",
+    classification: [
+      {label:"Indication — risk-reducing", note:"Prophylactic (e.g. BRCA carriers); bilateral, with the lowest oncological constraint on nipple preservation"},
+      {label:"Indication — therapeutic", note:"Selected cancer ≥ ~2 cm from the nipple, no NAC/skin involvement, not inflammatory"},
+      {label:"Incision", note:"Inframammary or lateral radial preferred for nipple perfusion; periareolar carries higher NAC-necrosis risk"},
+      {label:"Reconstruction", note:"Immediate implant-based (pre-/subpectoral) or autologous (e.g. DIEP) under the preserved envelope"}
+    ]
+  },
+  criteria: {
+    title: "Patient/Tumour Selection & Margin Rule",
+    items: [
+      { k: "Oncological eligibility", v: "Peripheral tumour ≥ ~2 cm from the nipple, no clinical/imaging nipple involvement, no skin involvement, not inflammatory; or a risk-reducing indication" },
+      { k: "Retroareolar margin", v: "Intra-operative sub-nipple (retroareolar) biopsy must be tumour-free — a positive margin means excising the NAC and converting to skin-sparing" },
+      { k: "Perfusion risk factors", v: "Smoking, prior radiotherapy, very large/ptotic breast, periareolar incision and thin flaps all raise NAC-necrosis risk" },
+      { k: "Reconstruction plan", v: "Immediate reconstruction (implant or autologous) is standard to fill the preserved envelope" },
+      { k: "Contraindications", v: "Nipple discharge/Paget's, tumour <2 cm from or involving the nipple, inflammatory carcinoma, extensive skin involvement" }
+    ]
+  },
+  technique: {
+    title: "Nipple-Sparing Mastectomy with Immediate Reconstruction",
+    prep: [
+      "MRI/US to confirm tumour-to-nipple distance and exclude nipple involvement; multidisciplinary and reconstructive planning",
+      "Mark the incision (inframammary or lateral radial preferred) and counsel on NAC-necrosis and sensory-loss risk",
+      "Supine with arm abducted; joint oncoplastic/plastics team where reconstruction is complex"
+    ],
+    steps: [
+      { n: 1, t: "Incision & flaps", d: "Through the chosen incision, raise skin flaps in the subcutaneous plane at an even, oncologically safe thickness, preserving the subdermal plexus that feeds the nipple" },
+      { n: 2, t: "Retroareolar sampling", d: "Core out the tissue directly beneath the nipple and send it for frozen-section/defined margin — proceed only if tumour-free" },
+      { n: 3, t: "Complete the mastectomy", d: "Dissect the breast parenchyma off the pectoral fascia, removing all glandular tissue while keeping the envelope and NAC" },
+      { n: 4, t: "Axillary staging", d: "Perform sentinel lymph node biopsy (or clearance if node-positive) for cancer cases" },
+      { n: 5, t: "Reconstruct", d: "Immediate reconstruction — pre-/subpectoral implant ± mesh, or autologous flap (e.g. DIEP) — to support the preserved skin and nipple" },
+      { n: 6, t: "Assess NAC perfusion", d: "Check nipple viability (clinical ± ICG angiography); close over a drain and monitor the flap and NAC postoperatively" }
+    ],
+    pearls: [
+      "The retroareolar margin decides whether the nipple can stay — never keep a NAC with a positive sub-nipple biopsy",
+      "Incision choice is a perfusion decision: inframammary/lateral radial protect the nipple far better than periareolar",
+      "Even, adequate flap thickness balances oncological safety against NAC/skin necrosis — too thin devascularises, too thick leaves breast tissue"
+    ]
+  },
+  guidelines: [
+    { src: "NCCN / ASBrS — breast cancer surgery and nipple-sparing mastectomy selection" },
+    { src: "NICE / ABS (Association of Breast Surgery) — early breast cancer and risk-reducing surgery" },
+    { src: "NICE CG164 — familial breast cancer risk management (BRCA)" }
+  ],
+  pearls: [
+    "Nipple-sparing mastectomy gives the best cosmetic result of any mastectomy — but only when the retroareolar margin and tumour position allow it",
+    "It is the operation of choice for many risk-reducing (BRCA) cases where there is no tumour constraining nipple preservation",
+    "Warn patients the preserved nipple usually loses sensation and may not respond as before"
+  ],
+  mistakes: [
+    "Preserving the NAC despite a positive retroareolar margin or clinical nipple involvement — leaves disease behind",
+    "Using a periareolar incision or over-thin flaps in a smoker — predictable nipple necrosis",
+    "Offering it for inflammatory or skin-involving cancer",
+    "Failing to plan immediate reconstruction, wasting the preserved skin/nipple envelope"
+  ],
+  related: [
+    { id: "breast-ca", note: "The therapeutic indication — selected cancers away from the nipple" },
+    { id: "dcis",      note: "Extensive DCIS may require mastectomy; NAC preservation depends on nipple/retroareolar involvement" },
+    { id: "men1",      note: "Genetic/high-risk context parallels BRCA risk-reducing surgery decision-making" }
+  ]
 }
 ];

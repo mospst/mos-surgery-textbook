@@ -508,3 +508,93 @@
   guidelines:[{src:"ISL 2020",url:"International Society of Lymphology consensus document on diagnosis and treatment"},{src:"NICE 2019",url:"Lymphoedema: British Lymphology Society guidelines"}],
   pearls:["Early intervention preserves functional lymphatics — better LVA outcomes","Cellulitis is a sentinel complication — treat immediately and prevent with prophylactic antibiotics","Compression garments are lifelong — even after surgical success"],
   mistakes:["Offering surgery before adequate trial of CDT","Performing LVA without ICG lymphography — poor vessel identification","Expecting LVA to cure lymphedema — it reduces symptoms; compression continues"]},
+{
+  id: "central-venous-access", dept: "vascular",
+  name: "Central Venous Access (Ports & Tunnelled Lines)",
+  latin: "Aditus venosus centralis",
+  organ: "Central veins (SVC / brachiocephalic)",
+  severity: "moderate",
+  tags: ["central line","port-a-cath","Hickman","PICC","vascular access","ultrasound-guided"],
+  hero: "The family of catheters that deliver chemotherapy, parenteral nutrition and long-term drugs into the central veins — choosing between a port, a tunnelled line, a PICC or a non-tunnelled catheter is a decision driven by duration, frequency and infection risk.",
+  keypoints: [
+    "The single most important choice is device type by intended use: totally implanted port for intermittent long-term therapy (chemotherapy), tunnelled cuffed line (Hickman) for frequent/continuous access, PICC for weeks-to-months, non-tunnelled central line for short inpatient use",
+    "A port has the lowest infection rate and best quality of life because it sits entirely under the skin — nothing to see, swim and shower freely — but needs a needle to access",
+    "Real-time ultrasound guidance for the venous puncture is now the standard of care and markedly reduces arterial puncture, pneumothorax and failed cannulation",
+    "The catheter tip belongs at the cavoatrial junction (lower SVC/right atrium border) — confirmed on imaging; too high risks thrombosis, too low risks arrhythmia/perforation",
+    "The three feared insertion complications are pneumothorax, arterial puncture and air embolism; the three feared late complications are catheter-related bloodstream infection, thrombosis and mechanical failure/pinch-off",
+    "A tunnel with a Dacron cuff creates a subcutaneous barrier and tissue in-growth that anchors the line and reduces ascending infection — the reason tunnelled/ported devices beat non-tunnelled ones for long-term use"
+  ],
+  differentials: [
+    "Totally implantable port (Port-a-Cath) — subcutaneous reservoir; best for intermittent long-term (chemotherapy); lowest infection",
+    "Tunnelled cuffed catheter (Hickman/Broviac) — external line for frequent access, apheresis, long-term TPN",
+    "PICC (peripherally inserted central catheter) — arm vein to SVC; weeks-to-months, bedside placement, higher thrombosis",
+    "Non-tunnelled central venous catheter (IJ/subclavian/femoral) — short-term inpatient access; highest infection over time",
+    "Tunnelled haemodialysis catheter / arteriovenous fistula — dialysis-specific access (fistula preferred long-term)",
+    "Peripheral cannula / midline — when central access is not actually required"
+  ],
+  overview: {
+    definition: "Placement of a catheter with its tip in a central vein (typically the lower superior vena cava at the cavoatrial junction) to provide reliable access for chemotherapy, parenteral nutrition, long-term antibiotics, frequent blood sampling or drugs that would damage peripheral veins.",
+    epidemiology: "Among the commonest procedures in oncology, nutrition and critical care; increasingly performed by surgeons, interventional radiologists and vascular-access teams under ultrasound and fluoroscopic guidance.",
+    pathophysiology: "Vesicant chemotherapy, hyperosmolar parenteral nutrition and irritant drugs cause thrombophlebitis and extravasation injury in peripheral veins, so they must be delivered into a high-flow central vein where rapid dilution prevents endothelial damage. Tunnelling the catheter and adding a subcutaneous cuff (or fully implanting a port) separates the skin entry from the venous entry and promotes fibrous in-growth, raising a barrier to bacterial migration and reducing catheter-related bloodstream infection compared with a direct percutaneous line.",
+    classification: [
+      {label:"Totally implanted port", note:"Reservoir under the skin connected to a central catheter; accessed by a Huber needle; intermittent long-term therapy"},
+      {label:"Tunnelled cuffed (Hickman)", note:"External catheter tunnelled subcutaneously with a Dacron cuff; frequent/continuous access, TPN, apheresis"},
+      {label:"PICC", note:"Inserted via a basilic/brachial vein to the SVC; medium-term, bedside placement"},
+      {label:"Non-tunnelled CVC", note:"Direct percutaneous internal jugular/subclavian/femoral line; short-term inpatient use only"}
+    ]
+  },
+  criteria: {
+    title: "Device Selection & Safety Points",
+    items: [
+      { k: "Choose by duration/frequency", v: "Days–weeks inpatient → non-tunnelled CVC; weeks–months → PICC; months–years intermittent → port; months–years frequent/continuous → tunnelled Hickman" },
+      { k: "Port vs Hickman", v: "Port = lowest infection, best lifestyle (implanted), needs needle access; Hickman = ready external access for frequent/continuous use, higher infection/dislodgement" },
+      { k: "Insertion standard", v: "Ultrasound-guided venous puncture (usually right internal jugular) + fluoroscopic tip check at the cavoatrial junction; full aseptic technique" },
+      { k: "Site avoidance", v: "Avoid the subclavian route in dialysis-dependent/CKD patients (subclavian stenosis compromises future fistula); femoral has the highest infection rate" },
+      { k: "Early complications", v: "Pneumothorax, arterial puncture, air embolism, arrhythmia from guidewire — mitigated by ultrasound, head-down positioning and ECG monitoring" },
+      { k: "Late complications", v: "Catheter-related bloodstream infection, catheter/central-vein thrombosis, mechanical failure and subclavian 'pinch-off' syndrome" }
+    ]
+  },
+  technique: {
+    title: "Ultrasound-Guided Port / Tunnelled-Line Insertion",
+    prep: [
+      "Confirm indication, device choice and side (avoid a side with prior thrombosis/stenosis or a planned fistula); check coagulation and platelets",
+      "Full aseptic technique, supine head-down (Trendelenburg) to distend the vein and prevent air embolism",
+      "Ultrasound machine and fluoroscopy available; mark the internal jugular and the pocket/exit site"
+    ],
+    steps: [
+      { n: 1, t: "US-guided venous puncture", d: "Under real-time ultrasound, puncture the (usually right) internal jugular vein and pass a guidewire — Seldinger technique" },
+      { n: 2, t: "Create pocket / tunnel", d: "For a port: fashion a subcutaneous chest-wall pocket. For a tunnelled line: create a subcutaneous tunnel and pull the catheter through, seating the Dacron cuff a few cm from the exit" },
+      { n: 3, t: "Place the catheter", d: "Dilate the tract, pass a peel-away sheath over the wire and advance the catheter into the SVC" },
+      { n: 4, t: "Position the tip", d: "Under fluoroscopy, position the tip at the cavoatrial junction; trim the catheter to length and connect to the port reservoir if used" },
+      { n: 5, t: "Secure & test", d: "Seat the port in its pocket / secure the tunnelled line; aspirate blood and flush to confirm patency, then lock with saline/heparin per protocol" },
+      { n: 6, t: "Confirm & document", d: "Chest imaging to confirm tip position and exclude pneumothorax before use; document device, lot number and tip position" }
+    ],
+    pearls: [
+      "Ultrasound for the puncture and fluoroscopy for the tip are the two habits that prevent most serious complications",
+      "Keep the patient head-down during puncture and catheter exchange — the cheapest protection against air embolism",
+      "Confirm tip at the cavoatrial junction on imaging before the first use — a malpositioned tip causes thrombosis and dysfunction"
+    ]
+  },
+  guidelines: [
+    { src: "epic3 / Loveday — UK guidelines for preventing catheter-related infection" },
+    { src: "CDC — guidelines for the prevention of intravascular catheter-related infections" },
+    { src: "NICE — guidance on ultrasound-guided central venous catheter placement" }
+  ],
+  pearls: [
+    "Match the device to the therapy: getting the port-vs-Hickman-vs-PICC choice right prevents more problems than any technical refinement",
+    "A fully implanted port lets patients swim and shower and has the lowest infection rate — a big quality-of-life win in long chemotherapy courses",
+    "Avoid the subclavian vein when a future dialysis fistula is possible — central stenosis can wreck the arm for access"
+  ],
+  mistakes: [
+    "Placing a non-tunnelled line for what is clearly long-term therapy — needless infection and re-procedures",
+    "Skipping ultrasound guidance and causing arterial puncture or pneumothorax",
+    "Leaving the tip too high (thrombosis) or too low in the atrium (arrhythmia/perforation)",
+    "Using the subclavian route in a CKD/dialysis patient and inducing central-vein stenosis"
+  ],
+  related: [
+    { id: "dvt",              note: "Catheter-related upper-limb/central thrombosis is a recognised complication of central access" },
+    { id: "renal-tx",         note: "Vascular-access planning overlaps — protect veins for future dialysis fistula" },
+    { id: "short-bowel",      note: "Long-term parenteral nutrition depends on durable central venous access" },
+    { id: "vascular-trauma",  note: "Inadvertent arterial puncture is a shared insertion hazard" }
+  ]
+},

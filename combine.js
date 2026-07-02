@@ -116,30 +116,31 @@ const TMP_FILES = [
 
 // ── Hardcoded ID order (all 187 diseases in display sequence) ─────────────
 const ID_ORDER = [
-  // VASCULAR (16)
+  // VASCULAR (17)
   'aaa','cli','carotid','dvt','taa','aortic-dissection','pad','mesenteric-isch',
   'varicose-veins','renal-artery-stenosis','popliteal-aneurysm','carotid-body-tumour',
-  'thoracic-outlet','visceral-aneurysm','vascular-trauma','lymphoedema',
-  // HPB & SPLEEN (23)
+  'thoracic-outlet','visceral-aneurysm','vascular-trauma','lymphoedema','central-venous-access',
+  // HPB & SPLEEN (24)
   'ap','biliary-colic','cholecystitis','cholangitis','hcc','choledocholithiasis','pancreatic-cancer',
-  'chronic-pancreatitis','cholangiocarcinoma','icc','pancreatic-pseudocyst',
+  'chronic-pancreatitis','central-pancreatectomy','cholangiocarcinoma','icc','pancreatic-pseudocyst',
   'portal-hypertension','liver-abscess','gallbladder-cancer','liver-metastases',
   'hepatic-adenoma','hydatid-cyst','ipmn','pan-net','itp','hereditary-spherocytosis',
   'splenic-abscess','psc',
-  // COLORECTAL (25)
+  // COLORECTAL (29)
   'appendicitis','diverticulitis','crc','rectal-prolapse','haemorrhoids','anal-fistula',
   'anal-fissure','perianal-abscess','pilonidal','sigmoid-volvulus','caecal-volvulus',
   'large-bowel-obstruction','uc-surgical','crohn-surgical','anal-cancer',
   'intestinal-fistula','carcinoid-appendix','mucocele-appendix','fap','lynch',
   'bowel-perforation','pseudo-obstruction','angiodysplasia','small-bowel-tumours','crs-hipec',
+  'tatme','tamis','elape','malone-ace',
   // UPPER GI & SMALL BOWEL (25)
   'pud','gastric-ca','ugib','oesophageal-cancer','hiatus-hernia','achalasia',
   'boerhaave','bariatric','gastric-volvulus','small-bowel-obstruction','gist',
   'barretts','zenker','caustic-oesoph','meckel','small-bowel-net','short-bowel',
   'radiation-enteritis',
   'gord','acute-abdomen','dysphagia','gastric-outlet-obstruction','melena','rectal-bleeding',
-  // BREAST & ENDOCRINE (17)
-  'breast-ca','dcis','phyllodes','thyroid-ca','graves','mng','phpt','shpt',
+  // BREAST & ENDOCRINE (19)
+  'breast-ca','dcis','phyllodes','nipple-sparing-mastectomy','thyroid-ca','mivat','graves','mng','phpt','shpt',
   'phaeochromocytoma','conns','cushings-adrenal','adrenocortical-ca',
   'adrenal-incidentaloma','insulinoma','men1','men2','breast-abscess',
   // TRAUMA & ACUTE CARE (19)
@@ -384,7 +385,15 @@ const VIDEO_QUERY_BY_ID = {
   'feeding-jejunostomy': 'laparoscopic feeding jejunostomy',
   'balloon-tamponade': 'Sengstaken Blakemore tube balloon tamponade variceal bleeding',
   'lap-inguinal-hernia': 'laparoscopic inguinal hernia repair TEP TAPP',
-  'crs-hipec': 'cytoreductive surgery HIPEC peritoneal carcinomatosis'
+  'crs-hipec': 'cytoreductive surgery HIPEC peritoneal carcinomatosis',
+  'tatme': 'transanal total mesorectal excision TaTME rectal cancer',
+  'tamis': 'transanal minimally invasive surgery TAMIS local excision rectum',
+  'elape': 'extralevator abdominoperineal excision ELAPE rectal cancer',
+  'malone-ace': 'Malone antegrade continence enema appendicostomy',
+  'central-pancreatectomy': 'central pancreatectomy middle segment pancreatic',
+  'mivat': 'minimally invasive video assisted thyroidectomy MIVAT',
+  'nipple-sparing-mastectomy': 'nipple sparing mastectomy breast reconstruction',
+  'central-venous-access': 'central venous catheter port insertion ultrasound guided'
 };
 
 for (const d of Object.values(diseaseMap)) {
@@ -541,6 +550,14 @@ const IMAGE_QUERY_BY_ID = {
   'balloon-tamponade': 'esophageal varices',
   'lap-inguinal-hernia': 'inguinal hernia',
   'crs-hipec': 'peritoneal carcinomatosis',
+  'tatme': 'rectal cancer',
+  'tamis': 'rectal polyp',
+  'elape': 'rectal cancer',
+  'malone-ace': 'appendicostomy',
+  'central-pancreatectomy': 'pancreas anatomy',
+  'mivat': 'thyroidectomy',
+  'nipple-sparing-mastectomy': 'mastectomy',
+  'central-venous-access': 'central venous catheter',
   'gastric-ca': 'gastric cancer',
   barretts: 'Barrett esophagus',
   'oesophageal-cancer': 'esophageal cancer',

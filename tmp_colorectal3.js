@@ -1034,6 +1034,354 @@ const COLORECTAL3_DISEASES = [
     { id: "crc",                note: "Selected colorectal peritoneal metastases are an indication for CRS+HIPEC" },
     { id: "diagnostic-laparoscopy", note: "Used to estimate PCI and resectability before committing to CRS" }
   ]
+},
+{
+  id: "tatme", dept: "colorectal",
+  name: "Transanal Total Mesorectal Excision (TaTME)",
+  latin: "Excisio mesorecti totalis transanalis",
+  organ: "Rectum & mesorectum",
+  severity: "high",
+  tags: ["rectal cancer","TME","transanal","MIS","colorectal","low rectal"],
+  hero: "A 'bottom-up' approach to rectal cancer: the mesorectum is dissected from below through a transanal platform, solving the hardest part of the operation — the low, narrow male pelvis where a top-down laparoscopic TME struggles.",
+  keypoints: [
+    "Purpose is to secure a precise distal margin and a complete mesorectal envelope in low rectal tumours where the deep pelvis defeats a purely abdominal (top-down) approach",
+    "A two-team 'up-and-down' hybrid is standard: an abdominal team mobilises the splenic flexure and vessels while a perineal team works transanally — the two planes meet in the middle",
+    "Starts with a purse-string suture below the tumour to close off the lumen, then a full-thickness circumferential incision establishes the distal margin before dissection begins — margin is defined first, under direct vision",
+    "Best evidence-based advantage is in the difficult pelvis: male, narrow, obese, bulky low tumour, post-radiotherapy — where it improves specimen quality and lowers the conversion rate",
+    "A characteristic and dangerous complication is urethral injury during anterior dissection in men — precise plane recognition is essential",
+    "Controversial: a Norwegian national audit reported high/atypical local recurrence, prompting a moratorium there; outcomes are strongly linked to structured training and case selection — it is a supra-specialist procedure"
+  ],
+  differentials: [
+    "Laparoscopic TME (top-down) — the standard MIS approach; harder in the very low, narrow pelvis",
+    "Robotic TME — articulated instruments aid deep-pelvis dissection; higher cost, longer setup",
+    "Open TME — reference standard; larger wound, same oncological principles",
+    "Abdominoperineal excision (APE/ELAPE) — when the sphincter cannot be preserved (tumour involves the complex)",
+    "Local excision (TEM/TAMIS) — for early T1 tumours only, not a mesorectal cancer operation"
+  ],
+  overview: {
+    definition: "A minimally invasive technique for total mesorectal excision performed retrogradely from the anal side using a transanal single-port platform and laparoscopic instruments, usually combined with a simultaneous abdominal (laparoscopic) phase.",
+    epidemiology: "Developed to address the limitations of laparoscopic TME in low rectal cancer, where distal margin control and a complete mesorectal specimen are hardest; adoption is concentrated in high-volume units with formal proctored training.",
+    pathophysiology: "In a low tumour the mesorectum tapers and the pelvis narrows caudally, so a top-down dissection loses the plane and the stapler struggles to cross the distal rectum at right angles. Approaching from below allows the distal margin to be set first under direct vision and the mesorectal (holy) plane to be entered from its most difficult point, preserving the fascial envelope and hypogastric autonomic nerves.",
+    classification: [
+      {label:"Distal margin", note:"A purse-string below the tumour and a circumferential full-thickness incision define the margin before any dissection"},
+      {label:"Two-team hybrid", note:"Simultaneous abdominal and transanal teams ('up-and-down') meet at the mid-rectum — the standard configuration"},
+      {label:"Single-team sequential", note:"Abdominal phase completed first, then transanal — longer operating time"},
+      {label:"Anastomosis", note:"Hand-sewn coloanal or stapled after specimen extraction; a defunctioning loop ileostomy is usual for a low anastomosis"}
+    ]
+  },
+  criteria: {
+    title: "Patient Selection & Contraindications",
+    items: [
+      { k: "Ideal candidate", v: "Mid/low rectal cancer (typically < 8–10 cm from anal verge) in a difficult pelvis: male, narrow, high BMI, bulky tumour, post-neoadjuvant fibrosis" },
+      { k: "Margin requirement", v: "A clear distal margin achievable (usually ≥ 1 cm, or ≥ 5 mm after downstaging) and no sphincter-complex involvement" },
+      { k: "Relative contraindication", v: "T4 anterior tumour, threatened CRM on MRI, tumour breaching the mesorectal fascia — consider APE/ELAPE instead" },
+      { k: "Governance", v: "Should be performed only within a trained, proctored programme with audited outcomes (following the local-recurrence signal)" },
+      { k: "Key risk", v: "Urethral injury (anterior dissection in men); CO₂ embolism from the transanal insufflation platform is a rare but reported hazard" }
+    ]
+  },
+  technique: {
+    title: "Transanal TME — 'Bottom-Up' Dissection",
+    prep: [
+      "Staged after neoadjuvant chemoradiotherapy where indicated; mechanical bowel prep and stoma siting",
+      "Lithotomy with steep positioning; two-team set-up with abdominal laparoscopic tower and a transanal port platform",
+      "Rigid or single-incision port in the anal canal with CO₂ insufflation to develop the working space"
+    ],
+    steps: [
+      { n: 1, t: "Abdominal phase", d: "Laparoscopic high/low vascular ligation, splenic flexure mobilisation and dissection down into the pelvis as far as the plane allows" },
+      { n: 2, t: "Purse-string", d: "Transanally place a secure purse-string suture in the rectum below the tumour to occlude the lumen and protect the margin" },
+      { n: 3, t: "Distal transection line", d: "Full-thickness circumferential incision distal to the purse-string, establishing the distal resection margin under direct vision before dissection" },
+      { n: 4, t: "Mesorectal dissection", d: "Develop the mesorectal (holy) plane circumferentially from below — posterior first, then lateral, then the anterior plane, watching for the urethra/prostate/vagina" },
+      { n: 5, t: "Meet in the middle", d: "Join the abdominal and transanal planes; free the specimen completely and extract it (transanally or via a small abdominal incision)" },
+      { n: 6, t: "Anastomosis & stoma", d: "Fashion a stapled or hand-sewn coloanal anastomosis and create a defunctioning loop ileostomy; check the mesorectal specimen for completeness" }
+    ],
+    pearls: [
+      "Set the distal margin FIRST with the purse-string and circumferential cut — never chase it after dissection has distorted the anatomy",
+      "In men, identify the urethra early in the anterior plane; blunt undirected dissection here is how urethral injuries happen",
+      "Assess specimen quality (Quirke grading) intra-operatively — a complete mesorectal envelope is the oncological endpoint"
+    ]
+  },
+  guidelines: [
+    { src: "International TaTME Registry / consensus on training and structured implementation" },
+    { src: "Norwegian Colorectal Cancer Group — moratorium report on TaTME local recurrence (case-selection lesson)" },
+    { src: "ASCRS / ESCP — statements on TaTME governance and credentialing" }
+  ],
+  pearls: [
+    "TaTME solves a geometry problem — it earns its place in the narrow male post-radiotherapy pelvis, not in every rectal cancer",
+    "Outcomes track training: proctored programmes with audit have not reproduced the early local-recurrence signal",
+    "The transanal platform gives an excellent view of the distal rectum that no top-down approach can match"
+  ],
+  mistakes: [
+    "Adopting TaTME outside a trained, audited programme — the mechanism behind the reported local-recurrence outbreak",
+    "Anterior dissection in men without positive urethral identification — urethral injury",
+    "Poor purse-string technique allowing luminal spillage and jeopardising the distal margin",
+    "Selecting a threatened-CRM T4 tumour for TaTME instead of APE/ELAPE"
+  ],
+  related: [
+    { id: "crc",               note: "TaTME is an approach to mid/low rectal cancer TME" },
+    { id: "elape",             note: "The alternative when the sphincter complex is involved and preservation is impossible" },
+    { id: "tamis",             note: "Shares the transanal platform, but TAMIS is local excision of early tumours, not mesorectal cancer surgery" },
+    { id: "diagnostic-laparoscopy", note: "Part of the combined abdominal phase and staging" }
+  ]
+},
+{
+  id: "tamis", dept: "colorectal",
+  name: "Transanal Minimally Invasive Surgery (TAMIS)",
+  latin: "Chirurgia transanalis minime invasiva",
+  organ: "Rectum (local excision)",
+  severity: "moderate",
+  tags: ["rectal","local excision","transanal","MIS","early rectal cancer","polyp"],
+  hero: "Local, full-thickness excision of an early rectal tumour through a soft single-incision port — a modern, cheaper evolution of TEM that removes a lesion without removing the rectum.",
+  keypoints: [
+    "An organ-preserving local excision for benign or early-malignant rectal lesions — not a cancer (mesorectal) operation; it takes the lesion, not the lymph nodes",
+    "Uses a standard single-incision laparoscopic port in the anal canal with ordinary laparoscopic instruments — lower cost and setup than dedicated TEM rigid platforms, and it reaches mid/upper rectal lesions a per-anal approach cannot",
+    "Aim is a full-thickness excision with clear (≥ 1 mm, ideally ≥ 3 mm) margins and an intact, non-fragmented specimen — piecemeal removal loses staging information",
+    "Definitive only for T1 cancers with favourable histology (well/moderately differentiated, no lymphovascular invasion, sm1 depth); high-risk T1 or T2 need completion TME because nodal risk exceeds ~10%",
+    "Main use cases: large benign polyps not endoscopically resectable, early T1 adenocarcinoma, and complete clinical responders after chemoradiotherapy under a watch-and-wait/local-excision pathway",
+    "Entering the peritoneal cavity is possible for high anterior lesions — recognised and closed transanally, or converted"
+  ],
+  differentials: [
+    "Transanal endoscopic microsurgery (TEM) — rigid dedicated platform; equivalent oncologically, higher capital cost",
+    "Endoscopic mucosal resection / ESD — for lesions confined to mucosa/submucosa; no full-thickness muscle",
+    "Conventional transanal excision (Parks) — limited to low, distal lesions with poorer specimen quality",
+    "Total mesorectal excision (TME) — the radical alternative when nodal disease risk is significant",
+    "Watch-and-wait — for complete clinical responders after neoadjuvant therapy, sometimes with TAMIS to confirm"
+  ],
+  overview: {
+    definition: "A transanal local-excision technique using a single-incision laparoscopic port and standard laparoscopic instruments under CO₂ insufflation to perform a full-thickness excision of a rectal lesion with primary defect closure.",
+    epidemiology: "Introduced in 2010 as a lower-cost, more accessible alternative to TEM; used for early rectal neoplasia and increasingly within organ-preservation protocols after neoadjuvant therapy.",
+    pathophysiology: "Early rectal neoplasms confined to the bowel wall (benign adenomas, T1 cancers with favourable features) carry a low enough nodal-metastasis risk that removing the primary with a clear margin can be curative, sparing the morbidity, stoma risk and functional cost of a radical TME. Insufflation of the rectum through the port creates a stable working space allowing precise full-thickness excision and suture closure.",
+    classification: [
+      {label:"Benign polyp", note:"Large sessile adenoma not amenable to endoscopic resection — TAMIS gives an intact specimen and closes the defect"},
+      {label:"Early T1 cancer (favourable)", note:"Well/moderately differentiated, no LVI, sm1 — local excision can be definitive"},
+      {label:"High-risk T1 / T2", note:"Poor differentiation, LVI, deep submucosal (sm3) or T2 — TAMIS is a staging step; completion TME needed"},
+      {label:"Post-neoadjuvant", note:"Full-thickness excision of a scar/residual in a watch-and-wait pathway to confirm complete response"}
+    ]
+  },
+  criteria: {
+    title: "Selection Rules & Limits",
+    items: [
+      { k: "Lesion size/site", v: "Typically < 3–4 cm, occupying < 30–40% of the circumference, from the low rectum up to ~15 cm (TAMIS reaches higher than per-anal excision)" },
+      { k: "Curative for cancer", v: "Only T1, well/moderately differentiated, no lymphovascular invasion, sm1 depth, clear margin — otherwise treat as staging and offer completion TME" },
+      { k: "Margin target", v: "Full-thickness excision, negative deep and radial margins (≥ 1 mm), specimen pinned and orientated — no piecemeal removal" },
+      { k: "Contraindication", v: "Node-positive disease on MRI, T2+ tumour intended as definitive treatment, circumferential/very large lesions, poor sphincter function" },
+      { k: "Consent point", v: "Warn that unfavourable final histology mandates radical surgery; entry into the peritoneum for high anterior lesions is possible" }
+    ]
+  },
+  technique: {
+    title: "TAMIS — Full-Thickness Local Excision",
+    prep: [
+      "MRI + endorectal ultrasound staging to confirm early disease; tattoo/mark lesion location",
+      "Enema bowel prep; positioning depends on lesion quadrant so the lesion lies dependent",
+      "Insert a single-incision transanal port and establish CO₂ insufflation of the rectum"
+    ],
+    steps: [
+      { n: 1, t: "Mark margin", d: "Cautery-mark a circumferential margin ~1 cm around the lesion under the insufflated view" },
+      { n: 2, t: "Full-thickness incision", d: "Incise full-thickness through the rectal wall down to perirectal fat, staying outside the marked margin" },
+      { n: 3, t: "Excise en bloc", d: "Dissect the specimen off the underlying tissue in one piece, avoiding fragmentation or lesion perforation" },
+      { n: 4, t: "Retrieve & orientate", d: "Remove the specimen intact, pin and orientate it on cork for accurate margin/depth assessment by pathology" },
+      { n: 5, t: "Close the defect", d: "Suture the rectal wall defect transversely (interrupted or barbed continuous) to reduce stenosis; a high defect entering the peritoneum must be securely closed" },
+      { n: 6, t: "Recovery", d: "Usually day-case or overnight; no stoma; arrange early histology review to decide if completion TME is required" }
+    ],
+    pearls: [
+      "Orientate and pin the specimen immediately — the pathologist's margin and depth call decides whether the patient is cured or needs a TME",
+      "Close the defect transversely to avoid luminal narrowing",
+      "Position the patient so the lesion is dependent — gravity and a clean field make the dissection far easier"
+    ]
+  },
+  guidelines: [
+    { src: "ASCRS — practice parameters for the management of rectal cancer (local excision criteria)" },
+    { src: "ESMO / NICE — early rectal cancer and organ-preservation pathways" },
+    { src: "Atallah et al. — original description of TAMIS (2010)" }
+  ],
+  pearls: [
+    "TAMIS removes the lesion, not the nodes — it is only curative when the nodal risk is genuinely low (favourable T1)",
+    "It is cheaper and more versatile than TEM using kit most laparoscopic units already own",
+    "An unexpected T2 or high-risk T1 on final histology is a staging result, not a failure — proceed to completion TME"
+  ],
+  mistakes: [
+    "Offering TAMIS as definitive treatment for T2 or high-risk T1 disease — under-treats occult nodal metastases",
+    "Piecemeal or fragmented excision that destroys margin and depth assessment",
+    "Not closing a peritoneal-entry defect adequately — pelvic sepsis",
+    "Leaving the defect closed longitudinally, producing rectal stenosis"
+  ],
+  related: [
+    { id: "crc",   note: "TAMIS is local excision for early rectal neoplasia within the CRC spectrum" },
+    { id: "tatme", note: "Shares the transanal platform but TaTME is a radical mesorectal cancer operation" },
+    { id: "fap",   note: "Rectal polyps in polyposis syndromes may be locally excised while planning definitive surgery" }
+  ]
+},
+{
+  id: "elape", dept: "colorectal",
+  name: "Extralevator Abdominoperineal Excision (ELAPE)",
+  latin: "Excisio abdominoperinealis extralevatoria",
+  organ: "Rectum, anus & levator complex",
+  severity: "high",
+  tags: ["rectal cancer","APE","perineal","colorectal","low rectal","cylindrical"],
+  hero: "A wider perineal dissection for very low rectal cancer: the levator muscles are taken en bloc with the anorectum to create a cylindrical specimen, avoiding the 'waist' where a standard APE risks tumour-positive margins.",
+  keypoints: [
+    "Designed to fix the high circumferential-margin-positive and perforation rate of the standard (conventional) APE, where the surgeon coned in toward the tumour at the level of the levators",
+    "Key manoeuvre: the levator ani is divided at its origin on the pelvic sidewall rather than at the anorectal junction, so muscle is removed with the specimen — giving a wide, cylindrical (not waisted) specimen",
+    "The perineal phase is often done in the prone jack-knife position for the best view of the deep pelvic floor and anterior plane",
+    "Reserved for tumours involving or very close to the sphincter/levator complex where sphincter preservation and a clear margin are impossible — it always means a permanent end colostomy",
+    "The larger perineal defect frequently needs reconstruction: biological mesh, a myocutaneous flap (VRAM/gluteal) or primary closure depending on size and prior radiotherapy",
+    "Trades a lower positive-margin/perforation rate for more perineal wound morbidity — patient selection by MRI is what justifies it"
+  ],
+  differentials: [
+    "Conventional APE — narrower dissection, higher CRM-positive and perforation rate for low tumours",
+    "Low anterior resection / TaTME — sphincter-preserving; only when the tumour spares the complex with an achievable margin",
+    "Intersphincteric APR — takes the sphincters but preserves the external levator plane; for tumours confined to the internal sphincter",
+    "Pelvic exenteration — when adjacent organs (prostate, vagina, bladder) are involved beyond the levator plane"
+  ],
+  overview: {
+    definition: "A radical resection for low rectal cancer combining an abdominal phase with an extended perineal phase in which the levator ani muscles are excised en bloc with the anorectum, producing a cylindrical specimen and a permanent colostomy.",
+    epidemiology: "Developed (Holm and colleagues) after audit showed conventional APE had worse oncological outcomes than anterior resection, largely from margin involvement and specimen perforation at the level of the levators.",
+    pathophysiology: "In the standard APE the dissection planes from above and below converge and 'cone in' at the anorectal junction, creating a waisted specimen with little tissue over a low or anterior tumour — hence positive margins and perforation. By dividing the levators peripherally at the sidewall, ELAPE keeps a cuff of muscle around the tumour throughout its course, producing a parallel-sided cylinder with a consistently wider circumferential margin.",
+    classification: [
+      {label:"Cylindrical specimen", note:"Levators taken at their pelvic sidewall origin — the defining feature that removes the 'waist'"},
+      {label:"Prone perineal phase", note:"Jack-knife position gives the best exposure of the deep pelvic floor and anterior dissection"},
+      {label:"Perineal reconstruction", note:"Biological mesh, myocutaneous flap or primary closure of the larger defect, especially after radiotherapy"},
+      {label:"Intersphincteric variant", note:"For tumours limited to the internal sphincter — preserves the external levator plane where oncologically safe"}
+    ]
+  },
+  criteria: {
+    title: "Indications & Reconstruction Planning",
+    items: [
+      { k: "Indication", v: "Low rectal cancer involving or threatening the sphincter/levator complex, or an anterior low tumour where a coned conventional APE would breach the margin" },
+      { k: "Imaging driver", v: "MRI showing tumour at/through the intersphincteric plane or a threatened CRM at the levator level" },
+      { k: "Obligate outcome", v: "Permanent end colostomy — sphincter preservation is not possible by definition" },
+      { k: "Reconstruction", v: "Plan perineal closure in advance: biological mesh vs VRAM/gluteal flap vs primary closure — driven by defect size and prior radiotherapy" },
+      { k: "Trade-off", v: "Lower CRM-positive/perforation rate but higher perineal wound complication and hernia rate — justified only by correct selection" }
+    ]
+  },
+  technique: {
+    title: "Extralevator APE — Cylindrical Dissection",
+    prep: [
+      "Neoadjuvant chemoradiotherapy as indicated; stoma siting and counselling for a permanent colostomy",
+      "Combined abdominal (open/laparoscopic/robotic) and perineal team; plan the reconstruction with plastics if a flap is needed",
+      "Abdominal phase in Lloyd-Davies, then reposition prone jack-knife for the perineal phase"
+    ],
+    steps: [
+      { n: 1, t: "Abdominal phase", d: "Mobilise the colon, ligate the vessels and dissect the mesorectum down to — but not beyond — the top of the levators, deliberately stopping high" },
+      { n: 2, t: "Form the colostomy", d: "Bring out the end colostomy and close the abdomen before turning the patient" },
+      { n: 3, t: "Prone perineal exposure", d: "Reposition prone jack-knife; wide elliptical perianal incision encircling the anus" },
+      { n: 4, t: "Divide levators peripherally", d: "Detach the levator ani at its origin on the pelvic sidewall, keeping the muscle on the specimen to create the cylinder — meet the abdominal plane from below" },
+      { n: 5, t: "Anterior dissection", d: "Carefully separate the specimen from the prostate/vagina; this anterior plane is where injury and margin compromise occur" },
+      { n: 6, t: "Reconstruct the perineum", d: "Deliver the cylindrical specimen; close the large defect with biological mesh, a myocutaneous flap or primary layered closure over a drain" }
+    ],
+    pearls: [
+      "Stop the abdominal mesorectal dissection HIGH — going too low recreates the waist ELAPE is meant to avoid",
+      "Divide the levators at the sidewall, not at the anorectal junction — that single change is what widens the margin",
+      "Decide on perineal reconstruction before you start; a radiotherapy field rarely closes well primarily"
+    ]
+  },
+  guidelines: [
+    { src: "Holm et al. — original description of extralevator APE / cylindrical excision" },
+    { src: "ACPGBI / ESCP — low rectal cancer and APE outcome standards" },
+    { src: "MERCURY / low-rectal-cancer MRI staging framework" }
+  ],
+  pearls: [
+    "ELAPE turns a coned, high-risk specimen into a cylinder — the geometry is the whole point",
+    "Prone positioning transforms the view of the deep anterior plane where margins are won or lost",
+    "The price of the wider excision is perineal wound morbidity — so select by MRI, don't apply it to every APE"
+  ],
+  mistakes: [
+    "Dissecting the mesorectum too low abdominally, reintroducing the waist and defeating the technique",
+    "Dividing levators at the anorectal junction (a conventional APE dressed up as ELAPE)",
+    "Anterior plane injury to the urethra/vagina/prostate from hurried dissection",
+    "Failing to plan perineal reconstruction, leaving an irradiated defect to break down"
+  ],
+  related: [
+    { id: "crc",   note: "ELAPE is a radical option for very low rectal cancer" },
+    { id: "tatme", note: "The sphincter-preserving alternative when the complex is not involved" },
+    { id: "anal-cancer", note: "Salvage APE follows failed chemoradiotherapy for anal SCC" }
+  ]
+},
+{
+  id: "malone-ace", dept: "colorectal",
+  name: "Malone Antegrade Continence Enema (MACE/ACE)",
+  latin: "Enema anterogradum continentiae (Malone)",
+  organ: "Appendix / caecum (continent conduit)",
+  severity: "moderate",
+  tags: ["ACE","MACE","faecal incontinence","constipation","appendicostomy","continent conduit"],
+  hero: "A catheterisable channel — usually the appendix — brought to the skin so the colon can be washed out from above, giving continence to patients with intractable constipation or faecal incontinence.",
+  keypoints: [
+    "Turns the appendix into a continent, catheterisable conduit to the caecum, through which an antegrade enema flushes the whole colon on a schedule — emptying it predictably so the patient stays clean between washouts",
+    "Two core indications: intractable constipation (including neuropathic/slow-transit) and faecal incontinence, typically after conservative and retrograde-enema measures have failed",
+    "Classically a paediatric/spina-bifida operation (Malone 1990) but equally valid in adults with neurogenic bowel, spinal injury or refractory functional disorders",
+    "Continence of the channel depends on a flap-valve/imbrication mechanism at the caecal insertion so the conduit does not leak stool or gas",
+    "If the appendix is absent or unusable, a caecal (Chait) tube, a Monti tube from a bowel segment, or a percutaneous caecostomy achieves the same antegrade access",
+    "Commonest problems are stomal stenosis (needs regular catheterisation to keep patent) and difficulty catheterising, not the washout itself"
+  ],
+  differentials: [
+    "Retrograde enema / transanal irrigation — first-line non-surgical bowel management; ACE is for when this fails or is impractical",
+    "Percutaneous endoscopic/radiological caecostomy (Chait tube) — same antegrade route without an appendiceal conduit",
+    "Monti/Yang-Monti channel — a tubularised bowel segment when the appendix is unavailable",
+    "Sacral nerve stimulation — for selected faecal incontinence/constipation before or instead of a conduit",
+    "Colostomy — the alternative definitive solution when bowel management fails entirely"
+  ],
+  overview: {
+    definition: "A surgical procedure creating a continent, catheterisable channel (most often the in-situ appendix) between the abdominal wall and the caecum, through which antegrade colonic irrigation is delivered to achieve controlled, scheduled bowel emptying.",
+    epidemiology: "Originally described for children with spina bifida and anorectal malformations; now also used in adults with neurogenic bowel (spinal cord injury, multiple sclerosis) and refractory functional constipation or incontinence.",
+    pathophysiology: "In neuropathic or slow-transit bowel, stool is retained and evacuation is unpredictable, causing overflow soiling or obstructive symptoms. Delivering a large-volume enema from the proximal colon (antegrade) produces a controlled mass movement that empties the colon completely; scheduling the washout keeps the colon empty enough that the patient remains continent in the interval. A flap-valve at the caecal insertion prevents efflux, making the channel continent.",
+    classification: [
+      {label:"Malone appendicostomy", note:"In-situ appendix reimplanted with an antireflux/imbrication valve and brought to the skin (often the umbilicus)"},
+      {label:"Split-appendix / combined", note:"Appendix split to provide both an ACE channel and a Mitrofanoff urinary channel in complex reconstructions"},
+      {label:"Monti channel", note:"Reconfigured small-bowel tube when the appendix is absent or already used"},
+      {label:"Caecostomy (Chait/percutaneous)", note:"Tube caecostomy for antegrade access without an appendiceal conduit"}
+    ]
+  },
+  criteria: {
+    title: "Selection & Practical Points",
+    items: [
+      { k: "Indication", v: "Intractable constipation or faecal incontinence failing optimised conservative and retrograde management, in a motivated patient (or carer) able to perform daily washouts" },
+      { k: "Assessment", v: "Confirm colonic transit and anorectal physiology; ensure the psychosocial support to sustain a lifelong regimen" },
+      { k: "Conduit choice", v: "Appendix preferred; if unavailable use a Monti tube or caecostomy" },
+      { k: "Continence mechanism", v: "Antireflux flap-valve/imbrication at the caecal insertion; site the stoma (umbilicus or right iliac fossa) for easy self-catheterisation" },
+      { k: "Aftercare", v: "Regular catheterisation prevents stenosis; washout volume and additives (water ± stimulant) are titrated to achieve a clean interval" }
+    ]
+  },
+  technique: {
+    title: "Malone Appendicostomy (Open or Laparoscopic)",
+    prep: [
+      "Multidisciplinary work-up (transit study, anorectal physiology, stoma nurse, psychology) and stoma-site marking",
+      "Bowel preparation; consent covering stomal stenosis, leakage, catheterisation difficulty and revision",
+      "Supine; open, laparoscopic or laparoscopic-assisted approach"
+    ],
+    steps: [
+      { n: 1, t: "Mobilise the appendix & caecum", d: "Identify the appendix, preserve its mesoappendix/blood supply and mobilise the caecum" },
+      { n: 2, t: "Create the antireflux valve", d: "Reimplant the appendix base into the caecum through a submucosal/imbricated tunnel (or plicate the caecum over it) to build the continence flap-valve" },
+      { n: 3, t: "Bring the tip to the skin", d: "Deliver the appendiceal tip to the chosen stoma site (umbilicus or RIF), often as a V-Y or spiral skin flap to reduce stenosis" },
+      { n: 4, t: "Mature the stoma", d: "Spatulate and suture the appendiceal opening flush to skin; leave a catheter in situ to stent the channel during healing" },
+      { n: 5, t: "Establish washouts", d: "Begin antegrade irrigation once healed; titrate volume/additives and teach daily catheterisation" },
+      { n: 6, t: "Follow-up", d: "Monitor for stenosis and leakage; catheterise regularly to keep the channel patent and adjust the regimen to a clean interval" }
+    ],
+    pearls: [
+      "A reliable antireflux valve is what makes the channel continent — skimping on the tunnel/imbrication causes leakage of stool and gas",
+      "A skin-flap stoma (V-Y/spiral) at maturation reduces the commonest long-term problem: stomal stenosis",
+      "Success is as much about patient selection and daily commitment as about the operation"
+    ]
+  },
+  guidelines: [
+    { src: "Malone et al. — original antegrade continence enema description (1990)" },
+    { src: "ACPGBI / paediatric surgical society guidance on antegrade continence procedures" },
+    { src: "Spinal-injury bowel-management pathways (MASCIP)" }
+  ],
+  pearls: [
+    "The ACE gives the patient control of when the colon empties — the psychological gain in a young neurogenic patient is huge",
+    "If the appendix is gone, don't abandon the plan — a Monti tube or Chait caecostomy achieves the same antegrade route",
+    "Regular catheterisation is preventive maintenance for the stoma, not optional"
+  ],
+  mistakes: [
+    "An inadequate antireflux mechanism, producing a leaking (incontinent) channel",
+    "Not maturing the stoma with a skin flap, leading to stenosis and catheterisation failure",
+    "Offering an ACE before optimising and trialling conservative/retrograde management",
+    "Under-appreciating the daily commitment required — poor adherence undermines an otherwise good operation"
+  ],
+  related: [
+    { id: "rectal-prolapse", note: "Part of the functional-bowel-disorder spectrum where evacuation is impaired" },
+    { id: "uc-surgical",     note: "Bowel-function reconstruction concepts overlap in complex colorectal cases" },
+    { id: "appendicitis",    note: "Uses the appendix — unavailable if previously removed" }
+  ]
 }
 
 ]; // end COLORECTAL3_DISEASES

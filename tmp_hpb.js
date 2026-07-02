@@ -609,5 +609,93 @@ window._TMP_HPB = [
   guidelines:[{src:"EPC/HaPanEU Guidelines for Chronic Pancreatitis 2017"},{src:"AGA Clinical Practice Guideline 2020"},{src:"IAP Guidelines on Management of Pain in CP 2018"}],
   pearls:["Fecal elastase is the simplest screening test for exocrine insufficiency — treat if <200 μg/g","PERT: 50 000 units lipase per meal minimum — underdosing is common","Celiac plexus block: 70% short-term pain relief in alcoholic CP; not as good as surgery long-term (ESCAPE trial)","Pancreatogenic diabetes: insulin required; avoid sulfonylureas; prone to hypoglycemia"],
   mistakes:["Under-dosing pancreatic enzyme replacement — patient remains malnourished","Not screening for and treating pancreatogenic diabetes","Proceeding to surgery without excluding malignancy (EUS-FNA, CA19-9) in head mass","Delaying surgery in favor of repeated endoscopic attempts — surgery more durable (ESCAPE/EORTC trials)"]
+},
+{
+  id: "central-pancreatectomy", dept: "hpb",
+  name: "Central (Middle-Segment) Pancreatectomy",
+  latin: "Pancreatectomia centralis",
+  organ: "Pancreatic neck / body",
+  severity: "high",
+  tags: ["pancreas","parenchyma-sparing","central pancreatectomy","benign","neuroendocrine","MIS"],
+  hero: "A parenchyma-sparing resection of the mid-pancreas that removes a benign or low-grade lesion of the neck/body while preserving both the tail and the spleen — trading a higher fistula risk for far better long-term endocrine and exocrine function.",
+  keypoints: [
+    "Removes only the central segment (neck/proximal body) and preserves the distal pancreas and spleen — the alternative, an extended distal pancreatectomy, would needlessly sacrifice normal gland",
+    "Reserved for benign or low-malignant-potential lesions of the neck/body: small neuroendocrine tumours (insulinoma), mucinous cystic neoplasm, branch-duct IPMN, solid-pseudopapillary tumour — NOT for adenocarcinoma",
+    "The whole point is functional preservation: it markedly lowers the risk of new endocrine (diabetes) and exocrine insufficiency compared with distal or extended resection",
+    "Creates two cut pancreatic surfaces — the proximal stump is oversewn, the distal stump is drained by a pancreaticojejunostomy (or pancreaticogastrostomy)",
+    "The price is the pancreas surgery world's highest postoperative pancreatic fistula rate (often 30–60%) because two soft, normal, non-dilated gland ends are in play",
+    "Choose it only when the lesion is genuinely benign AND enough distal remnant (roughly ≥ 5 cm) can be preserved to justify the extra fistula risk"
+  ],
+  differentials: [
+    "Distal pancreatectomy (± splenectomy) — simpler, one stump, but sacrifices the tail and often the spleen",
+    "Enucleation — for very small, superficial, duct-remote lesions; least parenchymal loss, but not safe when the lesion abuts the main duct",
+    "Pancreaticoduodenectomy (Whipple) — for lesions of the head/uncinate or any malignancy",
+    "Total pancreatectomy — extensive multifocal disease (e.g. main-duct IPMN); guarantees brittle diabetes",
+    "Surveillance — small low-risk cystic lesions may be watched rather than resected"
+  ],
+  overview: {
+    definition: "A limited pancreatic resection removing the central portion of the gland (neck and proximal body) for benign or low-grade lesions, preserving the pancreatic head, the distal body/tail and the spleen, with reconstruction of the distal remnant by an anastomosis to bowel or stomach.",
+    epidemiology: "An uncommon, elective, supra-specialist operation performed in high-volume HPB units for carefully selected central lesions where organ preservation outweighs the fistula risk.",
+    pathophysiology: "The endocrine islet mass and exocrine acinar tissue are distributed throughout the gland, so wide resections (distal/extended) remove functioning parenchyma and precipitate diabetes and steatorrhoea. Central pancreatectomy excises only the segment bearing the lesion, conserving both ends; but because both remnants are soft, normal-textured gland with small non-dilated ducts — the classic high-risk anatomy for anastomotic failure — the pancreatic fistula rate is high.",
+    classification: [
+      {label:"Proximal stump", note:"Head-side cut surface — closed/oversewn (suture or stapler), duct ligated"},
+      {label:"Distal remnant reconstruction", note:"Tail-side stump drained by pancreaticojejunostomy (Roux loop) or pancreaticogastrostomy"},
+      {label:"Open vs MIS", note:"Increasingly performed laparoscopically or robotically in expert hands for these benign lesions"},
+      {label:"Spleen preservation", note:"The splenic vessels and spleen are preserved — a key advantage over distal pancreatectomy with splenectomy"}
+    ]
+  },
+  criteria: {
+    title: "Selection & Risk Trade-off",
+    items: [
+      { k: "Ideal lesion", v: "Benign/low-grade neck or proximal-body lesion: small NET (e.g. insulinoma), MCN, branch-duct IPMN, solid-pseudopapillary tumour" },
+      { k: "Anatomical requirement", v: "Adequate distal remnant preservable (roughly ≥ 5 cm of tail); lesion not amenable to safe enucleation (too close to main duct)" },
+      { k: "Absolute contraindication", v: "Any adenocarcinoma or lesion needing a formal oncological lymphadenectomy — do a Whipple or distal resection instead" },
+      { k: "Main risk", v: "Postoperative pancreatic fistula 30–60% (two soft stumps) — counsel the patient and plan drainage accordingly" },
+      { k: "Payoff", v: "Substantially lower rates of new-onset diabetes and exocrine insufficiency than distal/extended resection" }
+    ]
+  },
+  technique: {
+    title: "Central Pancreatectomy — Segmental Resection & Reconstruction",
+    prep: [
+      "Cross-sectional imaging (pancreatic-protocol CT/MRI) ± EUS-FNA to confirm benign/low-grade histology and duct relationship",
+      "Confirm adequate distal remnant length and spleen/splenic-vessel anatomy",
+      "Supine; open, laparoscopic or robotic approach; wide drains planned for the anticipated fistula risk"
+    ],
+    steps: [
+      { n: 1, t: "Expose the gland", d: "Open the lesser sac, divide the gastrocolic ligament and expose the pancreatic neck/body; identify the superior mesenteric/portal vein behind the neck" },
+      { n: 2, t: "Develop the retropancreatic tunnel", d: "Create the plane between the neck and the SMV/portal vein to allow safe transection" },
+      { n: 3, t: "Transect the central segment", d: "Divide the gland proximal and distal to the lesion, preserving the splenic vessels and enough tail; remove the central specimen" },
+      { n: 4, t: "Close the proximal stump", d: "Oversew/staple the head-side cut surface and ligate its main duct to minimise leak from that end" },
+      { n: 5, t: "Reconstruct the distal remnant", d: "Anastomose the tail-side stump to a Roux limb (pancreaticojejunostomy) or to the posterior stomach (pancreaticogastrostomy)" },
+      { n: 6, t: "Drain & close", d: "Place drains at both stumps; monitor drain amylase for fistula; abdomen closed" }
+    ],
+    pearls: [
+      "Reserve central pancreatectomy for genuinely benign disease — the moment malignancy is a concern, switch to an oncological resection",
+      "Both stumps are soft normal gland: expect and prepare for a fistula rather than being surprised by one",
+      "Preserving the spleen and its vessels is a major functional and immunological gain over distal pancreatectomy with splenectomy"
+    ]
+  },
+  guidelines: [
+    { src: "IHPBA / ISGPS — parenchyma-sparing pancreatic resection and pancreatic fistula definitions" },
+    { src: "European guidelines on cystic pancreatic neoplasms (IPMN/MCN management)" },
+    { src: "ENETS — small pancreatic neuroendocrine tumour management" }
+  ],
+  pearls: [
+    "Central pancreatectomy is a functional-preservation operation — its justification is the diabetes/steatorrhoea it prevents, not the tissue it removes",
+    "The distal-stump anastomosis is the make-or-break step; treat it like any high-risk soft-gland pancreatic anastomosis",
+    "Do not use it as a shortcut for a tail lesion that a straightforward distal pancreatectomy would handle"
+  ],
+  mistakes: [
+    "Selecting a malignant lesion for central pancreatectomy — inadequate margins and no lymphadenectomy",
+    "Under-draining and under-counselling for the high fistula rate",
+    "Choosing it when enucleation would suffice (needless second stump) or when distal resection is clearly better",
+    "Injuring the splenic vessels and losing the spleen — negating the operation's main advantage"
+  ],
+  related: [
+    { id: "pan-net",             note: "Small body/neck neuroendocrine tumours (e.g. insulinoma) are the classic indication" },
+    { id: "ipmn",                note: "Branch-duct IPMN of the neck/body may be resected with parenchymal sparing" },
+    { id: "pancreatic-cancer",   note: "A contraindication — adenocarcinoma needs formal oncological resection" },
+    { id: "insulinoma",          note: "A benign functioning NET well suited to parenchyma-sparing central resection" }
+  ]
 }
 ];
