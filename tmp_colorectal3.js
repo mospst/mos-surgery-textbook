@@ -946,6 +946,94 @@ const COLORECTAL3_DISEASES = [
     "Not inspecting the peritoneum at laparoscopy — PMP may already be present; would change management",
     "Treating HAMN/adenocarcinoma with simple appendectomy — right hemicolectomy mandatory for these subtypes"
   ]
+},
+{
+  id: "crs-hipec", dept: "colorectal",
+  name: "Cytoreductive Surgery & HIPEC",
+  latin: "Chirurgia cytoreductiva cum chemotherapia intraperitoneali hyperthermica",
+  organ: "Peritoneum (peritoneal surface)",
+  severity: "high",
+  tags: ["peritoneal malignancy","HIPEC","cytoreduction","pseudomyxoma","oncology"],
+  hero: "For peritoneal surface malignancy: aggressive removal of all visible tumour (cytoreduction) followed by heated chemotherapy washed through the abdomen — turning a once-palliative diagnosis into a potentially curative one in selected patients.",
+  keypoints: [
+    "Two-part treatment: cytoreductive surgery (CRS) to remove all macroscopic disease, then HIPEC (Hyperthermic IntraPEritoneal Chemotherapy) to treat residual microscopic disease",
+    "Only worthwhile if a COMPLETE cytoreduction is achievable — outcome is driven by the completeness-of-cytoreduction (CC) score (CC-0/CC-1 = no or ≤2.5 mm residual)",
+    "Best-evidenced indications: pseudomyxoma peritonei (appendiceal mucinous), peritoneal mesothelioma, and selected colorectal or ovarian peritoneal metastases",
+    "The peritoneal carcinomatosis index (PCI, 0–39) quantifies disease burden across 13 abdominopelvic regions and helps select who benefits",
+    "Heat (~41–43 °C) is synergistic with chemotherapy (commonly mitomycin-C or oxaliplatin) and improves tissue penetration; intraperitoneal delivery gives high local dose with low systemic toxicity",
+    "A major undertaking — long operation, multi-visceral resections and peritonectomies, significant morbidity — so careful patient selection and an expert centre are essential"
+  ],
+  differentials: [
+    "Systemic chemotherapy alone — standard for widespread/unresectable peritoneal metastases",
+    "Palliative surgery (e.g. stoma, bypass) — for obstruction without curative intent",
+    "PIPAC (pressurised intraperitoneal aerosol chemotherapy) — palliative/repeatable option for unresectable peritoneal disease",
+    "Debulking without HIPEC — for low-grade disease where the heated wash adds little",
+    "Best supportive care — when performance status or disease burden precludes CRS"
+  ],
+  overview: {
+    definition: "A combined-modality treatment for peritoneal surface malignancy: cytoreductive surgery removes all visible tumour by peritonectomy and multi-visceral resection, and hyperthermic intraperitoneal chemotherapy then perfuses the abdomen with heated cytotoxic solution to eradicate residual microscopic disease.",
+    epidemiology: "Applied to peritoneal metastases from appendiceal (pseudomyxoma peritonei), colorectal, ovarian and gastric primaries and to primary peritoneal mesothelioma; performed at specialist peritoneal-malignancy centres.",
+    pathophysiology: "Peritoneal spread seeds the serosal surfaces, where systemic chemotherapy penetrates poorly (the peritoneal–plasma barrier). Removing all macroscopic disease leaves only microscopic tumour, which intraperitoneal chemotherapy — delivered at high local concentration and potentiated by hyperthermia (enhanced drug penetration, direct cytotoxicity and impaired repair) — can then target with limited systemic exposure.",
+    classification: [
+      {label:"PCI (Peritoneal Carcinomatosis Index)", note:"Tumour burden scored 0–39 across 13 regions; higher PCI predicts worse outcome and may contraindicate CRS"},
+      {label:"CC score (Completeness of Cytoreduction)", note:"CC-0 (no visible residual) / CC-1 (≤2.5 mm) = complete; CC-2/CC-3 = incomplete, minimal survival benefit"},
+      {label:"HIPEC delivery", note:"Open ('coliseum') or closed technique; heated perfusate ~41–43 °C for ~30–90 min; drug per tumour type"},
+      {label:"Common agents", note:"Mitomycin-C (appendiceal/colorectal), oxaliplatin (colorectal), cisplatin (mesothelioma/ovarian)"}
+    ]
+  },
+  criteria: {
+    title: "Patient Selection & Peri-operative Principles",
+    items: [
+      { k: "Ideal candidate", v: "Good performance status, limited PCI, disease amenable to complete (CC-0/1) cytoreduction, no extra-abdominal metastases" },
+      { k: "Best-evidence indications", v: "Pseudomyxoma peritonei, peritoneal mesothelioma, selected colorectal/ovarian peritoneal metastases" },
+      { k: "PCI limits", v: "High PCI (varies by tumour; e.g. colorectal typically >20) predicts poor benefit — relative contraindication" },
+      { k: "Prognostic driver", v: "Completeness of cytoreduction (CC-0/1) is the single strongest predictor of survival" },
+      { k: "HIPEC agent/temp", v: "Mitomycin-C or oxaliplatin (colorectal/appendiceal); perfusate ~41–43 °C, ~30–90 min" },
+      { k: "Morbidity", v: "High (anastomotic leak, fistula, haematological, prolonged ileus) — expert-centre, MDT-selected patients" },
+      { k: "Not indicated", v: "Extra-abdominal disease, unresectable retroperitoneal/root-of-mesentery involvement, poor performance status" }
+    ]
+  },
+  technique: {
+    title: "Cytoreductive Surgery + HIPEC",
+    prep: [
+      "MDT selection; staging CT/MRI ± diagnostic laparoscopy to estimate PCI and resectability",
+      "Optimise nutrition; counsel on major morbidity and possible multi-visceral/stoma resections",
+      "Cross-match, critical-care bed, and HIPEC perfusion circuit ready"
+    ],
+    steps: [
+      { n: 1, t: "Explore & score PCI", d: "Full laparotomy; assess all 13 regions and assign the peritoneal carcinomatosis index; confirm complete cytoreduction is achievable" },
+      { n: 2, t: "Peritonectomy", d: "Systematic Sugarbaker peritonectomy procedures — strip involved parietal peritoneum from diaphragm, pelvis and gutters" },
+      { n: 3, t: "Visceral resection", d: "Resect involved viscera (omentectomy, colectomy, splenectomy, etc.) to remove all macroscopic tumour" },
+      { n: 4, t: "Confirm cytoreduction", d: "Verify CC-0/CC-1 status — HIPEC is only worthwhile if residual disease is ≤2.5 mm" },
+      { n: 5, t: "Deliver HIPEC", d: "Circulate heated chemotherapy (~41–43 °C) through the abdomen for the drug-specific time (open coliseum or closed technique), agitating to distribute" },
+      { n: 6, t: "Reconstruct", d: "Perform anastomoses/stomas after HIPEC (to avoid chemo exposure of fresh suture lines); drain; critical-care recovery" }
+    ],
+    pearls: [
+      "HIPEC only helps after a complete (CC-0/1) cytoreduction — an incomplete debulk gains little",
+      "Estimate the PCI and resectability up front (imaging ± diagnostic laparoscopy) to avoid an open-and-close laparotomy",
+      "Fashion bowel anastomoses AFTER the heated perfusion to limit chemotherapy exposure of fresh suture lines"
+    ]
+  },
+  guidelines: [
+    { src: "PSOGI — Peritoneal Surface Oncology Group International consensus" },
+    { src: "ASPSM / ESMO — cytoreductive surgery and HIPEC recommendations" }
+  ],
+  pearls: [
+    "Completeness of cytoreduction (CC score) is the dominant prognostic factor — aim for CC-0",
+    "Pseudomyxoma peritonei is the classic best-responder to CRS + HIPEC",
+    "Intraperitoneal + hyperthermic delivery gives a high local dose with low systemic toxicity"
+  ],
+  mistakes: [
+    "Offering HIPEC after an incomplete cytoreduction (CC-2/3) — little survival benefit",
+    "Poor selection: high PCI or extra-abdominal disease → morbidity without cure",
+    "Constructing anastomoses before HIPEC, exposing fresh suture lines to chemotherapy"
+  ],
+  related: [
+    { id: "mucocele-appendix",  note: "Appendiceal mucinous neoplasm — source of pseudomyxoma peritonei treated by CRS+HIPEC" },
+    { id: "carcinoid-appendix", note: "Appendiceal tumour spectrum and peritoneal spread" },
+    { id: "crc",                note: "Selected colorectal peritoneal metastases are an indication for CRS+HIPEC" },
+    { id: "diagnostic-laparoscopy", note: "Used to estimate PCI and resectability before committing to CRS" }
+  ]
 }
 
 ]; // end COLORECTAL3_DISEASES

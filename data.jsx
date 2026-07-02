@@ -17564,6 +17564,223 @@ const DISEASES = [
     ]
   },
 
+  {
+    id: "crs-hipec",
+    dept: "colorectal",
+    name: "Cytoreductive Surgery & HIPEC",
+    latin: "Chirurgia cytoreductiva cum chemotherapia intraperitoneali hyperthermica",
+    organ: "Peritoneum (peritoneal surface)",
+    severity: "high",
+    tags: ["peritoneal malignancy", "HIPEC", "cytoreduction", "pseudomyxoma", "oncology"],
+    hero: "For peritoneal surface malignancy: aggressive removal of all visible tumour (cytoreduction) followed by heated chemotherapy washed through the abdomen — turning a once-palliative diagnosis into a potentially curative one in selected patients.",
+    keypoints: [
+      "Two-part treatment: cytoreductive surgery (CRS) to remove all macroscopic disease, then HIPEC (Hyperthermic IntraPEritoneal Chemotherapy) to treat residual microscopic disease",
+      "Only worthwhile if a COMPLETE cytoreduction is achievable — outcome is driven by the completeness-of-cytoreduction (CC) score (CC-0/CC-1 = no or ≤2.5 mm residual)",
+      "Best-evidenced indications: pseudomyxoma peritonei (appendiceal mucinous), peritoneal mesothelioma, and selected colorectal or ovarian peritoneal metastases",
+      "The peritoneal carcinomatosis index (PCI, 0–39) quantifies disease burden across 13 abdominopelvic regions and helps select who benefits",
+      "Heat (~41–43 °C) is synergistic with chemotherapy (commonly mitomycin-C or oxaliplatin) and improves tissue penetration; intraperitoneal delivery gives high local dose with low systemic toxicity",
+      "A major undertaking — long operation, multi-visceral resections and peritonectomies, significant morbidity — so careful patient selection and an expert centre are essential"
+    ],
+    differentials: [
+      "Systemic chemotherapy alone — standard for widespread/unresectable peritoneal metastases",
+      "Palliative surgery (e.g. stoma, bypass) — for obstruction without curative intent",
+      "PIPAC (pressurised intraperitoneal aerosol chemotherapy) — palliative/repeatable option for unresectable peritoneal disease",
+      "Debulking without HIPEC — for low-grade disease where the heated wash adds little",
+      "Best supportive care — when performance status or disease burden precludes CRS"
+    ],
+    overview: {
+      definition: "A combined-modality treatment for peritoneal surface malignancy: cytoreductive surgery removes all visible tumour by peritonectomy and multi-visceral resection, and hyperthermic intraperitoneal chemotherapy then perfuses the abdomen with heated cytotoxic solution to eradicate residual microscopic disease.",
+      epidemiology: "Applied to peritoneal metastases from appendiceal (pseudomyxoma peritonei), colorectal, ovarian and gastric primaries and to primary peritoneal mesothelioma; performed at specialist peritoneal-malignancy centres.",
+      pathophysiology: "Peritoneal spread seeds the serosal surfaces, where systemic chemotherapy penetrates poorly (the peritoneal–plasma barrier). Removing all macroscopic disease leaves only microscopic tumour, which intraperitoneal chemotherapy — delivered at high local concentration and potentiated by hyperthermia (enhanced drug penetration, direct cytotoxicity and impaired repair) — can then target with limited systemic exposure.",
+      classification: [
+        {
+          label: "PCI (Peritoneal Carcinomatosis Index)",
+          note: "Tumour burden scored 0–39 across 13 regions; higher PCI predicts worse outcome and may contraindicate CRS"
+        },
+        {
+          label: "CC score (Completeness of Cytoreduction)",
+          note: "CC-0 (no visible residual) / CC-1 (≤2.5 mm) = complete; CC-2/CC-3 = incomplete, minimal survival benefit"
+        },
+        {
+          label: "HIPEC delivery",
+          note: "Open ('coliseum') or closed technique; heated perfusate ~41–43 °C for ~30–90 min; drug per tumour type"
+        },
+        {
+          label: "Common agents",
+          note: "Mitomycin-C (appendiceal/colorectal), oxaliplatin (colorectal), cisplatin (mesothelioma/ovarian)"
+        }
+      ]
+    },
+    criteria: {
+      title: "Patient Selection & Peri-operative Principles",
+      items: [
+        {
+          k: "Ideal candidate",
+          v: "Good performance status, limited PCI, disease amenable to complete (CC-0/1) cytoreduction, no extra-abdominal metastases"
+        },
+        {
+          k: "Best-evidence indications",
+          v: "Pseudomyxoma peritonei, peritoneal mesothelioma, selected colorectal/ovarian peritoneal metastases"
+        },
+        {
+          k: "PCI limits",
+          v: "High PCI (varies by tumour; e.g. colorectal typically >20) predicts poor benefit — relative contraindication"
+        },
+        {
+          k: "Prognostic driver",
+          v: "Completeness of cytoreduction (CC-0/1) is the single strongest predictor of survival"
+        },
+        {
+          k: "HIPEC agent/temp",
+          v: "Mitomycin-C or oxaliplatin (colorectal/appendiceal); perfusate ~41–43 °C, ~30–90 min"
+        },
+        {
+          k: "Morbidity",
+          v: "High (anastomotic leak, fistula, haematological, prolonged ileus) — expert-centre, MDT-selected patients"
+        },
+        {
+          k: "Not indicated",
+          v: "Extra-abdominal disease, unresectable retroperitoneal/root-of-mesentery involvement, poor performance status"
+        }
+      ]
+    },
+    technique: {
+      title: "Cytoreductive Surgery + HIPEC",
+      prep: [
+        "MDT selection; staging CT/MRI ± diagnostic laparoscopy to estimate PCI and resectability",
+        "Optimise nutrition; counsel on major morbidity and possible multi-visceral/stoma resections",
+        "Cross-match, critical-care bed, and HIPEC perfusion circuit ready"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Explore & score PCI",
+          d: "Full laparotomy; assess all 13 regions and assign the peritoneal carcinomatosis index; confirm complete cytoreduction is achievable"
+        },
+        {
+          n: 2,
+          t: "Peritonectomy",
+          d: "Systematic Sugarbaker peritonectomy procedures — strip involved parietal peritoneum from diaphragm, pelvis and gutters"
+        },
+        {
+          n: 3,
+          t: "Visceral resection",
+          d: "Resect involved viscera (omentectomy, colectomy, splenectomy, etc.) to remove all macroscopic tumour"
+        },
+        {
+          n: 4,
+          t: "Confirm cytoreduction",
+          d: "Verify CC-0/CC-1 status — HIPEC is only worthwhile if residual disease is ≤2.5 mm"
+        },
+        {
+          n: 5,
+          t: "Deliver HIPEC",
+          d: "Circulate heated chemotherapy (~41–43 °C) through the abdomen for the drug-specific time (open coliseum or closed technique), agitating to distribute"
+        },
+        {
+          n: 6,
+          t: "Reconstruct",
+          d: "Perform anastomoses/stomas after HIPEC (to avoid chemo exposure of fresh suture lines); drain; critical-care recovery"
+        }
+      ],
+      pearls: [
+        "HIPEC only helps after a complete (CC-0/1) cytoreduction — an incomplete debulk gains little",
+        "Estimate the PCI and resectability up front (imaging ± diagnostic laparoscopy) to avoid an open-and-close laparotomy",
+        "Fashion bowel anastomoses AFTER the heated perfusion to limit chemotherapy exposure of fresh suture lines"
+      ]
+    },
+    guidelines: [
+      {
+        src: "PSOGI — Peritoneal Surface Oncology Group International consensus"
+      },
+      {
+        src: "ASPSM / ESMO — cytoreductive surgery and HIPEC recommendations",
+        url: "https://www.esmo.org/guidelines"
+      }
+    ],
+    pearls: [
+      "Completeness of cytoreduction (CC score) is the dominant prognostic factor — aim for CC-0",
+      "Pseudomyxoma peritonei is the classic best-responder to CRS + HIPEC",
+      "Intraperitoneal + hyperthermic delivery gives a high local dose with low systemic toxicity"
+    ],
+    mistakes: [
+      "Offering HIPEC after an incomplete cytoreduction (CC-2/3) — little survival benefit",
+      "Poor selection: high PCI or extra-abdominal disease → morbidity without cure",
+      "Constructing anastomoses before HIPEC, exposing fresh suture lines to chemotherapy"
+    ],
+    related: [
+      {
+        id: "mucocele-appendix",
+        note: "Appendiceal mucinous neoplasm — source of pseudomyxoma peritonei treated by CRS+HIPEC"
+      },
+      {
+        id: "carcinoid-appendix",
+        note: "Appendiceal tumour spectrum and peritoneal spread"
+      },
+      {
+        id: "crc",
+        note: "Selected colorectal peritoneal metastases are an indication for CRS+HIPEC"
+      },
+      {
+        id: "diagnostic-laparoscopy",
+        note: "Used to estimate PCI and resectability before committing to CRS"
+      }
+    ],
+    videoResources: [
+      {
+        title: "Search operation videos on SAGES TV",
+        source: "SAGES TV",
+        url: "https://www.google.com/search?q=cytoreductive%20surgery%20HIPEC%20peritoneal%20carcinomatosis%20site%3Asages.org",
+        tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
+        query: "cytoreductive surgery HIPEC peritoneal carcinomatosis"
+      },
+      {
+        title: "Search advanced colorectal/MIS videos on AIS Channel",
+        source: "AIS Channel",
+        url: "https://www.google.com/search?q=cytoreductive%20surgery%20HIPEC%20peritoneal%20carcinomatosis%20site%3Aaischannel.com",
+        tags: ["video", "free-account", "expert", "MIS", "colorectal"],
+        query: "cytoreductive surgery HIPEC peritoneal carcinomatosis"
+      },
+      {
+        title: "Search operation videos on WebSurg / IRCAD",
+        source: "WebSurg / IRCAD",
+        url: "https://www.google.com/search?q=cytoreductive%20surgery%20HIPEC%20peritoneal%20carcinomatosis%20site%3Awebsurg.com",
+        tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
+        query: "cytoreductive surgery HIPEC peritoneal carcinomatosis"
+      }
+    ],
+    anatomyResources: [
+      {
+        title: "Search GI endoscopy image/video atlas",
+        source: "Gastrointestinal Atlas",
+        url: "https://www.google.com/search?q=peritoneal%20carcinomatosis%20site%3Agastrointestinalatlas.com",
+        tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
+        query: "peritoneal carcinomatosis"
+      },
+      {
+        title: "Search radiology cases and anatomy",
+        source: "Radiopaedia",
+        url: "https://radiopaedia.org/search?q=peritoneal%20carcinomatosis",
+        tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
+        query: "peritoneal carcinomatosis"
+      },
+      {
+        title: "Search open anatomy/media images",
+        source: "Wikimedia Commons",
+        url: "https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search=peritoneal%20carcinomatosis",
+        tags: ["image", "open-license", "anatomy", "photo", "diagram"],
+        query: "peritoneal carcinomatosis"
+      },
+      {
+        title: "Search gross and histopathology image atlas",
+        source: "University of Utah WebPath",
+        url: "https://www.google.com/search?q=peritoneal%20carcinomatosis%20site%3Awebpath.med.utah.edu",
+        tags: ["image", "gross-pathology", "histology", "teaching"],
+        query: "peritoneal carcinomatosis"
+      }
+    ]
+  },
+
 
   // ══════════════════════ UPPER GI & SMALL BOWEL ══════════════════════,
 
@@ -18141,6 +18358,10 @@ const DISEASES = [
       {
         id: "diagnostic-laparoscopy",
         note: "Staging laparoscopy detects occult peritoneal metastases"
+      },
+      {
+        id: "feeding-jejunostomy",
+        note: "Post-gastrectomy nutrition via jejunostomy"
       }
     ],
     timing: {
@@ -18428,6 +18649,10 @@ const DISEASES = [
       {
         id: "therapeutic-endoscopy",
         note: "Endoscopic hemostasis for upper-GI bleeding"
+      },
+      {
+        id: "balloon-tamponade",
+        note: "Variceal bleeding is a major cause of upper-GI haemorrhage"
       }
     ],
     timing: {
@@ -18718,6 +18943,10 @@ const DISEASES = [
       {
         id: "peg",
         note: "Nutritional support during treatment; use Push/Introducer to avoid stomal seeding"
+      },
+      {
+        id: "feeding-jejunostomy",
+        note: "Feeding jejunostomy commonly placed at oesophagectomy"
       }
     ],
     timing: {
@@ -18978,6 +19207,16 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Hiatus Hernia"
       }
+    ],
+    related: [
+      {
+        id: "sleeve-gastrectomy",
+        note: "Repair concurrently to limit post-sleeve reflux"
+      },
+      {
+        id: "partial-fundoplication",
+        note: "Hiatal repair is part of any fundoplication"
+      }
     ]
   },
 
@@ -19236,6 +19475,16 @@ const DISEASES = [
         url: "https://www.google.com/search?q=Achalasia%20site%3Awebpath.med.utah.edu",
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Achalasia"
+      }
+    ],
+    related: [
+      {
+        id: "poem",
+        note: "Primary disease; POEM and Heller myotomy are the definitive treatments"
+      },
+      {
+        id: "partial-fundoplication",
+        note: "Dor fundoplication is added after Heller myotomy"
       }
     ]
   },
@@ -19783,6 +20032,12 @@ const DISEASES = [
         url: "https://www.google.com/search?q=Bariatric%20Surgery%20site%3Awebpath.med.utah.edu",
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Bariatric Surgery"
+      }
+    ],
+    related: [
+      {
+        id: "sleeve-gastrectomy",
+        note: "Parent topic — indications and comparison of bariatric operations"
       }
     ]
   },
@@ -22700,6 +22955,16 @@ const DISEASES = [
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Gastro-Esophageal Reflux Disease"
       }
+    ],
+    related: [
+      {
+        id: "poem",
+        note: "Post-POEM reflux is common and needs PPI/surveillance"
+      },
+      {
+        id: "partial-fundoplication",
+        note: "Same disease — surgical anti-reflux options"
+      }
     ]
   },
 
@@ -23277,6 +23542,10 @@ const DISEASES = [
       {
         id: "peg",
         note: "Neurological dysphagia is the leading indication for long-term PEG feeding"
+      },
+      {
+        id: "poem",
+        note: "Achalasia is a key cause of the dysphagia POEM relieves"
       }
     ]
   },
@@ -23576,6 +23845,10 @@ const DISEASES = [
       {
         id: "peg",
         note: "A contraindication to gastric feeding — consider post-pyloric PEG-J instead"
+      },
+      {
+        id: "feeding-jejunostomy",
+        note: "Post-pyloric feeding route bypassing the obstruction"
       }
     ],
     timing: {
@@ -23908,6 +24181,12 @@ const DISEASES = [
         url: "https://www.google.com/search?q=Melena%20site%3Awebpath.med.utah.edu",
         tags: ["image", "gross-pathology", "histology", "teaching"],
         query: "Melena"
+      }
+    ],
+    related: [
+      {
+        id: "balloon-tamponade",
+        note: "Variceal bleeding can present as melena or haematemesis"
       }
     ]
   },
@@ -39396,6 +39675,10 @@ const DISEASES = [
       {
         id: "robotic-surgery",
         note: "Robotic TAPP / complex abdominal-wall reconstruction"
+      },
+      {
+        id: "lap-inguinal-hernia",
+        note: "Parent disease — open (Lichtenstein) vs laparoscopic TEP/TAPP repair"
       }
     ]
   },
@@ -40174,6 +40457,10 @@ const DISEASES = [
       {
         id: "mis-complications",
         note: "Port-site hernia is a form of incisional hernia at a trocar site"
+      },
+      {
+        id: "lap-inguinal-hernia",
+        note: "Shared prosthetic-mesh and abdominal-wall repair principles"
       }
     ]
   },
@@ -45640,6 +45927,961 @@ const DISEASES = [
       {
         id: "gastric-outlet-obstruction",
         note: "A contraindication to gastric feeding — consider post-pyloric PEG-J instead"
+      }
+    ]
+  },
+
+  {
+    id: "sleeve-gastrectomy",
+    dept: "mis",
+    name: "Laparoscopic Sleeve Gastrectomy",
+    latin: "Gastrectomia longitudinalis laparoscopica",
+    organ: "Stomach",
+    severity: "moderate",
+    tags: ["bariatric", "sleeve", "metabolic", "obesity", "MIS", "weight loss"],
+    hero: "Removing ~80% of the stomach along the greater curve to leave a narrow tube — now the world's commonest bariatric operation, restrictive with useful metabolic (hormonal) effects.",
+    keypoints: [
+      "Purely restrictive anatomically but strongly metabolic: resecting the fundus removes most ghrelin-producing cells, reducing hunger and improving glycaemic control early, before weight loss",
+      "The stomach is divided vertically over a bougie (typically 32–40 Fr) from ~2–6 cm proximal to the pylorus up to the angle of His",
+      "Two dreaded complications: staple-line leak (usually near the angle of His, presents days 3–10 with tachycardia/sepsis) and staple-line bleeding",
+      "New or worsened GERD is the main long-term downside — significant reflux or a large hiatus hernia favours a bypass instead",
+      "Simpler and faster than gastric bypass, no anastomosis and no mesenteric defects, but not reversible and slightly less weight loss / diabetes remission than RYGB",
+      "Leaves the whole GI tract endoscopically accessible (unlike RYGB) — an advantage if future ERCP is likely"
+    ],
+    differentials: [
+      "Roux-en-Y gastric bypass (RYGB) — better for severe GERD and diabetes; adds malabsorption and dumping",
+      "One-anastomosis gastric bypass (OAGB) — single loop anastomosis; simpler than RYGB, risk of bile reflux",
+      "Biliopancreatic diversion / duodenal switch (BPD-DS, SADI-S) — most powerful weight loss/metabolic effect, most malabsorption",
+      "Intragastric balloon / endoscopic sleeve gastroplasty — less invasive, less durable",
+      "Medical therapy (GLP-1 agonists) — first-line adjunct or alternative in selected patients"
+    ],
+    overview: {
+      definition: "A laparoscopic bariatric procedure that vertically resects the greater curvature of the stomach, creating a narrow, tubular 'sleeve' of ~100–150 mL that restricts intake and removes the ghrelin-rich fundus.",
+      epidemiology: "The most frequently performed bariatric operation worldwide, having overtaken Roux-en-Y gastric bypass, owing to technical simplicity and a good safety/efficacy balance.",
+      pathophysiology: "Resection of the gastric fundus (the principal source of the orexigenic hormone ghrelin) reduces appetite and, with the small residual reservoir, limits intake. Accelerated gastric emptying increases distal nutrient delivery, augmenting GLP-1 and PYY secretion — driving early, weight-independent improvement in type-2 diabetes. The narrow high-pressure tube and division of the angle of His predispose to gastro-oesophageal reflux.",
+      classification: [
+        {
+          label: "Sleeve gastrectomy (SG)",
+          note: "Restrictive + ghrelin reduction; no anastomosis; the reference procedure described here"
+        },
+        {
+          label: "One-anastomosis gastric bypass (OAGB)",
+          note: "Long gastric pouch + single loop gastrojejunostomy (~200 cm biliopancreatic limb); simpler than RYGB but risk of bile reflux"
+        },
+        {
+          label: "Roux-en-Y gastric bypass (RYGB)",
+          note: "Small pouch + Roux limb; best for GERD/diabetes; two anastomoses, dumping, internal-hernia risk"
+        },
+        {
+          label: "BPD-DS / SADI-S",
+          note: "Sleeve + duodeno-ileal diversion; greatest weight loss and metabolic effect; highest malabsorption/vitamin deficiency"
+        }
+      ]
+    },
+    criteria: {
+      title: "Selection, Contraindications & Peri-operative Milestones",
+      items: [
+        {
+          k: "Eligibility (NICE/IFSO)",
+          v: "BMI ≥40, or ≥35 with a comorbidity (T2DM, OSA, HTN); increasingly ≥30–35 with poorly-controlled T2DM"
+        },
+        {
+          k: "Favours sleeve over bypass",
+          v: "Simpler risk profile, need for future endoscopic biliary access, IBD, or transplant candidacy"
+        },
+        {
+          k: "Favours bypass over sleeve",
+          v: "Severe GERD / Barrett's, large hiatus hernia, poorly-controlled diabetes"
+        },
+        {
+          k: "Bougie / margin",
+          v: "32–40 Fr bougie; start division 2–6 cm from pylorus; stay off the bougie at the incisura to avoid stenosis"
+        },
+        {
+          k: "Leak window",
+          v: "Highest risk at the angle of His; suspect on day 3–10 with tachycardia, fever, left shoulder-tip pain"
+        },
+        {
+          k: "Nutrition follow-up",
+          v: "Lifelong multivitamin, B12, iron, vitamin D; annual bloods"
+        }
+      ]
+    },
+    technique: {
+      title: "Laparoscopic Sleeve Gastrectomy",
+      prep: [
+        "MDT workup (dietitian, psychology), pre-op liver-shrinkage diet, VTE prophylaxis, treat OSA",
+        "Screen for and note any hiatus hernia / GERD — plan concurrent hiatal repair if present",
+        "Supine reverse-Trendelenburg, split-leg or French position; 5 ports"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Mobilise greater curve",
+          d: "Divide the gastrocolic omentum along the greater curvature with an energy device from ~4 cm proximal to the pylorus up to the left crus, taking down short gastric vessels to the angle of His"
+        },
+        {
+          n: 2,
+          t: "Assess hiatus",
+          d: "Inspect the hiatus; formally repair any hiatus hernia (posterior cruroplasty) to reduce post-op reflux"
+        },
+        {
+          n: 3,
+          t: "Insert bougie",
+          d: "Anaesthetist passes a 32–40 Fr bougie along the lesser curve to the pylorus to calibrate the sleeve"
+        },
+        {
+          n: 4,
+          t: "Staple the sleeve",
+          d: "Serial firings of a linear stapler alongside the bougie from the antrum to the angle of His; keep the last firing away from the oesophagus to avoid a leak/stricture at the top"
+        },
+        {
+          n: 5,
+          t: "Check staple line",
+          d: "Inspect for bleeding; oversew or clip as needed; leak test (methylene blue or air under saline) to confirm integrity"
+        },
+        {
+          n: 6,
+          t: "Extract & close",
+          d: "Remove the resected stomach through a port site; check haemostasis; close the extraction-site fascia"
+        }
+      ],
+      pearls: [
+        "Repair a coexisting hiatus hernia at the same operation — untreated, it drives severe post-sleeve reflux",
+        "Do not narrow the incisura over the bougie — the commonest site of a functional stricture",
+        "A low threshold for CT + contrast and reoperation/stenting when a leak is suspected — sepsis, not the leak itself, kills"
+      ]
+    },
+    guidelines: [
+      {
+        src: "IFSO / ASMBS — bariatric and metabolic surgery guidelines"
+      },
+      {
+        src: "NICE — obesity: identification, assessment and management (bariatric criteria)"
+      }
+    ],
+    pearls: [
+      "Sleeve is restrictive but its early anti-diabetic effect is hormonal (ghrelin↓, GLP-1/PYY↑), not just weight-driven",
+      "It preserves normal endoscopic access to the duodenum/biliary tree — an edge over RYGB",
+      "Reflux is the Achilles' heel: assess GERD carefully before choosing sleeve"
+    ],
+    mistakes: [
+      "Ignoring a hiatus hernia / significant GERD and creating a refluxing sleeve (may need conversion to bypass)",
+      "Stapling too close to the bougie at the incisura, causing stenosis",
+      "Under-recognising a staple-line leak — delayed source control leads to overwhelming sepsis"
+    ],
+    related: [
+      {
+        id: "bariatric",
+        note: "Parent topic — indications and comparison of bariatric operations"
+      },
+      {
+        id: "gerd",
+        note: "Reflux is the main downside of sleeve; severe GERD favours bypass"
+      },
+      {
+        id: "hiatus-hernia",
+        note: "Repair concurrently to limit post-sleeve reflux"
+      },
+      {
+        id: "mis-energy",
+        note: "Greater-curve mobilisation relies on advanced energy devices"
+      }
+    ]
+  },
+
+  {
+    id: "poem",
+    dept: "mis",
+    name: "Per-Oral Endoscopic Myotomy (POEM)",
+    latin: "Myotomia endoscopica peroralis",
+    organ: "Esophagus (lower esophageal sphincter)",
+    severity: "moderate",
+    tags: ["endoscopy", "achalasia", "myotomy", "NOTES", "MIS", "dysphagia"],
+    hero: "An incisionless myotomy for achalasia: working in a submucosal tunnel through a flexible scope, the circular muscle and LES are divided from inside the oesophagus.",
+    keypoints: [
+      "A natural-orifice (NOTES) technique — no skin incision; a mucosal entry, a submucosal tunnel, then endoscopic myotomy, then closure of the mucosal flap with clips",
+      "First-line for type III (spastic) achalasia because the myotomy length can be extended proximally as far as needed — beyond what a surgical Heller reaches",
+      "Comparable dysphagia relief to laparoscopic Heller myotomy, often shorter procedure and quicker recovery",
+      "The trade-off: no anti-reflux wrap is added, so post-POEM GERD is common (up to ~40–60%) and needs PPI and surveillance",
+      "Anterior or posterior tunnel orientations are both used; the myotomy divides circular muscle across the LES onto the gastric cardia (~2–3 cm gastric extension)",
+      "Requires CO2 insufflation and readiness to manage capnoperitoneum/pneumomediastinum"
+    ],
+    differentials: [
+      "Laparoscopic Heller myotomy + Dor/Toupet — surgical myotomy WITH an anti-reflux wrap; better for reflux control",
+      "Pneumatic balloon dilatation — less durable, repeat sessions, small perforation risk",
+      "Botulinum toxin injection to the LES — temporary; for frail/unfit patients or as a bridge",
+      "Medical therapy (nitrates, calcium-channel blockers) — poor efficacy, temporising only"
+    ],
+    overview: {
+      definition: "An endoscopic myotomy in which a submucosal tunnel is created in the oesophageal wall, the inner circular muscle layer and the lower oesophageal sphincter are divided, and the mucosal entry is closed — relieving the outflow obstruction of achalasia without any external incision.",
+      epidemiology: "Introduced in 2010 (Inoue), POEM has become a first-line option for achalasia at expert centres, and the procedure of choice for type III (spastic) achalasia and other spastic oesophageal disorders (e.g. jackhammer oesophagus, distal oesophageal spasm).",
+      pathophysiology: "Achalasia is failure of LES relaxation with loss of oesophageal peristalsis from degeneration of inhibitory myenteric neurons. Dividing the circular muscle across the LES lowers the sphincter pressure, allowing gravity-driven oesophageal emptying. Because no hiatal dissection or wrap is performed, the natural anti-reflux barrier is disrupted, predisposing to acid reflux.",
+      classification: [
+        {
+          label: "By tunnel orientation",
+          note: "Anterior (~2 o'clock) or posterior (~5 o'clock) myotomy — comparable outcomes"
+        },
+        {
+          label: "By muscle layers divided",
+          note: "Selective circular-muscle myotomy vs full-thickness myotomy (faster, similar efficacy)"
+        },
+        {
+          label: "Best indication",
+          note: "Type III (spastic) achalasia and spastic disorders — long myotomy tailored to manometry"
+        },
+        {
+          label: "G-POEM (variant)",
+          note: "Gastric per-oral endoscopic pyloromyotomy — same tunnelling principle applied to the pylorus for refractory gastroparesis"
+        }
+      ]
+    },
+    criteria: {
+      title: "Indications, Work-up & Post-procedure Care",
+      items: [
+        {
+          k: "Best indication",
+          v: "Type III (spastic) achalasia; also type I/II and spastic oesophageal disorders"
+        },
+        {
+          k: "Essential work-up",
+          v: "High-resolution manometry (Chicago classification), endoscopy ± barium swallow to exclude pseudoachalasia/malignancy"
+        },
+        {
+          k: "Myotomy length",
+          v: "Tailored to manometry — longer for type III; ~2–3 cm carried onto the gastric side"
+        },
+        {
+          k: "Closure",
+          v: "Mucosal entry closed with endoscopic clips (or suturing); leak test"
+        },
+        {
+          k: "Post-op",
+          v: "Contrast study before feeding at many centres; PPI ± reflux surveillance given high GERD rate"
+        },
+        {
+          k: "Main complication",
+          v: "Post-POEM GERD (common); insufflation-related capnoperitoneum; mucosal injury/leak"
+        }
+      ]
+    },
+    technique: {
+      title: "Per-Oral Endoscopic Myotomy (POEM)",
+      prep: [
+        "Confirm diagnosis with high-resolution manometry; clear liquid diet then fasting (achalasic oesophagus retains food)",
+        "CO2 insufflation mandatory; antibiotics; general anaesthesia with cuffed tube",
+        "Have decompression needle ready for capnoperitoneum"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Mucosal entry",
+          d: "Identify the level; inject to lift, then make a longitudinal mucosal incision ~10–13 cm above the GOJ to enter the submucosa"
+        },
+        {
+          n: 2,
+          t: "Submucosal tunnel",
+          d: "Dissect a tunnel distally through the submucosa, across the GOJ, ~2–3 cm onto the gastric cardia"
+        },
+        {
+          n: 3,
+          t: "Myotomy",
+          d: "Divide the inner circular muscle (or full thickness) from proximal oesophagus across the LES onto the stomach; length tailored to manometry"
+        },
+        {
+          n: 4,
+          t: "Haemostasis",
+          d: "Coagulate tunnel vessels; confirm a complete myotomy across the sphincter (loss of the tight ring)"
+        },
+        {
+          n: 5,
+          t: "Close entry",
+          d: "Withdraw to the mucosal incision and close it with endoscopic clips (or suture); confirm no leak"
+        },
+        {
+          n: 6,
+          t: "Recover",
+          d: "Monitor for chest pain/subcutaneous emphysema; contrast study before feeding at many centres; start PPI"
+        }
+      ],
+      pearls: [
+        "Tailor myotomy length to manometry — POEM's key advantage is reaching a long spastic segment a Heller cannot",
+        "Expect and pre-counsel for reflux: no wrap is created, so PPI and surveillance are part of the plan",
+        "Use CO2, not air, and be ready to needle-decompress a tense capnoperitoneum"
+      ]
+    },
+    guidelines: [
+      {
+        src: "ASGE / ESGE — POEM for achalasia clinical guidelines"
+      },
+      {
+        src: "ISDE / Chicago Classification v4.0 — achalasia subtyping guiding myotomy"
+      }
+    ],
+    pearls: [
+      "POEM is the procedure of choice for type III (spastic) achalasia",
+      "Dysphagia relief rivals Heller myotomy but reflux rates are higher because no fundoplication is added",
+      "The same submucosal-tunnel principle underlies G-POEM for refractory gastroparesis"
+    ],
+    mistakes: [
+      "Skipping manometry — misclassifying the subtype and cutting the wrong myotomy length, or missing pseudoachalasia",
+      "Using air instead of CO2 — worse insufflation complications",
+      "Failing to warn about and treat post-POEM reflux (Barrett's/esophagitis risk if untreated)"
+    ],
+    related: [
+      {
+        id: "achalasia",
+        note: "Primary disease; POEM and Heller myotomy are the definitive treatments"
+      },
+      {
+        id: "therapeutic-endoscopy",
+        note: "POEM is an advanced NOTES application of therapeutic endoscopy"
+      },
+      {
+        id: "dysphagia",
+        note: "Achalasia is a key cause of the dysphagia POEM relieves"
+      },
+      {
+        id: "gord",
+        note: "Post-POEM reflux is common and needs PPI/surveillance"
+      }
+    ]
+  },
+
+  {
+    id: "partial-fundoplication",
+    dept: "mis",
+    name: "Partial Fundoplication (Toupet & Dor)",
+    latin: "Fundoplicatio partialis",
+    organ: "Gastro-esophageal junction",
+    severity: "moderate",
+    tags: ["antireflux", "fundoplication", "Toupet", "Dor", "GERD", "MIS"],
+    hero: "A partial (not 360°) wrap of stomach around the lower oesophagus — controls reflux while reducing the dysphagia and gas-bloat of a full Nissen, and the wrap of choice when peristalsis is weak.",
+    keypoints: [
+      "Toupet is a posterior 270° wrap; Dor is an anterior ~180° wrap — both are 'partial' alternatives to the 360° Nissen",
+      "Preferred over Nissen when oesophageal motility is impaired (e.g. scleroderma, ineffective peristalsis) because a looser wrap causes less dysphagia",
+      "Dor is the standard anti-reflux wrap added after a Heller myotomy — it also covers the exposed myotomy mucosa",
+      "Partial wraps have lower rates of dysphagia and gas-bloat than Nissen, at the cost of slightly less durable reflux control in some series",
+      "As with any fundoplication, success depends on adequate oesophageal mobilisation, crural repair, and a tension-free short wrap",
+      "Choice of wrap (Nissen vs Toupet vs Dor) is tailored to pre-op manometry and the operation being performed"
+    ],
+    differentials: [
+      "Nissen fundoplication (360°) — best reflux control; more dysphagia / gas-bloat; needs adequate motility",
+      "Toupet (posterior 270°) — partial wrap of choice for GERD with weak peristalsis",
+      "Dor (anterior 180°) — partial wrap after Heller myotomy; covers the myotomy",
+      "Magnetic sphincter augmentation (LINX) — device alternative in selected GERD",
+      "Medical therapy (PPI) / endoscopic anti-reflux — non-operative options"
+    ],
+    overview: {
+      definition: "Anti-reflux operations that wrap only part of the oesophageal circumference with gastric fundus — posteriorly through 270° (Toupet) or anteriorly through ~180° (Dor) — to re-create a competent lower oesophageal barrier while limiting outflow resistance.",
+      epidemiology: "Partial wraps are widely used for GERD in patients with disordered motility and as the routine anti-reflux adjunct to achalasia surgery (Dor after Heller myotomy).",
+      pathophysiology: "A fundal wrap augments the lower-oesophageal high-pressure zone and accentuates the angle of His, reducing acid reflux. A partial (vs complete) wrap provides less outflow resistance, so a poorly-peristaltic oesophagus can still empty — trading a little reflux control for markedly less post-operative dysphagia and gas-bloat.",
+      classification: [
+        {
+          label: "Toupet (posterior 270°)",
+          note: "Fundus brought behind the oesophagus and sutured to each side; partial wrap of choice for GERD with impaired motility"
+        },
+        {
+          label: "Dor (anterior 180°)",
+          note: "Fundus laid over the front of the oesophagus; standard after Heller myotomy, buttressing the myotomy"
+        },
+        {
+          label: "Nissen (360°, for contrast)",
+          note: "Complete wrap — maximal reflux control but requires adequate peristalsis"
+        },
+        {
+          label: "Selection driver",
+          note: "Pre-op high-resolution manometry and the index operation determine which wrap"
+        }
+      ]
+    },
+    criteria: {
+      title: "When to Choose a Partial Wrap",
+      items: [
+        {
+          k: "Toupet indication",
+          v: "GERD needing surgery WITH ineffective/weak oesophageal peristalsis on manometry"
+        },
+        {
+          k: "Dor indication",
+          v: "Routine anti-reflux wrap after laparoscopic Heller myotomy for achalasia"
+        },
+        {
+          k: "Prefer over Nissen when",
+          v: "Poor motility, high dysphagia risk, or a myotomy needs covering"
+        },
+        {
+          k: "Shared prerequisites",
+          v: "Adequate distal oesophageal mobilisation, crural repair, short (~2 cm) floppy wrap"
+        },
+        {
+          k: "Outcome trade-off",
+          v: "Less dysphagia and gas-bloat than Nissen; reflux control slightly less complete in some studies"
+        },
+        {
+          k: "Work-up",
+          v: "Endoscopy, pH study, and manometry before any fundoplication"
+        }
+      ]
+    },
+    technique: {
+      title: "Laparoscopic Toupet (Posterior 270°) Fundoplication",
+      prep: [
+        "Confirm GERD (pH study) and assess motility (manometry) — manometry selects partial vs complete wrap",
+        "Supine reverse-Trendelenburg, 5 ports, liver retractor",
+        "Consent covering dysphagia, gas-bloat, recurrence and wrap failure"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Hiatal dissection",
+          d: "Divide the gastrohepatic omentum; expose both crura; encircle and mobilise the distal oesophagus into the abdomen for tension-free length"
+        },
+        {
+          n: 2,
+          t: "Mobilise fundus",
+          d: "Divide short gastric vessels so the fundus reaches easily behind the oesophagus without tension"
+        },
+        {
+          n: 3,
+          t: "Crural repair",
+          d: "Approximate the crura posteriorly with non-absorbable sutures, calibrated over a bougie to avoid stenosis"
+        },
+        {
+          n: 4,
+          t: "Pass the wrap",
+          d: "Bring the fundus posteriorly around the oesophagus (shoeshine manoeuvre to confirm it lies without twist)"
+        },
+        {
+          n: 5,
+          t: "Fashion 270°",
+          d: "Suture the fundus to the right and left sides of the oesophagus (and to the crura), leaving the anterior ~90° uncovered — a 270° posterior wrap"
+        },
+        {
+          n: 6,
+          t: "Check",
+          d: "Confirm a floppy, short wrap with the anterior oesophagus visible; haemostasis; remove bougie"
+        }
+      ],
+      pearls: [
+        "Match the wrap to manometry: weak peristalsis → partial (Toupet); normal peristalsis and pure reflux → Nissen",
+        "After a Heller myotomy, add a Dor to control reflux and cover the exposed mucosa",
+        "A tension-free, adequately mobilised oesophagus is the key to avoiding wrap failure and recurrence"
+      ]
+    },
+    guidelines: [
+      {
+        src: "SAGES — guidelines for surgical treatment of GERD"
+      },
+      {
+        src: "ISDE / UEG — achalasia and GERD management (wrap selection)"
+      }
+    ],
+    pearls: [
+      "Toupet = posterior 270°; Dor = anterior 180° — both trade a little reflux control for far less dysphagia",
+      "Dor is the default wrap after Heller myotomy",
+      "Manometry drives wrap choice; a full Nissen on a poorly-motile oesophagus risks severe dysphagia"
+    ],
+    mistakes: [
+      "Performing a Nissen on a patient with impaired peristalsis, causing troublesome dysphagia",
+      "Inadequate oesophageal mobilisation → a wrap under tension that migrates or fails",
+      "Omitting an anti-reflux wrap after Heller myotomy"
+    ],
+    related: [
+      {
+        id: "gerd",
+        note: "Partial wraps are anti-reflux options, especially with poor motility"
+      },
+      {
+        id: "gord",
+        note: "Same disease — surgical anti-reflux options"
+      },
+      {
+        id: "achalasia",
+        note: "Dor fundoplication is added after Heller myotomy"
+      },
+      {
+        id: "hiatus-hernia",
+        note: "Hiatal repair is part of any fundoplication"
+      }
+    ]
+  },
+
+  {
+    id: "feeding-jejunostomy",
+    dept: "mis",
+    name: "Feeding Jejunostomy & PEJ",
+    latin: "Jejunostomia alimentaria",
+    organ: "Proximal jejunum",
+    severity: "moderate",
+    tags: ["enteral access", "feeding", "jejunostomy", "nutrition", "MIS"],
+    hero: "Post-pyloric enteral access — a catheter into the proximal jejunum for feeding when the stomach must be bypassed, as after upper-GI resection or with high aspiration risk.",
+    keypoints: [
+      "Chosen over PEG when gastric feeding is impossible or unsafe: after oesophagectomy/gastrectomy, gastric outlet obstruction, severe gastroparesis, or high aspiration risk",
+      "Routes: surgical (open or laparoscopic) feeding jejunostomy, direct percutaneous endoscopic jejunostomy (direct-PEJ), or a jejunal extension through a gastrostomy (PEG-J)",
+      "Feed must be continuous/pump-controlled — the jejunum has no reservoir, so bolus feeding causes cramps, dumping and diarrhoea",
+      "A surgical jejunostomy is frequently placed at the time of an upper-GI cancer resection to secure nutrition during recovery",
+      "Feared complication: small-bowel volvulus/torsion around the fixation point, and tube dislodgement with intraperitoneal leak before the tract matures",
+      "Witzel tunnel or a needle-catheter (fine-bore) technique with bowel-to-wall fixation reduces leakage around the tube"
+    ],
+    differentials: [
+      "PEG (gastrostomy) — simpler, preferred when the stomach is available and gastric feeding is safe",
+      "PEG-J / direct-PEJ — endoscopic post-pyloric options avoiding laparotomy",
+      "Nasojejunal (NJ) tube — non-operative, short-term post-pyloric feeding",
+      "Parenteral nutrition (TPN) — when the gut is non-functioning or inaccessible"
+    ],
+    overview: {
+      definition: "Placement of a feeding catheter directly into the proximal jejunum — surgically (open/laparoscopic), endoscopically (direct-PEJ), or via a gastrostomy extension (PEG-J) — to deliver enteral nutrition distal to the stomach.",
+      epidemiology: "Commonly created as an adjunct during upper-GI cancer surgery (oesophagectomy, gastrectomy) and in patients with gastric outlet obstruction or refractory gastroparesis who need durable post-pyloric feeding.",
+      pathophysiology: "Bypassing the stomach and pylorus allows nutrition when gastric emptying is obstructed, absent (post-resection) or unsafe (aspiration risk). Because the jejunum lacks the stomach's reservoir and osmotic buffering, feed must be delivered slowly and continuously; rapid delivery draws fluid into the lumen, causing dumping-type symptoms.",
+      classification: [
+        {
+          label: "Surgical jejunostomy",
+          note: "Open or laparoscopic; Witzel-tunnelled or needle-catheter; bowel fixed to abdominal wall — common adjunct at upper-GI resection"
+        },
+        {
+          label: "Direct-PEJ",
+          note: "Endoscopic direct puncture of a jejunal loop transilluminated at the abdominal wall (enteroscope-assisted)"
+        },
+        {
+          label: "PEG-J",
+          note: "Jejunal extension tube passed through an existing PEG for post-pyloric feeding with gastric decompression"
+        },
+        {
+          label: "Nasojejunal (temporary)",
+          note: "Non-operative bridge for short-term post-pyloric feeding"
+        }
+      ]
+    },
+    criteria: {
+      title: "Indications, Delivery & Complications",
+      items: [
+        {
+          k: "Core indications",
+          v: "Post oesophagectomy/gastrectomy, gastric outlet obstruction, severe gastroparesis, high aspiration risk"
+        },
+        {
+          k: "Feeding rule",
+          v: "Continuous pump feeding only — no bolus (jejunum has no reservoir → dumping/diarrhoea)"
+        },
+        {
+          k: "Placement timing",
+          v: "Often at the time of upper-GI resection to secure peri-operative nutrition"
+        },
+        {
+          k: "Fixation",
+          v: "Bowel sutured to the abdominal wall (Witzel tunnel or T-fasteners) to prevent leak and torsion"
+        },
+        {
+          k: "Key complications",
+          v: "Tube dislodgement/intraperitoneal leak, small-bowel volvulus around the fixation, peritubal leakage, tube blockage"
+        },
+        {
+          k: "Start feeding",
+          v: "Introduce slowly and build rate to target over 24–48 h"
+        }
+      ]
+    },
+    technique: {
+      title: "Surgical (Witzel) Feeding Jejunostomy",
+      prep: [
+        "Confirm the need for post-pyloric access and that gastric feeding is unsuitable",
+        "Often performed as an add-on at laparotomy/laparoscopy for the index resection",
+        "Mark an exit site in the left upper quadrant; fine-bore feeding catheter ready"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Select jejunal loop",
+          d: "Identify a proximal jejunal loop ~20–30 cm distal to the DJ flexure that reaches the abdominal wall without tension"
+        },
+        {
+          n: 2,
+          t: "Enterotomy & catheter",
+          d: "Place a purse-string; make a small antimesenteric enterotomy and pass the catheter distally into the lumen"
+        },
+        {
+          n: 3,
+          t: "Witzel tunnel",
+          d: "Bury the catheter in a seromuscular tunnel (Witzel) for several cm to create a valve that prevents leakage around the tube"
+        },
+        {
+          n: 4,
+          t: "Fix to abdominal wall",
+          d: "Bring the catheter out through a separate stab; suture the loop to the parietal peritoneum around the exit to prevent leak and torsion"
+        },
+        {
+          n: 5,
+          t: "Test",
+          d: "Flush the catheter to confirm free flow and no leak; secure externally at the skin"
+        },
+        {
+          n: 6,
+          t: "Feed",
+          d: "Begin continuous feeding slowly, increasing to target over 24–48 h; daily flushes to prevent blockage"
+        }
+      ],
+      pearls: [
+        "Never bolus a jejunostomy — continuous pump feeding avoids dumping and diarrhoea",
+        "Adequate bowel-to-wall fixation prevents the two big problems: peritubal leak and small-bowel torsion",
+        "Flush regularly; fine-bore tubes block easily and are hard to unblock"
+      ]
+    },
+    guidelines: [
+      {
+        src: "ESPEN / ASPEN — clinical nutrition and enteral-access guidelines"
+      },
+      {
+        src: "NICE CG32 — Nutrition support in adults"
+      }
+    ],
+    pearls: [
+      "Jejunostomy is the answer when you must feed but cannot use the stomach (post-resection, obstruction, aspiration)",
+      "A jejunostomy placed at cancer surgery secures nutrition through the recovery period",
+      "Continuous feeding and good fixation are the two rules that keep it trouble-free"
+    ],
+    mistakes: [
+      "Bolus feeding a jejunostomy — predictable cramping, dumping and diarrhoea",
+      "Poor fixation leading to leak into the peritoneum or volvulus around the tube",
+      "Blindly replacing a dislodged tube before the tract matures — risk of intraperitoneal misplacement"
+    ],
+    related: [
+      {
+        id: "peg",
+        note: "Gastric alternative; jejunostomy is used when gastric feeding is unsafe/impossible"
+      },
+      {
+        id: "oesophageal-cancer",
+        note: "Feeding jejunostomy commonly placed at oesophagectomy"
+      },
+      {
+        id: "gastric-ca",
+        note: "Post-gastrectomy nutrition via jejunostomy"
+      },
+      {
+        id: "gastric-outlet-obstruction",
+        note: "Post-pyloric feeding route bypassing the obstruction"
+      }
+    ]
+  },
+
+  {
+    id: "balloon-tamponade",
+    dept: "mis",
+    name: "Balloon Tamponade for Variceal Haemorrhage",
+    latin: "Tamponamentum ballooni",
+    organ: "Esophagus / gastric fundus",
+    severity: "high",
+    tags: ["variceal bleeding", "Sengstaken", "tamponade", "rescue", "endoscopy", "MIS"],
+    hero: "A life-saving temporising rescue for exsanguinating variceal bleeding when endoscopy fails — a balloon tube compresses the varices to buy hours until definitive therapy (TIPSS).",
+    keypoints: [
+      "A bridge, not a cure: it controls bleeding for ≤24 h while arranging definitive treatment (repeat endoscopy or TIPSS) — varices re-bleed when the balloon is deflated",
+      "Sengstaken–Blakemore tube (gastric + oesophageal balloons + gastric aspiration) or Minnesota tube (adds an oesophageal aspiration port)",
+      "ALWAYS confirm gastric-balloon position below the diaphragm (on X-ray or by technique) BEFORE full inflation — inflating in the oesophagus can rupture it",
+      "Protect the airway first: intubate the exsanguinating, encephalopathic patient before insertion to prevent aspiration",
+      "Apply gentle traction to seat the gastric balloon against the GOJ; the oesophageal balloon is only inflated if bleeding continues, and is released periodically to avoid pressure necrosis",
+      "Continue vasoactive drugs (terlipressin), antibiotics and resuscitation alongside; effective in ~80–90% temporarily"
+    ],
+    differentials: [
+      "Endoscopic band ligation / cyanoacrylate — first-line definitive control of variceal bleeding",
+      "TIPSS (transjugular intrahepatic portosystemic shunt) — definitive rescue for uncontrolled/refractory variceal bleeding",
+      "Self-expanding covered oesophageal stent (e.g. SX-Ella Danis) — an alternative to balloon tamponade with fewer complications",
+      "Pharmacological (terlipressin/octreotide) + antibiotics — adjuncts given in all cases"
+    ],
+    overview: {
+      definition: "Temporary mechanical compression of bleeding gastro-oesophageal varices using a multi-lumen balloon tube (Sengstaken–Blakemore or Minnesota), used as a rescue bridge when endoscopic and pharmacological control has failed and the patient is exsanguinating.",
+      epidemiology: "Reserved for the minority of variceal bleeds refractory to endoscopy — a high-mortality scenario reflecting decompensated portal hypertension (usually cirrhosis).",
+      pathophysiology: "Portal hypertension diverts blood through porto-systemic collaterals, forming gastro-oesophageal varices that rupture at high wall tension. An inflated gastric balloon seated at the cardia, under traction, tamponades the feeding veins at the GOJ; an oesophageal balloon compresses oesophageal varices directly. Compression stops flow but does not treat the underlying portal hypertension, so bleeding resumes on deflation unless definitive therapy follows.",
+      classification: [
+        {
+          label: "Sengstaken–Blakemore tube",
+          note: "Three lumens: gastric balloon, oesophageal balloon, gastric aspiration"
+        },
+        {
+          label: "Minnesota tube",
+          note: "Four lumens: adds an oesophageal aspiration port above the oesophageal balloon"
+        },
+        {
+          label: "Linton–Nachlas tube",
+          note: "Single large gastric balloon — for predominantly gastric variceal bleeding"
+        },
+        {
+          label: "Modern alternative",
+          note: "Self-expanding covered oesophageal stent achieves tamponade with fewer necrosis/aspiration risks"
+        }
+      ]
+    },
+    criteria: {
+      title: "Use, Safety Checks & Complications",
+      items: [
+        {
+          k: "Indication",
+          v: "Massive variceal bleeding uncontrolled by endoscopy/drugs — a temporising rescue only"
+        },
+        {
+          k: "Airway first",
+          v: "Intubate before insertion in the exsanguinating/encephalopathic patient (aspiration risk)"
+        },
+        {
+          k: "Position check",
+          v: "Confirm gastric balloon is subdiaphragmatic BEFORE full inflation (X-ray) — inflating in the oesophagus ruptures it"
+        },
+        {
+          k: "Traction",
+          v: "Gentle traction (e.g. ~0.5–1 kg or against a helmet/cushion) seats the gastric balloon at the GOJ"
+        },
+        {
+          k: "Oesophageal balloon",
+          v: "Inflate only if bleeding persists; deflate periodically to prevent mucosal pressure necrosis"
+        },
+        {
+          k: "Time limit",
+          v: "≤24 h, then definitive therapy (TIPSS / repeat endoscopy); high re-bleed on deflation"
+        },
+        {
+          k: "Complications",
+          v: "Oesophageal rupture, aspiration pneumonia, mucosal necrosis/ulceration, airway obstruction if displaced"
+        }
+      ]
+    },
+    technique: {
+      title: "Sengstaken–Blakemore Tube Insertion",
+      prep: [
+        "Resuscitate (major haemorrhage protocol), correct coagulopathy, start terlipressin + antibiotics",
+        "Secure the airway — intubate the exsanguinating or encephalopathic patient first",
+        "Check tube balloons for leaks; chill the tube to stiffen if needed; mark lengths"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Insert orally/nasally",
+          d: "Pass the deflated tube into the stomach (~50 cm at the incisors); aspirate the gastric port to confirm gastric placement"
+        },
+        {
+          n: 2,
+          t: "Confirm position",
+          d: "Verify the gastric balloon lies below the diaphragm (X-ray or reliable technique) BEFORE inflating fully"
+        },
+        {
+          n: 3,
+          t: "Inflate gastric balloon",
+          d: "Inflate the gastric balloon in stages (to ~250–300 mL air) — stop immediately if there is pain (suggests oesophageal malposition)"
+        },
+        {
+          n: 4,
+          t: "Apply traction",
+          d: "Withdraw until the balloon seats snugly at the GOJ; apply gentle traction to tamponade the cardia"
+        },
+        {
+          n: 5,
+          t: "Oesophageal balloon if needed",
+          d: "If bleeding continues, inflate the oesophageal balloon to a manometer-controlled pressure (~30–40 mmHg); release intermittently"
+        },
+        {
+          n: 6,
+          t: "Aspirate & plan",
+          d: "Aspirate gastric (and oesophageal, Minnesota) ports; arrange urgent TIPSS or repeat endoscopy; deflate under controlled conditions"
+        }
+      ],
+      pearls: [
+        "The single commonest fatal error is inflating the gastric balloon in the oesophagus — confirm position first",
+        "It only buys time: line up TIPSS / definitive endoscopy before the balloon goes down",
+        "Deflate the oesophageal balloon periodically to avoid pressure necrosis; keep the airway secured throughout"
+      ]
+    },
+    guidelines: [
+      {
+        src: "Baveno VII — management of portal hypertension and variceal bleeding"
+      },
+      {
+        src: "BSG — UK guidelines on variceal haemorrhage (rescue tamponade / stents)"
+      }
+    ],
+    pearls: [
+      "Balloon tamponade is a rescue bridge to TIPSS, not definitive therapy",
+      "Confirm the gastric balloon is below the diaphragm before full inflation — oesophageal inflation can be fatal",
+      "A covered oesophageal stent is a modern alternative with fewer complications"
+    ],
+    mistakes: [
+      "Inflating the gastric balloon while it is still in the oesophagus → oesophageal rupture",
+      "Inserting without securing the airway in an obtunded, bleeding patient → aspiration",
+      "Leaving the oesophageal balloon inflated continuously → mucosal pressure necrosis"
+    ],
+    related: [
+      {
+        id: "ugib",
+        note: "Variceal bleeding is a major cause of upper-GI haemorrhage"
+      },
+      {
+        id: "upper-gi-bleed",
+        note: "Balloon tamponade is the rescue step for refractory variceal bleeding"
+      },
+      {
+        id: "therapeutic-endoscopy",
+        note: "Endoscopic band ligation is first-line; tamponade rescues failures"
+      },
+      {
+        id: "melena",
+        note: "Variceal bleeding can present as melena or haematemesis"
+      }
+    ]
+  },
+
+  {
+    id: "lap-inguinal-hernia",
+    dept: "mis",
+    name: "Laparoscopic Inguinal Hernia Repair (TEP & TAPP)",
+    latin: "Herniorrhaphia inguinalis laparoscopica",
+    organ: "Groin (myopectineal orifice)",
+    severity: "low",
+    tags: ["hernia", "laparoscopic", "TEP", "TAPP", "mesh", "MIS"],
+    hero: "Minimally invasive mesh repair of the groin from behind — covering the whole myopectineal orifice in the preperitoneal space; the approach of choice for bilateral and recurrent (post-open) hernias.",
+    keypoints: [
+      "Two techniques: TEP (totally extraperitoneal — stays outside the peritoneum) and TAPP (transabdominal preperitoneal — enters the abdomen, then opens the peritoneum over the defect)",
+      "A single large mesh in the preperitoneal space covers direct, indirect AND femoral defects (the whole myopectineal orifice of Fruchaud)",
+      "Best indications: bilateral hernias (repair both through the same ports) and recurrence after previous open (anterior) repair — virgin planes from behind",
+      "Faster return to activity and less chronic pain than open in experienced hands, but a steeper learning curve and needs general anaesthesia",
+      "Know the danger zones: the 'triangle of doom' (external iliac vessels) and 'triangle of pain' (genitofemoral & lateral cutaneous nerves) — no tacks there",
+      "TAPP is often preferred for very large, incarcerated or scrotal hernias and when diagnostic laparoscopy is useful; TEP avoids entering the peritoneal cavity"
+    ],
+    differentials: [
+      "Open Lichtenstein (tension-free mesh) — simpler, local anaesthetic possible; preferred for primary unilateral hernia or hostile pelvis",
+      "TEP — totally extraperitoneal laparoscopic repair (no peritoneal breach)",
+      "TAPP — transabdominal preperitoneal laparoscopic repair",
+      "Robotic TAPP — for complex/recurrent cases at suitable centres",
+      "Watchful waiting — reasonable for a minimally symptomatic reducible hernia"
+    ],
+    overview: {
+      definition: "Minimally invasive repair of an inguinal hernia in which prosthetic mesh is placed in the preperitoneal space behind the defect, either without entering the peritoneal cavity (TEP) or by entering it and reflecting the peritoneum (TAPP), reinforcing the entire myopectineal orifice.",
+      epidemiology: "Laparoscopic repair accounts for a large and growing share of elective inguinal hernia surgery; guidelines favour it particularly for bilateral and recurrent (post-anterior-repair) hernias and in women (higher femoral-hernia rate).",
+      pathophysiology: "Groin hernias protrude through the myopectineal orifice — a weak area bounded by muscle and inguinal ligament and traversed by the cord. A posterior mesh, held in place by intra-abdominal pressure (Pascal's principle) across the whole orifice, buttresses direct, indirect and femoral zones simultaneously, unlike an anterior repair that addresses only the approached defect.",
+      classification: [
+        {
+          label: "TEP (totally extraperitoneal)",
+          note: "Balloon-created preperitoneal space; peritoneum never opened; no intraperitoneal mesh contact"
+        },
+        {
+          label: "TAPP (transabdominal preperitoneal)",
+          note: "Enter abdomen, incise peritoneum over the defect, place mesh, re-close peritoneum over it"
+        },
+        {
+          label: "Robotic TAPP",
+          note: "Robotic platform — ergonomic advantage for complex/recurrent repair"
+        },
+        {
+          label: "Guideline sweet-spot",
+          note: "Bilateral and recurrent-after-open hernias, and women, benefit most from the laparoscopic route"
+        }
+      ]
+    },
+    criteria: {
+      title: "Selection, Anatomy & Pitfalls",
+      items: [
+        {
+          k: "Strong indications",
+          v: "Bilateral hernias; recurrence after previous open repair; female patients (femoral risk)"
+        },
+        {
+          k: "TEP vs TAPP",
+          v: "TEP avoids the peritoneal cavity; TAPP handles large/incarcerated/scrotal hernias and allows diagnostic laparoscopy"
+        },
+        {
+          k: "Mesh coverage",
+          v: "Cover the whole myopectineal orifice with generous overlap of all three zones"
+        },
+        {
+          k: "Triangle of doom",
+          v: "Bounded by vas and gonadal vessels — contains external iliac vessels; NO fixation here"
+        },
+        {
+          k: "Triangle of pain",
+          v: "Lateral to gonadal vessels — genitofemoral & lateral femoral cutaneous nerves; NO tacks here"
+        },
+        {
+          k: "Relative cautions",
+          v: "Previous preperitoneal surgery/radiotherapy, inability to tolerate GA, large irreducible scrotal hernia (favour open/TAPP)"
+        }
+      ]
+    },
+    technique: {
+      title: "Laparoscopic TEP Repair (with TAPP contrast)",
+      prep: [
+        "General anaesthesia; empty bladder (catheter if needed); supine, arms tucked, surgeon on the contralateral side",
+        "Consent covering conversion, seroma, chronic pain, recurrence, vascular/visceral and nerve injury",
+        "TAPP variant: standard pneumoperitoneum and intraperitoneal start"
+      ],
+      steps: [
+        {
+          n: 1,
+          t: "Access the plane",
+          d: "TEP: infraumbilical incision, enter the posterior rectus sheath and use a balloon to develop the preperitoneal space. TAPP: pneumoperitoneum, then incise the peritoneum above the defect"
+        },
+        {
+          n: 2,
+          t: "Create working space",
+          d: "Insufflate the preperitoneal space (TEP) or reflect the peritoneal flap (TAPP) to expose the myopectineal orifice"
+        },
+        {
+          n: 3,
+          t: "Reduce the sac",
+          d: "Reduce the hernia sac; for an indirect sac, dissect it off the cord structures (ligate/divide a large sac if needed)"
+        },
+        {
+          n: 4,
+          t: "Identify landmarks",
+          d: "Define the pubic tubercle, Cooper's ligament, epigastric vessels, and the triangles of doom and pain"
+        },
+        {
+          n: 5,
+          t: "Place mesh",
+          d: "Position a large mesh (~10×15 cm) to cover direct, indirect and femoral spaces with wide overlap; fixation optional and only in safe zones"
+        },
+        {
+          n: 6,
+          t: "Close",
+          d: "TAPP: re-approximate the peritoneum over the mesh (tacks/suture/glue). Desufflate slowly keeping mesh flat; close port sites"
+        }
+      ],
+      pearls: [
+        "No tacks or staples in the triangles of doom and pain — the mechanism of vascular injury and chronic neuralgia",
+        "In TAPP, close the peritoneum completely over the mesh to prevent adhesions/internal hernia",
+        "Choose laparoscopic for bilateral and recurrent-after-open hernias; choose open for a primary unilateral hernia in an unfit patient"
+      ]
+    },
+    guidelines: [
+      {
+        src: "HerniaSurge / International Guidelines for Groin Hernia Management"
+      },
+      {
+        src: "EAES / EHS — laparoscopic inguinal hernia repair recommendations"
+      }
+    ],
+    pearls: [
+      "One posterior mesh covers all three groin-hernia zones — the conceptual advantage over anterior repair",
+      "TEP stays out of the abdomen; TAPP enters it — outcomes are similar, choice is case- and surgeon-dependent",
+      "Laparoscopic repair shines for bilateral and recurrent (post-open) hernias"
+    ],
+    mistakes: [
+      "Fixation in the triangle of doom or pain → iliac-vessel injury or chronic neuralgia",
+      "Undersized mesh or inadequate overlap → recurrence",
+      "Failing to close the peritoneum over the mesh in TAPP → adhesive/obstructive complications"
+    ],
+    related: [
+      {
+        id: "inguinal-hernia",
+        note: "Parent disease — open (Lichtenstein) vs laparoscopic TEP/TAPP repair"
+      },
+      {
+        id: "diagnostic-laparoscopy",
+        note: "TAPP begins with a transabdominal laparoscopic view of the defect"
+      },
+      {
+        id: "mis-principles",
+        note: "Preperitoneal working space and pneumoperitoneum principles"
+      },
+      {
+        id: "incisional-hernia",
+        note: "Shared prosthetic-mesh and abdominal-wall repair principles"
       }
     ]
   }
@@ -57881,6 +59123,184 @@ const PROCEDURES = [
       "imatinib",
       "small bowel obstruction",
       "procedure"
+    ]
+  },
+  {
+    id: "proc-crs-hipec",
+    diseaseId: "crs-hipec",
+    dept: "colorectal",
+    name: "Cytoreductive Surgery + HIPEC",
+    disease: "Cytoreductive Surgery & HIPEC",
+    organ: "Peritoneum (peritoneal surface)",
+    severity: "high",
+    summary: "For peritoneal surface malignancy: aggressive removal of all visible tumour (cytoreduction) followed by heated chemotherapy washed through the abdomen — turning a once-palliative diagnosis into a potentially curative one",
+    indications: [],
+    anatomyFocus: [
+      "Two-part treatment: cytoreductive surgery (CRS) to remove all macroscopic disease, then HIPEC (Hyperthermic IntraPEritoneal Chemotherapy) to treat residual microscopic disease",
+      "Only worthwhile if a COMPLETE cytoreduction is achievable — outcome is driven by the completeness-of-cytoreduction (CC) score (CC-0/CC-1 = no or ≤2.5 mm residual)",
+      "Differentiate from: Systemic chemotherapy alone — standard for widespread/unresectable peritoneal metastases, Palliative surgery (e.g. stoma, bypass) — for obstruction without curative intent, PIPAC (pressurised intraperitoneal aerosol chemotherapy) — palliative/repeatable option for unresectable peritoneal disease, Debulking without HIPEC — for low-grade disease where the heated wash adds little"
+    ],
+    prep: [
+      "MDT selection; staging CT/MRI ± diagnostic laparoscopy to estimate PCI and resectability",
+      "Optimise nutrition; counsel on major morbidity and possible multi-visceral/stoma resections",
+      "Cross-match, critical-care bed, and HIPEC perfusion circuit ready"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Explore & score PCI",
+        d: "Full laparotomy; assess all 13 regions and assign the peritoneal carcinomatosis index; confirm complete cytoreduction is achievable"
+      },
+      {
+        n: 2,
+        t: "Peritonectomy",
+        d: "Systematic Sugarbaker peritonectomy procedures — strip involved parietal peritoneum from diaphragm, pelvis and gutters"
+      },
+      {
+        n: 3,
+        t: "Visceral resection",
+        d: "Resect involved viscera (omentectomy, colectomy, splenectomy, etc.) to remove all macroscopic tumour"
+      },
+      {
+        n: 4,
+        t: "Confirm cytoreduction",
+        d: "Verify CC-0/CC-1 status — HIPEC is only worthwhile if residual disease is ≤2.5 mm"
+      },
+      {
+        n: 5,
+        t: "Deliver HIPEC",
+        d: "Circulate heated chemotherapy (~41–43 °C) through the abdomen for the drug-specific time (open coliseum or closed technique), agitating to distribute"
+      },
+      {
+        n: 6,
+        t: "Reconstruct",
+        d: "Perform anastomoses/stomas after HIPEC (to avoid chemo exposure of fresh suture lines); drain; critical-care recovery"
+      }
+    ],
+    pearls: [
+      "HIPEC only helps after a complete (CC-0/1) cytoreduction — an incomplete debulk gains little",
+      "Estimate the PCI and resectability up front (imaging ± diagnostic laparoscopy) to avoid an open-and-close laparotomy",
+      "Fashion bowel anastomoses AFTER the heated perfusion to limit chemotherapy exposure of fresh suture lines",
+      "Completeness of cytoreduction (CC score) is the dominant prognostic factor — aim for CC-0",
+      "Pseudomyxoma peritonei is the classic best-responder to CRS + HIPEC",
+      "Intraperitoneal + hyperthermic delivery gives a high local dose with low systemic toxicity"
+    ],
+    pitfalls: [
+      "Offering HIPEC after an incomplete cytoreduction (CC-2/3) — little survival benefit",
+      "Poor selection: high PCI or extra-abdominal disease → morbidity without cure",
+      "Constructing anastomoses before HIPEC, exposing fresh suture lines to chemotherapy"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Cytoreductive Surgery + HIPEC), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "MDT selection; staging CT/MRI ± diagnostic laparoscopy to estimate PCI and resectability",
+          "Optimise nutrition; counsel on major morbidity and possible multi-visceral/stoma resections",
+          "Cross-match, critical-care bed, and HIPEC perfusion circuit ready"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "Two-part treatment: cytoreductive surgery (CRS) to remove all macroscopic disease, then HIPEC (Hyperthermic IntraPEritoneal Chemotherapy) to treat residual microscopic disease",
+          "Only worthwhile if a COMPLETE cytoreduction is achievable — outcome is driven by the completeness-of-cytoreduction (CC) score (CC-0/CC-1 = no or ≤2.5 mm residual)",
+          "Best-evidenced indications: pseudomyxoma peritonei (appendiceal mucinous), peritoneal mesothelioma, and selected colorectal or ovarian peritoneal metastases",
+          "Confirm this is not: Systemic chemotherapy alone — standard for widespread/unresectable peritoneal metastases, Palliative surgery (e.g. stoma, bypass) — for obstruction without curative intent, PIPAC (pressurised intraperitoneal aerosol chemotherapy) — palliative/repeatable option for unresectable peritoneal disease"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "HIPEC only helps after a complete (CC-0/1) cytoreduction — an incomplete debulk gains little",
+          "Estimate the PCI and resectability up front (imaging ± diagnostic laparoscopy) to avoid an open-and-close laparotomy",
+          "Fashion bowel anastomoses AFTER the heated perfusion to limit chemotherapy exposure of fresh suture lines",
+          "Completeness of cytoreduction (CC score) is the dominant prognostic factor — aim for CC-0"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Offering HIPEC after an incomplete cytoreduction (CC-2/3) — little survival benefit",
+          "Poor selection: high PCI or extra-abdominal disease → morbidity without cure",
+          "Constructing anastomoses before HIPEC, exposing fresh suture lines to chemotherapy"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Cytoreductive Surgery & HIPEC.",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [
+      {
+        title: "Search GI endoscopy image/video atlas",
+        source: "Gastrointestinal Atlas",
+        url: "https://www.google.com/search?q=peritoneal%20carcinomatosis%20site%3Agastrointestinalatlas.com",
+        tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
+        query: "peritoneal carcinomatosis"
+      },
+      {
+        title: "Search radiology cases and anatomy",
+        source: "Radiopaedia",
+        url: "https://radiopaedia.org/search?q=peritoneal%20carcinomatosis",
+        tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
+        query: "peritoneal carcinomatosis"
+      },
+      {
+        title: "Search open anatomy/media images",
+        source: "Wikimedia Commons",
+        url: "https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search=peritoneal%20carcinomatosis",
+        tags: ["image", "open-license", "anatomy", "photo", "diagram"],
+        query: "peritoneal carcinomatosis"
+      },
+      {
+        title: "Search gross and histopathology image atlas",
+        source: "University of Utah WebPath",
+        url: "https://www.google.com/search?q=peritoneal%20carcinomatosis%20site%3Awebpath.med.utah.edu",
+        tags: ["image", "gross-pathology", "histology", "teaching"],
+        query: "peritoneal carcinomatosis"
+      }
+    ],
+    videoResources: [
+      {
+        title: "Search operation videos on SAGES TV",
+        source: "SAGES TV",
+        url: "https://www.google.com/search?q=cytoreductive%20surgery%20HIPEC%20peritoneal%20carcinomatosis%20site%3Asages.org",
+        tags: ["video", "free", "SAGES", "MIS", "endoscopy"],
+        query: "cytoreductive surgery HIPEC peritoneal carcinomatosis"
+      },
+      {
+        title: "Search advanced colorectal/MIS videos on AIS Channel",
+        source: "AIS Channel",
+        url: "https://www.google.com/search?q=cytoreductive%20surgery%20HIPEC%20peritoneal%20carcinomatosis%20site%3Aaischannel.com",
+        tags: ["video", "free-account", "expert", "MIS", "colorectal"],
+        query: "cytoreductive surgery HIPEC peritoneal carcinomatosis"
+      },
+      {
+        title: "Search operation videos on WebSurg / IRCAD",
+        source: "WebSurg / IRCAD",
+        url: "https://www.google.com/search?q=cytoreductive%20surgery%20HIPEC%20peritoneal%20carcinomatosis%20site%3Awebsurg.com",
+        tags: ["video", "free-registration", "MIS", "laparoscopic", "robotic"],
+        query: "cytoreductive surgery HIPEC peritoneal carcinomatosis"
+      }
+    ],
+    tags: [
+      "peritoneal malignancy",
+      "HIPEC",
+      "cytoreduction",
+      "pseudomyxoma",
+      "oncology",
+      "procedure",
+      "operative-steps"
     ]
   },
   {
@@ -76902,6 +78322,729 @@ const PROCEDURES = [
     imageResources: [],
     videoResources: [],
     tags: ["endoscopy", "enteral access", "feeding", "PEG", "nutrition", "MIS", "procedure", "operative-steps"]
+  },
+  {
+    id: "proc-sleeve-gastrectomy",
+    diseaseId: "sleeve-gastrectomy",
+    dept: "mis",
+    name: "Laparoscopic Sleeve Gastrectomy",
+    disease: "Laparoscopic Sleeve Gastrectomy",
+    organ: "Stomach",
+    severity: "moderate",
+    summary: "Removing ~80% of the stomach along the greater curve to leave a narrow tube — now the world's commonest bariatric operation, restrictive with useful metabolic (hormonal) effects.",
+    indications: [],
+    anatomyFocus: [
+      "Purely restrictive anatomically but strongly metabolic: resecting the fundus removes most ghrelin-producing cells, reducing hunger and improving glycaemic control early, before weight loss",
+      "The stomach is divided vertically over a bougie (typically 32–40 Fr) from ~2–6 cm proximal to the pylorus up to the angle of His",
+      "Differentiate from: Roux-en-Y gastric bypass (RYGB) — better for severe GERD and diabetes; adds malabsorption and dumping, One-anastomosis gastric bypass (OAGB) — single loop anastomosis; simpler than RYGB, risk of bile reflux, Biliopancreatic diversion / duodenal switch (BPD-DS, SADI-S) — most powerful weight loss/metabolic effect, most malabsorption, Intragastric balloon / endoscopic sleeve gastroplasty — less invasive, less durable"
+    ],
+    prep: [
+      "MDT workup (dietitian, psychology), pre-op liver-shrinkage diet, VTE prophylaxis, treat OSA",
+      "Screen for and note any hiatus hernia / GERD — plan concurrent hiatal repair if present",
+      "Supine reverse-Trendelenburg, split-leg or French position; 5 ports"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Mobilise greater curve",
+        d: "Divide the gastrocolic omentum along the greater curvature with an energy device from ~4 cm proximal to the pylorus up to the left crus, taking down short gastric vessels to the angle of His"
+      },
+      {
+        n: 2,
+        t: "Assess hiatus",
+        d: "Inspect the hiatus; formally repair any hiatus hernia (posterior cruroplasty) to reduce post-op reflux"
+      },
+      {
+        n: 3,
+        t: "Insert bougie",
+        d: "Anaesthetist passes a 32–40 Fr bougie along the lesser curve to the pylorus to calibrate the sleeve"
+      },
+      {
+        n: 4,
+        t: "Staple the sleeve",
+        d: "Serial firings of a linear stapler alongside the bougie from the antrum to the angle of His; keep the last firing away from the oesophagus to avoid a leak/stricture at the top"
+      },
+      {
+        n: 5,
+        t: "Check staple line",
+        d: "Inspect for bleeding; oversew or clip as needed; leak test (methylene blue or air under saline) to confirm integrity"
+      },
+      {
+        n: 6,
+        t: "Extract & close",
+        d: "Remove the resected stomach through a port site; check haemostasis; close the extraction-site fascia"
+      }
+    ],
+    pearls: [
+      "Repair a coexisting hiatus hernia at the same operation — untreated, it drives severe post-sleeve reflux",
+      "Do not narrow the incisura over the bougie — the commonest site of a functional stricture",
+      "A low threshold for CT + contrast and reoperation/stenting when a leak is suspected — sepsis, not the leak itself, kills",
+      "Sleeve is restrictive but its early anti-diabetic effect is hormonal (ghrelin↓, GLP-1/PYY↑), not just weight-driven",
+      "It preserves normal endoscopic access to the duodenum/biliary tree — an edge over RYGB",
+      "Reflux is the Achilles' heel: assess GERD carefully before choosing sleeve"
+    ],
+    pitfalls: [
+      "Ignoring a hiatus hernia / significant GERD and creating a refluxing sleeve (may need conversion to bypass)",
+      "Stapling too close to the bougie at the incisura, causing stenosis",
+      "Under-recognising a staple-line leak — delayed source control leads to overwhelming sepsis"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Laparoscopic Sleeve Gastrectomy), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "MDT workup (dietitian, psychology), pre-op liver-shrinkage diet, VTE prophylaxis, treat OSA",
+          "Screen for and note any hiatus hernia / GERD — plan concurrent hiatal repair if present",
+          "Supine reverse-Trendelenburg, split-leg or French position; 5 ports"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "Purely restrictive anatomically but strongly metabolic: resecting the fundus removes most ghrelin-producing cells, reducing hunger and improving glycaemic control early, before weight loss",
+          "The stomach is divided vertically over a bougie (typically 32–40 Fr) from ~2–6 cm proximal to the pylorus up to the angle of His",
+          "Two dreaded complications: staple-line leak (usually near the angle of His, presents days 3–10 with tachycardia/sepsis) and staple-line bleeding",
+          "Confirm this is not: Roux-en-Y gastric bypass (RYGB) — better for severe GERD and diabetes; adds malabsorption and dumping, One-anastomosis gastric bypass (OAGB) — single loop anastomosis; simpler than RYGB, risk of bile reflux, Biliopancreatic diversion / duodenal switch (BPD-DS, SADI-S) — most powerful weight loss/metabolic effect, most malabsorption"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "Repair a coexisting hiatus hernia at the same operation — untreated, it drives severe post-sleeve reflux",
+          "Do not narrow the incisura over the bougie — the commonest site of a functional stricture",
+          "A low threshold for CT + contrast and reoperation/stenting when a leak is suspected — sepsis, not the leak itself, kills",
+          "Sleeve is restrictive but its early anti-diabetic effect is hormonal (ghrelin↓, GLP-1/PYY↑), not just weight-driven"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Ignoring a hiatus hernia / significant GERD and creating a refluxing sleeve (may need conversion to bypass)",
+          "Stapling too close to the bougie at the incisura, causing stenosis",
+          "Under-recognising a staple-line leak — delayed source control leads to overwhelming sepsis"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Laparoscopic Sleeve Gastrectomy.",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [],
+    videoResources: [],
+    tags: ["bariatric", "sleeve", "metabolic", "obesity", "MIS", "weight loss", "procedure", "operative-steps"]
+  },
+  {
+    id: "proc-poem",
+    diseaseId: "poem",
+    dept: "mis",
+    name: "Per-Oral Endoscopic Myotomy (POEM)",
+    disease: "Per-Oral Endoscopic Myotomy (POEM)",
+    organ: "Esophagus (lower esophageal sphincter)",
+    severity: "moderate",
+    summary: "An incisionless myotomy for achalasia: working in a submucosal tunnel through a flexible scope, the circular muscle and LES are divided from inside the oesophagus.",
+    indications: [],
+    anatomyFocus: [
+      "A natural-orifice (NOTES) technique — no skin incision; a mucosal entry, a submucosal tunnel, then endoscopic myotomy, then closure of the mucosal flap with clips",
+      "First-line for type III (spastic) achalasia because the myotomy length can be extended proximally as far as needed — beyond what a surgical Heller reaches",
+      "Differentiate from: Laparoscopic Heller myotomy + Dor/Toupet — surgical myotomy WITH an anti-reflux wrap; better for reflux control, Pneumatic balloon dilatation — less durable, repeat sessions, small perforation risk, Botulinum toxin injection to the LES — temporary; for frail/unfit patients or as a bridge, Medical therapy (nitrates, calcium-channel blockers) — poor efficacy, temporising only"
+    ],
+    prep: [
+      "Confirm diagnosis with high-resolution manometry; clear liquid diet then fasting (achalasic oesophagus retains food)",
+      "CO2 insufflation mandatory; antibiotics; general anaesthesia with cuffed tube",
+      "Have decompression needle ready for capnoperitoneum"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Mucosal entry",
+        d: "Identify the level; inject to lift, then make a longitudinal mucosal incision ~10–13 cm above the GOJ to enter the submucosa"
+      },
+      {
+        n: 2,
+        t: "Submucosal tunnel",
+        d: "Dissect a tunnel distally through the submucosa, across the GOJ, ~2–3 cm onto the gastric cardia"
+      },
+      {
+        n: 3,
+        t: "Myotomy",
+        d: "Divide the inner circular muscle (or full thickness) from proximal oesophagus across the LES onto the stomach; length tailored to manometry"
+      },
+      {
+        n: 4,
+        t: "Haemostasis",
+        d: "Coagulate tunnel vessels; confirm a complete myotomy across the sphincter (loss of the tight ring)"
+      },
+      {
+        n: 5,
+        t: "Close entry",
+        d: "Withdraw to the mucosal incision and close it with endoscopic clips (or suture); confirm no leak"
+      },
+      {
+        n: 6,
+        t: "Recover",
+        d: "Monitor for chest pain/subcutaneous emphysema; contrast study before feeding at many centres; start PPI"
+      }
+    ],
+    pearls: [
+      "Tailor myotomy length to manometry — POEM's key advantage is reaching a long spastic segment a Heller cannot",
+      "Expect and pre-counsel for reflux: no wrap is created, so PPI and surveillance are part of the plan",
+      "Use CO2, not air, and be ready to needle-decompress a tense capnoperitoneum",
+      "POEM is the procedure of choice for type III (spastic) achalasia",
+      "Dysphagia relief rivals Heller myotomy but reflux rates are higher because no fundoplication is added",
+      "The same submucosal-tunnel principle underlies G-POEM for refractory gastroparesis"
+    ],
+    pitfalls: [
+      "Skipping manometry — misclassifying the subtype and cutting the wrong myotomy length, or missing pseudoachalasia",
+      "Using air instead of CO2 — worse insufflation complications",
+      "Failing to warn about and treat post-POEM reflux (Barrett's/esophagitis risk if untreated)"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Per-Oral Endoscopic Myotomy (POEM)), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "Confirm diagnosis with high-resolution manometry; clear liquid diet then fasting (achalasic oesophagus retains food)",
+          "CO2 insufflation mandatory; antibiotics; general anaesthesia with cuffed tube",
+          "Have decompression needle ready for capnoperitoneum"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "A natural-orifice (NOTES) technique — no skin incision; a mucosal entry, a submucosal tunnel, then endoscopic myotomy, then closure of the mucosal flap with clips",
+          "First-line for type III (spastic) achalasia because the myotomy length can be extended proximally as far as needed — beyond what a surgical Heller reaches",
+          "Comparable dysphagia relief to laparoscopic Heller myotomy, often shorter procedure and quicker recovery",
+          "Confirm this is not: Laparoscopic Heller myotomy + Dor/Toupet — surgical myotomy WITH an anti-reflux wrap; better for reflux control, Pneumatic balloon dilatation — less durable, repeat sessions, small perforation risk, Botulinum toxin injection to the LES — temporary; for frail/unfit patients or as a bridge"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "Tailor myotomy length to manometry — POEM's key advantage is reaching a long spastic segment a Heller cannot",
+          "Expect and pre-counsel for reflux: no wrap is created, so PPI and surveillance are part of the plan",
+          "Use CO2, not air, and be ready to needle-decompress a tense capnoperitoneum",
+          "POEM is the procedure of choice for type III (spastic) achalasia"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Skipping manometry — misclassifying the subtype and cutting the wrong myotomy length, or missing pseudoachalasia",
+          "Using air instead of CO2 — worse insufflation complications",
+          "Failing to warn about and treat post-POEM reflux (Barrett's/esophagitis risk if untreated)"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Per-Oral Endoscopic Myotomy (POEM).",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [],
+    videoResources: [],
+    tags: ["endoscopy", "achalasia", "myotomy", "NOTES", "MIS", "dysphagia", "procedure", "operative-steps"]
+  },
+  {
+    id: "proc-partial-fundoplication",
+    diseaseId: "partial-fundoplication",
+    dept: "mis",
+    name: "Laparoscopic Toupet (Posterior 270°) Fundoplication",
+    disease: "Partial Fundoplication (Toupet & Dor)",
+    organ: "Gastro-esophageal junction",
+    severity: "moderate",
+    summary: "A partial (not 360°) wrap of stomach around the lower oesophagus — controls reflux while reducing the dysphagia and gas-bloat of a full Nissen, and the wrap of choice when peristalsis is weak.",
+    indications: [],
+    anatomyFocus: [
+      "Toupet is a posterior 270° wrap; Dor is an anterior ~180° wrap — both are 'partial' alternatives to the 360° Nissen",
+      "Preferred over Nissen when oesophageal motility is impaired (e.g. scleroderma, ineffective peristalsis) because a looser wrap causes less dysphagia",
+      "Differentiate from: Nissen fundoplication (360°) — best reflux control; more dysphagia / gas-bloat; needs adequate motility, Toupet (posterior 270°) — partial wrap of choice for GERD with weak peristalsis, Dor (anterior 180°) — partial wrap after Heller myotomy; covers the myotomy, Magnetic sphincter augmentation (LINX) — device alternative in selected GERD"
+    ],
+    prep: [
+      "Confirm GERD (pH study) and assess motility (manometry) — manometry selects partial vs complete wrap",
+      "Supine reverse-Trendelenburg, 5 ports, liver retractor",
+      "Consent covering dysphagia, gas-bloat, recurrence and wrap failure"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Hiatal dissection",
+        d: "Divide the gastrohepatic omentum; expose both crura; encircle and mobilise the distal oesophagus into the abdomen for tension-free length"
+      },
+      {
+        n: 2,
+        t: "Mobilise fundus",
+        d: "Divide short gastric vessels so the fundus reaches easily behind the oesophagus without tension"
+      },
+      {
+        n: 3,
+        t: "Crural repair",
+        d: "Approximate the crura posteriorly with non-absorbable sutures, calibrated over a bougie to avoid stenosis"
+      },
+      {
+        n: 4,
+        t: "Pass the wrap",
+        d: "Bring the fundus posteriorly around the oesophagus (shoeshine manoeuvre to confirm it lies without twist)"
+      },
+      {
+        n: 5,
+        t: "Fashion 270°",
+        d: "Suture the fundus to the right and left sides of the oesophagus (and to the crura), leaving the anterior ~90° uncovered — a 270° posterior wrap"
+      },
+      {
+        n: 6,
+        t: "Check",
+        d: "Confirm a floppy, short wrap with the anterior oesophagus visible; haemostasis; remove bougie"
+      }
+    ],
+    pearls: [
+      "Match the wrap to manometry: weak peristalsis → partial (Toupet); normal peristalsis and pure reflux → Nissen",
+      "After a Heller myotomy, add a Dor to control reflux and cover the exposed mucosa",
+      "A tension-free, adequately mobilised oesophagus is the key to avoiding wrap failure and recurrence",
+      "Toupet = posterior 270°; Dor = anterior 180° — both trade a little reflux control for far less dysphagia",
+      "Dor is the default wrap after Heller myotomy",
+      "Manometry drives wrap choice; a full Nissen on a poorly-motile oesophagus risks severe dysphagia"
+    ],
+    pitfalls: [
+      "Performing a Nissen on a patient with impaired peristalsis, causing troublesome dysphagia",
+      "Inadequate oesophageal mobilisation → a wrap under tension that migrates or fails",
+      "Omitting an anti-reflux wrap after Heller myotomy"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Laparoscopic Toupet (Posterior 270°) Fundoplication), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "Confirm GERD (pH study) and assess motility (manometry) — manometry selects partial vs complete wrap",
+          "Supine reverse-Trendelenburg, 5 ports, liver retractor",
+          "Consent covering dysphagia, gas-bloat, recurrence and wrap failure"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "Toupet is a posterior 270° wrap; Dor is an anterior ~180° wrap — both are 'partial' alternatives to the 360° Nissen",
+          "Preferred over Nissen when oesophageal motility is impaired (e.g. scleroderma, ineffective peristalsis) because a looser wrap causes less dysphagia",
+          "Dor is the standard anti-reflux wrap added after a Heller myotomy — it also covers the exposed myotomy mucosa",
+          "Confirm this is not: Nissen fundoplication (360°) — best reflux control; more dysphagia / gas-bloat; needs adequate motility, Toupet (posterior 270°) — partial wrap of choice for GERD with weak peristalsis, Dor (anterior 180°) — partial wrap after Heller myotomy; covers the myotomy"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "Match the wrap to manometry: weak peristalsis → partial (Toupet); normal peristalsis and pure reflux → Nissen",
+          "After a Heller myotomy, add a Dor to control reflux and cover the exposed mucosa",
+          "A tension-free, adequately mobilised oesophagus is the key to avoiding wrap failure and recurrence",
+          "Toupet = posterior 270°; Dor = anterior 180° — both trade a little reflux control for far less dysphagia"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Performing a Nissen on a patient with impaired peristalsis, causing troublesome dysphagia",
+          "Inadequate oesophageal mobilisation → a wrap under tension that migrates or fails",
+          "Omitting an anti-reflux wrap after Heller myotomy"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Partial Fundoplication (Toupet & Dor).",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [],
+    videoResources: [],
+    tags: ["antireflux", "fundoplication", "Toupet", "Dor", "GERD", "MIS", "procedure", "operative-steps"]
+  },
+  {
+    id: "proc-feeding-jejunostomy",
+    diseaseId: "feeding-jejunostomy",
+    dept: "mis",
+    name: "Surgical (Witzel) Feeding Jejunostomy",
+    disease: "Feeding Jejunostomy & PEJ",
+    organ: "Proximal jejunum",
+    severity: "moderate",
+    summary: "Post-pyloric enteral access — a catheter into the proximal jejunum for feeding when the stomach must be bypassed, as after upper-GI resection or with high aspiration risk.",
+    indications: [],
+    anatomyFocus: [
+      "Chosen over PEG when gastric feeding is impossible or unsafe: after oesophagectomy/gastrectomy, gastric outlet obstruction, severe gastroparesis, or high aspiration risk",
+      "Routes: surgical (open or laparoscopic) feeding jejunostomy, direct percutaneous endoscopic jejunostomy (direct-PEJ), or a jejunal extension through a gastrostomy (PEG-J)",
+      "Differentiate from: PEG (gastrostomy) — simpler, preferred when the stomach is available and gastric feeding is safe, PEG-J / direct-PEJ — endoscopic post-pyloric options avoiding laparotomy, Nasojejunal (NJ) tube — non-operative, short-term post-pyloric feeding, Parenteral nutrition (TPN) — when the gut is non-functioning or inaccessible"
+    ],
+    prep: [
+      "Confirm the need for post-pyloric access and that gastric feeding is unsuitable",
+      "Often performed as an add-on at laparotomy/laparoscopy for the index resection",
+      "Mark an exit site in the left upper quadrant; fine-bore feeding catheter ready"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Select jejunal loop",
+        d: "Identify a proximal jejunal loop ~20–30 cm distal to the DJ flexure that reaches the abdominal wall without tension"
+      },
+      {
+        n: 2,
+        t: "Enterotomy & catheter",
+        d: "Place a purse-string; make a small antimesenteric enterotomy and pass the catheter distally into the lumen"
+      },
+      {
+        n: 3,
+        t: "Witzel tunnel",
+        d: "Bury the catheter in a seromuscular tunnel (Witzel) for several cm to create a valve that prevents leakage around the tube"
+      },
+      {
+        n: 4,
+        t: "Fix to abdominal wall",
+        d: "Bring the catheter out through a separate stab; suture the loop to the parietal peritoneum around the exit to prevent leak and torsion"
+      },
+      {
+        n: 5,
+        t: "Test",
+        d: "Flush the catheter to confirm free flow and no leak; secure externally at the skin"
+      },
+      {
+        n: 6,
+        t: "Feed",
+        d: "Begin continuous feeding slowly, increasing to target over 24–48 h; daily flushes to prevent blockage"
+      }
+    ],
+    pearls: [
+      "Never bolus a jejunostomy — continuous pump feeding avoids dumping and diarrhoea",
+      "Adequate bowel-to-wall fixation prevents the two big problems: peritubal leak and small-bowel torsion",
+      "Flush regularly; fine-bore tubes block easily and are hard to unblock",
+      "Jejunostomy is the answer when you must feed but cannot use the stomach (post-resection, obstruction, aspiration)",
+      "A jejunostomy placed at cancer surgery secures nutrition through the recovery period",
+      "Continuous feeding and good fixation are the two rules that keep it trouble-free"
+    ],
+    pitfalls: [
+      "Bolus feeding a jejunostomy — predictable cramping, dumping and diarrhoea",
+      "Poor fixation leading to leak into the peritoneum or volvulus around the tube",
+      "Blindly replacing a dislodged tube before the tract matures — risk of intraperitoneal misplacement"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Surgical (Witzel) Feeding Jejunostomy), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "Confirm the need for post-pyloric access and that gastric feeding is unsuitable",
+          "Often performed as an add-on at laparotomy/laparoscopy for the index resection",
+          "Mark an exit site in the left upper quadrant; fine-bore feeding catheter ready"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "Chosen over PEG when gastric feeding is impossible or unsafe: after oesophagectomy/gastrectomy, gastric outlet obstruction, severe gastroparesis, or high aspiration risk",
+          "Routes: surgical (open or laparoscopic) feeding jejunostomy, direct percutaneous endoscopic jejunostomy (direct-PEJ), or a jejunal extension through a gastrostomy (PEG-J)",
+          "Feed must be continuous/pump-controlled — the jejunum has no reservoir, so bolus feeding causes cramps, dumping and diarrhoea",
+          "Confirm this is not: PEG (gastrostomy) — simpler, preferred when the stomach is available and gastric feeding is safe, PEG-J / direct-PEJ — endoscopic post-pyloric options avoiding laparotomy, Nasojejunal (NJ) tube — non-operative, short-term post-pyloric feeding"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "Never bolus a jejunostomy — continuous pump feeding avoids dumping and diarrhoea",
+          "Adequate bowel-to-wall fixation prevents the two big problems: peritubal leak and small-bowel torsion",
+          "Flush regularly; fine-bore tubes block easily and are hard to unblock",
+          "Jejunostomy is the answer when you must feed but cannot use the stomach (post-resection, obstruction, aspiration)"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Bolus feeding a jejunostomy — predictable cramping, dumping and diarrhoea",
+          "Poor fixation leading to leak into the peritoneum or volvulus around the tube",
+          "Blindly replacing a dislodged tube before the tract matures — risk of intraperitoneal misplacement"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Feeding Jejunostomy & PEJ.",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [],
+    videoResources: [],
+    tags: ["enteral access", "feeding", "jejunostomy", "nutrition", "MIS", "procedure", "operative-steps"]
+  },
+  {
+    id: "proc-balloon-tamponade",
+    diseaseId: "balloon-tamponade",
+    dept: "mis",
+    name: "Sengstaken–Blakemore Tube Insertion",
+    disease: "Balloon Tamponade for Variceal Haemorrhage",
+    organ: "Esophagus / gastric fundus",
+    severity: "high",
+    summary: "A life-saving temporising rescue for exsanguinating variceal bleeding when endoscopy fails — a balloon tube compresses the varices to buy hours until definitive therapy (TIPSS).",
+    indications: [],
+    anatomyFocus: [
+      "A bridge, not a cure: it controls bleeding for ≤24 h while arranging definitive treatment (repeat endoscopy or TIPSS) — varices re-bleed when the balloon is deflated",
+      "Sengstaken–Blakemore tube (gastric + oesophageal balloons + gastric aspiration) or Minnesota tube (adds an oesophageal aspiration port)",
+      "Differentiate from: Endoscopic band ligation / cyanoacrylate — first-line definitive control of variceal bleeding, TIPSS (transjugular intrahepatic portosystemic shunt) — definitive rescue for uncontrolled/refractory variceal bleeding, Self-expanding covered oesophageal stent (e.g. SX-Ella Danis) — an alternative to balloon tamponade with fewer complications, Pharmacological (terlipressin/octreotide) + antibiotics — adjuncts given in all cases"
+    ],
+    prep: [
+      "Resuscitate (major haemorrhage protocol), correct coagulopathy, start terlipressin + antibiotics",
+      "Secure the airway — intubate the exsanguinating or encephalopathic patient first",
+      "Check tube balloons for leaks; chill the tube to stiffen if needed; mark lengths"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Insert orally/nasally",
+        d: "Pass the deflated tube into the stomach (~50 cm at the incisors); aspirate the gastric port to confirm gastric placement"
+      },
+      {
+        n: 2,
+        t: "Confirm position",
+        d: "Verify the gastric balloon lies below the diaphragm (X-ray or reliable technique) BEFORE inflating fully"
+      },
+      {
+        n: 3,
+        t: "Inflate gastric balloon",
+        d: "Inflate the gastric balloon in stages (to ~250–300 mL air) — stop immediately if there is pain (suggests oesophageal malposition)"
+      },
+      {
+        n: 4,
+        t: "Apply traction",
+        d: "Withdraw until the balloon seats snugly at the GOJ; apply gentle traction to tamponade the cardia"
+      },
+      {
+        n: 5,
+        t: "Oesophageal balloon if needed",
+        d: "If bleeding continues, inflate the oesophageal balloon to a manometer-controlled pressure (~30–40 mmHg); release intermittently"
+      },
+      {
+        n: 6,
+        t: "Aspirate & plan",
+        d: "Aspirate gastric (and oesophageal, Minnesota) ports; arrange urgent TIPSS or repeat endoscopy; deflate under controlled conditions"
+      }
+    ],
+    pearls: [
+      "The single commonest fatal error is inflating the gastric balloon in the oesophagus — confirm position first",
+      "It only buys time: line up TIPSS / definitive endoscopy before the balloon goes down",
+      "Deflate the oesophageal balloon periodically to avoid pressure necrosis; keep the airway secured throughout",
+      "Balloon tamponade is a rescue bridge to TIPSS, not definitive therapy",
+      "Confirm the gastric balloon is below the diaphragm before full inflation — oesophageal inflation can be fatal",
+      "A covered oesophageal stent is a modern alternative with fewer complications"
+    ],
+    pitfalls: [
+      "Inflating the gastric balloon while it is still in the oesophagus → oesophageal rupture",
+      "Inserting without securing the airway in an obtunded, bleeding patient → aspiration",
+      "Leaving the oesophageal balloon inflated continuously → mucosal pressure necrosis"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Sengstaken–Blakemore Tube Insertion), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "Resuscitate (major haemorrhage protocol), correct coagulopathy, start terlipressin + antibiotics",
+          "Secure the airway — intubate the exsanguinating or encephalopathic patient first",
+          "Check tube balloons for leaks; chill the tube to stiffen if needed; mark lengths"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "A bridge, not a cure: it controls bleeding for ≤24 h while arranging definitive treatment (repeat endoscopy or TIPSS) — varices re-bleed when the balloon is deflated",
+          "Sengstaken–Blakemore tube (gastric + oesophageal balloons + gastric aspiration) or Minnesota tube (adds an oesophageal aspiration port)",
+          "ALWAYS confirm gastric-balloon position below the diaphragm (on X-ray or by technique) BEFORE full inflation — inflating in the oesophagus can rupture it",
+          "Confirm this is not: Endoscopic band ligation / cyanoacrylate — first-line definitive control of variceal bleeding, TIPSS (transjugular intrahepatic portosystemic shunt) — definitive rescue for uncontrolled/refractory variceal bleeding, Self-expanding covered oesophageal stent (e.g. SX-Ella Danis) — an alternative to balloon tamponade with fewer complications"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "The single commonest fatal error is inflating the gastric balloon in the oesophagus — confirm position first",
+          "It only buys time: line up TIPSS / definitive endoscopy before the balloon goes down",
+          "Deflate the oesophageal balloon periodically to avoid pressure necrosis; keep the airway secured throughout",
+          "Balloon tamponade is a rescue bridge to TIPSS, not definitive therapy"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Inflating the gastric balloon while it is still in the oesophagus → oesophageal rupture",
+          "Inserting without securing the airway in an obtunded, bleeding patient → aspiration",
+          "Leaving the oesophageal balloon inflated continuously → mucosal pressure necrosis"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Balloon Tamponade for Variceal Haemorrhage.",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [],
+    videoResources: [],
+    tags: [
+      "variceal bleeding",
+      "Sengstaken",
+      "tamponade",
+      "rescue",
+      "endoscopy",
+      "MIS",
+      "procedure",
+      "operative-steps"
+    ]
+  },
+  {
+    id: "proc-lap-inguinal-hernia",
+    diseaseId: "lap-inguinal-hernia",
+    dept: "mis",
+    name: "Laparoscopic TEP Repair (with TAPP contrast)",
+    disease: "Laparoscopic Inguinal Hernia Repair (TEP & TAPP)",
+    organ: "Groin (myopectineal orifice)",
+    severity: "low",
+    summary: "Minimally invasive mesh repair of the groin from behind — covering the whole myopectineal orifice in the preperitoneal space; the approach of choice for bilateral and recurrent (post-open) hernias.",
+    indications: [],
+    anatomyFocus: [
+      "Two techniques: TEP (totally extraperitoneal — stays outside the peritoneum) and TAPP (transabdominal preperitoneal — enters the abdomen, then opens the peritoneum over the defect)",
+      "A single large mesh in the preperitoneal space covers direct, indirect AND femoral defects (the whole myopectineal orifice of Fruchaud)",
+      "Differentiate from: Open Lichtenstein (tension-free mesh) — simpler, local anaesthetic possible; preferred for primary unilateral hernia or hostile pelvis, TEP — totally extraperitoneal laparoscopic repair (no peritoneal breach), TAPP — transabdominal preperitoneal laparoscopic repair, Robotic TAPP — for complex/recurrent cases at suitable centres"
+    ],
+    prep: [
+      "General anaesthesia; empty bladder (catheter if needed); supine, arms tucked, surgeon on the contralateral side",
+      "Consent covering conversion, seroma, chronic pain, recurrence, vascular/visceral and nerve injury",
+      "TAPP variant: standard pneumoperitoneum and intraperitoneal start"
+    ],
+    steps: [
+      {
+        n: 1,
+        t: "Access the plane",
+        d: "TEP: infraumbilical incision, enter the posterior rectus sheath and use a balloon to develop the preperitoneal space. TAPP: pneumoperitoneum, then incise the peritoneum above the defect"
+      },
+      {
+        n: 2,
+        t: "Create working space",
+        d: "Insufflate the preperitoneal space (TEP) or reflect the peritoneal flap (TAPP) to expose the myopectineal orifice"
+      },
+      {
+        n: 3,
+        t: "Reduce the sac",
+        d: "Reduce the hernia sac; for an indirect sac, dissect it off the cord structures (ligate/divide a large sac if needed)"
+      },
+      {
+        n: 4,
+        t: "Identify landmarks",
+        d: "Define the pubic tubercle, Cooper's ligament, epigastric vessels, and the triangles of doom and pain"
+      },
+      {
+        n: 5,
+        t: "Place mesh",
+        d: "Position a large mesh (~10×15 cm) to cover direct, indirect and femoral spaces with wide overlap; fixation optional and only in safe zones"
+      },
+      {
+        n: 6,
+        t: "Close",
+        d: "TAPP: re-approximate the peritoneum over the mesh (tacks/suture/glue). Desufflate slowly keeping mesh flat; close port sites"
+      }
+    ],
+    pearls: [
+      "No tacks or staples in the triangles of doom and pain — the mechanism of vascular injury and chronic neuralgia",
+      "In TAPP, close the peritoneum completely over the mesh to prevent adhesions/internal hernia",
+      "Choose laparoscopic for bilateral and recurrent-after-open hernias; choose open for a primary unilateral hernia in an unfit patient",
+      "One posterior mesh covers all three groin-hernia zones — the conceptual advantage over anterior repair",
+      "TEP stays out of the abdomen; TAPP enters it — outcomes are similar, choice is case- and surgeon-dependent",
+      "Laparoscopic repair shines for bilateral and recurrent (post-open) hernias"
+    ],
+    pitfalls: [
+      "Fixation in the triangle of doom or pain → iliac-vessel injury or chronic neuralgia",
+      "Undersized mesh or inadequate overlap → recurrence",
+      "Failing to close the peritoneum over the mesh in TAPP → adhesive/obstructive complications"
+    ],
+    safetyChecklist: [
+      {
+        phase: "Pre-op brief",
+        items: [
+          "Confirm patient, procedure (Laparoscopic TEP Repair (with TAPP contrast)), side/site, consent, allergies, and indication.",
+          "Review imaging, staging, anatomy variants, and the planned incision/port strategy before anesthesia.",
+          "Confirm antibiotics, VTE prophylaxis, blood availability, positioning, warming, and required special equipment.",
+          "General anaesthesia; empty bladder (catheter if needed); supine, arms tucked, surgeon on the contralateral side",
+          "Consent covering conversion, seroma, chronic pain, recurrence, vascular/visceral and nerve injury",
+          "TAPP variant: standard pneumoperitoneum and intraperitoneal start"
+        ]
+      },
+      {
+        phase: "Anatomy danger zones",
+        items: [
+          "Two techniques: TEP (totally extraperitoneal — stays outside the peritoneum) and TAPP (transabdominal preperitoneal — enters the abdomen, then opens the peritoneum over the defect)",
+          "A single large mesh in the preperitoneal space covers direct, indirect AND femoral defects (the whole myopectineal orifice of Fruchaud)",
+          "Best indications: bilateral hernias (repair both through the same ports) and recurrence after previous open (anterior) repair — virgin planes from behind",
+          "Confirm this is not: Open Lichtenstein (tension-free mesh) — simpler, local anaesthetic possible; preferred for primary unilateral hernia or hostile pelvis, TEP — totally extraperitoneal laparoscopic repair (no peritoneal breach), TAPP — transabdominal preperitoneal laparoscopic repair"
+        ]
+      },
+      {
+        phase: "Intra-op safety pause",
+        items: [
+          "Confirm exposure, proximal/distal control where relevant, and hemostasis before irreversible steps.",
+          "Use a timeout before division of any duct, vessel, bowel, ureter, nerve-adjacent tissue, or major attachment.",
+          "Check specimen orientation, margins, counts, drains, and hemostasis before closure.",
+          "No tacks or staples in the triangles of doom and pain — the mechanism of vascular injury and chronic neuralgia",
+          "In TAPP, close the peritoneum completely over the mesh to prevent adhesions/internal hernia",
+          "Choose laparoscopic for bilateral and recurrent-after-open hernias; choose open for a primary unilateral hernia in an unfit patient",
+          "One posterior mesh covers all three groin-hernia zones — the conceptual advantage over anterior repair"
+        ]
+      },
+      {
+        phase: "Bailout / stop points",
+        items: [
+          "Fixation in the triangle of doom or pain → iliac-vessel injury or chronic neuralgia",
+          "Undersized mesh or inadequate overlap → recurrence",
+          "Failing to close the peritoneum over the mesh in TAPP → adhesive/obstructive complications"
+        ]
+      },
+      {
+        phase: "Post-op watch",
+        items: [
+          "Handover operation performed, key findings, complications, drains/tubes, antibiotics, VTE plan, diet, analgesia, and escalation criteria.",
+          "Actively monitor for bleeding, sepsis, leak, ischemia, organ injury, and disease-specific complications after Laparoscopic Inguinal Hernia Repair (TEP & TAPP).",
+          "Document follow-up plan, pathology/imaging review, and when to restart anticoagulants or disease-specific medications."
+        ]
+      }
+    ],
+    imageResources: [],
+    videoResources: [],
+    tags: ["hernia", "laparoscopic", "TEP", "TAPP", "mesh", "MIS", "procedure", "operative-steps"]
   }
 ];
 
@@ -76921,8 +79064,8 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "Crohn's Disease",
       "Abdominal Aortic Aneurysm",
-      "Percutaneous Endoscopic Gastrostomy (PEG)",
-      "Wound Dehiscence / Burst Abdomen"
+      "Therapeutic Endoscopy (Principles)",
+      "Pelvic Fracture (Hemorrhage Control)"
     ],
     answer: 1,
     explanation: "Permanent focal dilation of the abdominal aorta ≥3.0 cm or >50% of expected diameter.",
@@ -76944,8 +79087,8 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lower limb arteries.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Trauma Airway Management (ATLS 11)",
-      "Phaeochromocytoma",
+      "Spinal Cord Injury (ATLS 11)",
+      "Secondary / Tertiary Hyperparathyroidism",
       "Chronic Limb-Threatening Ischemia",
       "Angiodysplasia"
     ],
@@ -76968,7 +79111,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Internal carotid artery.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Zenker's Diverticulum", "Inguinal Hernia", "Portal Hypertension", "Carotid Stenosis"],
+    options: [
+      "Balloon Tamponade for Variceal Haemorrhage",
+      "Barrett's Esophagus",
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+      "Carotid Stenosis"
+    ],
     answer: 3,
     explanation: "Atherosclerotic narrowing of the carotid bifurcation — the most common surgically treatable cause of ischemic stroke.",
     anatomyFocus: [
@@ -77014,10 +79162,10 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thoracic aorta.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Kaposi's Sarcoma",
+      "Merkel Cell Carcinoma",
       "Thoracic Aortic Aneurysm",
-      "Gastrointestinal Stromal Tumor",
-      "Parastomal Hernia"
+      "Small Bowel Obstruction",
+      "Strangulated Hernia"
     ],
     answer: 1,
     explanation: "Dilation of the thoracic aorta ≥4.5 cm with risk of rupture, dissection, or aorto-enteric fistula.",
@@ -77040,9 +79188,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Hereditary Spherocytosis",
-      "Caustic Esophageal Injury",
+      "Zenker's Diverticulum",
       "Acute Aortic Dissection",
-      "Living Donor Hepatectomy"
+      "Small Bowel Transplantation"
     ],
     answer: 2,
     explanation: "Tear in the aortic intima creating a false lumen — Stanford Type A requires emergency cardiac surgery, Type B managed medically unless complicated.",
@@ -77063,7 +79211,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lower limb arteries.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Mediastinal Mass", "Achalasia", "Acute Compartment Syndrome (Limb)", "Peripheral Arterial Disease"],
+    options: ["Lung Abscess", "Hiatus Hernia", "Burns", "Peripheral Arterial Disease"],
     answer: 3,
     explanation: "Atherosclerotic occlusive disease of lower limb arteries causing intermittent claudication; ABI <0.9 confirms diagnosis.",
     anatomyFocus: [
@@ -77085,8 +79233,8 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Acute Mesenteric Ischemia",
-      "Kaposi's Sarcoma",
-      "Traumatic Diaphragm Rupture",
+      "Merkel Cell Carcinoma",
+      "Hollow Viscus / Bowel Trauma",
       "Choledocholithiasis"
     ],
     answer: 0,
@@ -77108,7 +79256,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Superficial veins, lower limb.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["ATLS Primary Survey (X-ABCDE)", "Varicose Veins", "Short Bowel Syndrome", "Thyroid Cancer"],
+    options: ["Breast Abscess", "Varicose Veins", "Small Bowel Neuroendocrine Tumor", "Phyllodes Tumor"],
     answer: 1,
     explanation: "Tortuous dilated superficial veins due to valvular incompetence; most commonly great saphenous vein (GSV) territory.",
     anatomyFocus: [
@@ -77128,12 +79276,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Renal artery.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Mediastinal Mass",
-      "Rectal Bleeding (Hematochezia)",
-      "Renal Artery Stenosis",
-      "Thoracic Outlet Syndrome"
-    ],
+    options: ["Lung Abscess", "Melena", "Renal Artery Stenosis", "Thoracic Outlet Syndrome"],
     answer: 2,
     explanation: "Narrowing of the renal artery causing renovascular hypertension and ischemic nephropathy; commonest causes are atherosclerosis and fibromuscular dysplasia.",
     anatomyFocus: [
@@ -77153,12 +79296,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Popliteal artery.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Thoracic Aortic Aneurysm",
-      "Phyllodes Tumor",
-      "Energy Devices in Minimally Invasive Surgery",
-      "Popliteal Artery Aneurysm"
-    ],
+    options: ["Thoracic Aortic Aneurysm", "DCIS", "Laparoscopic Access Techniques", "Popliteal Artery Aneurysm"],
     answer: 3,
     explanation: "Most common peripheral artery aneurysm — >50% bilateral; thromboembolic complications cause acute limb ischemia in 30–40% if untreated.",
     anatomyFocus: [
@@ -77181,8 +79319,8 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "Carotid Body Tumor",
       "Symptomatic Cholelithiasis (Biliary Colic)",
-      "Adrenocortical Carcinoma",
-      "Necrotizing Fasciitis"
+      "Cushing's Syndrome (Adrenal)",
+      "Abdominal Compartment Syndrome"
     ],
     answer: 0,
     explanation: "Rare paraganglioma arising from chemoreceptor tissue at the carotid bifurcation; splays the ICA and ECA; Shamblin classification guides surgical risk.",
@@ -77203,7 +79341,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Subclavian vessels / brachial plexus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Dysphagia", "Thoracic Outlet Syndrome", "Strangulated Hernia", "Incisional Hernia"],
+    options: ["Acute Abdomen", "Thoracic Outlet Syndrome", "Epigastric Hernia", "Umbilical Hernia"],
     answer: 1,
     explanation: "Compression of neurovascular structures at the thoracic outlet — neurogenic TOS accounts for 95% of cases; vascular TOS is rare but more urgent.",
     anatomyFocus: [
@@ -77225,9 +79363,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Lynch Syndrome (HNPCC)",
-      "Short Bowel Syndrome",
+      "Small Bowel Neuroendocrine Tumor",
       "Splanchnic Artery Aneurysm",
-      "Secondary / Tertiary Hyperparathyroidism"
+      "Balloon Tamponade for Variceal Haemorrhage"
     ],
     answer: 2,
     explanation: "Most involve the splenic artery (60%); rupture risk highest in pregnancy; endovascular treatment is first-line for most.",
@@ -77248,7 +79386,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Major vessels.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Radiation Enteritis", "Colorectal Liver Metastases", "Graves' Disease", "Vascular Trauma"],
+    options: ["Short Bowel Syndrome", "Colorectal Liver Metastases", "Thyroid Cancer", "Vascular Trauma"],
     answer: 3,
     explanation: "Injury to major vessels requiring hemorrhage control — temporary vascular shunting bridges to definitive repair; REBOA enables resuscitation in non-compressible hemorrhage.",
     anatomyFocus: [
@@ -77293,7 +79431,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Diagnostic Laparoscopy", "Acute Pancreatitis", "Phyllodes Tumor", "Liposarcoma"],
+    options: ["Robotic-Assisted Surgery", "Acute Pancreatitis", "DCIS", "Hidradenitis Suppurativa"],
     answer: 1,
     explanation: "Acute inflammatory process of the pancreas with varying degrees of regional and remote organ involvement.",
     anatomyFocus: [
@@ -77314,10 +79452,10 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Gallbladder.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Retroperitoneal Sarcoma",
-      "Hidradenitis Suppurativa",
+      "Obturator Hernia",
+      "Squamous Cell Carcinoma (Skin)",
       "Symptomatic Cholelithiasis (Biliary Colic)",
-      "Breast Abscess"
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
     ],
     answer: 2,
     explanation: "Intermittent right-upper-quadrant pain from transient cystic-duct obstruction by a gallstone, without inflammation or infection — the earliest symptomatic point on the gallstone-disease spectrum.",
@@ -77339,9 +79477,9 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Gallbladder.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Primary Hyperparathyroidism",
+      "Multinodular Goitre",
       "Symptomatic Cholelithiasis (Biliary Colic)",
-      "Hidradenitis Suppurativa",
+      "Squamous Cell Carcinoma (Skin)",
       "Acute Cholecystitis"
     ],
     answer: 3,
@@ -77363,7 +79501,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Bile duct.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Acute Cholangitis", "Bowel Perforation", "Small Bowel Obstruction", "Insulinoma"],
+    options: [
+      "Acute Cholangitis",
+      "Balloon Tamponade for Variceal Haemorrhage",
+      "Bowel Perforation",
+      "Gastric Volvulus"
+    ],
     answer: 0,
     explanation: "Bacterial infection of the biliary tract due to biliary obstruction, ranging from mild to life-threatening suppurative cholangitis.",
     anatomyFocus: [
@@ -77383,7 +79526,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hollow Viscus / Bowel Trauma", "Hepatocellular Carcinoma", "Splenic Trauma", "Parastomal Hernia"],
+    options: ["Liver Trauma", "Hepatocellular Carcinoma", "Necrotizing Fasciitis", "Strangulated Hernia"],
     answer: 1,
     explanation: "Primary malignancy of hepatocytes, arising in >90% of cases in the setting of chronic liver disease or cirrhosis.",
     anatomyFocus: [
@@ -77407,7 +79550,7 @@ const IMAGE_QUIZ_BANK = [
       "Deep Vein Thrombosis",
       "Lynch Syndrome (HNPCC)",
       "Choledocholithiasis",
-      "Laparoscopic Access Techniques"
+      "Principles of Laparoscopy & Pneumoperitoneum"
     ],
     answer: 2,
     explanation: "Presence of gallstones within the common bile duct, causing obstruction and risk of cholangitis, pancreatitis, or secondary biliary cirrhosis.",
@@ -77428,12 +79571,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Umbilical Hernia",
-      "Esophageal Cancer",
-      "Rectal Bleeding (Hematochezia)",
-      "Pancreatic Ductal Adenocarcinoma"
-    ],
+    options: ["Femoral Hernia", "Upper GI Hemorrhage", "Melena", "Pancreatic Ductal Adenocarcinoma"],
     answer: 3,
     explanation: "Aggressive exocrine pancreatic malignancy with 5-year survival <12%; most patients present with locally advanced or metastatic disease.",
     anatomyFocus: [
@@ -77453,7 +79591,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Chronic Pancreatitis", "Hollow Viscus / Bowel Trauma", "Vascular Trauma", "Liver Trauma"],
+    options: ["Chronic Pancreatitis", "Partial Fundoplication (Toupet & Dor)", "Liver Trauma", "Vascular Trauma"],
     answer: 0,
     explanation: "Progressive fibroinflammatory disease of the pancreas leading to irreversible parenchymal damage, exocrine/endocrine insufficiency, and chronic pain.",
     anatomyFocus: [
@@ -77476,7 +79614,7 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "Familial Adenomatous Polyposis",
       "Extrahepatic Cholangiocarcinoma",
-      "Adrenal Incidentaloma",
+      "Adrenocortical Carcinoma",
       "Lynch Syndrome (HNPCC)"
     ],
     answer: 1,
@@ -77499,8 +79637,8 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Abdominal Compartment Syndrome",
-      "Hiatus Hernia",
+      "Damage Control Laparotomy",
+      "Esophageal Cancer",
       "Intrahepatic Cholangiocarcinoma",
       "Choledocholithiasis"
     ],
@@ -77523,7 +79661,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Thymoma / Thymic Tumor", "Hydatid Cyst of the Liver", "Burns", "Pancreatic Pseudocyst"],
+    options: [
+      "Mesothelioma",
+      "Hydatid Cyst of the Liver",
+      "Chest Trauma (Surgical Perspective)",
+      "Pancreatic Pseudocyst"
+    ],
     answer: 3,
     explanation: "Encapsulated fluid collection arising after acute pancreatitis or pancreatic duct disruption, lacking an epithelial lining.",
     anatomyFocus: [
@@ -77546,8 +79689,8 @@ const IMAGE_QUIZ_BANK = [
     options: [
       "Portal Hypertension",
       "Primary Sclerosing Cholangitis",
-      "Melena",
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
+      "Gastric Outlet Obstruction",
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)"
     ],
     answer: 0,
     explanation: "Elevated portal venous pressure (HVPG >5 mmHg) arising from increased resistance and/or flow, leading to varices, ascites, and hepatic encephalopathy.",
@@ -77568,7 +79711,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Basal Cell Carcinoma", "Liver Abscess", "Femoral Hernia", "ATLS Primary Survey (X-ABCDE)"],
+    options: ["Melanoma", "Liver Abscess", "Inguinal Hernia", "Breast Abscess"],
     answer: 1,
     explanation: "Localized collection of pus within the hepatic parenchyma; pyogenic (bacterial) in 80% of cases in Western countries; amebic in developing world.",
     anatomyFocus: [
@@ -77588,7 +79731,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Gallbladder.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Rectal Prolapse", "Small Bowel Tumors", "Gallbladder Cancer", "Dysphagia"],
+    options: ["Rectal Prolapse", "Laparoscopic Sleeve Gastrectomy", "Gallbladder Cancer", "Small Bowel Tumors"],
     answer: 2,
     explanation: "Rare but aggressive biliary malignancy with poor prognosis; most are incidentally discovered after cholecystectomy for presumed benign disease.",
     anatomyFocus: [
@@ -77609,9 +79752,9 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Squamous Cell Carcinoma (Skin)",
+      "Basal Cell Carcinoma",
       "Carotid Stenosis",
-      "Hidradenitis Suppurativa",
+      "Squamous Cell Carcinoma (Skin)",
       "Colorectal Liver Metastases"
     ],
     answer: 3,
@@ -77635,9 +79778,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Hepatic Adenoma",
-      "Renal Trauma",
-      "Percutaneous Endoscopic Gastrostomy (PEG)",
-      "Primary Hyperparathyroidism"
+      "Acute Compartment Syndrome (Limb)",
+      "Therapeutic Endoscopy (Principles)",
+      "Multinodular Goitre"
     ],
     answer: 0,
     explanation: "Benign hepatocellular tumor strongly associated with oral contraceptive pill use; risk of hemorrhage and rare malignant transformation.",
@@ -77662,7 +79805,7 @@ const IMAGE_QUIZ_BANK = [
       "Intrahepatic Cholangiocarcinoma",
       "Hydatid Cyst of the Liver",
       "Pancreatic Neuroendocrine Tumor",
-      "Lung Abscess"
+      "Hemothorax"
     ],
     answer: 1,
     explanation: "Cystic infection of the liver caused by Echinococcus granulosus larval stage; endemic in pastoral areas; spillage causes anaphylaxis and secondary hydatidosis.",
@@ -77683,7 +79826,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Vascular Trauma", "Pilonidal Sinus", "Intraductal Papillary Mucinous Neoplasm", "Hiatus Hernia"],
+    options: [
+      "Vascular Trauma",
+      "Pilonidal Sinus",
+      "Intraductal Papillary Mucinous Neoplasm",
+      "Esophageal Cancer"
+    ],
     answer: 2,
     explanation: "Mucin-producing pancreatic cystic neoplasm with malignant potential, classified by ductal involvement (main duct vs branch duct) and grades of dysplasia.",
     anatomyFocus: [
@@ -77703,12 +79851,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Hemorrhagic Shock (ATLS 11 Classification)",
-      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
-      "Varicose Veins",
-      "Pancreatic Neuroendocrine Tumor"
-    ],
+    options: ["ATLS Primary Survey (X-ABCDE)", "Insulinoma", "Varicose Veins", "Pancreatic Neuroendocrine Tumor"],
     answer: 3,
     explanation: "Heterogeneous group of neoplasms arising from pancreatic islet cells; range from benign insulinoma to aggressive non-functional tumors with liver metastases.",
     anatomyFocus: [
@@ -77730,9 +79873,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Immune Thrombocytopenic Purpura",
-      "Necrotizing Fasciitis",
+      "Abdominal Compartment Syndrome",
       "Appendiceal Carcinoid (Well-Differentiated NET)",
-      "Gastric Outlet Obstruction"
+      "Dysphagia"
     ],
     answer: 0,
     explanation: "Autoimmune disorder where IgG autoantibodies against platelet surface antigens (GPIIb/IIIa) lead to accelerated platelet destruction and impaired production.",
@@ -77753,7 +79896,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Spleen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Adrenocortical Carcinoma", "Hereditary Spherocytosis", "Lymphedema — Surgical", "Cecal Volvulus"],
+    options: [
+      "Cushing's Syndrome (Adrenal)",
+      "Hereditary Spherocytosis",
+      "Lymphedema — Surgical",
+      "Cecal Volvulus"
+    ],
     answer: 1,
     explanation: "Autosomal dominant hemolytic anemia due to spectrin/ankyrin deficiency causing spherical RBCs that are trapped and destroyed by the spleen.",
     anatomyFocus: [
@@ -77773,7 +79921,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Spleen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Pancreatic Pseudocyst", "Umbilical Hernia", "Splenic Abscess", "Acute Abdomen"],
+    options: [
+      "Pancreatic Pseudocyst",
+      "Femoral Hernia",
+      "Splenic Abscess",
+      "Gastro-Esophageal Reflux Disease (GERD)"
+    ],
     answer: 2,
     explanation: "Rare but potentially fatal suppurative collection within the spleen; most arise from hematogenous seeding in the context of endocarditis, bacteremia, or immunosuppression.",
     anatomyFocus: [
@@ -77793,12 +79946,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Bile duct.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Principles of Laparoscopy & Pneumoperitoneum",
-      "Angiodysplasia",
-      "Leiomyosarcoma",
-      "Primary Sclerosing Cholangitis"
-    ],
+    options: ["Kaposi's Sarcoma", "Angiodysplasia", "Liposarcoma", "Primary Sclerosing Cholangitis"],
     answer: 3,
     explanation: "Progressive fibro-inflammatory cholangiopathy affecting intra- and extrahepatic bile ducts, associated with IBD, and carrying a 10–15% lifetime risk of cholangiocarcinoma.",
     anatomyFocus: [
@@ -77820,9 +79968,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Acute Appendicitis",
-      "Merkel Cell Carcinoma",
-      "Rectal Bleeding (Hematochezia)",
-      "Pulmonary Carcinoid"
+      "Desmoid Tumor",
+      "Cytoreductive Surgery & HIPEC",
+      "Pectus Excavatum / Carinatum"
     ],
     answer: 0,
     explanation: "Acute inflammation of the vermiform appendix; the most common abdominal surgical emergency; lifetime risk 8% in men, 7% in women.",
@@ -77843,12 +79991,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Gastro-Esophageal Reflux Disease (GERD)",
-      "Diverticulitis",
-      "Gastrointestinal Stromal Tumor",
-      "Choledocholithiasis"
-    ],
+    options: ["Radiation Enteritis", "Diverticulitis", "Small Bowel Obstruction", "Hepatocellular Carcinoma"],
     answer: 1,
     explanation: "Inflammation or infection of colonic diverticula, ranging from uncomplicated (80%) to complicated (abscess, perforation, fistula, obstruction).",
     anatomyFocus: [
@@ -77868,7 +80011,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Inguinal Hernia", "Mesothelioma", "Colon Cancer", "MEN1 (Multiple Endocrine Neoplasia Type 1)"],
+    options: [
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
+      "Percutaneous Endoscopic Gastrostomy (PEG)",
+      "Colon Cancer",
+      "Pleural Empyema"
+    ],
     answer: 2,
     explanation: "Adenocarcinoma of the colon arising from adenomatous polyps; third most common cancer worldwide with 5-year survival 65% overall but >90% for stage I.",
     anatomyFocus: [
@@ -77888,7 +80036,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Rectum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Pulmonary Carcinoid", "Splenic Abscess", "Upper GI Hemorrhage", "Rectal Prolapse"],
+    options: ["Pectus Excavatum / Carinatum", "Hereditary Spherocytosis", "Gastric Cancer", "Rectal Prolapse"],
     answer: 3,
     explanation: "Full-thickness protrusion of the rectum through the anal sphincter; associated with fecal incontinence and pelvic floor dysfunction; surgical repair is definitive.",
     anatomyFocus: [
@@ -77908,7 +80056,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hemorrhoids", "Phyllodes Tumor", "Mediastinal Mass", "Spigelian Hernia"],
+    options: ["Hemorrhoids", "DCIS", "Lung Abscess", "Parastomal Hernia"],
     answer: 0,
     explanation: "Symptomatic enlarged vascular cushions of the anal canal; most common anorectal condition presenting with painless bright red rectal bleeding.",
     anatomyFocus: [
@@ -77928,7 +80076,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hepatocellular Carcinoma", "Anal Fistula", "Living Donor Hepatectomy", "Pneumothorax"],
+    options: ["Acute Cholangitis", "Anal Fistula", "Small Bowel Transplantation", "Lung Cancer"],
     answer: 1,
     explanation: "Abnormal communication between the anal canal (usually at the dentate line) and the perianal skin, arising from cryptoglandular infection in 90% of cases.",
     anatomyFocus: [
@@ -77949,10 +80097,10 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Acute Cholecystitis",
-      "Principles of Laparoscopy & Pneumoperitoneum",
+      "Symptomatic Cholelithiasis (Biliary Colic)",
+      "Kaposi's Sarcoma",
       "Anal Fissure",
-      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)"
+      "Pulmonary Carcinoid"
     ],
     answer: 2,
     explanation: "Linear tear in the squamous epithelium of the lower anal canal, causing severe pain during and after defecation and bright red bleeding.",
@@ -77974,9 +80122,9 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anorectum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Hepatocellular Carcinoma",
+      "Acute Cholangitis",
       "Ulcerative Colitis",
-      "Splenic Abscess",
+      "Hereditary Spherocytosis",
       "Perianal Abscess & Fistula-in-Ano"
     ],
     answer: 3,
@@ -77998,7 +80146,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Sacrococcyx.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Pilonidal Sinus", "Splanchnic Artery Aneurysm", "Liposarcoma", "Angiodysplasia"],
+    options: ["Pilonidal Sinus", "Thoracic Outlet Syndrome", "Hidradenitis Suppurativa", "Angiodysplasia"],
     answer: 0,
     explanation: "Chronic cutaneous condition of the natal cleft involving hair-containing sinuses and abscess formation; affects young adults; high recurrence after simple excision.",
     anatomyFocus: [
@@ -78018,7 +80166,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Pectus Excavatum / Carinatum", "Sigmoid Volvulus", "Melanoma", "Upper GI Hemorrhage"],
+    options: ["Chest Wall Tumor", "Sigmoid Volvulus", "Retroperitoneal Sarcoma", "Gastric Cancer"],
     answer: 1,
     explanation: "Axial rotation of the sigmoid colon on its mesentery causing closed-loop obstruction; commonest in elderly, institutionalised, or high-fiber diet populations.",
     anatomyFocus: [
@@ -78039,10 +80187,10 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Cecum/Right colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
-      "Graves' Disease",
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
+      "Thyroid Cancer",
       "Cecal Volvulus",
-      "Therapeutic Endoscopy (Principles)"
+      "Conversion to Open Surgery"
     ],
     answer: 2,
     explanation: "Emergency right hemicolectomy is definitive treatment; endoscopic decompression high failure rate (40%) and recurrence; viable cecum → right hemicolectomy; ischemic → resection without anastomosis.",
@@ -78063,7 +80211,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hepatic Adenoma", "Hiatus Hernia", "Kaposi's Sarcoma", "Large Bowel Obstruction"],
+    options: [
+      "Partial Fundoplication (Toupet & Dor)",
+      "Colorectal Liver Metastases",
+      "Esophageal Cancer",
+      "Large Bowel Obstruction"
+    ],
     answer: 3,
     explanation: "Most common cause is colorectal cancer (60%); CT confirms; colonic stent as bridge to surgery for left-sided cancer; emergency Hartmann's or on-table lavage for perforated/unfit patients.",
     anatomyFocus: [
@@ -78083,7 +80236,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Ulcerative Colitis", "Radiation Enteritis", "Splenic Abscess", "Anal Canal Cancer"],
+    options: ["Ulcerative Colitis", "Short Bowel Syndrome", "Hereditary Spherocytosis", "Anal Canal Cancer"],
     answer: 0,
     explanation: "Chronic relapsing mucosal inflammation of the colon, always involving the rectum and extending proximally in a continuous pattern; cure achievable with colectomy.",
     anatomyFocus: [
@@ -78103,7 +80256,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Zenker's Diverticulum", "Crohn's Disease", "Pulmonary Carcinoid", "Gastric Volvulus"],
+    options: [
+      "Barrett's Esophagus",
+      "Crohn's Disease",
+      "Percutaneous Endoscopic Gastrostomy (PEG)",
+      "Pectus Excavatum / Carinatum"
+    ],
     answer: 1,
     explanation: "Transmural granulomatous inflammation that can affect any segment of the GI tract from mouth to anus, with a relapsing course and high surgical morbidity.",
     anatomyFocus: [
@@ -78123,7 +80281,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anal canal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Leiomyosarcoma", "Gastric Volvulus", "Anal Canal Cancer", "Inguinal Hernia"],
+    options: [
+      "Liposarcoma",
+      "Bariatric Surgery",
+      "Anal Canal Cancer",
+      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)"
+    ],
     answer: 2,
     explanation: "Squamous cell carcinoma; primary treatment is chemoradiotherapy (Nigro protocol — 5-FU + mitomycin C + RT); surgery (APR) reserved for persistent/recurrent disease after CRT.",
     anatomyFocus: [
@@ -78144,9 +80307,9 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small/Large bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Varicose Veins",
-      "Epigastric Hernia",
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
+      "Acute Mesenteric Ischemia",
+      "Incisional Hernia",
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
       "Intestinal Fistula"
     ],
     answer: 3,
@@ -78170,9 +80333,9 @@ const IMAGE_QUIZ_BANK = [
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
       "Appendiceal Carcinoid (Well-Differentiated NET)",
-      "Acute Cholecystitis",
-      "Desmoid Tumor",
-      "Chronic Limb-Threatening Ischemia"
+      "Symptomatic Cholelithiasis (Biliary Colic)",
+      "Leiomyosarcoma",
+      "Abdominal Aortic Aneurysm"
     ],
     answer: 0,
     explanation: "Most common appendiceal tumor and most common GI NET; >95% are cured by simple appendectomy if ≤2 cm; right hemicolectomy for >2 cm or positive margins.",
@@ -78193,7 +80356,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Appendix.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Gastric Cancer", "Mucocele of the Appendix", "Cecal Volvulus", "Popliteal Artery Aneurysm"],
+    options: ["Perforated Peptic Ulcer", "Mucocele of the Appendix", "Cecal Volvulus", "Renal Artery Stenosis"],
     answer: 1,
     explanation: "Spectrum from benign retention cyst to LAMN/HAMN/appendiceal mucinous adenocarcinoma; ruptured LAMN seeds peritoneum with mucin causing pseudomyxoma peritonei (PMP); intact removal mandatory.",
     anatomyFocus: [
@@ -78213,7 +80376,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Melena", "Breast Abscess", "Familial Adenomatous Polyposis", "Pancreatic Neuroendocrine Tumor"],
+    options: [
+      "Gastric Outlet Obstruction",
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
+      "Familial Adenomatous Polyposis",
+      "Intraductal Papillary Mucinous Neoplasm"
+    ],
     answer: 2,
     explanation: "Autosomal dominant syndrome caused by APC gene mutation; >100 colonic adenomas; 100% risk of colorectal cancer by age 40 without prophylactic colectomy.",
     anatomyFocus: [
@@ -78233,12 +80401,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Intestinal Fistula",
-      "Femoral Hernia",
-      "Acute Compartment Syndrome (Limb)",
-      "Lynch Syndrome (HNPCC)"
-    ],
+    options: ["Intestinal Fistula", "Inguinal Hernia", "Burns", "Lynch Syndrome (HNPCC)"],
     answer: 3,
     explanation: "Autosomal dominant cancer predisposition syndrome due to germline MMR gene mutations; most common hereditary CRC syndrome; accounts for 3–5% of all colorectal cancers.",
     anatomyFocus: [
@@ -78258,7 +80421,12 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Bowel Perforation", "Lynch Syndrome (HNPCC)", "Spinal Cord Injury (ATLS 11)", "Cecal Volvulus"],
+    options: [
+      "Bowel Perforation",
+      "Lynch Syndrome (HNPCC)",
+      "Hemorrhagic Shock (ATLS 11 Classification)",
+      "Cecal Volvulus"
+    ],
     answer: 0,
     explanation: "Full-thickness breach of the GI tract wall, releasing luminal contents into the peritoneal cavity; erect CXR shows subdiaphragmatic free air; CT is gold standard; surgery is almost always required.",
     anatomyFocus: [
@@ -78279,7 +80447,7 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Colon.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Splenic Trauma",
+      "Necrotizing Fasciitis",
       "Pseudo-Obstruction (Ogilvie's Syndrome)",
       "Ulcerative Colitis",
       "Familial Adenomatous Polyposis"
@@ -78303,7 +80471,7 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with GI tract (cecum/ascending colon).",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Traumatic Diaphragm Rupture", "Chest Wall Tumor", "Angiodysplasia", "Popliteal Artery Aneurysm"],
+    options: ["Hollow Viscus / Bowel Trauma", "Mediastinal Mass", "Angiodysplasia", "Renal Artery Stenosis"],
     answer: 2,
     explanation: "Most common GI vascular malformation; responsible for ~6% of lower GI bleeds and ~8% of upper GI bleeds; most common location = cecum and ascending colon; APC endotherapy is first-line treatment.",
     anatomyFocus: [
@@ -78324,9 +80492,9 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Pulmonary Carcinoid",
-      "Mediastinal Mass",
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
+      "Pectus Excavatum / Carinatum",
+      "Lung Abscess",
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
       "Small Bowel Tumors"
     ],
     answer: 3,
@@ -78335,6 +80503,31 @@ const IMAGE_QUIZ_BANK = [
       "Small bowel tumors are rare but diagnosis is often delayed — 'great masquerader' of GI disease; mean symptom-to-diagnosis delay 6–12 months",
       "Adenocarcinoma most common in duodenum (55–80% of small bowel adenocarcinomas); GIST and NET more common in jejunum/ileum",
       "p53 and KRAS mutations involved in >50% of small bowel adenocarcinomas — same pathway as colorectal cancer"
+    ]
+  },
+  {
+    id: "img-crs-hipec",
+    dept: "colorectal",
+    disease: "crs-hipec",
+    diseaseName: "Cytoreductive Surgery & HIPEC",
+    source: "Gastrointestinal Atlas",
+    url: "https://www.google.com/search?q=peritoneal%20carcinomatosis%20site%3Agastrointestinalatlas.com",
+    query: "peritoneal carcinomatosis",
+    tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
+    prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Peritoneum (peritoneal surface).",
+    stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
+    options: [
+      "Cytoreductive Surgery & HIPEC",
+      "Insulinoma",
+      "Principles of Laparoscopy & Pneumoperitoneum",
+      "Kaposi's Sarcoma"
+    ],
+    answer: 0,
+    explanation: "For peritoneal surface malignancy: aggressive removal of all visible tumour (cytoreduction) followed by heated chemotherapy washed through the abdomen — turning a once-palliative diagnosis into a potentially curative one",
+    anatomyFocus: [
+      "Two-part treatment: cytoreductive surgery (CRS) to remove all macroscopic disease, then HIPEC (Hyperthermic IntraPEritoneal Chemotherapy) to treat residual microscopic disease",
+      "Only worthwhile if a COMPLETE cytoreduction is achievable — outcome is driven by the completeness-of-cytoreduction (CC) score (CC-0/CC-1 = no or ≤2.5 mm residual)",
+      "Best-evidenced indications: pseudomyxoma peritonei (appendiceal mucinous), peritoneal mesothelioma, and selected colorectal or ovarian peritoneal metastases"
     ]
   },
   {
@@ -78349,12 +80542,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach/Duodenum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Small Bowel Transplantation",
       "Perforated Peptic Ulcer",
-      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
-      "Laparoscopic Access Techniques",
-      "Principles of Laparoscopy & Pneumoperitoneum"
+      "Familial Adenomatous Polyposis",
+      "Partial Fundoplication (Toupet & Dor)"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Free perforation of a gastric or duodenal ulcer causing sudden-onset peritonitis; a surgical emergency with mortality 5–10% if treated promptly.",
     anatomyFocus: [
       "Duodenal perforation (70%) > gastric perforation (30%); posterior DU bleeds (GDA), anterior DU perforates",
@@ -78374,12 +80567,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Living Donor Hepatectomy",
+      "Small Bowel Neuroendocrine Tumor",
+      "Intestinal Fistula",
       "Gastric Cancer",
-      "Familial Adenomatous Polyposis",
-      "Adrenocortical Carcinoma"
+      "Acute Compartment Syndrome (Limb)"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Adenocarcinoma of the stomach, often presenting at advanced stage in Western countries; D2 lymphadenectomy and perioperative FLOT chemotherapy are standard of care.",
     anatomyFocus: [
       "5th most common cancer globally; H. pylori accounts for 70% of non-cardia gastric cancer",
@@ -78398,8 +80591,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Upper GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Small Bowel Neuroendocrine Tumor", "Intestinal Fistula", "Upper GI Hemorrhage", "Renal Trauma"],
-    answer: 2,
+    options: [
+      "Anal Canal Cancer",
+      "Diagnostic Laparoscopy",
+      "Secondary / Tertiary Hyperparathyroidism",
+      "Upper GI Hemorrhage"
+    ],
+    answer: 3,
     explanation: "Bleeding from a source proximal to the ligament of Treitz; peptic ulcer disease accounts for 35%; variceal bleeding has 20% 6-week mortality.",
     anatomyFocus: [
       "Most common cause: peptic ulcer disease (35%); variceal (20%); Mallory-Weiss (5%); esophagitis (10%); malignancy (5%)",
@@ -78418,8 +80616,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Anal Canal Cancer", "Conversion to Open Surgery", "Phaeochromocytoma", "Esophageal Cancer"],
-    answer: 3,
+    options: [
+      "Esophageal Cancer",
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
+      "Hidradenitis Suppurativa",
+      "Pilonidal Sinus"
+    ],
+    answer: 0,
     explanation: "Two main histological types — SCC (proximal/mid, smoking/alcohol) and adenocarcinoma (lower third/GEJ, Barrett's/obesity); only 25–30% resectable at presentation.",
     anatomyFocus: [
       "SCC: mid/proximal esophagus; smoking, alcohol, achalasia, caustic stricture, Plummer-Vinson; chemoradiotherapy can cure",
@@ -78438,8 +80641,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Diaphragm.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Hiatus Hernia", "Breast Abscess", "Liposarcoma", "Pilonidal Sinus"],
-    answer: 0,
+    options: [
+      "Cushing's Syndrome (Adrenal)",
+      "Hiatus Hernia",
+      "Energy Devices in Minimally Invasive Surgery",
+      "Cytoreductive Surgery & HIPEC"
+    ],
+    answer: 1,
     explanation: "Herniation of abdominal contents through the esophageal hiatus of the diaphragm; Type I (sliding) in 95%; giant paraesophageal hernia risks strangulation.",
     anatomyFocus: [
       "Type I (sliding, 95%): GEJ slides above hiatus; associated with GERD; most asymptomatic",
@@ -78458,13 +80666,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Adrenocortical Carcinoma",
-      "Achalasia",
-      "Complications of Minimally Invasive Surgery",
-      "Rectal Bleeding (Hematochezia)"
-    ],
-    answer: 1,
+    options: ["Carotid Body Tumor", "Damage Control Laparotomy", "Achalasia", "Burns"],
+    answer: 2,
     explanation: "Progressive neurodegenerative loss of esophageal peristalsis and failure of LOS relaxation; functional obstruction causing dysphagia, regurgitation, and aspiration.",
     anatomyFocus: [
       "Primary achalasia: idiopathic loss of Auerbach plexus myenteric neurons; ganglion cell depletion → aperistalsis + incomplete LOS relaxation",
@@ -78484,12 +80687,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Carotid Body Tumor",
-      "Abdominal Compartment Syndrome",
-      "Esophageal Perforation (Boerhaave)",
-      "Acute Compartment Syndrome (Limb)"
+      "Pulmonary Carcinoid",
+      "Chest Trauma (Surgical Perspective)",
+      "Hepatic Adenoma",
+      "Esophageal Perforation (Boerhaave)"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Spontaneous full-thickness esophageal rupture from sudden rise in intraluminal pressure; Mackler triad; mortality 30–40% — the 'great masquerader' of chest pain.",
     anatomyFocus: [
       "Mackler triad: vomiting → chest pain → subcutaneous emphysema — present in only 30%; diagnosis often delayed",
@@ -78509,12 +80712,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach/small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
-      "Burns",
-      "Hepatic Adenoma",
-      "Bariatric Surgery"
+      "Bariatric Surgery",
+      "Splenic Abscess",
+      "Pseudo-Obstruction (Ogilvie's Syndrome)",
+      "Conn's Syndrome"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Surgical treatment of morbid obesity; Roux-en-Y gastric bypass (RYGB) and sleeve gastrectomy (SG) are most performed procedures; diabetes remission in 70–80%.",
     anatomyFocus: [
       "Eligibility: BMI ≥40 (or ≥35 with obesity-related comorbidity); failed conservative management; specialist center",
@@ -78534,12 +80737,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Hydatid Cyst of the Liver",
       "Gastric Volvulus",
-      "Splenic Abscess",
-      "Pseudo-Obstruction (Ogilvie's Syndrome)",
-      "Cushing's Syndrome (Adrenal)"
+      "Wound Dehiscence / Burst Abdomen",
+      "Mediastinal Mass"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Life-threatening gastric rotation; Borchardt's triad (retching, epigastric pain, inability to pass NGT); emergency decompression ± surgery; underlying paraesophageal hernia must be repaired.",
     anatomyFocus: [
       "Borchardt's triad: severe epigastric pain + unproductive retching + inability to pass NGT — pathognomonic for gastric volvulus",
@@ -78559,12 +80762,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Hydatid Cyst of the Liver",
+      "Hemothorax",
+      "Sigmoid Volvulus",
       "Small Bowel Obstruction",
-      "Penetrating Abdominal Trauma",
-      "Chest Wall Tumor"
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "60% due to adhesions from previous surgery; non-operative management (NGT, IV fluids) succeeds in 60–70%; operate for complete obstruction, failure to resolve at 48–72h, or signs of strangulation.",
     anatomyFocus: [
       "Most common cause: adhesions (60%); second: hernia (external) (15%); third: malignancy (10%)",
@@ -78583,13 +80786,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach/Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Lung Abscess",
-      "Sigmoid Volvulus",
-      "Gastrointestinal Stromal Tumor",
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
-    ],
-    answer: 2,
+    options: ["Intestinal Fistula", "Melanoma", "Caustic Esophageal Injury", "Gastrointestinal Stromal Tumor"],
+    answer: 3,
     explanation: "Mesenchymal tumor arising from interstitial cells of Cajal; 60–70% in stomach; KIT (CD117) mutation defines majority; imatinib (TKI) is transformative treatment.",
     anatomyFocus: [
       "KIT (CD117) mutation in 85%; PDGFRA mutation in 10%; KIT/PDGFRA wild-type (5%) — molecular testing mandatory",
@@ -78608,8 +80806,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Intestinal Fistula", "Basal Cell Carcinoma", "Caustic Esophageal Injury", "Barrett's Esophagus"],
-    answer: 3,
+    options: ["Barrett's Esophagus", "Pancreatic Ductal Adenocarcinoma", "Incisional Hernia", "Melena"],
+    answer: 0,
     explanation: "Columnar metaplasia of the lower esophagus in response to chronic acid reflux; intestinal metaplasia is the precursor to esophageal adenocarcinoma (0.2–0.5%/year).",
     anatomyFocus: [
       "Definition: ≥1 cm columnar-lined esophagus with intestinal metaplasia confirmed on biopsy",
@@ -78628,8 +80826,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Zenker's Diverticulum", "Pancreatic Ductal Adenocarcinoma", "Epigastric Hernia", "Melena"],
-    answer: 0,
+    options: [
+      "Renal Transplantation",
+      "Zenker's Diverticulum",
+      "Secondary / Tertiary Hyperparathyroidism",
+      "Primary Hyperparathyroidism"
+    ],
+    answer: 1,
     explanation: "Pharyngeal pulsion diverticulum arising at Killian's dehiscence (between cricopharyngeus and inferior pharyngeal constrictor); causes dysphagia and regurgitation of undigested food.",
     anatomyFocus: [
       "Pulsion diverticulum at Killian's triangle: between thyropharyngeus and cricopharyngeus — posterior midline weak spot",
@@ -78649,12 +80852,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Liver Transplantation",
+      "Graves' Disease",
+      "Primary Sclerosing Cholangitis",
       "Caustic Esophageal Injury",
-      "Phaeochromocytoma",
-      "Secondary / Tertiary Hyperparathyroidism"
+      "Small Bowel Transplantation"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Corrosive injury to esophagus and stomach from ingestion of alkali or acid; causes can range from mild mucosal erythema to full-thickness necrosis requiring emergency resection.",
     anatomyFocus: [
       "Alkali (lye, drain cleaners): liquefactive necrosis — deeper penetration; stomach less affected (neutral pH)",
@@ -78674,12 +80877,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Multinodular Goitre",
-      "Primary Sclerosing Cholangitis",
-      "Meckel's Diverticulum",
-      "Living Donor Hepatectomy"
+      "Short Bowel Syndrome",
+      "Pulmonary Carcinoid",
+      "Cytoreductive Surgery & HIPEC",
+      "Meckel's Diverticulum"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "The most common congenital GI malformation; remnant of the vitello-intestinal duct; complications occur in 2–4% (bleeding, obstruction, inflammation).",
     anatomyFocus: [
       "Rule of 2s: 2% population, 2 feet from ileocecal valve, 2 inches long, 2:1 male:female, 2 types of ectopic tissue (gastric most common), 2 years most common age for complications",
@@ -78699,12 +80902,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Short Bowel Syndrome",
-      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
-      "Rectal Bleeding (Hematochezia)",
-      "Small Bowel Neuroendocrine Tumor"
+      "Small Bowel Neuroendocrine Tumor",
+      "Familial Adenomatous Polyposis",
+      "Small Bowel Tumors",
+      "Hollow Viscus / Bowel Trauma"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Well-differentiated neuroendocrine tumor of the small bowel (terminal ileum most common); carcinoid syndrome occurs with liver metastases; mesenteric fibrosis causes bowel ischemia.",
     anatomyFocus: [
       "Terminal ileum accounts for 45% of all GI-NETs; often small (<2 cm) but multifocal in 30%",
@@ -78723,13 +80926,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Short Bowel Syndrome",
-      "Familial Adenomatous Polyposis",
-      "Small Bowel Tumors",
-      "Traumatic Diaphragm Rupture"
-    ],
-    answer: 0,
+    options: ["Living Donor Hepatectomy", "Short Bowel Syndrome", "Achalasia", "Acute Cholangitis"],
+    answer: 1,
     explanation: "Malabsorption syndrome resulting from loss of functional intestinal length; TPN dependence; teduglutide (GLP-2 analogue) can achieve enteral autonomy in selected patients.",
     anatomyFocus: [
       "Short bowel syndrome (SBS): <200 cm small bowel in adults after resection or functional loss (SBS requiring TPN: <100 cm with end jejunostomy, <50 cm with intact colon)",
@@ -78748,8 +80946,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Lung Cancer", "Radiation Enteritis", "Achalasia", "Acute Cholangitis"],
-    answer: 1,
+    options: [
+      "Acute Appendicitis",
+      "Chest Trauma (Surgical Perspective)",
+      "Radiation Enteritis",
+      "Gastric Cancer"
+    ],
+    answer: 2,
     explanation: "Intestinal injury from ionizing radiation, acute (during therapy) or chronic (months to years post-RT); affects small bowel and rectum most commonly in pelvic RT.",
     anatomyFocus: [
       "Acute radiation enteritis (during RT): self-limiting; managed conservatively (anti-diarrheal, elemental diet)",
@@ -78768,8 +80971,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus/LOS.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Acute Appendicitis", "Burns", "Gastro-Esophageal Reflux Disease (GERD)", "Gastric Cancer"],
-    answer: 2,
+    options: [
+      "Phaeochromocytoma",
+      "Feeding Jejunostomy & PEJ",
+      "Basal Cell Carcinoma",
+      "Gastro-Esophageal Reflux Disease (GERD)"
+    ],
+    answer: 3,
     explanation: "Pathological reflux of gastric contents into the esophagus; affects ~25% of the population; PPIs are highly effective first-line; Nissen fundoplication reserved for refractory or complicated disease; Barrett's surveillan",
     anatomyFocus: [
       "Los Angeles Classification: Grade A–D based on mucosal break extent; Grade C/D = significant esophagitis",
@@ -78788,13 +80996,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdomen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Conn's Syndrome",
-      "Squamous Cell Carcinoma (Skin)",
-      "Perianal Abscess & Fistula-in-Ano",
-      "Acute Abdomen"
-    ],
-    answer: 3,
+    options: ["Acute Abdomen", "Chest Wall Tumor", "Hydatid Cyst of the Liver", "Liver Transplantation"],
+    answer: 0,
     explanation: "Sudden severe abdominal pain requiring urgent assessment; first question is 'is the patient critically unwell?'; life-threatening causes include ruptured AAA, perforated viscus, and mesenteric ischemia.",
     anatomyFocus: [
       "First-pass assessment: critically unwell (immediate resuscitation + theater) vs. needs investigation — this single decision drives everything",
@@ -78814,12 +81017,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus/Pharynx.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
       "Dysphagia",
-      "Pectus Excavatum / Carinatum",
-      "Hydatid Cyst of the Liver",
-      "Pancreas Transplantation"
+      "Hidradenitis Suppurativa",
+      "Pulmonary Carcinoid"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Difficulty swallowing — treat as upper GI malignancy until proven otherwise; EGD is the first investigation; progressive solid-then-liquid dysphagia = mechanical obstruction; pure liquid dysphagia = motility disorder.",
     anatomyFocus: [
       "Treat as upper GI malignancy until proven otherwise — any new dysphagia needs urgent EGD",
@@ -78838,13 +81041,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stomach/Duodenum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
-      "Gastric Outlet Obstruction",
-      "Liposarcoma",
-      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)"
-    ],
-    answer: 1,
+    options: ["Pleural Empyema", "Splenic Trauma", "Gastric Outlet Obstruction", "Liver Trauma"],
+    answer: 2,
     explanation: "Mechanical obstruction at the pylorus or proximal duodenum; presents with profuse vomiting of undigested food, succussion splash, and hypochloremic hypokalemic metabolic alkalosis — the classic biochemical derangement.",
     anatomyFocus: [
       "Classic biochemistry: hypochloremic, hypokalemic metabolic alkalosis — vomiting loses HCl; kidneys compensate by retaining H+ and excreting K+",
@@ -78863,8 +81061,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "endoscopy", "upper-GI", "colonoscopy"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Upper GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Mesothelioma", "Liver Trauma", "Melena", "Hollow Viscus / Bowel Trauma"],
-    answer: 2,
+    options: ["Pneumothorax", "Small Bowel Tumors", "Complications of Minimally Invasive Surgery", "Melena"],
+    answer: 3,
     explanation: "Passage of black tarry stools from degradation of blood by intestinal enzymes — almost always upper GI bleeding (>90%); Glasgow-Blatchford Score ≤1 = safe early discharge; urgent EGD within 24 h.",
     anatomyFocus: [
       "Glasgow-Blatchford Score (GBS): stratifies need for intervention; GBS 0 = very low risk (outpatient EGD); GBS ≥7 = high risk",
@@ -78884,12 +81082,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lower GI tract.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Pleural Empyema",
-      "Gastric Outlet Obstruction",
-      "Robotic-Assisted Surgery",
-      "Rectal Bleeding (Hematochezia)"
+      "Rectal Bleeding (Hematochezia)",
+      "Chest Trauma (Surgical Perspective)",
+      "Lung Cancer",
+      "Feeding Jejunostomy & PEJ"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Passage of fresh blood per rectum — 95% resolve spontaneously; use Oakland Score to risk-stratify; colonoscopy is definitive investigation; always exclude colorectal malignancy in older patients.",
     anatomyFocus: [
       "Oakland Score ≤8 = low risk (95% of these can be safely discharged with outpatient colonoscopy)",
@@ -78908,8 +81106,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Breast.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Breast Cancer", "Burns", "Pneumothorax", "Symptomatic Cholelithiasis (Biliary Colic)"],
-    answer: 0,
+    options: ["Hemothorax", "Breast Cancer", "Abdominal Compartment Syndrome", "DCIS"],
+    answer: 1,
     explanation: "Most common cancer in women.",
     anatomyFocus: [
       "Triple assessment: clinical + imaging + histology",
@@ -78928,8 +81126,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Breast.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Lung Abscess", "DCIS", "Necrotizing Fasciitis", "Breast Cancer"],
-    answer: 1,
+    options: [
+      "Percutaneous Endoscopic Gastrostomy (PEG)",
+      "Per-Oral Endoscopic Myotomy (POEM)",
+      "DCIS",
+      "Zenker's Diverticulum"
+    ],
+    answer: 2,
     explanation: "Non-invasive breast cancer confined to ducts.",
     anatomyFocus: [
       "Often detected by screening mammogram (microcalcifications)",
@@ -78948,8 +81151,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Breast.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Caustic Esophageal Injury", "Thymoma / Thymic Tumor", "Phyllodes Tumor", "DCIS"],
-    answer: 2,
+    options: [
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
+      "Gastric Outlet Obstruction",
+      "Laparoscopic Access Techniques",
+      "Phyllodes Tumor"
+    ],
+    answer: 3,
     explanation: "Rare fibroepithelial tumor of breast stroma.",
     anatomyFocus: [
       "Classified: benign, borderline, malignant by histology",
@@ -78969,12 +81177,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thyroid.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
-      "Melena",
-      "Energy Devices in Minimally Invasive Surgery",
-      "Thyroid Cancer"
+      "Thyroid Cancer",
+      "Conversion to Open Surgery",
+      "Hydatid Cyst of the Liver",
+      "Acute Mesenteric Ischemia"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Most common endocrine malignancy.",
     anatomyFocus: [
       "Papillary (PTC) 80%: 'Orphan Annie' nuclei, psammoma bodies, excellent prognosis",
@@ -78993,13 +81201,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thyroid.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Graves' Disease",
-      "Therapeutic Endoscopy (Principles)",
-      "Hydatid Cyst of the Liver",
-      "Acute Mesenteric Ischemia"
-    ],
-    answer: 0,
+    options: ["Thoracic Aortic Aneurysm", "Graves' Disease", "Pneumothorax", "Esophageal Perforation (Boerhaave)"],
+    answer: 1,
     explanation: "Autoimmune hyperthyroidism from TSH-receptor stimulating antibodies.",
     anatomyFocus: [
       "TSH-receptor antibodies (TRAb) are diagnostic",
@@ -79018,8 +81221,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thyroid.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Thoracic Aortic Aneurysm", "Multinodular Goitre", "Pleural Empyema", "Bariatric Surgery"],
-    answer: 1,
+    options: [
+      "Pancreatic Neuroendocrine Tumor",
+      "Hereditary Spherocytosis",
+      "Multinodular Goitre",
+      "Gastrointestinal Stromal Tumor"
+    ],
+    answer: 2,
     explanation: "Commonest thyroid disorder worldwide.",
     anatomyFocus: [
       "Most MNG are euthyroid; toxic MNG causes autonomous hyperthyroidism",
@@ -79039,12 +81247,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Parathyroid.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Pancreatic Neuroendocrine Tumor",
-      "Hereditary Spherocytosis",
-      "Primary Hyperparathyroidism",
-      "Barrett's Esophagus"
+      "Rectal Bleeding (Hematochezia)",
+      "Living Donor Hepatectomy",
+      "Perforated Peptic Ulcer",
+      "Primary Hyperparathyroidism"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Most common cause of hypercalcemia in outpatients.",
     anatomyFocus: [
       "Classic presentation: 'bones, stones, groans, moans' (now mostly asymptomatic)",
@@ -79064,12 +81272,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Parathyroid.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "ATLS Primary Survey (X-ABCDE)",
-      "Lung Cancer",
-      "Gastric Cancer",
-      "Secondary / Tertiary Hyperparathyroidism"
+      "Secondary / Tertiary Hyperparathyroidism",
+      "Phaeochromocytoma",
+      "Wound Dehiscence / Burst Abdomen",
+      "Perianal Abscess & Fistula-in-Ano"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Parathyroid hyperplasia secondary to chronic renal failure.",
     anatomyFocus: [
       "Secondary HPT: hypocalcemia/hyperphosphatemia → PTH elevation; multigland hyperplasia",
@@ -79088,13 +81296,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Adrenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Phaeochromocytoma",
-      "Secondary / Tertiary Hyperparathyroidism",
-      "Penetrating Abdominal Trauma",
-      "Perianal Abscess & Fistula-in-Ano"
-    ],
-    answer: 0,
+    options: ["Short Bowel Syndrome", "Phaeochromocytoma", "Insulinoma", "Thyroid Cancer"],
+    answer: 1,
     explanation: "Catecholamine-secreting tumor of adrenal medulla.",
     anatomyFocus: [
       "Rule of 10s: 10% malignant, 10% bilateral, 10% extra-adrenal (paraganglioma), 10% familial, 10% in children",
@@ -79113,8 +81316,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Adrenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Radiation Enteritis", "Conn's Syndrome", "Insulinoma", "Thyroid Cancer"],
-    answer: 1,
+    options: ["Upper GI Hemorrhage", "Adrenal Incidentaloma", "Conn's Syndrome", "Lymphedema — Surgical"],
+    answer: 2,
     explanation: "Primary aldosteronism is the most common surgically correctable cause of hypertension.",
     anatomyFocus: [
       "Hypertension + hypokalemia + suppressed renin → measure aldosterone:renin ratio",
@@ -79134,12 +81337,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Adrenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Esophageal Cancer",
-      "Adrenal Incidentaloma",
-      "Cushing's Syndrome (Adrenal)",
-      "Lymphedema — Surgical"
+      "Laparoscopic Sleeve Gastrectomy",
+      "Ulcerative Colitis",
+      "Vascular Trauma",
+      "Cushing's Syndrome (Adrenal)"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "ACTH-independent hypercortisolism from adrenal adenoma or carcinoma.",
     anatomyFocus: [
       "Classify ACTH-dependent vs ACTH-independent first",
@@ -79158,8 +81361,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Adrenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Ulcerative Colitis", "Vascular Trauma", "Gastric Cancer", "Adrenocortical Carcinoma"],
-    answer: 3,
+    options: [
+      "Adrenocortical Carcinoma",
+      "Necrotizing Fasciitis",
+      "Splenic Abscess",
+      "Percutaneous Endoscopic Gastrostomy (PEG)"
+    ],
+    answer: 0,
     explanation: "Rare but aggressive malignancy.",
     anatomyFocus: [
       "Any adrenal mass >4cm suspicious; >6cm high malignancy risk",
@@ -79178,8 +81386,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Adrenal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Adrenal Incidentaloma", "Splenic Trauma", "Splenic Abscess", "Peripheral Arterial Disease"],
-    answer: 0,
+    options: [
+      "Deep Vein Thrombosis",
+      "Adrenal Incidentaloma",
+      "Living Donor Hepatectomy",
+      "Principles of Laparoscopy & Pneumoperitoneum"
+    ],
+    answer: 1,
     explanation: "Adrenal mass found incidentally.",
     anatomyFocus: [
       "Found in 4–5% of abdominal CT scans",
@@ -79198,8 +81411,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Deep Vein Thrombosis", "Insulinoma", "Lung Cancer", "Laparoscopic Access Techniques"],
-    answer: 1,
+    options: ["Parastomal Hernia", "Acute Pancreatitis", "Insulinoma", "Crohn's Disease"],
+    answer: 2,
     explanation: "Most common functioning pancreatic NET.",
     anatomyFocus: [
       "Whipple's triad: symptoms + BG <2.5mmol/L + relief with glucose administration",
@@ -79219,12 +81432,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Multi-organ.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Spigelian Hernia",
       "Acute Pancreatitis",
-      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
-      "Crohn's Disease"
+      "Hemorrhoids",
+      "Laparoscopic Inguinal Hernia Repair (TEP & TAPP)",
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Autosomal dominant syndrome: parathyroid (95%) + pituitary (30%) + pancreatic/duodenal NETs (50%).",
     anatomyFocus: [
       "Diagnostic: 2 of 3 classic tumors OR 1 with known MEN1 family history",
@@ -79244,12 +81457,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Multi-organ.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Acute Pancreatitis",
-      "Hemorrhoids",
-      "Acute Cholangitis",
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
+      "Hidradenitis Suppurativa",
+      "Splenic Trauma",
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "RET proto-oncogene mutation.",
     anatomyFocus: [
       "MEN2A: medullary thyroid cancer + phaeochromocytoma (50%) + PHPT (20%)",
@@ -79268,8 +81481,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["anatomy", "diagram", "surface-anatomy", "regional"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Breast.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Breast Abscess", "Liposarcoma", "Liver Trauma", "MEN1 (Multiple Endocrine Neoplasia Type 1)"],
-    answer: 0,
+    options: [
+      "Carotid Body Tumor",
+      "Breast Abscess",
+      "Chronic Limb-Threatening Ischemia",
+      "Acute Compartment Syndrome (Limb)"
+    ],
+    answer: 1,
     explanation: "Loculated breast infection most common in lactating women.",
     anatomyFocus: [
       "Most common: puerperal (lactational) — S. aureus (including MRSA)",
@@ -79289,12 +81507,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Whole patient — systematic trauma assessment.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Renal Artery Stenosis",
+      "Hepatocellular Carcinoma",
+      "Gastrointestinal Stromal Tumor",
       "ATLS Primary Survey (X-ABCDE)",
-      "Traumatic Brain Injury (Surgical Perspective)",
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
+      "Energy Devices in Minimally Invasive Surgery"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "X-ABCDE: X = eXsanguinating external hemorrhage controlled first (tourniquet/wound packing), then A–Airway, B–Breathing, C–Circulation, D–Disability, E–Exposure.",
     anatomyFocus: [
       "X-ABCDE: X = eXsanguinating/external hemorrhage (tourniquet, wound packing) BEFORE airway — same concept as ATLS <C>ABCDE",
@@ -79313,13 +81531,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Cardiovascular system — acute circulatory failure.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Hepatocellular Carcinoma",
-      "Barrett's Esophagus",
-      "Hemorrhagic Shock (ATLS 11 Classification)",
-      "Complications of Minimally Invasive Surgery"
-    ],
-    answer: 2,
+    options: ["Anal Fistula", "Upper GI Hemorrhage", "Mesothelioma", "Hemorrhagic Shock (ATLS 11 Classification)"],
+    answer: 3,
     explanation: "ATLS 11th ed.",
     anatomyFocus: [
       "Class I (<15% volume, <750mL): HR <100, normal BP — no transfusion needed; crystalloid only if symptomatic",
@@ -79338,8 +81551,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Spinal cord, vertebral column.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Anal Fistula", "Esophageal Cancer", "Thymoma / Thymic Tumor", "Spinal Cord Injury (ATLS 11)"],
-    answer: 3,
+    options: ["Spinal Cord Injury (ATLS 11)", "Acute Cholangitis", "DCIS", "Squamous Cell Carcinoma (Skin)"],
+    answer: 0,
     explanation: "ATLS 11 replaces 'full spinal immobilization' with 'spinal motion restriction' (SMR).",
     anatomyFocus: [
       "ATLS 11 change: 'Spinal motion restriction' (SMR) replaces blanket immobilization — collar only when clinically indicated (NEXUS/CCR criteria)",
@@ -79359,12 +81572,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Upper airway, trachea.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Acute Compartment Syndrome (Limb)",
       "Trauma Airway Management (ATLS 11)",
-      "Acute Cholangitis",
-      "Phyllodes Tumor",
-      "Hidradenitis Suppurativa"
+      "Upper GI Hemorrhage",
+      "Damage Control Laparotomy"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "ATLS 11 airway algorithm: attempt oxygenation first → RSI (video laryngoscopy preferred) → if failed → supraglottic airway device (LMA) → if CICO → surgical cricothyroidotomy (scalpel-finger-bougie).",
     anatomyFocus: [
       "GCS ≤8, respiratory rate <10 or >29, SpO₂ <90 on O₂, facial fractures/burns/inhalation injury = indication for early definitive airway",
@@ -79384,12 +81597,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdomen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Acute Compartment Syndrome (Limb)",
+      "Kaposi's Sarcoma",
+      "Esophageal Perforation (Boerhaave)",
       "Damage Control Laparotomy",
-      "Esophageal Cancer",
-      "Trauma Airway Management (ATLS 11)"
+      "Graves' Disease"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Life-saving strategy for exsanguinating abdominal trauma: abbreviated surgery to control hemorrhage and contamination, temporary closure, resuscitation in ICU, planned re-look at 24–48 hours.",
     anatomyFocus: [
       "Damage control surgery (DCS): hemorrhage control + contamination control + temporary closure — NOT definitive repair",
@@ -79409,12 +81622,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdomen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Abdominal Aortic Aneurysm",
+      "Hydatid Cyst of the Liver",
       "Principles of Laparoscopy & Pneumoperitoneum",
-      "Bariatric Surgery",
-      "Abdominal Compartment Syndrome",
-      "Multinodular Goitre"
+      "Abdominal Compartment Syndrome"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Intra-abdominal pressure >20mmHg with new organ dysfunction.",
     anatomyFocus: [
       "IAP >12mmHg = intra-abdominal hypertension (IAH); IAP >20mmHg + organ dysfunction = ACS",
@@ -79434,12 +81647,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Abdominal Aortic Aneurysm",
-      "Hydatid Cyst of the Liver",
-      "Laparoscopic Access Techniques",
-      "Necrotizing Fasciitis"
+      "Necrotizing Fasciitis",
+      "Acute Aortic Dissection",
+      "Intrahepatic Cholangiocarcinoma",
+      "Mucocele of the Appendix"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Rapidly progressive life-threatening soft tissue infection with fascial necrosis.",
     anatomyFocus: [
       "NF = surgical emergency — debridement within hours of diagnosis, not hours after admission",
@@ -79459,12 +81672,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Spleen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Appendiceal Carcinoid (Well-Differentiated NET)",
       "Splenic Trauma",
-      "Acute Aortic Dissection",
-      "Intrahepatic Cholangiocarcinoma",
-      "Mucocele of the Appendix"
+      "Renal Transplantation",
+      "Primary Hyperparathyroidism"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Most commonly injured solid organ in blunt abdominal trauma.",
     anatomyFocus: [
       "AAST Grade I–V; Grade I–III stable patients → NOM (ICU monitoring + serial examination)",
@@ -79483,13 +81696,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Appendiceal Carcinoid (Well-Differentiated NET)",
-      "Liver Trauma",
-      "Liver Transplantation",
-      "Secondary / Tertiary Hyperparathyroidism"
-    ],
-    answer: 1,
+    options: ["Squamous Cell Carcinoma (Skin)", "Popliteal Artery Aneurysm", "Liver Trauma", "Spigelian Hernia"],
+    answer: 2,
     explanation: "Most common solid organ injury overall.",
     anatomyFocus: [
       "AAST Grade I–VI; Grade I–III stable → NOM; Grade IV–V → angioembolization or surgery",
@@ -79508,13 +81716,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small/Large bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Hidradenitis Suppurativa",
-      "Popliteal Artery Aneurysm",
-      "Hollow Viscus / Bowel Trauma",
-      "Obturator Hernia"
-    ],
-    answer: 2,
+    options: ["Ulcerative Colitis", "Chest Wall Tumor", "Lynch Syndrome (HNPCC)", "Hollow Viscus / Bowel Trauma"],
+    answer: 3,
     explanation: "Missed hollow viscus injury causes peritonitis and death.",
     anatomyFocus: [
       "Blunt small bowel injury: often missed on initial CT; free fluid without solid organ injury = bowel injury until proven otherwise",
@@ -79534,12 +81737,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Diaphragm.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Ulcerative Colitis",
-      "Pectus Excavatum / Carinatum",
-      "Lynch Syndrome (HNPCC)",
-      "Traumatic Diaphragm Rupture"
+      "Traumatic Diaphragm Rupture",
+      "Cecal Volvulus",
+      "Hepatocellular Carcinoma",
+      "Primary Sclerosing Cholangitis"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Often missed on initial imaging; CXR has poor sensitivity.",
     anatomyFocus: [
       "Left-sided in 75% (right protected by liver); penetrating in 30%",
@@ -79559,12 +81762,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pelvis.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Wound Dehiscence / Burst Abdomen",
       "Pelvic Fracture (Hemorrhage Control)",
-      "Cecal Volvulus",
-      "Hepatocellular Carcinoma",
-      "Primary Sclerosing Cholangitis"
+      "Familial Adenomatous Polyposis",
+      "Intraductal Papillary Mucinous Neoplasm"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Unstable pelvic fractures can lose 3–5L blood retroperitoneally.",
     anatomyFocus: [
       "Pelvic binder/sheet immediately for suspected unstable pelvic fracture (closes volume, reduces hemorrhage)",
@@ -79584,12 +81787,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdominal wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Pelvic Fracture (Hemorrhage Control)",
+      "Renal Transplantation",
+      "Cytoreductive Surgery & HIPEC",
       "Wound Dehiscence / Burst Abdomen",
-      "Familial Adenomatous Polyposis",
-      "Intraductal Papillary Mucinous Neoplasm"
+      "Cecal Volvulus"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Complete burst abdomen (evisceration) is a surgical emergency.",
     anatomyFocus: [
       "Burst abdomen: fascial dehiscence with or without evisceration; distinct from superficial wound dehiscence",
@@ -79608,13 +81811,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdomen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Liver Transplantation",
-      "Perforated Peptic Ulcer",
-      "Penetrating Abdominal Trauma",
-      "Cecal Volvulus"
-    ],
-    answer: 2,
+    options: ["Obturator Hernia", "Rectal Prolapse", "Splanchnic Artery Aneurysm", "Penetrating Abdominal Trauma"],
+    answer: 3,
     explanation: "GSW through peritoneal cavity = mandatory laparotomy.",
     anatomyFocus: [
       "GSW (gunshot wounds): unpredictable trajectory — mandatory laparotomy if peritoneal cavity traversed",
@@ -79634,12 +81832,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Chest.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Retroperitoneal Sarcoma",
-      "Rectal Prolapse",
-      "Splanchnic Artery Aneurysm",
-      "Chest Trauma (Surgical Perspective)"
+      "Chest Trauma (Surgical Perspective)",
+      "Gastro-Esophageal Reflux Disease (GERD)",
+      "Esophageal Perforation",
+      "Acute Compartment Syndrome (Limb)"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "85% of chest injuries managed with intercostal drain insertion alone.",
     anatomyFocus: [
       "ATLS: identify and treat immediately life-threatening chest injuries — Tension PTX, Open PTX, Massive Hemothorax, Flail Chest, Cardiac Tamponade",
@@ -79658,8 +81856,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin/systemic.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Burns", "Acute Abdomen", "Hemothorax", "Acute Compartment Syndrome (Limb)"],
-    answer: 0,
+    options: ["Pancreatic Neuroendocrine Tumor", "Burns", "Chronic Pancreatitis", "Anal Fissure"],
+    answer: 1,
     explanation: "Immediate priorities: stop the burning process, airway assessment, fluid resuscitation (Parkland formula), wound care.",
     anatomyFocus: [
       "Rule of Nines: head 9%, each arm 9%, each leg 18%, trunk front 18%, trunk back 18%, perineum 1%",
@@ -79679,12 +81877,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Extremity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Pancreatic Neuroendocrine Tumor",
+      "Splanchnic Artery Aneurysm",
+      "Thoracic Aortic Aneurysm",
       "Acute Compartment Syndrome (Limb)",
-      "Chronic Pancreatitis",
-      "Anal Fissure"
+      "MEN2 (Multiple Endocrine Neoplasia Type 2)"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Rising pressure within closed fascial compartment causes ischemia.",
     anatomyFocus: [
       "Compartment pressure >30mmHg (or within 30mmHg of diastolic BP) = fasciotomy",
@@ -79703,8 +81901,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Kidney.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Splanchnic Artery Aneurysm", "Thoracic Aortic Aneurysm", "Renal Trauma", "Breast Abscess"],
-    answer: 2,
+    options: ["Phyllodes Tumor", "Acute Abdomen", "Pancreas Transplantation", "Renal Trauma"],
+    answer: 3,
     explanation: "Most renal injuries (95%) managed non-operatively.",
     anatomyFocus: [
       "Blunt trauma: 80%; most common solid organ injury after spleen and liver",
@@ -79724,12 +81922,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Brain.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Thyroid Cancer",
-      "Dysphagia",
-      "Small Bowel Transplantation",
-      "Traumatic Brain Injury (Surgical Perspective)"
+      "Traumatic Brain Injury (Surgical Perspective)",
+      "Crohn's Disease",
+      "Lung Abscess",
+      "Mediastinal Mass"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "General surgeon must recognize surgical TBI requiring urgent neurosurgical intervention.",
     anatomyFocus: [
       "Extradural hematoma (EDH): temporal, arterial (middle meningeal artery), lucid interval → deterioration; CT: biconvex hyperdense; emergency craniotomy",
@@ -79748,8 +81946,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Kidney.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Renal Transplantation", "Esophageal Cancer", "Mediastinal Mass", "Chest Wall Tumor"],
-    answer: 0,
+    options: ["Breast Abscess", "Renal Transplantation", "Extrahepatic Cholangiocarcinoma", "Choledocholithiasis"],
+    answer: 1,
     explanation: "Definitive treatment for end-stage renal disease.",
     anatomyFocus: [
       "Transplant kidney placed extraperitoneally in iliac fossa: renal vein to external iliac vein, renal artery to external iliac artery",
@@ -79769,12 +81967,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "ATLS Primary Survey (X-ABCDE)",
+      "Abdominal Aortic Aneurysm",
+      "Pancreatic Pseudocyst",
       "Liver Transplantation",
-      "Extrahepatic Cholangiocarcinoma",
-      "Choledocholithiasis"
+      "Intraductal Papillary Mucinous Neoplasm"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Only curative treatment for end-stage liver disease and acute liver failure.",
     anatomyFocus: [
       "Indications: ESLD (MELD ≥15), acute liver failure, HCC within Milan criteria, metabolic liver disease",
@@ -79793,13 +81991,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pancreas.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Abdominal Aortic Aneurysm",
-      "Pancreatic Pseudocyst",
-      "Pancreas Transplantation",
-      "Intraductal Papillary Mucinous Neoplasm"
-    ],
-    answer: 2,
+    options: ["Mesothelioma", "Radiation Enteritis", "Conversion to Open Surgery", "Pancreas Transplantation"],
+    answer: 3,
     explanation: "Achieves insulin independence in Type 1 diabetes.",
     anatomyFocus: [
       "Indications: Type 1 DM with ESRD (SPK — simultaneous pancreas-kidney), or Type 1 DM alone (PAK — pancreas after kidney, PTA — pancreas transplant alone)",
@@ -79818,13 +82011,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Small bowel.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Thymoma / Thymic Tumor",
-      "Gastro-Esophageal Reflux Disease (GERD)",
-      "Therapeutic Endoscopy (Principles)",
-      "Small Bowel Transplantation"
-    ],
-    answer: 3,
+    options: ["Small Bowel Transplantation", "DCIS", "Anal Canal Cancer", "Pulmonary Carcinoid"],
+    answer: 0,
     explanation: "Last resort for irreversible intestinal failure.",
     anatomyFocus: [
       "Indication: irreversible intestinal failure with life-threatening PN complications (liver failure, recurrent sepsis, thrombosis of central veins)",
@@ -79843,13 +82031,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Liver.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Living Donor Hepatectomy",
-      "Phyllodes Tumor",
-      "Anal Canal Cancer",
-      "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)"
-    ],
-    answer: 0,
+    options: ["Acute Cholangitis", "Living Donor Hepatectomy", "Epigastric Hernia", "Melena"],
+    answer: 1,
     explanation: "Right hepatectomy for living donor liver transplant (LDLT).",
     anatomyFocus: [
       "Right hepatectomy (segments V–VIII + right hepatic vein) most common for adult-to-adult LDLT",
@@ -79868,8 +82051,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lung.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Carotid Body Tumor", "Lung Cancer", "Strangulated Hernia", "Small Bowel Neuroendocrine Tumor"],
-    answer: 1,
+    options: ["Colon Cancer", "Pancreatic Pseudocyst", "Lung Cancer", "Carotid Body Tumor"],
+    answer: 2,
     explanation: "Leading cause of cancer death worldwide.",
     anatomyFocus: [
       "NSCLC (85%): adenocarcinoma (most common), squamous, large-cell; SCLC (15%): extensive spread at diagnosis",
@@ -79888,8 +82071,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleural cavity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Colon Cancer", "Pancreatic Pseudocyst", "Pneumothorax", "Carotid Body Tumor"],
-    answer: 2,
+    options: [
+      "Obturator Hernia",
+      "Trauma Airway Management (ATLS 11)",
+      "Conversion to Open Surgery",
+      "Pneumothorax"
+    ],
+    answer: 3,
     explanation: "Air in the pleural space.",
     anatomyFocus: [
       "Tension pneumothorax: clinical diagnosis — do NOT wait for CXR; immediate 2nd ICS midclavicular needle decompression",
@@ -79909,12 +82097,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleural cavity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Retroperitoneal Sarcoma",
-      "Damage Control Laparotomy",
-      "Therapeutic Endoscopy (Principles)",
-      "Pleural Empyema"
+      "Pleural Empyema",
+      "Liver Transplantation",
+      "Liver Trauma",
+      "Percutaneous Endoscopic Gastrostomy (PEG)"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Infected pleural fluid (frank pus, organisms on culture, or pH <7.2).",
     anatomyFocus: [
       "Most common causes: parapneumonic (post-pneumonia), post-thoracic surgery, esophageal perforation, hematogenous",
@@ -79933,13 +82121,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleura.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Mesothelioma",
-      "Pancreas Transplantation",
-      "Hollow Viscus / Bowel Trauma",
-      "Traumatic Brain Injury (Surgical Perspective)"
-    ],
-    answer: 0,
+    options: ["Upper GI Hemorrhage", "Mesothelioma", "Popliteal Artery Aneurysm", "Spinal Cord Injury (ATLS 11)"],
+    answer: 1,
     explanation: "Aggressive malignancy of pleural mesothelial cells, invariably linked to asbestos exposure.",
     anatomyFocus: [
       "Asbestos exposure in 80%: latent period 20–50 years",
@@ -79958,13 +82141,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Thymus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Esophageal Cancer",
-      "Thymoma / Thymic Tumor",
-      "Popliteal Artery Aneurysm",
-      "Trauma Airway Management (ATLS 11)"
-    ],
-    answer: 1,
+    options: ["Gallbladder Cancer", "Parastomal Hernia", "Thymoma / Thymic Tumor", "Large Bowel Obstruction"],
+    answer: 2,
     explanation: "Most common anterior mediastinal tumor in adults.",
     anatomyFocus: [
       "Most common anterior mediastinal mass in adults (40%)",
@@ -79983,8 +82161,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Esophagus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Gallbladder Cancer", "Spigelian Hernia", "Esophageal Perforation", "Large Bowel Obstruction"],
-    answer: 2,
+    options: ["Small Bowel Tumors", "Pleural Empyema", "Melanoma", "Esophageal Perforation"],
+    answer: 3,
     explanation: "Highest mortality of any GI perforation (20–40%).",
     anatomyFocus: [
       "Boerhaave's syndrome: spontaneous full-thickness tear, distal left posterolateral esophagus; post-vomiting; Mackler's triad",
@@ -80003,8 +82181,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Pleural cavity.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Small Bowel Tumors", "Pleural Empyema", "Basal Cell Carcinoma", "Hemothorax"],
-    answer: 3,
+    options: ["Hemothorax", "Primary Sclerosing Cholangitis", "Dysphagia", "Mucocele of the Appendix"],
+    answer: 0,
     explanation: "Blood in the pleural space.",
     anatomyFocus: [
       "Massive hemothorax: >1500mL blood (half total blood volume) — hemodynamic shock + absent breath sounds + dull percussion",
@@ -80023,13 +82201,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lung.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Lung Abscess",
-      "Primary Sclerosing Cholangitis",
-      "Gastric Outlet Obstruction",
-      "Mucocele of the Appendix"
-    ],
-    answer: 0,
+    options: ["Liver Abscess", "Lung Abscess", "Small Bowel Tumors", "Penetrating Abdominal Trauma"],
+    answer: 1,
     explanation: "Cavitating lung infection with pus.",
     anatomyFocus: [
       "Primary lung abscess: aspiration of oral flora (Bacteroides, Peptostreptococcus, microaerophilic Streptococcus)",
@@ -80048,8 +82221,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Mediastinum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Liver Abscess", "Mediastinal Mass", "Small Bowel Tumors", "Chest Trauma (Surgical Perspective)"],
-    answer: 1,
+    options: ["Leiomyosarcoma", "Breast Cancer", "Mediastinal Mass", "Ulcerative Colitis"],
+    answer: 2,
     explanation: "Location defines differential: anterior (4Ts: thymoma/teratoma/lymphoma/thyroid), middle (lymphoma/cyst/tracheal), posterior (neurogenic tumors).",
     anatomyFocus: [
       "Anterior (4Ts): thymoma, teratoma/GCT, terrible lymphoma, thyroid/parathyroid",
@@ -80068,8 +82241,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Chest wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Desmoid Tumor", "DCIS", "Chest Wall Tumor", "Ulcerative Colitis"],
-    answer: 2,
+    options: [
+      "Pectus Excavatum / Carinatum",
+      "Peripheral Arterial Disease",
+      "Strangulated Hernia",
+      "Chest Wall Tumor"
+    ],
+    answer: 3,
     explanation: "Primary chest wall tumors are rare.",
     anatomyFocus: [
       "60% of chest wall tumors are malignant; 40% benign",
@@ -80088,13 +82266,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Chest wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Chest Wall Tumor",
-      "Peripheral Arterial Disease",
-      "Parastomal Hernia",
-      "Pectus Excavatum / Carinatum"
-    ],
-    answer: 3,
+    options: ["Pectus Excavatum / Carinatum", "Vascular Trauma", "Anal Fissure", "Adrenocortical Carcinoma"],
+    answer: 0,
     explanation: "Congenital chest wall deformity.",
     anatomyFocus: [
       "Pectus excavatum: anterior chest wall depression; M:F = 3:1; 1 in 400 births",
@@ -80113,8 +82286,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "radiology", "CT", "MRI", "ultrasound"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lung.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Pulmonary Carcinoid", "Vascular Trauma", "Anal Fissure", "Adrenal Incidentaloma"],
-    answer: 0,
+    options: ["Burns", "Pulmonary Carcinoid", "Caustic Esophageal Injury", "Acute Mesenteric Ischemia"],
+    answer: 1,
     explanation: "Low-grade neuroendocrine tumor of the lung.",
     anatomyFocus: [
       "Typical carcinoid (TC): <2 mitoses/2mm², no necrosis; 10-year survival >90%",
@@ -80134,12 +82307,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Diaphragm.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Acute Compartment Syndrome (Limb)",
+      "Burns",
+      "Melanoma",
       "Congenital Diaphragmatic Hernia (Bochdalek & Morgagni)",
-      "Meckel's Diverticulum",
-      "Acute Mesenteric Ischemia"
+      "Small Bowel Neuroendocrine Tumor"
     ],
-    answer: 1,
+    answer: 2,
     explanation: "Herniation of abdominal viscera into the thorax through a congenital diaphragmatic defect.",
     anatomyFocus: [
       "Bochdalek hernia: posterolateral defect (failure of pleuroperitoneal canal closure); ~85% of CDH; left-sided in ~85%; neonatal respiratory distress with pulmonary hypoplasia",
@@ -80158,8 +82331,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Groin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Renal Transplantation", "Basal Cell Carcinoma", "Inguinal Hernia", "Acute Abdomen"],
-    answer: 2,
+    options: ["Angiodysplasia", "Portal Hypertension", "Necrotizing Fasciitis", "Inguinal Hernia"],
+    answer: 3,
     explanation: "Most common hernia.",
     anatomyFocus: [
       "Indirect: lateral to inferior epigastric vessels; through deep inguinal ring; congenital patent processus vaginalis",
@@ -80178,8 +82351,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Femoral canal.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Angiodysplasia", "Portal Hypertension", "Splenic Trauma", "Femoral Hernia"],
-    answer: 3,
+    options: [
+      "Femoral Hernia",
+      "Acute Cholangitis",
+      "Squamous Cell Carcinoma (Skin)",
+      "Traumatic Diaphragm Rupture"
+    ],
+    answer: 0,
     explanation: "High risk of strangulation — all femoral hernias should be repaired promptly.",
     anatomyFocus: [
       "Boundaries of femoral canal: anterior (inguinal ligament), medial (lacunar ligament), lateral (femoral vein), posterior (pectineal ligament/Cooper's ligament)",
@@ -80199,12 +82377,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Umbilicus.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "Short Bowel Syndrome",
       "Umbilical Hernia",
-      "Acute Cholangitis",
-      "Hidradenitis Suppurativa",
-      "Pelvic Fracture (Hemorrhage Control)"
+      "Acute Cholecystitis",
+      "Balloon Tamponade for Variceal Haemorrhage"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Common in adults, especially obese or multiparous women.",
     anatomyFocus: [
       "True umbilical hernia: through umbilical ring (in adults, often previously closed then re-opened); vs paraumbilical hernia (through linea alba immediately adjacent to umbilicus)",
@@ -80223,8 +82401,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Abdominal wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Radiation Enteritis", "Incisional Hernia", "Acute Cholecystitis", "Breast Abscess"],
-    answer: 1,
+    options: [
+      "Peripheral Arterial Disease",
+      "Adrenocortical Carcinoma",
+      "Incisional Hernia",
+      "Symptomatic Cholelithiasis (Biliary Colic)"
+    ],
+    answer: 2,
     explanation: "Develops in 10–15% of all laparotomies.",
     anatomyFocus: [
       "Occurs in 10–15% of laparotomies; higher with midline closure, obesity, wound infection",
@@ -80244,12 +82427,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Anterior abdominal wall (linea alba).",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Peripheral Arterial Disease",
-      "Adrenal Incidentaloma",
-      "Epigastric Hernia",
-      "Symptomatic Cholelithiasis (Biliary Colic)"
+      "Therapeutic Endoscopy (Principles)",
+      "Parastomal Hernia",
+      "Feeding Jejunostomy & PEJ",
+      "Epigastric Hernia"
     ],
-    answer: 2,
+    answer: 3,
     explanation: "Protrusion through a defect in the linea alba between xiphisternum and umbilicus; most contain pre-peritoneal fat (not peritoneal sac); repair by suture (small) or mesh (≥1 cm or symptomatic recurrence).",
     anatomyFocus: [
       "Epigastric hernias occur through defects in the linea alba above the umbilicus, between the xiphoid and umbilicus",
@@ -80268,13 +82451,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Any hernia site.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Percutaneous Endoscopic Gastrostomy (PEG)",
-      "Parastomal Hernia",
-      "Cushing's Syndrome (Adrenal)",
-      "Strangulated Hernia"
-    ],
-    answer: 3,
+    options: ["Strangulated Hernia", "Renal Trauma", "Popliteal Artery Aneurysm", "Small Bowel Transplantation"],
+    answer: 0,
     explanation: "Surgical emergency.",
     anatomyFocus: [
       "Incarceration: irreducible but no vascular compromise; Strangulation: vascular compromise → ischemia",
@@ -80294,12 +82472,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Stoma site.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
+      "MEN1 (Multiple Endocrine Neoplasia Type 1)",
       "Parastomal Hernia",
-      "Traumatic Brain Injury (Surgical Perspective)",
-      "Popliteal Artery Aneurysm",
-      "Living Donor Hepatectomy"
+      "Hollow Viscus / Bowel Trauma",
+      "Principles of Laparoscopy & Pneumoperitoneum"
     ],
-    answer: 0,
+    answer: 1,
     explanation: "Hernia alongside a stoma, developing in 30–50% of colostomies.",
     anatomyFocus: [
       "Occurs in 30–50% of colostomies; 5–15% of ileostomies within 5 years",
@@ -80318,13 +82496,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Lateral abdominal wall.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "MEN2 (Multiple Endocrine Neoplasia Type 2)",
-      "Spigelian Hernia",
-      "Traumatic Diaphragm Rupture",
-      "Laparoscopic Access Techniques"
-    ],
-    answer: 1,
+    options: ["Acute Aortic Dissection", "Umbilical Hernia", "Spigelian Hernia", "Peripheral Arterial Disease"],
+    answer: 2,
     explanation: "Rare hernia through the semilunar line (Spigel's fascia) at the lateral edge of the rectus sheath.",
     anatomyFocus: [
       "Herniates through semilunar line (Spigel's fascia) at junction of rectus abdominis and transversus abdominis aponeurosis",
@@ -80343,8 +82516,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Obturator foramen.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Acute Aortic Dissection", "Umbilical Hernia", "Obturator Hernia", "Peripheral Arterial Disease"],
-    answer: 2,
+    options: ["Mediastinal Mass", "Merkel Cell Carcinoma", "Hepatocellular Carcinoma", "Obturator Hernia"],
+    answer: 3,
     explanation: "Rare hernia through obturator foramen.",
     anatomyFocus: [
       "Elderly thin women: 6:1 F:M ratio; multiparous; lost the fat pad obturating foramen",
@@ -80363,8 +82536,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["image", "open-license", "anatomy", "photo", "diagram"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Retroperitoneum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Chest Wall Tumor", "Kaposi's Sarcoma", "Hepatocellular Carcinoma", "Retroperitoneal Sarcoma"],
-    answer: 3,
+    options: ["Retroperitoneal Sarcoma", "Basal Cell Carcinoma", "Cecal Volvulus", "Conn's Syndrome"],
+    answer: 0,
     explanation: "Most common retroperitoneal sarcoma is liposarcoma (50%) followed by leiomyosarcoma.",
     anatomyFocus: [
       "Liposarcoma (50%) and leiomyosarcoma (25%) are the two most common histotypes",
@@ -80383,8 +82556,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Melanoma", "Incisional Hernia", "Large Bowel Obstruction", "Adrenocortical Carcinoma"],
-    answer: 0,
+    options: [
+      "Deep Vein Thrombosis",
+      "Melanoma",
+      "Percutaneous Endoscopic Gastrostomy (PEG)",
+      "Large Bowel Obstruction"
+    ],
+    answer: 1,
     explanation: "Wide local excision with sentinel lymph node biopsy; adjuvant immunotherapy/targeted therapy for stage III–IV.",
     anatomyFocus: [
       "Breslow thickness is the single most important prognostic factor",
@@ -80403,8 +82581,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Deep Vein Thrombosis", "Basal Cell Carcinoma", "Large Bowel Obstruction", "Strangulated Hernia"],
-    answer: 1,
+    options: ["Phyllodes Tumor", "Thyroid Cancer", "Basal Cell Carcinoma", "Diverticulitis"],
+    answer: 2,
     explanation: "Most common human cancer; locally aggressive but rarely metastasises; excision with 4 mm margins or Mohs surgery for high-risk/face tumors.",
     anatomyFocus: [
       "Most common cancer in humans; >90% on head and neck (sun-exposed areas)",
@@ -80423,8 +82601,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Thyroid Cancer", "Graves' Disease", "Squamous Cell Carcinoma (Skin)", "Diverticulitis"],
-    answer: 2,
+    options: ["Pneumothorax", "Hiatus Hernia", "Kaposi's Sarcoma", "Squamous Cell Carcinoma (Skin)"],
+    answer: 3,
     explanation: "Second most common skin cancer; significant metastatic potential (~5%); excise with 4–6 mm margins; high-risk features require SLNB and adjuvant RT.",
     anatomyFocus: [
       "Arises from keratinocytes; major risk is cumulative UV; immunosuppressed patients have 100× increased risk",
@@ -80443,8 +82621,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin/Apocrine glands.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Pleural Empyema", "Achalasia", "Kaposi's Sarcoma", "Hidradenitis Suppurativa"],
-    answer: 3,
+    options: ["Hidradenitis Suppurativa", "Liposarcoma", "Pleural Empyema", "Diverticulitis"],
+    answer: 0,
     explanation: "Chronic inflammatory follicular disease of apocrine gland-bearing skin; medical management first; radical wide excision with primary closure or flap for Hurley III.",
     anatomyFocus: [
       "Follicular occlusion — NOT primary apocrine infection — causes HS; apocrine involvement is secondary",
@@ -80463,8 +82641,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue/Retroperitoneum.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Liposarcoma", "Hidradenitis Suppurativa", "Mesothelioma", "Diverticulitis"],
-    answer: 0,
+    options: ["Liver Abscess", "Liposarcoma", "Lung Cancer", "Ulcerative Colitis"],
+    answer: 1,
     explanation: "Most common retroperitoneal sarcoma; surgery is the only curative modality; aim for R0 resection; dedifferentiated subtype has worst prognosis.",
     anatomyFocus: [
       "Most common retroperitoneal soft tissue sarcoma (40–45% of all retroperitoneal STS)",
@@ -80483,8 +82661,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue/Vascular.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Liver Abscess", "Leiomyosarcoma", "Pneumothorax", "Ulcerative Colitis"],
-    answer: 1,
+    options: [
+      "Colorectal Liver Metastases",
+      "Esophageal Cancer",
+      "Leiomyosarcoma",
+      "Percutaneous Endoscopic Gastrostomy (PEG)"
+    ],
+    answer: 2,
     explanation: "Malignant smooth muscle tumor; retroperitoneal or IVC origin most challenging; complete resection with vascular reconstruction where needed is the only curative option.",
     anatomyFocus: [
       "Retroperitoneal LMS is distinct from uterine LMS — worse prognosis, different molecular profile",
@@ -80503,8 +82686,13 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Soft tissue/Mesentery.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: ["Colorectal Liver Metastases", "Hiatus Hernia", "Desmoid Tumor", "Kaposi's Sarcoma"],
-    answer: 2,
+    options: [
+      "Diagnostic Laparoscopy",
+      "Pseudo-Obstruction (Ogilvie's Syndrome)",
+      "Chest Wall Tumor",
+      "Desmoid Tumor"
+    ],
+    answer: 3,
     explanation: "Locally aggressive fibromatosis with no metastatic potential; paradigm shift to active surveillance first; surgery for progressors; sorafenib for FAP-related intra-abdominal desmoids.",
     anatomyFocus: [
       "Desmoid tumors do NOT metastasize — mortality from local complications (bowel obstruction, fistula, vascular compression)",
@@ -80524,12 +82712,12 @@ const IMAGE_QUIZ_BANK = [
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
     options: [
-      "Conversion to Open Surgery",
-      "Pseudo-Obstruction (Ogilvie's Syndrome)",
-      "Pectus Excavatum / Carinatum",
-      "Merkel Cell Carcinoma"
+      "Merkel Cell Carcinoma",
+      "Immune Thrombocytopenic Purpura",
+      "Phyllodes Tumor",
+      "Pancreas Transplantation"
     ],
-    answer: 3,
+    answer: 0,
     explanation: "Rare but aggressive cutaneous neuroendocrine carcinoma; Merkel cell polyomavirus (MCPyV) in 80%; excellent response to immunotherapy (avelumab/pembrolizumab).",
     anatomyFocus: [
       "Merkel cell carcinoma (MCC): red/violet dome-shaped rapidly growing nodule; head/neck or extremities in elderly or immunosuppressed",
@@ -80548,13 +82736,8 @@ const IMAGE_QUIZ_BANK = [
     tags: ["photo", "dermatology", "skin", "clinical"],
     prompt: "Open the image reference set, then identify the condition or operative anatomy most consistent with Skin/Mucosa/Viscera.",
     stem: "Image recognition: which condition or surgical problem is this reference set intended to help identify?",
-    options: [
-      "Kaposi's Sarcoma",
-      "Immune Thrombocytopenic Purpura",
-      "Thyroid Cancer",
-      "Small Bowel Transplantation"
-    ],
-    answer: 0,
+    options: ["Pancreatic Pseudocyst", "Kaposi's Sarcoma", "Mediastinal Mass", "Insulinoma"],
+    answer: 1,
     explanation: "HHV-8 driven vascular tumor; primarily a medical disease — treat the underlying immunosuppression; systemic chemotherapy for advanced disease.",
     anatomyFocus: [
       "All forms driven by HHV-8 (KSHV — Kaposi's Sarcoma-associated Herpesvirus) infection",

@@ -126,12 +126,12 @@ const ID_ORDER = [
   'portal-hypertension','liver-abscess','gallbladder-cancer','liver-metastases',
   'hepatic-adenoma','hydatid-cyst','ipmn','pan-net','itp','hereditary-spherocytosis',
   'splenic-abscess','psc',
-  // COLORECTAL (24)
+  // COLORECTAL (25)
   'appendicitis','diverticulitis','crc','rectal-prolapse','haemorrhoids','anal-fistula',
   'anal-fissure','perianal-abscess','pilonidal','sigmoid-volvulus','caecal-volvulus',
   'large-bowel-obstruction','uc-surgical','crohn-surgical','anal-cancer',
   'intestinal-fistula','carcinoid-appendix','mucocele-appendix','fap','lynch',
-  'bowel-perforation','pseudo-obstruction','angiodysplasia','small-bowel-tumours',
+  'bowel-perforation','pseudo-obstruction','angiodysplasia','small-bowel-tumours','crs-hipec',
   // UPPER GI & SMALL BOWEL (25)
   'pud','gastric-ca','ugib','oesophageal-cancer','hiatus-hernia','achalasia',
   'boerhaave','bariatric','gastric-volvulus','small-bowel-obstruction','gist',
@@ -161,9 +161,11 @@ const ID_ORDER = [
   // SKIN & SOFT TISSUE (9)
   'melanoma','bcc','scc-skin','hidradenitis','liposarcoma','leiomyosarcoma',
   'desmoid','merkel-cell','kaposi',
-  // MINIMALLY INVASIVE SURGERY (9)
+  // MINIMALLY INVASIVE SURGERY (15)
   'mis-principles','lap-access','mis-energy','mis-complications','robotic-surgery',
   'diagnostic-laparoscopy','conversion-to-open','therapeutic-endoscopy','peg',
+  'sleeve-gastrectomy','poem','partial-fundoplication','feeding-jejunostomy',
+  'balloon-tamponade','lap-inguinal-hernia',
 ];
 
 // ── Load all diseases ─────────────────────────────────────────────────────
@@ -375,7 +377,14 @@ const VIDEO_QUERY_BY_ID = {
   'lung-cancer': 'VATS lobectomy',
   pneumothorax: 'VATS bullectomy pleurodesis',
   melanoma: 'wide local excision sentinel lymph node biopsy melanoma',
-  peg: 'percutaneous endoscopic gastrostomy PEG tube placement pull technique'
+  peg: 'percutaneous endoscopic gastrostomy PEG tube placement pull technique',
+  'sleeve-gastrectomy': 'laparoscopic sleeve gastrectomy',
+  poem: 'per-oral endoscopic myotomy POEM achalasia',
+  'partial-fundoplication': 'Toupet partial fundoplication laparoscopic',
+  'feeding-jejunostomy': 'laparoscopic feeding jejunostomy',
+  'balloon-tamponade': 'Sengstaken Blakemore tube balloon tamponade variceal bleeding',
+  'lap-inguinal-hernia': 'laparoscopic inguinal hernia repair TEP TAPP',
+  'crs-hipec': 'cytoreductive surgery HIPEC peritoneal carcinomatosis'
 };
 
 for (const d of Object.values(diseaseMap)) {
@@ -525,6 +534,13 @@ const IMAGE_QUERY_BY_ID = {
   pud: 'peptic ulcer',
   ugib: 'upper gastrointestinal bleeding',
   peg: 'gastrostomy',
+  'sleeve-gastrectomy': 'sleeve gastrectomy',
+  poem: 'achalasia',
+  'partial-fundoplication': 'fundoplication',
+  'feeding-jejunostomy': 'jejunostomy',
+  'balloon-tamponade': 'esophageal varices',
+  'lap-inguinal-hernia': 'inguinal hernia',
+  'crs-hipec': 'peritoneal carcinomatosis',
   'gastric-ca': 'gastric cancer',
   barretts: 'Barrett esophagus',
   'oesophageal-cancer': 'esophageal cancer',

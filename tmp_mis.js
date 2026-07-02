@@ -736,6 +736,526 @@ const MIS_DISEASES = [
     { id: "oesophageal-cancer",          note: "Nutritional support during treatment; use Push/Introducer to avoid stomal seeding" },
     { id: "gastric-outlet-obstruction",  note: "A contraindication to gastric feeding — consider post-pyloric PEG-J instead" }
   ]
+},
+{
+  id: "sleeve-gastrectomy", dept: "mis",
+  name: "Laparoscopic Sleeve Gastrectomy",
+  latin: "Gastrectomia longitudinalis laparoscopica",
+  organ: "Stomach",
+  severity: "moderate",
+  tags: ["bariatric","sleeve","metabolic","obesity","MIS","weight loss"],
+  hero: "Removing ~80% of the stomach along the greater curve to leave a narrow tube — now the world's commonest bariatric operation, restrictive with useful metabolic (hormonal) effects.",
+  keypoints: [
+    "Purely restrictive anatomically but strongly metabolic: resecting the fundus removes most ghrelin-producing cells, reducing hunger and improving glycaemic control early, before weight loss",
+    "The stomach is divided vertically over a bougie (typically 32–40 Fr) from ~2–6 cm proximal to the pylorus up to the angle of His",
+    "Two dreaded complications: staple-line leak (usually near the angle of His, presents days 3–10 with tachycardia/sepsis) and staple-line bleeding",
+    "New or worsened GERD is the main long-term downside — significant reflux or a large hiatus hernia favours a bypass instead",
+    "Simpler and faster than gastric bypass, no anastomosis and no mesenteric defects, but not reversible and slightly less weight loss / diabetes remission than RYGB",
+    "Leaves the whole GI tract endoscopically accessible (unlike RYGB) — an advantage if future ERCP is likely"
+  ],
+  differentials: [
+    "Roux-en-Y gastric bypass (RYGB) — better for severe GERD and diabetes; adds malabsorption and dumping",
+    "One-anastomosis gastric bypass (OAGB) — single loop anastomosis; simpler than RYGB, risk of bile reflux",
+    "Biliopancreatic diversion / duodenal switch (BPD-DS, SADI-S) — most powerful weight loss/metabolic effect, most malabsorption",
+    "Intragastric balloon / endoscopic sleeve gastroplasty — less invasive, less durable",
+    "Medical therapy (GLP-1 agonists) — first-line adjunct or alternative in selected patients"
+  ],
+  overview: {
+    definition: "A laparoscopic bariatric procedure that vertically resects the greater curvature of the stomach, creating a narrow, tubular 'sleeve' of ~100–150 mL that restricts intake and removes the ghrelin-rich fundus.",
+    epidemiology: "The most frequently performed bariatric operation worldwide, having overtaken Roux-en-Y gastric bypass, owing to technical simplicity and a good safety/efficacy balance.",
+    pathophysiology: "Resection of the gastric fundus (the principal source of the orexigenic hormone ghrelin) reduces appetite and, with the small residual reservoir, limits intake. Accelerated gastric emptying increases distal nutrient delivery, augmenting GLP-1 and PYY secretion — driving early, weight-independent improvement in type-2 diabetes. The narrow high-pressure tube and division of the angle of His predispose to gastro-oesophageal reflux.",
+    classification: [
+      {label:"Sleeve gastrectomy (SG)", note:"Restrictive + ghrelin reduction; no anastomosis; the reference procedure described here"},
+      {label:"One-anastomosis gastric bypass (OAGB)", note:"Long gastric pouch + single loop gastrojejunostomy (~200 cm biliopancreatic limb); simpler than RYGB but risk of bile reflux"},
+      {label:"Roux-en-Y gastric bypass (RYGB)", note:"Small pouch + Roux limb; best for GERD/diabetes; two anastomoses, dumping, internal-hernia risk"},
+      {label:"BPD-DS / SADI-S", note:"Sleeve + duodeno-ileal diversion; greatest weight loss and metabolic effect; highest malabsorption/vitamin deficiency"}
+    ]
+  },
+  criteria: {
+    title: "Selection, Contraindications & Peri-operative Milestones",
+    items: [
+      { k: "Eligibility (NICE/IFSO)", v: "BMI ≥40, or ≥35 with a comorbidity (T2DM, OSA, HTN); increasingly ≥30–35 with poorly-controlled T2DM" },
+      { k: "Favours sleeve over bypass", v: "Simpler risk profile, need for future endoscopic biliary access, IBD, or transplant candidacy" },
+      { k: "Favours bypass over sleeve", v: "Severe GERD / Barrett's, large hiatus hernia, poorly-controlled diabetes" },
+      { k: "Bougie / margin", v: "32–40 Fr bougie; start division 2–6 cm from pylorus; stay off the bougie at the incisura to avoid stenosis" },
+      { k: "Leak window", v: "Highest risk at the angle of His; suspect on day 3–10 with tachycardia, fever, left shoulder-tip pain" },
+      { k: "Nutrition follow-up", v: "Lifelong multivitamin, B12, iron, vitamin D; annual bloods" }
+    ]
+  },
+  technique: {
+    title: "Laparoscopic Sleeve Gastrectomy",
+    prep: [
+      "MDT workup (dietitian, psychology), pre-op liver-shrinkage diet, VTE prophylaxis, treat OSA",
+      "Screen for and note any hiatus hernia / GERD — plan concurrent hiatal repair if present",
+      "Supine reverse-Trendelenburg, split-leg or French position; 5 ports"
+    ],
+    steps: [
+      { n: 1, t: "Mobilise greater curve", d: "Divide the gastrocolic omentum along the greater curvature with an energy device from ~4 cm proximal to the pylorus up to the left crus, taking down short gastric vessels to the angle of His" },
+      { n: 2, t: "Assess hiatus", d: "Inspect the hiatus; formally repair any hiatus hernia (posterior cruroplasty) to reduce post-op reflux" },
+      { n: 3, t: "Insert bougie", d: "Anaesthetist passes a 32–40 Fr bougie along the lesser curve to the pylorus to calibrate the sleeve" },
+      { n: 4, t: "Staple the sleeve", d: "Serial firings of a linear stapler alongside the bougie from the antrum to the angle of His; keep the last firing away from the oesophagus to avoid a leak/stricture at the top" },
+      { n: 5, t: "Check staple line", d: "Inspect for bleeding; oversew or clip as needed; leak test (methylene blue or air under saline) to confirm integrity" },
+      { n: 6, t: "Extract & close", d: "Remove the resected stomach through a port site; check haemostasis; close the extraction-site fascia" }
+    ],
+    pearls: [
+      "Repair a coexisting hiatus hernia at the same operation — untreated, it drives severe post-sleeve reflux",
+      "Do not narrow the incisura over the bougie — the commonest site of a functional stricture",
+      "A low threshold for CT + contrast and reoperation/stenting when a leak is suspected — sepsis, not the leak itself, kills"
+    ]
+  },
+  guidelines: [
+    { src: "IFSO / ASMBS — bariatric and metabolic surgery guidelines" },
+    { src: "NICE — obesity: identification, assessment and management (bariatric criteria)" }
+  ],
+  pearls: [
+    "Sleeve is restrictive but its early anti-diabetic effect is hormonal (ghrelin↓, GLP-1/PYY↑), not just weight-driven",
+    "It preserves normal endoscopic access to the duodenum/biliary tree — an edge over RYGB",
+    "Reflux is the Achilles' heel: assess GERD carefully before choosing sleeve"
+  ],
+  mistakes: [
+    "Ignoring a hiatus hernia / significant GERD and creating a refluxing sleeve (may need conversion to bypass)",
+    "Stapling too close to the bougie at the incisura, causing stenosis",
+    "Under-recognising a staple-line leak — delayed source control leads to overwhelming sepsis"
+  ],
+  related: [
+    { id: "bariatric",           note: "Parent topic — indications and comparison of bariatric operations" },
+    { id: "gerd",                note: "Reflux is the main downside of sleeve; severe GERD favours bypass" },
+    { id: "hiatus-hernia",       note: "Repair concurrently to limit post-sleeve reflux" },
+    { id: "mis-energy",          note: "Greater-curve mobilisation relies on advanced energy devices" }
+  ]
+},
+{
+  id: "poem", dept: "mis",
+  name: "Per-Oral Endoscopic Myotomy (POEM)",
+  latin: "Myotomia endoscopica peroralis",
+  organ: "Esophagus (lower esophageal sphincter)",
+  severity: "moderate",
+  tags: ["endoscopy","achalasia","myotomy","NOTES","MIS","dysphagia"],
+  hero: "An incisionless myotomy for achalasia: working in a submucosal tunnel through a flexible scope, the circular muscle and LES are divided from inside the oesophagus.",
+  keypoints: [
+    "A natural-orifice (NOTES) technique — no skin incision; a mucosal entry, a submucosal tunnel, then endoscopic myotomy, then closure of the mucosal flap with clips",
+    "First-line for type III (spastic) achalasia because the myotomy length can be extended proximally as far as needed — beyond what a surgical Heller reaches",
+    "Comparable dysphagia relief to laparoscopic Heller myotomy, often shorter procedure and quicker recovery",
+    "The trade-off: no anti-reflux wrap is added, so post-POEM GERD is common (up to ~40–60%) and needs PPI and surveillance",
+    "Anterior or posterior tunnel orientations are both used; the myotomy divides circular muscle across the LES onto the gastric cardia (~2–3 cm gastric extension)",
+    "Requires CO2 insufflation and readiness to manage capnoperitoneum/pneumomediastinum"
+  ],
+  differentials: [
+    "Laparoscopic Heller myotomy + Dor/Toupet — surgical myotomy WITH an anti-reflux wrap; better for reflux control",
+    "Pneumatic balloon dilatation — less durable, repeat sessions, small perforation risk",
+    "Botulinum toxin injection to the LES — temporary; for frail/unfit patients or as a bridge",
+    "Medical therapy (nitrates, calcium-channel blockers) — poor efficacy, temporising only"
+  ],
+  overview: {
+    definition: "An endoscopic myotomy in which a submucosal tunnel is created in the oesophageal wall, the inner circular muscle layer and the lower oesophageal sphincter are divided, and the mucosal entry is closed — relieving the outflow obstruction of achalasia without any external incision.",
+    epidemiology: "Introduced in 2010 (Inoue), POEM has become a first-line option for achalasia at expert centres, and the procedure of choice for type III (spastic) achalasia and other spastic oesophageal disorders (e.g. jackhammer oesophagus, distal oesophageal spasm).",
+    pathophysiology: "Achalasia is failure of LES relaxation with loss of oesophageal peristalsis from degeneration of inhibitory myenteric neurons. Dividing the circular muscle across the LES lowers the sphincter pressure, allowing gravity-driven oesophageal emptying. Because no hiatal dissection or wrap is performed, the natural anti-reflux barrier is disrupted, predisposing to acid reflux.",
+    classification: [
+      {label:"By tunnel orientation", note:"Anterior (~2 o'clock) or posterior (~5 o'clock) myotomy — comparable outcomes"},
+      {label:"By muscle layers divided", note:"Selective circular-muscle myotomy vs full-thickness myotomy (faster, similar efficacy)"},
+      {label:"Best indication", note:"Type III (spastic) achalasia and spastic disorders — long myotomy tailored to manometry"},
+      {label:"G-POEM (variant)", note:"Gastric per-oral endoscopic pyloromyotomy — same tunnelling principle applied to the pylorus for refractory gastroparesis"}
+    ]
+  },
+  criteria: {
+    title: "Indications, Work-up & Post-procedure Care",
+    items: [
+      { k: "Best indication", v: "Type III (spastic) achalasia; also type I/II and spastic oesophageal disorders" },
+      { k: "Essential work-up", v: "High-resolution manometry (Chicago classification), endoscopy ± barium swallow to exclude pseudoachalasia/malignancy" },
+      { k: "Myotomy length", v: "Tailored to manometry — longer for type III; ~2–3 cm carried onto the gastric side" },
+      { k: "Closure", v: "Mucosal entry closed with endoscopic clips (or suturing); leak test" },
+      { k: "Post-op", v: "Contrast study before feeding at many centres; PPI ± reflux surveillance given high GERD rate" },
+      { k: "Main complication", v: "Post-POEM GERD (common); insufflation-related capnoperitoneum; mucosal injury/leak" }
+    ]
+  },
+  technique: {
+    title: "Per-Oral Endoscopic Myotomy (POEM)",
+    prep: [
+      "Confirm diagnosis with high-resolution manometry; clear liquid diet then fasting (achalasic oesophagus retains food)",
+      "CO2 insufflation mandatory; antibiotics; general anaesthesia with cuffed tube",
+      "Have decompression needle ready for capnoperitoneum"
+    ],
+    steps: [
+      { n: 1, t: "Mucosal entry", d: "Identify the level; inject to lift, then make a longitudinal mucosal incision ~10–13 cm above the GOJ to enter the submucosa" },
+      { n: 2, t: "Submucosal tunnel", d: "Dissect a tunnel distally through the submucosa, across the GOJ, ~2–3 cm onto the gastric cardia" },
+      { n: 3, t: "Myotomy", d: "Divide the inner circular muscle (or full thickness) from proximal oesophagus across the LES onto the stomach; length tailored to manometry" },
+      { n: 4, t: "Haemostasis", d: "Coagulate tunnel vessels; confirm a complete myotomy across the sphincter (loss of the tight ring)" },
+      { n: 5, t: "Close entry", d: "Withdraw to the mucosal incision and close it with endoscopic clips (or suture); confirm no leak" },
+      { n: 6, t: "Recover", d: "Monitor for chest pain/subcutaneous emphysema; contrast study before feeding at many centres; start PPI" }
+    ],
+    pearls: [
+      "Tailor myotomy length to manometry — POEM's key advantage is reaching a long spastic segment a Heller cannot",
+      "Expect and pre-counsel for reflux: no wrap is created, so PPI and surveillance are part of the plan",
+      "Use CO2, not air, and be ready to needle-decompress a tense capnoperitoneum"
+    ]
+  },
+  guidelines: [
+    { src: "ASGE / ESGE — POEM for achalasia clinical guidelines" },
+    { src: "ISDE / Chicago Classification v4.0 — achalasia subtyping guiding myotomy" }
+  ],
+  pearls: [
+    "POEM is the procedure of choice for type III (spastic) achalasia",
+    "Dysphagia relief rivals Heller myotomy but reflux rates are higher because no fundoplication is added",
+    "The same submucosal-tunnel principle underlies G-POEM for refractory gastroparesis"
+  ],
+  mistakes: [
+    "Skipping manometry — misclassifying the subtype and cutting the wrong myotomy length, or missing pseudoachalasia",
+    "Using air instead of CO2 — worse insufflation complications",
+    "Failing to warn about and treat post-POEM reflux (Barrett's/esophagitis risk if untreated)"
+  ],
+  related: [
+    { id: "achalasia",             note: "Primary disease; POEM and Heller myotomy are the definitive treatments" },
+    { id: "therapeutic-endoscopy", note: "POEM is an advanced NOTES application of therapeutic endoscopy" },
+    { id: "dysphagia",             note: "Achalasia is a key cause of the dysphagia POEM relieves" },
+    { id: "gord",                  note: "Post-POEM reflux is common and needs PPI/surveillance" }
+  ]
+},
+{
+  id: "partial-fundoplication", dept: "mis",
+  name: "Partial Fundoplication (Toupet & Dor)",
+  latin: "Fundoplicatio partialis",
+  organ: "Gastro-esophageal junction",
+  severity: "moderate",
+  tags: ["antireflux","fundoplication","Toupet","Dor","GERD","MIS"],
+  hero: "A partial (not 360°) wrap of stomach around the lower oesophagus — controls reflux while reducing the dysphagia and gas-bloat of a full Nissen, and the wrap of choice when peristalsis is weak.",
+  keypoints: [
+    "Toupet is a posterior 270° wrap; Dor is an anterior ~180° wrap — both are 'partial' alternatives to the 360° Nissen",
+    "Preferred over Nissen when oesophageal motility is impaired (e.g. scleroderma, ineffective peristalsis) because a looser wrap causes less dysphagia",
+    "Dor is the standard anti-reflux wrap added after a Heller myotomy — it also covers the exposed myotomy mucosa",
+    "Partial wraps have lower rates of dysphagia and gas-bloat than Nissen, at the cost of slightly less durable reflux control in some series",
+    "As with any fundoplication, success depends on adequate oesophageal mobilisation, crural repair, and a tension-free short wrap",
+    "Choice of wrap (Nissen vs Toupet vs Dor) is tailored to pre-op manometry and the operation being performed"
+  ],
+  differentials: [
+    "Nissen fundoplication (360°) — best reflux control; more dysphagia / gas-bloat; needs adequate motility",
+    "Toupet (posterior 270°) — partial wrap of choice for GERD with weak peristalsis",
+    "Dor (anterior 180°) — partial wrap after Heller myotomy; covers the myotomy",
+    "Magnetic sphincter augmentation (LINX) — device alternative in selected GERD",
+    "Medical therapy (PPI) / endoscopic anti-reflux — non-operative options"
+  ],
+  overview: {
+    definition: "Anti-reflux operations that wrap only part of the oesophageal circumference with gastric fundus — posteriorly through 270° (Toupet) or anteriorly through ~180° (Dor) — to re-create a competent lower oesophageal barrier while limiting outflow resistance.",
+    epidemiology: "Partial wraps are widely used for GERD in patients with disordered motility and as the routine anti-reflux adjunct to achalasia surgery (Dor after Heller myotomy).",
+    pathophysiology: "A fundal wrap augments the lower-oesophageal high-pressure zone and accentuates the angle of His, reducing acid reflux. A partial (vs complete) wrap provides less outflow resistance, so a poorly-peristaltic oesophagus can still empty — trading a little reflux control for markedly less post-operative dysphagia and gas-bloat.",
+    classification: [
+      {label:"Toupet (posterior 270°)", note:"Fundus brought behind the oesophagus and sutured to each side; partial wrap of choice for GERD with impaired motility"},
+      {label:"Dor (anterior 180°)", note:"Fundus laid over the front of the oesophagus; standard after Heller myotomy, buttressing the myotomy"},
+      {label:"Nissen (360°, for contrast)", note:"Complete wrap — maximal reflux control but requires adequate peristalsis"},
+      {label:"Selection driver", note:"Pre-op high-resolution manometry and the index operation determine which wrap"}
+    ]
+  },
+  criteria: {
+    title: "When to Choose a Partial Wrap",
+    items: [
+      { k: "Toupet indication", v: "GERD needing surgery WITH ineffective/weak oesophageal peristalsis on manometry" },
+      { k: "Dor indication", v: "Routine anti-reflux wrap after laparoscopic Heller myotomy for achalasia" },
+      { k: "Prefer over Nissen when", v: "Poor motility, high dysphagia risk, or a myotomy needs covering" },
+      { k: "Shared prerequisites", v: "Adequate distal oesophageal mobilisation, crural repair, short (~2 cm) floppy wrap" },
+      { k: "Outcome trade-off", v: "Less dysphagia and gas-bloat than Nissen; reflux control slightly less complete in some studies" },
+      { k: "Work-up", v: "Endoscopy, pH study, and manometry before any fundoplication" }
+    ]
+  },
+  technique: {
+    title: "Laparoscopic Toupet (Posterior 270°) Fundoplication",
+    prep: [
+      "Confirm GERD (pH study) and assess motility (manometry) — manometry selects partial vs complete wrap",
+      "Supine reverse-Trendelenburg, 5 ports, liver retractor",
+      "Consent covering dysphagia, gas-bloat, recurrence and wrap failure"
+    ],
+    steps: [
+      { n: 1, t: "Hiatal dissection", d: "Divide the gastrohepatic omentum; expose both crura; encircle and mobilise the distal oesophagus into the abdomen for tension-free length" },
+      { n: 2, t: "Mobilise fundus", d: "Divide short gastric vessels so the fundus reaches easily behind the oesophagus without tension" },
+      { n: 3, t: "Crural repair", d: "Approximate the crura posteriorly with non-absorbable sutures, calibrated over a bougie to avoid stenosis" },
+      { n: 4, t: "Pass the wrap", d: "Bring the fundus posteriorly around the oesophagus (shoeshine manoeuvre to confirm it lies without twist)" },
+      { n: 5, t: "Fashion 270°", d: "Suture the fundus to the right and left sides of the oesophagus (and to the crura), leaving the anterior ~90° uncovered — a 270° posterior wrap" },
+      { n: 6, t: "Check", d: "Confirm a floppy, short wrap with the anterior oesophagus visible; haemostasis; remove bougie" }
+    ],
+    pearls: [
+      "Match the wrap to manometry: weak peristalsis → partial (Toupet); normal peristalsis and pure reflux → Nissen",
+      "After a Heller myotomy, add a Dor to control reflux and cover the exposed mucosa",
+      "A tension-free, adequately mobilised oesophagus is the key to avoiding wrap failure and recurrence"
+    ]
+  },
+  guidelines: [
+    { src: "SAGES — guidelines for surgical treatment of GERD" },
+    { src: "ISDE / UEG — achalasia and GERD management (wrap selection)" }
+  ],
+  pearls: [
+    "Toupet = posterior 270°; Dor = anterior 180° — both trade a little reflux control for far less dysphagia",
+    "Dor is the default wrap after Heller myotomy",
+    "Manometry drives wrap choice; a full Nissen on a poorly-motile oesophagus risks severe dysphagia"
+  ],
+  mistakes: [
+    "Performing a Nissen on a patient with impaired peristalsis, causing troublesome dysphagia",
+    "Inadequate oesophageal mobilisation → a wrap under tension that migrates or fails",
+    "Omitting an anti-reflux wrap after Heller myotomy"
+  ],
+  related: [
+    { id: "gerd",       note: "Partial wraps are anti-reflux options, especially with poor motility" },
+    { id: "gord",       note: "Same disease — surgical anti-reflux options" },
+    { id: "achalasia",  note: "Dor fundoplication is added after Heller myotomy" },
+    { id: "hiatus-hernia", note: "Hiatal repair is part of any fundoplication" }
+  ]
+},
+{
+  id: "feeding-jejunostomy", dept: "mis",
+  name: "Feeding Jejunostomy & PEJ",
+  latin: "Jejunostomia alimentaria",
+  organ: "Proximal jejunum",
+  severity: "moderate",
+  tags: ["enteral access","feeding","jejunostomy","nutrition","MIS"],
+  hero: "Post-pyloric enteral access — a catheter into the proximal jejunum for feeding when the stomach must be bypassed, as after upper-GI resection or with high aspiration risk.",
+  keypoints: [
+    "Chosen over PEG when gastric feeding is impossible or unsafe: after oesophagectomy/gastrectomy, gastric outlet obstruction, severe gastroparesis, or high aspiration risk",
+    "Routes: surgical (open or laparoscopic) feeding jejunostomy, direct percutaneous endoscopic jejunostomy (direct-PEJ), or a jejunal extension through a gastrostomy (PEG-J)",
+    "Feed must be continuous/pump-controlled — the jejunum has no reservoir, so bolus feeding causes cramps, dumping and diarrhoea",
+    "A surgical jejunostomy is frequently placed at the time of an upper-GI cancer resection to secure nutrition during recovery",
+    "Feared complication: small-bowel volvulus/torsion around the fixation point, and tube dislodgement with intraperitoneal leak before the tract matures",
+    "Witzel tunnel or a needle-catheter (fine-bore) technique with bowel-to-wall fixation reduces leakage around the tube"
+  ],
+  differentials: [
+    "PEG (gastrostomy) — simpler, preferred when the stomach is available and gastric feeding is safe",
+    "PEG-J / direct-PEJ — endoscopic post-pyloric options avoiding laparotomy",
+    "Nasojejunal (NJ) tube — non-operative, short-term post-pyloric feeding",
+    "Parenteral nutrition (TPN) — when the gut is non-functioning or inaccessible"
+  ],
+  overview: {
+    definition: "Placement of a feeding catheter directly into the proximal jejunum — surgically (open/laparoscopic), endoscopically (direct-PEJ), or via a gastrostomy extension (PEG-J) — to deliver enteral nutrition distal to the stomach.",
+    epidemiology: "Commonly created as an adjunct during upper-GI cancer surgery (oesophagectomy, gastrectomy) and in patients with gastric outlet obstruction or refractory gastroparesis who need durable post-pyloric feeding.",
+    pathophysiology: "Bypassing the stomach and pylorus allows nutrition when gastric emptying is obstructed, absent (post-resection) or unsafe (aspiration risk). Because the jejunum lacks the stomach's reservoir and osmotic buffering, feed must be delivered slowly and continuously; rapid delivery draws fluid into the lumen, causing dumping-type symptoms.",
+    classification: [
+      {label:"Surgical jejunostomy", note:"Open or laparoscopic; Witzel-tunnelled or needle-catheter; bowel fixed to abdominal wall — common adjunct at upper-GI resection"},
+      {label:"Direct-PEJ", note:"Endoscopic direct puncture of a jejunal loop transilluminated at the abdominal wall (enteroscope-assisted)"},
+      {label:"PEG-J", note:"Jejunal extension tube passed through an existing PEG for post-pyloric feeding with gastric decompression"},
+      {label:"Nasojejunal (temporary)", note:"Non-operative bridge for short-term post-pyloric feeding"}
+    ]
+  },
+  criteria: {
+    title: "Indications, Delivery & Complications",
+    items: [
+      { k: "Core indications", v: "Post oesophagectomy/gastrectomy, gastric outlet obstruction, severe gastroparesis, high aspiration risk" },
+      { k: "Feeding rule", v: "Continuous pump feeding only — no bolus (jejunum has no reservoir → dumping/diarrhoea)" },
+      { k: "Placement timing", v: "Often at the time of upper-GI resection to secure peri-operative nutrition" },
+      { k: "Fixation", v: "Bowel sutured to the abdominal wall (Witzel tunnel or T-fasteners) to prevent leak and torsion" },
+      { k: "Key complications", v: "Tube dislodgement/intraperitoneal leak, small-bowel volvulus around the fixation, peritubal leakage, tube blockage" },
+      { k: "Start feeding", v: "Introduce slowly and build rate to target over 24–48 h" }
+    ]
+  },
+  technique: {
+    title: "Surgical (Witzel) Feeding Jejunostomy",
+    prep: [
+      "Confirm the need for post-pyloric access and that gastric feeding is unsuitable",
+      "Often performed as an add-on at laparotomy/laparoscopy for the index resection",
+      "Mark an exit site in the left upper quadrant; fine-bore feeding catheter ready"
+    ],
+    steps: [
+      { n: 1, t: "Select jejunal loop", d: "Identify a proximal jejunal loop ~20–30 cm distal to the DJ flexure that reaches the abdominal wall without tension" },
+      { n: 2, t: "Enterotomy & catheter", d: "Place a purse-string; make a small antimesenteric enterotomy and pass the catheter distally into the lumen" },
+      { n: 3, t: "Witzel tunnel", d: "Bury the catheter in a seromuscular tunnel (Witzel) for several cm to create a valve that prevents leakage around the tube" },
+      { n: 4, t: "Fix to abdominal wall", d: "Bring the catheter out through a separate stab; suture the loop to the parietal peritoneum around the exit to prevent leak and torsion" },
+      { n: 5, t: "Test", d: "Flush the catheter to confirm free flow and no leak; secure externally at the skin" },
+      { n: 6, t: "Feed", d: "Begin continuous feeding slowly, increasing to target over 24–48 h; daily flushes to prevent blockage" }
+    ],
+    pearls: [
+      "Never bolus a jejunostomy — continuous pump feeding avoids dumping and diarrhoea",
+      "Adequate bowel-to-wall fixation prevents the two big problems: peritubal leak and small-bowel torsion",
+      "Flush regularly; fine-bore tubes block easily and are hard to unblock"
+    ]
+  },
+  guidelines: [
+    { src: "ESPEN / ASPEN — clinical nutrition and enteral-access guidelines" },
+    { src: "NICE CG32 — Nutrition support in adults" }
+  ],
+  pearls: [
+    "Jejunostomy is the answer when you must feed but cannot use the stomach (post-resection, obstruction, aspiration)",
+    "A jejunostomy placed at cancer surgery secures nutrition through the recovery period",
+    "Continuous feeding and good fixation are the two rules that keep it trouble-free"
+  ],
+  mistakes: [
+    "Bolus feeding a jejunostomy — predictable cramping, dumping and diarrhoea",
+    "Poor fixation leading to leak into the peritoneum or volvulus around the tube",
+    "Blindly replacing a dislodged tube before the tract matures — risk of intraperitoneal misplacement"
+  ],
+  related: [
+    { id: "peg",                        note: "Gastric alternative; jejunostomy is used when gastric feeding is unsafe/impossible" },
+    { id: "oesophageal-cancer",         note: "Feeding jejunostomy commonly placed at oesophagectomy" },
+    { id: "gastric-ca",                 note: "Post-gastrectomy nutrition via jejunostomy" },
+    { id: "gastric-outlet-obstruction", note: "Post-pyloric feeding route bypassing the obstruction" }
+  ]
+},
+{
+  id: "balloon-tamponade", dept: "mis",
+  name: "Balloon Tamponade for Variceal Haemorrhage",
+  latin: "Tamponamentum ballooni",
+  organ: "Esophagus / gastric fundus",
+  severity: "high",
+  tags: ["variceal bleeding","Sengstaken","tamponade","rescue","endoscopy","MIS"],
+  hero: "A life-saving temporising rescue for exsanguinating variceal bleeding when endoscopy fails — a balloon tube compresses the varices to buy hours until definitive therapy (TIPSS).",
+  keypoints: [
+    "A bridge, not a cure: it controls bleeding for ≤24 h while arranging definitive treatment (repeat endoscopy or TIPSS) — varices re-bleed when the balloon is deflated",
+    "Sengstaken–Blakemore tube (gastric + oesophageal balloons + gastric aspiration) or Minnesota tube (adds an oesophageal aspiration port)",
+    "ALWAYS confirm gastric-balloon position below the diaphragm (on X-ray or by technique) BEFORE full inflation — inflating in the oesophagus can rupture it",
+    "Protect the airway first: intubate the exsanguinating, encephalopathic patient before insertion to prevent aspiration",
+    "Apply gentle traction to seat the gastric balloon against the GOJ; the oesophageal balloon is only inflated if bleeding continues, and is released periodically to avoid pressure necrosis",
+    "Continue vasoactive drugs (terlipressin), antibiotics and resuscitation alongside; effective in ~80–90% temporarily"
+  ],
+  differentials: [
+    "Endoscopic band ligation / cyanoacrylate — first-line definitive control of variceal bleeding",
+    "TIPSS (transjugular intrahepatic portosystemic shunt) — definitive rescue for uncontrolled/refractory variceal bleeding",
+    "Self-expanding covered oesophageal stent (e.g. SX-Ella Danis) — an alternative to balloon tamponade with fewer complications",
+    "Pharmacological (terlipressin/octreotide) + antibiotics — adjuncts given in all cases"
+  ],
+  overview: {
+    definition: "Temporary mechanical compression of bleeding gastro-oesophageal varices using a multi-lumen balloon tube (Sengstaken–Blakemore or Minnesota), used as a rescue bridge when endoscopic and pharmacological control has failed and the patient is exsanguinating.",
+    epidemiology: "Reserved for the minority of variceal bleeds refractory to endoscopy — a high-mortality scenario reflecting decompensated portal hypertension (usually cirrhosis).",
+    pathophysiology: "Portal hypertension diverts blood through porto-systemic collaterals, forming gastro-oesophageal varices that rupture at high wall tension. An inflated gastric balloon seated at the cardia, under traction, tamponades the feeding veins at the GOJ; an oesophageal balloon compresses oesophageal varices directly. Compression stops flow but does not treat the underlying portal hypertension, so bleeding resumes on deflation unless definitive therapy follows.",
+    classification: [
+      {label:"Sengstaken–Blakemore tube", note:"Three lumens: gastric balloon, oesophageal balloon, gastric aspiration"},
+      {label:"Minnesota tube", note:"Four lumens: adds an oesophageal aspiration port above the oesophageal balloon"},
+      {label:"Linton–Nachlas tube", note:"Single large gastric balloon — for predominantly gastric variceal bleeding"},
+      {label:"Modern alternative", note:"Self-expanding covered oesophageal stent achieves tamponade with fewer necrosis/aspiration risks"}
+    ]
+  },
+  criteria: {
+    title: "Use, Safety Checks & Complications",
+    items: [
+      { k: "Indication", v: "Massive variceal bleeding uncontrolled by endoscopy/drugs — a temporising rescue only" },
+      { k: "Airway first", v: "Intubate before insertion in the exsanguinating/encephalopathic patient (aspiration risk)" },
+      { k: "Position check", v: "Confirm gastric balloon is subdiaphragmatic BEFORE full inflation (X-ray) — inflating in the oesophagus ruptures it" },
+      { k: "Traction", v: "Gentle traction (e.g. ~0.5–1 kg or against a helmet/cushion) seats the gastric balloon at the GOJ" },
+      { k: "Oesophageal balloon", v: "Inflate only if bleeding persists; deflate periodically to prevent mucosal pressure necrosis" },
+      { k: "Time limit", v: "≤24 h, then definitive therapy (TIPSS / repeat endoscopy); high re-bleed on deflation" },
+      { k: "Complications", v: "Oesophageal rupture, aspiration pneumonia, mucosal necrosis/ulceration, airway obstruction if displaced" }
+    ]
+  },
+  technique: {
+    title: "Sengstaken–Blakemore Tube Insertion",
+    prep: [
+      "Resuscitate (major haemorrhage protocol), correct coagulopathy, start terlipressin + antibiotics",
+      "Secure the airway — intubate the exsanguinating or encephalopathic patient first",
+      "Check tube balloons for leaks; chill the tube to stiffen if needed; mark lengths"
+    ],
+    steps: [
+      { n: 1, t: "Insert orally/nasally", d: "Pass the deflated tube into the stomach (~50 cm at the incisors); aspirate the gastric port to confirm gastric placement" },
+      { n: 2, t: "Confirm position", d: "Verify the gastric balloon lies below the diaphragm (X-ray or reliable technique) BEFORE inflating fully" },
+      { n: 3, t: "Inflate gastric balloon", d: "Inflate the gastric balloon in stages (to ~250–300 mL air) — stop immediately if there is pain (suggests oesophageal malposition)" },
+      { n: 4, t: "Apply traction", d: "Withdraw until the balloon seats snugly at the GOJ; apply gentle traction to tamponade the cardia" },
+      { n: 5, t: "Oesophageal balloon if needed", d: "If bleeding continues, inflate the oesophageal balloon to a manometer-controlled pressure (~30–40 mmHg); release intermittently" },
+      { n: 6, t: "Aspirate & plan", d: "Aspirate gastric (and oesophageal, Minnesota) ports; arrange urgent TIPSS or repeat endoscopy; deflate under controlled conditions" }
+    ],
+    pearls: [
+      "The single commonest fatal error is inflating the gastric balloon in the oesophagus — confirm position first",
+      "It only buys time: line up TIPSS / definitive endoscopy before the balloon goes down",
+      "Deflate the oesophageal balloon periodically to avoid pressure necrosis; keep the airway secured throughout"
+    ]
+  },
+  guidelines: [
+    { src: "Baveno VII — management of portal hypertension and variceal bleeding" },
+    { src: "BSG — UK guidelines on variceal haemorrhage (rescue tamponade / stents)" }
+  ],
+  pearls: [
+    "Balloon tamponade is a rescue bridge to TIPSS, not definitive therapy",
+    "Confirm the gastric balloon is below the diaphragm before full inflation — oesophageal inflation can be fatal",
+    "A covered oesophageal stent is a modern alternative with fewer complications"
+  ],
+  mistakes: [
+    "Inflating the gastric balloon while it is still in the oesophagus → oesophageal rupture",
+    "Inserting without securing the airway in an obtunded, bleeding patient → aspiration",
+    "Leaving the oesophageal balloon inflated continuously → mucosal pressure necrosis"
+  ],
+  related: [
+    { id: "ugib",                  note: "Variceal bleeding is a major cause of upper-GI haemorrhage" },
+    { id: "upper-gi-bleed",        note: "Balloon tamponade is the rescue step for refractory variceal bleeding" },
+    { id: "therapeutic-endoscopy", note: "Endoscopic band ligation is first-line; tamponade rescues failures" },
+    { id: "melena",                note: "Variceal bleeding can present as melena or haematemesis" }
+  ]
+},
+{
+  id: "lap-inguinal-hernia", dept: "mis",
+  name: "Laparoscopic Inguinal Hernia Repair (TEP & TAPP)",
+  latin: "Herniorrhaphia inguinalis laparoscopica",
+  organ: "Groin (myopectineal orifice)",
+  severity: "low",
+  tags: ["hernia","laparoscopic","TEP","TAPP","mesh","MIS"],
+  hero: "Minimally invasive mesh repair of the groin from behind — covering the whole myopectineal orifice in the preperitoneal space; the approach of choice for bilateral and recurrent (post-open) hernias.",
+  keypoints: [
+    "Two techniques: TEP (totally extraperitoneal — stays outside the peritoneum) and TAPP (transabdominal preperitoneal — enters the abdomen, then opens the peritoneum over the defect)",
+    "A single large mesh in the preperitoneal space covers direct, indirect AND femoral defects (the whole myopectineal orifice of Fruchaud)",
+    "Best indications: bilateral hernias (repair both through the same ports) and recurrence after previous open (anterior) repair — virgin planes from behind",
+    "Faster return to activity and less chronic pain than open in experienced hands, but a steeper learning curve and needs general anaesthesia",
+    "Know the danger zones: the 'triangle of doom' (external iliac vessels) and 'triangle of pain' (genitofemoral & lateral cutaneous nerves) — no tacks there",
+    "TAPP is often preferred for very large, incarcerated or scrotal hernias and when diagnostic laparoscopy is useful; TEP avoids entering the peritoneal cavity"
+  ],
+  differentials: [
+    "Open Lichtenstein (tension-free mesh) — simpler, local anaesthetic possible; preferred for primary unilateral hernia or hostile pelvis",
+    "TEP — totally extraperitoneal laparoscopic repair (no peritoneal breach)",
+    "TAPP — transabdominal preperitoneal laparoscopic repair",
+    "Robotic TAPP — for complex/recurrent cases at suitable centres",
+    "Watchful waiting — reasonable for a minimally symptomatic reducible hernia"
+  ],
+  overview: {
+    definition: "Minimally invasive repair of an inguinal hernia in which prosthetic mesh is placed in the preperitoneal space behind the defect, either without entering the peritoneal cavity (TEP) or by entering it and reflecting the peritoneum (TAPP), reinforcing the entire myopectineal orifice.",
+    epidemiology: "Laparoscopic repair accounts for a large and growing share of elective inguinal hernia surgery; guidelines favour it particularly for bilateral and recurrent (post-anterior-repair) hernias and in women (higher femoral-hernia rate).",
+    pathophysiology: "Groin hernias protrude through the myopectineal orifice — a weak area bounded by muscle and inguinal ligament and traversed by the cord. A posterior mesh, held in place by intra-abdominal pressure (Pascal's principle) across the whole orifice, buttresses direct, indirect and femoral zones simultaneously, unlike an anterior repair that addresses only the approached defect.",
+    classification: [
+      {label:"TEP (totally extraperitoneal)", note:"Balloon-created preperitoneal space; peritoneum never opened; no intraperitoneal mesh contact"},
+      {label:"TAPP (transabdominal preperitoneal)", note:"Enter abdomen, incise peritoneum over the defect, place mesh, re-close peritoneum over it"},
+      {label:"Robotic TAPP", note:"Robotic platform — ergonomic advantage for complex/recurrent repair"},
+      {label:"Guideline sweet-spot", note:"Bilateral and recurrent-after-open hernias, and women, benefit most from the laparoscopic route"}
+    ]
+  },
+  criteria: {
+    title: "Selection, Anatomy & Pitfalls",
+    items: [
+      { k: "Strong indications", v: "Bilateral hernias; recurrence after previous open repair; female patients (femoral risk)" },
+      { k: "TEP vs TAPP", v: "TEP avoids the peritoneal cavity; TAPP handles large/incarcerated/scrotal hernias and allows diagnostic laparoscopy" },
+      { k: "Mesh coverage", v: "Cover the whole myopectineal orifice with generous overlap of all three zones" },
+      { k: "Triangle of doom", v: "Bounded by vas and gonadal vessels — contains external iliac vessels; NO fixation here" },
+      { k: "Triangle of pain", v: "Lateral to gonadal vessels — genitofemoral & lateral femoral cutaneous nerves; NO tacks here" },
+      { k: "Relative cautions", v: "Previous preperitoneal surgery/radiotherapy, inability to tolerate GA, large irreducible scrotal hernia (favour open/TAPP)" }
+    ]
+  },
+  technique: {
+    title: "Laparoscopic TEP Repair (with TAPP contrast)",
+    prep: [
+      "General anaesthesia; empty bladder (catheter if needed); supine, arms tucked, surgeon on the contralateral side",
+      "Consent covering conversion, seroma, chronic pain, recurrence, vascular/visceral and nerve injury",
+      "TAPP variant: standard pneumoperitoneum and intraperitoneal start"
+    ],
+    steps: [
+      { n: 1, t: "Access the plane", d: "TEP: infraumbilical incision, enter the posterior rectus sheath and use a balloon to develop the preperitoneal space. TAPP: pneumoperitoneum, then incise the peritoneum above the defect" },
+      { n: 2, t: "Create working space", d: "Insufflate the preperitoneal space (TEP) or reflect the peritoneal flap (TAPP) to expose the myopectineal orifice" },
+      { n: 3, t: "Reduce the sac", d: "Reduce the hernia sac; for an indirect sac, dissect it off the cord structures (ligate/divide a large sac if needed)" },
+      { n: 4, t: "Identify landmarks", d: "Define the pubic tubercle, Cooper's ligament, epigastric vessels, and the triangles of doom and pain" },
+      { n: 5, t: "Place mesh", d: "Position a large mesh (~10×15 cm) to cover direct, indirect and femoral spaces with wide overlap; fixation optional and only in safe zones" },
+      { n: 6, t: "Close", d: "TAPP: re-approximate the peritoneum over the mesh (tacks/suture/glue). Desufflate slowly keeping mesh flat; close port sites" }
+    ],
+    pearls: [
+      "No tacks or staples in the triangles of doom and pain — the mechanism of vascular injury and chronic neuralgia",
+      "In TAPP, close the peritoneum completely over the mesh to prevent adhesions/internal hernia",
+      "Choose laparoscopic for bilateral and recurrent-after-open hernias; choose open for a primary unilateral hernia in an unfit patient"
+    ]
+  },
+  guidelines: [
+    { src: "HerniaSurge / International Guidelines for Groin Hernia Management" },
+    { src: "EAES / EHS — laparoscopic inguinal hernia repair recommendations" }
+  ],
+  pearls: [
+    "One posterior mesh covers all three groin-hernia zones — the conceptual advantage over anterior repair",
+    "TEP stays out of the abdomen; TAPP enters it — outcomes are similar, choice is case- and surgeon-dependent",
+    "Laparoscopic repair shines for bilateral and recurrent (post-open) hernias"
+  ],
+  mistakes: [
+    "Fixation in the triangle of doom or pain → iliac-vessel injury or chronic neuralgia",
+    "Undersized mesh or inadequate overlap → recurrence",
+    "Failing to close the peritoneum over the mesh in TAPP → adhesive/obstructive complications"
+  ],
+  related: [
+    { id: "inguinal-hernia",       note: "Parent disease — open (Lichtenstein) vs laparoscopic TEP/TAPP repair" },
+    { id: "diagnostic-laparoscopy", note: "TAPP begins with a transabdominal laparoscopic view of the defect" },
+    { id: "mis-principles",         note: "Preperitoneal working space and pneumoperitoneum principles" },
+    { id: "incisional-hernia",      note: "Shared prosthetic-mesh and abdominal-wall repair principles" }
+  ]
 }
 ];
 
