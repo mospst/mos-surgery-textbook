@@ -299,6 +299,28 @@ input, select { font-family: inherit; }
 }
 .topbar-btn.primary:hover { background: #0860c4; }
 
+/* In-app Back button — always available (breadcrumbs alone aren't a Back, and
+   an installed PWA has no browser Back chrome). Sits between the menu toggle
+   and the breadcrumbs. */
+.back-btn {
+  appearance: none;
+  border: 1px solid var(--rule);
+  background: rgba(0,0,0,0.04);
+  color: var(--ink);
+  border-radius: var(--r-sm);
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex; align-items: center; gap: 6px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: all 0.15s var(--ease);
+  letter-spacing: -0.005em;
+}
+.back-btn:hover { background: rgba(0,0,0,0.08); }
+.back-btn:active { background: rgba(0,0,0,0.12); }
+.back-btn .back-arrow { font-size: 15px; line-height: 1; }
+
 /* Content */
 .content {
   padding: 56px var(--content-pad) 120px;

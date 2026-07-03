@@ -25,9 +25,47 @@ function useLocalState(key, initial) {
   return [v, setV];
 }
 
+// ── Route ⇄ URL-hash mapping ───────────────────────────────────────────────
+// Encodes the in-app route into the URL hash so a page reload restores the
+// same view (fixes "refresh drops me back to Home"), and each navigation is a
+// real history entry so the browser/OS Back gesture works.
+// Views with only a name map to "#/<view>"; parameterised views carry their id.
+const SIMPLE_VIEWS = ["quiz", "algorithms", "procedures", "imageQuiz", "wrongAnswers", "bookmarks", "compare", "study"];
+function encodeRoute(r) {
+  if (!r || r.view === "home") return "#/";
+  if (r.view === "dept")   return "#/dept/" + encodeURIComponent(r.deptId || "");
+  if (r.view === "detail") return "#/d/" + encodeURIComponent(r.diseaseId || "");
+  if (r.view === "procedures" && r.procedureId) return "#/procedures/" + encodeURIComponent(r.procedureId);
+  if (SIMPLE_VIEWS.includes(r.view)) return "#/" + r.view;
+  return "#/";
+}
+function decodeRoute(hash) {
+  const h = (hash || "").replace(/^#\/?/, "");
+  if (!h) return { view: "home" };
+  const parts = h.split("/");
+  const seg = parts[0];
+  const arg = parts[1] ? decodeURIComponent(parts[1]) : "";
+  if (seg === "dept")   return arg ? { view: "dept", deptId: arg } : { view: "home" };
+  if (seg === "d")      return arg ? { view: "detail", diseaseId: arg } : { view: "home" };
+  if (seg === "procedures") return arg ? { view: "procedures", procedureId: arg } : { view: "procedures" };
+  if (seg === "home")   return { view: "home" };
+  if (SIMPLE_VIEWS.includes(seg)) return { view: seg };
+  return { view: "home" };
+}
+// Guard deep links: a hash pointing at a since-renamed/removed id (old bookmark)
+// must fall back to Home rather than crash the detail/dept view on a missing
+// entity. Runs for initial load, Back/Forward, and refresh.
+function normalizeRoute(r) {
+  const D = (window.SK_DATA && window.SK_DATA.DISEASES) || [];
+  const DEPTS = (window.SK_DATA && window.SK_DATA.DEPARTMENTS) || [];
+  if (r.view === "detail" && !D.some((d) => d.id === r.diseaseId)) return { view: "home" };
+  if (r.view === "dept" && !DEPTS.some((d) => d.id === r.deptId)) return { view: "home" };
+  return r;
+}
+
 function App() {
   const [t, setT] = useTweaks(TWEAK_DEFAULTS);
-  const [route, setRoute] = uSt({ view: "home" });
+  const [route, setRoute] = uSt(() => normalizeRoute(decodeRoute(window.location.hash)));
   const [bookmarks, setBookmarks] = useLocalState("sk_bookmarks", ["aaa", "ap"]);
   const [progress, setProgress] = useLocalState("sk_progress", {});
   const [searchOpen, setSearchOpen] = uSt(false);
@@ -50,7 +88,10 @@ function App() {
 
   const resetProgress = () => setProgress({});
 
-  const goto = (r) => {
+  // Apply a route to the UI (state + close overlays + scroll to top). Shared by
+  // goto (forward navigation) and the popstate handler (Back/Forward) — the
+  // latter must NOT push a new history entry, so history work stays out of here.
+  const applyRoute = (r) => {
     setRoute(r);
     setSearchOpen(false);
     setSearchQ("");
@@ -61,6 +102,25 @@ function App() {
       window.scrollTo(0, 0);
     }, 0);
   };
+
+  const goto = (r) => {
+    // Push a real history entry so refresh restores this view and Back returns
+    // to the previous one. Full route object is kept in history.state so extras
+    // like deptDiseases survive Back/Forward (the hash only carries the id).
+    try { window.history.pushState(r, "", encodeRoute(r)); } catch {}
+    applyRoute(r);
+  };
+
+  const goBack = () => window.history.back();
+
+  // Seed the first history entry and listen for Back/Forward (and mobile OS
+  // back gestures / installed-PWA navigation).
+  uEf(() => {
+    try { window.history.replaceState(route, "", encodeRoute(route)); } catch {}
+    const onPop = (e) => applyRoute(normalizeRoute((e.state && e.state.view) ? e.state : decodeRoute(window.location.hash)));
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   uEf(() => {
     const onKey = (e) => {
@@ -205,6 +265,16 @@ function App() {
           >
             ☰
           </button>
+          {route.view !== "home" && (
+            <button
+              className="back-btn"
+              aria-label="Go back"
+              onClick={goBack}
+            >
+              <span className="back-arrow">←</span>
+              <span className="back-label">Back</span>
+            </button>
+          )}
           <div className="crumbs">
             {crumb.map(([label, target], i) => (
               <React.Fragment key={i}>
