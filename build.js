@@ -14,6 +14,7 @@ const SOURCE_FILES = [
   'tweaks-panel.jsx',
   'data.jsx',
   'components.jsx',
+  'figures.jsx',
   'views.jsx',
   'app.jsx',
 ];

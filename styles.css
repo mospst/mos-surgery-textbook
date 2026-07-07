@@ -2196,6 +2196,27 @@ ul.clean li::before {
 .diff-list { display: flex; flex-wrap: wrap; gap: 6px; }
 .diff-item { background: var(--bg-tint); border-radius: 20px; padding: 4px 11px; font-size: 12px; font-weight: 500; color: var(--ink-mute); }
 
+/* ─── FIGURES & DIAGRAMS (embedded original SVG) ─────────────────────────── */
+.figure-stack { display: flex; flex-direction: column; gap: 22px; }
+.figure-block {
+  margin: 0;
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: var(--r-md);
+  padding: 18px 20px 16px;
+}
+.figure-title { font-size: 13px; font-weight: 700; color: var(--ink); letter-spacing: -0.005em; margin-bottom: 14px; }
+.figure-svg {
+  background: var(--bg-warm);
+  border: 0.5px solid var(--rule);
+  border-radius: var(--r-sm);
+  padding: 16px 14px;
+  overflow-x: auto;                 /* wide diagrams scroll rather than squash on phone */
+}
+.figure-svg svg { min-width: 320px; }
+.figure-caption { font-size: 12.5px; line-height: 1.6; color: var(--ink-mute); margin: 14px 2px 0; }
+.figure-ref { font-size: 11px; color: var(--ink-soft); margin-top: 8px; padding-left: 2px; font-family: var(--mono); }
+
 /* ─── MNEMONICS ──────────────────────────────────────────────────────────── */
 .mnemonic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; }
 .mnemonic-card { background: linear-gradient(135deg, #f0f4ff, #e8f1fc); border: 0.5px solid #c0d0f0; border-radius: var(--r-md); padding: 18px 20px; }

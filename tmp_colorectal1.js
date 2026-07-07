@@ -735,5 +735,58 @@ window._TMP_COLORECTAL1 = [
   guidelines:[{src:"ASCRS Practice Parameters: Pilonidal Disease 2019"},{src:"ACPGBI Position Statement: Pilonidal Sinus 2020"},{src:"ESCP Pilonidal Disease Guidelines 2019"}],
   pearls:["Karydakis or Limberg flap: <5% recurrence vs 15–20% with midline closure or open healing","Hair removal (laser or regular shaving): essential adjunct — reduces recurrence significantly","Pit-picking: excellent for selected simple cases — rapid recovery, 80% success","Acute abscess: drain only; plan definitive flap repair electively"],
   mistakes:["Primary closure of acute abscess in natal cleft — high wound breakdown rate","Midline closure of chronic pilonidal disease — major risk factor for recurrence","Wide local excision without off-midline reconstruction — 15–20% recurrence vs <5% with flap","Neglecting post-operative hair removal — recurrence rate returns to untreated levels"]
+},
+{
+  id:"colorectal-polyp", dept:"colorectal", name:"Colorectal Polyp", latin:"Polypus coli et recti", organ:"Colon",
+  severity:"moderate", tags:["polyp","adenoma","Paris","Kudo","JNET","polypectomy","EMR","ESD","screening"],
+  hero:"A mucosal protrusion into the bowel lumen. Most colorectal cancers arise from adenomatous polyps over 10–15 years, so endoscopic detection and complete removal is the cornerstone of cancer prevention.",
+  figures:["paris-classification","kudo-pit-pattern","jnet-classification","bowel-wall-layers"],
+  keypoints:[
+    "Adenoma–carcinoma sequence: most cancers arise from adenomas; complete polypectomy interrupts it",
+    "Morphology matters: use the Paris classification — depressed (0–IIc) and excavated (0–III) lesions carry the highest risk of submucosal invasion",
+    "Optical diagnosis (Kudo pit pattern, JNET/NICE on NBI) predicts histology and guides resect-vs-refer in real time",
+    "Malignant polyp depth: Haggitt level (pedunculated) and Kikuchi Sm1/2/3 (sessile) stratify lymph-node risk",
+    "Serrated pathway: sessile serrated lesions (right colon, flat, mucus cap) are easily missed and cause interval cancers"
+  ],
+  differentials:["Adenoma (tubular/tubulovillous/villous)","Sessile serrated lesion / hyperplastic polyp","Inflammatory / pseudopolyp","Hamartomatous polyp (juvenile, Peutz–Jeghers)","Submucosal lesion (lipoma, GIST, carcinoid)","Invasive adenocarcinoma"],
+  overview:{
+    definition:"A polyp is any circumscribed elevation of the mucosa above the surrounding surface. Neoplastic polyps (adenomas, sessile serrated lesions) carry malignant potential; non-neoplastic polyps (hyperplastic, inflammatory, hamartomatous) generally do not, with exceptions.",
+    epidemiology:"Adenomas are found in 25–30% of average-risk adults over 50 at screening colonoscopy. Prevalence rises with age. ~5% of adenomas progress to cancer if left in situ. Advanced adenoma = ≥10 mm, villous component, or high-grade dysplasia.",
+    pathophysiology:"Conventional pathway (APC → KRAS → TP53) produces tubular→villous adenomas. Serrated pathway (BRAF, CpG-island methylation, MLH1 silencing) produces sessile serrated lesions and ~15–20% of cancers. Villous histology and larger size carry higher dysplasia/malignancy risk. Invasion beyond the muscularis mucosae into the submucosa defines a malignant polyp with metastatic potential.",
+    classification:[
+      {label:"Paris 0–Ip / 0–Is",note:"Protruded — pedunculated (stalked) or sessile (broad-based)"},
+      {label:"Paris 0–IIa / IIb / IIc",note:"Superficial — slightly elevated (<2.5 mm) / flat / slightly depressed"},
+      {label:"Paris 0–III",note:"Excavated / ulcerated — highest submucosal-invasion risk"},
+      {label:"Kudo pit pattern I–V",note:"I–II non-neoplastic; III–IV adenomatous; V invasive cancer"},
+      {label:"JNET / NICE (NBI)",note:"Vessel + surface pattern; Type 2B → en-bloc ESD, Type 3 → surgery"},
+      {label:"Haggitt 0–4",note:"Depth of invasion in a pedunculated malignant polyp (level 4 = high risk)"},
+      {label:"Kikuchi Sm1/2/3",note:"Submucosal thirds for sessile lesions; the 1000 µm depth is a separate quantitative cut-off"}
+    ]
+  },
+  criteria:{
+    title:"Features favouring endoscopic vs surgical management",
+    items:[
+      {k:"Favourable (endoscopic)",v:"Well/moderately differentiated · no lymphovascular invasion · Haggitt 1–3 or Sm1 · negative margin (>1 mm) · Kudo III–IV / JNET 2A"},
+      {k:"Unfavourable (consider surgery)",v:"Poor differentiation · lymphovascular invasion · tumour budding · Haggitt 4 or Sm2–3 · positive/≤1 mm margin · Kudo V / JNET 2B–3"},
+      {k:"Advanced adenoma",v:"≥10 mm, villous component, or high-grade dysplasia — shortens surveillance interval"}
+    ]
+  },
+  technique:{
+    title:"Polypectomy & resection techniques",
+    prep:["Adequate bowel prep (Boston Bowel Prep Scale ≥6, each segment ≥2)","High-definition scope ± chromoendoscopy / NBI for optical diagnosis","Assess morphology (Paris), surface (Kudo) and vessels (JNET) BEFORE resection","Tattoo the site (except caecum/rectum) for lesions that may need surgery or surveillance"],
+    steps:[
+      {n:1,t:"Diminutive (≤5 mm)",d:"Cold snare polypectomy — lower delayed-bleeding risk than hot snare; avoid cold biopsy forceps for anything resectable by snare"},
+      {n:2,t:"Small sessile (6–9 mm)",d:"Cold snare polypectomy with a rim of normal mucosa"},
+      {n:3,t:"Large sessile / flat (≥10–20 mm)",d:"Endoscopic mucosal resection (EMR): submucosal lift then snare; piecemeal if needed"},
+      {n:4,t:"≥20 mm / suspected superficial cancer",d:"En-bloc ESD or referral to an expert centre for accurate depth staging"},
+      {n:5,t:"Pedunculated",d:"Hot snare across the stalk; consider prophylactic clip/loop for thick stalks (>10 mm head)"},
+      {n:6,t:"Retrieve & orient",d:"Recover every specimen; pin/orient malignant polyps so the pathologist can measure the deep margin"}
+    ],
+    pearls:["Lift sign: a non-lifting lesion suggests deep submucosal invasion or fibrosis — do not attempt piecemeal snare","Mark piecemeal EMR sites for early (3–6 month) site check — residual/recurrent tissue is common","Cold snare has become the default for ≤9 mm lesions — safer bleeding profile"]
+  },
+  guidelines:[{src:"ESGE Colorectal Polypectomy & EMR Guideline 2017 (update 2024)"},{src:"US Multi-Society Task Force Post-Polypectomy Surveillance 2020"},{src:"ESGE Advanced Imaging (optical diagnosis) Guideline 2019"},{src:"NICE Colorectal Cancer NG151"}],
+  pearls:["The right colon hides flat and serrated lesions — slow, careful withdrawal (≥6 min) and good prep are what actually prevent interval cancers","A malignant polyp completely removed with favourable features may need no further surgery — depth, margin, differentiation and lymphovascular invasion decide","Photo-document the lesion and its optical diagnosis before you resect it"],
+  mistakes:["Piecemeal snaring a lesion that looked deeply invasive (non-lifting) — compromises staging and cure","Using cold biopsy forceps to 'remove' a polyp that should have been snared — leaves residual adenoma","Failing to tattoo a large right-sided lesion — impossible to relocate at surgery or follow-up","Ignoring a flat right-colon mucus cap (sessile serrated lesion) — a classic interval-cancer precursor"],
+  related:[{id:"crc",note:"End of the adenoma–carcinoma sequence"},{id:"fap",note:"Hundreds–thousands of adenomas; near-100% cancer risk"},{id:"lynch",note:"Accelerated adenoma–carcinoma progression; MMR deficiency"}]
 }
 ];

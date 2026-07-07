@@ -126,8 +126,8 @@ const ID_ORDER = [
   'portal-hypertension','liver-abscess','gallbladder-cancer','liver-metastases',
   'hepatic-adenoma','hydatid-cyst','ipmn','pan-net','itp','hereditary-spherocytosis',
   'splenic-abscess','psc',
-  // COLORECTAL (29)
-  'appendicitis','diverticulitis','crc','rectal-prolapse','haemorrhoids','anal-fistula',
+  // COLORECTAL (30)
+  'appendicitis','diverticulitis','crc','colorectal-polyp','rectal-prolapse','haemorrhoids','anal-fistula',
   'anal-fissure','perianal-abscess','pilonidal','sigmoid-volvulus','caecal-volvulus',
   'large-bowel-obstruction','uc-surgical','crohn-surgical','anal-cancer',
   'intestinal-fistula','carcinoid-appendix','mucocele-appendix','fap','lynch',

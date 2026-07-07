@@ -313,6 +313,7 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
   const nextId = curIdx < deptList.length - 1 ? deptList[curIdx + 1] : null;
 
   const sections = [
+    ["figures",     "◆ Figures"],
     ["overview",    "01 Overview"],
     ["diagnosis",   "02 Diagnosis"],
     ["criteria",    "03 Criteria"],
@@ -436,6 +437,27 @@ function DetailView({ diseaseId, goto, bookmarks, toggle, progress, recordAns, s
             <ul className="keypoints-list">
               {d.keypoints.map((k, i) => <li key={i}>{k}</li>)}
             </ul>
+          </div>
+        )}
+
+        {/* FIGURES & DIAGRAMS */}
+        {d.figures?.length > 0 && window.SK_FIGURES && (
+          <div className="detail-section" id="sec-figures">
+            <SectionHead num="◆" title="Figures & Diagrams" />
+            <div className="figure-stack">
+              {d.figures.map((fid) => {
+                const f = window.SK_FIGURES[fid];
+                if (!f) return null;
+                return (
+                  <figure key={fid} className="figure-block">
+                    <figcaption className="figure-title">{f.title}</figcaption>
+                    <div className="figure-svg">{f.render()}</div>
+                    {f.caption && <p className="figure-caption">{f.caption}</p>}
+                    {f.ref && <div className="figure-ref">Ref: {f.ref}</div>}
+                  </figure>
+                );
+              })}
+            </div>
           </div>
         )}
 
