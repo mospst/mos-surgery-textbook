@@ -276,7 +276,7 @@
     );
   }
 
-  window.SK_FIGURES = {
+  window.SK_FIGURES = Object.assign(window.SK_FIGURES || {}, {
     "paris-classification": {
       title: "Paris classification of superficial lesions",
       caption: "Morphology of type-0 lesions predicts submucosal invasion risk. Height cut-off between 0–IIa and 0–Is is 2.5 mm (a closed biopsy-forceps cup). Depressed (IIc) and excavated (III) types carry the highest risk of deep invasion.",
@@ -301,5 +301,5 @@
       ref: "Sano Y et al., Dig Endosc 2016;28:526",
       render: () => <JnetFig />,
     },
-  };
+  });
 })();

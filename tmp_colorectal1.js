@@ -740,7 +740,6 @@ window._TMP_COLORECTAL1 = [
   id:"colorectal-polyp", dept:"colorectal", name:"Colorectal Polyp", latin:"Polypus coli et recti", organ:"Colon",
   severity:"moderate", tags:["polyp","adenoma","Paris","Kudo","JNET","polypectomy","EMR","ESD","screening"],
   hero:"A mucosal protrusion into the bowel lumen. Most colorectal cancers arise from adenomatous polyps over 10–15 years, so endoscopic detection and complete removal is the cornerstone of cancer prevention.",
-  figures:["paris-classification","kudo-pit-pattern","jnet-classification","bowel-wall-layers"],
   keypoints:[
     "Adenoma–carcinoma sequence: most cancers arise from adenomas; complete polypectomy interrupts it",
     "Morphology matters: use the Paris classification — depressed (0–IIc) and excavated (0–III) lesions carry the highest risk of submucosal invasion",

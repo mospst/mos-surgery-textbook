@@ -884,6 +884,25 @@ for (const [id, t] of Object.entries(TIMING_BY_ID)) {
 }
 console.log(`Timing / golden-period blocks injected: ${timingInjected}`);
 
+// ── Attach inline SVG figures (figure ids defined in figures*.jsx) ─────────
+// FIGURE_MAP is the single source of truth for which diagrams appear on which
+// disease page. Keeping it here (not in the tmp data files) means figure work
+// never risks mangling the clinical data objects.
+let FIGURE_MAP = {};
+try { FIGURE_MAP = require('./figure-map.js'); }
+catch (e) { console.warn(`WARN: figure-map.js not loaded: ${e.message}`); }
+let figuresInjected = 0, figureMisses = 0;
+for (const [id, figs] of Object.entries(FIGURE_MAP)) {
+  if (diseaseMap[id] && Array.isArray(figs) && figs.length) {
+    diseaseMap[id].figures = figs;
+    figuresInjected++;
+  } else if (!diseaseMap[id]) {
+    figureMisses++;
+    console.warn(`WARN: FIGURE_MAP has no matching disease "${id}"`);
+  }
+}
+console.log(`Figures attached to ${figuresInjected} diseases (${figureMisses} unmatched ids).`);
+
 // ── Build DISEASES array ───────────────────────────────────────────────────
 const parts = [];
 for (const id of ID_ORDER) {
