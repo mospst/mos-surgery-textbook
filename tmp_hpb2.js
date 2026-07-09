@@ -3,101 +3,113 @@ window._TMP_HPB2 = [
 {
   id:"cholangiocarcinoma", dept:"hpb", name:"Extrahepatic Cholangiocarcinoma", latin:"Cholangiocarcinoma extrahepaticum", organ:"Bile duct",
   severity:"high", tags:["bile duct","Klatskin","jaundice","Bismuth","PSC","resection"],
-  hero:"Malignant tumor of the extrahepatic bile ducts; perihilar (Klatskin) tumors account for 60–70% and are the most surgically challenging.",
+  hero:"Malignant tumor of the extrahepatic bile ducts; perihilar (Klatskin) tumors account for 50–60% and are the most surgically challenging.",
   keypoints:[
-    "Classified by location: intrahepatic (ICC), perihilar/Klatskin (60–70%), distal (20–30%)",
-    "Risk factors: PSC, choledochal cyst, Caroli disease, hepatolithiasis, liver flukes (Clonorchis, Opisthorchis)",
+    "Classified by location: perihilar/Klatskin (~50% of all CCA, 50–60% of extrahepatic), distal (20–30%)",
+    "Risk factors: PSC, choledochal cyst, Caroli disease, hepatolithiasis, liver flukes (Clonorchis, Opisthorchis); most Western cases sporadic with no identifiable risk factor",
     "Bismuth-Corlette classification for perihilar: guides resectability and extent of resection",
-    "Only 20–30% resectable; 5-year survival after R0 resection = 20–40%",
+    "Only 20–30% resectable; 5-year survival after hilar R0 resection 11–44% (postoperative mortality 4–17%)",
     "Periductal infiltrating growth pattern → difficult margins; biliary brush cytology sensitivity only 30–40%"
   ],
   differentials:["Primary sclerosing cholangitis (benign stricture)","IgG4-related sclerosing cholangitis","HCC (central variant)","Gallbladder cancer","Metastatic adenocarcinoma to hilum"],
   mnemonics:[{name:"Bismuth-Corlette Types",text:"I=CBD below confluence; II=reaches confluence; IIIa=right duct; IIIb=left duct; IV=both hepatic ducts (unresectable)"}],
   overview:{
     definition:"Adenocarcinoma arising from the epithelium of the bile ducts, classified as intrahepatic, perihilar, or distal.",
-    epidemiology:"Incidence 1–2/100 000; rising due to increasing NAFLD and hepatolithiasis; PSC patients have 10–15% lifetime risk.",
-    pathophysiology:"Chronic biliary epithelial inflammation → dysplasia → adenocarcinoma. IDH1/2, FGFR2 fusions (ICC), KRAS mutations common. Perineural and lymphovascular invasion responsible for high R1 rate.",
+    epidemiology:"EHC ~3% of all digestive cancers; ~2500 US EHC cases/yr; incidence rose ~20% (1973→2012, 1.6→2.3/100 000). Even sex distribution; ~20% diagnosed before age 60, largest rise in 18–44 yr olds. Rising incidence linked to NAFLD, obesity, dyslipidaemia, hypertension, T2DM (RR ~1.6). PSC is a recognized risk factor; most Western cases sporadic with no identifiable risk factor.",
+    pathophysiology:"Chronic biliary epithelial inflammation → dysplasia → adenocarcinoma; perineural and lymphovascular invasion drive high R1 rate. Adenocarcinoma >75% of EHC; three morphologic subtypes — sclerosing, nodular, papillary (papillary up to 25%, better prognosis than nodular-sclerosing). Precursors: biliary intraepithelial neoplasia (BilIN), intraductal papillary neoplasm of bile duct (IPNB), intraductal tubulopapillary neoplasm, mucinous cystic neoplasm. Molecular: hilar KRAS ~55%, TP53 ~40%; EHC-specific PRKACA/PRKACB fusions, ELF3/ERBB2/ARID1B mutations; HER2 amplification ~20%; dMMR/MSI up to 5% (immunotherapy candidate); ALK/TP53 = worse prognosis. IHC: MUC5AC, MUC6, S100P, SMAD4 loss, BAP1. FGFR2 fusions/IDH mutations concentrated in intrahepatic, rare in EHC.",
     classification:[
       {label:"Bismuth I",note:"Involves CBD below hepatic duct confluence; does not involve confluence"},
       {label:"Bismuth II",note:"Involves hepatic duct confluence but spares right and left hepatic ducts"},
       {label:"Bismuth IIIa",note:"Involves confluence and extends into right hepatic duct"},
       {label:"Bismuth IIIb",note:"Involves confluence and extends into left hepatic duct"},
-      {label:"Bismuth IV",note:"Involves both right and left hepatic ducts; generally unresectable"}
+      {label:"Bismuth IV",note:"Involves both right and left hepatic ducts; generally unresectable"},
+      {label:"MSKCC (Blumgart) preop T-stage",note:"Resectability-oriented (Bismuth = ductal extent only). T1: tumor at confluence ± unilateral 2nd-order radicle. T2: T1 + ipsilateral PV involvement and/or ipsilateral lobar atrophy. T3: bilateral 2nd-order radicles, or unilateral radicle + contralateral PV, or unilateral radicle + contralateral atrophy, or main/bilateral PV"},
+      {label:"AJCC 8th ed perihilar T-stage",note:"Pathologic/prognostic. T1 confined to duct wall; T2a into periductal adipose, T2b into hepatic parenchyma; T3 unilateral PV/HA branch; T4 main PV or bilateral branches, or common hepatic artery, or unilateral 2nd-order radicle with contralateral vessel. N1 = 1–3 nodes, N2 = ≥4 nodes"}
     ]
   },
   diagnosis:{
-    history:["Progressive painless jaundice","Pruritus, dark urine, pale stools","Weight loss, anorexia","Known PSC or choledochal cyst","Fatigue"],
+    history:["Progressive painless jaundice (~90% of hilar tumors); early/unilateral obstruction may show only isolated ALP rise with near-normal bilirubin","Papillary hilar tumors: intermittent jaundice (friable fragments / ball-valve effect)","Pruritus, dark urine, pale stools","Weight loss, anorexia","Known PSC or choledochal cyst","Fatigue","Cholangitis rare at presentation without prior instrumentation (uninstrumented tree is sterile)"],
     examination:["Jaundice","Hepatomegaly","Cachexia (advanced)","No palpable gallbladder (unlike pancreatic head cancer — collapsed by high obstruction)"],
     investigations:[
-      {name:"LFTs",role:"Obstructive pattern; elevated bilirubin, ALP, GGT"},
-      {name:"CA 19-9, CEA",role:"CA 19-9 >100 U/mL suggests malignancy; CEA less sensitive; used in PSC surveillance"},
+      {name:"LFTs",role:"Obstructive pattern; elevated bilirubin, ALP, GGT; bilirubin >10 mg/dL favors malignant obstruction (choledocholithiasis usually 2–4)"},
+      {name:"CA 19-9, CEA",role:"CA 19-9 >100 U/mL suggests malignancy but often elevated by jaundice itself (interpret with bilirubin); CEA less sensitive; used in PSC surveillance"},
       {name:"IgG4",role:"Exclude IgG4-sclerosing cholangitis (responds to steroids)"},
-      {name:"MRCP",role:"Delineate biliary anatomy; stricture morphology; ductal extent of tumor — essential for planning"},
-      {name:"CT chest/abdomen/pelvis (pancreatic protocol)",role:"Staging: lymph nodes, hepatic artery, portal vein involvement, metastases"},
-      {name:"PET-CT",role:"Detect occult M1 disease; nodal staging"},
-      {name:"ERCP with brush cytology / FISH",role:"Cytology sensitivity 30–40%; FISH improves to 50–60%; mainly for biliary decompression + tissue diagnosis"},
+      {name:"MRCP",role:"Delineate biliary anatomy; stricture morphology; ductal extent — essential for planning; has replaced direct cholangiography for staging (ERCP/PTC reserved for therapeutic drainage + tissue)"},
+      {name:"Duplex/Doppler US",role:"Accurate for portal vein involvement (MSKCC: 93% detection, 99% specificity, 97% PPV); adjunct for equivocal vascular involvement"},
+      {name:"CT chest/abdomen/pelvis (pancreatic protocol)",role:"Staging: lymph nodes, hepatic artery, portal vein involvement, metastases; image before biliary decompression (stents/catheters induce inflammation that degrades staging)"},
+      {name:"PET-CT",role:"Limited role; primary tumor sens 91.7%/spec 51.3%, nodal 88%/69%, distant mets 85%/90%; problem-solver for equivocal findings, not routine"},
+      {name:"ERCP with brush cytology / FISH",role:"Cytology sensitivity 30–40%; FISH improves to 50–60%; ERCP/PTC tissue sens/spec ~70–75%; tissue diagnosis NOT required before resection when suspicion high; mainly for biliary decompression"},
       {name:"Percutaneous biopsy",role:"Only if no surgical plan; risk of tract seeding"}
     ]
   },
   criteria:{
     title:"Resectability Assessment",
     items:[
-      {k:"Resectable",v:"No distant metastases; adequate FLR; portal vein uninvolved or reconstructable; no bilateral hepatic artery involvement"},
-      {k:"Unresectable factors",v:"Bilateral hepatic duct involvement to 2nd-order branches; encasement of main PV/HA; contralateral lobar atrophy with bilateral involvement; M1 disease"},
-      {k:"FLR requirement",v:"≥40% in cirrhotic or cholestatic liver; portal vein embolization if borderline"},
-      {k:"Staging laparoscopy",v:"10–15% have peritoneal disease not detected on CT — consider before major hepatectomy"}
+      {k:"Four axes (Blumgart)",v:"Assess: (1) extent of biliary involvement, (2) lobar atrophy, (3) vascular involvement, (4) metastatic disease"},
+      {k:"Resectable",v:"No distant metastases; adequate FLR; portal vein uninvolved or reconstructable; no bilateral hepatic artery involvement. Ipsilateral atrophy + ipsilateral duct/PV involvement is resectable"},
+      {k:"Unresectable factors",v:"Bilateral 2nd-order radicle involvement; unreconstructible main PV encasement/occlusion; ipsilateral atrophy with contralateral duct/vessel involvement; nodes outside hepatoduodenal ligament; M1; cirrhosis with portal hypertension / medically unfit. Right hepatic artery involvement in left-sided tumors precludes resection or needs reconstruction"},
+      {k:"FLR requirement",v:"Graded PVE indication: FLR <25% normal, <30% post-chemotherapy, <40% cirrhotic/dysfunctional liver; PVE preferred when FLR expected <40% in cholestatic hilar disease"},
+      {k:"Nodal caveat",v:"Enlarged regional nodes on imaging often reactive (esp. post-instrumentation) — not sensitive/specific; do not alone contraindicate exploration"},
+      {k:"Staging laparoscopy",v:"Spares nontherapeutic laparotomy in ~25–27% of radiographically resectable hilar CCA (up to 36% in T2/T3); up to 50% found unresectable at exploration overall"}
     ]
   },
   scoring:[],
   management:{
-    conservative:["Biliary decompression pre-operatively: PTC preferred for perihilar (access each lobe independently) or ERCP; reduce bilirubin <50 μmol/L before surgery","PERT and nutritional support"],
-    medical:["Unresectable/metastatic: gemcitabine + cisplatin (first-line; ABC-02 trial — OS 11.7 vs 8.1 months)","Second-line: FOLFOX (ABC-06 trial)","FGFR2 fusion (ICC): pemigatinib, infigratinib, futibatinib","IDH1 mutation: ivosidenib","MSI-H: pembrolizumab","Locoregional: TARE (Y-90), TACE, ablation for ICC"],
+    conservative:["Selective FLR-directed biliary drainage: drain only the future liver remnant, not the resected side; PTC or ERCP","Immediate decompression for cholangitis, jaundice needing chemo, hyperbilirubinaemia malnutrition, hepatic insufficiency, and before PVE","FLR-dependent benefit: helps when FLR small (<30–50%); with large FLR (>50%) drainage adds morbidity/mortality without benefit","Internal drainage preferred over external (preserves gut barrier, limits bile/salt loss)","PTBD vs EBD both acceptable (Dutch RCT stopped early); MSKCC prefer PTBD for precise FLR targeting; ~half of EBD patients cross over to PTBD","Palliative endobiliary drainage: start with plastic stents, convert to metal (SEM) after confirming adequate palliation","PERT and nutritional support"],
+    medical:["Unresectable/metastatic: gemcitabine + cisplatin (first-line; ABC-02 trial — median OS 11.7 vs 8.2 months)","Second-line: FOLFOX (ABC-06 trial); no standard regimen otherwise (insufficient evidence per systematic review)","Adjuvant capecitabine × 6 months = standard after bile-duct cancer resection (BILCAP: per-protocol OS HR 0.75, RFS HR 0.70; ITT non-significant)","Negative adjuvant trials: GEMOX (PRODIGE-12/ACCORD-18), gemcitabine (BCAT), mitomycin-C/5-FU (Takada)","SWOG S0809: adjuvant gem+cape then chemoRT — single-arm, 2-yr OS 65%; consider for margin-positive disease","Adjuvant radiation not routine after R0; may benefit R1/positive-margin","Molecular testing recommended; FGFR2/IDH targetable mutations rare in EHC (ICC-predominant): pemigatinib/infigratinib/futibatinib (FGFR2), ivosidenib (IDH1)","MSI-H: pembrolizumab","Locoregional: TARE (Y-90), TACE, ablation for ICC","Ongoing trials: ACTICCA-1, ASCOT, TRANSPHIL"],
     surgical:[
-      {name:"Perihilar resection (Bismuth I–IIIa/b)",when:"Bismuth I–IIIb, resectable, adequate FLR, no distant metastases",notes:"Major hepatectomy (right/left hepatectomy + caudate lobe resection mandatory) + biliary reconstruction (hepaticojejunostomy); R0 margin critical"},
-      {name:"Liver transplantation for perihilar CCA",when:"Highly selected: unresectable perihilar CCA <3 cm without nodal/metastatic disease; after neoadjuvant CRT (Mayo protocol)",notes:"5-year survival 53% in selected patients; requires specialised program"},
-      {name:"Distal CBD resection (pancreaticoduodenectomy)",when:"Distal cholangiocarcinoma",notes:"Whipple procedure; 5-year survival 27–37% after R0"},
-      {name:"Palliation",when:"Unresectable disease; biliary obstruction",notes:"SEMS via ERCP or PTC; photodynamic therapy improves survival over stenting alone; CRT for local control"}
+      {name:"Perihilar resection (Bismuth I–IIIa/b)",when:"Bismuth I–IIIb, resectable, adequate FLR, no distant metastases",notes:"Major hepatectomy + en bloc bile duct excision ± caudate lobectomy + hepaticojejunostomy; transect proximal duct as high as feasible; R0 margin critical"},
+      {name:"Caudate lobectomy",when:"Central/left-duct tumors, or suspected caudate duct extension",notes:"Routine for central/left tumors (caudate ducts drain mainly into left hepatic duct); selective otherwise — not always mandatory"},
+      {name:"Segmental bile-duct resection alone",when:"Rare; no hepatectomy",notes:"Must include entire supraduodenal duct, gallbladder, cystic duct, extrahepatic ducts + portal lymphadenectomy; worse survival — no bile-duct-only R0 patient was a 5-yr survivor at MSKCC"},
+      {name:"Portal vein resection/reconstruction",when:"Selected patients with segmental PV involvement",notes:"Segmental resection + reconstruction if tumor-free, vascularized, drainable remnant remains; unreconstructible main PV = contraindication"},
+      {name:"Central limited resection (IVb+V or IV+I)",when:"Narrow applicability",notes:"Inappropriate with lobar atrophy or main PV branch involvement"},
+      {name:"Distal CBD resection (pancreaticoduodenectomy)",when:"Distal cholangiocarcinoma",notes:"Whipple procedure; 5-year survival 27–37% after R0; more resectable than pancreatic cancer; node status key independent survival predictor (positive nodes 1.63× death risk)"},
+      {name:"Liver transplantation for perihilar CCA",when:"Highly selected unresectable/PSC hilar CCA; Mayo protocol after neoadjuvant chemoradiation",notes:"Strict selection (mass at stricture / endoluminal biopsy / CA19-9 >100; excludes >3 cm, node/metastatic, prior resection or transperitoneal biopsy); ~1/3 drop out; Rosen/Mayo 75% 5-yr OS; US consortium transplant vs resection 64% vs 18%. Resect when R0 feasible"},
+      {name:"Segment III bypass",when:"Unresectable hilar CCA found at operation",notes:"Durable operative palliation; jaundice relief ~70%, 1-yr patency ~80%, less tumor occlusion than SEM"},
+      {name:"Palliation",when:"Unresectable disease; biliary obstruction",notes:"Only 25–30% of functional parenchyma needs drainage to relieve jaundice; do NOT drain an atrophic/tumor-replaced lobe; SEM median patency ~6 mo vs plastic ~1.4–3 mo (SEM for confirmed mets, surgical bypass if survival >6 mo); photodynamic therapy improves survival over stenting alone. ALPPS abandoned for biliary tumors (90-day mortality 27–48%)"}
     ]
   },
   technique:{
     title:"Perihilar Cholangiocarcinoma Resection",
-    prep:["MRCP delineates biliary anatomy","CT/PET staging excludes distant disease","PTC for biliary decompression — decompress future remnant liver first","Portal vein embolization if FLR <40%"],
+    prep:["MRCP delineates biliary anatomy","CT/PET staging excludes distant disease","PTC for biliary decompression — decompress future remnant liver first","Portal vein embolization: FLR <25% normal, <30% post-chemo, <40% cirrhotic; kinetic growth rate (KGR) >2.66%/week predicts no post-op liver insufficiency; PVE morbidity 2–2.5%, mortality 0.1%, FLR gain 8–38%"],
     steps:[
       {n:1,t:"Staging laparoscopy",d:"Assess for peritoneal disease and N2 nodes"},
       {n:2,t:"Hilar dissection",d:"Identify, skeletonise and divide bile duct at adequate margin; send frozen section on both cut ends"},
-      {n:3,t:"Caudate lobe resection",d:"Mandatory — caudate bile ducts drain directly into hepatic duct confluence"},
-      {n:4,t:"Major hepatectomy",d:"Right or left hepatectomy based on Bismuth type and tumor side; preserve adequate FLR"},
+      {n:3,t:"Caudate lobe resection",d:"Routine for central/left-duct tumors (caudate ducts drain mainly into left hepatic duct); selective for suspected caudate extension — not universally mandatory"},
+      {n:4,t:"Major hepatectomy",d:"Right or left hepatectomy based on Bismuth type and tumor side; preserve adequate FLR; keep CVP <5 mmHg during transection to limit hepatic venous bleeding"},
       {n:5,t:"Portal vein reconstruction",d:"If PV involved: tangential resection + patch or segmental resection + end-to-end anastomosis"},
       {n:6,t:"Biliary reconstruction",d:"Hepaticojejunostomy to multiple bile duct orifices on cut liver surface; Roux-en-Y; no drains into lumen"}
     ],
-    pearls:["Caudate resection is mandatory — the Achilles heel of perihilar resection; omission causes R1","PTC pre-op: drain future remnant liver, NOT the tumor side, to promote hypertrophy","Frozen section margins: if R1, extend resection — even 1 mm free margin improves survival","Portal vein embolization allows safe major hepatectomy when FLR is inadequate"]
+    pearls:["Caudate resection is routine for central/left-duct tumors, selective otherwise — caudate ducts drain mainly into the left hepatic duct","PTC pre-op: drain future remnant liver, NOT the tumor side, to promote hypertrophy","Frozen section margins: ~10% of proximal duct margins misinterpreted on frozen section; wide margin DSS 56 mo vs narrow 38 mo vs positive 32 mo (R1 ≈ locally advanced unresectable)","Portal vein embolization allows safe major hepatectomy when FLR is inadequate"]
   },
-  guidelines:[{src:"ESMO Clinical Practice Guidelines: Biliary Tract Cancer 2022"},{src:"NCCN Hepatobiliary Cancers 2023"},{src:"IHPBA Consensus on Perihilar CCA 2019"}],
-  pearls:["Caudate resection is mandatory for all perihilar resections — ducts draining caudate are the most common site of R1","Gemcitabine + cisplatin: standard first-line for advanced biliary tract cancers (ABC-02)","FGFR2 fusions in ICC: targetable with pemigatinib (10–16% of ICCs)","Liver transplantation for perihilar CCA: 5-year survival 53% in Mayo protocol — better than resection for unresectable <3 cm"],
-  mistakes:["Omitting caudate resection — almost guarantees R1","Not pre-operatively decompressing the future liver remnant — post-op liver failure","Proceeding without diagnostic laparoscopy in borderline resectable — 15% have occult peritoneal disease","Biliary stenting of both sides simultaneously for Bismuth IV — worsens sepsis; drain each side separately"]
+  guidelines:[{src:"ESMO Clinical Practice Guidelines: Biliary Tract Cancer 2022"},{src:"NCCN Hepatobiliary Cancers 2023"},{src:"IHPBA Consensus on Perihilar CCA 2019"},{src:"Bismuth-Corlette classification of hilar biliary strictures (Types I–IV)"},{src:"MSKCC preoperative T-staging (Jarnagin/Blumgart)"},{src:"AJCC Cancer Staging Manual, 8th ed (2017) — perihilar bile duct T/N/M"},{src:"Mayo Clinic neoadjuvant chemoradiation + liver transplant protocol for hilar CCA"},{src:"BILCAP trial — adjuvant capecitabine after biliary tract cancer resection"},{src:"ABC-02 trial — gemcitabine + cisplatin first-line for advanced biliary tract cancer"},{src:"Blumgart's Surgery of the Liver, Biliary Tract and Pancreas, 7th ed (2017)"}],
+  pearls:["Caudate resection is routine for central/left-duct tumors, selective otherwise — caudate ducts drain mainly into the left hepatic duct","Gemcitabine + cisplatin: standard first-line for advanced biliary tract cancers (ABC-02)","FGFR2 fusions and IDH mutations are ICC-predominant and rare in extrahepatic CCA","Liver transplantation for unresectable/PSC hilar CCA (Mayo protocol): 75% 5-yr OS in strictly selected patients; resect when R0 feasible","MSKCC preoperative T-stage adds resectability/vascular/atrophy detail that Bismuth-Corlette lacks"],
+  mistakes:["Teaching caudate resection as always mandatory — it is selective (routine for central/left-duct tumors)","Not pre-operatively decompressing the future liver remnant — post-op liver failure","Draining the resected side rather than selectively the future liver remnant","Proceeding without diagnostic laparoscopy in borderline resectable — up to 25–27% have occult unresectable disease","Biliary stenting of both sides simultaneously for Bismuth IV — worsens sepsis; drain each side separately","Quoting Mayo transplant 5-yr survival as 53% — the Rosen/Mayo figure is 75%","Using FGFR2/IDH targeted agents for extrahepatic CCA — these are ICC-predominant"]
 },
 {
   id:"icc", dept:"hpb", name:"Intrahepatic Cholangiocarcinoma", latin:"Cholangiocarcinoma intrahepaticum", organ:"Liver",
   severity:"high", tags:["liver","bile duct","ICC","FGFR2","IDH1","resection"],
   hero:"Primary hepatic malignancy arising from intrahepatic bile duct epithelium; the second most common primary liver cancer after HCC.",
   keypoints:[
-    "Incidence rising worldwide; associated with cirrhosis, HBV, HCV, PSC, biliary cysts, hepatolithiasis",
-    "Three growth patterns: mass-forming (most common), periductal infiltrating, intraductal",
+    "~10% of primary hepatic malignancies and ~20% of all cholangiocarcinomas (~3% of all GI cancers); incidence rising ~5%/yr over two decades, most marked in males",
+    "Associated with cirrhosis, HBV, HCV, PSC, biliary cysts, hepatolithiasis, liver flukes; >90% of Western cases have no identifiable risk factor",
+    "Four growth patterns (LCSGJ): mass-forming 65%, mixed 25%, periductal infiltrating 6%, intraductal 4%",
     "FGFR2 fusion (15%), IDH1 mutation (15%), KRAS, TP53 — targetable mutations guide systemic therapy",
-    "Resection is the only potentially curative treatment; 5-year survival 20–35% after R0",
+    "Resection is the only potentially curative treatment; ~40% 5-year survival after R0 (cure in 30–40% of liver-only disease)",
     "CA 19-9 + CEA combined improves diagnostic accuracy; AFP typically normal"
   ],
   differentials:["HCC","Hepatic metastases (colorectal, breast)","Perihilar cholangiocarcinoma","Hepatic abscess (early ring-enhancing)","Hepatic lymphoma"],
   mnemonics:[{name:"ICC vs HCC differentiation",text:"ICC: normal AFP, elevated CA19-9, no arterial blush + washout, periductal infiltrating, bile duct dilation. HCC: elevated AFP, arterial hyperenhancement + washout, cirrhotic background"}],
   overview:{
     definition:"Adenocarcinoma arising from the intrahepatic biliary epithelium, proximal to the second-order bile ducts.",
-    epidemiology:"Incidence 0.3–3.3/100 000; rising due to metabolic syndrome and viral hepatitis. Male = female. Peak age 60–70 years.",
-    pathophysiology:"Bile duct epithelial injury → reactive cholangiocytes → oncogenic transformation via FGFR2, IDH1/2, KRAS, TP53, BAP1 mutations. Perineural invasion common → poor margins. Lymphovascular invasion → early nodal spread.",
+    epidemiology:"Incidence rising ~5%/yr over two decades, most marked in males (more common in males). Sporadic tumours present in 7th–8th decade; PSC / untreated choledochal-cyst patients present far earlier at 30–50 yr. Highest incidence Chile, Bolivia, South Korea, NE Thailand (up to 85/100 000, 89% of primary liver cancers there).",
+    pathophysiology:"Bile duct epithelial injury → reactive cholangiocytes → oncogenic transformation. Risk factors: PSC (cumulative CCA risk 1.5%/yr, prevalence 8–40%; +IBD raises 20-yr risk to 31% vs 2%); liver flukes (Opisthorchis viverrini, Clonorchis sinensis — commonest SE-Asian); hepatolithiasis/recurrent pyogenic cholangitis (up to 10% develop IHCC, latency 3–8 yr); congenital biliary cystic disease (untreated choledochal cyst/Caroli 10–20% risk if unresected by age 20; pancreaticobiliary maljunction 7%); cirrhosis (10.7% vs 0.7%; 1% of explanted cirrhotic livers harbour occult IHCC; HCV 10-yr risk 3.5%, RR 2.55; HBV RR 1.8, tends mass-forming/better prognosis); NASH (up to 20%); Thorotrast (300× risk, latency 16–45 yr), asbestos, vinyl chloride, nitrosamines, isoniazid. Precursors: BilIN, IPNB, ITNB. Two molecular classes: inflammatory (~38%, STAT3/IL-6) vs proliferative (~62%, worse — TP53, KRAS, BRAF, FGFR2, IDH1/2, PTPN3). Cell of origin: mucin-producing large-duct cholangiocytes → periductal/mass-forming mucinous; non-mucin/progenitor cells → peripheral mass (cholangiolocellular). IHC: CK7 + CK19 positive; N-cadherin increased vs extrahepatic; albumin mRNA ISH distinguishes IHCC from perihilar CCA/metastatic adenocarcinoma. Perineural and lymphovascular invasion → poor margins, early nodal spread.",
     classification:[
-      {label:"Mass-forming (MF)",note:"Most common (60%); well-defined mass; often peripheral; satellite lesions; better resectability"},
-      {label:"Periductal infiltrating (PI)",note:"Grows along portal tracts; difficult margins; causes ductal dilation; poor prognosis"},
-      {label:"Intraductal (ID)",note:"Grows into bile duct lumen; may present as cholestasis; best prognosis"},
-      {label:"Mixed MF+PI",note:"Both components; most aggressive"}
+      {label:"Mass-forming (MF)",note:"Most common (65%); well-defined peripheral mass; satellite lesions; better resectability and 5-yr survival than PI"},
+      {label:"Mixed MF+PI",note:"25%; both components; aggressive"},
+      {label:"Periductal infiltrating (PI)",note:"6%; grows along portal tracts; difficult margins; causes ductal dilation; poor prognosis"},
+      {label:"Intraductal (ID)",note:"4%; grows into bile duct lumen; may present as cholestasis; best prognosis (nodal metastases rare in this type)"},
+      {label:"AJCC 8th ed ICC T-stage",note:"ICC-specific (differs from HCC and 7th ed). T1a solitary ≤5 cm / T1b solitary >5 cm, no vascular invasion; T2 solitary with vascular invasion OR multiple; T3 perforates visceral peritoneum; T4 direct invasion of extrahepatic structures (periductal invasion removed vs 7th ed)"}
     ]
   },
   diagnosis:{
@@ -105,30 +117,38 @@ window._TMP_HPB2 = [
     examination:["Hepatomegaly, palpable mass (large tumor)","Jaundice (late or perihilar extension)","Cachexia (advanced)"],
     investigations:[
       {name:"AFP",role:"Usually normal (differentiates from HCC); mildly elevated in some ICC"},
-      {name:"CA 19-9, CEA",role:"CA 19-9 >100 elevated in 60%; combined sensitivity 80%"},
-      {name:"CECT liver (multiphasic)",role:"Peripheral rim enhancement arterially; progressive fill-in; satellite lesions; ductal dilation"},
-      {name:"MRI liver with hepatobiliary contrast",role:"Better characterization; bile duct involvement; satellite lesions; FLR assessment"},
-      {name:"PET-CT",role:"Nodal staging, peritoneal disease, M1 detection"},
+      {name:"CA 19-9, CEA",role:"CA 19-9 sensitivity 72%/specificity 84%; CEA sensitivity 42–85%/specificity 70–89%; multi-marker panel (CEA + CA19-9 + CK19-fragment + MMP-7) reaches sens 92%/spec 96%"},
+      {name:"ALP / GGT",role:"Serum rise may be the only presenting abnormality prompting imaging"},
+      {name:"CEUS",role:"Distinguishes IHCC from HCC by peripheral (rim) arterial enhancement (vs HCC arterial hyperenhancement + washout)"},
+      {name:"Triple-phase CT",role:"Single most effective staging test: hypodense infiltrative margins with progressive delayed (3–6 min) enhancement (fibrous stroma); detects lobar atrophy, vascular involvement, nodal/peritoneal/lung mets, volumetry"},
+      {name:"MRI liver with hepatobiliary contrast",role:"T1-hypointense/T2-mild-hyperintense mass with delayed contrast pooling (6–8 min); MRCP defines biliary anatomy; capsular retraction and satellite lesions characteristic; FLR assessment"},
+      {name:"PET-CT",role:"Best for MF tumours ≥1 cm; nodal sens 42%/spec 80%, distant-met sens 56%/spec 88%; false-positives with biliary inflammation, false-negatives with mucinous tumours"},
       {name:"EUS/ERCP",role:"If ductal involvement; biliary decompression; biopsy"},
-      {name:"Biopsy (EUS or percutaneous)",role:"For unresectable disease requiring systemic therapy; tissue for molecular profiling (FGFR2, IDH1, MSI, TMB)"}
+      {name:"Staging laparoscopy",role:"Exclude peritoneal/nodal/abdominal-wall disease"},
+      {name:"Biopsy (EUS or percutaneous)",role:"Avoided in resectable disease (small seeding risk); reserved for unresectable disease (>half at presentation); tissue for molecular profiling (FGFR2, IDH1, MSI, TMB)"}
     ]
   },
   criteria:{
     title:"Resectability Assessment for ICC",
     items:[
-      {k:"Resectable",v:"R0 achievable; adequate FLR (≥20–25% healthy, ≥40% diseased); no extrahepatic disease"},
-      {k:"Contraindications",v:"Bilateral multifocal disease; main PV or bilateral hepatic artery involvement; extrahepatic disease; FLR inadequate"},
+      {k:"Resectable",v:"R0 achievable; adequate FLR (≥20–25% healthy, ≥40% diseased); up to 80% of hepatic volume resectable with good function, 60% with compromised function; no extrahepatic disease"},
+      {k:"Irresectable",v:"Solitary locally advanced tumour with bilateral inflow or outflow involvement; multiple intrahepatic tumours; distant metastases"},
+      {k:"Multifocality",v:"Markedly worsens survival: median 15 mo (multiple) vs 38 mo (solitary)"},
       {k:"LN assessment",v:"Regional LN (hepatoduodenal) not absolute contraindication; distant LN (celiac, para-aortic) = M1"},
       {k:"Portal vein embolization",v:"If FLR <25–40%; wait 4–6 weeks"}
     ]
   },
-  scoring:[],
+  scoring:[
+    {name:"MEGNA prognostic score",items:["Multifocality","Extrahepatic tumor extension","high tumor Grade","Nodal positivity","Age >60 yr","1 point each (range 0–5); post-resection survival stratifier (Raoof/Schnitzbauer) — stratifies 1/3/5-yr survival"]}
+  ],
   management:{
-    conservative:["Biliary decompression if jaundiced","Nutritional support"],
-    medical:["Advanced/metastatic: gemcitabine + cisplatin ± durvalumab (TOPAZ-1: improved OS — now standard of care)","FGFR2 fusion: pemigatinib, infigratinib, futibatinib","IDH1 mutation: ivosidenib (ClarIDHy trial: improved PFS)","MSI-H: pembrolizumab","Adjuvant: capecitabine (BILCAP) — 12 months post-resection; OS benefit in PP analysis"],
+    conservative:["Biliary decompression if jaundiced","Nutritional support","Best supportive care (>half unresectable): capsular-pain control, ascites management, nutrition, psychological support"],
+    medical:["Advanced/metastatic first-line: gemcitabine + cisplatin ± durvalumab (TOPAZ-1: improved OS — now standard of care); GEMOX and gem/capecitabine reasonable alternatives; median OS ~12 mo","Second-line: no established regimen; fluoropyrimidine doublets ~3.4% response, OS ~7 mo","FGFR2 fusion: pemigatinib (ORR 35.5%), infigratinib, futibatinib","IDH1 mutation: ivosidenib (ClarIDHy trial: improved PFS; 12-mo PFS 21%)","BRAF: dabrafenib + trametinib (42% response); MET (tivantinib), PD-1 (pembrolizumab, nivolumab) investigational","MSI-H: pembrolizumab","Adjuvant: capecitabine (BILCAP / ASCO 2019) — 6 months post-resection; OS benefit in PP analysis","Regional therapy: TACE (cisplatin/doxorubicin/mitomycin) vs DEB-TACE median OS 13.4 vs 10.5 mo; HAI (FUDR ± systemic gem/ox) response ~46%, 2-yr OS 53%, can downstage (contraindicated in cirrhosis); Y-90 radioembolization median OS 15–22 mo, up to 5% downstaged","EBRT/SBRT: radiosensitive; local control 78–94%, grade 3–4 toxicity ~11%; useful in poor-performance-status patients"],
     surgical:[
-      {name:"Major hepatectomy",when:"Resectable mass-forming ICC; adequate FLR",notes:"Anatomical resection preferred; R0 margin (even 1 mm); lymphadenectomy of hepatoduodenal ligament (≥6 nodes)"},
+      {name:"Major hepatectomy",when:"Resectable mass-forming ICC; adequate FLR",notes:"Anatomical resection preferred; R0 margin (even 1 mm); lymphadenectomy of hepatoduodenal ligament (AJCC 8th ≥6 nodes; only ~25% of specimens achieve this). Left-sided tumours spread to cardia/lesser-curve nodes, right-sided to hepatoduodenal ligament"},
       {name:"Extended hepatectomy",when:"Tumor involving both lobes or perihilar extension",notes:"High morbidity; requires PVE; specialist center"},
+      {name:"Ablation (RFA/MWA)",when:"Small tumors, or solitary liver-only recurrence",notes:"5–10 mm margin; only ~5% of IHCC treated by ablation alone; incomplete-ablation 21%, major-complication 8%, 5-yr survival ~24%; for solitary recurrence efficacy ≈ repeat resection but complication 4% vs 47%"},
+      {name:"Liver transplant",when:"Very early IHCC (≤2 cm) incidentally found on explant — emerging selective indication only",notes:"Contraindicated in most centres; ≤2 cm incidental had 65% 5-yr survival vs 45% advanced"},
       {name:"Locoregional therapy",when:"Unresectable; or bridge to resection/transplant",notes:"TARE (Y-90), TACE, ablation (RFA/MWA); hepatic arterial infusion (HAI) chemotherapy at specialist centers; SBRT"}
     ]
   },
@@ -143,11 +163,11 @@ window._TMP_HPB2 = [
       {n:5,t:"Bile duct management",d:"If bile duct involved: divide and reconstruct (hepaticojejunostomy); frozen section bile duct margin"},
       {n:6,t:"Hemostasis and drain",d:"Argon beam or bipolar to raw liver surface; closed drain"}
     ],
-    pearls:["Lymphadenectomy is prognostic and potentially therapeutic — N1 does not preclude resection in absence of distant disease","R0 margin (even 1 mm) significantly improves survival over R1","Satellite lesions are NOT an absolute contraindication if R0 achievable"]
+    pearls:["Lymphadenectomy is prognostic and potentially therapeutic — N1 does not preclude resection in absence of distant disease; ESMO recommends routine hepaticoduodenal lymphadenectomy, EASL 'strongly considered', NCCN 'reasonable'","Preoperative nodal predictors (Yoh): elevated CA 19-9 + hilar invasion + short-axis node >10 mm predict N1 (false-neg 2.3%)","R0 margin (even 1 mm) significantly improves survival over R1","Satellite lesions are NOT an absolute contraindication if R0 achievable"]
   },
-  guidelines:[{src:"ESMO Biliary Tract Cancer Guidelines 2022"},{src:"NCCN Hepatobiliary 2023"},{src:"ILCA Consensus on ICC 2022"}],
-  pearls:["Gemcitabine + cisplatin + durvalumab: new standard first-line for advanced biliary tract cancers (TOPAZ-1)","FGFR2 fusions in ~15% ICC — test all advanced ICC for actionable mutations","Adjuvant capecitabine for 6–8 cycles post-resection (BILCAP)","Lymph node metastases found in 30–50% of resected ICC — mandatory lymphadenectomy for staging"],
-  mistakes:["Not performing lymphadenectomy — understages disease, misses N1 patients","Proceeding to resection without molecular profiling for advanced disease","Overlooking satellite lesions on imaging — leads to incomplete resection","Not using PVE when FLR is borderline — post-hepatectomy liver failure"]
+  guidelines:[{src:"ESMO Biliary Tract Cancer Guidelines 2022"},{src:"NCCN Hepatobiliary 2023"},{src:"ILCA Consensus on ICC 2022"},{src:"AJCC Cancer Staging Manual, 8th ed — intrahepatic bile duct (IHCC) staging (≥6-node lymphadenectomy)"},{src:"BILCAP trial (2019) — adjuvant capecitabine after biliary tract cancer resection"},{src:"ASCO Clinical Practice Guideline 2019 — adjuvant capecitabine 6 months post-resection"},{src:"ABC-02 (Valle et al.) — gemcitabine + cisplatin first-line for advanced biliary tract cancer"},{src:"ESMO Biliary Tract Cancer Guidelines — routine hepatoduodenal lymphadenectomy"},{src:"Blumgart's Surgery of the Liver, Biliary Tract and Pancreas, 7th ed (2017)"}],
+  pearls:["Gemcitabine + cisplatin + durvalumab: new standard first-line for advanced biliary tract cancers (TOPAZ-1)","FGFR2 fusions in ~15% ICC — test all advanced ICC for actionable mutations","Adjuvant capecitabine for 6 months post-resection (BILCAP / ASCO 2019)","Nodal disease in 30–40% of presenting patients (intra-abdominal nodal mets up to 75% at presentation) — mandatory lymphadenectomy for staging","Growth-pattern frequencies (LCSGJ): MF 65%, mixed 25%, PI 6%, intraductal 4%"],
+  mistakes:["Not performing lymphadenectomy — understages disease, misses N1 patients","Quoting adjuvant capecitabine as 6–8 cycles / 12 months — the standard is 6 months (BILCAP/ASCO)","Proceeding to resection without molecular profiling for advanced disease","Overlooking satellite lesions on imaging — leads to incomplete resection","Not using PVE when FLR is borderline — post-hepatectomy liver failure"]
 },
 {
   id:"pancreatic-pseudocyst", dept:"hpb", name:"Pancreatic Pseudocyst", latin:"Pseudocysta pancreatica", organ:"Pancreas",
@@ -449,22 +469,24 @@ window._TMP_HPB2 = [
 {
   id:"liver-metastases", dept:"hpb", name:"Colorectal Liver Metastases", latin:"Metastases hepatis colorectales", organ:"Liver",
   severity:"high", tags:["liver","CRC","metastases","FOLFOX","resection","RFA","conversion"],
-  hero:"The liver is the most common site of colorectal cancer metastasis; resection offers the only chance of cure with 5-year survival of 30–50%.",
+  hero:"The liver is the most common site of colorectal cancer metastasis; resection offers the only chance of cure with 5-year survival approaching 58–60%.",
   keypoints:[
-    "25% of CRC patients have synchronous liver metastases; 50% develop metachronous within 3 years",
-    "10–20% are resectable at presentation; neoadjuvant chemotherapy can convert 10–20% of initially unresectable to resectable",
+    "15–25% of CRC patients present with synchronous liver metastases; an additional 20–30% develop metachronous mets",
+    "10–20% are resectable at presentation; conversion chemotherapy downsizes ~12.5% of initially unresectable to resectable (Adam 2004; 5-yr OS 33% in converted group)",
     "Clinical Risk Score (CRS) predicts recurrence after resection: node-positive primary, DFS <12 months, >1 metastasis, size >5 cm, CEA >200",
     "Simultaneous vs staged resection: bowel-first, liver-first, or simultaneous — multidisciplinary decision",
-    "Ablation (RFA/MWA) for lesions <3 cm in non-resectable segments or as adjunct to resection"
+    "Ablation (RFA/MWA) for lesions <3 cm in non-resectable segments or as adjunct to resection",
+    "Median survival of untreated synchronous CRLM only 5–10 months; recurrence up to 66% (liver in ~60%, liver-only up to 40%), overall cure rate ~20%",
+    "Preoperative chemo generally limited to ≤6 cycles (max radiologic response by 2–4 months; ≥12 cycles → severe sinusoidal injury)"
   ],
   differentials:["HCC","Hepatic hemangioma","FNH","Hepatic adenoma","Other metastases (breast, neuroendocrine, pancreas)"],
   mnemonics:[{name:"Fong Clinical Risk Score",text:"Node-positive primary, DFS <12 months, >1 liver lesion, largest >5 cm, CEA >200 ng/mL — 1 point each; 0–2 = low risk; 3–5 = high risk"}],
   overview:{
     definition:"Metastatic deposits within the liver arising from colorectal adenocarcinoma via hematogenous portal spread.",
     epidemiology:"CRC: 3rd commonest cancer globally; liver is site of metastases in 70% of advanced CRC. Resection possible in 15–20%.",
-    pathophysiology:"Portal venous dissemination → hepatic arterial supply of established metastases → characteristic rim enhancement on CECT. KRAS/NRAS mutation: predicts poor response to anti-EGFR; RAS wild-type: responds to cetuximab/panitumumab.",
+    pathophysiology:"Portal venous dissemination → hepatic arterial supply of established metastases → characteristic rim enhancement on CECT. KRAS/NRAS mutation: predicts poor response to anti-EGFR; RAS wild-type: responds to cetuximab/panitumumab (left-sided only). Chemotherapy-associated hepatotoxicity: oxaliplatin → sinusoidal injury ('blue liver'), can progress to nodular regenerative hyperplasia + portal hypertension (splenomegaly/thrombocytopenia surrogates); irinotecan → steatohepatitis ('yellow liver'), linked to higher post-resection mortality (14.7% vs 1.6%). FOLFOXIRI highest response but high hepatotoxicity (sinusoidal dilation ~100%, steatosis ~76% in resected specimens).",
     classification:[
-      {label:"Resectable",note:"R0 achievable; adequate FLR (≥20–30%); no extrahepatic disease, or limited resectable extrahepatic disease"},
+      {label:"Resectable",note:"R0 achievable; adequate FLR (>20% normal / >30% chemo / >40% cirrhosis); no extrahepatic disease, or limited resectable extrahepatic disease. Number (≥4) and size (>5 cm) are no longer contraindications — historical only"},
       {label:"Initially unresectable — convertible",note:"Technically unresectable due to size/location/FLR; may become resectable after downsizing chemotherapy"},
       {label:"Unresectable",note:"Too many lesions; insufficient FLR; major vessel involvement; unresectable extrahepatic disease"}
     ]
@@ -474,33 +496,41 @@ window._TMP_HPB2 = [
     examination:["Hepatomegaly, palpable masses (advanced)","Jaundice (late — biliary compression)","Cachexia"],
     investigations:[
       {name:"CEA",role:"Serial monitoring; rising CEA post-colectomy triggers imaging; correlates with tumor burden"},
-      {name:"CECT chest/abdomen/pelvis",role:"Standard staging; rim enhancement on portal phase; assess number, size, location, vascular proximity"},
+      {name:"CECT chest/abdomen/pelvis",role:"Standard staging; quadruple-phase (pre/arterial/portal/delayed), slice ≤5 mm; portal venous phase most sensitive for hypovascular CRLM; 3D reconstruction for FLR volumetry"},
       {name:"MRI liver (hepatobiliary contrast — Eovist/Primovist)",role:"More sensitive for small lesions <1 cm; characterizes indeterminate lesions; biliary anatomy"},
-      {name:"PET-CT",role:"Detect occult extrahepatic disease (nodal, peritoneal) before major hepatectomy"},
+      {name:"PET-CT",role:"RCT showed no impact on surgical planning/outcomes in metachronous resectable CRLM; reserve for ruling out extrahepatic disease in high-risk/borderline; poor sensitivity <1 cm and during chemo"},
       {name:"Mutational analysis (KRAS/NRAS/BRAF/MSI)",role:"Guides systemic therapy selection; KRAS/NRAS wild-type: cetuximab eligible"},
+      {name:"Disappearing liver metastases (DLMs)",role:"Occur in 5–24% after chemo; complete pathologic response uncommon → resect all metastases seen on pre-chemo imaging; consider fiducial marker placement before chemo for at-risk lesions"},
       {name:"Biopsy",role:"Only if diagnosis uncertain; not routinely needed if known CRC + typical imaging"}
     ]
   },
   criteria:{
     title:"Resectability Criteria for CRLM",
     items:[
-      {k:"Resectable",v:"All liver disease removable with R0 margins; FLR ≥20% healthy or ≥30–40% in chemotherapy-damaged liver; no unresectable extrahepatic disease"},
+      {k:"Technical resectability",v:"Margin-negative resection while preserving adequate biliary drainage + vascular inflow/outflow, sparing ≥2 contiguous segments with adequate FLR"},
+      {k:"FLR three-tier",v:">20% normal liver, >30% after extensive chemotherapy, >40% with cirrhosis"},
+      {k:"Number/size",v:"≥4 lesions and >5 cm are NO LONGER contraindications (historical only)"},
+      {k:"Nonpulmonary extrahepatic disease",v:"No longer absolute contraindication; highly selected resection possible — lung best (5-yr OS 32–50%), portal nodes/limited peritoneal intermediate (24–42%), retroperitoneal nodes/multi-site poor (7–14%)"},
       {k:"Contraindications",v:"Peritoneal carcinomatosis (unless limited and resectable); unresectable extrahepatic nodal disease"},
       {k:"FLR augmentation",v:"Portal vein embolization (PVE); ALPPS (two-stage); ablation of contralateral lesions"},
-      {k:"Simultaneous vs staged",v:"Simultaneous safe for minor hepatectomy + colectomy; major hepatectomy → staged; liver-first for unresectable primary"}
+      {k:"Simultaneous vs staged",v:"Simultaneous safe for minor hepatectomy + colectomy; high-risk colorectal + major hepatectomy → mortality 5%, major morbidity 55% → stage; liver-first for asymptomatic primary driven by mets"}
     ]
   },
   scoring:[
-    {name:"Fong Clinical Risk Score",items:["Node-positive primary tumor","Disease-free interval <12 months",">1 hepatic tumor","Largest hepatic tumor >5 cm","CEA >200 ng/mL","Score 0–2: favorable (5-yr OS 50%); Score 3–5: poor (5-yr OS 20%)"]}
+    {name:"Fong Clinical Risk Score (MSKCC 1999)",items:["Node-positive primary tumor","Disease-free interval <12 months",">1 hepatic tumor","Largest hepatic tumor >5 cm","CEA >200 ng/mL","n=1001; Score 0–2 (low): 5-yr OS 60%; Score 3–5 (high): 5-yr OS 14%"]},
+    {name:"Newer 3-factor score",items:["RAS mutation","CLM >5 cm","Node-positive primary","Stratifies OS/RFS in 608 patients; modernizes Fong CRS by adding molecular data"]}
   ],
   management:{
-    conservative:["CEA monitoring post-resection every 3 months × 3 years, then 6-monthly","CT restaging every 3–6 months post-operatively"],
-    medical:["Neoadjuvant: FOLFOX or FOLFIRI ± bevacizumab (RAS mut) or cetuximab (RAS/RAF WT, left-sided) — 3 months preoperatively","Adjuvant: 3–6 months FOLFOX post-resection (debated — EORTC 40983 shows DFS benefit, not OS)","Hepatic arterial infusion (HAI) + systemic: specialist centers — floxuridine via HAI; improves conversion rate and DFS","Unresectable: FOLFOX/FOLFIRI ± biological; maintenance capecitabine"],
+    conservative:["Recurrence risk peaks ~1 yr post-resection, declines yr 1–4, stable after 4 yr; most recurrences within 2 yr","RAS-stratified surveillance: after 2 disease-free yrs, RAS mutation is the sole remaining recurrence risk factor → tailor imaging frequency by RAS status","Typical regimen: H&P + CEA + CT C/A/P every 3–4 mo × 2 yr, then 6-monthly for yrs 2–5, annual thereafter"],
+    medical:["First-line: FOLFOX or FOLFIRI (equivalent, choose by toxicity); FOLFOX + bevacizumab commonly first-line (bevacizumab also protects against oxaliplatin sinusoidal injury + improves pathologic response)","FOLFOXIRI (triplet): higher response, PFS, OS and conversion vs doublets, at cost of neuropathy/neutropenia/hepatotoxicity","Adjuvant: 3–6 months FOLFOX post-resection (debated — EORTC/EPOC: perioperative FOLFOX improved PFS 20.9 vs 12.5 mo, P=.035, no OS difference)","New EPOC: adding cetuximab to perioperative chemo in KRAS-WT resectable CRLM was detrimental to survival — do NOT add anti-EGFR perioperatively in resectable disease","Anti-EGFR only benefits LEFT-sided RAS-WT primaries; right-sided RAS-WT do NOT benefit (bevacizumab efficacy unaffected by side)","BRAF V600E: monotherapy BRAF inhibition ineffective (EGFR reactivation); BEACON regimen = encorafenib + binimetinib + cetuximab improves OS","Conversion (bevacizumab): BECOME RCT — FOLFOX+bevacizumab in RAS-mutant unresectable CRLM raised R0 resection 22.3% vs 5.8%","HAI-FUDR: adjuvant 5-FU+HAI-FUDR improved 2-yr OS (86% vs 72%) and hepatic RFS (90% vs 60%); HAI + systemic in unresectable gave 73% response / 52% conversion; biliary toxicity mitigated by dexamethasone + avoiding systemic bevacizumab","Unresectable: FOLFOX/FOLFIRI ± biological; maintenance capecitabine"],
     surgical:[
-      {name:"Hepatic resection (synchronous vs metachronous)",when:"Resectable CRLM; adequate FLR; no unresectable extrahepatic disease",notes:"Anatomical or non-anatomical resection; R0 margin ≥1 mm; parenchymal-sparing approach if multiple lesions"},
-      {name:"Two-stage hepatectomy",when:"Bilateral metastases requiring clearance with insufficient FLR after single stage",notes:"Stage 1: clear one lobe + PVE; Stage 2: resect remaining lobe after hypertrophy (4–6 weeks)"},
-      {name:"ALPPS (Associating Liver Partition and Portal vein ligation for Staged hepatectomy)",when:"Inadequate FLR; insufficient hypertrophy after PVE; need rapid FLR growth",notes:"High morbidity (15–25%); rapid hypertrophy in 7–14 days; use only when PVE fails to give adequate FLR"},
-      {name:"Ablation (RFA/MWA)",when:"Lesions ≤3 cm in non-resectable locations; combined with resection for additional lesions; non-surgical candidate",notes:"Percutaneous, laparoscopic, or intraoperative; inferior to resection for primary approach but useful adjunct"},
+      {name:"Hepatic resection (synchronous vs metachronous)",when:"Resectable CRLM; adequate FLR; no unresectable extrahepatic disease",notes:"Anatomical or non-anatomical resection; R0 margin ≥1 mm; parenchymal-sparing approach if multiple lesions. Low CVP anaesthesia + possible portal pedicle clamping → cardiopulmonary workup mandatory"},
+      {name:"Liver-first (reverse) approach",when:"Asymptomatic primary whose prognosis is driven by mets",notes:"Systemic therapy → hepatectomy → primary resection; contraindicated if primary obstructing (can't pass pediatric colonoscope) or perforated"},
+      {name:"Two-stage hepatectomy (TSH)",when:"Bilateral metastases requiring clearance with insufficient FLR after single stage",notes:"Stage 1 clears FLR ± inter-stage PVE (~8-wk interval); ~11% dropout (mostly progression); completers 5-yr OS up to 51%"},
+      {name:"ALPPS (Associating Liver Partition and Portal vein ligation for Staged hepatectomy)",when:"Inadequate FLR; insufficient hypertrophy after PVE; need rapid FLR growth",notes:"Two-stage completion in 1–2 weeks; initial series had alarmingly high morbidity/mortality and intrahepatic recurrence up to 60%; modern LIGRO-era data show major morbidity/90-day mortality/R0 not significantly different vs portal-vein-occlusion TSH"},
+      {name:"Liver venous deprivation",when:"Very small FLR needing hypertrophy",notes:"Combined hepatic vein + portal vein embolization; newer, superior hypertrophy/kinetic growth vs PVE alone"},
+      {name:"Ablation (RFA/MWA)",when:"Lesions ≤3 cm in non-resectable locations; combined with resection for additional lesions; non-surgical candidate",notes:"Percutaneous, laparoscopic, or intraoperative; CLOCC RCT (chemo + ablation vs chemo alone, unresectable liver-only): 5-yr OS 43.1% vs 30.3%; but for resectable disease higher local recurrence (37% vs 11% resection)"},
+      {name:"Completion ablation",when:"Resect all but 1–2 small lesions",notes:"Percutaneous CT-guided ablation of remainder — lower complications/local progression than intraoperative ablation"},
       {name:"Stereotactic body radiotherapy (SBRT)",when:"Unresectable/non-ablatable; <3 lesions; ≤6 cm; adequate liver reserve",notes:"BED >100 Gy associated with better local control; increasing evidence in liver-limited disease"}
     ]
   },
@@ -513,12 +543,12 @@ window._TMP_HPB2 = [
       {n:3,t:"Parenchymal transection",d:"Non-anatomical resection if possible — spares parenchyma; CUSA + harmonic; R0 ≥1 mm"},
       {n:4,t:"Pringle maneuver",d:"If bleeding; ≤30 min continuous; protect remnant — intermittent if cirrhosis"},
       {n:5,t:"Ablation of additional lesions",d:"For lesions in unfavorable positions: RFA/MWA intraoperatively under IOUS guidance"},
-      {n:6,t:"Hemostasis, bile leak check",d:"Argon beam; cholangiography if duct proximity; drain if biliary injury risk"}
+      {n:6,t:"Hemostasis, bile leak check",d:"Interrogate bile-duct closure on transection surface (reduces bile leak/deep-space infection, obviates prophylactic drains); topical hemostatics do NOT reduce bleeding/leak"}
     ],
-    pearls:["IOUS is mandatory — identifies additional lesions in 15% and changes surgical plan in 30%","R0 margin ≥1 mm = equivalent to wider margins (Pawlik 2005) — sacrifice less parenchyma","Parenchymal-sparing preserves FLR for repeat resection (recurrence in 50–70% of patients)","PVE: embolize the lobe to be resected → FLR hypertrophies 30–50% in 4–6 weeks"]
+    pearls:["IOUS is mandatory — identifies additional lesions in 15% and changes surgical plan in 30%","Margin: 1 mm to ≥1 cm does not affect recurrence/survival (historical 1 cm obsolete); positive margin is a surrogate of aggressive biology, not a mechanistic cause — goal is microscopically negative margin","Parenchymal-sparing preserves FLR for repeat resection (recurrence up to 66% of patients)","PVE: embolize the lobe to be resected → FLR hypertrophies over ~8-wk TSH inter-stage interval; ALPPS achieves two-stage completion in 1–2 weeks","Minimally invasive minor hepatectomy (OSLO-COMET, LapOpHuva RCTs): lower complications + shorter LOS vs open"]
   },
-  guidelines:[{src:"ESMO CRLM Guidelines 2016 (updated 2023)"},{src:"EORTC 40983 Trial (perioperative FOLFOX)"},{src:"IHPBA/SSAT/SSO Consensus on CRLM 2006 (updated 2012)"}],
-  pearls:["Repeat hepatectomy for recurrent CRLM: 5-year survival 25–30% — same as primary resection (parenchymal-sparing facilitates this)","Bevacizumab: stop 4–6 weeks before surgery (anastomotic healing risk)","Cetuximab (RAS/BRAF WT, left-sided primary): higher response rate + conversion to resectability","ALPPS: rapid FLR growth but higher mortality (8–10%) vs PVE — use selectively"],
-  mistakes:["Not performing IOUS — misses 15% of lesions","Excessive resection destroying FLR when parenchymal-sparing possible","Continuing bevacizumab too close to surgery — poor wound healing","Not re-staging after neoadjuvant chemotherapy — complete radiological response in 5–10% (still resect original sites)"]
+  guidelines:[{src:"ESMO CRLM Guidelines 2016 (updated 2023)"},{src:"EORTC 40983 (EPOC) — perioperative FOLFOX for resectable CLM (PFS 20.9 vs 12.5 mo)"},{src:"IHPBA/SSAT/SSO Consensus on CRLM 2006 (updated 2012)"},{src:"Fong Clinical Risk Score (MSKCC, 1999) — 5-factor CRS"},{src:"New EPOC (Primrose 2014) — cetuximab detrimental in perioperative resectable KRAS-WT CLM"},{src:"BECOME trial (2020) — bevacizumab + FOLFOX conversion in RAS-mutant CLM"},{src:"CELIM / OLIVIA trials — cetuximab / bevacizumab conversion therapy"},{src:"BEACON trial — encorafenib + binimetinib + cetuximab for BRAF V600E mCRC"},{src:"CLOCC (EORTC 40004) — ablation + chemo vs chemo alone, unresectable liver-only CLM"},{src:"LIGRO trial — ALPPS vs portal-vein-occlusion TSH"},{src:"OSLO-COMET / LapOpHuva — minimally invasive vs open liver resection"},{src:"SECA / SECA-II (Oslo) — liver transplantation for unresectable CLM (investigational)"},{src:"Kemeny 1999 (NEJM) — adjuvant HAI-FUDR after CLM resection"},{src:"Blumgart's Surgery of the Liver, Biliary Tract and Pancreas, 7th ed (2017)"}],
+  pearls:["Repeat hepatectomy for recurrence: survival similar to first resection, operative mortality ~0%; adverse factors = recurrence <6 mo, RAS mutation, positive margin","Bevacizumab: stop ~5 weeks before surgery (operate too soon after chemo and complications ~2× higher at ≤4 wk vs 5–8 wk)","Anti-EGFR (cetuximab) benefits only left-sided RAS/BRAF-WT primaries; no benefit right-sided","RAS mutation: lower 3-yr OS (52% vs 81% WT); predicts lung recurrence; independent adverse factor","BRAF mutation (8–12% of metastatic CRC, ~2% of resected CLM): aggressive, OS 40 vs 81 mo; right-sided association; non-V600E paradoxically better prognosis","SMAD4 mutation (~13%): worse 3-yr OS (62% vs 82%). Co-mutations dominate: RAS+TP53 → 5-yr OS 20.6% vs 60%; RAS+TP53+SMAD4 triple worst; TP53 alone not prognostic; MSI-H <2% of resected CLM","Pathologic response to preop chemo is an independent survival predictor: complete/major/minor → 5-yr OS 75%/56%/33%; morphologic CT response (bevacizumab) correlates better than RECIST","Liver transplant for unresectable CLM investigational: SECA/SECA-II 5-yr OS 60%/83% with strict criteria (Oslo); limited by organ shortage","ALPPS: rapid FLR growth (1–2 wk) but high early-series mortality — improved with technical modification; use selectively"],
+  mistakes:["Adding cetuximab to perioperative chemo in resectable KRAS-WT CLM (New EPOC harm)","Using anti-EGFR for right-sided primaries (no benefit)","Prolonging preop chemo >6 cycles / >4 months (hepatotoxicity, no added benefit)","Operating too soon after chemo (≤4 wk doubles complications; wait ~5 wk)","Placing prophylactic drains / relying on topical hemostatics instead of interrogating bile-duct closure","Not performing IOUS — misses 15% of lesions","Excessive resection destroying FLR when parenchymal-sparing possible","Not re-staging after neoadjuvant chemotherapy — resect all pre-chemo sites (disappearing mets rarely complete pathologic response)"]
 }
 ];

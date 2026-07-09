@@ -5,9 +5,11 @@ window._TMP_HPB = [
   severity:"high", tags:["pancreas","gallstones","alcohol","amylase","lipase","SIRS"],
   hero:"Acute inflammatory process of the pancreas with varying degrees of regional and remote organ involvement.",
   keypoints:[
-    "80% mild (interstitial); 20% severe (necrotizing) — mortality up to 30% in infected necrotizing pancreatitis",
-    "Gallstones (45%) and alcohol (35%) account for >80% of cases",
+    "80% mild (interstitial); 20% severe (necrotizing) — mortality ~1% mild to ~30% severe with persistent organ failure; infected necrosis + persistent organ failure ~36–50%",
+    "Gallstones and alcohol together account for ~60–80% of cases (split varies: biliary predominant in women, alcohol in middle-aged men); ~10% miscellaneous, up to 30% idiopathic",
     "Diagnosis: characteristic pain + amylase/lipase ≥3× ULN ± CT findings",
+    "Two-phase disease with biphasic mortality: early deaths (<2 wk) from SIRS/multiorgan failure; late deaths from infected necrosis/sepsis",
+    "Amylase normal on admission in up to ~19%; lipase more sensitive/specific and stays elevated longer",
     "Revised Atlanta 2012: mild / moderately severe / severe based on organ failure duration",
     "CECT at 72–96 h if diagnosis uncertain or deterioration; CT severity index guides prognosis"
   ],
@@ -15,25 +17,30 @@ window._TMP_HPB = [
   mnemonics:[{name:"GET SMASHED",text:"Gallstones, Ethanol, Trauma, Steroids, Mumps, Autoimmune, Scorpion sting, Hyperlipidemia/Hypercalcemia, ERCP, Drugs"}],
   overview:{
     definition:"Acute inflammatory process of the pancreas initiated by premature intracinar activation of digestive enzymes.",
-    epidemiology:"Incidence 20–40/100 000/year; male = female for gallstone; male predominance for alcohol.",
-    pathophysiology:"Premature trypsinogen activation → autodigestion → acinar cell necrosis → local and systemic inflammatory cascade (cytokine storm, SIRS, MODS).",
+    epidemiology:"Incidence rising (wide reported range ~5–100/100 000/year; commonly 15–45); upward trend driven by obesity and gallstone prevalence; male = female for gallstone; male predominance for alcohol.",
+    pathophysiology:"Premature trypsinogen activation → autodigestion → acinar cell necrosis → local and systemic inflammatory cascade (cytokine storm, SIRS, MODS). Biliary AP: transient ampullary obstruction by a migrating gallstone (passage more important than impaction) → raised pancreatic-duct pressure → juice extravasation → acinar injury. Alcohol: toxic metabolites (acetaldehyde, fatty-acid ethyl esters) destabilize zymogen granules/lysosomes → intracellular trypsinogen activation via cathepsin B; sustained intracellular Ca²⁺ rise → necrosis; requires a second hit (genetic/environmental, e.g. smoking). Hypertriglyceridemia: pancreatic lipase liberates free fatty acids → micellar detergent injury + ischemia (usually needs TG >10 mmol/L).",
     classification:[
+      {label:"Interstitial edematous vs necrotizing",note:"The two morphologic types per Revised Atlanta"},
       {label:"Mild AP",note:"No organ failure, no local/systemic complications; resolves within 1 week"},
-      {label:"Moderately severe AP",note:"Transient organ failure (<48 h) or local complications without persistent organ failure"},
-      {label:"Severe AP",note:"Persistent organ failure (>48 h), single or multi-organ"}
+      {label:"Moderately severe AP",note:"Organ failure that resolves within 48 h (transient ≤48 h) and/or local/systemic complications without persistent organ failure"},
+      {label:"Severe AP",note:"Persistent organ failure (>48 h), single or multi-organ"},
+      {label:"Critical AP (determinant-based)",note:"4th tier: infected necrosis + persistent organ failure. DBC mortality: mild 0% / moderate 3.6% / severe 33.8% / critical 87.5%; determinants = (peri)pancreatic necrosis (sterile vs infected) + organ failure (transient vs persistent)"}
     ]
   },
   diagnosis:{
-    history:["Epigastric pain radiating to back, constant, 10/10","Nausea/vomiting","Alcohol intake / recent fatty meal","Prior biliary colic or gallstones","Medications (steroids, thiazides, azathioprine)"],
-    examination:["Epigastric tenderness ± guarding","Gray-Turner sign (flank bruising) — hemorrhagic AP","Cullen sign (periumbilical bruising) — hemorrhagic AP","Fever, tachycardia if SIRS","Absent bowel sounds (ileus)"],
+    history:["Epigastric pain radiating to back, constant, 10/10","Nausea/vomiting","Alcohol intake / recent fatty meal","Prior biliary colic or gallstones","Medications (steroids, thiazides, azathioprine)","Consider tumor (IPMN, ampullary, adenocarcinoma) as cause if first episode age >40, especially with weight loss, anorexia, or new diabetes","Post-ERCP as a specific iatrogenic cause (PEP: ~1–3% diagnostic, 2–5% therapeutic ERCP)"],
+    examination:["Epigastric tenderness ± guarding","Gray-Turner sign (flank bruising) — hemorrhagic AP","Cullen sign (periumbilical bruising) — hemorrhagic AP","Cullen/Grey Turner signs reflect exudate tracking along falciform ligament/retroperitoneum in necrotizing (hemorrhagic) disease — late and uncommon","Fever, tachycardia if SIRS","Absent bowel sounds (ileus)","Signs of intraabdominal hypertension / abdominal compartment syndrome in severe AP (tense distension)"],
     investigations:[
       {name:"Serum lipase",role:"More sensitive/specific than amylase; ≥3× ULN diagnostic"},
       {name:"Serum amylase",role:"Rises quickly, falls within 3–5 days; also elevated in other abdominal emergencies"},
-      {name:"CBC, CRP",role:"CRP >150 at 48 h predicts severity; WBC elevated in SIRS"},
+      {name:"CBC, CRP",role:"CRP peaks late (72–96 h), so cutoff 150 mg/L is a 48 h marker not an early-triage tool; WBC elevated in SIRS"},
       {name:"LFTs, bilirubin",role:"ALP/bilirubin rise suggests gallstone etiology"},
       {name:"Serum calcium, triglycerides",role:"Exclude hypercalcemia and hypertriglyceridemia as cause"},
+      {name:"Procalcitonin",role:"Predicts infected necrosis (cutoff ~1.8 ng/mL, sens/spec >90% in one series); distinguishes infection from sterile inflammation"},
+      {name:"Hematocrit / hemoconcentration",role:"Hct >44% on admission (or no fall at 24 h) predicts necrosis/organ failure; guides fluid aggressiveness"},
+      {name:"BUN",role:"Admission value and rise over first 24 h correlate with mortality"},
       {name:"US abdomen",role:"First-line: identifies gallstones, CBD dilation; poor pancreas visualization in AP"},
-      {name:"CECT abdomen (IV contrast)",role:"CT severity index (Balthazar + necrosis score); perform at 72–96 h; CTSI ≥3 predicts complications"},
+      {name:"CECT abdomen (IV contrast)",role:"Detects necrosis (~87% sensitivity; necrosis may not appear until 72 h so CT before 72 h discouraged); NOT routine on admission (predictive accuracy no better than clinical scores). Reserve for diagnostic uncertainty, persistent organ failure/SIRS/sepsis, failure to improve by 6–10 days, or suspected infected necrosis. CTSI ≥3 predicts complications"},
       {name:"MRCP",role:"Preferred over ERCP for suspected choledocholithiasis without cholangitis"}
     ]
   },
@@ -41,23 +48,32 @@ window._TMP_HPB = [
     title:"Revised Atlanta Classification 2012",
     items:[
       {k:"Mild",v:"No organ failure; no local/systemic complications"},
-      {k:"Moderately severe",v:"Transient organ failure (<48 h) OR local complications (APFC, ANC, pseudocyst, WON)"},
+      {k:"Moderately severe",v:"Organ failure that resolves within 48 h (transient ≤48 h) and/or local complications (APFC, ANC, pseudocyst, WON) without persistent organ failure"},
       {k:"Severe",v:"Persistent organ failure >48 h (cardiovascular, respiratory, or renal)"},
-      {k:"Organ failure definition",v:"Modified Marshall score ≥2 for respiratory (PaO2/FiO2), renal (creatinine), or cardiovascular (systolic BP)"}
+      {k:"Organ failure definition",v:"Modified Marshall score ≥2 in ANY of 3 systems (respiratory PaO2/FiO2, renal serum creatinine, cardiovascular systolic BP); SOFA ≥2 an accepted alternative"},
+      {k:"Local collection morphology",v:"APFC and pseudocyst (no/minimal necrosis) vs ANC and WON (necrosis-containing); pseudocyst/WON require >4 wk maturation. <4 wk without necrosis = APFC; <4 wk with necrosis = ANC; >4 wk without necrosis = pseudocyst (rare after AP); >4 wk with necrosis = walled-off necrosis (WON). Each may be sterile or infected; true pseudocyst uncommon — most persistent collections contain some necrosis"},
+      {k:"Infected necrosis",v:"Diagnosed by gas within collection on CECT OR positive image-guided FNA/culture"}
     ]
   },
   scoring:[
-    {name:"Ranson's Criteria",items:["On admission: age >55, WBC >16, glucose >11, LDH >350, AST >250","At 48 h: hematocrit fall >10%, BUN rise >1.8, Ca <2, PaO2 <60, base deficit >4, fluid >6L","Score ≥3 = severe; mortality 15–20% with score 5–6"]},
-    {name:"BISAP Score",items:["BUN >25, Impaired mental status, SIRS ≥2 criteria, Age >60, Pleural effusion","Score ≥3 = severe AP; validated predictor of mortality"]}
+    {name:"Ranson's Criteria",items:["On admission: age >55, WBC >16,000, glucose >200 mg/dL, LDH >350 IU/L, AST >250 IU/L","At 48 h: hematocrit fall >10%, BUN rise >5 mg/dL, Ca <8 mg/dL, PaO2 <60 mmHg, base deficit >4 mEq/L, fluid sequestration >6 L","Score ≥3 = severe; mortality 15–20% with score 5–6"]},
+    {name:"BISAP Score",items:["BUN >25, Impaired mental status, SIRS ≥2 criteria, Age >60, Pleural effusion","Score ≥3 = severe AP; validated predictor of mortality"]},
+    {name:"Modified Glasgow (Imrie)",items:["8–9 variables; prognostic accuracy similar to Ranson"]},
+    {name:"APACHE II",items:["Usable on admission and recalculable daily; ≥8 historically = severe"]},
+    {name:"CTSI / Modified CTSI (Balthazar)",items:["CTSI ≥7 predicts high morbidity/mortality; CTSI 0–3 mortality ~3% vs >7 ~92%"]},
+    {name:"SIRS and HAPS (Harmless AP Score)",items:["Simple early triage tools"]},
+    {name:"Caveat",items:["Existing scores plateau at ~80% accuracy; IAP/APA, ACG, AGA do NOT recommend routine scoring-system use (only Japanese 2015 guideline does)"]}
   ],
   management:{
-    conservative:["Aggressive IV fluid resuscitation: lactated Ringer's preferred (1250–1500 mL/h initially); reassess hourly","Nil by mouth initially; early enteral nutrition (within 24–48 h) via NGT/NJT if tolerated — reduces infections vs parenteral","Analgesia: opioids (morphine IV) ± paracetamol; NSAIDs if renal function adequate","Antiemetics (metoclopramide, ondansetron)","Monitor urine output (target >0.5 mL/kg/h), blood glucose, electrolytes"],
-    medical:["Antibiotics NOT routine; use only for infected necrosis (meropenem or imipenem — good pancreatic penetration)","Prophylactic antibiotics do NOT reduce mortality or infection rate in sterile necrosis","PPI/H2RA for stress ulcer prophylaxis","DVT prophylaxis (LMWH) once hemorrhage excluded"],
+    conservative:["Goal-directed IV fluid resuscitation ~5–10 mL/kg/h (possible initial ~20 mL/kg bolus); avoid >4 L in first 24 h (linked to more respiratory complications, ACS, persistent organ failure, higher mortality); reassess in first 12–24 h with urinary catheter ± arterial/central line","Lactated Ringer's reduces SIRS in first 24 h but no difference in SIRS/mortality at 48 h; AGA makes no firm LR-vs-NS recommendation and favors goal-directed therapy; large-volume NS risks hyperchloraemic metabolic acidosis","Start early oral/enteral nutrition within 24–72 h (hypercatabolic state); mild AP can resume normal diet without extra support","Enteral > parenteral: EN maintains gut integrity, reduces bacterial translocation, lowers infected-necrosis/organ-failure/mortality vs PN","NG feeding tolerated in up to ~85% — try NG before NJ (easier, cheaper)","Analgesia: opioids (morphine IV) ± paracetamol; NSAIDs if renal function adequate","Antiemetics (metoclopramide, ondansetron)","Monitor urine output (target >0.5 mL/kg/h), blood glucose, electrolytes"],
+    medical:["Antibiotics NOT routine; use only for infected necrosis (meropenem or imipenem — good pancreatic penetration)","Prophylactic antibiotics do NOT reduce mortality or infection rate in sterile necrosis","No effective drug therapy prevents organ failure (glucagon, gabexate, somatostatin, lexipafant all failed in RCTs)","No role for probiotics; PERT only if proven exocrine insufficiency (low fecal elastase / steatorrhea)","Glutamine supplementation beneficial when PN is required","Analgesia: opioids safe — the historical 'morphine causes sphincter of Oddi spasm, avoid it' teaching is not evidence-supported; PCA for severe pain; epidural investigational","PPI/H2RA for stress ulcer prophylaxis","DVT prophylaxis (LMWH) once hemorrhage excluded"],
     surgical:[
-      {name:"ERCP + sphincterotomy",when:"Gallstone AP with concurrent cholangitis or persistent biliary obstruction; within 24 h for cholangitis",notes:"Not indicated in mild AP without biliary obstruction"},
+      {name:"ERCP + sphincterotomy",when:"Urgent ERCP (<24 h) ONLY for gallstone AP WITH cholangitis; abnormal LFTs alone ≠ indication",notes:"APEC trial: early ERCP+sphincterotomy in severe biliary AP WITHOUT cholangitis did NOT improve organ failure/necrosis/mortality"},
       {name:"Cholecystectomy",when:"After resolution of mild AP before discharge; within same admission if possible",notes:"Reduces recurrence from 30% to <3%"},
-      {name:"Necrosectomy (step-up approach)",when:"Infected necrotizing pancreatitis confirmed on CT or FNA; delay at least 4 weeks for demarcation",notes:"Step-up: percutaneous drain → minimally invasive retroperitoneal debridement (VARD/MIPD) → open if failed"},
-      {name:"Open necrosectomy",when:"Failed minimally invasive approach; hemorrhage; bowel fistula",notes:"High morbidity; laparostomy may be required"}
+      {name:"Necrosectomy (step-up approach)",when:"Infected necrotizing pancreatitis confirmed on CT or FNA; delay ≥4 weeks ideal for walled-off encapsulation — intervention in first 2 weeks carries high morbidity/mortality and is avoided except for specific complications (bleeding, ischemia)",notes:"Step-up (PANTER): drainage first (percutaneous OR endoscopic) is first-line for infected necrosis — ~35% resolve with drainage alone without debridement; escalate to VARD/endoscopic necrosectomy only if no improvement; open if failed"},
+      {name:"Open necrosectomy",when:"Failed minimally invasive approach; hemorrhage; bowel fistula",notes:"High morbidity; laparostomy may be required"},
+      {name:"Abdominal compartment syndrome decompression",when:"IAP sustained >20 mmHg + new organ failure; medical measures first (NG/rectal decompression, fluid/volume optimization); invasive decompression only if refractory IAP >25 mmHg after MDT discussion",notes:"Options: percutaneous ascites drainage, laparostomy, subcutaneous linea alba fasciotomy. ACS in ~15% of severe AP, ~49% mortality when present"},
+      {name:"Disconnected pancreatic duct syndrome",when:"Necrosis transecting body/tail isolates viable distal gland (late complication of necrotizing AP)",notes:"Options: transpapillary stent, transmural EUS drainage, or salvage distal pancreatectomy ± splenectomy"}
     ]
   },
   technique:{
@@ -69,9 +85,9 @@ window._TMP_HPB = [
       {n:3,t:"VARD (Video-Assisted Retroperitoneal Debridement)",d:"Enlarge drain tract; introduce 0° laparoscope; blunt debridement with Babcock forceps; irrigate copiously"},
       {n:4,t:"Open necrosectomy if VARD fails",d:"Midline laparotomy; lesser sac entry; finger/sponge debridement; closed continuous irrigation or open packing"}
     ],
-    pearls:["Infected necrosis: FNA or CT features (gas bubbles in collection) — do not delay treatment if gas present","Hemorrhage from pseudoaneurysm: interventional radiology embolization first-line","Late pseudocyst (>4 cm, symptomatic): endoscopic cystogastrostomy preferred"]
+    pearls:["Infected necrosis: FNA or CT features (gas bubbles in collection) — do not delay treatment if gas present","PANTER-defined step-up: image-guided percutaneous OR endoscopic drainage first → escalate to VARD/endoscopic necrosectomy only if no improvement; ~35% avoid debridement entirely","Route (percutaneous vs endoscopic) driven by collection position relative to stomach/colon/liver/spleen/kidney; endoscopic (EUS-guided, LAMS) increasingly primary where feasible","MIRP detail: guidewire → balloon dilate to 30 Fr → Amplatz sheath → nephroscope debridement → 8 Fr + 24 Fr drain for continuous lavage (~250 mL/h warmed saline)","Post-intervention SIRS/bacteremia common in first 12–24 h — often needs critical-care observation","Hemorrhage from pseudoaneurysm: 'herald bleed' precedes massive bleed; CT angiogram → angio-embolization first-line (endoscopy usually nondiagnostic)","Late pseudocyst (>4 cm, symptomatic): endoscopic cystogastrostomy preferred"]
   },
-  guidelines:[{src:"IAP/APA Evidence-Based Guidelines 2013"},{src:"ACG Clinical Guideline 2013"},{src:"BSG Guidelines on AP 2023"}],
+  guidelines:[{src:"IAP/APA Evidence-Based Guidelines 2013"},{src:"ACG Clinical Guideline 2013"},{src:"BSG Guidelines on AP 2023"},{src:"Revised Atlanta Classification 2012 (Banks et al., Gut 2013)"},{src:"Determinant-Based Classification of AP Severity (Dellinger et al., Ann Surg 2012)"},{src:"PANTER trial (Dutch Pancreatitis Study Group)"},{src:"TENSION trial"},{src:"APEC trial"},{src:"AGA Institute Guideline on initial management of AP (2018)"},{src:"Blumgart's Surgery of the Liver, Biliary Tract and Pancreas, 7th ed (2017)"}],
   pearls:["Lactated Ringer's reduces SIRS compared to normal saline — preferred resuscitation fluid","Early oral/enteral feeding (within 24–48 h) reduces infectious complications","ERCP indicated ONLY for concurrent cholangitis or persistent biliary obstruction in gallstone AP","Prophylactic antibiotics have no role in sterile necrosis (multiple RCTs)"],
   mistakes:["Over-using ERCP without cholangitis or obstruction","Delayed cholecystectomy allowing recurrent AP episodes","Routine prophylactic antibiotics in mild/moderate AP — increases resistant organisms","Early necrosectomy before 4 weeks — high mortality; undrained walled-off tissue","Inadequate fluid resuscitation in first 24–48 h"]
 },
@@ -304,35 +320,39 @@ window._TMP_HPB = [
   severity:"high", tags:["liver","cirrhosis","AFP","Barcelona","ablation","resection","transplant"],
   hero:"Primary malignancy of hepatocytes, arising in >90% of cases in the setting of chronic liver disease or cirrhosis.",
   keypoints:[
-    "Third most common cause of cancer death worldwide; male:female = 3:1",
-    "Major risk factors: HBV, HCV, alcohol-related cirrhosis, NAFLD/NASH, aflatoxin B1",
+    "4th leading cause of cancer death and 6th most common neoplasia worldwide; male:female = 3:1",
+    "Major risk factors: HBV, HCV, alcohol-related cirrhosis, MAFLD (metabolic dysfunction-associated fatty liver disease — fastest-growing cause in Western transplant candidates), aflatoxin B1",
+    "One-third of cirrhotics develop HCC over their lifetime; annual incidence 1–8% by etiology; overall 5-yr survival poor at 5–15%",
+    "HBV can cause HCC without cirrhosis in 20–30% (viral genome integration); HCV DAA SVR reduces but does not eliminate risk — cirrhotics still need surveillance",
     "Barcelona Clinic Liver Cancer (BCLC) staging guides treatment allocation",
     "Surveillance: US ± AFP every 6 months in all cirrhotic patients",
     "Diagnostic: arterial hyperenhancement + venous washout on CECT/MRI in nodule >1 cm = HCC without biopsy"
   ],
   differentials:["Cholangiocarcinoma (ICC)","Hepatic metastases","Hepatic hemangioma","Focal nodular hyperplasia","Hepatic adenoma"],
-  mnemonics:[{name:"BCLC Stages",text:"0=Very early (single<2cm) → A=Early (up to 3 nodules≤3cm) → B=Intermediate (multinodular) → C=Advanced (PVI/N1/M1) → D=End-stage"}],
+  mnemonics:[{name:"BCLC Stages",text:"0=Very early (single<2cm) → A=Early (single any size OR up to 3 nodules≤3cm) → B=Intermediate (multinodular) → C=Advanced (PVI/N1/M1) → D=End-stage"}],
   overview:{
     definition:"Primary hepatocellular malignancy arising from hepatocytes, occurring predominantly in cirrhotic livers.",
-    epidemiology:"860 000 new cases/year globally; 5th commonest cancer; 3rd commonest cancer death. HBV endemic in Asia/Africa; HCV in Europe/Americas.",
-    pathophysiology:"Repeated hepatocyte injury → regenerative nodule → dysplastic nodule → HCC (via Wnt/β-catenin, TP53, Ras-MAPK pathways). Vascular invasion and arterialisation are hallmarks.",
+    epidemiology:"~800 000 deaths/year globally; 6th most common neoplasia; 4th leading cause of cancer death. 80% of cases in sub-Saharan Africa/West Asia (HBV + aflatoxin B1); HCV predominates in Japan/Europe/US, now being overtaken by MAFLD and alcohol.",
+    pathophysiology:"Repeated hepatocyte injury → regenerative nodule → dysplastic nodule → HCC (via Wnt/β-catenin, TP53, Ras-MAPK pathways). Vascular invasion and arterialisation are hallmarks. Key driver alterations: TERT promoter (telomerase), CTNNB1/Wnt-β-catenin, TP53, MAP-kinase signaling. Two molecular classes: proliferative (RAS/FGF, HBV, poor prognosis) vs non-proliferative (Wnt-β-catenin, HCV). Aflatoxin B1 induces a specific p53 mutation.",
     classification:[
       {label:"BCLC 0",note:"Very early: single <2 cm, preserved liver function, PS 0"},
-      {label:"BCLC A",note:"Early: single or up to 3 nodules ≤3 cm, Child-Pugh A–B, PS 0 — curative intent"},
+      {label:"BCLC A",note:"Early: single lesion of any size OR up to 3 nodules each ≤3 cm, preserved liver function, no vascular invasion, no symptoms — curative intent"},
       {label:"BCLC B",note:"Intermediate: multinodular, no PVI/metastases, Child-Pugh A–B, PS 0 — TACE"},
       {label:"BCLC C",note:"Advanced: PVI, N1, or M1, Child-Pugh A–B, PS 1–2 — sorafenib/atezolizumab+bev"},
       {label:"BCLC D",note:"End-stage: Child-Pugh C, PS 3–4 — best supportive care"}
     ]
   },
   diagnosis:{
-    history:["Often asymptomatic until advanced — detected on surveillance","RUQ pain, weight loss, anorexia (advanced)","Background cirrhosis symptoms: ascites, jaundice, encephalopathy","Paraneoplastic: hypoglycemia, erythrocytosis, hypercalcemia"],
-    examination:["Hepatomegaly with or without a palpable mass","Signs of chronic liver disease: spider naevi, palmar erythema, caput medusae","Ascites, jaundice (advanced)","Hepatic bruit (highly specific for HCC)"],
+    history:["Often asymptomatic until advanced — detected on surveillance","RUQ pain, weight loss, anorexia (advanced)","Background cirrhosis symptoms: ascites, jaundice, encephalopathy","Sudden decompensation in previously stable cirrhosis → investigate for HCC (portal/hepatic-vein invasion causing new ascites or variceal bleed)","Paraneoplastic: hypoglycemia, erythrocytosis, hypercalcemia"],
+    examination:["Hepatomegaly with or without a palpable mass","Signs of chronic liver disease: spider naevi, palmar erythema, caput medusae","Ascites, jaundice (advanced)","Hepatic bruit (highly specific for HCC)","Multidisciplinary reference-center management (hepatologist, surgeon, interventional radiologist, pathologist, radiation/medical oncologist)"],
     investigations:[
-      {name:"AFP (alpha-fetoprotein)",role:"Marker: >400 ng/mL highly suggestive; normal in 40% HCC; used in surveillance"},
-      {name:"AFP-L3, DCP (des-gamma-carboxyprothrombin)",role:"More specific markers; AFP-L3 >10% indicates HCC"},
-      {name:"CECT abdomen (dynamic, triphasic)",role:"Arterial hyperenhancement + portal venous washout = LR-5 (diagnostic for HCC) in nodule ≥1 cm"},
+      {name:"AFP (alpha-fetoprotein)",role:"Suboptimal for surveillance — often normal in small tumors, raised by underlying liver disease, and elevated in cholangiocarcinoma; per EASL/AASLD its use in screening is optional; >400 ng/mL highly suggestive"},
+      {name:"AFP-L3, DCP/PIVKA-II, glypican-3",role:"Additional biomarkers under study; AFP-L3 (lectin fraction) >10% indicates HCC"},
+      {name:"CECT abdomen (dynamic, triphasic)",role:"Typical arterial uptake + washout sens ~80%/spec ≥90% in nodules >2 cm; in cirrhosis a single dynamic technique diagnostic for nodules >1 cm; nodules <1 cm → repeat imaging in 3–4 months (>60% non-malignant)"},
       {name:"MRI liver with hepatobiliary contrast",role:"More sensitive for small nodules and satellite lesions; LIRADS classification"},
-      {name:"Biopsy",role:"Only if imaging non-diagnostic or atypical; risk of tract seeding (~0.8%)"},
+      {name:"Biopsy",role:"Only if atypical imaging or non-cirrhotic liver; NOT 100% sensitive — a negative result does not exclude HCC; IHC panel raises specificity (glypican-3 + HSP-70 + glutamine synthetase)"},
+      {name:"Non-cirrhotic liver mass",role:"Diagnosis by histology — imaging criteria are not valid outside cirrhosis"},
+      {name:"Ultrasound screening",role:"Sensitivity 60–80%, specificity >90%"},
       {name:"Child-Pugh / MELD score",role:"Quantify liver function — determines treatment eligibility"},
       {name:"Staging CT chest/abdomen/pelvis",role:"Assess for extrahepatic disease, portal vein invasion, lymph nodes"}
     ]
@@ -349,18 +369,23 @@ window._TMP_HPB = [
     ]
   },
   scoring:[
-    {name:"Child-Pugh Score",items:["Bilirubin, albumin, PT/INR, ascites, encephalopathy","A (5–6): good liver function; B (7–9): moderate; C (10–15): poor — not suitable for resection"]}
+    {name:"Child-Pugh Score",items:["Albumin >3.5 / 2.8–3.5 / <2.8 g/dL; Bilirubin <2 / 2–3 / >3 mg/dL; INR <1.7 / 1.8–2.3 / >2.3; ascites absent/slight/moderate; encephalopathy none / I–II / III–IV","A (5–6): good liver function; B (7–9): moderate; C (10–15): poor — not suitable for resection"]},
+    {name:"ALBI score (albumin-bilirubin)",items:["Objective 2-variable liver-function grade; sub-stratifies Child-Pugh A into prognostically distinct groups; avoids subjective ascites/encephalopathy"]},
+    {name:"CLIP score",items:["Child-Pugh + tumor morphology + portal-vein thrombosis + AFP (≥400); score 4–6 → median survival ~3.2 mo"]},
+    {name:"Okuda system",items:["Albumin, bilirubin, ascites, tumor >/<50% of liver"]},
+    {name:"Clinically significant portal hypertension",items:["HVPG ≥10 mmHg (catheter) OR surrogates — thrombocytopenia, varices, ascites, splenomegaly, or elastography; predicts post-resection decompensation"]},
+    {name:"Screening threshold",items:["AASLD/EASL: surveil when annual HCC risk ≥1.5%; risk scores PAGE-B, Toronto-THRI identify high-risk non-cirrhotic HBV"]},
+    {name:"Chemoprevention signals",items:["Statins, aspirin, coffee associated with reduced HCC risk (observational)"]}
   ],
   management:{
     conservative:["Surveillance: US ± AFP every 6 months in cirrhotics","Treat underlying liver disease: antivirals for HBV/HCV, alcohol abstinence","Nutritional support, manage cirrhosis complications"],
-    medical:["BCLC C: sorafenib (first-line TKI) or atezolizumab + bevacizumab (superior PFS — IMbrave150 trial)","Second-line: lenvatinib, regorafenib, cabozantinib, ramucirumab (AFP >400)","Best supportive care for BCLC D"],
+    medical:["First-line: atezolizumab + bevacizumab (IMbrave150; median OS not reached vs 13.2 mo sorafenib, HR 0.58; PFS 6.8 vs 4.3 mo; ORR 27% vs 12%; requires treated varices, Child-Pugh A) — new standard","First-line alternatives if immunotherapy contraindicated: sorafenib (SHARP OS 10.7 vs 7.9 mo; Asia-Pacific 6.5 vs 4.2 mo) or lenvatinib (REFLECT non-inferior, OS 13.6 vs 12.3 mo, higher ORR)","First-line alternative: durvalumab + single-dose tremelimumab (HIMALAYA/STRIDE) — OS superior to sorafenib; durvalumab monotherapy non-inferior to sorafenib","Second-line (post-sorafenib): regorafenib (RESORCE OS 10.6 vs 7.8 mo; sorafenib→regorafenib sequence OS ~26 mo), cabozantinib (CELESTIAL OS 10.2 vs 8.0 mo), ramucirumab (REACH-2, restricted to AFP ≥400 ng/mL: OS 8.5 vs 7.3 mo)","Sorafenib dose-adjust for hyperbilirubinemia: 400 mg BD if bili <ULN; 200 mg BD if ≤1.5×ULN; 200 mg OD if 1.5–3×ULN; avoid if >3×ULN","Cytotoxic chemotherapy ineffective (doxorubicin, PIAF, FOLFOX4 — no meaningful survival benefit; FOLFOX4 approved only in China)","Hand-foot syndrome under sorafenib/regorafenib correlates with better outcome — do not reflexively interrupt","Combination TKI + checkpoint (lenvatinib + pembrolizumab, KEYNOTE-524, ORR ~50%) under phase III evaluation (LEAP-002)","Best supportive care for BCLC D"],
     surgical:[
-      {name:"Hepatic resection",when:"BCLC 0/A; single tumor; no portal hypertension; adequate future liver remnant (FLR >20–30%)",notes:"Anatomical resection preferred; FLR assessment by volumetry; portal vein embolization if FLR borderline"},
-      {name:"Liver transplantation",when:"Milan criteria: single ≤5 cm or ≤3 nodules each ≤3 cm, no PVI, no metastases — curative for HCC and cirrhosis",notes:"Bridge therapy (RFA/TACE) to prevent dropout while awaiting transplant; expanded criteria (UCSF, Up-to-7) at some centers"},
-      {name:"Radiofrequency ablation (RFA)",when:"BCLC 0/A; ≤3 cm; not surgical candidate; or combined with resection for additional nodules",notes:"Percutaneous, laparoscopic, or intraoperative; 5-year survival 50–70% for small tumors"},
-      {name:"Microwave ablation (MWA)",when:"Similar to RFA; preferred for >3 cm or near major vessels (less heat-sink effect)",notes:"Larger ablation zone, faster; fewer sessions"},
-      {name:"TACE (trans-arterial chemoembolization)",when:"BCLC B (intermediate); bridge to transplant; can downstage to Milan",notes:"Conventional TACE (Lipiodol + doxorubicin) or DEB-TACE; repeat every 6–8 weeks; Child-Pugh A–B only"},
-      {name:"TARE / SIRT (radioembolization)",when:"Portal vein invasion (BCLC C); failed TACE; downstaging; Child-Pugh A",notes:"Y-90 microspheres; tumor absorbed dose >200 Gy → tumor necrosis"}
+      {name:"Hepatic resection",when:"Treatment of choice for HCC in a non-cirrhotic liver. In cirrhosis: normal bilirubin + no clinically significant portal hypertension; single lesion optimal (selected 2–3 nodules considered); tumor size not a limit but larger = higher recurrence; segmental/macrovascular invasion → generally systemic therapy",notes:"5-yr survival 70–80% in optimally selected patients (normal bilirubin, no significant portal hypertension); falls to ~50% if portal hypertension present. Intraoperative US mandatory to detect occult 0.5–1 cm satellites and guide anatomical (segment-oriented) resection. Laparoscopic/robotic comparable survival with less morbidity (Louisville 2008, Morioka 2014, Southampton 2017 consensus). No adjuvant therapy proven to reduce recurrence; 'ab initio' transplant listing if adverse pathology (microvascular invasion, satellites, poor differentiation)"},
+      {name:"Liver transplantation",when:"Milan criteria: single ≤5 cm or ≤3 nodules each ≤3 cm, no PVI, no metastases — curative for HCC and cirrhosis",notes:"5-yr survival 60–80%, recurrence <15% within Milan; expanded criteria (UCSF, Up-to-7) at some centers. AFP >1000 ng/mL → high recurrence risk (AFP-model refines Milan). Bridging (TACE/ablation) when waitlist >6 months to prevent dropout; downstaging to within Milan possible (up to ~90% with strict criteria); living-donor LT reduces dropout/waiting time, restrict to expert centers for donor safety"},
+      {name:"Radiofrequency / microwave ablation (RFA/MWA)",when:"Best in solitary tumors <2 cm (necrosis + recurrence comparable to resection); 2–3 cm or ≤3 nodules also treatable; not surgical candidate; MWA preferred >3 cm or near major vessels (less heat-sink)",notes:"Percutaneous, laparoscopic, or intraoperative; ethanol injection for subcapsular/perivascular/near-gallbladder lesions; SURF trial suggests resection not superior to ablation ≤3 cm"},
+      {name:"TACE (trans-arterial chemoembolization)",when:"BCLC B (intermediate); bridge to transplant; can downstage to Milan",notes:"DEB-TACE ≈ conventional lipiodol-TACE (DEB less toxic); both > bland embolization; median survival ~30 mo (may exceed 40). Absolute contraindications: decompensated cirrhosis, main/segmental portal-vein thrombosis or severely reduced portal flow. Reassess liver function each cycle; failure/untreatable progression → stage migration to systemic"},
+      {name:"TARE / SIRT (radioembolization, Y-90)",when:"Portal vein invasion (BCLC C); failed TACE; downstaging; Child-Pugh A",notes:"Comparable tumor control to TACE but not superior to sorafenib in BCLC C (SARAH, SIRveNIB) and no added benefit combined with sorafenib (SORAMIC); role still being defined"}
     ]
   },
   technique:{
@@ -377,8 +402,8 @@ window._TMP_HPB = [
     ],
     pearls:["Pringle maneuver: Hepatoduodenal ligament clamp; limit to 15 min continuous or 30 min cumulative in cirrhosis","Keep CVP <5 cmH2O during transection — reduces blood loss","Always mark resection line with intraoperative US before cutting","R0 margin ≥1 mm — recurrence correlates with margin status"]
   },
-  guidelines:[{src:"BCLC Strategy 2022 (Reig et al., J Hepatol)"},{src:"EASL Clinical Practice Guidelines HCC 2018"},{src:"AASLD HCC Guidance 2023"}],
-  pearls:["Surveillance every 6 months with US ± AFP in all cirrhotics — detects resectable disease","Milan criteria transplantation: 5-year survival 70–75%, recurrence <10%","Atezolizumab + bevacizumab now first-line for BCLC C (superior to sorafenib in IMbrave150)","Portal hypertension (HVPG >10 mmHg or varices) predicts post-resection liver failure"],
+  guidelines:[{src:"BCLC Strategy 2022 (Reig et al., J Hepatol)"},{src:"EASL Clinical Practice Guidelines HCC 2018"},{src:"AASLD HCC Guidance 2023"},{src:"Milan criteria (Mazzaferro et al., N Engl J Med 1996)"},{src:"UCSF expanded criteria (Yao et al., Hepatology 2001)"},{src:"LI-RADS (Mitchell et al., Hepatology 2015; ACR)"},{src:"IMbrave150 — atezolizumab + bevacizumab (Finn et al., N Engl J Med 2020)"},{src:"HIMALAYA — durvalumab + tremelimumab (Abou-Alfa et al., J Clin Oncol 2022)"},{src:"SHARP — sorafenib (Llovet et al., N Engl J Med 2008)"},{src:"REFLECT — lenvatinib (Kudo et al., Lancet 2018)"},{src:"RESORCE — regorafenib (Bruix et al., Lancet 2017)"},{src:"CELESTIAL — cabozantinib (Abou-Alfa et al., N Engl J Med 2018)"},{src:"REACH-2 — ramucirumab, AFP ≥400 (Zhu et al., Lancet Oncol 2019)"},{src:"Blumgart's Surgery of the Liver, Biliary Tract and Pancreas, 7th ed (2017)"}],
+  pearls:["Surveillance every 6 months with US ± AFP in all cirrhotics — detects resectable disease","Milan criteria transplantation: 5-year survival 60–80%, recurrence <15%","Atezolizumab + bevacizumab now first-line (OS superior to sorafenib in IMbrave150)","Portal hypertension (HVPG ≥10 mmHg or varices) predicts post-resection liver failure","Stage migration: when a stage-appropriate therapy fails or is contraindicated, migrate to the next stage's option rather than staying in-stage","Tertiary prevention: post-treatment surveillance for recurrence (much still curable) plus ongoing cirrhosis-complication screening"],
   mistakes:["Resecting without assessing FLR — post-hepatectomy liver failure","Using Child-Pugh C liver for resection — prohibitive mortality","Missing satellite nodules on pre-op imaging — mandates MRI with hepatobiliary contrast","Biopsying imaging-typical LR-5 lesion — seeding risk; not needed for diagnosis"]
 },
 {
@@ -462,7 +487,7 @@ window._TMP_HPB = [
   hero:"Aggressive exocrine pancreatic malignancy with 5-year survival <12%; most patients present with locally advanced or metastatic disease.",
   keypoints:[
     "Pancreatic head (75%): obstructive jaundice, Courvoisier's sign, weight loss — earlier presentation than body/tail",
-    "Only 15–20% resectable at presentation; 5-year survival after R0 Whipple = 20–25%",
+    "Only 15–20% resectable at presentation; 5-year survival after R0 resection up to 30–40% in select patients on modern adjuvant therapy",
     "CA 19-9 elevated in 80% — not diagnostic alone; use for monitoring and predicting recurrence",
     "Borderline resectable: portal vein/SMV abutment ≤180° — neoadjuvant therapy + reassessment",
     "FOLFIRINOX or gemcitabine + nab-paclitaxel: first-line for metastatic/locally advanced disease"
@@ -471,46 +496,57 @@ window._TMP_HPB = [
   mnemonics:[{name:"Courvoisier's Law",text:"Painless jaundice + non-tender palpable gallbladder = malignant obstruction (not gallstones — gallstones cause fibrosis, no dilation)"}],
   overview:{
     definition:"Malignant tumor arising from ductal epithelium of the pancreas; 90% are ductal adenocarcinomas.",
-    epidemiology:"12th commonest cancer; 4th commonest cancer death; 5-year survival 12%. Male ≈ female; peak 65–75 years. Risk factors: smoking (×2), obesity, T2DM, chronic pancreatitis, BRCA1/2, PRSS1.",
-    pathophysiology:"KRAS mutation (>90%) → CDKN2A, SMAD4, TP53 inactivation → unchecked proliferation; desmoplastic stroma impairs drug delivery; perineurial invasion → pain; early hematogenous and lymphatic spread.",
+    epidemiology:"12th commonest cancer; 4th commonest cancer death; 5-year survival 12%. Male ≈ female; 7th–8th decade peak, median age at diagnosis 71 y (death 73 y, SEER), >60% age 65–84. Highest incidence in Black Americans (17.2/100k men, 14.2/100k women), lowest in Asian/Pacific Islander. Non-O blood group (A/B/AB) confers higher risk (13–19% of PDAC attributable, ABO SNP rs505922). Smoking causes 25–35% of PDAC (~74% increased risk in current/former smokers; normalises after >13 y cessation). <3% truly hereditary; 5–10% have a family history (~9-fold risk); genome data suggest 10–20% carry an inherited component. Risk factors: smoking (×2), obesity, T2DM, chronic pancreatitis, BRCA1/2, PRSS1.",
+    pathophysiology:"KRAS mutation (>90%) → CDKN2A, SMAD4, TP53 inactivation → unchecked proliferation; all four currently NON-targetable (KRAS-G12C sotorasib emerging); desmoplastic stroma impairs drug delivery; perineurial invasion → pain; early hematogenous and lymphatic spread. HRD (homologous-recombination deficiency) in 15–20% (BRCA1/2, PALB2, ATM, FANCA) → platinum-sensitive. KRAS wild-type = 6–8% overall (16–18% if <50 y) → rare targetable fusions (NRG-1, NTRK1-3, ALK, ROS1, RET). New-onset insulin-dependent diabetes after age 60 carries a 1–2% incidence of occult pancreatic cancer.",
     classification:[
-      {label:"Resectable",note:"No arterial contact; portal vein/SMV contact ≤180° without deformity; no metastases"},
-      {label:"Borderline resectable",note:"SMV/PV contact >180°, short-segment SMA contact ≤180°, common hepatic artery short-segment involvement"},
-      {label:"Locally advanced (unresectable)",note:"SMA/celiac axis involvement >180°; unreconstructable SMV/PV; N2 nodes"},
-      {label:"Metastatic",note:"Peritoneal, liver, lung metastases — M1 disease"}
+      {label:"Resectable (NCCN v2.2021)",note:"No arterial contact (CA, SMA, CHA); ≤180° SMV/PV contact without vein distortion"},
+      {label:"Borderline — venous",note:"SMV/PV contact >180°, OR ≤180° with vein distortion/thrombosis but reconstructable proximal + distal vessel; OR tumour contact with IVC"},
+      {label:"Borderline — arterial (head/uncinate)",note:"CHA contact without CA/bifurcation extension (reconstructable); SMA contact ≤180°; contact with variant arterial anatomy"},
+      {label:"Borderline — arterial (body/tail)",note:"CA contact ≤180°"},
+      {label:"Locally advanced (unresectable)",note:"Unreconstructable SMV/PV occlusion; head/uncinate SMA >180° or CA >180°; body/tail SMA or CA >180°, or CA + aortic involvement"},
+      {label:"Metastatic",note:"Peritoneal, liver, lung metastases — M1 disease"},
+      {label:"Abutment vs encasement",note:"AHPBA/SSO/SSAT convention: abutment = <180°, encasement = ≥180° of vessel circumference"}
     ]
   },
   diagnosis:{
     history:["Painless progressive jaundice (head)","Weight loss, anorexia, cachexia","Dull epigastric/back pain (body/tail — late)","New-onset diabetes (recent, unexplained)","Steatorrhea (exocrine insufficiency)","Thromboembolic events (Trousseau syndrome)"],
     examination:["Jaundice, scratch marks (pruritus)","Courvoisier's sign: palpable non-tender gallbladder","Epigastric mass (advanced)","Cachexia","Virchow's node (left supraclavicular — M1)","Sister Mary Joseph nodule (periumbilical — M1)"],
     investigations:[
-      {name:"CA 19-9",role:"Elevated >37 U/mL in 80%; monitor response; limited by Lewis antigen negativity (10%)"},
+      {name:"CA 19-9",role:"Elevated >37 U/mL in 80%; monitor response; 15–20% of patients cannot synthesise CA19-9 (Lewis-negative non-secretors); unreliable in jaundice (raised by benign biliary obstruction); post-decompression/post-resection fall predicts survival; CA19-9 <180 U/mL was a PRODIGE-24 eligibility threshold — markedly elevated = negative prognostic/selection factor"},
       {name:"CEA",role:"Elevated in 40–45%; lower sensitivity than CA 19-9"},
-      {name:"CECT pancreas (dual phase)",role:"Gold standard staging: pancreatic protocol (arterial + portal venous); assesses resectability (vessel involvement, metastases)"},
+      {name:"CECT pancreas (dual phase)",role:"Gold standard staging: pancreatic protocol (arterial + portal venous); assesses resectability (vessel involvement, metastases); PDAC is hypoenhancing on arterial, hypo/isointense on venous phase"},
       {name:"MRI/MRCP",role:"Ductal anatomy; distinguishes PDAC from IPMN/PNET; liver metastases"},
-      {name:"EUS ± FNA",role:"Tissue diagnosis; T-staging; samples periportal nodes; 90% sensitivity for mass lesion"},
-      {name:"PET-CT",role:"Detects occult metastases before major resection in borderline resectable"},
-      {name:"Diagnostic laparoscopy",role:"Before Whipple in borderline/locally advanced; identifies peritoneal disease in 10–30% thought resectable on CT"}
+      {name:"EUS ± FNA",role:"Tissue diagnosis; T-staging; samples periportal nodes; 90% sensitivity for mass lesion; false-negative rate 10–20% (dense fibrosis, low cellularity); biopsy not mandatory before upfront resection but IS required before neoadjuvant therapy"},
+      {name:"Percutaneous biopsy",role:"Tract seeding rare (~0.1%); prefer biopsying a metastatic site if one exists"},
+      {name:"PET-CT",role:"Limited utility — 10–30% of PDAC are FDG-PET negative (fail to take up tracer) and benign inflammation causes false positives; best for indeterminate lesions only"},
+      {name:"Diagnostic laparoscopy",role:"Historically peritoneal disease in 20–30% thought resectable on CT, but with modern CT the yield is now <10%; use selectively for large (T3/T4) tumours, indeterminate liver lesions, or markedly elevated CA19-9"}
     ]
   },
   criteria:{
-    title:"Resectability Criteria (NCCN 2023)",
+    title:"Resectability Criteria (NCCN v2.2021)",
     items:[
       {k:"Resectable",v:"No arterial tumor contact (SMA, celiac, common hepatic); SMV/PV ≤180° contact without contour irregularity"},
       {k:"Borderline resectable",v:"SMV/PV >180° contact or contour irregularity; SMA ≤180° contact; short-segment CHA involvement; reconstructable SMV/PV occlusion"},
       {k:"Locally advanced",v:"SMA/celiac >180° abutment; unreconstructable SMV/PV; aortic involvement"},
-      {k:"Metastatic",v:"M1 disease (liver, lung, peritoneum, distant nodes)"}
+      {k:"Metastatic",v:"M1 disease (liver, lung, peritoneum, distant nodes)"},
+      {k:"Abutment vs encasement (AHPBA/SSO/SSAT)",v:"Abutment = <180°, encasement = ≥180° of vessel circumference"}
     ]
   },
-  scoring:[],
+  scoring:[
+    {name:"AJCC 8th ed (2016) — size-based T",items:["T1 <2 cm; T2 2–4 cm; T3 >4 cm; T4 = CA or SMA involvement (T4 no longer automatically unresectable)","N1 = 1–3 positive nodes; N2 = ≥4 positive nodes (N2 upstages to Stage III); Stage III now includes any T4 OR N2"]},
+    {name:"5-yr actuarial survival by stage",items:["IA ~40%, IB ~30%, IIA ~25%, IIB ~13%, III ~10%"]}
+  ],
   management:{
-    conservative:["Biliary decompression: ERCP + stent (metal preferred for resectable) before Whipple if jaundice","Nutritional support; creon (pancreatic enzyme replacement)","Pain management: celiac plexus block for intractable pain","Palliative biliary bypass (hepaticojejunostomy) for unresectable with jaundice"],
-    medical:["Resectable/borderline: consider neoadjuvant FOLFIRINOX ± CRT then reassess","Adjuvant: modified FOLFIRINOX (PRODIGE 24) or gemcitabine + capecitabine (ESPAC-4)","Metastatic: FOLFIRINOX (fit patients) or gemcitabine + nab-paclitaxel","BRCA1/2 mutation: olaparib maintenance post-platinum","MSI-H: pembrolizumab"],
+    conservative:["Preop metal (not plastic) biliary stent for neoadjuvant candidates — plastic stents need swapping every 2–3 mo, metal wall stents last through the neoadjuvant window","Routine preop biliary drainage NOT supported for resectable jaundiced patients going to early surgery — increases postoperative surgical infection (enteric seeding)","Nutritional support; creon (pancreatic enzyme replacement)","Pain management: celiac plexus block for intractable pain","Surgical palliation ('double bypass' — gastrojejunostomy + choledochojejunostomy) now largely replaced by endoscopic/percutaneous biliary wall stents and endoluminal duodenal stents; surgical GJ reserved for unstentable duodenal obstruction"],
+    medical:["Resectable/borderline: consider neoadjuvant FOLFIRINOX ± CRT then reassess; neoadjuvant renders 30–60% of borderline (and 20–30% of locally advanced) resectable — resected responders achieve survival comparable to primarily resectable disease","Adjuvant mFOLFIRINOX = standard for fit (WHO PS 0–1) patients: OS 54.4 vs 35.0 mo gemcitabine (PRODIGE-24/ACCORD/CCTG PA.6); DFS 21.6 vs 12.8 mo; grade 3–4 AEs 75.9% vs 52.9%","Adjuvant GemCap (ESPAC-4): OS 28 vs 25.5 mo (updated 30.2 vs 27.9), HR 0.82 — option for older / PS >1 patients","Adjuvant single-agent gemcitabine (CONKO-001): DFS 13.4 vs 6.9 mo; 5-yr OS 22.5% vs 11.5% vs observation; ESPAC-3 showed gemcitabine = 5-FU/LV for OS but less toxic → preferred single agent","APACT (adjuvant gem/nab-paclitaxel): DFS 19.5 vs 18.8 mo (NS) — remains investigational","Completing all 6 cycles of adjuvant chemo is an independent prognostic factor; delaying initiation up to 12 wk post-op acceptable (ESPAC-3 subanalysis)","Metastatic first-line: FOLFIRINOX (PRODIGE-4/ACCORD-11) OS 11.1 vs 6.8 mo vs gemcitabine — for PS 0–1, age ≤75, bilirubin ≤1.5× ULN","Metastatic: gem/nab-paclitaxel (MPACT) OS 8.5 vs 6.7 mo — allows age >75 and ECOG 2","Second-line: nanoliposomal irinotecan + 5-FU/LV (NAPOLI-1) OS 6.1 vs 4.1 mo after gemcitabine failure","Maintenance olaparib (POLO) for germline BRCA1/2 after ≥4 mo platinum: PFS 7.4 vs 3.8 mo (no OS benefit); ~5–7% of PDAC are germline BRCA1/2","Pembrolizumab only for MMR-deficient/MSI-H — <1% of PDAC","Germline + somatic profiling now standard of care in ALL patients (matched targeted therapy → OS 2.58 vs 1.51 y, 'Know Your Tumor')"],
     surgical:[
       {name:"Pancreaticoduodenectomy (Whipple)",when:"Resectable pancreatic head/neck/uncinate tumors; R0 intent",notes:"Standard or pylorus-preserving; PV/SMV resection if involved (segment resection + reconstruction); drain amylase day 3 to predict POPF"},
       {name:"Distal pancreatectomy ± splenectomy",when:"Body/tail tumors; R0 margins; no major vessel involvement",notes:"RAMPS (radical antegrade modular pancreatosplenectomy) for oncological clearance; minimally invasive approach increasingly used"},
       {name:"Total pancreatectomy",when:"Multifocal disease; positive pancreatic neck margin; IPMN with synchronous invasive cancer throughout",notes:"Obligate IDDM + exocrine insufficiency; islet cell autotransplantation at specialist centers"},
-      {name:"Palliative bypass",when:"Unresectable; biliary obstruction ± gastric outlet obstruction",notes:"Hepaticojejunostomy + gastrojejunostomy; laparoscopic or open; duodenal stent alternative for gastric outlet"}
+      {name:"Modified Appleby (DP-CAR)",when:"Locally advanced body tumours contacting proximal celiac axis",notes:"En-bloc celiac + CHA resection relies on retrograde GDA flow to liver; liver failure is a major risk; arterial 'supercharge' bypass graft can reduce it"},
+      {name:"Arterial resection/reconstruction (SMA/celiac)",when:"Highly selected post-neoadjuvant cases at expert centres only",notes:"High-morbidity, non-standard, generally NOT recommended (historic 'regional pancreatectomy' — Fortner/Sindelar — had high mortality and few long-term survivors)"},
+      {name:"Palliative bypass",when:"Unresectable; biliary obstruction ± gastric outlet obstruction",notes:"Hepaticojejunostomy + gastrojejunostomy; laparoscopic or open; duodenal stent alternative for gastric outlet"},
+      {name:"MIS pancreatectomy (laparoscopic/robotic)",when:"Comparable short-term outcomes to open",notes:"Long-term oncologic equivalence not firmly established"}
     ]
   },
   technique:{
@@ -527,8 +563,8 @@ window._TMP_HPB = [
     ],
     pearls:["No-touch technique: early ligation of SMV tributaries reduces tumor embolization","Pancreaticojejunostomy leak (POPF): drain amylase day 3; Grade B/C — early CT, drain management","Delayed gastric emptying (most common complication, 30%): prokinetics, NG suction","Aberrant right hepatic artery from SMA — identify before dividing GDA"]
   },
-  guidelines:[{src:"NCCN Guidelines Pancreatic Adenocarcinoma 2023"},{src:"ESMO Clinical Practice Guidelines 2020"},{src:"ISGPS Definitions: POPF, DGE, PPH 2016"}],
-  pearls:["Pylorus-preserving vs standard Whipple: equivalent oncological outcomes (PACS-01)","Preoperative biliary drainage increases infective complications — avoid unless cholangitis/severe jaundice","Adjuvant mFOLFIRINOX: 54-month median OS vs 35 months gemcitabine (PRODIGE 24)","5-year survival after R0 Whipple = 20–25%; after R1 = 10%"],
+  guidelines:[{src:"NCCN Pancreatic Adenocarcinoma Guidelines, Version 2.2021"},{src:"ESMO Clinical Practice Guidelines 2020"},{src:"ISGPS Definitions: POPF, DGE, PPH 2016"},{src:"AHPBA/SSO/SSAT consensus + MD Anderson classification (endorsed by ISGPS)"},{src:"AJCC Cancer Staging Manual, 8th ed (2017)"},{src:"PRODIGE-24 / ACCORD / CCTG PA.6 — adjuvant mFOLFIRINOX"},{src:"ESPAC-4 — adjuvant gemcitabine + capecitabine"},{src:"ESPAC-3 — gemcitabine vs 5-FU/LV adjuvant"},{src:"CONKO-001 — adjuvant gemcitabine vs observation"},{src:"ESPAC-1 — adjuvant chemo benefit; chemoradiation harmful"},{src:"JASPAC-01 — S-1 vs gemcitabine (Japan)"},{src:"APACT — adjuvant gem/nab-paclitaxel"},{src:"PREOPANC / PREOPANC-2 — neoadjuvant chemoradiation vs up-front surgery"},{src:"PRODIGE-4 / ACCORD-11 (Conroy 2011) — metastatic FOLFIRINOX"},{src:"MPACT (Von Hoff 2013) — metastatic gem/nab-paclitaxel"},{src:"NAPOLI-1 — second-line nanoliposomal irinotecan + 5-FU/LV"},{src:"POLO trial — maintenance olaparib in germline BRCA1/2"},{src:"LAP07 / Alliance A021501 / FFCD-SFRO — chemoradiation in locally advanced disease"},{src:"NRG/RTOG-0848 — adjuvant radiation question"},{src:"Blumgart's Surgery of the Liver, Biliary Tract and Pancreas, 7th ed (2017)"}],
+  pearls:["Pylorus-preserving vs standard Whipple: equivalent oncological outcomes","Preoperative biliary drainage increases infective complications — avoid unless cholangitis/severe jaundice","Adjuvant mFOLFIRINOX: 54.4-month median OS vs 35.0 months gemcitabine (PRODIGE 24)","5-year survival after R0 resection up to 30–40% in select patients on modern adjuvant therapy (ESPAC-4 R0+GemCap arm median OS 39 mo, 5-yr >40%); after R1 lower","Post-neoadjuvant imaging CANNOT reliably distinguish residual viable tumour from treatment scar around vessels — low threshold to proceed to surgical exploration in borderline/locally-advanced responders; RECIST cannot judge neoadjuvant response in PDAC","Adjuvant chemoradiation NOT standard — reduces local recurrence (EORTC-40013: 11% vs 24%) but no OS benefit and adds toxicity; used regionally in North America for R1 margins pending NRG/RTOG-0848","Chemoradiation NOT superior to chemotherapy alone in locally advanced disease (LAP07; Alliance A021501 closed its RT arm early for futility)"],
   mistakes:["Proceeding to Whipple without adequate staging CT (pancreas protocol)","Overlooking aberrant right hepatic artery — injury → hepatic ischemia","Pre-op biliary stenting routinely — increases ERCP-related complications and wound infection","Not checking drain amylase day 3 — misses early POPF diagnosis"]
 },
 {
