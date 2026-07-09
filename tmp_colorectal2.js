@@ -146,28 +146,36 @@ window._TMP_COLORECTAL2 = [
     "80% of patients are elderly women; associated with multiparous state, constipation, pelvic floor dysfunction",
     "Incontinence in 50–75% pre-operatively; continence improves after prolapse repair in many but not all",
     "Abdominal rectopexy (Frykman-Goldberg/resection rectopexy) preferred in fit patients — lower recurrence than perineal",
-    "Perineal approach (Delorme/Altemeier) for elderly/unfit patients — higher recurrence but avoids laparotomy"
+    "Perineal approach (Delorme/Altemeier) for elderly/unfit patients — higher recurrence but avoids laparotomy",
+    "High-risk ASA 3–4: mortality ~4× higher for perineal vs abdominal repair; Danish 30-day mortality open rectopexy 3.3%, lap 1.4%, Altemeier 4.4%, Delorme 2.3%",
+    "Treat the pelvis as a unit — multidisciplinary pelvic-floor approach given frequent multicompartment prolapse"
   ],
   differentials:["Mucosal prolapse (radial folds vs concentric folds in full thickness)","Hemorrhoidal prolapse (separated piles vs circumferential tube of bowel)","Rectal polyp/tumor prolapsing","Internal intussusception (ODS without external prolapse)"],
   mnemonics:[{name:"Full Thickness vs Mucosal",text:"Full thickness: concentric rings of mucosa visible around central lumen; sulcus palpable; bowel wall palpable between fingers. Mucosal only: radial folds; no sulcus; thin prolapse"}],
   overview:{
     definition:"Full-thickness protrusion of the rectum through the anal canal, representing a sliding hernia of the rectum through the pelvic floor.",
     epidemiology:"Prevalence 1–3/100 000; predominantly affects elderly women (F:M = 6:1); <40 years: male predominance (associated with psychiatric disease/constipation).",
-    pathophysiology:"Redundant sigmoid colon, deep Douglas' pouch, weak pelvic floor, lax lateral rectal ligaments → progressive intussusception of rectum → full-thickness prolapse. Chronic prolapse → sphincter stretch → incontinence (pudendal nerve neuropathy).",
+    pathophysiology:"Redundant sigmoid colon, deep Douglas' pouch, weak pelvic floor, lax lateral rectal ligaments → progressive intussusception of rectum → full-thickness prolapse. Broden-Snellman theory: begins as mid-rectal intussusception → full-thickness. Connective-tissue disorders in the young; slow-transit constipation and SRUS associations; often part of multicompartment pelvic organ prolapse. Chronic prolapse → sphincter stretch → incontinence (pudendal nerve neuropathy).",
     classification:[
       {label:"Clinical Grade I",note:"Internal intussusception (ODS — obstructive defecation syndrome); no external prolapse"},
       {label:"Clinical Grade II",note:"Prolapse to but not through anal sphincter"},
       {label:"Clinical Grade III",note:"External prolapse reducible"},
       {label:"Clinical Grade IV",note:"Irreducible prolapse; risk of strangulation"},
-      {label:"Oxford Rectal Prolapse Grade (proctography)",note:"Radiological I–V scale on defecating proctography: I–II recto-rectal intussusception, III–IV recto-anal intussusception, V overt external prolapse"}
+      {label:"Oxford Rectal Prolapse Grade (proctography)",note:"Radiological I–V scale: I descends to proximal rectocele, II into rectocele not anal canal, III into proximal anal canal, IV into distal anal canal, V protrudes from anus"},
+      {label:"Mucosal prolapse",note:"Mucosa only prolapses — radial folds; managed differently from full-thickness"},
+      {label:"Internal intussusception",note:"Full wall telescopes without external protrusion (ODS spectrum)"},
+      {label:"Full-thickness prolapse",note:"Concentric rings; same mechanism as internal intussusception but external protrusion"},
+      {label:"Solitary Rectal Ulcer Syndrome / Colitis Cystica Profunda",note:"Anterior wall lesion; biopsy shows fibrous obliteration of lamina propria; treat underlying defecatory disorder first"}
     ]
   },
   diagnosis:{
-    history:["Lump protruding from anus (worse with straining, coughing)","Fecal incontinence (soiling, urgency — stretched sphincters)","Mucus and blood PR","Constipation, ODS (obstructive defecation syndrome)","Multiparous elderly woman"],
+    history:["Lump protruding from anus (worse with straining, coughing)","Fecal incontinence (soiling, urgency — stretched sphincters)","Mucus and blood PR","Constipation, ODS (obstructive defecation syndrome)","Multiparous elderly woman","Concomitant urinary incontinence in 20–35%; vaginal vault prolapse in 15–30% — assess whole pelvic floor"],
     examination:["Ask patient to strain on commode — confirms prolapse","Concentric mucosal rings (full thickness) vs radial folds (mucosal)","Palpate sulcus between prolapse and external sphincter","Assess sphincter tone (lax = incontinence)","Exclude rectal tumor with DRE/proctoscopy"],
     investigations:[
-      {name:"Defecating proctography (dynamic MRI or fluoroscopy)",role:"Quantifies prolapse; identifies internal intussusception; enterocele; rectocoele; helps plan surgical approach"},
-      {name:"Anorectal physiology",role:"Pre-operative baseline; sphincter squeeze pressure; pudendal nerve latency — guides prognosis for incontinence recovery"},
+      {name:"Fluoroscopic defecography",role:"Most helpful study; demonstrates rectocele, intussusception, enterocele, sigmoidocele, cystocele; helps plan surgical approach"},
+      {name:"Dynamic MR defecography",role:"Multicompartment assessment but supine positioning makes it less sensitive than fluoroscopic defecography"},
+      {name:"Anorectal manometry",role:"Typically low resting/squeeze pressures; pudendal nerve latency — guides prognosis for incontinence recovery"},
+      {name:"IMPACT questionnaire",role:"Standardized symptom/quality-of-life assessment of pelvic-floor dysfunction"},
       {name:"Colonoscopy",role:"Exclude synchronous colonic pathology; especially if blood PR"},
       {name:"CT chest/abdomen/pelvis",role:"Only if malignancy suspected (associated rectal cancer uncommon)"}
     ]
@@ -176,38 +184,42 @@ window._TMP_COLORECTAL2 = [
     title:"Operative Approach Selection",
     items:[
       {k:"Fit patient (abdominal approach preferred)",v:"Frykman-Goldberg (resection rectopexy) or ventral mesh rectopexy (laparoscopic/robotic); lower recurrence (5–10%)"},
-      {k:"Unfit/elderly patient (perineal approach)",v:"Delorme's (mucosal sleeve resection) or Altemeier's (perineal rectosigmoidectomy); higher recurrence (15–30%) but avoids laparotomy"},
+      {k:"Unfit/elderly patient (perineal approach)",v:"Delorme's (mucosal sleeve resection, recurrence 16–30%) or Altemeier's (perineal rectosigmoidectomy, recurrence up to 20%); avoids laparotomy"},
       {k:"Constipation-predominant",v:"Resection rectopexy (Frykman-Goldberg) preferred — sigmoid resection addresses constipation"},
       {k:"Incontinence-predominant",v:"Ventral mesh rectopexy (preserves anterior ligaments) — better incontinence outcomes"}
     ]
   },
   scoring:[],
   management:{
-    conservative:["High-fiber diet; stool softeners; avoid straining","Pelvic floor physiotherapy (limited benefit for full-thickness prolapse)","Manual reduction for reducible prolapse (temporary)","Biofeedback for ODS"],
+    conservative:["High-fiber diet; stool softeners; avoid straining","Pelvic floor physiotherapy (limited benefit for full-thickness prolapse)","Manual reduction for reducible prolapse (temporary)","Sugar (osmotic) coating to reduce edema in incarcerated but reducible prolapse","Biofeedback for ODS"],
     medical:["Stool softeners; bowel routine; enemas"],
     surgical:[
-      {name:"Laparoscopic ventral mesh rectopexy (D'Hoore)",when:"Full-thickness prolapse in fit patient; preferred for young women (preserves continence better); incontinence-predominant",notes:"Dissect anterior rectum only; synthetic mesh sutured to anterior rectal wall; fix to sacral promontory; preserves lateral ligaments (continence/autonomic); recurrence <5%"},
-      {name:"Resection rectopexy (Frykman-Goldberg)",when:"Full-thickness prolapse + sigmoid redundancy + constipation; fit patient",notes:"Laparoscopic sigmoid resection + posterior rectopexy; sutures to presacral fascia; excellent recurrence <10%; risks anastomotic leak"},
-      {name:"Delorme's procedure",when:"Elderly/unfit; smaller prolapse (<6 cm); perineal approach",notes:"Mucosal sleeve resection; plication of muscle layer; mucosal re-anastomosis; recurrence 15–25%; avoids laparotomy"},
-      {name:"Altemeier's procedure (perineal rectosigmoidectomy)",when:"Large full-thickness prolapse; elderly; irreducible; strangulated",notes:"Full-thickness resection of prolapsed bowel via perineal approach; coloanal anastomosis; ± levatorplasty; recurrence 30%; strangulated prolapse"}
+      {name:"Laparoscopic ventral mesh rectopexy (D'Hoore)",when:"Full-thickness prolapse in fit patient; preferred for young women (preserves continence better); incontinence-predominant",notes:"Anterior-only dissection spares autonomic nerves; mesh fixed to anterior rectum and sacral promontory; European gold standard; recurrence 0–15% (Hidaka RCT 8.2% VMR vs 23.3% suture); continence improves 60–80.2%; ODS improves 78.6%; mesh erosion ~2% (polyester 6.5% vs polypropylene 1.6%)"},
+      {name:"Resection rectopexy (Frykman-Goldberg)",when:"Full-thickness prolapse + sigmoid redundancy + constipation; fit patient",notes:"Laparoscopic sigmoid resection + posterior rectopexy; sutures to presacral fascia; recurrence 10–13%; continence improves ~64%; risks anastomotic leak"},
+      {name:"Suture rectopexy (Cutait)",when:"Full-thickness prolapse; fit patient without significant sigmoid redundancy",notes:"Posterior rectal mobilization + suture fixation to presacral fascia; recurrence up to 20%; continence improves 34–42%; new constipation in up to 50%"},
+      {name:"Posterior mesh rectopexy (Wells/Ivalon)",when:"Full-thickness prolapse; abdominal approach",notes:"Posterior mesh sling fixed to sacrum; recurrence ~6% but constipation worsens; risk of pelvic sepsis"},
+      {name:"Ripstein anterior sling rectopexy",when:"Historical abdominal option; rarely used",notes:"Anterior mesh sling; recurrence up to 13%; complication rate ~52% (obstruction, stenosis)"},
+      {name:"Delorme's procedure",when:"Elderly/unfit; smaller prolapse (<6 cm); perineal approach",notes:"Mucosal sleeve resection; plication of muscle layer; mucosal re-anastomosis; recurrence 16–30%; avoids laparotomy"},
+      {name:"Altemeier's procedure (perineal rectosigmoidectomy)",when:"Large full-thickness prolapse; elderly; irreducible; incarcerated/gangrenous",notes:"Full-thickness resection of prolapsed bowel via perineal approach; coloanal anastomosis; ± levatorplasty; recurrence up to 20% (registry data up to 50%); preferred for incarcerated/gangrenous prolapse"},
+      {name:"Anal encirclement (Thiersch)",when:"Obsolete; only in extremely frail patients",notes:"Perianal encircling band; recurrence 33–44%; does not correct prolapse — largely abandoned"}
     ]
   },
   technique:{
     title:"Altemeier's Perineal Rectosigmoidectomy",
     prep:["Lithotomy position","Bowel prep; epidural or spinal; GA if compromised sphincter","Reduce prolapse if possible; examine under anesthesia"],
     steps:[
-      {n:1,t:"Circumferential incision",d:"1 cm proximal to dentate line through all bowel wall layers"},
+      {n:1,t:"Circumferential incision",d:"2–5 cm cephalad to dentate line through all bowel wall layers"},
       {n:2,t:"Open Douglas pouch",d:"Anterior dissection enters peritoneal cavity between rectum and vagina/bladder"},
       {n:3,t:"Sigmoid mobilization",d:"Pull bowel through perineum; divide mesentery with sutures/harmonic as far as possible"},
       {n:4,t:"Bowel division",d:"Divide at highest possible level; coloanal anastomosis using 3-0 Vicryl full-thickness interrupted sutures"},
       {n:5,t:"Levatorplasty",d:"Optional: plicate levator ani anteriorly; improves continence outcomes"},
       {n:6,t:"Post-op care",d:"Diet on day 1; sitz baths; watch for bleeding, anastomotic leak"}
     ],
-    pearls:["Levatorplasty improves continence outcomes post-Altemeier — add routinely","Ventral mesh rectopexy has lowest recurrence and best functional outcomes in fit patients","Irreducible strangulated prolapse: reduce gently with sugar (osmotic) to reduce edema before surgery","Post-op incontinence: 50% improve after any repair; physiotherapy and biofeedback post-operatively"]
+    pearls:["Levatorplasty improves continence outcomes post-Altemeier — add routinely","Ventral mesh rectopexy has lowest recurrence and best functional outcomes in fit patients","Irreducible strangulated prolapse: reduce gently with sugar (osmotic) to reduce edema before surgery","Continence recovery varies by procedure: VMR 60–80.2%, resection rectopexy ~64%, suture rectopexy 34–42% — physiotherapy and biofeedback post-operatively"]
   },
-  guidelines:[{src:"ASCRS Practice Parameters: Rectal Prolapse 2017"},{src:"ACPGBI Position Statement: Rectal Prolapse 2021"},{src:"ESCP Rectal Prolapse Consensus 2020"}],
-  pearls:["Ventral mesh rectopexy: best continence outcomes + lowest recurrence in fit patients","Resection rectopexy: add sigmoid resection if patient constipated — avoids worsening constipation post-rectopexy alone","Altemeier's + levatorplasty: improves incontinence outcomes; use in elderly/unfit","50% of incontinent patients improve after prolapse repair — counsel about realistic expectations"],
-  mistakes:["Treating as mucosal prolapse (hemorrhoidectomy) when full-thickness prolapse — recurrence guaranteed","Rectopexy alone in constipated patient — worsens constipation; add sigmoid resection","Omitting levatorplasty in Altemeier's — misses opportunity to improve sphincter function","Missing strangulated prolapse — irreducibility + purple/black mucosa = emergency surgery"]
+  guidelines:[{src:"ASCRS Practice Parameters: Rectal Prolapse 2017"},{src:"ACPGBI Position Statement: Rectal Prolapse 2021"},{src:"ESCP Rectal Prolapse Consensus 2020"},{src:"ASCRS Textbook of Colon & Rectal Surgery, 4th ed (2022)"}],
+  pearls:["Ventral mesh rectopexy: best continence outcomes + lowest recurrence in fit patients","Resection rectopexy: add sigmoid resection if patient constipated — avoids worsening constipation post-rectopexy alone","Altemeier's + levatorplasty: improves incontinence outcomes; use in elderly/unfit","Continence improvement is procedure-specific (VMR 60–80.2% vs suture rectopexy 34–42%) — counsel about realistic expectations","Recurrent prolapse: choose an abdominal approach (perineal re-recurrence up to 50%); after prior surgery VMR recurrence ~25% at 5 yr vs 9.7% for primary repair"],
+  mistakes:["Treating as mucosal prolapse (hemorrhoidectomy) when full-thickness prolapse — recurrence guaranteed","Rectopexy alone in constipated patient — worsens constipation; add sigmoid resection","Omitting levatorplasty in Altemeier's — misses opportunity to improve sphincter function","Missing strangulated prolapse — irreducibility + purple/black mucosa = emergency surgery","Altemeier's after prior sigmoid resection — risks a devascularized segment between two anastomoses; avoid two anastomoses"]
 },
 {
   id:"familial-adenomatous-polyposis", dept:"colorectal", name:"Familial Adenomatous Polyposis", latin:"Polyposis adenomatosa familiaris", organ:"Colon",

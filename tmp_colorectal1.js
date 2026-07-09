@@ -9,19 +9,25 @@ window._TMP_COLORECTAL1 = [
     "TNM staging guides treatment: T1–T2 N0 = surgery alone; T3–T4 or N+ = adjuvant chemotherapy",
     "Right-sided: iron-deficiency anemia, mucoid stools; left-sided: change in bowel habit, rectal bleeding, obstruction",
     "FOLFOX adjuvant chemotherapy: 3-year DFS benefit in stage III (MOSAIC trial); not proven in stage II without high-risk features",
-    "MSI testing mandatory in all CRC: guides prognosis, identifies Lynch syndrome, and predicts immunotherapy response"
+    "MSI testing mandatory in all CRC: guides prognosis, identifies Lynch syndrome, and predicts immunotherapy response",
+    "Average-risk endoscopic screening now starts at 45 (ACS 2018; NCCN still 50); 10-year interval if no adenomas",
+    "≥12 lymph nodes examined = adequate staging; ligate feeding vessels at origin"
   ],
   differentials:["Diverticular disease (stricturing)","Inflammatory bowel disease (colitis)","Ischemic colitis","Appendix abscess/mass","Metastatic disease to colon"],
   mnemonics:[{name:"Duke's vs TNM",text:"Duke's A=T1-2N0 (90%); B=T3-4N0 (70%); C=any N1-2 (35%); D=M1 (5%). TNM now standard: Stage I=T1-2N0, II=T3-4N0, III=N+, IV=M1"}],
   overview:{
     definition:"Malignant epithelial tumor of the colon, >90% adenocarcinoma, arising via chromosomal instability (CIN) or microsatellite instability (MSI) pathways.",
-    epidemiology:"3rd commonest cancer; 4th commonest cancer death. 40 000 new cases/year UK. Male > female. Peak age 60–70 years. Risk factors: age, family history, IBD, smoking, obesity, red/processed meat, alcohol.",
-    pathophysiology:"CIN pathway (85%): APC → KRAS → SMAD4 → TP53. MSI/MMR-deficient pathway (15%): MLH1 hypermethylation (sporadic) or germline MMR mutation (Lynch). Villous polyps have higher malignancy risk (40%) than tubular (5%).",
+    epidemiology:"3rd commonest cancer; 4th commonest cancer death. 40 000 new cases/year UK. Male > female. Peak age 60–70 years, but young-onset CRC (<50) rising with left/rectal predominance. 16–20% heritable. Risk factors: age, family history, IBD, smoking, obesity, red/processed meat (+12% per 100 g/day), alcohol (+7% per 10 g/day); whole grains protective (−17% per 90 g/day).",
+    pathophysiology:"~80% sporadic. CIN pathway: APC → KRAS → SMAD4 → TP53. MSI-H ~15%; ~70% of dMMR is sporadic MLH1 hypermethylation (BRAF V600E in ~69%) vs germline MMR mutation (Lynch). Consensus molecular subtypes: CMS1 (MSI-immune 14%, right); CMS2 (canonical Wnt/MYC 37%, left, best prognosis); CMS3 (metabolic/KRAS 13%); CMS4 (mesenchymal/EMT 23%, worst). Cetuximab benefits only left-sided RAS-WT tumors. Villous polyps have higher malignancy risk (40%) than tubular (5%).",
     classification:[
       {label:"TNM/AJCC 8th — Stage I (Dukes A)",note:"T1–T2 N0 M0; 5-year survival >90%"},
-      {label:"TNM/AJCC 8th — Stage II (Dukes B)",note:"T3–T4 N0 M0; 5-year survival 70–85%"},
-      {label:"TNM/AJCC 8th — Stage III (Dukes C)",note:"Any T, N1–N2, M0; 5-year survival 40–60%; adjuvant chemotherapy indicated"},
-      {label:"TNM/AJCC 8th — Stage IV (Dukes D)",note:"Any T, any N, M1; 5-year survival 5–15% overall; resectable liver mets 30–50%"}
+      {label:"TNM/AJCC 8th — Stage II (Dukes B)",note:"N0 M0; IIA (T3), IIB (T4a), IIC (T4b); 5-year survival 70–85%"},
+      {label:"TNM/AJCC 8th — Stage III (Dukes C)",note:"Any T, N+, M0; split IIIA/IIIB/IIIC by T and N1/N2a/N2b; adjuvant chemotherapy indicated; 5-year survival 40–60%"},
+      {label:"TNM/AJCC 8th — Stage IV (Dukes D)",note:"Any T, any N, M1; 5-year survival 5–15% overall; resectable liver mets 30–50%"},
+      {label:"N staging",note:"N1a (1 node), N1b (2–3), N1c (tumor deposits, upstages to III), N2a (4–6), N2b (≥7)"},
+      {label:"Lynch syndrome (~3%)",note:"Germline MLH1/MSH2/MSH6/PMS2/EPCAM; Amsterdam II & Bethesda criteria; surveillance colonoscopy q1–2yr from age 20–25"},
+      {label:"FAP",note:">100 adenomas; APC 5q21; ~100% CRC by age 40; prophylactic proctocolectomy/IPAA. Also MUTYH-associated polyposis and serrated polyposis syndrome"},
+      {label:"Malignant polyp (pT1)",note:"Haggitt levels 0–4 (pedunculated); Kikuchi Sm1–3 (sessile); submucosal invasion <1000 μm and favourable histology may be endoscopically cured"}
     ]
   },
   diagnosis:{
@@ -29,10 +35,11 @@ window._TMP_COLORECTAL1 = [
     examination:["Palpable abdominal mass (right or left colon)","Cachexia, pallor","Hepatomegaly (M1)","Peritonism (perforation)","Digital rectal exam for left-sided lesions"],
     investigations:[
       {name:"Colonoscopy + biopsy",role:"Gold standard; full colonic visualization; tissue diagnosis; synchronous polyps or cancers (5%)"},
-      {name:"CT colonography",role:"Alternative if colonoscopy incomplete or refused; detects polyps >6 mm"},
-      {name:"CECT chest/abdomen/pelvis",role:"TNM staging: lymph nodes, hepatic/pulmonary metastases, local invasion"},
-      {name:"MRI liver",role:"If CT liver equivocal or CRLM suspected; better characterization"},
-      {name:"CEA",role:"Baseline for monitoring; CEA >200 ng/mL suggests liver metastases"},
+      {name:"CT colonography",role:"Procedure of choice for incomplete/obstructing colonoscopy; detects polyps >6 mm"},
+      {name:"FIT / multitarget stool DNA-FIT (Cologuard)",role:"Screening: FIT annually; stool DNA-FIT q3yr (92% CRC sensitivity, 13% false-positive)"},
+      {name:"CECT chest/abdomen/pelvis",role:"TNM staging: lymph nodes, hepatic/pulmonary metastases, local invasion; PET-CT not for initial staging"},
+      {name:"MRI liver",role:"If CT liver equivocal or CRLM suspected; superior for lesions <10 mm"},
+      {name:"CEA",role:"Baseline for monitoring; CEA ≥5 ng/mL = worse stage-for-stage prognosis; normalization correlates with treatment response; CEA >200 suggests liver metastases"},
       {name:"CBC",role:"Iron-deficiency anemia (right-sided)"},
       {name:"MSI/MMR testing (IHC or PCR)",role:"All CRC: guides prognosis; MSI-H/dMMR predicts poor response to 5-FU alone but excellent response to immunotherapy; Lynch screening"},
       {name:"KRAS/NRAS/BRAF mutation",role:"Metastatic CRC: determines anti-EGFR eligibility; BRAF V600E = poor prognosis"}
@@ -52,13 +59,15 @@ window._TMP_COLORECTAL1 = [
   scoring:[],
   management:{
     conservative:["Nutritional support, iron supplementation","Bowel preparation for elective cases","Enhanced recovery after surgery (ERAS) protocol"],
-    medical:["Stage III adjuvant: FOLFOX × 6 months (MOSAIC trial: 5-year DFS 73% vs 67%)","Stage II high-risk: capecitabine or FOLFOX after MDT discussion","Metastatic CRC (RAS WT, left-sided): FOLFOX/FOLFIRI + cetuximab","Metastatic CRC (RAS mutant): FOLFOX/FOLFIRI + bevacizumab","MSI-H metastatic: pembrolizumab first-line (KEYNOTE-177)","BRAF V600E: encorafenib + cetuximab (second-line; BEACON)"],
+    medical:["Stage III adjuvant: FOLFOX × 6 months (MOSAIC trial: 5-year DFS 73% vs 67%); standard even in dMMR","Stage II high-risk: capecitabine or FOLFOX after MDT discussion; single-agent 5-FU has no benefit in stage II dMMR","Metastatic CRC (RAS WT, left-sided): FOLFOX/FOLFIRI + cetuximab","Metastatic CRC (RAS mutant): FOLFOX/FOLFIRI + bevacizumab","MSI-H metastatic: pembrolizumab first-line (KEYNOTE-177); checkpoint inhibitors for MSI-H disease","BRAF V600E: encorafenib + cetuximab (second-line; BEACON)","Chemoprevention: aspirin reduces Lynch CRC incidence ~50% (CAPP2, 600 mg/day)"],
     surgical:[
       {name:"Right hemicolectomy",when:"Cecum, ascending colon, hepatic flexure tumors",notes:"Resect terminal ileum, right colon to mid-transverse colon; ileocolic + right colic + right branch of middle colic vessels; D3 lymphadenectomy; laparoscopic preferred"},
       {name:"Transverse colectomy / extended right hemicolectomy",when:"Transverse colon tumors",notes:"Extended right avoids two anastomoses; midcolic vessels at root"},
       {name:"Left hemicolectomy / sigmoid colectomy",when:"Descending colon, splenic flexure, sigmoid tumors",notes:"Inferior mesenteric artery at root or preserving left colic; colorectal anastomosis; defunctioning stoma if high risk"},
       {name:"Hartmann's procedure",when:"Perforated or obstructed left colon in emergency; frail patient",notes:"End colostomy; close rectal stump; reversal rate 50–60%; high-risk reversal"},
-      {name:"Emergency subtotal colectomy",when:"Obstructed left colon with cecal dilation >10 cm; synchronous right colon lesion; IBD emergency",notes:"Total colonic resection + end ileostomy; protects dilated cecum from blowout"}
+      {name:"Emergency subtotal colectomy",when:"Obstructed left colon with cecal dilation >10 cm; synchronous right colon lesion; IBD emergency",notes:"Total colonic resection + end ileostomy; protects dilated cecum from blowout"},
+      {name:"Total/subtotal colectomy for Lynch",when:"Lynch syndrome CRC",notes:"Preferred over segmental resection — metachronous CRC risk >60% at 30 yr after segmental vs ~7% after extended"},
+      {name:"Neoadjuvant chemotherapy (FOxTROT)",when:"Locally advanced / T4b colon cancer",notes:"Pre-operative chemo improves resectability and downstaging in locally advanced colon tumors"}
     ]
   },
   technique:{
@@ -72,9 +81,9 @@ window._TMP_COLORECTAL1 = [
       {n:5,t:"Extraction and anastomosis",d:"Pfannenstiel or midline extraction; extracorporeal or intracorporeal ileocolic anastomosis (side-to-side); check mesenteric defect closure"},
       {n:6,t:"ERAS protocol",d:"No NGT; early oral fluids; mobilize day 1; remove urinary catheter day 1"}
     ],
-    pearls:["D3 lymphadenectomy: ligate vessels at root — associated with lower recurrence in Asian trials","Right ureter at risk medially during ICA dissection — identify before clipping","Hepatic flexure: divide gastrocolic omentum lateral to right gastroepiploic vessels","Anastomotic leak: 3–4% for right hemicolectomy — inspect and test integrity before closure"]
+    pearls:["Oncologic principles: ≥5 cm bowel margins; high vascular ligation at origin; ≥12 nodes","Complete mesocolic excision (CME) with central vascular ligation lowers recurrence (Bertelsen: 5-yr recurrence 9.7% vs 17.9%; median 38 vs 21 nodes)","Malignant adhesions are truly malignant in ~40% → resect en bloc, never separate","~15% present obstructed or perforated","D3 lymphadenectomy: ligate vessels at root — associated with lower recurrence in Asian trials","Right ureter at risk medially during ICA dissection — identify before clipping","Hepatic flexure: divide gastrocolic omentum lateral to right gastroepiploic vessels","Anastomotic leak: 3–4% for right hemicolectomy — inspect and test integrity before closure"]
   },
-  guidelines:[{src:"NICE CG131: Colorectal Cancer 2011 (updated 2023)"},{src:"ESMO Colorectal Cancer Guidelines 2023"},{src:"NCCN Colon Cancer 2023"}],
+  guidelines:[{src:"NICE CG131: Colorectal Cancer 2011 (updated 2023)"},{src:"ESMO Colorectal Cancer Guidelines 2023"},{src:"NCCN Colon Cancer 2023"},{src:"ASCRS Clinical Practice Guidelines for the Management of Inherited Polyposis Syndromes 2017 (Herzig et al., DCR)"},{src:"AJCC Cancer Staging Manual, 8th ed., 2017 (TNM colorectal)"},{src:"US Multisociety Task Force on Colorectal Cancer — Lynch syndrome surveillance"},{src:"ACPGBI: Management of the Malignant Colorectal Polyp 2013 (Williams et al.)"},{src:"ASCRS Textbook of Colon & Rectal Surgery, 4th ed (2022)"}],
   pearls:["12 lymph nodes minimum for adequate staging — fewer = possible understaging","MSI-H stage III: FOLFOX benefit still exists; MSI-H stage II: excellent prognosis without adjuvant chemo","Laparoscopic colectomy: equivalent oncological outcomes to open (CLASSIC trial); faster recovery","CEA: normalize post-resection; rising CEA = recurrence — triggers CT surveillance"],
   mistakes:["Not testing MSI/MMR on all CRC — misses Lynch syndrome and immunotherapy indication","Adding adjuvant chemotherapy to MSI-H stage II — no benefit, potential harm","Not performing colonoscopy of the whole colon — synchronous cancers in 5%","Emergency Hartmann's without stoma plan — reversal rate only 50–60%; counsel patients"]
 },
@@ -161,23 +170,27 @@ window._TMP_COLORECTAL1 = [
   keypoints:[
     "Diverticulosis in 60% over 60 years; acute diverticulitis in 10–25% of those with diverticula",
     "Hinchey classification guides management: I (pericolic abscess), II (pelvic/distant abscess), III (purulent peritonitis), IV (fecal peritonitis)",
-    "Uncomplicated: oral or IV antibiotics ± outpatient management; CT recommended to confirm diagnosis",
-    "Hinchey III: laparoscopic peritoneal lavage vs Hartmann's — SCANDIV/LADIES trials show lavage inferior",
-    "Elective sigmoid colectomy: discuss after second episode or complicated diverticulitis; not mandatory after first uncomplicated"
+    "Antibiotics now optional in selected uncomplicated disease (DIABOLO, AVOD level-I RCTs: no difference); 2020 ASCRS allows treatment without them",
+    "Hinchey III: laparoscopic peritoneal lavage is a valid option in selected purulent peritonitis (LOLA/SCANDIV/DILALA: comparable 1-yr morbidity/mortality, ~3/4 stoma-free) — trade-off is higher early re-intervention/abscess",
+    "Elective sigmoid colectomy individualized on QoL, not episode count (DIRECT); complications most likely at the FIRST episode"
   ],
-  differentials:["Colorectal cancer (sigmoid — must exclude at follow-up colonoscopy)","IBD","Ischemic colitis","Appendicitis (right-sided diverticulitis mimics appendicitis)","Ovarian pathology (women)"],
+  differentials:["Colorectal cancer (sigmoid — must exclude at follow-up colonoscopy)","IBD","Ischemic colitis","Appendicitis (right-sided diverticulitis mimics appendicitis)","Ovarian pathology (women)","Ruptured AAA","Pyelonephritis / ureteric calculi","Tubo-ovarian abscess / PID","Endometriosis","Ovarian torsion","Sigmoid volvulus","Stercoral ulcer"],
   mnemonics:[{name:"Hinchey Classification",text:"I=Pericolic abscess; II=Pelvic/distant abscess; III=Purulent peritonitis (no fecal contamination); IV=Fecal peritonitis — III/IV require emergency surgery or lavage"}],
   overview:{
     definition:"Inflammation of one or more diverticula of the colon, most commonly sigmoid; classified as uncomplicated or complicated.",
-    epidemiology:"Diverticulosis: 5% at age 40, 60% at age 60. Diverticulitis: 10–25% lifetime risk with diverticulosis. Left colon (sigmoid) in Western populations; right colon in Asians.",
-    pathophysiology:"Mucosal herniation through muscular wall at sites of nutrient artery penetration (false diverticula). Increased intraluminal pressure + low-fiber diet. Obstructed neck → bacterial overgrowth → microperformation → pericolic inflammation → abscess → free perforation.",
+    epidemiology:"Diverticulosis: 5% at age 40 rising to ~80% by age 80. Diverticulitis: 10–25% lifetime risk with diverticulosis; ~10% of admitted patients develop complications; male predominance 3:2–3:1. Left colon (sigmoid) in Western populations; right colon in Asians.",
+    pathophysiology:"Mucosal herniation through muscular wall at sites of nutrient artery penetration (false diverticula). Increased intraluminal pressure + low-fiber diet. Obstructed neck → bacterial overgrowth → microperforation → pericolic inflammation → abscess → free perforation. Heritability 40–50% (GWAS: COLQ, ARHGAP15, FAM155A, TNFSF15, LAMB4) plus altered microbiome. Risk: smoking (RR 2.54), NSAIDs (up to 4× perforation), obesity (RR 1.31 per 5 BMI), low fiber, inactivity.",
     classification:[
-      {label:"Modified Hinchey 0 / Ia",note:"Stages the original Hinchey omits — 0 = mild clinical diverticulitis; Ia = confined pericolic inflammation/phlegmon, no abscess"},
-      {label:"Hinchey I (Ib)",note:"Pericolic or mesenteric abscess"},
+      {label:"Modified CT-Hinchey 0 / Ia",note:"0 = wall thickening without pericolonic fat stranding; 1a = wall thickening + pericolic fat stranding/phlegmon, no abscess"},
+      {label:"Hinchey I (Ib)",note:"Pericolic or mesocolic abscess"},
       {label:"Hinchey II",note:"Pelvic or retroperitoneal abscess (communicates via tract)"},
       {label:"Hinchey III",note:"Generalized purulent peritonitis — microscopic perforation, no fecal content"},
       {label:"Hinchey IV",note:"Generalized fecal peritonitis — free perforation with fecal content"},
-      {label:"WSES CT classification",note:"Maps CT findings to uncomplicated vs complicated (stage 1a–4) to guide non-operative vs operative care"}
+      {label:"WSES CT classification",note:"Maps CT findings to uncomplicated vs complicated (stage 1a–4) to guide non-operative vs operative care"},
+      {label:"SUDD",note:"Symptomatic uncomplicated diverticular disease — persistent abdominal symptoms without overt inflammation"},
+      {label:"Fistulating disease",note:"Colovesical (commonest; air in bladder), colovaginal, or colocutaneous fistula"},
+      {label:"Stricture / obstruction",note:"Differentiate from CRC; stenting fails in benign disease"},
+      {label:"Right-sided diverticulitis",note:"True (congenital) diverticula; Asian predominance; usually less complicated"}
     ]
   },
   diagnosis:{
@@ -187,18 +200,18 @@ window._TMP_COLORECTAL1 = [
       {name:"CT abdomen/pelvis (IV contrast)",role:"Gold standard: pericolic fat stranding, abscess, free air (perforation), fistula; Hinchey classification; exclude cancer"},
       {name:"CBC, CRP",role:"WBC elevated; CRP >150 suggests complicated disease"},
       {name:"Blood cultures",role:"If sepsis/Hinchey III/IV"},
-      {name:"Urinalysis",role:"Sterile pyuria suggests adjacent colovesical fistula"},
-      {name:"Colonoscopy",role:"6–8 weeks after resolution — mandatory to exclude underlying colorectal cancer"}
+      {name:"Urinalysis",role:"Sterile pyuria suggests adjacent colovesical fistula; air in bladder on CT is diagnostic of colovesical fistula"},
+      {name:"Colonoscopy",role:"Delay ~6 weeks after resolution — excludes CRC; post-diverticulitis cancer yield ~2.1% pooled (0.5–1.3% uncomplicated vs 7.9–11% complicated)"}
     ]
   },
   criteria:{
     title:"Hinchey Classification and Management",
     items:[
-      {k:"Uncomplicated (no abscess, no free air)",v:"Oral antibiotics (co-amoxiclav or ciprofloxacin + metronidazole) 7–10 days; outpatient if tolerating oral"},
-      {k:"Hinchey I (<4 cm abscess)",v:"IV antibiotics; may resolve; CT-guided drainage if >4 cm or no improvement at 48–72 h"},
-      {k:"Hinchey II (pelvic abscess)",v:"CT-guided percutaneous drainage + IV antibiotics; operative if inaccessible"},
-      {k:"Hinchey III",v:"Emergency sigmoid colectomy (Hartmann's or primary anastomosis ± defunctioning ileostomy); laparoscopic lavage: inferior outcomes (SCANDIV/LADIES)"},
-      {k:"Hinchey IV",v:"Emergency Hartmann's procedure; mortality 30–40%; ICU post-op"}
+      {k:"Uncomplicated (no abscess, no free air)",v:"Antibiotics now optional in selected patients (DIABOLO, AVOD); if given, co-amoxiclav or ciprofloxacin + metronidazole 7–10 days; outpatient if tolerating oral"},
+      {k:"Abscess Ib/II (<3 cm)",v:"Antibiotics alone; recurrence ~25.5%"},
+      {k:"Abscess Ib/II (>3 cm)",v:"CT-guided percutaneous drainage + IV antibiotics; recurrence ~15%; operative if inaccessible"},
+      {k:"Hinchey III",v:"Emergency sigmoid colectomy (primary anastomosis ± diverting loop ileostomy preferred over Hartmann's in stable/immunocompetent); laparoscopic lavage a valid option in selected purulent cases (LOLA/SCANDIV/DILALA)"},
+      {k:"Hinchey IV",v:"Emergency resection; primary anastomosis ± diversion if stable, otherwise Hartmann's; ICU post-op"}
     ]
   },
   scoring:[],
@@ -206,10 +219,10 @@ window._TMP_COLORECTAL1 = [
     conservative:["Clear fluids, bowel rest","Analgesia; no NSAIDs (mask perforation, worsen renal function)","Serial examination","Colonoscopy at 6–8 weeks after resolution"],
     medical:["Uncomplicated: ciprofloxacin 500 mg BD + metronidazole 400 mg TDS × 7 days; or co-amoxiclav","Complicated: IV piperacillin-tazobactam; meropenem if severe sepsis","Mesalazine: some evidence reduces recurrence; not standard"],
     surgical:[
-      {name:"CT-guided percutaneous drainage",when:"Hinchey I–II abscess >4 cm; accessible; not technically difficult",notes:"8–12 Fr catheter; daily irrigation; remove when output minimal; bridge to elective surgery"},
-      {name:"Laparoscopic sigmoid colectomy (elective)",when:"After second uncomplicated episode; after one complicated episode; persistent symptoms; immunocompromised; young patients (<40)",notes:"Resect entire sigmoid to rectum (at peritoneal reflection); colorectal anastomosis; no defunctioning unless anastomosis at risk"},
-      {name:"Hartmann's procedure",when:"Hinchey III/IV (emergency); frail patients; inability to perform primary anastomosis safely",notes:"End colostomy + closed rectal stump; 50–60% never reversed; reversal high-risk"},
-      {name:"Emergency sigmoid colectomy with primary anastomosis",when:"Hinchey III; fit patient; experienced surgeon; minimal contamination; RICA trial",notes:"± defunctioning ileostomy; reduces permanent stoma rate; requires experienced colorectal surgeon on-call"}
+      {name:"CT-guided percutaneous drainage",when:"Abscess >3 cm; accessible; not technically difficult (<3 cm managed with antibiotics alone)",notes:"Daily irrigation; remove when output minimal; bridge to elective surgery"},
+      {name:"Laparoscopic sigmoid colectomy (elective)",when:"Individualized on quality of life and symptom burden (DIRECT), not episode count; persistent symptoms; immunocompromised",notes:"Resect entire sigmoid; distal margin at proximal rectum (colorectal anastomosis lowers recurrence); proximal margin in non-thickened bowel; no defunctioning unless anastomosis at risk"},
+      {name:"Hartmann's procedure",when:"Hinchey III/IV in unstable/immunocompromised patients; inability to perform primary anastomosis safely",notes:"End colostomy + closed rectal stump; 50–60% never reversed; reversal high-risk"},
+      {name:"Emergency sigmoid colectomy with primary anastomosis",when:"Hinchey III/IV in stable, immunocompetent patient; experienced surgeon",notes:"± diverting loop ileostomy; 4 RCTs show higher stoma-closure (86% vs 68%) and lower mortality (7.9% vs 19.5%) vs Hartmann's"}
     ]
   },
   technique:{
@@ -223,11 +236,11 @@ window._TMP_COLORECTAL1 = [
       {n:5,t:"Proximal division",d:"Healthy proximal descending colon — no diverticula; check mesenteric tension"},
       {n:6,t:"Circular stapled anastomosis",d:"End-to-end or end-to-side; air test; wrap omentum around anastomosis"}
     ],
-    pearls:["Ureter identification is mandatory — most commonly injured in sigmoid colectomy (0.3–0.5%)","Distal margin: divide at rectosigmoid junction — residual sigmoid leads to recurrence","Mesenteric tension: divide splenic flexure to ensure tension-free anastomosis","Left ureter: trace from its crossing of the common iliac artery before dividing IMA"]
+    pearls:["Ureter identification is mandatory — most commonly injured in sigmoid colectomy (0.3–0.5%)","Distal margin: divide at proximal rectum, not residual sigmoid — colorectal anastomosis lowers recurrence","Proximal margin: non-thickened, non-diverticular bowel","IMA/mesenteric preservation acceptable when cancer excluded","Routine prophylactic ureteral stents NOT recommended","Air-bubble leak test reduces anastomotic leaks","Mesenteric tension: divide splenic flexure to ensure tension-free anastomosis","Left ureter: trace from its crossing of the common iliac artery before dividing IMA"]
   },
-  guidelines:[{src:"ASCRS Practice Parameters: Diverticulitis 2022"},{src:"ESCP Diverticular Disease Guidelines 2020"},{src:"NICE CG163 Diverticular Disease 2019"}],
-  pearls:["Hinchey III: Hartmann's is still standard — lavage trials (SCANDIV, LADIES) showed inferiority","Elective resection: not mandatory after first uncomplicated episode — decision after 2nd or complicated","Ureter identification: the most important step in sigmoid colectomy — 0.3–0.5% injury rate","Colonoscopy 6–8 weeks post-attack: mandatory to exclude cancer (CT cannot reliably differentiate)"],
-  mistakes:["Colonoscopy during acute attack — perforation risk; delay 6–8 weeks","Laparoscopic lavage for Hinchey III — inferior to resection (SCANDIV/LADIES)","Not identifying left ureter — commonest laparoscopic sigmoid injury","Hartmann's without reversal plan — 50% permanent stoma; counsel beforehand"]
+  guidelines:[{src:"ASCRS Clinical Practice Guidelines for the Treatment of Left-Sided Colonic Diverticulitis (2020)"},{src:"ESCP Diverticular Disease Guidelines 2020"},{src:"NICE CG163 Diverticular Disease 2019"},{src:"ASCRS Textbook of Colon & Rectal Surgery, 4th ed (2022)"}],
+  pearls:["Hinchey III: laparoscopic lavage is a valid option in selected purulent peritonitis (LOLA/SCANDIV/DILALA) — trade-off is higher early re-intervention/abscess","Primary anastomosis ± diverting ileostomy preferred over Hartmann's in stable/immunocompetent perforation (higher stoma-closure, lower mortality)","Elective resection: individualized on QoL, not episode count (DIRECT); complications most likely at first episode","Ureter identification: the most important step in sigmoid colectomy — 0.3–0.5% injury rate","Colonoscopy ~6 weeks post-attack: excludes cancer (CT cannot reliably differentiate)"],
+  mistakes:["Colonoscopy during acute attack — perforation risk; delay ~6 weeks","Routine antibiotics for all uncomplicated disease — now optional in selected patients (DIABOLO, AVOD)","Treating young age (<40) as a standalone resection indication — not more virulent, only more years at risk","Not identifying left ureter — commonest laparoscopic sigmoid injury","Hartmann's without reversal plan — 50% permanent stoma; counsel beforehand"]
 },
 {
   id:"uc", dept:"colorectal", name:"Ulcerative Colitis", latin:"Colitis ulcerosa", organ:"Colon",
@@ -460,29 +473,33 @@ window._TMP_COLORECTAL1 = [
   keypoints:[
     "Internal hemorrhoids arise above dentate line (no somatic sensation); external below (painful if thrombosed)",
     "Goligher classification: I (bleed, no prolapse) → II (prolapse, spontaneous reduction) → III (prolapse, manual reduction) → IV (irreducible)",
-    "First-line: rubber band ligation (RBL) — 70–90% effective for Grades I–III; avoids surgery",
+    "Conservative trial (fiber, hydration, less straining) for 6–8 weeks is true first-line; only ~5–10% ultimately need operative hemorrhoidectomy",
+    "Rubber band ligation is the first office procedure — 70–90% effective for Grades I–III; avoids surgery",
+    "Hemorrhoids are normal anal cushions contributing up to ~20% of resting continence — over-excision can worsen marginal continence",
     "Hemorrhoidectomy (Milligan-Morgan or Ferguson): grade III–IV or failed RBL; risk of incontinence, stricture, bleeding",
-    "Thrombosed external hemorrhoid: excision within 72 h gives immediate relief; after 72 h conservative management"
+    "Thrombosed external hemorrhoid: excision within 72 h gives immediate relief; after 72 h excision increases pain — manage conservatively"
   ],
   differentials:["Rectal cancer (MUST exclude in >40 or persistent symptoms)","Anal fissure (pain is cardinal feature)","Anorectal abscess/fistula","Rectal prolapse","Colorectal polyp"],
   mnemonics:[{name:"Goligher Grades I–IV",text:"I=Bleed only; II=Prolapse+spontaneous reduce; III=Prolapse+manual reduce; IV=Irreducible permanent prolapse. Grade I-II=Conservative/RBL; III=RBL or surgery; IV=Surgery"}],
   overview:{
     definition:"Symptomatic engorgement or prolapse of the fibrovascular cushions in the anal canal, causing bleeding, prolapse, discomfort, or soiling.",
-    epidemiology:"Prevalence 4–36% of population; peak age 45–65; equal sex distribution. Associated with straining, constipation, low-fiber diet, pregnancy.",
-    pathophysiology:"Sliding downward of anal cushions (rich vascular sinusoids in right anterior, right posterior, left lateral positions). Engorgement + degeneration of the Treitz muscle (suspensory ligament) → prolapse. Internal: above dentate line → columnar epithelium → painless bleeding. External: below dentate line → squamous epithelium → painful if thrombosed.",
+    epidemiology:"US prevalence ~4% (likely underestimated — many self-treat); only ~40% of people with enlarged hemorrhoids are symptomatic. Peak age 45–65; equal sex distribution; commoner in higher socioeconomic groups. Associated with straining, constipation, low-fiber diet, pregnancy.",
+    pathophysiology:"Sliding downward of the normal anal cushions (rich vascular sinusoids in right anterior, right posterior, left lateral positions), driven by straining, Valsalva and impaired venous return. At tissue level: breakdown of the supportive stroma with raised matrix metalloproteinases (MMPs), VEGF and nitric-oxide-synthase-driven neovascularization; GWAS confirms a heritable susceptibility. Internal: above dentate line → columnar epithelium → painless bleeding. External: below dentate line → squamous epithelium → painful if thrombosed.",
     classification:[
       {label:"Goligher Grade I",note:"Bleed but do not prolapse"},
       {label:"Goligher Grade II",note:"Prolapse on defecation but reduce spontaneously"},
       {label:"Goligher Grade III",note:"Prolapse requiring manual reduction"},
-      {label:"Goligher Grade IV",note:"Permanently prolapsed, irreducible; risk of strangulation"}
+      {label:"Goligher Grade IV",note:"Permanently prolapsed, irreducible; risk of strangulation"},
+      {label:"Strangulated (Grade IV variant)",note:"Irreducible + edematous with compromised blood supply → thrombosis, necrosis/gangrene; surgical emergency"},
+      {label:"Mixed (interno-external)",note:"Combined internal and external components across the dentate line; often needs excisional surgery"}
     ]
   },
   diagnosis:{
     history:["Painless bright red rectal bleeding (on paper, in pan, coating stool — not mixed)","Prolapse: lump after defecation","Pruritus ani, soiling, mucus discharge","Pain only if thrombosed, strangulated, or anal fissure coexists","Always: change in bowel habit, weight loss, dark blood → must exclude cancer"],
     examination:["Perianal inspection: external skin tags, prolapsed hemorrhoids","Proctoscopy: grade and position of internal hemorrhoids","Digital rectal examination: exclude rectal mass, assess sphincter tone","Rigid sigmoidoscopy: exclude rectal pathology"],
     investigations:[
-      {name:"Proctoscopy",role:"Confirms grade; location (3, 7, 11 o'clock); guides treatment planning"},
-      {name:"Colonoscopy/flexible sigmoidoscopy",role:"Mandatory if: age >40, change in bowel habit, family history CRC, iron-deficiency anemia — exclude rectal/colonic cancer"},
+      {name:"Anoscopy / proctoscopy",role:"Confirms grade and location (3, 7, 11 o'clock); ask patient to strain to distinguish prolapsing hemorrhoids from full-thickness rectal prolapse"},
+      {name:"Colonoscopy/flexible sigmoidoscopy",role:"Indicated if: age >45, change in bowel habit, family history CRC/Lynch, weight loss, iron-deficiency anemia — exclude rectal/colonic cancer"},
       {name:"CBC",role:"Iron-deficiency anemia from chronic bleeding"}
     ]
   },
@@ -498,15 +515,18 @@ window._TMP_COLORECTAL1 = [
   },
   scoring:[],
   management:{
-    conservative:["High-fiber diet (25–30 g/day); adequate hydration","Stool softeners (lactulose, ispaghula)","Avoid straining; regular exercise","Sitz baths for comfort","Topical creams: symptomatic relief only (no curative effect)"],
-    medical:["Flavonoids (diosmin + hesperidin): reduce bleeding episodes; not widely used in UK"],
+    conservative:["High-fiber diet (goal 25–50 g/day soluble fiber); water ≥64 oz/day","Stool softeners (lactulose, ispaghula)","Avoid straining and prolonged toilet sitting; a foot stool (squatting position) helps; regular exercise","Sitz baths (~15 min) for comfort","Topical creams: symptomatic relief only, limit steroid/anesthetic use to ≤7 days (dermatitis, anoderm thinning)"],
+    medical:["Phlebotonics/flavonoids (diosmin + hesperidin): modestly reduce bleeding and pruritus; used mainly in Europe/Asia (not FDA-approved in US)","Topical nifedipine: reduces sphincter spasm and pain in thrombosed hemorrhoids not meeting excision criteria"],
     surgical:[
-      {name:"Rubber band ligation (RBL)",when:"Grades I–III; first-line procedural treatment; most cost-effective",notes:"Band placed 1 cm above dentate line; avoid placement at or below dentate line (pain); 70–90% success; repeat for multiple quadrants"},
-      {name:"Sclerotherapy",when:"Grade I–II; bleeding; anticoagulated patients (no banding)",notes:"5% phenol in almond oil; 3–5 mL per quadrant above dentate line; multiple sessions; lower efficacy than RBL"},
-      {name:"Stapled hemorrhoidopexy (PPH)",when:"Grade III prolapsed hemorrhoids; circumferential prolapse",notes:"Circular stapler reposition mucosa + hemorrhoidal tissue; recurrence rate higher than open hemorrhoidectomy; risk of rectal stenosis/PPPH"},
-      {name:"Milligan-Morgan hemorrhoidectomy",when:"Grade III–IV; failed RBL; large grade III; thrombosed grade IV",notes:"3-quadrant excision; leave skin bridges; wounds left open; heal in 4–6 weeks; most effective long-term but most painful"},
-      {name:"Ferguson closed hemorrhoidectomy",when:"Grade III–IV; surgeon preference",notes:"Wound closed with absorbable suture; equivalent outcomes to Milligan-Morgan; lower wound care burden"},
-      {name:"Hemorrhoidal artery ligation (HAL/HALO)",when:"Grade II–III; minimally invasive option",notes:"Doppler-guided ligation of feeding arteries; ± mucopexy (RAR); equivalent short-term outcomes; higher recurrence at 5 years"}
+      {name:"Rubber band ligation (RBL)",when:"Grades I–III; first office procedure; most cost-effective",notes:"Band placed ≥1 cm above dentate line (below = severe pain); tissue necroses over 5–7 days; bleeding peaks post-op day 5–7. Rare but potentially fatal pelvic sepsis (fever, urinary retention, pain). No increased bleed risk on clopidogrel"},
+      {name:"Infrared photocoagulation (IPC)",when:"Grade I–II bleeding hemorrhoids",notes:"Tungsten-halogen probe, 0.5–2 s pulses, 2.5–3 mm depth; apply at apex ×3–4, multiple columns per visit"},
+      {name:"Bipolar diathermy",when:"Grade I–III office ablation",notes:"~20 W pulsed, 2.2 mm depth at the apex of each column"},
+      {name:"Sclerotherapy",when:"Grade I–II; bleeding; anticoagulated patients (no banding)",notes:"Hypertonic saline or 5% phenol in oil; 1–1.5 mL per column via 21-G spinal needle above dentate line; lower efficacy than RBL"},
+      {name:"Stapled hemorrhoidopexy (PPH)",when:"Grade III circumferential prolapse",notes:"Purse-string placed 2 cm above dentate line; higher recurrence than excision (32% vs 14% at 24 mo); rare rectal perforation/rectovaginal fistula — inspect vagina before firing in women"},
+      {name:"Milligan-Morgan hemorrhoidectomy (open)",when:"Grade III–IV; failed RBL; large grade III; thrombosed grade IV",notes:"3-quadrant excision; leave skin bridges; wounds left open; heal in 4–6 weeks; most effective long-term but most painful"},
+      {name:"Ferguson closed hemorrhoidectomy",when:"Grade III–IV; surgeon preference",notes:"Wound closed with absorbable suture; meta-analysis favors closed over open for less pain, faster healing, less bleeding"},
+      {name:"Hemorrhoidal artery ligation (HAL/THD)",when:"Grade II–III; minimally invasive option",notes:"Doppler-guided ligation of 4–6 feeding arteries ± mucopexy; pooled recurrence ~17.5% (highest for grade IV); bleeding 5%, reintervention 6%; more pain and less cost-effective than RBL"},
+      {name:"Whitehead hemorrhoidectomy",when:"Largely abandoned (historical)",notes:"Circumferential excision; high rates of stenosis, mucosal ectropion (Whitehead deformity) and incontinence"}
     ]
   },
   technique:{
@@ -520,11 +540,11 @@ window._TMP_COLORECTAL1 = [
       {n:5,t:"Repeat for other quadrants",d:"Leave minimum 3 skin bridges of adequate width to prevent stenosis"},
       {n:6,t:"Post-op",d:"Metronidazole + anesthetic suppositories; sitz baths; lactulose; complete healing in 4–6 weeks"}
     ],
-    pearls:["Post-hemorrhoidectomy pain: worst at first defecation — ensure adequate analgesia (GTN ointment reduces internal sphincter spasm; 2% lidocaine gel)","Skin bridge preservation: at least 3 adequate bridges — prevents anal stenosis (most serious complication)","Urinary retention: common post-op (20%); adequate analgesia; warm bath; catheter if fails","Secondary hemorrhage (day 7–10): 1–2%; readmit; examine EUA if needed"]
+    pearls:["Post-hemorrhoidectomy pain: worst at first defecation — ensure adequate analgesia (GTN ointment reduces internal sphincter spasm; 2% lidocaine gel)","Multimodal opioid-sparing pathway: pudendal block (40–60 mL 1% lidocaine/0.25% bupivacaine; liposomal bupivacaine extends analgesia to ~72 h), scheduled ibuprofen + acetaminophen (≤4 g/day), short 5–10 day opioid script","Skin bridge preservation: at least 3 adequate bridges — prevents anal stenosis (most serious complication)","Urinary retention: common post-op (1–15%, higher after spinal/HAL); limit intra-op IV fluids <500 mL; warm bath; catheter if fails","Send excised specimens by quadrant — incidental malignancy found in ~1% of hemorrhoidectomy pathology"]
   },
-  guidelines:[{src:"ASCRS Practice Parameters for Hemorrhoids 2021"},{src:"ACPGBI Position Statement on Hemorrhoids 2019"},{src:"ESCP Hemorrhoidal Disease Guidelines 2020"}],
-  pearls:["RBL is first-line procedural treatment for Grades I–III — 70–90% success; repeat at 4–6 week intervals","Always exclude colorectal cancer before attributing bleeding to hemorrhoids in patients >40","GTN 0.2% ointment post-hemorrhoidectomy: reduces internal sphincter spasm and pain — significantly improves recovery","Thrombosed external hemorrhoid: excision <72 h = immediate relief; after 72 h = conservative (pain is reducing)"],
-  mistakes:["Attributing rectal bleeding to hemorrhoids without colonoscopy in >40 years — missed cancer","RBL below dentate line — causes severe pain; must be above dentate line","Not preserving skin bridges in hemorrhoidectomy — anal stenosis (serious long-term complication)","Not warning patients about post-hemorrhoidectomy pain — adequate analgesic plan essential"]
+  guidelines:[{src:"ASCRS Practice Parameters for Hemorrhoids 2021"},{src:"ACPGBI Position Statement on Hemorrhoids 2019"},{src:"ESCP Hemorrhoidal Disease Guidelines 2020"},{src:"ASCRS Textbook of Colon & Rectal Surgery, 4th ed (2022), Ch 11 — Davids & Ridolfi"}],
+  pearls:["Conservative therapy for 6–8 weeks is first-line; RBL is the first office procedure for Grades I–III (70–90% success), repeated at 4–6 week intervals","Only ~5–10% of symptomatic patients ultimately require operative hemorrhoidectomy","Always exclude colorectal cancer before attributing bleeding to hemorrhoids in patients >45","GTN 0.2% ointment post-hemorrhoidectomy: reduces internal sphincter spasm and pain — significantly improves recovery","Thrombosed external hemorrhoid: excision <72 h = immediate relief; after 72 h excision increases pain intensity/duration — manage conservatively"],
+  mistakes:["Attributing rectal bleeding to hemorrhoids without colonoscopy in patients >45 — missed cancer","RBL below dentate line — causes severe pain; must be above dentate line","Excising a thrombosed external hemorrhoid after 72 h — increases pain rather than relieving it","Volume-expanding liposomal bupivacaine by mixing with lidocaine — drives local-anesthetic toxicity","Not preserving skin bridges in hemorrhoidectomy — anal stenosis (serious long-term complication)"]
 },
 {
   id:"anal-fissure", dept:"colorectal", name:"Anal Fissure", latin:"Fissura ani", organ:"Anus",
@@ -597,31 +617,33 @@ window._TMP_COLORECTAL1 = [
   severity:"low", tags:["anus","fistula","Parks","LIFT","seton","flap","Crohn","cryptoglandular"],
   hero:"Abnormal communication between the anal canal (usually at the dentate line) and the perianal skin, arising from cryptoglandular infection in 90% of cases.",
   keypoints:[
-    "Parks classification: intersphincteric (45%), transsphincteric (30%), suprasphincteric (20%), extrasphincteric (5%)",
-    "Cryptoglandular infection: abscess at anal gland → track through sphincters → fistula",
+    "Parks classification (approximate ranges): intersphincteric 24–45%, transsphincteric 30–60%, suprasphincteric 2–20%, submucosal/subcutaneous 2–3%; extrasphincteric = non-cryptoglandular 5th class",
+    "Cryptoglandular infection: abscess at anal gland → track through sphincters → fistula; ~30–35% of cryptoglandular abscesses progress to fistula (higher in non-diabetics and age <40)",
     "MRI pelvis is gold standard for complex fistula: delineates sphincter involvement, horseshoe extensions, secondary tracts",
     "Treatment guided by sphincter involvement: low fistula → fistulotomy safe; high (>30% external sphincter) → sphincter-preserving techniques",
-    "LIFT (ligation of intersphincteric fistula tract): 70–80% success; no sphincter division; suitable for transsphincteric fistulas"
+    "LIFT (ligation of intersphincteric fistula tract): 61–94% success; no sphincter division; suitable for transsphincteric fistulas"
   ],
   differentials:["Crohn's perianal fistula (multiple, complex, indurated edges, rectal Crohn's)","Hidradenitis suppurativa (skin glands, multiple superficial tracts, no dentate line connection)","Pilonidal sinus (midline, hair pits)","Presacral tumor (rare)","Bartholin's gland abscess (women)"],
   mnemonics:[{name:"Parks Classification",text:"Intersphincteric (between internal + external, 45%); Transsphincteric (through external sphincter, 30%); Suprasphincteric (above puborectalis, 20%); Extrasphincteric (outside both sphincters, 5%)"}],
   overview:{
     definition:"Abnormal granulation-tissue-lined tract connecting the internal opening (usually at dentate line) to the external opening on perianal skin.",
-    epidemiology:"Incidence 9/100 000/year; M:F = 2:1; peak age 30–40 years. 90% cryptoglandular; 10% secondary (Crohn's, TB, HIV, trauma, radiation, cancer).",
-    pathophysiology:"Infection of anal gland (at dentate line, 4–8 glands at 3, 6, 9, 12 o'clock) → abscess → track along plane of least resistance through sphincters → fistula formation. Goodsall's rule: posterior external openings track to posterior midline internal opening; anterior openings track straight to nearest dentate line crypt.",
+    epidemiology:"Incidence 8.6–20/100 000/year; M:F = 2.4–3:1; mean age ~40 years. 90% cryptoglandular; 10% secondary (Crohn's, TB, HIV, trauma, radiation, cancer).",
+    pathophysiology:"Infection of anal glands (lying at the dentate line, extending variably into submucosa, internal sphincter, intersphincteric space and external sphincter) → abscess → track along plane of least resistance through sphincters → fistula formation. Goodsall's rule predicts internal opening in ~80% overall (posterior 91%, intersphincteric 93%; less reliable anterior 69% and transsphincteric 68%): posterior external openings curve to posterior midline; anterior openings track radially to nearest crypt.",
     classification:[
+      {label:"Submucosal / subcutaneous",note:"2–3%; no sphincter involvement; fistulotomy safe"},
       {label:"Intersphincteric",note:"Traverses internal sphincter only; low; fistulotomy safe in most"},
-      {label:"Transsphincteric",note:"Traverses both sphincters; high vs low based on extent of external sphincter traversed"},
+      {label:"Transsphincteric",note:"Traverses both sphincters; subdivided low (≤30% EAS) vs high (>30% EAS)"},
       {label:"Suprasphincteric",note:"Above puborectalis; rare; complex; LIFT or flap"},
-      {label:"Extrasphincteric",note:"Outside sphincters; very rare; secondary cause; full sphincter preservation required"}
+      {label:"Extrasphincteric",note:"Outside sphincters; very rare; non-cryptoglandular secondary cause; full sphincter preservation required"},
+      {label:"Complex vs simple (SPTF/ASCRS)",note:"Complex = >30% EAS, anterior in female, multiple tracts, recurrent, pre-existing incontinence, irradiation, or Crohn's; all others simple"}
     ]
   },
   diagnosis:{
     history:["Previous perianal abscess (50%)","Persistent perianal discharge (pus, blood)","Pain (if abscess re-forming)","Pruritus ani, recurrent infections","Crohn's, IBD, TB history (secondary fistula)"],
-    examination:["External opening: pink, granulating tissue; may be multiple","Goodsall's rule: predict internal opening location","Digital rectal examination: palpable cord, indurated tract; internal opening at dentate line","Proctoscopy: internal opening as a papule or depression at dentate line"],
+    examination:["External opening: pink, granulating tissue; may be multiple","Goodsall's rule: predict internal opening location","Digital rectal examination: palpable cord, indurated tract; internal opening at dentate line; palpation identifies internal opening in ~93%","Proctoscopy: internal opening as a papule or depression at dentate line","Anorectal abscess distribution (Ramanujam): perianal 42.7%, ischiorectal 22.7%, intersphincteric 21.4%, supralevator 7.3%"],
     investigations:[
-      {name:"MRI pelvis (endoanal or external coil)",role:"Gold standard for complex fistulas: delineates sphincter involvement, horseshoe extensions, secondary tracts, relationship to puborectalis; Spencer and Parks plane grading"},
-      {name:"Endoanal ultrasound (EAUS)",role:"Dynamic assessment; 3D EAUS with hydrogen peroxide enhancement; good for intersphincteric; limited for high fistulas"},
+      {name:"MRI pelvis (external body coil now surpasses endoanal coil)",role:"Gold standard for complex fistulas: classification accuracy 92.7% vs CT 73.1%; internal-opening detection 85.3% vs CT 68.2%; delineates sphincter involvement, horseshoe extensions, secondary tracts. Imaging NOT needed for uncomplicated disease"},
+      {name:"Endoanal ultrasound (EAUS)",role:"Dynamic assessment; 3D EAUS with hydrogen peroxide enhancement; good for intersphincteric; worse for secondary tracts"},
       {name:"EUA (examination under anesthesia)",role:"Allows Lockhart-Mummery probe to identify internal opening; treat at same sitting"},
       {name:"Fistulography",role:"Rarely used; replaced by MRI"},
       {name:"Colonoscopy",role:"If Crohn's suspected; rectal Crohn's changes management significantly"}
@@ -632,22 +654,27 @@ window._TMP_COLORECTAL1 = [
     items:[
       {k:"Intersphincteric low",v:"Fistulotomy: lay open entire tract; excellent healing; continence preserved"},
       {k:"Low transsphincteric (<30% EAS)",v:"Fistulotomy: lay open; minor incontinence risk; acceptable"},
-      {k:"High transsphincteric (>30% EAS)",v:"Seton (draining) + staged approach; LIFT; advancement flap; VAAFT; avoid fistulotomy"},
+      {k:"High transsphincteric (>30% EAS)",v:"Sphincter-preserving: seton (draining) + staged approach; LIFT; advancement flap; VAAFT; avoid fistulotomy. Note: 'complex' (SPTF definition) is broader than just high transsphincteric"},
       {k:"Suprasphincteric / extrasphincteric",v:"Sphincter preservation mandatory; seton long-term; flap; LIFT; fibrin glue; plug"},
       {k:"Crohn's fistula",v:"Medical (infliximab + seton); avoid radical surgery in active luminal disease"}
     ]
   },
   scoring:[],
   management:{
-    conservative:["Sitz baths; hygiene","Seton suture (loose/draining): controls sepsis; allows fibrosis; staged approach"],
-    medical:["Crohn's: infliximab ± seton (combined approach — 70% closure)","Antibiotics for acute sepsis: co-amoxiclav or metronidazole","Anal fistula plug / fibrin glue: 40–50% success; no sphincter at risk; repeatable"],
+    conservative:["Sitz baths; hygiene","No packing after abscess incision and drainage","Seton suture (loose/draining): controls sepsis; allows fibrosis; staged approach"],
+    medical:["Crohn's: infliximab ± seton (combined approach)","Antibiotics for acute sepsis: co-amoxiclav or metronidazole","Post-drainage antibiotics may reduce fistula formation (30%→14.1%; meta-analysis 36% reduction) but evidence is inconsistent — guidelines advise against routine use","Anal fistula plug 24–88% / fibrin glue 14–94% (initial ~50%) success; no sphincter at risk; repeatable"],
     surgical:[
-      {name:"Fistulotomy (lay-open)",when:"Intersphincteric; low transsphincteric (<30% external sphincter); superficial",notes:"Most effective; 90–95% cure; continence risk minimal for low fistulas; marsupialise edges; send for histology"},
-      {name:"LIFT (Ligation of Intersphincteric Fistula Tract)",when:"Transsphincteric (high); avoids sphincter division; 70–80% success",notes:"Identify intersphincteric plane; ligate and divide fistula tract at internal sphincter level; curettage; no sphincter at risk"},
-      {name:"Advancement mucosal flap",when:"High transsphincteric; suprasphincteric; failed previous procedures",notes:"Raise full-thickness rectal mucosal flap; advance over closed internal opening; suture; 60–80% success; Crohn's: high failure"},
-      {name:"VAAFT (video-assisted anal fistula treatment)",when:"Complex fistula; failed previous procedures; operator-dependent",notes:"Fistuloscope illuminates tract from external opening; endoscopic ablation of tract; internal opening closed; 70% short-term success"},
-      {name:"Cutting seton",when:"Staged tightening over months; rarely used now",notes:"Risk of incontinence; replaced by staged seton + LIFT/flap"},
-      {name:"Draining seton",when:"Complex fistula; Crohn's; temporizing; allows anti-TNF therapy",notes:"Loose non-cutting seton maintains drainage; reduces sepsis; definitive repair planned later"}
+      {name:"Abscess incision and drainage",when:"Anorectal abscess — primary treatment (not antibiotics)",notes:"Office drainage preferred; do NOT perform primary fistulotomy at drainage (risks unnecessary sphincter division); no packing"},
+      {name:"Fistulotomy (lay-open)",when:"Simple fistula only — intersphincteric, low transsphincteric (<30% EAS), superficial",notes:"Recurrence 0–9%; continence risk minimal for low fistulas; marsupialise edges (heals ~6 vs 10 weeks); send for histology"},
+      {name:"Fistulotomy + primary sphincter reconstruction",when:"Selected high fistula where lay-open would divide significant sphincter",notes:"Success 91–96%; incontinence 2–13%"},
+      {name:"LIFT (Ligation of Intersphincteric Fistula Tract)",when:"Transsphincteric (high); avoids sphincter division; 61–94% success",notes:"Identify intersphincteric plane; ligate and divide fistula tract; curettage; failure usually converts to an easily-managed intersphincteric fistula. Variants (BioLIFT, LIFT-PLUS) not proven superior"},
+      {name:"Advancement mucosal flap",when:"High transsphincteric; suprasphincteric; failed previous procedures",notes:"Raise full-thickness flap; advance over closed internal opening; success 60–100%; continence worsens up to 35%; Crohn's: high failure"},
+      {name:"FiLaC (fistula laser closure)",when:"Intersphincteric or short tract <30 mm",notes:"Primary success 33–82%; incontinence ~1.7%"},
+      {name:"VAAFT (video-assisted anal fistula treatment)",when:"Complex fistula; failed previous procedures; operator-dependent",notes:"Fistuloscope from external opening; endoscopic ablation; internal opening closed; success 76–87%"},
+      {name:"Modified Hanley procedure",when:"Deep postanal / horseshoe fistula",notes:"Drains the deep postanal space; divides the internal opening tract"},
+      {name:"Cutting seton",when:"Staged tightening over months; rarely used now",notes:"Recurrence 0–10% but incontinence 0–67% (pooled ~12–32%); IAS division worsens continence — avoid"},
+      {name:"Draining seton (definitive)",when:"Complex fistula; Crohn's; temporizing; allows anti-TNF therapy",notes:"Loose non-cutting seton, changed ~q3 months; as definitive treatment ~6–10% recurrence, ~3% incontinence"},
+      {name:"Stem cell therapy / OTSC clip",when:"Investigational — complex or Crohn's fistula",notes:"Emerging; not yet standard of care"}
     ]
   },
   technique:{
@@ -661,11 +688,11 @@ window._TMP_COLORECTAL1 = [
       {n:5,t:"Ligation of external component",d:"Suture-ligate external sphincter side; ensure no sphincter divided"},
       {n:6,t:"Wound closure",d:"Close intersphincteric wound; pack external opening; drain for granulation"}
     ],
-    pearls:["MRI is mandatory for complex fistulas — underestimating sphincter involvement is the commonest error","No single procedure is universally superior for high fistulas — staged approach gives best continence preservation","Goodsall's rule: anterior opening → radial tract; posterior opening → curved to posterior midline","Crohn's fistula: do NOT do fistulotomy; seton + infliximab is the standard approach"]
+    pearls:["Fistulotomy only for simple fistula (recurrence 0–9%)","Marsupialisation shortens healing (~6 vs 10 weeks)","LIFT failure usually converts to an easily-managed intersphincteric fistula","MRI is mandatory for complex fistulas — underestimating sphincter involvement is the commonest error","No single procedure is universally superior for high fistulas — staged approach gives best continence preservation","Goodsall's rule: anterior opening → radial tract; posterior opening → curved to posterior midline","Crohn's fistula: do NOT do fistulotomy; seton + infliximab is the standard approach"]
   },
-  guidelines:[{src:"ASCRS Practice Parameters: Anal Abscess and Fistula 2022"},{src:"ACPGBI Position Statement on Anal Fistula 2021"},{src:"ESCP Perianal Crohn's Disease Consensus 2022"}],
-  pearls:["LIFT: no sphincter division, 70–80% success for transsphincteric fistulas — growing first-line recommendation","Advancement flap: most durable sphincter-preserving option for high fistulas but requires skill","Crohn's fistula: anti-TNF + seton; radical surgery contraindicated in active luminal disease","MRI before any re-do fistula surgery — residual tracts/extensions not visible clinically"],
-  mistakes:["Fistulotomy for high transsphincteric fistula — incontinence (major or minor) in 30–50%","Operating on Crohn's fistula without treating luminal disease — high failure and complication rate","Not identifying internal opening — fistulotomy of wrong tract → persistent fistula","Cutting seton applied immediately — staged approach always preferable in any high fistula"]
+  guidelines:[{src:"Vogel JD, Johnson EK, Morris AM, et al. ASCRS Clinical Practice Guideline for the Management of Anorectal Abscess, Fistula-in-Ano, and Rectovaginal Fistula. Dis Colon Rectum. 2016;59(12):1117–1133."},{src:"ACPGBI Position Statement on Anal Fistula 2021"},{src:"ESCP Perianal Crohn's Disease Consensus 2022"},{src:"ASCRS Textbook of Colon & Rectal Surgery, 4th ed (2022)"}],
+  pearls:["LIFT: no sphincter division, 61–94% success for transsphincteric fistulas — growing first-line recommendation","Advancement flap: most durable sphincter-preserving option for high fistulas but requires skill","Crohn's fistula: anti-TNF + seton; radical surgery contraindicated in active luminal disease","MRI before any re-do fistula surgery — residual tracts/extensions not visible clinically","Malignant degeneration of a chronic fistula is rare but should be considered in long-standing disease"],
+  mistakes:["Fistulotomy for high transsphincteric fistula — incontinence (major or minor) in 30–50%","Primary fistulotomy at abscess drainage — risks unnecessary sphincter division","'Popping through' the last mucosal layer while probing — creates a false internal opening → recurrence","Operating on Crohn's fistula without treating luminal disease — high failure and complication rate","Not identifying internal opening — fistulotomy of wrong tract → persistent fistula","Cutting seton applied immediately — staged approach always preferable in any high fistula"]
 },
 {
   id:"pilonidal-sinus", dept:"colorectal", name:"Pilonidal Sinus", latin:"Sinus pilonidalis", organ:"Sacrococcyx",
