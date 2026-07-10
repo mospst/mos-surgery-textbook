@@ -10,11 +10,11 @@ const ENDOCRINE_DISEASES_2 = [
   tags: ["endocrine","adrenal","catecholamines","mne"],
   hero: "Catecholamine-secreting tumor of adrenal medulla. 'Rule of 10s'. Pre-operative alpha-blockade mandatory — failure to do so is potentially fatal.",
   keypoints: [
-    "Rule of 10s: 10% malignant, 10% bilateral, 10% extra-adrenal (paraganglioma), 10% familial, 10% in children",
+    "Rule of 10s: ~10% bilateral, extra-adrenal (paraganglioma), familial, pediatric — but true malignancy 12–29%, higher than the classic 10%",
     "Triad: headache + sweating + palpitations (paroxysmal hypertension)",
     "Biochemistry FIRST: 24h urine metadrenalines or plasma metadrenalines",
     "Alpha-block BEFORE beta-block — beta-blockade alone causes paradoxical hypertension",
-    "Laparoscopic adrenalectomy preferred for tumors <6cm"
+    "Laparoscopic adrenalectomy preferred for tumors <5cm"
   ],
   differentials: ["Essential hypertension","Anxiety/panic disorder","Hyperthyroidism","Carcinoid","Neuroblastoma (children)","Drug interactions (tyramine, cocaine)"],
   mnemonics: [
@@ -23,13 +23,13 @@ const ENDOCRINE_DISEASES_2 = [
   ],
   overview: {
     definition: "Catecholamine-secreting neoplasm of chromaffin cells of adrenal medulla (phaeochromocytoma) or extra-adrenal sympathetic ganglia (paraganglioma).",
-    epidemiology: "1 in 100,000 per year. Found in 0.1–0.6% of hypertensive patients. Mean age 40–50 yrs. Hereditary in 30–40% (VHL, SDH, RET, NF1, MAX).",
-    pathophysiology: "Excess catecholamine secretion (noradrenaline > adrenaline) → α1-mediated vasoconstriction, β1-mediated tachycardia, hyperglycemia. Paroxysmal crises triggered by manipulation, micturition (bladder paraganglioma), or medications.",
+    epidemiology: "1 in 100,000 per year. Found in 0.1–0.6% of hypertensive patients. Mean age 40–50 yrs. ~10% familial overall; ~50% of MEN2A/2B carriers develop pheochromocytoma. Susceptibility genes: VHL, SDHA/B/C/D (SDH5), RET, NF1, MAX, TMEM127.",
+    pathophysiology: "Excess catecholamine secretion → α1-mediated vasoconstriction, β1-mediated tachycardia, hyperglycemia. Adrenal (medullary) tumors express PNMT → secrete adrenaline; extra-adrenal paragangliomas lack PNMT → secrete predominantly noradrenaline. Paroxysmal crises triggered by manipulation, micturition (bladder paraganglioma), or medications.",
     classification: [
       "Unilateral adrenal (80%)",
       "Bilateral adrenal (10%)",
       "Extra-adrenal paraganglioma (10%): organ of Zuckerkandl, bladder, head/neck",
-      "Hereditary syndromes: MEN2A/B (RET), VHL, SDH-B/C/D, NF1"
+      "Hereditary syndromes: MEN2A/B (RET), VHL, SDH-B/C/D, NF1 — SDHB mutations predict extra-adrenal location and malignant behavior"
     ]
   },
   diagnosis: {
@@ -47,11 +47,13 @@ const ENDOCRINE_DISEASES_2 = [
       "Café-au-lait spots, neurofibromas (NF1)"
     ],
     investigations: [
-      {name:"24-hour urine metadrenalines (metanephrines)", role:"Sensitivity 98%; collect during or after episode; first-line biochemical test"},
-      {name:"Plasma metadrenalines (free)", role:"Sensitivity 99%; can be done fasting supine; avoid caffeine/paracetamol interference"},
-      {name:"CT adrenal/abdomen", role:"Localize tumor; CT density >10 HU pre-contrast suggests phaeochromocytoma"},
+      {name:"24-hour urine metadrenalines (metanephrines)", role:"Sensitivity ~98%, specificity ~98%; collect during or after episode; first-line biochemical test"},
+      {name:"Plasma metadrenalines (free)", role:"Sensitivity 96–100% but specificity only 85–89% (77% in elderly) — reserve for high pre-test probability; fasting supine, avoid caffeine/paracetamol interference"},
+      {name:"Chromogranin A", role:"Sensitivity 83%, specificity 96%; adjunct marker"},
+      {name:"Clonidine suppression test", role:"Normal response = catecholamines fall <500 pg/mL at 2–3h; distinguishes tumor from sympathetic overactivity"},
+      {name:"CT adrenal/abdomen", role:"Sensitivity 85–95%; use non-contrast to avoid precipitating crisis; image from diaphragm to aortic bifurcation to catch organ of Zuckerkandl"},
       {name:"MRI adrenal", role:"T2 bright signal ('light bulb' sign); preferred in pregnancy, children, paraganglioma"},
-      {name:"MIBG scintigraphy (I-123)", role:"Functional imaging for metastatic or extra-adrenal disease; whole body assessment"},
+      {name:"MIBG scintigraphy (I-123)", role:"Sensitivity 77–89%; functional imaging for metastatic or extra-adrenal disease; whole body assessment"},
       {name:"FDG/DOPA-PET", role:"Sensitive for SDH-B paraganglioma and metastatic disease"},
       {name:"Genetic testing", role:"All patients <45 yrs, bilateral, extra-adrenal, or family history"}
     ]
@@ -59,7 +61,8 @@ const ENDOCRINE_DISEASES_2 = [
   criteria: {
     title: "Pre-operative Alpha-blockade Protocol",
     items: [
-      {k:"Phenoxybenzamine", v:"10mg BD, increasing by 10mg every 2–3 days to 1mg/kg/day for 10–14 days"},
+      {k:"Phenoxybenzamine", v:"Start 10mg BD, up-titrate to 300–400mg/day; begin 1–3 weeks pre-op"},
+      {k:"Beta-blocker timing", v:"Propranolol 10–40mg q6–8h added only 3–4 days pre-op, AFTER alpha-blockade established"},
       {k:"Target BP", v:"<130/80mmHg seated; allow mild postural drop (adequate alpha-blockade)"},
       {k:"Beta-blockade", v:"Add atenolol ONLY after adequate alpha-blockade (to prevent reflex tachycardia)"},
       {k:"High-salt diet + fluid intake", v:"Counteract α-blockade-induced volume contraction"},
@@ -73,15 +76,18 @@ const ENDOCRINE_DISEASES_2 = [
       "Malignant/metastatic: MIBG therapy, sunitinib, chemotherapy (CVD regimen)"
     ],
     medical: [
-      "Alpha-blockade (phenoxybenzamine or doxazosin) mandatory pre-op × 10–14 days",
-      "Beta-blockade (atenolol/propranolol) after alpha established — never before",
-      "Hypertensive crisis intraoperatively: IV phentolamine or sodium nitroprusside",
+      "Alpha-blockade (phenoxybenzamine 10mg BD up-titrated to 300–400mg/d, or doxazosin) started 1–3 weeks pre-op",
+      "Beta-blockade (propranolol/atenolol) only 3–4 days pre-op, after alpha established — never before",
+      "Nicardipine (calcium-channel blocker) alone is as effective as α/β-blockade peri-operatively",
+      "Metyrosine (α-methyl-p-tyrosine, inhibits catecholamine synthesis) if blockade poorly tolerated",
+      "Hypertensive crisis intraoperatively: IV phentolamine or sodium nitroprusside; esmolol for arrhythmia",
+      "Avoid fentanyl, ketamine and morphine intra-op (provoke catecholamine release)",
       "Post-excision hypotension: IV fluid + noradrenaline; often dramatic drop in BP"
     ],
     surgical: [
-      {name:"Laparoscopic adrenalectomy (transperitoneal/retroperitoneal)", when:"Standard for tumors <6cm; most unilateral phaeochromocytomas", notes:"Minimal tumor manipulation; early ligation of adrenal vein; experienced team; anesthetic standby for crisis management"},
-      {name:"Open adrenalectomy", when:"Large tumors (>6cm), suspected malignancy, paraganglioma with local invasion", notes:"Flank or anterior transperitoneal approach"},
-      {name:"Cortical-sparing adrenalectomy", when:"Bilateral phaeochromocytoma (e.g. MEN2A, VHL) — preserve cortex to prevent Addisonian crisis", notes:"Leave ≥30% adrenal cortex; risk of local recurrence acceptable vs. permanent steroid dependence"}
+      {name:"Laparoscopic adrenalectomy (transperitoneal/retroperitoneal)", when:"Standard for tumors <5cm; most unilateral phaeochromocytomas", notes:"Minimal tumor manipulation; early ligation of adrenal vein; experienced team; anesthetic standby for crisis management"},
+      {name:"Open adrenalectomy", when:"Large tumors (>5cm), suspected malignancy, paraganglioma with local invasion", notes:"Flank or anterior transperitoneal approach"},
+      {name:"Cortical-sparing adrenalectomy", when:"Bilateral phaeochromocytoma (e.g. MEN2A, VHL) — preserve cortex to prevent Addisonian crisis", notes:"Leave ≥30% adrenal cortex; MEN-syndrome pheos are rarely malignant. Ipsilateral recurrence after cortical-sparing: VHL ~20% (mean 40mo), MEN2 ~33% (54–88mo)"}
     ]
   },
   technique: {
@@ -114,7 +120,8 @@ const ENDOCRINE_DISEASES_2 = [
   pearls: [
     "NEVER beta-block first — unopposed alpha leads to severe hypertensive crisis",
     "Post-adrenalectomy hypoglycemia: loss of catecholamine-mediated glycogenolysis — monitor glucose",
-    "Screen all phaeochromocytoma for hereditary syndrome regardless of family history — 30–40% genetic"
+    "Screen all phaeochromocytoma for hereditary syndrome regardless of family history",
+    "True malignancy rate is 12–29% — higher than the classic 'rule of 10s'; SDHB mutation predicts extra-adrenal and malignant disease"
   ],
   mistakes: [
     "Starting beta-blockade before alpha-blockade — paradoxical hypertensive crisis",
@@ -133,7 +140,8 @@ const ENDOCRINE_DISEASES_2 = [
   hero: "Primary aldosteronism is the most common surgically correctable cause of hypertension. Adrenal vein sampling mandatory before unilateral adrenalectomy.",
   keypoints: [
     "Hypertension + hypokalemia + suppressed renin → measure aldosterone:renin ratio",
-    "Screen: ARR >30 (aldosterone pg/mL / renin ng/mL/hr) with aldosterone >15ng/dL",
+    "Screen: PAC:PRA ratio (plasma aldosterone concentration : plasma renin activity) elevated (≈1:25 to 30, i.e. ARR ≥20–30) with aldosterone >15ng/dL",
+    "Up to 40% of aldosteronomas are normokalemic pre-op — do not exclude PA on normal potassium",
     "CT adrenal: tumor (adenoma) vs bilateral hyperplasia",
     "Adrenal vein sampling (AVS): mandatory to lateralize before surgery — CT alone misleading",
     "Unilateral adrenalectomy curative if lateralized unilateral adenoma"
@@ -145,19 +153,19 @@ const ENDOCRINE_DISEASES_2 = [
   overview: {
     definition: "Autonomous aldosterone overproduction independent of renin-angiotensin system, causing sodium retention, hypertension, and hypokalemia.",
     epidemiology: "5–10% of hypertensive patients; 20% of resistant hypertension. Aldosterone-producing adenoma (APA) 35%, bilateral adrenal hyperplasia (BAH) 65%.",
-    pathophysiology: "Autonomous aldosterone → ENaC activation → Na⁺ retention + K⁺/H⁺ excretion → volume expansion → hypertension + hypokalemia + metabolic alkalosis.",
+    pathophysiology: "Autonomous aldosterone → ENaC activation → Na⁺ retention + K⁺/H⁺ excretion → volume expansion → hypertension + hypokalemia + metabolic alkalosis. Somatic KCNJ5 mutation found in up to 40% of aldosterone-producing adenomas; also ATP1A1, ATP2B3, CACNA1D, CTNNB1.",
     classification: [
       "Unilateral aldosterone-producing adenoma (APA) — Conn's adenoma",
       "Bilateral adrenal hyperplasia (BAH / idiopathic hyperaldosteronism)",
       "Unilateral adrenal hyperplasia (rare)",
       "Aldosterone-producing adrenocortical carcinoma (very rare)",
-      "Familial hyperaldosteronism types I–IV (glucocorticoid-remediable)"
+      "Familial hyperaldosteronism: FH-I (glucocorticoid-remediable, CYP11B1/CYP11B2 chimeric gene), FH-II, FH-III (KCNJ5 germline)"
     ]
   },
   diagnosis: {
     history: [
       "Resistant hypertension on ≥3 antihypertensives",
-      "Hypokalemia (may be asymptomatic or muscle weakness, cramps, polyuria)",
+      "Spontaneous serum K <3.2 mmol/L (or <3 on diuretic) raises suspicion — but up to 40% are normokalemic",
       "Young-onset hypertension",
       "Hypertension + adrenal incidentaloma",
       "Family history of early hypertension or PA"
@@ -168,9 +176,9 @@ const ENDOCRINE_DISEASES_2 = [
       "Proximal muscle weakness if severe hypokalemia"
     ],
     investigations: [
-      {name:"Aldosterone:renin ratio (ARR)", role:"Screening: ARR >30 (some centers >50) + aldosterone >15ng/dL while on ARR-safe antihypertensive (amlodipine, doxazosin)"},
-      {name:"Confirmatory testing", role:"Oral sodium loading test, fludrocortisone suppression, saline infusion test — confirm non-suppressible aldosterone"},
-      {name:"CT adrenal (thin-slice)", role:"Identify adenoma (lipid-rich: <10HU) vs bilateral hyperplasia; often misleading — cannot replace AVS"},
+      {name:"Aldosterone:renin ratio (ARR / PAC:PRA)", role:"Screening: PAC:PRA elevated (≈1:25 to 30, ARR ≥20–30) + aldosterone >15ng/dL while on ARR-safe antihypertensive (amlodipine, doxazosin); hold spironolactone/β-blocker/ACEi/ARB first"},
+      {name:"Confirmatory testing (saline/salt loading)", role:"Post-load plasma aldosterone <5 ng/dL, or 24h urine aldosterone <14 µg, EXCLUDES primary aldosteronism; failure to suppress confirms it"},
+      {name:"CT adrenal (thin-slice, 0.5cm cuts)", role:"Sensitivity ~90%; unilateral 0.5–2cm nodule with normal contralateral gland = aldosteronoma; lipid-rich adenoma <10HU; often misleading — cannot replace AVS"},
       {name:"Adrenal vein sampling (AVS)", role:"Gold standard lateralization: selectivity index >2 (success); lateralization index >4 = unilateral; ACTH stimulation improves accuracy"},
       {name:"NP-59 scintigraphy", role:"Alternative to AVS if not available; less sensitive"}
     ]
@@ -194,10 +202,11 @@ const ENDOCRINE_DISEASES_2 = [
       "Spironolactone 25–100mg daily (MRA of choice); side effects: gynecomastia, impotence",
       "Eplerenone (selective MRA): fewer side effects but less effective",
       "Amiloride: potassium-sparing diuretic; second-line",
+      "Glucocorticoid-remediable aldosteronism (FH-I): treat with exogenous dexamethasone",
       "Potassium supplementation if hypokalemic"
     ],
     surgical: [
-      {name:"Laparoscopic unilateral adrenalectomy", when:"Confirmed unilateral disease on AVS; adenoma or unilateral hyperplasia", notes:"90% cure of hypokalemia; 50% cure of hypertension (rest improved); stop spironolactone 2 weeks pre-op to unmask BP response"},
+      {name:"Laparoscopic unilateral adrenalectomy", when:"Confirmed unilateral disease on AVS; adenoma or unilateral hyperplasia", notes:">90% cure of hypokalemia/HTN in unilateral disease; only 20–30% of bilateral hyperplasia benefit from surgery (multiple nodules least likely). Transient post-op hypoaldosteronism may need fludrocortisone (higher pre-op aldosterone predicts this); stop spironolactone 2 weeks pre-op to unmask BP response"},
       {name:"Open adrenalectomy", when:"Suspected malignancy (large, irregular), adrenocortical carcinoma", notes:"Rarely needed for Conn's adenoma"}
     ]
   },
@@ -260,10 +269,10 @@ const ENDOCRINE_DISEASES_2 = [
   overview: {
     definition: "Chronic hypercortisolism causing metabolic, cardiovascular, psychiatric and cutaneous effects. Adrenal Cushing's = ACTH-independent autonomous cortisol overproduction.",
     epidemiology: "Cushing syndrome incidence 2–3/million/year. Adrenal cause in 20–30% (excluding iatrogenic). Adrenal adenoma most common adrenal cause.",
-    pathophysiology: "Autonomous cortisol → bilateral adrenocortical atrophy, suppressed ACTH. Excess glucocorticoid → hyperglycemia, centripetal fat deposition, protein catabolism, immune suppression, osteoporosis.",
+    pathophysiology: "Autonomous cortisol → bilateral adrenocortical atrophy, suppressed ACTH. Excess glucocorticoid → hyperglycemia, centripetal fat deposition, protein catabolism, immune suppression, osteoporosis. Induces a hypercoagulable state (↑factor VIII, ↑vWF, impaired fibrinolysis) → increased VTE and infection risk.",
     classification: [
       "ACTH-dependent (80%): pituitary Cushing's disease, ectopic ACTH",
-      "ACTH-independent (20%): adrenal adenoma, adrenocortical carcinoma, bilateral hyperplasia (PPNAD, ACTH-independent macronodular hyperplasia)"
+      "ACTH-independent (20%): adrenal adenoma, adrenocortical carcinoma, bilateral hyperplasia — PPNAD (primary pigmented nodular adrenocortical disease: small <5mm black nodules, may be part of Carney complex) and ACTH-independent macronodular hyperplasia"
     ]
   },
   diagnosis: {
@@ -287,10 +296,12 @@ const ENDOCRINE_DISEASES_2 = [
       {name:"24h urinary free cortisol (UFC)", role:"Elevated in Cushing's (>3× upper limit); simple screen; repeat × 3"},
       {name:"Late-night salivary cortisol (×2)", role:"Loss of diurnal cortisol rhythm; sensitive screen"},
       {name:"1mg overnight dexamethasone suppression test", role:"Failure to suppress cortisol <50nmol/L = screen positive"},
-      {name:"Plasma ACTH", role:"Low (<10pg/mL) in adrenal Cushing's; elevated in ACTH-dependent"},
+      {name:"Plasma ACTH", role:"Low (<10pg/mL) in adrenal tumors; 15–500pg/mL in Cushing disease; high/very high in ectopic ACTH — distinguishes ACTH-dependent vs independent"},
+      {name:"High-dose DST + urinary cortisol", role:"With plasma ACTH, separates ACTH-dependent from ACTH-independent disease"},
+      {name:"CRH stimulation test (ovine, 1µg/kg)", role:"Pituitary source responds with ACTH/cortisol rise; adrenal and ectopic sources blunted"},
       {name:"CT adrenal", role:"Adenoma (<6cm, lipid-rich), carcinoma (>6cm, heterogeneous, calcification), bilateral nodularity"},
-      {name:"MRI pituitary", role:"If ACTH-dependent: identify pituitary microadenoma (Cushing disease)"},
-      {name:"Bilateral inferior petrosal sinus sampling (BIPSS)", role:"If ACTH elevated but pituitary MRI negative — differentiates pituitary from ectopic ACTH source"}
+      {name:"MRI pituitary", role:"If ACTH-dependent: identify pituitary microadenoma (Cushing disease); contrast MRI only 33–67% sensitive, head CT only ~22%"},
+      {name:"Bilateral inferior petrosal sinus sampling (BIPSS/IPSS)", role:"Petrosal:peripheral ACTH ratio >2 basal or >3 post-CRH ≈100% sensitive for a pituitary source; use if ACTH elevated but pituitary MRI negative to differentiate pituitary from ectopic"}
     ]
   },
   criteria: {
@@ -312,12 +323,13 @@ const ENDOCRINE_DISEASES_2 = [
     medical: [
       "Metyrapone (11β-hydroxylase inhibitor): rapid cortisol reduction pre-op or palliative",
       "Ketoconazole: antifungal with adrenal steroidogenesis inhibition",
+      "'Medical adrenalectomy' (ketoconazole / metyrapone / aminoglutethimide) for failed pituitary surgery",
       "Mifepristone (glucocorticoid receptor antagonist): for inoperable/metastatic",
       "Osilodrostat or pasireotide (LAR): Cushing disease"
     ],
     surgical: [
       {name:"Laparoscopic unilateral adrenalectomy", when:"Adrenal adenoma — definitive treatment; normalizes cortisol in >90%", notes:"Pre-op hydrocortisone cover; post-op continuation for 6–18 months until contralateral axis recovers"},
-      {name:"Bilateral laparoscopic adrenalectomy", when:"Bilateral Cushing's (PPNAD, AIMAH), failed pituitary surgery, ectopic ACTH unresectable", notes:"Permanent Addisonian — lifelong hydrocortisone + fludrocortisone; risk of Nelson syndrome (pituitary tumor growth) post-bilat adrenalectomy"},
+      {name:"Bilateral laparoscopic adrenalectomy", when:"Bilateral Cushing's (PPNAD, AIMAH), failed pituitary surgery, ectopic ACTH unresectable — curative for primary adrenal hyperplasia", notes:"Permanent Addisonian — lifelong hydrocortisone (10–20mg AM + 5–10mg PM) + fludrocortisone 0.05–0.1mg/d; risk of Nelson syndrome (pituitary tumor growth) post-bilat adrenalectomy"},
       {name:"Open adrenalectomy", when:"Suspected adrenocortical carcinoma — size >6cm, malignant features", notes:"Do not rupture capsule; retroperitoneal LN dissection; avoid laparoscopic if malignant"}
     ]
   },
@@ -330,8 +342,8 @@ const ENDOCRINE_DISEASES_2 = [
     steps: [
       {n:1, t:"Day 0–1", d:"Hydrocortisone 100mg IV TDS; convert to oral when tolerating diet"},
       {n:2, t:"Day 1–3", d:"Hydrocortisone 20mg AM + 10mg PM (physiological replacement)"},
-      {n:3, t:"Weeks 2–6", d:"Taper by 5mg/month to maintenance dose of 10mg AM + 5mg PM"},
-      {n:4, t:"Recovery", d:"SST (synacthen stimulation test) at 6-monthly intervals; stop replacement when morning cortisol >500nmol/L post-stimulation"},
+      {n:3, t:"Weeks 2–6", d:"Taper toward maintenance hydrocortisone 10–20mg AM + 5–10mg PM (+ fludrocortisone 0.05–0.1mg/d after bilateral adrenalectomy)"},
+      {n:4, t:"Recovery", d:"Guide taper by ACTH-stimulation (synacthen) test at 6-monthly intervals; exogenous steroid may be needed up to 2 years (indefinitely after bilateral adrenalectomy); stop when morning cortisol >500nmol/L post-stimulation"},
       {n:5, t:"Patient education", d:"Sick day rules: double dose for illness/surgery; medic alert bracelet; IM hydrocortisone kit"}
     ],
     pearls: [
@@ -365,8 +377,8 @@ const ENDOCRINE_DISEASES_2 = [
   tags: ["oncology","adrenal","rare"],
   hero: "Rare but aggressive malignancy. Complete resection (R0) is the only potentially curative treatment. Avoid laparoscopic approach for large/malignant lesions.",
   keypoints: [
-    "Any adrenal mass >4cm suspicious; >6cm high malignancy risk",
-    "50% functional (Cushing's, virilization, mixed); 50% non-functional (local mass effects)",
+    "Any adrenal mass >4cm suspicious; >6cm high malignancy risk (~92% of ACCs are >6cm)",
+    "~50% non-functioning (local mass effects); of secretors: cortisol 30%, androgens 20%, estrogens 10%, aldosterone 2%, multiple hormones 35%",
     "CT malignant features: >6cm, irregular, heterogeneous, >10HU, calcification",
     "Open adrenalectomy with en-bloc resection — laparoscopy contraindicated for suspected ACC",
     "Mitotane (adrenolytic) adjuvant/palliative; poor chemotherapy response"
@@ -377,10 +389,11 @@ const ENDOCRINE_DISEASES_2 = [
   ],
   overview: {
     definition: "Malignant tumor of adrenocortical cells. Bimodal age distribution: children <5 and adults 40–50 yrs. Often large at presentation.",
-    epidemiology: "1–2/million/year. 60% women. Associated with Li-Fraumeni (TP53), MEN1, Lynch, Beckwith-Wiedemann syndrome.",
-    pathophysiology: "TP53 mutations most common. IGF-2 overexpression, chromosomal losses. Functional tumors: excess cortisol, androgens, or mixed.",
+    epidemiology: "~2/million/year. Bimodal age (children <5 and adults 40–50 yrs). Associated with Li-Fraumeni (TP53), MEN1 (MENIN), Lynch, Beckwith-Wiedemann (11p), Carney complex (2p).",
+    pathophysiology: "Somatic TP53 mutation in ~33% (germline in Li-Fraumeni), LOH >85%, IGF-2 overexpressed in ~90%, β-catenin (CTNNB1) mutation ~30%, ZNRF3. Functional tumors: excess cortisol, androgens, estrogens, or mixed.",
     classification: [
-      "ENSAT Staging: I (<5cm confined), II (>5cm confined), III (local invasion/N+), IV (distant metastasis)",
+      "TNM staging (AJCC/UICC): T1 ≤5cm, T2 >5cm, T3 local invasion, T4 adjacent-organ invasion; up to 70% present as stage III/IV",
+      "(App also uses ENSAT: I <5cm confined, II >5cm confined, III local invasion/N+, IV distant metastasis)",
       "Functional vs non-functional",
       "Pediatric: usually virilizing (androgens)"
     ]
@@ -399,7 +412,7 @@ const ENDOCRINE_DISEASES_2 = [
     ],
     investigations: [
       {name:"Hormonal workup", role:"24h UFC, dexamethasone suppression, DHEAS, testosterone, 17-OH-progesterone, aldosterone:renin, urine metadrenalines"},
-      {name:"CT adrenal (thin-slice, 3-phase)", role:"Size, density (>10HU pre-contrast), washout <40% at 15min, irregular/heterogeneous margins"},
+      {name:"CT adrenal (thin-slice, 3-phase)", role:"Size, density (>10HU pre-contrast), washout <40% at 15min, irregular/heterogeneous margins. Size predicts malignancy: ≥4cm sens 96%/spec 51%; ≥6cm sens 90%/spec 78%"},
       {name:"MRI adrenal", role:"Chemical shift imaging — loss of signal on opposed phase = lipid-rich adenoma; no signal loss = ACC/metastasis"},
       {name:"PET-FDG", role:"High FDG uptake in ACC; excludes metastases; cannot use MIBG (not chromaffin cells)"},
       {name:"CT chest/abdomen/pelvis", role:"Staging — lung (most common metastatic site), liver, peritoneum"}
@@ -422,13 +435,14 @@ const ENDOCRINE_DISEASES_2 = [
       "Advanced ACC: clinical trial participation recommended"
     ],
     medical: [
-      "Adjuvant mitotane: recommended for R0 resection, Ki67>10%, stage III/IV (FIRM-ACT evidence)",
+      "Adjuvant mitotane (o,p′-DDD): recommended for R0 resection, Ki67>10%, stage III/IV; effective dose 2–6 g/d, monitor blood levels (FIRM-ACT: EDP-M superior to streptozocin+mitotane)",
       "Mitotane side effects: adrenal insufficiency (must replace steroids), GI toxicity, hepatotoxicity",
       "EDP-M (etoposide+doxorubicin+cisplatin + mitotane): first-line systemic for advanced ACC",
+      "Capsular/vascular invasion is the most reliable sign of malignancy; Ki67 is a key proliferation marker; metastasizes to liver, lung and bone",
       "Lurbinectedin/pembrolizumab: emerging therapies for refractory ACC"
     ],
     surgical: [
-      {name:"Open radical adrenalectomy", when:"ACC — mandatory open approach for tumors >6cm or with malignant features", notes:"Anterior transperitoneal or thoraco-abdominal; en-bloc resection of adrenal + periadrenal fat ± ipsilateral kidney/liver segment if invaded"},
+      {name:"Open radical adrenalectomy", when:"ACC — mandatory open approach for tumors >6cm or with malignant features", notes:"Complete R0 resection is the key survival predictor: R0 5-yr survival 32–48% vs incomplete median <1yr. Generous subcostal or thoraco-abdominal (right) approach; en-bloc resection of adrenal + periadrenal fat ± diaphragm/kidney/pancreas/liver/IVC if invaded"},
       {name:"Laparoscopic approach", when:"Contraindicated for suspected ACC — risk of incomplete resection, capsule rupture, positive margins, peritoneal implantation", notes:"If incidental ACC found on laparoscopic specimen: completion open re-resection of adrenal bed recommended"},
       {name:"Debulking/resection of metastases", when:"Selected patients with complete debulking possible; liver metastases; response to mitotane", notes:"Prolonged disease-free survival in some series"}
     ]
@@ -451,18 +465,20 @@ const ENDOCRINE_DISEASES_2 = [
     pearls: [
       "IVC tumor thrombus (right-sided ACC): may require IVC clamping or cardiopulmonary bypass for level III/IV thrombus",
       "Never biopsy adrenal mass pre-op if ACC suspected — risk of seeding; confirm diagnosis on excision specimen",
-      "Pathology: Weiss score ≥3 = ACC"
+      "Pathology: Weiss score ≥3 = ACC (WHO/most texts; Weiss's original cutoff was ≥4)"
     ]
   },
   guidelines: [
     {src:"ENSAT 2023: Adrenocortical carcinoma guidelines"},
     {src:"Fassnacht et al. ESMO Guidelines 2018: ACC"},
-    {src:"AACE 2019: Adrenal incidentaloma guideline"}
+    {src:"AACE 2019: Adrenal incidentaloma guideline"},
+    {src:"AJCC Cancer Staging Manual, 8th ed (2017)"}
   ],
   pearls: [
     "Never laparoscope suspected ACC — capsule rupture = upstaging and worse outcome",
     "Mitotane causes adrenal insufficiency — patients need 2–3× normal hydrocortisone dose",
-    "Pediatric ACC: virilizing, often localized — resection has better prognosis than adult"
+    "Pediatric ACC: virilizing, often localized — resection has better prognosis than adult",
+    "Sex-steroid-secreting cortical tumors: virilizing (↑DHEA/17-KS) or feminizing (↑estrogen, gynecomastia/impotence in men) — treated by adrenalectomy"
   ],
   mistakes: [
     "Laparoscopic approach for large (>6cm) adrenal mass without excluding malignancy",
@@ -480,11 +496,12 @@ const ENDOCRINE_DISEASES_2 = [
   tags: ["endocrine","adrenal","incidental","imaging"],
   hero: "Adrenal mass found incidentally. Framework: exclude malignancy and exclude hormone excess. Most are benign non-functioning adenomas requiring surveillance only.",
   keypoints: [
-    "Found in 4–5% of abdominal CT scans",
+    "Found on 0.4–4.4% of abdominal CT scans; increases with age",
     "Evaluate ALL for: (1) malignancy risk (size/imaging) and (2) hormonal function",
-    "CT density <10HU (Hounsfield units) = lipid-rich adenoma = benign",
+    "CT density <10HU (Hounsfield units) = lipid-rich adenoma = benign; >18HU is the stated cancer threshold",
+    "Cancer risk by size: 2% if <4cm, 6% if 4–6cm, ~25% if >6cm",
     "Exclude phaeochromocytoma FIRST before biopsy or surgery",
-    "Surgery if >4cm, or malignant features, or hormonal excess (except sub-clinical Cushing's — controversial)"
+    "AACE/AAES: surgery if ≥4cm, or functional, or suspicious imaging (except subclinical Cushing's — controversial)"
   ],
   differentials: ["Adrenal adenoma (non-functioning)","Phaeochromocytoma","Adrenocortical carcinoma","Adrenal metastasis","Myelolipoma","Adrenal cyst","Hematoma","Ganglioneuroma"],
   mnemonics: [
@@ -492,8 +509,8 @@ const ENDOCRINE_DISEASES_2 = [
   ],
   overview: {
     definition: "Adrenal mass ≥1cm discovered incidentally on imaging performed for a non-adrenal indication.",
-    epidemiology: "Prevalence 4–7% on CT; increases with age. 80% benign non-functioning adenomas. 5% phaeochromocytoma, 5% ACC, 2% metastasis.",
-    pathophysiology: "Increased imaging leads to more incidental discovery. Most adenomas are lipid-rich (cholesterol-rich cells). HU <10 on unenhanced CT = high specificity for benign adenoma.",
+    epidemiology: "Prevalence 0.4–4.4% on CT; increases with age. 80% benign non-functioning adenomas. 5% phaeochromocytoma, 5% ACC, 2% metastasis. In patients with known cancer and a unilateral adrenal mass, 32–73% are metastases.",
+    pathophysiology: "Increased imaging leads to more incidental discovery. Most adenomas are lipid-rich (cholesterol-rich cells). HU <10 on unenhanced CT = high specificity for benign adenoma; adenoma <10HU, ACC >18HU. Subclinical Cushing's ~8%; 5–20% of 'nonfunctioning' adenomas have subtle cortisol excess.",
     classification: [
       "Non-functioning adenoma (most common)",
       "Subclinical Cushing's/autonomous cortisol secretion (30%)",
@@ -516,14 +533,14 @@ const ENDOCRINE_DISEASES_2 = [
       "Signs of primary malignancy (lymphadenopathy, lung mass)"
     ],
     investigations: [
-      {name:"Unenhanced CT adrenal density", role:"<10HU = lipid-rich adenoma (benign); >10HU requires further characterization"},
+      {name:"Unenhanced CT adrenal density", role:"<10HU = lipid-rich adenoma (benign); >18HU = cancer threshold; intermediate needs further characterization"},
       {name:"CT washout (15-min delayed)", role:"Absolute washout >60% = adenoma; <40% = malignant/phaeochromocytoma"},
-      {name:"MRI chemical shift", role:"Loss of signal on opposed phase = adenoma; persistent signal = malignancy/phaeochromocytoma"},
-      {name:"1mg overnight dexamethasone suppression", role:"All incidentalomas; cortisol >50nmol/L = autonomous cortisol secretion"},
-      {name:"Urine/plasma metadrenalines", role:"All incidentalomas; exclude phaeochromocytoma before any intervention"},
-      {name:"Aldosterone:renin ratio", role:"If hypertensive or hypokalemic"},
-      {name:"PET-FDG", role:"Known malignancy: high uptake = metastasis (high sensitivity/specificity)"},
-      {name:"Biopsy (CT-guided)", role:"ONLY after phaeochromocytoma excluded; only if histology will change management (e.g. known primary cancer)"}
+      {name:"MRI chemical shift", role:"Loss of signal on opposed phase = adenoma; persistent signal = malignancy/phaeochromocytoma. Mass:liver signal ratio — adenoma <1.4, ACC/mets 1.2–2.8, phaeochromocytoma >3"},
+      {name:"1mg overnight dexamethasone suppression", role:"Functional screen in all incidentalomas (add 17-KS if virilizing); cortisol >50nmol/L = autonomous cortisol secretion"},
+      {name:"24h urine/plasma metadrenalines", role:"Functional screen in all incidentalomas; exclude phaeochromocytoma before any intervention"},
+      {name:"Aldosterone:renin ratio", role:"Functional screen if hypertensive (± hypokalemic)"},
+      {name:"PET-FDG", role:"For inconclusive densitometry or known malignancy: high uptake = metastasis; caution over false positives/negatives"},
+      {name:"FNAB / biopsy (CT-guided)", role:"CANNOT distinguish adenoma from ACC, but PPV ~100% for metastasis in known cancer (false-negative up to 33%); ONLY after phaeochromocytoma excluded"}
     ]
   },
   criteria: {
@@ -547,7 +564,7 @@ const ENDOCRINE_DISEASES_2 = [
       "Treat associated complications: hypertension, diabetes, osteoporosis (autonomous cortisol)"
     ],
     surgical: [
-      {name:"Laparoscopic adrenalectomy", when:">4cm or growing; phaeochromocytoma (after alpha-blockade); aldosteronoma (after AVS); functioning Cushing's adenoma", notes:"Retroperitoneal or transperitoneal; minimally invasive for benign lesions"},
+      {name:"Laparoscopic adrenalectomy", when:"AACE/AAES: functional tumor, suspicious imaging, or ≥4cm; non-op follow-up if <4cm + benign imaging. Also phaeochromocytoma (after alpha-blockade); aldosteronoma (after AVS); functioning Cushing's adenoma", notes:"Retroperitoneal or transperitoneal; minimally invasive for benign lesions. Subclinical Cushing's: operate if suppressed ACTH + raised urinary cortisol, or worsening HTN/glucose/osteoporosis"},
       {name:"Open adrenalectomy", when:"Suspected ACC (>6cm, malignant features)", notes:"Never laparoscope suspected ACC"}
     ]
   },
@@ -841,10 +858,11 @@ const ENDOCRINE_DISEASES_2 = [
   tags: ["endocrine","genetics","thyroid","phaeochromocytoma","parathyroid","rET"],
   hero: "RET proto-oncogene mutation. MEN2A: MTC + phaeochromocytoma + PHPT. MEN2B: MTC + phaeochromocytoma + marfanoid + mucosal neuromas (most aggressive). Prophylactic thyroidectomy is life-saving.",
   keypoints: [
-    "MEN2A: medullary thyroid cancer + phaeochromocytoma (50%) + PHPT (20%)",
-    "MEN2B: MTC (aggressive) + phaeochromocytoma + marfanoid + mucosal neuromas (no PHPT)",
-    "Prophylactic thyroidectomy age: MEN2B <6 months, MEN2A by age 5 (highest-risk RET) to age 10",
-    "Always exclude phaeochromocytoma before thyroid/parathyroid surgery",
+    "MEN2A: medullary thyroid cancer + phaeochromocytoma (~50% of carriers) + PHPT (20%); codon 634 most associated with pheo + PHPT",
+    "MEN2B: MTC (aggressive) + phaeochromocytoma + marfanoid + mucosal neuromas (no PHPT); RET codon 918 (M918T)",
+    "RET codon map: MEN2A/FMTC exon 10 (609/611/618/620) + exon 11 (634); MEN2B 918/M918T; FMTC also 768/790/791/804",
+    "Prophylactic thyroidectomy timing: MEN2B <1 year of life, MEN2A by age 5 (highest-risk RET) to age 10",
+    "Pheo-first rule: if a phaeochromocytoma is present, operate on it BEFORE thyroid/parathyroid surgery",
     "RET codon determines risk category and prophylactic surgery timing"
   ],
   differentials: ["MEN1","Sporadic MTC","Familial MTC (FMTC)","VHL syndrome","NF1"],
@@ -854,10 +872,10 @@ const ENDOCRINE_DISEASES_2 = [
   overview: {
     definition: "Autosomal dominant syndrome caused by gain-of-function RET proto-oncogene mutations, causing MTC (100% penetrance), phaeochromocytoma (50%), and PHPT (20% in MEN2A).",
     epidemiology: "1 in 30,000–40,000. RET gene (chromosome 10q11.2). MEN2A (80%), MEN2B (15%), FMTC (5%).",
-    pathophysiology: "RET = tyrosine kinase receptor. Gain-of-function mutation → constitutive activation → C-cell and chromaffin cell proliferation. C-cell hyperplasia precedes MTC.",
+    pathophysiology: "RET (chromosome 10) = receptor tyrosine kinase binding GDNF/neurturin. Gain-of-function mutation → constitutive activation → C-cell and chromaffin cell proliferation; somatic RET mutations occur in ~30% of sporadic MTC and phaeochromocytomas. C-cell hyperplasia is the premalignant precursor. ~10% of familial MTC/MEN2A cases arise from de novo RET mutations.",
     classification: [
-      "MEN2A (Sipple syndrome): MTC + phaeochromocytoma (50%) + PHPT (20%)",
-      "MEN2B: MTC (most aggressive, early onset) + phaeochromocytoma + mucosal neuromas + marfanoid + intestinal ganglioneuromatosis",
+      "MEN2A (Sipple syndrome): MTC + phaeochromocytoma (~50%) + PHPT (20%); may have cutaneous lichen amyloidosis; codons 609/618/620 associated with Hirschsprung disease",
+      "MEN2B: MTC (most aggressive, early onset) + phaeochromocytoma + mucocutaneous ganglioneuromatosis (mucosal neuromas) + marfanoid + intestinal ganglioneuromatosis (codon 918/M918T)",
       "Familial MTC (FMTC): MTC only, no phaeochromocytoma",
       "RET risk categories: Highest (C634, M918T) → High (C609-611-618-620, C630-634) → Moderate (all others)"
     ]
@@ -878,9 +896,9 @@ const ENDOCRINE_DISEASES_2 = [
       "Marfanoid habitus, skeletal deformities (MEN2B)"
     ],
     investigations: [
-      {name:"RET gene sequencing", role:"Confirms diagnosis; determines risk category; guides prophylactic surgery timing"},
+      {name:"RET gene sequencing", role:"All MTC patients; confirms diagnosis, determines risk category, guides prophylactic surgery timing; has largely replaced pentagastrin/calcium-stimulated calcitonin testing"},
       {name:"Serum calcitonin", role:"Most sensitive marker for MTC; elevated in C-cell hyperplasia and MTC; annual surveillance"},
-      {name:"Stimulated calcitonin (pentagastrin/Ca²⁺ test)", role:"Detects early C-cell hyperplasia before calcitonin elevated at rest"},
+      {name:"Stimulated calcitonin (pentagastrin/Ca²⁺ test)", role:"Historic test for early C-cell hyperplasia; superseded by RET testing"},
       {name:"CEA", role:"Elevated in MTC; poor prognosis if very elevated; combined with calcitonin"},
       {name:"24h urine metadrenalines/plasma metadrenalines", role:"Exclude phaeochromocytoma before ALL surgeries — biochemical not imaging"},
       {name:"Corrected calcium + PTH", role:"PHPT workup (MEN2A)"},
@@ -911,9 +929,9 @@ const ENDOCRINE_DISEASES_2 = [
     ],
     surgical: [
       {name:"Prophylactic total thyroidectomy", when:"Based on RET risk category and age guidelines (see above); prior to calcitonin elevation ideally", notes:"Central neck dissection (prophylactic CND level VI) if calcitonin elevated or thyroid nodule present; parathyroid preservation critical in young patients"},
-      {name:"Total thyroidectomy + CND ± lateral neck dissection", when:"Established MTC (calcitonin elevated, palpable disease)", notes:"Exclude phaeochromocytoma first; meticulous parathyroid preservation; lateral neck dissection if lateral nodes involved"},
-      {name:"Laparoscopic adrenalectomy for phaeochromocytoma", when:"Identified biochemically + imaging; operate before thyroid surgery if concurrent", notes:"Cortical-sparing adrenalectomy in bilateral disease; alpha-blockade 10–14 days mandatory; MEN2 = bilateral phaeochromocytoma risk"},
-      {name:"Parathyroidectomy for PHPT in MEN2A", when:"Symptomatic PHPT or meets asymptomatic criteria", notes:"Often single adenoma (unlike MEN1 which is multiglandular); focused approach ± intraoperative PTH"}
+      {name:"Total thyroidectomy + bilateral prophylactic central (level VI) node dissection", when:"Established MTC (calcitonin elevated, palpable disease) — MTC is >50% bilateral/multicentric", notes:"Exclude phaeochromocytoma first; meticulous parathyroid preservation; add lateral neck dissection (levels IIA/III/IV/V) if nodes positive; calcitonin >500 pg/mL prompts extended imaging"},
+      {name:"Laparoscopic adrenalectomy for phaeochromocytoma", when:"Pheo-first rule: operate on the phaeochromocytoma BEFORE thyroid/parathyroid surgery when concurrent", notes:"Cortical-sparing adrenalectomy in bilateral disease; alpha-blockade mandatory; MEN2 = bilateral phaeochromocytoma risk (rarely malignant)"},
+      {name:"Parathyroidectomy for PHPT in MEN2A", when:"Symptomatic PHPT or meets asymptomatic criteria — treat at the time of thyroidectomy", notes:"Often single adenoma (unlike MEN1 which is multiglandular); focused approach ± intraoperative PTH"}
     ]
   },
   technique: {
@@ -964,22 +982,23 @@ const ENDOCRINE_DISEASES_2 = [
   tags: ["breast","infection","lactation"],
   hero: "Loculated breast infection most common in lactating women. Ultrasound-guided aspiration + antibiotics preferred over open incision and drainage.",
   keypoints: [
-    "Most common: puerperal (lactational) — S. aureus (including MRSA)",
+    "Most common: puerperal (lactational) — S. aureus AND Streptococcus (staph → localized/deep abscess, strep → diffuse superficial cellulitis)",
     "Non-puerperal: subareolar (Zuska's disease) — mixed/anaerobic organisms, smokers",
-    "US-guided aspiration ± antibiotics: first-line (90% resolution in <3cm abscess)",
+    "Sporadic puerperal mastitis: antibiotics + breast emptying give a satisfactory outcome in >95% of cases",
     "Incision and drainage: large (>3cm) or failed aspiration",
-    "Continue breastfeeding or pumping — does not worsen and aids drainage"
+    "Continue breastfeeding in sporadic/mild puerperal disease — but STOP in epidemic MRSA puerperal mastitis"
   ],
-  differentials: ["Inflammatory breast carcinoma","Mastitis without abscess","Galactocele","Sebaceous cyst","Mondor's disease (superficial thrombophlebitis)"],
+  differentials: ["Inflammatory breast carcinoma","Mastitis without abscess","Galactocele","Sebaceous cyst","Mondor's disease (superficial thrombophlebitis)","Mycotic abscess (blastomycosis/sporotrichosis, peri-areolar, from suckling infant)","Hidradenitis suppurativa (Montgomery/axillary glands — mimics Paget/cancer)"],
   mnemonics: [
     {name:"Abscess types", text:"Puerperal = Lactation + S. aureus; Periductal = Non-lactating + Smoker + Zuska's = mixed organisms"}
   ],
   overview: {
     definition: "Localized collection of pus within breast parenchyma, most commonly arising from mastitis progression in lactating women or periductal mastitis in non-lactating.",
-    epidemiology: "Lactational abscess: 0.1–3% breastfeeding women. Peak: 2nd–3rd week postpartum. Non-lactational: subareolar (Zuska disease), peripheral (immunosuppressed, diabetes).",
-    pathophysiology: "Lactational: S. aureus colonizes nipple → ascending ductal infection → mastitis → abscess. Non-lactational: periductal mastitis → squamous metaplasia → abscess. MRSA increasingly prevalent.",
+    epidemiology: "Lactational abscess: 0.1–3% breastfeeding women. Peak: 2nd–3rd week postpartum. Sporadic (nonepidemic) puerperal mastitis is the usual form. Epidemic puerperal mastitis = virulent MRSA transmitted via the suckling neonate, with substantial morbidity and occasional mortality. Non-lactational: subareolar (Zuska disease), peripheral (immunosuppressed, diabetes).",
+    pathophysiology: "Lactational: S. aureus or Streptococcus colonizes nipple → ascending ductal infection → mastitis → abscess. Non-lactational: periductal mastitis → squamous metaplasia → abscess. MRSA increasingly prevalent.",
     classification: [
-      "Puerperal (lactational)",
+      "Puerperal (lactational) — sporadic vs epidemic MRSA",
+      "Anatomic spread of staphylococcal infection: subcutaneous, subareolar, interlobular (periductal), retromammary — unicentric or multicentric",
       "Non-puerperal subareolar (Zuska's disease): periductal mastitis; associated with smoking, mammary duct ectasia",
       "Non-puerperal peripheral",
       "Neonatal breast abscess"
@@ -1026,12 +1045,13 @@ const ENDOCRINE_DISEASES_2 = [
       "Co-amoxiclav (Augmentin) 625mg TDS: first-line for lactational abscess",
       "Flucloxacillin: if confirmed S. aureus non-MRSA",
       "Co-trimoxazole or vancomycin (IV): if MRSA confirmed",
-      "Clindamycin: penicillin-allergic patients"
+      "Clindamycin: penicillin-allergic patients",
+      "Non-lactational: send culture in transport medium for anaerobes; empiric polymicrobial cover while awaiting results"
     ],
     surgical: [
       {name:"Ultrasound-guided needle aspiration", when:"First line for abscesses <3cm; can be repeated ×2–3; 90% success rate", notes:"18–16G needle; aspirate pus to dryness; send for MC&S; repeat US at 48–72h to confirm resolution"},
       {name:"Incision and drainage (I&D)", when:"Large abscess >3cm; failed aspiration; skin necrosis; multiloculated; patient systemically unwell", notes:"Radial or circumareolar incision; thorough cavity washout; break down loculations; loosely pack with ribbon gauze; daily dressing changes"},
-      {name:"Subareolar duct excision (Hadfield's operation)", when:"Recurrent non-puerperal periductal abscess (Zuska's disease)", notes:"Excise affected periductal tissue + fistula + subareolar ducts; high recurrence without definitive duct excision; smoking cessation essential"}
+      {name:"Fistulectomy vs total duct excision (recurrent subareolar / Zuska's sepsis)", when:"Recurrent non-puerperal periductal abscess", notes:"Fistulectomy if disease small/one segment, mild nipple inversion, younger, no prior operation. Total duct excision (Hadfield) if >50% of areolar circumference involved, marked nipple inversion, multiple ectatic ducts, or recurrence after prior fistulectomy. Smoking cessation essential"}
     ]
   },
   technique: {
@@ -1058,12 +1078,14 @@ const ENDOCRINE_DISEASES_2 = [
   guidelines: [
     {src:"NICE: Mastitis and breast abscess management in breastfeeding"},
     {src:"Association of Breast Surgery (ABS): Guidelines for benign breast conditions"},
-    {src:"ABM Clinical Protocol #36: Abscess and mastitis in breastfeeding"}
+    {src:"ABM Clinical Protocol #36: Abscess and mastitis in breastfeeding"},
+    {src:"Dixon JM. Outpatient treatment of non-lactational breast abscesses. Br J Surg (1992)"},
+    {src:"Mansel & Webster, Benign Disorders and Diseases of the Breast"}
   ],
   pearls: [
     "US-guided aspiration avoids scar and GA — always try before open I&D in small abscesses",
-    "Inflammatory breast cancer can mimic mastitis/abscess — if no response to antibiotics in 2 weeks, biopsy",
-    "Continuing breastfeeding during abscess treatment is safe and beneficial — reassure mothers"
+    "Inflammatory breast cancer can mimic mastitis/abscess — if no response to antibiotics in 2 weeks, biopsy the abscess cavity wall",
+    "Continuing breastfeeding is safe in sporadic/mild puerperal disease — but STOP breastfeeding in epidemic MRSA puerperal mastitis"
   ],
   mistakes: [
     "Open I&D as first line for small abscess — US aspiration preferred (better cosmesis, equally effective)",

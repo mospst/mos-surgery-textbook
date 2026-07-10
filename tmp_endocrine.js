@@ -22,16 +22,17 @@ const ENDOCRINE_DISEASES_1 = [
     {name:"TNM Stage I–IV", text:"I: <2cm N0; II: 2–5cm or N1; III: locally advanced; IV: metastatic"}
   ],
   overview: {
-    definition: "Malignant neoplasm arising from breast epithelium; 80% invasive ductal carcinoma (IDC), 10% invasive lobular (ILC).",
+    definition: "Malignant neoplasm arising from breast epithelium; 80% invasive ductal carcinoma (IDC-NST), 10% invasive lobular (ILC).",
     epidemiology: "1 in 8 lifetime risk in women. Peak incidence 50–70 yrs. Leading cause of cancer death in women <50.",
-    pathophysiology: "Hormone-driven proliferation (ER/PR+), HER2 overexpression, or triple-negative (TNBC). BRCA1/2 mutations impair DNA repair.",
+    pathophysiology: "Hormone-driven proliferation (ER/PR+), HER2 overexpression, or triple-negative (TNBC). BRCA1/2 mutations impair DNA repair. 5 intrinsic molecular subtypes drive local + systemic decisions.",
     classification: [
-      "IDC (NST) – most common",
+      "Histology: IDC-NST 80%, ILC 10%, medullary 4%, mucinous/papillary/tubular each ~2%",
+      "IDC-NST: nodal +ve up to 25% screen-detected, up to 60% symptomatic",
       "ILC – multifocal, bilateral risk",
-      "DCIS – non-invasive precursor",
-      "Inflammatory – dermal lymphatic invasion",
-      "Paget disease – nipple involvement",
-      "Receptor subtypes: Luminal A/B, HER2-enriched, TNBC"
+      "DCIS – non-invasive precursor (LCIS removed from AJCC 8th staging)",
+      "Inflammatory – dermal lymphatic invasion (T4d)",
+      "Paget disease – chronic eczematous nipple; underlying DCIS ± invasion; CEA+ (vs S-100+ melanoma)",
+      "Molecular subtypes: Luminal A (ER+/low Ki67, best prognosis), Luminal B, HER2-enriched, Basal-like/TNBC, Normal-like"
     ]
   },
   diagnosis: {
@@ -60,17 +61,24 @@ const ENDOCRINE_DISEASES_1 = [
     ]
   },
   criteria: {
-    title: "Nottingham Grading System (SBR)",
+    title: "AJCC 8th ed TNM (anatomic)",
     items: [
-      {k:"Tubule formation", v:"1–3 points"},
-      {k:"Nuclear pleomorphism", v:"1–3 points"},
-      {k:"Mitotic count", v:"1–3 points"},
-      {k:"Grade 1 (well)", v:"3–5 total"},
-      {k:"Grade 2 (moderate)", v:"6–7 total"},
-      {k:"Grade 3 (poorly)", v:"8–9 total"}
+      {k:"T1", v:"T1mi ≤1mm; T1a >1–5mm; T1b >5–10mm; T1c >10–20mm"},
+      {k:"T2 / T3", v:"T2 >20–50mm; T3 >50mm"},
+      {k:"T4", v:"T4a chest wall; T4b skin ulceration/peau d'orange; T4c both; T4d inflammatory"},
+      {k:"N1mi", v:"Micrometastasis ~200 cells / >0.2–2mm"},
+      {k:"Nottingham grade (SBR)", v:"Tubules + pleomorphism + mitoses (each 1–3): G1 3–5, G2 6–7, G3 8–9"}
     ]
   },
-  scoring: [],
+  scoring: [
+    {name:"AJCC 8th ed Anatomic Stage Grouping", items:[
+      "Stage 0: Tis N0 (DCIS)",
+      "IA: T1 N0; IB: T0–1 N1mi",
+      "IIA: T0–1 N1 or T2 N0; IIB: T2 N1 or T3 N0",
+      "IIIA: N2 disease or T3 N1; IIIB: T4 N0–2; IIIC: any T N3",
+      "IV: M1. Prognostic staging additionally incorporates grade + ER/PR/HER2"
+    ]}
+  ],
   management: {
     conservative: [
       "Multidisciplinary team (MDT) decision mandatory",
@@ -80,15 +88,16 @@ const ENDOCRINE_DISEASES_1 = [
     ],
     medical: [
       "Adjuvant chemotherapy: anthracycline/taxane regimens (AC-T)",
+      "Test HER2 by IHC or FISH; trastuzumab + chemo → 40–50% reduction in recurrence, ~⅓ reduction in mortality vs chemo alone",
       "Trastuzumab (Herceptin) × 12 months if HER2+",
       "Tamoxifen 5–10 yrs (premenopausal ER+) or aromatase inhibitor (postmenopausal)",
       "CDK4/6 inhibitors (palbociclib) for metastatic luminal",
       "Olaparib for BRCA-mutated metastatic"
     ],
     surgical: [
-      {name:"Breast-conserving surgery (BCS)", when:"Early disease (T1–2, favorable location); requires clear margins (≥1mm NST)", notes:"Followed by adjuvant whole-breast radiotherapy mandatory"},
-      {name:"Mastectomy (simple/modified radical)", when:"Large tumor, multifocal, patient preference, BRCA mutation, post-BCS re-excision failure", notes:"Modified radical includes axillary clearance level I–III"},
-      {name:"Sentinel lymph node biopsy (SLNB)", when:"Clinically/radiologically node-negative — standard of care", notes:"Use blue dye + radioisotope (dual technique); if ≥1 macro-metastasis → ALND vs. adjuvant RT decision"},
+      {name:"Breast-conserving surgery (BCS)", when:"Early disease (T1–2, favorable location)", notes:"Invasive margin = 'no ink on tumor' (SSO-ASTRO); wider margins do not lower recurrence. Adjuvant whole-breast RT mandatory"},
+      {name:"Mastectomy (simple/modified radical/skin- or nipple-sparing)", when:"Large tumor, multifocal, patient preference, BRCA, post-BCS re-excision failure; BCT contraindications", notes:"BCT absolute CI: prior chest/breast RT, persistent +margins after re-excision, multicentric, scleroderma/SLE (BRCA relative). Skin-/nipple-sparing a poor candidate if postmastectomy RT planned"},
+      {name:"Sentinel lymph node biopsy (SLNB)", when:"Clinically/radiologically node-negative — standard of care", notes:"Dual technique (blue dye + radioisotope). SLNB alone acceptable if 1–2 +nodes, T1-2 cN0, BCS + whole-breast RT, no neoadjuvant — ACOSOG Z0011"},
       {name:"Axillary lymph node dissection (ALND)", when:"Positive SLNB (selected patients), inflammatory breast cancer, clinically node-positive pre-treatment", notes:"Levels I–III; risks: lymphedema, nerve injury, seroma"},
       {name:"Immediate breast reconstruction", when:"Post-mastectomy if patient desires; oncoplastic BCS for moderate defects", notes:"Implant (tissue expander → implant) or autologous (TRAM, DIEP, latissimus dorsi)"},
       {name:"Risk-reducing mastectomy", when:"BRCA1/2 carriers, >30% lifetime risk", notes:"Reduces risk ~95%; bilateral with/without reconstruction"}
@@ -112,20 +121,25 @@ const ENDOCRINE_DISEASES_1 = [
     pearls: [
       "Dual technique (isotope + blue dye) improves detection rate to >95%",
       "If no SLN found: low axillary dissection to level I",
-      "ACOSOG Z0011: ALND may be omitted if 1–2 SLN macro-metastases with BCS + whole breast RT"
+      "Z0011: OS 91.9% (ALND) vs 92.5% (SLN-only), no difference at 10yr; lymphedema 13% vs 2% — ALND may be omitted if 1–2 +SLN with BCS + whole-breast RT",
+      "IBCSG 23-01: ALND may be omitted for SLN micrometastases (companion to Z0011)"
     ]
   },
   guidelines: [
     {src:"NICE NG101: Early and locally advanced breast cancer diagnosis and management"},
     {src:"St Gallen Consensus 2023: Primary therapy of early breast cancer"},
     {src:"ASCO/SSO: SLNB for early-stage breast cancer guidelines"},
-    {src:"NCCN Breast Cancer v4.2024"}
+    {src:"NCCN Breast Cancer v4.2024"},
+    {src:"AJCC Cancer Staging Manual, 8th ed (2017)"},
+    {src:"SSO-ASTRO margins consensus (invasive: 'no ink on tumor')"},
+    {src:"ACOSOG Z0011 / Z0010; NSABP B-32; IBCSG 23-01; ALMANAC"}
   ],
   pearls: [
     "Palpable lump in woman >35 → mammogram + ultrasound + core biopsy (triple assessment)",
     "DCIS management: BCS + RT or mastectomy; no SLNB unless mastectomy/high-risk DCIS",
     "Occult primary (axillary met, no breast mass): MRI + biopsy → treat as stage II breast cancer",
     "Inflammatory breast cancer: neoadjuvant chemo → mastectomy (NOT BCS) → RT",
+    "Paget disease: chronic eczematous nipple with underlying DCIS ± invasion; CEA+ (vs S-100+ melanoma); lumpectomy or mastectomy per extent",
     "Lymphedema risk after ALND: lifelong; patient education critical"
   ],
   mistakes: [
@@ -144,7 +158,7 @@ const ENDOCRINE_DISEASES_1 = [
   organ: "Breast",
   severity: "moderate",
   tags: ["oncology","breast","pre-invasive"],
-  hero: "Non-invasive breast cancer confined to ducts. Risk of progression to invasive cancer ~30% over 10 years without treatment.",
+  hero: "Non-invasive breast cancer confined to ducts. Raises subsequent invasive-cancer risk ~5-fold (ipsilateral, same quadrant) if untreated.",
   keypoints: [
     "Often detected by screening mammogram (microcalcifications)",
     "No metastatic potential while truly in situ",
@@ -154,16 +168,18 @@ const ENDOCRINE_DISEASES_1 = [
   ],
   differentials: ["Invasive ductal carcinoma","Lobular carcinoma in situ (LCIS)","Atypical ductal hyperplasia","Fibrocystic change with calcification","Fat necrosis"],
   mnemonics: [
-    {name:"Van Nuys Index", text:"Size + Margin + Grade + Age → low (4–6) watch, high (10–12) mastectomy"}
+    {name:"Van Nuys Index", text:"Size + Margin + Grade + Age → low (4–6) watch, high (10–12) mastectomy"},
+    {name:"DCIS vs LCIS", text:"DCIS: E-cadherin+, unilateral, microcalcifications, precursor. LCIS: E-cadherin NEGATIVE, bilateral, no imaging signs, RISK MARKER not precursor"}
   ],
   overview: {
-    definition: "Clonal proliferation of malignant epithelial cells confined within ducts, with intact basement membrane. Obligate precursor of invasive cancer.",
-    epidemiology: "20–25% of all screen-detected breast cancers. Incidence increased 5-fold post-mammographic screening.",
+    definition: "Clonal proliferation of malignant epithelial cells confined within ducts, with intact basement membrane. Precursor of invasive cancer.",
+    epidemiology: "In-situ disease rose to ~45% of cancers after screening (14-fold rise); DCIS now >2:1 over LCIS; ~7% of all biopsy specimens.",
     pathophysiology: "Loss of cell polarity, E-cadherin preserved (unlike LCIS). Necrosis → calcification (comedo subtype). Progression requires basement membrane breach.",
     classification: [
-      "Grade: low, intermediate, high",
-      "Architecture: comedo, cribriform, micropapillary, papillary, solid",
+      "Grade by nuclear grade + necrosis: low, intermediate, high",
+      "Architectural progression: papillary → cribriform → solid → comedo (necrosis → Ca²⁺)",
       "Comedo-type: central necrosis, high grade, worse prognosis",
+      "LCIS (distinct entity): E-cadherin NEGATIVE, risk marker not precursor, 25–35% subsequent invasive (bilateral, often ductal), removed from AJCC 8th staging; pleomorphic LCIS managed like DCIS",
       "Van Nuys Prognostic Index: size + margin + grade + age"
     ]
   },
@@ -188,15 +204,22 @@ const ENDOCRINE_DISEASES_1 = [
     ]
   },
   criteria: {
-    title: "Van Nuys Prognostic Index (USC/VNPI)",
+    title: "Excision-alone eligibility & VNPI",
     items: [
-      {k:"Score 4–6", v:"Excision alone (low recurrence risk)"},
-      {k:"Score 7–9", v:"Excision + radiotherapy"},
-      {k:"Score 10–12", v:"Mastectomy recommended"},
-      {k:"Parameters", v:"Size (≤15mm/16–40mm/>40mm), Margin (<1/1–9/≥10mm), Grade (low/int/high), Age (<40/40–60/>60)"}
+      {k:"ECOG 5194 (low/int grade)", v:"≤2.5cm + ≥3mm margin → in-breast recurrence 6.1%"},
+      {k:"ECOG 5194 (high grade)", v:"≤1cm + ≥3mm margin → 15.3% (unacceptable)"},
+      {k:"RTOG 9804 (good-risk)", v:"5-yr local recurrence 0.4% (RT) vs 3.2% (no RT)"},
+      {k:"VNPI 4–6 / 7–9 / 10–12", v:"Excision alone / excision + RT / mastectomy"},
+      {k:"VNPI parameters", v:"Size (≤15/16–40/>40mm), Margin (<1/1–9/≥10mm), Grade, Age (<40/40–60/>60)"}
     ]
   },
-  scoring: [],
+  scoring: [
+    {name:"Oncotype DX DCIS Score", items:[
+      "12-gene RT-PCR assay (derived from ECOG 5194)",
+      "Stratifies low / intermediate / high recurrence risk",
+      "Guides omission of radiotherapy after excision"
+    ]}
+  ],
   management: {
     conservative: [
       "Active surveillance (low-grade, small, elderly patient): emerging evidence from LORIS/LORD trials",
@@ -204,13 +227,14 @@ const ENDOCRINE_DISEASES_1 = [
       "Tamoxifen reduces ipsilateral recurrence risk (both DCIS and invasive) by ~40%"
     ],
     medical: [
+      "NSABP B-24: 5 yr tamoxifen significantly cut local recurrence in ER+ DCIS",
       "Tamoxifen 5 yrs (ER+, premenopausal): reduces risk of ipsilateral + contralateral events",
       "Aromatase inhibitors (anastrozole/exemestane) for postmenopausal ER+ DCIS"
     ],
     surgical: [
-      {name:"Breast-conserving surgery (wide local excision)", when:"Unifocal DCIS, achievable clear margins (≥2mm for DCIS vs ≥1mm for invasive)", notes:"Wire/ROLL/SAVI Scout localization for impalpable lesions"},
-      {name:"Mastectomy", when:"Multifocal/diffuse DCIS, inability to achieve clear margins, patient preference, BRCA mutation", notes:"Simple mastectomy (no ALND needed unless invasive component found)"},
-      {name:"SLNB", when:"Mastectomy for DCIS (occult invasion ~10–15%); high-grade/large DCIS at BCS", notes:"Not routinely required for all DCIS — only if invasive upstaging likely"}
+      {name:"Breast-conserving surgery (wide local excision)", when:"Unifocal DCIS, achievable clear margins (≥2mm for DCIS with whole-breast RT vs 'no ink on tumor' for invasive)", notes:"NSABP B-17: RT cut both invasive + non-invasive recurrence; ~45% of recurrences invasive if RT omitted. Wire/ROLL/SAVI Scout localization for impalpable lesions"},
+      {name:"Mastectomy", when:"Multifocal/diffuse DCIS, inability to achieve clear margins, patient preference, BRCA mutation", notes:"Local recurrence + mortality <2% (gold standard); no ALND unless invasive component found"},
+      {name:"SLNB", when:"Mastectomy for DCIS (occult invasion ~20% on final path); high-grade/large DCIS at BCS", notes:"Not routinely required for all DCIS — only if invasive upstaging likely"}
     ]
   },
   technique: {
@@ -235,13 +259,16 @@ const ENDOCRINE_DISEASES_1 = [
   },
   guidelines: [
     {src:"NICE NG101: DCIS management"},
-    {src:"SSO-ASTRO-ASCO Margins in DCIS 2016 guideline"},
+    {src:"SSO-ASTRO-ASCO Margins in DCIS 2016 guideline (2mm)"},
+    {src:"NSABP B-17 (RT); NSABP B-24 (tamoxifen)"},
+    {src:"ECOG 5194; RTOG 9804; Oncotype DX DCIS Score"},
     {src:"LORIS/LORD trials: active surveillance for low-risk DCIS (ongoing)"}
   ],
   pearls: [
-    "DCIS cannot metastasise — it is the invasion that kills; reassure patients appropriately",
-    "Margin adequacy critical: 2mm radial margin reduces local recurrence regardless of RT",
-    "SLNB not routinely needed for BCS DCIS — only if mastectomy or high-grade/large (risk of occult invasion)",
+    "DCIS raises invasive-cancer risk ~5-fold (ipsilateral, same quadrant) — it is the invasion that kills; reassure appropriately",
+    "Margin adequacy critical: 2mm margin for DCIS with whole-breast RT",
+    "SLNB not routinely needed for BCS DCIS — only if mastectomy or high-grade/large (occult invasion ~20% at mastectomy)",
+    "LCIS is a risk marker, not a precursor: E-cadherin negative, bilateral, no imaging signs; pleomorphic LCIS managed like DCIS",
     "Paget disease of nipple: DCIS or invasive cancer in underlying ducts — requires mammography + punch biopsy of nipple"
   ],
   mistakes: [
@@ -261,24 +288,25 @@ const ENDOCRINE_DISEASES_1 = [
   tags: ["oncology","breast","rare","stromal"],
   hero: "Rare fibroepithelial tumor of breast stroma. Wide local excision with clear margins is key — malignant variant metastasises hematogenously.",
   keypoints: [
-    "Classified: benign, borderline, malignant by histology",
+    "Classified: benign, borderline, malignant by histology; borderline carries greater local-recurrence potential",
     "Wide local excision with ≥1cm clear margins (or mastectomy if large)",
     "Axillary node dissection NOT indicated — metastases via bloodstream",
-    "Malignant phyllodes: lung most common metastatic site",
+    "Malignant phyllodes: lung most common metastatic site; heterologous elements typically liposarcomatous/rhabdomyosarcomatous",
+    "Stroma always monoclonal — a molecular differentiator from fibroadenoma",
     "High local recurrence risk if margins inadequate"
   ],
   differentials: ["Fibroadenoma","Breast sarcoma","Invasive breast carcinoma","Lipoma","Abscess"],
   mnemonics: [
-    {name:"Phyllodes vs Fibroadenoma", text:"Phyllodes = rapidly GROWING, older woman, LEAF-like architecture on histology"}
+    {name:"Phyllodes vs Fibroadenoma", text:"Phyllodes = rapidly GROWING, older woman, LEAF-like architecture; stroma always MONOCLONAL (vs fibroadenoma poly/monoclonal)"}
   ],
   overview: {
     definition: "Fibroepithelial neoplasm with biphasic epithelial and cellular stromal components in leaf-like pattern. Spectrum: benign (60%), borderline (15%), malignant (25%).",
     epidemiology: "Rare: <1% of breast neoplasms. Median age 45 yrs (older than fibroadenoma). Commonest in Asian women.",
-    pathophysiology: "Stromal overgrowth with variable cellularity and mitotic activity. Malignant variant = breast sarcoma with hematogenous metastasis.",
+    pathophysiology: "Stromal cells always monoclonal (diagnostic distinguisher from fibroadenoma). Usually sharply demarcated, compressing/distorting adjacent tissue; mixed gelatinous/solid/cystic (cystic areas = infarction/necrosis → leaf-like cut surface). Malignant variant = breast sarcoma with hematogenous metastasis; heterologous elements typically liposarcomatous or rhabdomyosarcomatous.",
     classification: [
       "Benign: mild stromal cellularity, <5 mitoses/10HPF, no overgrowth",
-      "Borderline: moderate cellularity, 5–9 mitoses/10HPF",
-      "Malignant: >10 mitoses/10HPF, stromal overgrowth, heterologous elements"
+      "Borderline: moderate cellularity, 5–9 mitoses/10HPF; greater local-recurrence potential",
+      "Malignant: >10 mitoses/10HPF, stromal overgrowth, heterologous (lipo-/rhabdomyosarcomatous) elements"
     ]
   },
   diagnosis: {
@@ -295,7 +323,7 @@ const ENDOCRINE_DISEASES_1 = [
     ],
     investigations: [
       {name:"Ultrasound", role:"Large complex mass with cystic clefts; Doppler shows vascularity"},
-      {name:"Mammography", role:"Dense circumscribed mass; may show lobulated margins"},
+      {name:"Mammography", role:"Dense circumscribed mass with lobulated margins; calcifications + necrosis do NOT distinguish benign vs borderline vs malignant"},
       {name:"Core needle biopsy", role:"Mandatory — distinguishes from fibroadenoma; assess stromal cellularity"},
       {name:"CT chest", role:"Staging for malignant/borderline phyllodes (pulmonary metastases)"}
     ]
@@ -371,9 +399,9 @@ const ENDOCRINE_DISEASES_1 = [
   hero: "Most common endocrine malignancy. Papillary thyroid cancer has excellent prognosis; medullary and anaplastic are more aggressive.",
   keypoints: [
     "Papillary (PTC) 80%: 'Orphan Annie' nuclei, psammoma bodies, excellent prognosis",
-    "Total thyroidectomy for >1cm PTC or any FTC/MTC/ATC",
+    "Lobectomy OR total acceptable for 1–4cm cN0 PTC without ETE — 2015 ATA; total for FTC/MTC/ATC",
     "Central neck dissection (level VI) for clinically positive nodes",
-    "Radioiodine (RAI) ablation post-thyroidectomy for high-risk PTC",
+    "Radioiodine (RAI) ablation post-thyroidectomy for high-risk PTC (all gross ETE/M1); not routine for low-risk or microcarcinoma",
     "MTC: screen family for RET mutation; screen for phaeochromocytoma before surgery"
   ],
   differentials: ["Multinodular goitre","Thyroid adenoma","Thyroid cyst","Parathyroid adenoma","Lymph node metastasis","Lymphoma"],
@@ -384,13 +412,16 @@ const ENDOCRINE_DISEASES_1 = [
   overview: {
     definition: "Malignant thyroid neoplasms. Derived from follicular cells (PTC, FTC, ATC) or parafollicular C-cells (MTC).",
     epidemiology: "3rd most common endocrine cancer. F:M = 3:1. PTC incidence rising (detection bias). MTC 5%, ATC <1% but fatal.",
-    pathophysiology: "PTC: BRAF V600E (40–60%), RET/PTC rearrangements. FTC: RAS mutations, PAX8-PPARγ. MTC: RET mutations (25% hereditary — MEN2A/2B, FMTC). ATC: dedifferentiation from PTC/FTC.",
+    pathophysiology: "PTC: BRAF V600E (40–60%, predicts recurrence/mortality even early-stage), RET/PTC rearrangements; TERT promoter → poor DFS/OS. FTC: RAS mutations, PAX8-PPARγ. MTC: RET mutations (25% hereditary — MEN2A/2B, FMTC). ATC: dedifferentiation from PTC/FTC.",
     classification: [
       "Papillary thyroid carcinoma (PTC) — 80%",
       "Follicular thyroid carcinoma (FTC) — 10%",
+      "Hürthle cell carcinoma — ~3% (FTC subtype): multifocal/bilateral 30%, poor RAI uptake ~5%, nodal mets 25%; managed like FTC",
       "Medullary thyroid carcinoma (MTC) — 5%",
       "Anaplastic thyroid carcinoma (ATC) — <1%",
-      "Lymphoma, squamous cell carcinoma (rare)"
+      "NIFTP: encapsulated non-invasive follicular-variant PTC — reclassified as non-malignant neoplasm",
+      "Thyroid lymphoma (<1%, non-Hodgkin B-cell) arises in Hashimoto's — CHOP ± RT, surgery only for airway",
+      "Familial non-medullary: Cowden (PTEN), FAP (APC), Werner, Carney complex, DICER1"
     ]
   },
   diagnosis: {
@@ -421,33 +452,44 @@ const ENDOCRINE_DISEASES_1 = [
     ]
   },
   criteria: {
-    title: "Bethesda System for Thyroid Cytopathology",
+    title: "Bethesda System (malignancy risk + action)",
     items: [
-      {k:"I: Non-diagnostic", v:"Repeat FNAC"},
-      {k:"II: Benign", v:"Follow-up US"},
-      {k:"III: AUS/FLUS", v:"Repeat FNAC or molecular testing or lobectomy"},
-      {k:"IV: Follicular neoplasm", v:"Lobectomy (can't distinguish adenoma from FTC on cytology)"},
-      {k:"V: Suspicious malignancy", v:"Total thyroidectomy"},
-      {k:"VI: Malignant", v:"Total thyroidectomy ± CND"}
+      {k:"I: Non-diagnostic (1–4%)", v:"Repeat FNAC"},
+      {k:"II: Benign (60–70% of FNAs, false-neg ≤3%)", v:"Follow-up US"},
+      {k:"III: AUS/FLUS (5–15%)", v:"Repeat FNAC or molecular testing or lobectomy"},
+      {k:"IV: Follicular neoplasm (15–35%)", v:"Lobectomy (can't distinguish adenoma from FTC on cytology)"},
+      {k:"V: Suspicious (60–75%)", v:"Lobectomy OR near-total/total thyroidectomy"},
+      {k:"VI: Malignant (97–99%)", v:"Total thyroidectomy ± CND"}
     ]
   },
-  scoring: [],
+  scoring: [
+    {name:"AJCC 8th ed DTC staging (pivots on age 55)", items:[
+      "<55yr: any T/N M0 = Stage I; M1 = Stage II",
+      "≥55yr: T1–2 N0 = I; N1 or T3 = II; T4a = III; T4b = IVA; M1 = IVB",
+      "T3b = ETE into strap muscles only; minimal ETE no longer upstages"
+    ]},
+    {name:"ATA recurrence-risk stratification", items:[
+      "Low: intrathyroidal, ≤5 N1 micromets <0.2cm, no vascular invasion — recurrence 1–2%",
+      "Intermediate: microscopic ETE, aggressive histology (tall cell/columnar), vascular invasion, >5 N1 or clinical N1",
+      "High: gross ETE, incomplete resection, M1, N1 ≥3cm, FTC >4 foci vascular invasion — recurrence >50%"
+    ]}
+  ],
   management: {
     conservative: [
-      "Active surveillance for low-risk papillary microcarcinoma (<1cm, no invasion, elderly): ATA guideline option",
+      "Active surveillance for papillary microcarcinoma (<1cm, cN0, no ETE): supported by 2 Japanese trials; lobectomy if surgery chosen",
       "Levothyroxine suppression therapy post-thyroidectomy (TSH <0.1 for high-risk, 0.1–0.5 low-risk)",
       "Thyroglobulin + neck US at 6–12 months post-op surveillance"
     ],
     medical: [
-      "Radioiodine (I-131) ablation: high-risk PTC post-thyroidectomy; remnant ablation + treatment of metastases",
+      "Radioiodine (I-131): recommended for all high-risk (gross ETE/M1); considered for intermediate; NOT routine for low-risk or any papillary microcarcinoma; treats >70% micromets but <10% macromets",
       "Lenvatinib/sorafenib: RAI-refractory differentiated thyroid cancer",
-      "Vandetanib/cabozantinib: advanced/metastatic MTC",
+      "Vandetanib/cabozantinib: first-line for symptomatic advanced/progressive MTC (prolong PFS, lower calcitonin/CEA)",
       "Dabrafenib + trametinib: BRAF V600E mutant ATC (rarely curative)"
     ],
     surgical: [
-      {name:"Total thyroidectomy", when:"PTC >1cm, FTC (all), MTC (all), ATC (if resectable)", notes:"Mandatory laryngoscopy pre-op; meticulous RLN and parathyroid identification; drain optional"},
-      {name:"Thyroid lobectomy (hemithyroidectomy)", when:"Low-risk PTC <1cm, solitary Bethesda IV follicular neoplasm", notes:"Completion thyroidectomy if final histology shows intermediate/high-risk features"},
-      {name:"Central neck dissection (level VI)", when:"Clinically positive central nodes (cN1a); prophylactic CND for T3/T4 PTC or MTC", notes:"Risk: bilateral RLN injury; permanent hypoparathyroidism"},
+      {name:"Total thyroidectomy", when:"PTC >4cm or gross ETE/cN1, FTC >4cm (older men — cancer risk 50%), MTC (all), ATC (if resectable)", notes:"Mandatory laryngoscopy pre-op; meticulous RLN and parathyroid identification; drain optional"},
+      {name:"Thyroid lobectomy (hemithyroidectomy)", when:"1–4cm cN0 PTC without ETE (lobectomy OR total — 2015 ATA); solitary Bethesda IV follicular neoplasm (70–80% benign adenoma)", notes:"Completion thyroidectomy if final histology shows intermediate/high-risk features"},
+      {name:"Central neck dissection (level VI)", when:"Clinically positive central nodes (cN1a); prophylactic CND for T3/T4 PTC; routine bilateral prophylactic CND for MTC", notes:"MTC: add lateral dissection if calcitonin >500 or nodal/primary ≥1.5cm. Risk: bilateral RLN injury; permanent hypoparathyroidism"},
       {name:"Lateral neck dissection (levels II–V)", when:"Clinically or radiologically positive lateral nodes (cN1b)", notes:"Compartment-oriented dissection — not 'berry picking'"},
       {name:"Tracheostomy", when:"ATC with impending airway compromise", notes:"Palliative in most ATC — disease-specific survival <6 months"}
     ]
@@ -477,14 +519,19 @@ const ENDOCRINE_DISEASES_1 = [
     ]
   },
   guidelines: [
-    {src:"ATA 2015 Management Guidelines for Adult Patients with Thyroid Nodules and Differentiated Thyroid Cancer"},
+    {src:"ATA 2015 Differentiated Thyroid Cancer Guidelines (Haugen)"},
+    {src:"ATA 2015 Medullary Thyroid Carcinoma Guidelines; ATA Anaplastic Guidelines"},
+    {src:"AJCC Cancer Staging Manual, 8th ed (2017)"},
+    {src:"Bethesda System for Reporting Thyroid Cytopathology (Cibas & Ali)"},
     {src:"NICE DG41: Thyroid cancer (gene expression classifier)"},
     {src:"BTA Guidelines 2014: Differentiated thyroid cancer management"}
   ],
   pearls: [
     "PTC with positive nodes does NOT worsen disease-specific survival in low-risk patients",
+    "FNA cannot distinguish follicular adenoma from carcinoma — Dx = capsular/vascular invasion on histology; molecular panels for indeterminate nodules (Afirma GEC 'rule out' NPV 94%; ThyroSeq v2 sens 90%/spec 93%)",
+    "Complete neck US mandatory after any FNA-proven cancer; distant mets ultimately in ~20% (lung>bone>liver>brain)",
     "Always exclude phaeochromocytoma before operating on MTC (cardiovascular crisis otherwise)",
-    "Prophylactic thyroidectomy timing in MEN2B: within months of birth; MEN2A: by age 5",
+    "Prophylactic thyroidectomy timing: MEN2B <1yr; MEN2A codon 634 high-risk <5yr",
     "Chylous fistula after lateral neck dissection: medium-chain triglyceride diet ± reoperation"
   ],
   mistakes: [
@@ -506,8 +553,8 @@ const ENDOCRINE_DISEASES_1 = [
   keypoints: [
     "TSH-receptor antibodies (TRAb) are diagnostic",
     "Three treatment options: antithyroid drugs (ATD), radioiodine, thyroidectomy",
-    "Total thyroidectomy for: large goitre, severe ophthalmopathy, ATD failure/relapse, coexistent nodule",
-    "Make euthyroid before surgery with ATD ± Lugol's iodine (5–10 days pre-op)",
+    "Total/near-total thyroidectomy (now preferred over subtotal) for: large goitre, severe ophthalmopathy, ATD failure/relapse, coexistent nodule",
+    "Make euthyroid before surgery with ATD ± Lugol's iodine (3 drops BD, 7–10 days pre-op)",
     "Thyroid storm: life-threatening; treat with beta-blocker + ATD + steroids + Lugol's"
   ],
   differentials: ["Toxic multinodular goitre","Toxic adenoma","Subacute thyroiditis","Factitious hyperthyroidism","Struma ovarii"],
@@ -517,7 +564,7 @@ const ENDOCRINE_DISEASES_1 = [
   ],
   overview: {
     definition: "Organ-specific autoimmune disease with TSH-receptor stimulating antibodies (TRAb/TSI) causing hyperthyroidism, diffuse goitre and extrathyroidal manifestations.",
-    epidemiology: "Most common cause of hyperthyroidism (60–80%). F:M = 7:1. Peak age 20–50 yrs. Associated with HLA-DR3, HLA-B8.",
+    epidemiology: "Most common cause of hyperthyroidism (60–80%). F:M = 5:1. Peak age 40–60 yrs. Associated with HLA-DQA1*0501 (Caucasian), HLA-B8/DR3; HLA-DRB1*0701 protective.",
     pathophysiology: "TRAb binds TSH receptor → constitutive thyroid stimulation → T3/T4 overproduction. IL-1, IGF-1 in orbital fibroblasts → glycosaminoglycan deposition → exophthalmos.",
     classification: [
       "Graves hyperthyroidism",
@@ -560,29 +607,37 @@ const ENDOCRINE_DISEASES_1 = [
       {k:"Parameters scored", v:"Temperature, CNS effects, GI-hepatic dysfunction, HR, AF, precipitant history"}
     ]
   },
-  scoring: [],
+  scoring: [
+    {name:"Three-option treatment comparison (ATD vs RAI vs surgery)", items:[
+      "ATD: non-invasive, relapse 40–80%; curative-intent reserved for small (<40g) non-toxic goitre, mild elevation, low TRAb",
+      "RAI: ~50% euthyroid at 6mo then progressive hypothyroidism; worsens GO (33%, esp. smokers); CI in pregnancy",
+      "Surgery: rapid cure, best GO outcome; needs euthyroid prep; risks RLN/parathyroid injury + lifelong thyroxine"
+    ]}
+  ],
   management: {
     conservative: [
       "Beta-blocker (propranolol/atenolol) for immediate symptom control",
-      "ATD (carbimazole 20–40mg/day or PTU) for 12–18 months; 50% relapse rate",
+      "ATD (carbimazole 20–40mg/day or PTU) for 12–18 months; 40–80% relapse; block-replace option adds T4 0.05–0.1mg to ATD",
       "Ophthalmopathy: selenium, IV steroids for active moderate-severe; radiotherapy; orbital decompression"
     ],
     medical: [
-      "Carbimazole: agranulocytosis risk (warn to stop if fever/sore throat)",
-      "PTU: preferred in pregnancy 1st trimester; hepatotoxicity risk",
-      "Radioiodine (I-131): contraindicated in active moderate-severe ophthalmopathy (worsens GO)",
-      "Lugol's iodine (potassium iodide): 5 drops TDS for 10 days pre-op — reduces vascularity and thyroid hormone release"
+      "Methimazole 10–30mg (long t½, once-daily) or carbimazole; agranulocytosis risk (warn to stop if fever/sore throat); relapse 40–80% after 1–2yr course",
+      "PTU 100–300mg TDS: blocks peripheral T4→T3 (favored in storm); preferred 1st-trimester pregnancy; hepatotoxicity risk",
+      "Propranolol 20–40mg QDS decreases T4→T3 (CCB if β-blocker contraindicated)",
+      "Radioiodine (I-131): 8–12 mCi orally after preliminary scan; only ~50% euthyroid at 6mo, ~2.5%/yr hypothyroid thereafter; GO progression 33% (vs 16% post-surgery, worse in smokers); absolute CI pregnancy/breastfeeding/conception <6mo; contraindicated in active moderate-severe ophthalmopathy",
+      "Lugol's iodine (potassium iodide): 3 drops twice daily × 7–10 days pre-op — reduces vascularity and thyroid hormone release",
+      "Urgent/allergic prep when cannot render euthyroid: β-blocker + potassium iodide ± steroids"
     ],
     surgical: [
-      {name:"Total thyroidectomy", when:"Large goitre; severe active ophthalmopathy (definitive control — better than RAI for GO); ATD failure/intolerance; patient preference; suspicious nodule", notes:"Make euthyroid first; avoid thyroid storm intra/post-op; life-long thyroxine replacement"},
-      {name:"Subtotal thyroidectomy", when:"Rarely used now — risk of recurrent hyperthyroidism; near-total preferred if not bilateral total", notes:"Bilaterally leave <3g thyroid remnant to reduce recurrence"}
+      {name:"Total / near-total thyroidectomy", when:"ATA procedure of choice; large goitre >80g with compression; severe active ophthalmopathy (better than RAI for GO); ATD failure/intolerance; confirmed/suspicious cancer; wish to conceive <6mo; patient preference", notes:"Make euthyroid first (best in 2nd trimester if pregnant); avoid thyroid storm intra/post-op; life-long thyroxine replacement"},
+      {name:"Subtotal thyroidectomy (Hartley-Dunhill)", when:"Historic variant (total lobectomy one side + subtotal other) — largely superseded; subtotal risks recurrence", notes:"Bilaterally leave 4–7g thyroid remnant; needs re-entry of only one side if recurrence"}
     ]
   },
   technique: {
     title: "Pre-operative Preparation for Total Thyroidectomy in Graves'",
     prep: [
       "Render euthyroid: carbimazole 4–6 weeks pre-op (until TFTs normal)",
-      "Lugol's iodine 0.1–0.2mL TDS for 10 days pre-op (reduces vascularity)",
+      "Lugol's iodine 3 drops twice daily for 7–10 days pre-op (reduces vascularity)",
       "Beta-blocker continued until morning of surgery",
       "Anesthetic team alert to thyroid storm risk"
     ],
@@ -602,14 +657,15 @@ const ENDOCRINE_DISEASES_1 = [
     ]
   },
   guidelines: [
-    {src:"ETA/EUGOGO Guidelines 2018: Management of Graves hyperthyroidism"},
-    {src:"ATA 2016: Hyperthyroidism and other causes of thyrotoxicosis"},
+    {src:"ATA 2016 Hyperthyroidism/Thyrotoxicosis Guidelines"},
+    {src:"ETA/EUGOGO 2016: Graves' orbitopathy"},
     {src:"NICE NG145: Thyroid disease assessment and management"}
   ],
   pearls: [
     "Radioiodine contraindicated in active moderate-severe Graves ophthalmopathy — worsens GO",
     "PTU preferred over carbimazole in first trimester pregnancy and thyroid storm",
-    "Thyroid storm: remove trigger (infection, surgery, RAI) + propranolol + PTU + Lugol's + hydrocortisone + cooling"
+    "Thyroid storm: remove trigger (infection, surgery, RAI) + propranolol + PTU + Lugol's + hydrocortisone + cooling",
+    "Toxic MNG (Plummer) & toxic adenoma: extrathyroidal signs ABSENT; Jod-Basedow from iodine/amiodarone; toxic adenoma from TSH-R/gsp somatic mutations in younger patients; RAI needs larger doses (lower uptake)"
   ],
   mistakes: [
     "Operating on a hyperthyroid patient — risk of thyroid storm intraoperatively",
@@ -640,10 +696,11 @@ const ENDOCRINE_DISEASES_1 = [
   overview: {
     definition: "Multiple thyroid nodules of varying size arising from benign follicular hyperplasia; may be euthyroid, hypothyroid, or hyperthyroid (toxic MNG).",
     epidemiology: "15–20% adults on ultrasound; clinically palpable in 4–7%. Endemic in iodine-deficient areas. F:M = 4:1.",
-    pathophysiology: "Recurrent cycles of hyperplasia and involution. Autonomous foci → toxic MNG. Risk of malignancy in dominant nodule ~5%.",
+    pathophysiology: "Recurrent cycles of hyperplasia and involution. Autonomous foci → toxic MNG; Jod-Basedow (iodine/contrast/amiodarone-induced) hyperthyroidism. Risk of malignancy in dominant nodule ~5% (hyperfunctioning nodule ~1%).",
     classification: [
       "Euthyroid MNG (most common)",
       "Toxic MNG (Plummer disease): autonomous hyperthyroidism from hot nodules",
+      "Toxic adenoma: single autonomous hyperfunctioning nodule",
       "Simple/colloid MNG",
       "Substernal/intrathoracic goitre (>50% below thoracic inlet)"
     ]
@@ -667,6 +724,7 @@ const ENDOCRINE_DISEASES_1 = [
       {name:"TSH ± fT4/fT3", role:"Assess thyroid function; toxic MNG: suppressed TSH"},
       {name:"Thyroid ultrasound", role:"Number, size, TIRADS classification of all nodules; identify dominant/suspicious"},
       {name:"FNAC dominant/suspicious nodule", role:"Bethesda system; mandatory if ≥1cm with suspicious US features"},
+      {name:"Thyroid cyst aspiration", role:"Aspirate simple cysts; lobectomy if recurs ×3, >4cm, or complex (complex cysts ~15% malignant)"},
       {name:"CT neck/chest", role:"Substernal extension, tracheal deviation/compression, relationship to great vessels"},
       {name:"Radioiodine uptake scan", role:"Toxic MNG: heterogeneous uptake with hot nodules; helps distinguish from Graves"},
       {name:"CXR", role:"Tracheal deviation, substernal component"}
@@ -687,12 +745,12 @@ const ENDOCRINE_DISEASES_1 = [
   management: {
     conservative: [
       "Asymptomatic small MNG: annual TFT + US surveillance",
-      "Iodine supplementation in endemic areas to prevent further growth",
-      "Thyroxine suppression not recommended (cardiovascular risks outweigh benefit)"
+      "Iodine supplementation in endemic (deficient) areas to prevent further growth",
+      "Thyroxine suppression not recommended: <25% of benign nodules shrink >50% in iodine-replete populations; cardiovascular risks outweigh benefit"
     ],
     medical: [
       "Carbimazole for toxic MNG pre-operatively",
-      "Radioiodine for toxic MNG (elderly, poor surgical candidates) — reduces volume 30–50%"
+      "Radioiodine for toxic MNG (elderly, poor surgical candidates without airway compression) — reduces volume 30–50%; larger doses needed (uptake lower than Graves); RAI-thyroiditis can cause acute airway swelling"
     ],
     surgical: [
       {name:"Total thyroidectomy", when:"Definitive treatment for large symptomatic MNG; suspected malignancy; first choice to prevent recurrence", notes:"Life-long thyroxine replacement; bilateral RLN and parathyroid risk"},
@@ -719,17 +777,21 @@ const ENDOCRINE_DISEASES_1 = [
     ],
     pearls: [
       "Never pull hard on substernal component — risk of RLN avulsion or vascular tear",
+      "RLN may run laterally/anterior over a nodule in nodular goitre — identify early",
       "If sternotomy needed: incision extends from Kocher to angle of Louis",
       "Post-op airway: tracheomalacia rare but watch for in long-standing compression"
     ]
   },
   guidelines: [
+    {src:"ATA 2015 Thyroid Nodule/DTC Guidelines"},
+    {src:"Bethesda System for Reporting Thyroid Cytopathology"},
     {src:"BTA Guidelines: Management of thyroid nodule and goitre"},
-    {src:"European Thyroid Association 2019: Multinodular goitre guidelines"},
-    {src:"ATA 2015: Thyroid nodule management"}
+    {src:"European Thyroid Association 2019: Multinodular goitre guidelines"}
   ],
   pearls: [
     "Pemberton's sign positive = substernal goitre until proven otherwise — get CT",
+    "Toxic MNG with airway compression: prefer near-total/total; avoid RAI (RAI-thyroiditis can cause acute airway swelling)",
+    "Jod-Basedow: iodine/contrast/amiodarone can precipitate hyperthyroidism in autonomous MNG",
     "Tracheomalacia post-thyroidectomy: rare but life-threatening; keep patient intubated and trial extubation",
     "Contralateral RLN palsy post-thyroidectomy = indication for tracheostomy if bilateral"
   ],
@@ -755,7 +817,7 @@ const ENDOCRINE_DISEASES_1 = [
     "Intraoperative PTH (ioPTH): drop >50% from baseline = cure",
     "MEN1 and MEN2A: multigland disease — 3.5 gland resection"
   ],
-  differentials: ["Malignancy-associated hypercalcemia","Sarcoidosis","Vitamin D toxicity","Thiazide diuretics","Familial hypocalciuric hypercalcemia (FHH)","Secondary HPT"],
+  differentials: ["Malignancy-associated hypercalcemia (PTHrP-mediated; commonest in inpatients)","Sarcoidosis","Vitamin D toxicity","Thiazide diuretics","Familial hypocalciuric hypercalcemia (FHH)","Secondary HPT"],
   mnemonics: [
     {name:"Symptoms", text:"Bones (osteitis fibrosa cystica) + Stones (renal calculi) + Groans (GI: nausea, constipation) + Moans (psycho: depression, fatigue)"},
     {name:"FHH exclusion", text:"Urine calcium:creatinine clearance ratio <0.01 = FHH (avoid surgery in FHH!)"}
@@ -766,10 +828,11 @@ const ENDOCRINE_DISEASES_1 = [
     pathophysiology: "Single adenoma (85%): monoclonal expansion of chief cells; PTH drives osteoclastic bone resorption, renal tubular Ca²⁺ reabsorption, intestinal absorption via Vit D activation.",
     classification: [
       "Sporadic (most common)",
-      "MEN1 (parathyroid + pituitary + pancreas): MENIN mutation",
+      "MEN1 (parathyroid + pituitary + pancreas): MENIN mutation; recurrence 15% at 2yr, 67% at 8yr",
       "MEN2A (parathyroid + MTC + phaeochromocytoma): RET mutation",
-      "Familial isolated HPT",
-      "Parathyroid carcinoma (<1%)"
+      "Familial isolated HPT; neonatal severe HPT (homozygous CASR) → urgent total parathyroidectomy",
+      "Normocalcemic PHPT: high PTH, normal Ca after excluding vit-D deficiency/renal leak; 19% become hypercalcemic in 3yr, 57% osteoporosis",
+      "Parathyroid carcinoma (~1%): Ca >14mg/dL, PTH >5× normal, palpable mass; HRPT2/CDC73 mutation; 15% nodal / 33% distant mets"
     ]
   },
   diagnosis: {
@@ -789,28 +852,34 @@ const ENDOCRINE_DISEASES_1 = [
     ],
     investigations: [
       {name:"Serum corrected calcium", role:"Elevated >2.6mmol/L on two occasions; correct for albumin"},
-      {name:"Intact PTH (iPTH)", role:"Elevated or inappropriately normal in PHPT; low in malignancy-associated"},
-      {name:"24-hour urine calcium", role:"Elevated in PHPT; low in FHH (UCCR <0.01 = FHH — do NOT operate)"},
-      {name:"Serum phosphate", role:"Low-normal in PHPT"},
+      {name:"Intact PTH (iPTH)", role:"Elevated or inappropriately normal in PHPT; does not cross-react PTHrP (differentiates humoral hypercalcemia of malignancy)"},
+      {name:"24-hour urine calcium", role:"Elevated (~60%) in PHPT; UCCR >0.02; FHH <0.01 and 24h Ca <100mg/d (do NOT operate)"},
+      {name:"Serum phosphate / chloride", role:"Low phosphate (~50%); hyperchloremic metabolic acidosis (80%); chloride:phosphate ratio >33"},
       {name:"Vitamin D (25-OH-D3)", role:"Replete Vit D before surgery — masking exacerbation"},
-      {name:"Tc-99m sestamibi (MIBI) scan", role:"Single photon emission CT (SPECT) for localization — sensitivity 80%"},
-      {name:"Neck ultrasound", role:"Localization; complementary to MIBI; detects 75%"},
-      {name:"4D-CT parathyroid", role:"Failed previous localization; secondary/tertiary HPT; rapid phase contrast CT"},
+      {name:"Tc-99m sestamibi (MIBI) scan", role:"Single photon emission CT (SPECT) for localization — sensitivity >80% (~65% for single-gland lateralization)"},
+      {name:"Neck ultrasound", role:"Localization; complementary to MIBI; sensitivity >75% (experienced); concordant MIBI+US → correct gland ~95%"},
+      {name:"4D-CT parathyroid", role:"Sensitivity 88% for lateralization (vs MIBI 65%, US 57%); 4D-CT+US PPV 92% single-gland; failed prior localization / reoperative HPT"},
       {name:"DEXA scan", role:"Bone mineral density — L-spine, hip, radius; guides surgical indication"}
     ]
   },
   criteria: {
-    title: "Surgical Indications in Asymptomatic PHPT (4th International Workshop 2022)",
+    title: "Surgical Indications in Asymptomatic PHPT (NIH Consensus 2014)",
     items: [
-      {k:"Serum calcium", v:">0.25mmol/L above upper limit of normal"},
-      {k:"T-score", v:"≤ −2.5 at any site OR vertebral fracture"},
-      {k:"Creatinine clearance", v:"<60 mL/min"},
-      {k:"24h urine calcium", v:">400mg/day with increased stone risk"},
+      {k:"Serum calcium", v:">1 mg/dL (≈0.25mmol/L) above upper limit of normal"},
+      {k:"T-score", v:"≤ −2.5 at radius/spine/hip OR vertebral fracture on imaging"},
+      {k:"Creatinine clearance / GFR", v:"<60 mL/min"},
+      {k:"24h urine calcium", v:">400mg/day (>10mmol/d) with increased stone risk"},
       {k:"Renal imaging", v:"Nephrolithiasis or nephrocalcinosis"},
       {k:"Age", v:"<50 years"}
     ]
   },
-  scoring: [],
+  scoring: [
+    {name:"Asymptomatic PHPT natural history", items:[
+      "~27% develop a new surgical indication over 10yr",
+      "60% lose >10% BMD over 15yr",
+      "Age <50 predicts progression"
+    ]}
+  ],
   management: {
     conservative: [
       "Asymptomatic without surgical criteria: annual Ca²⁺, annual creatinine, DEXA every 1–2 years",
@@ -818,12 +887,12 @@ const ENDOCRINE_DISEASES_1 = [
       "Cinacalcet (calcimimetic) for hypercalcemia control if not surgical candidate"
     ],
     medical: [
-      "Cinacalcet: reduces PTH and Ca²⁺ but does not improve BMD significantly",
-      "Bisphosphonates: improve BMD but do not reduce Ca²⁺",
+      "Cinacalcet: lowers Ca²⁺ and PTH but NOT BMD — reserved for poor operative risk/refusal",
+      "Bisphosphonates / HRT: improve BMD but do not reduce Ca²⁺/PTH",
       "Vitamin D repletion: replete to >50nmol/L before surgery (deficiency may mask extent)"
     ],
     surgical: [
-      {name:"Minimally invasive parathyroidectomy (MIP/focused parathyroidectomy)", when:"Concordant localization (MIBI + US agree); single gland disease", notes:"Unilateral neck exploration + ioPTH confirmation; local/GA; day case"},
+      {name:"Minimally invasive parathyroidectomy (MIP/focused parathyroidectomy)", when:"Concordant localization (MIBI + US agree); single gland disease", notes:"Parathyroidectomy >95% cure (only curative option); improves BMD 6–8% yr1; unilateral neck exploration + ioPTH; local/GA; day case"},
       {name:"Bilateral neck exploration (BNE)", when:"Failed/discordant localization; MEN1/2A; familial HPT; reoperative HPT; suspected multigland disease", notes:"All 4 glands identified and assessed; abnormal glands removed"},
       {name:"3.5-gland parathyroidectomy", when:"MEN1 (all 4 glands usually enlarged) — subtotal parathyroidectomy", notes:"Leave 50mg vascularized remnant in sternocleidomastoid; mark with clip"},
       {name:"4-gland parathyroidectomy + auto-transplant", when:"MEN1 or severe multigland disease; forearm transplant", notes:"Implant into non-dominant forearm brachioradialis; allows monitoring and re-excision if recurrent"}
@@ -841,24 +910,27 @@ const ENDOCRINE_DISEASES_1 = [
       {n:2, t:"Exposure", d:"Dissect through lateral to strap muscles (Miami approach) or medial to muscles"},
       {n:3, t:"Adenoma identification", d:"Identify enlarged hypervascular parathyroid; confirm intraoperatively with gamma probe if radio-guided (MIRP)"},
       {n:4, t:"Excision", d:"Excise adenoma; clip pedicle; send for rapid frozen section (confirms parathyroid tissue)"},
-      {n:5, t:"ioPTH at 5 and 10 min post-excision", d:"Miami criterion: PTH drops >50% from highest pre-excision value AND into normal range"},
+      {n:5, t:"ioPTH at 10 min post-excision", d:"Miami criterion: PTH drops ≥50% at 10 min from highest pre-removal value AND into normal range (5-min optional)"},
       {n:6, t:"Decision", d:"Successful ioPTH drop → close; inadequate drop → bilateral exploration for multigland disease"}
     ],
     pearls: [
-      "ioPTH half-life: 3–5 minutes; measure at 5 and 10 min post-excision",
+      "ioPTH half-life: 3–5 minutes; Miami endpoint = ≥50% drop at 10 min (5-min sample optional)",
       "If ioPTH fails to drop: ectopic gland (mediastinum, thymus, intrathyroidal, intravasal) or multigland disease",
       "'Hungry bone syndrome' post-op: severe hypocalcemia from rapid bone remineralisation after prolonged PHPT"
     ]
   },
   guidelines: [
-    {src:"4th International Workshop on Asymptomatic PHPT 2022"},
-    {src:"NICE NG132: Hyperparathyroidism (primary)"},
-    {src:"AAES Endocrine Surgery Guidelines: Primary HPT 2016"}
+    {src:"NIH Consensus on Asymptomatic PHPT 2014 (4th International Workshop, Bilezikian)"},
+    {src:"AAES Guidelines: Definitive Management of Primary HPT 2016"},
+    {src:"NICE NG132: Hyperparathyroidism (primary)"}
   ],
   pearls: [
-    "FHH mimics PHPT biochemically — always calculate UCCR before listing for surgery",
+    "FHH mimics PHPT biochemically — always calculate UCCR before listing for surgery (FHH 24h urine Ca <100mg/d)",
+    "PHPT + malignancy = >90% of all hypercalcemia; PHPT commonest in outpatients, malignancy in inpatients",
     "Hungry bone syndrome: after long-standing HPT, aggressive IV calcium post-op required",
-    "Parathyroid carcinoma: hard fixed mass, very high Ca²⁺ (>3.5), very high PTH (>5× normal) — en-bloc resection"
+    "Parathyroid carcinoma: hard fixed mass, Ca >14mg/dL, PTH >5× normal — en-bloc excision + ipsilateral thyroid lobe; cinacalcet for refractory hypercalcemia",
+    "Hypercalcemic crisis (Ca 16–20mg/dL): 0.9% saline (UO >100cc/h) → furosemide → bisphosphonate/calcitonin → dialysis",
+    "Persistent/recurrent HPT — ectopic sites: paraesophageal 28%, mediastinal 26%, intrathymic 24%, intrathyroidal 11%, carotid sheath 9%; redo cure 80–90%"
   ],
   mistakes: [
     "Not excluding FHH — operating on FHH is futile and harmful",
@@ -878,7 +950,8 @@ const ENDOCRINE_DISEASES_1 = [
   keypoints: [
     "Secondary HPT: hypocalcemia/hyperphosphatemia → PTH elevation; multigland hyperplasia",
     "Tertiary HPT: post-renal transplant autonomous hyperfunction — surgical if persistent >12 months",
-    "Surgery: subtotal (3.5-gland) or total + forearm autotransplant",
+    "Surgery: subtotal (leave ~50mg) or total + forearm autotransplant + cryopreservation",
+    "Parathyroidectomy also indicated if glands >1cm (>500mm³) = nodular, medically refractory",
     "Cinacalcet ± Vit D analogues first-line before surgery",
     "Hungry bone syndrome post-op — aggressive Ca²⁺ replacement"
   ],
@@ -889,7 +962,7 @@ const ENDOCRINE_DISEASES_1 = [
   overview: {
     definition: "Secondary HPT: appropriate but excessive PTH secretion in response to hypocalcemia in CKD. Tertiary: autonomous PTH overproduction persisting after renal transplant.",
     epidemiology: "Secondary HPT: present in >70% CKD patients on dialysis. Tertiary HPT: ~25% renal transplant recipients with persistent hypercalcemia.",
-    pathophysiology: "CKD → low 1,25-Vit D (impaired 1α-hydroxylation) → low Ca²⁺ + high PO₄²⁻ → PTH → all 4 glands hyperplasia → bone disease (renal osteodystrophy). Tertiary: monoclonal expansion → autonomous excess PTH.",
+    pathophysiology: "CKD → low 1,25-Vit D (impaired renal 1α-hydroxylation) + high PO₄²⁻ + low Ca intake/absorption + abnormal parathyroid Ca/vit-D sensing → all 4 glands hyperplasia → renal osteodystrophy (aluminium-hydroxide binders contribute to osteomalacia). Tertiary: monoclonal expansion → autonomous excess PTH.",
     classification: [
       "Secondary HPT: CKD-MBD (mineral and bone disorder)",
       "Tertiary HPT: post-transplant autonomous hyperfunction"
@@ -919,9 +992,11 @@ const ENDOCRINE_DISEASES_1 = [
   criteria: {
     title: "Indications for Surgery in Secondary/Tertiary HPT",
     items: [
-      {k:"Medical failure", v:"PTH persistently >800pg/mL despite maximal cinacalcet + Vit D analogue"},
+      {k:"Medical failure (KDOQI)", v:"PTH persistently >800pg/mL despite maximal cinacalcet + Vit D analogue"},
+      {k:"Enlarged gland", v:">1cm (>500mm³) on US = nodular hyperplasia, medically refractory"},
+      {k:"Traditional criteria", v:"Ca×PO4 product ≥70, Ca >11 with high PTH, tumoral calcinosis despite max medical Rx"},
       {k:"Calciphylaxis", v:"Life-threatening — urgent parathyroidectomy"},
-      {k:"Severe bone disease", v:"Fractures, pain uncontrolled"},
+      {k:"Severe bone disease", v:"Fractures, pain uncontrolled; progressive renal osteodystrophy"},
       {k:"Refractory pruritis or ectopic calcification", v:""},
       {k:"Tertiary HPT", v:"Persistent hypercalcemia >12 months post-renal transplant"}
     ]
@@ -936,12 +1011,13 @@ const ENDOCRINE_DISEASES_1 = [
     ],
     medical: [
       "Cinacalcet 30–90mg daily: reduces PTH by 30–50%; may delay surgery",
+      "Calcimimetics improve achievement of goal PTH (≤300pg/mL), Ca, PO4, Ca×PO4; reduce fractures/CV events; have reduced parathyroidectomy rates",
       "Etelcalcetide (IV calcimimetic): for hemodialysis patients"
     ],
     surgical: [
-      {name:"Subtotal parathyroidectomy (3.5-gland)", when:"Secondary HPT; multigland hyperplasia", notes:"Remove 3.5 glands; leave 50mg of most normal-looking gland; mark remnant with clip/non-absorbable suture"},
-      {name:"Total parathyroidectomy + forearm autotransplant", when:"Secondary or tertiary HPT; preferred by many centers as allows future monitoring and re-excision under local anesthetic", notes:"Implant 30–60mg minced tissue into brachioradialis forearm pocket; mark with clip; monitor PTH from draining arm"},
-      {name:"Total parathyroidectomy without autotransplant", when:"Rarely indicated — permanent hypoparathyroidism; only if risk of recurrence outweighs benefit (e.g. no likely transplant)", notes:"Permanent hypocalcemia — aggressive lifelong Ca²⁺ + Vit D supplementation"}
+      {name:"Subtotal parathyroidectomy (3.5-gland)", when:"Secondary HPT; multigland hyperplasia", notes:"Remove 3.5 glands; leave ~50mg of most normal-looking gland; routine upper (cervical) thymectomy (15–20% intrathymic/perithymic gland); mark remnant with clip"},
+      {name:"Total parathyroidectomy + forearm autotransplant", when:"Secondary or tertiary HPT; preferred by many centers as allows future monitoring and re-excision under local anesthetic", notes:"Implant 30–60mg minced tissue into brachioradialis forearm pocket + cryopreservation; mark with clip; monitor PTH from draining arm"},
+      {name:"Total parathyroidectomy without autotransplant", when:"Lower recurrence but CONTRAINDICATED if patient is a renal-transplant candidate (permanent hypoparathyroidism)", notes:"Permanent hypocalcemia — aggressive lifelong Ca²⁺ + Vit D supplementation"}
     ]
   },
   technique: {
@@ -967,12 +1043,14 @@ const ENDOCRINE_DISEASES_1 = [
     ]
   },
   guidelines: [
-    {src:"KDIGO CKD-MBD Guideline 2017: Secondary HPT management"},
-    {src:"NICE NG203: Chronic kidney disease"},
-    {src:"AAES Guidelines: Secondary and Tertiary HPT 2016"}
+    {src:"KDOQI (NKF) parathyroidectomy indications; KDIGO CKD-MBD 2017"},
+    {src:"AAES Guidelines: Renal (Secondary/Tertiary) HPT 2016"},
+    {src:"NICE NG203: Chronic kidney disease"}
   ],
   pearls: [
     "Calciphylaxis is a surgical emergency — urgent parathyroidectomy (not waiting for medical optimization)",
+    "Not all calciphylaxis has high PTH — do NOT operate without documented HPT",
+    "Tertiary HPT operative debate: excise-enlarged-only vs subtotal — limited excision risks up to 5× recurrence",
     "Hungry bone syndrome worse after bilateral total parathyroidectomy — anticipate severe hypocalcemia",
     "Mark forearm transplant site clearly — future PTH gradient sampling needed to confirm function"
   ],
