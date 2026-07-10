@@ -21,7 +21,12 @@ window._TMP_UPPGI = [
       {label:"Duodenal ulcer perforation",note:"Anterior first part duodenum; most common; peritoneum free; omental patch repair"},
       {label:"Gastric ulcer perforation",note:"Lesser curve; must exclude malignancy (biopsy edge); subtotal gastrectomy if malignant"},
       {label:"Giant ulcer (>2 cm)",note:"Higher failure rate of primary repair; resection may be required"},
-      {label:"Posterior penetration (not perforation)",note:"Penetrates into pancreas; presents as pancreatitis; no free air"}
+      {label:"Posterior penetration (not perforation)",note:"Penetrates into pancreas; presents as pancreatitis; no free air"},
+      {label:"Modified Johnson I",note:"Lesser curve at incisura; normal/low acid; commonest gastric ulcer"},
+      {label:"Modified Johnson II",note:"Gastric body ulcer + active/healed duodenal ulcer; normal/high acid; behaves like DU"},
+      {label:"Modified Johnson III",note:"Prepyloric ulcer; normal/high acid; behaves like DU"},
+      {label:"Modified Johnson IV",note:"High lesser curve near GEJ; normal/low acid"},
+      {label:"Modified Johnson V",note:"Medication-induced (NSAID/ASA); anywhere in stomach"}
     ]
   },
   diagnosis:{
@@ -54,6 +59,7 @@ window._TMP_UPPGI = [
       {name:"Laparoscopic Graham patch (omental patch) repair",when:"Most perforated DU; perforation <2 cm; experienced laparoscopic surgeon; no massive contamination",notes:"Irrigate; close perforation with absorbable sutures (or leave open with omental plug); reinforce with omental pedicle; washout; drain; H. pylori eradication post-op"},
       {name:"Open Graham patch repair",when:"Laparoscopy not available/suitable; large perforation; massive contamination; hemodynamic instability",notes:"Kocher maneuver; identify perforation; two-layer closure; omental reinforce; thorough washout; drain"},
       {name:"Gastric resection (partial gastrectomy / Billroth I/II)",when:"Large gastric perforation; gastric malignancy suspected; failed primary repair",notes:"Biopsy all gastric perforations — exclude malignancy; if malignant: formal oncological resection"},
+      {name:"Vagotomy (added to patch/oversew)",when:"Increasingly uncommon, but retains a role in emergency ulcer surgery, PPI-intolerant, H. pylori-negative, or non-compliant patients; Johnson II/III behave like DU and may benefit",notes:"HSV reduces acid ~75%; today most emergency ops are simple patch or oversew of bleeder with vagotomy rarely added; obstructing PUD standard is vagotomy + antrectomy or vagotomy + gastrojejunostomy; avoid truncal vagotomy/distal gastrectomy if BMI <21"},
       {name:"Non-operative (Taylor method)",when:"Contained perforation; abscess on CT; fit patient, no generalized peritonitis; evolving rarely",notes:"NG decompression; IV antibiotics; PPI; serial CT; 30% failure rate requiring delayed surgery"}
     ]
   },
@@ -70,7 +76,7 @@ window._TMP_UPPGI = [
     ],
     pearls:["Large perforation (>2 cm): consider open or T-tube duodenostomy; primary repair + omentum may fail","Gastric perforation: always biopsy — 10% are gastric cancer; frozen section if possible","H. pylori eradication: test and treat — reduces recurrence from 60% to <5%","Washout quality correlates with infection complications — minimum 5 L of warm saline"]
   },
-  guidelines:[{src:"WSES Perforated Peptic Ulcer Guidelines 2020"},{src:"NICE PU CG184 2014 (updated)"},{src:"BSG H. pylori Guidelines 2019"}],
+  guidelines:[{src:"WSES Perforated Peptic Ulcer Guidelines 2020"},{src:"NICE PU CG184 2014 (updated)"},{src:"BSG H. pylori Guidelines 2019"},{src:"Modified Johnson Classification of Gastric Ulcers"}],
   pearls:["Laparoscopic repair equivalent to open for perforation <2 cm (RCT evidence)","H. pylori eradication post-op: reduces recurrence from 60% to <5% — mandatory testing","Boey score 0 = <1% mortality; score 3 = >100% — inform families and consider palliation in frail patients","Gastric ulcer: always biopsy edges — cancer in 10%; failure to biopsy = missed diagnosis"],
   mistakes:["Not biopsying gastric ulcer perforation — 10% are malignant","Not testing and eradicating H. pylori post-repair — 60% recurrence without it","Tight omental suture causing omental ischemia — tie loosely over omentum","Inadequate peritoneal washout — infected fluid in Morrison's pouch and pelvis causes abscesses"]
 },
@@ -83,17 +89,19 @@ window._TMP_UPPGI = [
     "Lauren classification: intestinal type (differentiated, better prognosis, antrum, H. pylori) vs diffuse type (poorly differentiated, linitis plastica, younger, worse prognosis)",
     "CT staging + staging laparoscopy (for T3/T4) mandatory before surgery — peritoneal disease in 10–20%",
     "Perioperative FLOT (docetaxel + oxaliplatin + leucovorin + 5-FU) superior to ECF/ECX (FLOT4 trial): 5-year OS 45% vs 36%",
-    "D2 lymphadenectomy: minimum 16 nodes; reduces locoregional recurrence; mandatory in curative intent surgery"
+    "D2 lymphadenectomy: >15 nodes required for adequate staging; reduces locoregional recurrence; mandatory in curative intent surgery"
   ],
   differentials:["GIST (gastrointestinal stromal tumor — submucosal, CD117+)","Gastric lymphoma (MALToma)","Metastatic cancer to stomach (melanoma, breast)","Benign gastric ulcer","Menetrier disease"],
   mnemonics:[{name:"Lauren Classification",text:"Intestinal: H. pylori, antrum, differentiated, better prognosis. Diffuse: signet ring cells, linitis plastica, younger women, worse prognosis, not H. pylori driven. Diffuse = Dreaded prognosis"}],
   overview:{
     definition:"Malignant epithelial tumor arising from the gastric mucosa; 90–95% adenocarcinoma.",
     epidemiology:"5th commonest cancer worldwide; 3rd commonest cancer death. High incidence: East Asia, South America, Eastern Europe. H. pylori in 70%; EBV in 10%; smoking, salt-preserved food.",
-    pathophysiology:"H. pylori chronic gastritis → intestinal metaplasia → dysplasia → intestinal-type adenocarcinoma (Correa cascade). Diffuse type: CDH1 (E-cadherin) mutation → loss of cell adhesion → diffuse infiltration → linitis plastica. HER2 overexpression in 15–20%.",
+    pathophysiology:"H. pylori chronic gastritis → intestinal metaplasia → dysplasia → intestinal-type adenocarcinoma (Correa cascade). Diffuse type: CDH1 (E-cadherin) mutation → loss of cell adhesion → diffuse infiltration → linitis plastica; germline CDH1 (hereditary diffuse gastric cancer) is an indication for prophylactic total gastrectomy. HER2 overexpression in 13–30%.",
     classification:[
-      {label:"Lauren intestinal",note:"Glandular, cohesive; antrum; associated with H. pylori and intestinal metaplasia; better prognosis; responds to surgery"},
-      {label:"Lauren diffuse",note:"Poorly cohesive signet ring cells; infiltrating; linitis plastica; CDH1 mutation; poor prognosis; chemo response lower"},
+      {label:"Lauren intestinal (~53%)",note:"Glandular, cohesive; antrum; associated with H. pylori and intestinal metaplasia; better prognosis; responds to surgery"},
+      {label:"Lauren diffuse (~33%)",note:"Poorly cohesive signet ring cells; infiltrating; linitis plastica; CDH1 mutation; poor prognosis; chemo response lower"},
+      {label:"Lauren unclassified (~14%)",note:"Mixed/indeterminate morphology not fitting intestinal or diffuse type"},
+      {label:"Ming classification",note:"Alternative scheme: expanding (~67%) vs infiltrative (~33%) growth pattern"},
       {label:"Proximal (cardia) cancer",note:"Adenocarcinoma of gastro-esophageal junction or cardia; associated with Barrett's, obesity, reflux; different staging (Siewert)"}
     ]
   },
@@ -121,11 +129,11 @@ window._TMP_UPPGI = [
   scoring:[],
   management:{
     conservative:["Nutritional support: enteral if possible; jejunostomy feeding if gastric outlet obstruction","H. pylori eradication if not already done"],
-    medical:["Perioperative FLOT: 4 cycles pre-op + 4 cycles post-op; 5-year OS 45% (FLOT4 trial)","Metastatic: FLOT or FOLFOX + trastuzumab (HER2+); pembrolizumab + chemo (PD-L1 CPS ≥5 — KEYNOTE-811)","Second-line: ramucirumab + paclitaxel; irinotecan","TRASTUZUMAB: HER2 IHC 3+ or ISH amplified; adds 2.7 months OS (ToGA)"],
+    medical:["Perioperative FLOT: 4 cycles pre-op + 4 cycles post-op; 5-year OS 45% (FLOT4 trial)","Historical anchor: MAGIC — perioperative ECF (epirubicin/cisplatin/5-FU) improved survival vs surgery alone for ≥ stage II; superseded by FLOT","Asian adjuvant data: capecitabine + oxaliplatin after D2 improves survival (CLASSIC)","Metastatic: FLOT or FOLFOX + trastuzumab (HER2+); pembrolizumab + chemo (PD-L1 CPS ≥5 — KEYNOTE-811)","Second-line: ramucirumab + paclitaxel; irinotecan","TRASTUZUMAB: HER2 IHC 3+ or ISH amplified; adds 2.7 months OS (ToGA)"],
     surgical:[
-      {name:"Total gastrectomy + D2 lymphadenectomy",when:"Middle and proximal tumors; T2–T4; curative intent",notes:"D2: resect perigastric (D1) + hepatic artery, left gastric artery, celiac axis, splenic artery nodes; ≥16 nodes; Roux-en-Y reconstruction; spleen preservation if possible"},
-      {name:"Subtotal (distal) gastrectomy + D2",when:"Distal third tumor with adequate proximal margin (5 cm intestinal, 2 cm diffuse)",notes:"5 cm proximal margin for intestinal; 2 cm may be inadequate for diffuse — frozen section margin mandatory; Billroth II or Roux-en-Y reconstruction"},
-      {name:"Endoscopic mucosal resection (EMR) / ESD",when:"Early gastric cancer (EGC): T1a N0; well/moderately differentiated; <2 cm; no lymphovascular invasion",notes:"Curative in selected EGC; ESD preferred for larger lesions; pathological staging mandatory post-resection"},
+      {name:"Radical subtotal (distal) gastrectomy + D2",when:"Standard operation for distal/mid tumors with adequate proximal margin; total gastrectomy confers no added survival benefit unless needed for R0",notes:"Aim ≥5 cm grossly negative margin (evidence base weak; more conservative margins may suffice); wider frozen-section-guided margins for diffuse tumors; >15 nodes for adequate staging; Billroth II or Roux-en-Y (Roux reduces bile reflux); Billroth I common in Japan"},
+      {name:"Total gastrectomy + D2 lymphadenectomy",when:"Proximal tumors or when required to achieve R0 margin; not routine for distal disease (worse nutrition/morbidity, no added survival)",notes:"D2: resect perigastric (D1) + hepatic artery, left gastric artery, celiac axis, splenic artery nodes; >15 nodes; Roux-en-Y esophagojejunostomy ± jejunal pouch; spleen preservation if possible"},
+      {name:"Endoscopic mucosal resection (EMR) / ESD",when:"Early gastric cancer (EGC = T1a mucosal or T1b submucosal): standard for well-differentiated, mucosal (T1a), <2 cm, non-ulcerated lesions (negligible nodal risk)",notes:"Curative in selected EGC; ESD preferred for larger lesions; pathological staging mandatory post-resection"},
       {name:"Palliative gastrectomy",when:"Locally advanced unresectable; bleeding not controlled endoscopically; gastric outlet obstruction",notes:"Reduces bleeding, improves nutrition; evidence for survival benefit in selected (REGATTA trial — no OS benefit in Japanese RCT but still practiced in West for symptom control"}
     ]
   },
@@ -142,8 +150,8 @@ window._TMP_UPPGI = [
     ],
     pearls:["D2 without splenopancreatectomy: lower morbidity with equivalent oncological outcome (Dutch D1D2 trial)","Frozen section proximal margin: if positive → extend resection (pharyngo-laryngectomy if needed)","Esophagojejunostomy leak: most serious complication (3–5%); test all anastomoses before closure","Jejunal feeding tube: placed intra-operatively for post-op nutritional support if prolonged recovery expected"]
   },
-  guidelines:[{src:"ESMO Gastric Cancer Guidelines 2022"},{src:"NCCN Gastric Cancer 2023"},{src:"FLOT4 Trial: Al-Batran et al., Lancet 2019"}],
-  pearls:["FLOT4 trial: perioperative FLOT superior to ECF — now standard of care in fit patients","Staging laparoscopy: 10–20% have peritoneal disease not seen on CT — avoid futile laparotomy","D2 lymphadenectomy: minimum 16 nodes; reduces locoregional recurrence (Dutch trial)","HER2 testing mandatory in advanced disease — trastuzumab adds 2.7 months OS (ToGA trial)"],
+  guidelines:[{src:"ESMO Gastric Cancer Guidelines 2022"},{src:"NCCN Gastric Cancer 2023"},{src:"FLOT4 Trial: Al-Batran et al., Lancet 2019"},{src:"MAGIC Trial (perioperative ECF)"},{src:"AJCC Cancer Staging Manual, 8th ed (2017)"}],
+  pearls:["FLOT4 trial: perioperative FLOT superior to ECF — now standard of care in fit patients","Staging laparoscopy: 10–20% have peritoneal disease not seen on CT — avoid futile laparotomy","D2 lymphadenectomy: >15 nodes required for adequate staging; reduces locoregional recurrence (Dutch trial)","HER2 testing mandatory in advanced disease — trastuzumab adds 2.7 months OS (ToGA trial)"],
   mistakes:["Not doing staging laparoscopy for T3–T4 disease — 10–20% have occult peritoneal disease","Only performing D1 lymphadenectomy — inadequate staging and locoregional control","Not testing and treating H. pylori — primary prevention of metachronous gastric cancer","Not checking proximal margin on frozen section — R1 proximal margin is common in diffuse-type cancer"]
 },
 {
@@ -151,9 +159,9 @@ window._TMP_UPPGI = [
   severity:"low", tags:["GERD","reflux","Barrett","Nissen","fundoplication","manometry","pH study"],
   hero:"Pathological reflux of gastric contents into the esophagus causing heartburn, regurgitation, and risk of Barrett's esophagus and adenocarcinoma.",
   keypoints:[
-    "Mechanism: transient lower esophageal sphincter relaxation (TLOSR) is primary cause, not just LOS incompetence",
+    "Mechanism: antireflux barrier = mechanically effective LOS + esophageal clearance + gastric reservoir; transient LOS relaxations (TLOSR) are the dominant mechanism of reflux episodes; clearance/reservoir failure also contribute",
     "Barrett's esophagus: columnar metaplasia of distal esophagus; intestinal metaplasia = Barrett's; progresses to dysplasia → adenocarcinoma (0.2–0.5%/year)",
-    "Investigation: EGD (grade reflux esophagitis, biopsy Barrett's); 24-h pH-impedance study (off PPI) for diagnosis confirmation; manometry pre-fundoplication",
+    "Investigation: EGD (grade reflux esophagitis, biopsy Barrett's, Hill flap-valve grade); 48-h Bravo wireless pH is now the gold standard (2nd day adds ~22% sensitivity); manometry pre-fundoplication",
     "Nissen fundoplication: 360° wrap; effective for GERD; requires normal esophageal motility; Toupet (270°) if esophageal dysmotility",
     "LINX device: magnetic sphincter augmentation; reversible alternative to fundoplication"
   ],
@@ -162,7 +170,7 @@ window._TMP_UPPGI = [
   overview:{
     definition:"Condition in which reflux of gastric contents into the esophagus causes troublesome symptoms and/or complications.",
     epidemiology:"Prevalence 10–20% of Western adults; highest in obesity, hiatus hernia, pregnancy. Barrett's esophagus in 10–15% of GERD patients.",
-    pathophysiology:"Transient LOS relaxations (vagal reflex) → gastric acid and bile reflux → esophageal mucosal injury. Hiatus hernia impairs anti-reflux mechanism (crural diaphragm, angle of His, LOS). Prolonged exposure → squamous → columnar metaplasia (Barrett's) → intestinal metaplasia → dysplasia → adenocarcinoma.",
+    pathophysiology:"LOS has intrinsic myogenic tone; gastric distention 'unrolls'/takes up the sphincter, shortening its length → mechanical incompetence. Transient LOS relaxations (vagal reflex) → gastric acid and bile reflux → esophageal mucosal injury. Chocolate, peppermint, coffee, ethanol and fat all lower LOS pressure. Hiatus hernia impairs anti-reflux mechanism (crural diaphragm, angle of His, LOS). Prolonged exposure → squamous → columnar metaplasia (Barrett's) → intestinal metaplasia → dysplasia → adenocarcinoma.",
     classification:[
       {label:"Non-erosive GERD (NERD)",note:"Typical symptoms; no mucosal injury on EGD (60%); symptoms may not correlate with pH"},
       {label:"Erosive esophagitis (LA A–D)",note:"Mucosal erosions; severity correlates with treatment response"},
@@ -173,16 +181,19 @@ window._TMP_UPPGI = [
     history:["Heartburn (substernal burning, worse post-prandial)","Regurgitation of acid/food","Dysphagia (stricture, cancer, dysmotility)","Atypical: cough, hoarseness, dental erosion, asthma","Alarm symptoms: dysphagia, weight loss, anemia, vomiting → EGD urgently"],
     examination:["Usually normal","Obese; dental erosions (chronic reflux)"],
     investigations:[
-      {name:"EGD + biopsy",role:"Grades reflux esophagitis (LA A–D); identifies Barrett's (biopsy 4-quadrant every 2 cm); excludes malignancy"},
-      {name:"24-h pH-impedance monitoring (off PPI × 7 days)",role:"Gold standard for acid exposure quantification; DeMeester score >14.72; identifies non-acid reflux (impedance)"},
+      {name:"EGD + biopsy",role:"Grades reflux esophagitis (LA A–D); identifies Barrett's (biopsy 4-quadrant every 2 cm); Hill grade I–IV gastroesophageal flap valve on retroflexion (grades III/IV correlate with increased acid exposure); excludes malignancy"},
+      {name:"48-h Bravo wireless pH monitoring (off PPI)",role:"Gold standard for acid exposure quantification (2nd day adds ~22% sensitivity); DeMeester composite (6 components) — normal <14.72 at pH<4 threshold; impedance-pH used for persistent-symptom/on-PPI questions and detects non-acid/duodenogastric reflux"},
       {name:"Esophageal manometry (HRM — high-resolution manometry)",role:"Mandatory pre-fundoplication: identifies esophageal dysmotility (contraindication to Nissen); measures LOS pressure; exclude achalasia"},
       {name:"Barium swallow",role:"Hiatus hernia morphology; stricture; anatomy pre-surgery"},
       {name:"Gastric emptying study",role:"Delayed emptying (gastroparesis) causes GERD; modifies surgical plan"}
     ]
   },
   criteria:{
-    title:"Barrett's Esophagus Surveillance",
+    title:"Barrett's Surveillance, DeMeester Score & Hill Grade",
     items:[
+      {k:"Normal 24-h pH (pH<4 threshold)",v:"DeMeester composite <14.72 (95th-percentile normal)"},
+      {k:"DeMeester 6 components",v:"%total, %upright, %supine time pH<4; number of reflux episodes; number of episodes >5 min; longest episode"},
+      {k:"Hill flap-valve grade I–IV",v:"Endoscopic retroflexion grade; III/IV correlate with increased acid exposure"},
       {k:"No dysplasia",v:"EGD + 4-quadrant biopsy every 2 cm: 2-yearly (long segment ≥3 cm); 3–5 yearly (short segment <3 cm)"},
       {k:"Low-grade dysplasia (LGD)",v:"Expert pathologist confirmation; 6-monthly EGD ± ablation (RFA)"},
       {k:"High-grade dysplasia (HGD)",v:"Expert center; endoscopic mucosal resection (EMR) of visible lesion; ablation (RFA) of flat HGD"},
@@ -206,17 +217,17 @@ window._TMP_UPPGI = [
     prep:["Manometry confirms normal peristalsis; 24-h pH confirms acid reflux","GA; supine; 5 ports; liver retractor; steep reverse Trendelenburg"],
     steps:[
       {n:1,t:"Hiatal dissection",d:"Divide phreno-esophageal membrane; mobilize distal esophagus 3–4 cm into mediastinum; define right and left crus"},
-      {n:2,t:"Short gastric vessels",d:"Divide upper short gastric vessels (harmonic) to provide floppy wrap — prevents tension"},
+      {n:2,t:"Short gastric vessels",d:"Divide selectively only if the fundus is under tension — routine division does not improve outcomes"},
       {n:3,t:"Posterior cruroplasty",d:"Repair hiatal defect with 2–3 non-absorbable sutures (2-0 Ethibond); leave 1 finger breadth gap"},
       {n:4,t:"Create window",d:"Pass right hemifundus behind esophagus ('shoeshine' test — moves freely)"},
       {n:5,t:"Floppy wrap construction",d:"3 non-absorbable sutures through fundus–esophagus–fundus; 56 Fr bougie in esophagus during wrap; wrap 2–3 cm; floppy (shoe-shine test)"},
       {n:6,t:"Check wrap",d:"Advance scope — wrap should open freely; no tight sensation"}
     ],
-    pearls:["Floppy wrap: shoe-shine test confirms loose wrap — reduces gas bloat syndrome","Bougie placement prevents tight wrap — 56–60 Fr for Nissen","Short gastric vessels: divide if tension on wrap — prevents wrap slippage and herniation","Posterior cruroplasty: essential in hiatus hernia repair — reduces recurrence from 40% to 10%"]
+    pearls:["Floppy wrap: shoe-shine test confirms loose wrap — reduces gas bloat syndrome; reconstructed valve ≥3 cm, wrap ~2× resting gastric pressure","Bougie placement prevents tight wrap — 56–60 Fr for Nissen","Short gastric vessels: routine division does NOT improve Nissen outcomes — divide selectively, only for tension on the wrap","Posterior cruroplasty: essential in hiatus hernia repair — reduces recurrence from 40% to 10%"]
   },
   guidelines:[{src:"NICE CG184 GERD 2014 (updated 2023)"},{src:"ESGE Barrett's Esophagus Guidelines 2022"},{src:"BSG GERD Guidelines 2019"}],
-  pearls:["Manometry before fundoplication: esophageal dysmotility (aperistalsis) → Toupet; normal → Nissen","Barrett's without dysplasia: 2-yearly surveillance; LGD + HGD → RFA ablation","LINX: reversible; avoids gas bloat; contraindicated with MRI exposure (now newer MRI-compatible devices available)","Short gastric vessel division: reduces risk of herniation and gas bloat in Nissen"],
-  mistakes:["Nissen fundoplication in esophageal dysmotility — severe dysphagia; Toupet is safer","Not confirming GERD objectively before surgery — functional heartburn will not respond to surgery","Not dividing short gastric vessels — tension on wrap causes herniation","Operating on Barrett's without biopsy confirmation of intestinal metaplasia — not all columnar-lined esophagus is Barrett's"]
+  pearls:["Normal peristalsis → Nissen or partial (surgeon/patient preference); absent peristalsis → partial fundoplication (only after excluding achalasia)","11 RCTs Nissen vs posterior-partial: equivalent reflux control, less dysphagia and gas-bloat with partial","Barrett's without dysplasia: 2-yearly surveillance; LGD + HGD → RFA ablation","LINX: reversible; avoids gas bloat; contraindicated with MRI exposure (now newer MRI-compatible devices available)","Routine short-gastric division does not improve Nissen outcomes — reserve for tension on the wrap"],
+  mistakes:["Nissen fundoplication in absent peristalsis — severe dysphagia; partial fundoplication is safer (after excluding achalasia)","Not confirming GERD objectively before surgery — functional heartburn will not respond to surgery","Routine division of short gastric vessels expecting better outcomes — evidence shows no benefit; divide only for tension","Operating on Barrett's without biopsy confirmation of intestinal metaplasia — not all columnar-lined esophagus is Barrett's"]
 },
 {
   id:"oesophageal-cancer", dept:"uppergı", name:"Esophageal Cancer", latin:"Carcinoma oesophagi", organ:"Esophagus",
@@ -255,10 +266,12 @@ window._TMP_UPPGI = [
     ]
   },
   criteria:{
-    title:"Resectability Criteria",
+    title:"AJCC 8th Staging & Resectability",
     items:[
-      {k:"Resectable",v:"T1–T4a, N0–N3, M0; no aortic/tracheal invasion; fit patient (pulmonary, cardiac, nutritional)"},
-      {k:"Unresectable",v:"T4b (aorta, trachea, heart); M1 (liver, lung, peritoneal); cervical SCC — CRT preferred"},
+      {k:"T stages",v:"Tis = HGD; T1a = lamina propria/muscularis mucosae; T1b = submucosa; T4a = resectable (pleura, pericardium, diaphragm, azygos); T4b = unresectable (aorta, vertebral body, trachea)"},
+      {k:"N stages (node count)",v:"N1 = 1–2 nodes; N2 = 3–6; N3 = ≥7 regional nodes"},
+      {k:"Resectable",v:"T1–T4a, N0–N3, M0; no aortic/tracheal/vertebral invasion; fit patient (pulmonary, cardiac, nutritional)"},
+      {k:"Unresectable",v:"T4b (aorta, vertebral body, trachea); M1 (liver, lung, peritoneal); cervical SCC — CRT preferred"},
       {k:"Borderline",v:"Involved M nodes (celiac for lower third); neoadjuvant then reassess"},
       {k:"SCC cervical/upper third",v:"Definitive CRT preferred over surgery (FFCD 9901)"}
     ]
@@ -438,6 +451,7 @@ window._TMP_UPPGI = [
   hero:"Bleeding from a source proximal to the ligament of Treitz; peptic ulcer disease accounts for 35%; variceal bleeding has 20% 6-week mortality.",
   keypoints:[
     "Most common cause: peptic ulcer disease (35%); variceal (20%); Mallory-Weiss (5%); esophagitis (10%); malignancy (5%)",
+    "Glasgow-Blatchford score (GBS): identifies low-risk patients safe for outpatient management (GBS ≤1 → discharge without inpatient endoscopy); more sensitive than Rockall for predicting need for intervention",
     "Rockall score: pre-endoscopy predicts mortality; post-endoscopy guides need for intervention",
     "Forrest classification (endoscopic): Ia (spurting) → Ib (oozing) → IIa (visible vessel) → IIb (adherent clot) → IIc (flat pigmented spot) → III (clean base)",
     "High-risk stigmata (Ia, Ib, IIa, IIb): endoscopic hemostasis (injection ± thermal ± clips); PPI 72 h infusion",
@@ -462,6 +476,7 @@ window._TMP_UPPGI = [
     investigations:[
       {name:"CBC, group and save/crossmatch, coagulation, electrolytes/BUN-Cr",role:"Hemoglobin (may be normal in acute bleed); electrolytes/BUN-Cr — raised urea (absorbed blood) suggests UGIB; coagulopathy management"},
       {name:"EGD (within 24 h; within 12 h if suspected variceal)",role:"Identifies bleeding source; Forrest classification; endoscopic hemostasis; variceal band ligation"},
+      {name:"Glasgow-Blatchford score (at admission)",role:"Uses urea, Hb, SBP, pulse, melena, syncope, hepatic/cardiac disease — no endoscopy needed; GBS 0–1 identifies patients safe for outpatient management"},
       {name:"Rockall score (pre- and post-EGD)",role:"Risk stratification; guides need for admission; discharge if score ≤2 pre-EGD"},
       {name:"CT angiography",role:"Active bleeding >0.5 mL/min; localizes source; guides TAE; especially if endoscopy fails"}
     ]
@@ -477,7 +492,10 @@ window._TMP_UPPGI = [
       {k:"Interpretation",v:"≤2: low mortality (<5%); ≥5: high mortality (>20%); pre-score ≤1 = consider discharge"}
     ]
   },
-  scoring:[{name:"Rockall Score",items:["Age + Shock + Comorbidity (pre-EGD) + Diagnosis + Stigmata (post-EGD); ≤2=low risk; ≥5=high risk"]}],
+  scoring:[
+    {name:"Glasgow-Blatchford Score",items:["Blood urea, hemoglobin, systolic BP, pulse ≥100, melena, syncope, hepatic disease, cardiac failure","Range 0–23; GBS ≤1 → very low risk, safe for outpatient management without inpatient endoscopy","More sensitive than Rockall for predicting need for transfusion, endoscopic therapy, or surgery"]},
+    {name:"Rockall Score",items:["Age + Shock + Comorbidity (pre-EGD) + Diagnosis + Stigmata (post-EGD); ≤2=low risk; ≥5=high risk"]}
+  ],
   management:{
     conservative:["IV access × 2 large bore; fluid resuscitation (saline/blood)","Target Hb ≥70 (non-variceal) or ≥80 (variceal or cardiovascular disease)","Restrictive transfusion: Hb threshold 70 g/L — reduces mortality (TRIGGER trial)","NBM before EGD; NGT aspiration useful for coffee-ground hematemesis"],
     medical:["PPI: IV bolus 80 mg then infusion 8 mg/h × 72 h post-hemostasis (reduces rebleed rate for Forrest Ia–IIb)","Variceal: terlipressin 2 mg IV q4h + ceftriaxone + IV PPI; EGD within 12 h","H. pylori eradication post-healing: reduces recurrence from 60% to <5%","Tranexamic acid: HALT-IT trial — no benefit in GIB; NOT recommended"],

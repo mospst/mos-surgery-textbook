@@ -6,7 +6,7 @@ window._TMP_UPPERGI2 = [
   hero:"Spontaneous full-thickness esophageal rupture from sudden rise in intraluminal pressure; Mackler triad; mortality 30–40% — the 'great masquerader' of chest pain.",
   keypoints:[
     "Mackler triad: vomiting → chest pain → subcutaneous emphysema — present in only 30%; diagnosis often delayed",
-    "Iatrogenic perforation (EGD, intubation) is more common overall (75%); Boerhaave = spontaneous (25%)",
+    "Most esophageal perforations are iatrogenic/instrumental; spontaneous Boerhaave is only ~15% (foreign body ~14%, trauma ~10%)",
     "CT with oral water-soluble contrast: gold standard — extraluminal air/fluid, mediastinal widening, contrast extravasation",
     "Management by time and contamination: <24 h + contained → primary repair; >24 h or mediastinitis → drainage ± esophageal stent or diversion",
     "Pittsburgh severity score: guides operative vs non-operative management"
@@ -15,10 +15,10 @@ window._TMP_UPPERGI2 = [
   mnemonics:[{name:"Mackler Triad",text:"Vomiting → chest/upper abdominal pain → subcutaneous emphysema (Hamman crunch) = Boerhaave syndrome until proven otherwise"}],
   overview:{
     definition:"Full-thickness perforation of the esophagus, most commonly spontaneous (Boerhaave) or iatrogenic, leading to mediastinitis and empyema.",
-    epidemiology:"Rare: 3/1 000 000/year; mortality 30–40% (rises to >50% if diagnosis delayed >24 h). Boerhaave: 90% at lower third (posterior-lateral left). Iatrogenic: upper esophagus and pharynx most common sites.",
-    pathophysiology:"Sudden rise in intraluminal pressure (vomiting, straining, instrumentation) → pressure exceeds wall tensile strength → longitudinal tear through all layers. Left posterior-lateral at lower third — weakest area. Air and esophageal contents contaminate mediastinum → bacterial mediastinitis → septic shock.",
+    epidemiology:"Rare: 3/1 000 000/year. Mortality is time-dependent: primary closure <24 h → 80–90% survival (mortality 8–20%); >24 h → survival <50% and operation type does not change it. Boerhaave: rupture is usually left lateral wall just above the GEJ, into the left pleural cavity (overall perforation side ~2/3 left, ~1/5 right, ~1/10 bilateral). Iatrogenic: upper esophagus and pharynx most common sites.",
+    pathophysiology:"Sudden rise in intraluminal pressure (vomiting, straining, instrumentation) → pressure exceeds wall tensile strength → longitudinal tear through all layers. Intragastric pressure in vomiting often >200 mmHg; rupture apt when transmural pressure >150 mmHg with closed glottis and GEJ exposed to negative thoracic pressure. Left lateral just above the GEJ — weakest area. ~50% have concomitant GERD. If the GEJ stays exposed to abdominal pressure (hiatal hernia) → Mallory-Weiss mucosal tear/bleed instead of perforation. Air and esophageal contents contaminate mediastinum → bacterial mediastinitis → septic shock.",
     classification:[
-      {label:"Boerhaave (spontaneous)",note:"Forceful vomiting (90%); left posterior-lateral lower third; most severe"},
+      {label:"Boerhaave (spontaneous)",note:"Forceful vomiting; left lateral wall just above the GEJ, into left pleural cavity; most severe"},
       {label:"Iatrogenic",note:"EGD, TEE, intubation, nasogastric insertion; upper esophagus, hypopharynx; earlier diagnosis"},
       {label:"Traumatic",note:"Penetrating neck/chest injury; foreign body impaction"},
       {label:"Tumor-related",note:"Esophageal cancer, Barrett's, radiation"}
@@ -28,9 +28,10 @@ window._TMP_UPPERGI2 = [
     history:["Episode of forceful vomiting (Boerhaave) or recent instrumentation","Sudden severe chest/epigastric pain","Dysphagia, odynophagia","Respiratory distress","Fever (delayed presentation)"],
     examination:["Hamman's sign: crunching mediastinal sound with heartbeat (subcutaneous emphysema)","Subcutaneous emphysema (neck, chest)","Decreased air entry (left — empyema)","Tachycardia, fever (mediastinitis — delayed)","Respiratory distress"],
     investigations:[
-      {name:"CXR",role:"Pneumomediastinum; pleural effusion (left); hydropneumothorax; surgical emphysema; widened mediastinum"},
+      {name:"CXR",role:"Unreliable: mediastinal emphysema in only ~40% (takes ≥1 h); pneumothorax ~77%; normal in ~9%. Pleural effusion (left); hydropneumothorax; surgical emphysema; widened mediastinum"},
+      {name:"Pleural fluid amylase",role:"Elevated (salivary) — mimics pancreatitis; supports esophageal leak"},
       {name:"CT chest/abdomen (with oral Gastrografin)",role:"Gold standard: extraluminal air ± contrast leak; mediastinal fluid; pleural effusion; extent of contamination"},
-      {name:"Gastrografin swallow (if CT unavailable)",role:"Water-soluble contrast; active leak confirmed; avoid barium (mediastinitis from barium)"},
+      {name:"Contrast esophagram (if CT unavailable)",role:"Water-soluble contrast; extravasation ~90% (10% false-negative); perform in right-lateral-decubitus (upright too fast to show a small leak); avoid barium (mediastinitis)"},
       {name:"Flexible EGD",role:"Identifies location and size of perforation; only after CT; careful; do not over-insufflate"}
     ]
   },
@@ -48,11 +49,11 @@ window._TMP_UPPERGI2 = [
   },
   scoring:[],
   management:{
-    conservative:["NBM; IV broad-spectrum antibiotics (piperacillin-tazobactam + fluconazole)","NG tube decompression","IV PPI","Chest drain for effusion/empyema","Nutritional support: jejunostomy or TPN"],
+    conservative:["Cameron criteria for nonoperative management: (a) leak contained in mediastinum draining back into esophagus, (b) mild symptoms, (c) minimal sepsis — NOT for free pleural perforation","NBM; IV broad-spectrum antibiotics (piperacillin-tazobactam + fluconazole)","NG tube decompression","IV PPI","Chest drain for effusion/empyema","Nutritional support: jejunostomy or TPN"],
     medical:["Antibiotics: cover gram-positive, gram-negative, anaerobes, fungi","SEMS (self-expanding metal stent): for contained leaks; <24 h iatrogenic; bridge to healing; remove at 6–8 weeks"],
     surgical:[
       {name:"Primary repair (within 24 h)",when:"Early (<24 h); healthy esophageal tissue; no mediastinitis",notes:"Thoracotomy (left for lower third); debride; two-layer repair; buttress with pleura/intercostal muscle/fundus; drain; ± fundoplication"},
-      {name:"Wide drainage + esophageal exclusion",when:">24 h; severe mediastinitis; friable tissue; unable to repair primarily",notes:"Drain mediastinum and pleura; cervical esophagostomy (diversion); feeding jejunostomy; delayed reconstruction 3–6 months"},
+      {name:"Wide drainage + esophageal exclusion",when:">24 h; severe mediastinitis; friable tissue; unable to repair primarily",notes:"Resection/diversion: cervical esophagostomy + mediastinal drainage + feeding jejunostomy; delayed substernal colon interposition reconstruction"},
       {name:"T-tube repair",when:"Large perforation with friable edges; creates controlled esophagocutaneous fistula",notes:"Place T-tube through perforation; creates controlled fistula that closes over 6–8 weeks"},
       {name:"Esophagectomy",when:"Underlying esophageal cancer; chronic stricture; severely damaged esophagus",notes:"Transhiatal or Ivor Lewis; gastric or colonic conduit"}
     ]
@@ -71,7 +72,7 @@ window._TMP_UPPERGI2 = [
     pearls:["Always extend the muscle incision to expose the full extent of mucosal tear — muscle tear is always shorter than mucosal tear","Buttress repair reduces leak rate from 20% to 5%","Delayed presentation (>24 h): drain, stent, jejunostomy — repair likely to fail","Hamman's sign is pathognomonic — if present with vomiting history, CT immediately even if CXR normal"]
   },
   guidelines:[{src:"ESGE/ESSO Position Statement on Esophageal Perforation 2019"},{src:"WSES Esophageal Emergency Guidelines 2019"},{src:"BSG Upper GI Emergency Guideline 2021"}],
-  pearls:["Delay in diagnosis increases mortality: <24 h mortality 10%; >24 h mortality 40–50%","CT with water-soluble contrast: do NOT use barium — mediastinitis","Contained iatrogenic perforation (<24 h, small): endoscopic stent + antibiotics — avoids thoracotomy","Primary repair + buttress: best outcome when feasible within 24 h"],
+  pearls:["Time-dependent survival: primary closure <24 h → 80–90% survival; >24 h → survival <50% and operation type does not change it","Mallory-Weiss is the sister lesion — same mechanism, but a hiatal hernia keeps the GEJ exposed to abdominal pressure → mucosal tear/bleed instead of transmural rupture","CT with water-soluble contrast: do NOT use barium — mediastinitis","Contained iatrogenic perforation (<24 h, small): endoscopic stent + antibiotics — avoids thoracotomy","Primary repair + buttress: best outcome when feasible within 24 h"],
   mistakes:["Using barium for swallow study — causes severe mediastinitis if extravasation occurs","Missing the diagnosis: chest pain post-vomiting is Boerhaave until proven otherwise","Primary repair of esophageal perforation >48 h without adequate debridement — anastomotic failure","Not providing nutritional support (jejunostomy/TPN) — esophageal rest essential for healing"]
 },
 {
@@ -81,7 +82,7 @@ window._TMP_UPPERGI2 = [
   keypoints:[
     "Eligibility: BMI ≥40 (or ≥35 with obesity-related comorbidity); failed conservative management; specialist center",
     "Sleeve gastrectomy: simpler; no anastomosis; T2DM remission 60%; 20% weight regain at 5 years; GERD worsens",
-    "RYGB: superior metabolic outcomes; T2DM remission 80%; nutrient malabsorption risk; complexity higher",
+    "RYGB: superior metabolic outcomes; T2DM remission ~84% (Buchwald meta-analysis); nutrient malabsorption risk; complexity higher",
     "Anastomotic leak: most serious early complication (1–5%); CT with oral contrast + clinical signs; re-operation or drainage + stent",
     "Dumping syndrome: early (high-carb meal → rapid gastric emptying → osmotic distress); late (reactive hypoglycemia 1–3 h post-meal)"
   ],
@@ -92,8 +93,8 @@ window._TMP_UPPERGI2 = [
     epidemiology:"10 million procedures performed globally; SG accounts for 55% worldwide; RYGB 30%. UK: 7000/year; most are laparoscopic.",
     pathophysiology:"Restriction (sleeve/band/pouch): reduces caloric intake capacity. Malabsorption (RYGB/BPD): reduces nutrient absorption surface. Hormonal: ghrelin reduction (sleeve); GLP-1 and PYY increase (RYGB) → satiety, insulin sensitisation → T2DM remission.",
     classification:[
-      {label:"Sleeve gastrectomy (SG)",note:"75–80% stomach removed along greater curvature; 60–80 mL remnant; restrictive only; 60% EWL"},
-      {label:"Roux-en-Y gastric bypass (RYGB)",note:"Small gastric pouch (20 mL) + 150 cm Roux limb bypassing duodenum/proximal jejunum; restrictive + metabolic; 70–80% EWL"},
+      {label:"Sleeve gastrectomy (SG)",note:"75–80% stomach removed along greater curvature; 60–80 mL remnant; restrictive only; %EWL range 49–81% (RCT)"},
+      {label:"Roux-en-Y gastric bypass (RYGB)",note:"Small gastric pouch (20 mL) + 150 cm Roux limb bypassing duodenum/proximal jejunum; restrictive + metabolic; %EWL ~68% (Buchwald weighted mean)"},
       {label:"Adjustable gastric band",note:"Now rarely used; high revision rate; reversible"},
       {label:"Biliopancreatic diversion + duodenal switch (BPD-DS)",note:"Most effective for extreme obesity (BMI >60); highest malabsorption; high complication rate"}
     ]
@@ -112,14 +113,14 @@ window._TMP_UPPERGI2 = [
   criteria:{
     title:"NICE Criteria for Bariatric Surgery",
     items:[
-      {k:"BMI ≥40",v:"No additional comorbidity required; psychological suitability required"},
-      {k:"BMI 35–39.9 + comorbidity",v:"T2DM, HTN, OSA, non-alcoholic fatty liver disease, dyslipidemia, GERD"},
-      {k:"BMI 30–34.9",v:"Recent-onset T2DM (<10 years); NICE and SIGN recommend surgery consideration"},
+      {k:"BMI ≥40",v:"No additional comorbidity required (NIH Consensus 1991); psychological suitability required"},
+      {k:"BMI ≥35 + comorbidity",v:"T2DM, HTN, OSA, non-alcoholic fatty liver disease, dyslipidemia, GERD (NIH Consensus 1991)"},
+      {k:"BMI 30–34.9 + uncontrolled T2DM",v:"Metabolic surgery if glycemia uncontrolled on optimal meds (DSS-II 2016); thresholds reduced 2.5 kg/m² for Asian populations"},
       {k:"Pre-operative requirements",v:"Supervised weight management ≥6 months; no active substance misuse or uncontrolled psychiatric disease"},
       {k:"Post-op follow-up",v:"Lifelong nutritional supplementation + annual blood tests + psychology support"}
     ]
   },
-  scoring:[],
+  scoring:[{name:"Outcomes by procedure (Buchwald meta-analysis)",items:["T2DM remission: LAGB 48% / RYGB 84% / VBG 72% / BPD-DS 99%","%EWL (weighted mean): LAGB 50% / RYGB 68% / VBG 69% / BPD-DS 72%","Sleeve gastrectomy RCT ranges: %EWL 49–81% (SG) vs 62–94% (RYGB)"]}],
   management:{
     conservative:["Very low calorie diet (VLCD) + multivitamins for 2 weeks pre-op (shrinks liver)","Physiotherapy, smoking cessation","Post-op: stage 1 (liquids) → stage 2 (purée) → stage 3 (soft) → stage 4 (normal) over 8 weeks"],
     medical:["GLP-1 agonists (semaglutide 2.4 mg SC weekly): 15% weight loss without surgery — growing non-surgical option","Post-op supplementation: vitamin D 3000 IU, B12 1000 μg, iron, calcium, multivitamin indefinitely","Dumping: low-carbohydrate diet, small frequent meals, acarbose (late dumping)"],
@@ -142,8 +143,8 @@ window._TMP_UPPERGI2 = [
     ],
     pearls:["Internal hernia (Petersen's space): late complication (5%); closure reduces incidence; presents with intermittent colicky pain years post-op","Marginal ulcer: H. pylori + NSAID use + smoking + pouch ischemia → prevent with PPI","Anastomotic leak: amylase-rich drain fluid + CRP >150 on day 3 → CT with contrast → drainage/stent/re-op","Dumping: educate all RYGB patients; low-carbohydrate, high-protein diet; avoid liquid carbs with meals"]
   },
-  guidelines:[{src:"NICE TA672: Bariatric Surgery 2022"},{src:"IFSO Global Statement 2022"},{src:"BOMSS (British Obesity and Metabolic Surgery Society) Guidelines 2020"}],
-  pearls:["T2DM remission: RYGB 80% vs SG 60% — RYGB preferred for T2DM patients","Internal hernia post-RYGB: can occur years later; close all mesenteric defects at index operation","Lifelong supplementation mandatory: vitamin D, B12, iron, calcium — failure causes serious nutritional deficiencies","GERD after sleeve gastrectomy: 25% develop or worsen — consider RYGB if pre-existing GERD"],
+  guidelines:[{src:"NIH Consensus Conference on Gastrointestinal Surgery for Severe Obesity (1991)"},{src:"2nd Diabetes Surgery Summit (DSS-II) 2016"},{src:"NICE TA672: Bariatric Surgery 2022"},{src:"IFSO Global Statement 2022"},{src:"BOMSS (British Obesity and Metabolic Surgery Society) Guidelines 2020"}],
+  pearls:["T2DM remission (Buchwald meta): RYGB ~84% vs LAGB 48% / VBG 72% / BPD-DS 99% — RYGB preferred for T2DM patients","Internal hernia post-RYGB: can occur years later; close all mesenteric defects at index operation","Lifelong supplementation mandatory: vitamin D, B12, iron, calcium — failure causes serious nutritional deficiencies","GERD after sleeve gastrectomy: 25% develop or worsen — consider RYGB if pre-existing GERD"],
   mistakes:["Not closing mesenteric defects (Petersen's) in RYGB — internal hernia in 3–5%","Not correcting pre-operative nutritional deficiencies — worsened post-op","Sleeve gastrectomy in patient with severe GERD — worsens reflux significantly","Not prescribing post-operative lifelong vitamin supplements — nutritional complications"]
 },
 {
@@ -190,13 +191,13 @@ window._TMP_UPPERGI2 = [
       {k:"Low risk",v:"2–5 cm + <5 mitoses/50 HPF — gastric"},
       {k:"Intermediate risk",v:"<5 cm + 6–10 mitoses; or 5–10 cm + <5 mitoses — gastric (non-gastric = high risk)"},
       {k:"High risk",v:">10 cm any mitoses; >5 cm + >5 mitoses; any size + >10 mitoses; any tumor rupture"},
-      {k:"Adjuvant imatinib",v:"High-risk resected GIST: 3 years (vs 1 year: PERSIST-5 trial — OS benefit)"}
+      {k:"Adjuvant imatinib",v:"High-risk resected GIST: 3 years > 1 year OS benefit (SSG XVIII); adjuvant-vs-placebo RFS benefit (ACOSOG Z9001)"}
     ]
   },
   scoring:[],
   management:{
     conservative:["EUS surveillance for incidental gastric GIST <2 cm; 6–12 monthly","No biopsy if high suspicion on CT (bleeding risk; rupture risk)"],
-    medical:["Imatinib 400 mg/day: KIT exon 11 and most mutations; KIT exon 9: 800 mg/day","PDGFRA D842V mutation: avapritinib 300 mg/day (NAVIGATOR trial: 89% ORR)","Sunitinib: second-line (imatinib resistance/intolerance)","Regorafenib: third-line","Neoadjuvant imatinib: 6–12 months for initially unresectable GIST → downsizing → resection","Adjuvant: high-risk GIST: 3 years imatinib (PERSIST-5: significant OS improvement)"],
+    medical:["Imatinib transformed metastatic GIST: median survival 9 months → >5 years","Imatinib 400 mg/day: KIT exon 11 and most mutations; KIT exon 9: 800 mg/day","Up to 50% develop imatinib resistance by 2 years; PDGFRA D842V does not respond to imatinib","PDGFRA D842V mutation: avapritinib 300 mg/day (NAVIGATOR trial: 89% ORR)","Sunitinib: second-line (imatinib resistance/intolerance)","Regorafenib: third-line","Neoadjuvant imatinib: 6–12 months for initially unresectable GIST → downsizing → resection","Adjuvant: high-risk GIST: 3 years imatinib (SSG XVIII: 3-yr > 1-yr OS improvement; ACOSOG Z9001 established adjuvant RFS benefit)"],
     surgical:[
       {name:"Laparoscopic wedge resection",when:"Gastric GIST ≤5 cm; favorable location; R0 achievable laparoscopically",notes:"No lymphadenectomy required; R0 margin; avoid tumor rupture (peritoneal seeding); retrieve in bag"},
       {name:"Open resection",when:"Large GIST (>5 cm); complex location; adhesion to adjacent organs; small bowel GIST",notes:"R0 margins; en bloc resection of adherent organs if needed; no formal lymphadenectomy; handle gently to avoid rupture"},
@@ -213,11 +214,11 @@ window._TMP_UPPERGI2 = [
       {n:4,t:"Test staple line",d:"Insufflate air via NG tube with saline in abdomen — no bubbles"},
       {n:5,t:"Close and send specimen",d:"Send fresh for IHC (CD117, CD34, DOG1) and molecular analysis"}
     ],
-    pearls:["Never rupture the tumor — spillage causes peritoneal seeding equivalent to R1/R2 resection","KIT mutation testing guides adjuvant therapy and predicts outcomes","Adjuvant imatinib 3 years (not 1 year): PERSIST-5 trial — significant OS improvement for high-risk","Response to imatinib on PET: within 24 h — metabolic response precedes size change by weeks; early assessment"]
+    pearls:["Never rupture the tumor — spillage causes peritoneal seeding equivalent to R1/R2 resection","KIT mutation testing guides adjuvant therapy and predicts outcomes","Adjuvant imatinib 3 years (not 1 year): SSG XVIII — significant OS improvement for high-risk (ACOSOG Z9001 established the adjuvant-vs-placebo RFS benefit)","Response to imatinib on PET: within 24 h — metabolic response precedes size change by weeks; early assessment"]
   },
-  guidelines:[{src:"ESMO/EURACAN GIST Clinical Practice Guidelines 2022"},{src:"NCCN GIST 2023"},{src:"PERSIST-5 Trial: Raut et al., Lancet Oncol 2018"}],
+  guidelines:[{src:"ESMO/EURACAN GIST Clinical Practice Guidelines 2022"},{src:"NCCN GIST 2023"},{src:"SSG XVIII/AIO Trial: Joensuu et al., JAMA 2012 (3-yr vs 1-yr adjuvant imatinib, OS benefit)"},{src:"ACOSOG Z9001 Trial: DeMatteo et al., Lancet 2009 (adjuvant imatinib vs placebo, RFS benefit)"}],
   pearls:["Tumor rupture = high-risk regardless of size/mitoses — treat as high-risk; adjuvant imatinib 3 years","KIT exon 9 mutation: needs 800 mg imatinib (double standard dose)","PDGFRA D842V: avapritinib-specific; imatinib ineffective","Liver metastases from GIST: respond to imatinib even if large — surgical resection only after maximal medical response"],
-  mistakes:["No molecular testing before starting imatinib — misses PDGFRA D842V (imatinib-resistant)","Lymphadenectomy for GIST — not indicated; GISTs metastasise hematogenously, not lymphatically","Only 1 year adjuvant imatinib for high-risk GIST — 3 years superior (PERSIST-5)","Tumor rupture intraoperatively — equal to peritoneal M1; use retrieval bag; gentle handling"]
+  mistakes:["No molecular testing before starting imatinib — misses PDGFRA D842V (imatinib-resistant)","Lymphadenectomy for GIST — not indicated; GISTs metastasise hematogenously, not lymphatically","Only 1 year adjuvant imatinib for high-risk GIST — 3 years superior (SSG XVIII)","Tumor rupture intraoperatively — equal to peritoneal M1; use retrieval bag; gentle handling"]
 },
 {
   id:"barretts", dept:"uppergi", name:"Barrett's Esophagus", latin:"Oesophagus Barrett", organ:"Esophagus",
@@ -234,7 +235,7 @@ window._TMP_UPPERGI2 = [
   mnemonics:[{name:"Barrett's Surveillance Steps",text:"1. Confirm IM histologically. 2. Identify visible lesions → EMR first. 3. Flat Barrett's + dysplasia → RFA ablation. 4. Post-ablation surveillance indefinitely. STOP if patient unfit for intervention"}],
   overview:{
     definition:"Metaplastic replacement of the normal stratified squamous esophageal epithelium by columnar epithelium containing goblet cells (intestinal metaplasia), as a consequence of chronic gastro-esophageal reflux.",
-    epidemiology:"Prevalence 1–2% general population; 10–15% of GERD patients. M:F = 3:1. White males, older age, central obesity, smoking. Annual OAC risk: 0.2–0.5%.",
+    epidemiology:"Prevalence 1–2% general population; 10–15% of GERD patients. M:F = 3:1. White males, older age, central obesity, smoking. Overall OAC risk ~1 per 100–200 patient-years (~0.5–1%/yr, ~40–60× baseline); modern series give a lower annual figure ~0.2–0.5%.",
     pathophysiology:"Chronic acid + bile reflux → squamous epithelial injury → incomplete repair by columnar metaplasia (derived from gastric stem cells or sub-mucosal glands). CDX2 transcription factor drives intestinal differentiation. Progression: IM → LGD (SOX2 loss) → HGD (TP53 mutation) → intramucosal carcinoma → submucosal invasion.",
     classification:[
       {label:"Prague C&M criteria",note:"Standardised endoscopic report: C = circumferential extent (cm), M = maximal extent (cm) of columnar-lined esophagus above the GEJ"},

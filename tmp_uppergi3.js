@@ -139,13 +139,13 @@ const UPPERGI3_DISEASES = [
   organ: "Small bowel",
   severity: "critical",
   tags: ["upper-gi","small-bowel","obstruction","adhesions","laparotomy"],
-  hero: "60% due to adhesions from previous surgery; non-operative management (NGT, IV fluids) succeeds in 60–70%; operate for complete obstruction, failure to resolve at 48–72h, or signs of strangulation.",
+  hero: "~75% due to adhesions from previous surgery; non-operative management (NGT, IV fluids) succeeds in 65–81% of partial SBO; operate for complete obstruction, failure to resolve at 48–72h, or signs of strangulation.",
   keypoints: [
-    "Most common cause: adhesions (60%); second: hernia (external) (15%); third: malignancy (10%)",
-    "Water-soluble contrast follow-through (Gastrografin): diagnostic AND therapeutic in adhesional SBO (reduces need for surgery by 74% if contrast reaches colon at 24 hours — NELA data)",
+    "Most common cause: adhesions (~75%); second: hernia (external) (15%); third: malignancy (10%)",
+    "Water-soluble contrast follow-through (Gastrografin): diagnostic AND therapeutic in adhesional SBO — contrast reaching colon predicts non-operative resolution (sensitivity ~92%, specificity ~93%) and reduces need for surgery (OR ~0.44)",
     "Strangulation signs: fever, tachycardia, peritonism, raised lactate, localized tenderness — mandates urgent surgery",
-    "Non-operative management (NGT, IVF): 60–70% of adhesional SBO resolves within 48–72 hours",
-    "Closed-loop obstruction: two-point obstruction — highest risk of ischemia; urgent surgery; may not respond to NGT decompression",
+    "Non-operative management (NGT, IVF): 65–81% of partial adhesional SBO resolves; of these, only 5–15% not improved by 48h",
+    "Closed-loop obstruction: two-point obstruction — highest risk of ischemia; urgent surgery; may not respond to NGT decompression; CT shows U/C-shaped loop with radial mesenteric-vessel convergence to a torsion point",
     "CT with IV contrast: standard — identifies cause, closed loop, transition point, ischemia (absent mural enhancement)"
   ],
   differentials: [
@@ -154,16 +154,18 @@ const UPPERGI3_DISEASES = [
     "Gastric volvulus (upper GI; Borchardt's triad)",
     "Mesenteric ischemia (pain out of proportion; post-prandial; atrial fibrillation)",
     "Intussusception (children: sausage-shaped mass; in adults: look for lead point — cancer, Meckel's)",
-    "Gallstone ileus (SBO with ectopic gallstone on CT — Rigler's triad)"
+    "Gallstone ileus (SBO with ectopic gallstone on CT — Rigler's triad)",
+    "SMA syndrome (compression of 3rd part of duodenum; young asthenic patients, recent weight loss)",
+    "Malrotation / midgut volvulus (in adults without prior surgery — rare but consider)"
   ],
   mnemonics: [
-    { name: "SBO causes", text: "AHIMSA: Adhesions (60%), Hernia (15%), Intra-abdominal Malignancy (10%), Surgery-related (anastomotic stricture), Acute Crohn's, Appendix pathology" },
+    { name: "SBO causes", text: "AHIMSA: Adhesions (~75%), Hernia (15%), Intra-abdominal Malignancy (10%), Surgery-related (anastomotic stricture), Acute Crohn's, Appendix pathology" },
     { name: "Strangulation signs — think LIFT", text: "Lactate elevated, Isolated loop (closed), Fever/tachycardia, Tenderness localized — any one = surgery; do not wait 72 hours" }
   ],
   overview: {
     definition: "Mechanical obstruction of the small bowel preventing the normal passage of intestinal content. The obstruction may be intraluminal, intramural, or extrinsic (most common — adhesions). Strangulation refers to compromise of the blood supply, leading to bowel ischemia.",
-    epidemiology: "Common surgical emergency: ~350,000 admissions/year in USA. Adhesions (post-surgical) are the most common cause (60%). External hernias account for 15% (inguinal, femoral, umbilical — if missed clinically). Malignancy (primary or metastatic) 10%. IBD (Crohn's stricture) 5%. Gallstone ileus 1–3% (elderly, gallstone history). Intussusception: children more common; in adults always suspect a lead-point tumor.",
-    pathophysiology: "Obstruction → proximal bowel gas/fluid accumulation → distension → increased intraluminal pressure → venous congestion → mucosal ischemia. Bacterial overgrowth in stagnant bowel. Closed-loop obstruction (two-point fixation): most dangerous — pressure rises rapidly with no pressure-relief pathway → early mucosal ischemia → full-thickness necrosis → perforation. Strangulation: venous occlusion first (torsion around adhesion band) → arterial occlusion → infarction.",
+    epidemiology: "Common surgical emergency: ~350,000 admissions/year in USA. Adhesiolysis + small-bowel resection are 2 of the 7 procedures making up 80% of US emergency general surgery. Adhesions (post-surgical) are the most common cause (~75%). External hernias account for 15% (inguinal, femoral, umbilical — if missed clinically). Malignancy (primary or metastatic) 10%. IBD (Crohn's stricture) 5%. Gallstone ileus 1–3% (elderly, gallstone history). Intussusception: children more common; in adults always suspect a lead-point tumor. Recurrence after surgical adhesiolysis ~5.5%/1y, 11.3%/3y, 13.5%/5y (reoperation 3.7/4.8/5.8%); <20% of conservatively-managed cases readmit over 5y.",
+    pathophysiology: "Obstruction → proximal bowel gas/fluid accumulation → distension → increased intraluminal pressure → venous congestion → mucosal ischemia. Bacterial overgrowth in stagnant bowel, with documented bacterial translocation to regional nodes (significance unclear). Closed-loop obstruction (two-point fixation): most dangerous — pressure rises rapidly with no pressure-relief pathway → early mucosal ischemia → full-thickness necrosis → perforation. Strangulation: venous occlusion first (torsion around adhesion band) → arterial occlusion → infarction.",
     classification: [
       "Partial obstruction — some gas/fluid passes distal to obstruction",
       "Complete obstruction — no gas/fluid distal to obstruction",
@@ -189,9 +191,10 @@ const UPPERGI3_DISEASES = [
       "PR: rectal examination — empty rectum in complete obstruction; impacted stool in pseudo-obstruction"
     ],
     investigations: [
-      { name: "AXR", role: "Central dilated loops with valvulae conniventes (mucosal folds); paucity of gas distally; look for ectopic gallstone (gallstone ileus)" },
-      { name: "CT abdomen/pelvis with IV contrast", role: "Standard investigation: transition point, cause (adhesion band, hernia, mass), closed-loop anatomy (C or U-shaped loop), ischemia (absent mural enhancement, fat stranding), free fluid/gas (perforation)" },
-      { name: "Water-soluble contrast follow-through (Gastrografin)", role: "After initial CT: if contrast reaches colon at 24 hours → 97% chance of resolving without surgery; therapeutic (reduces mucosal edema); prognostic. AVOID in risk of aspiration or complete SBO with peritonism." },
+      { name: "AXR", role: "Central dilated loops >3 cm diameter with valvulae conniventes (mucosal folds); paucity of gas distally; look for ectopic gallstone (gallstone ileus). Sensitivity 70–80%." },
+      { name: "CT abdomen/pelvis with IV contrast", role: "Standard investigation (sensitivity 80–90%, specificity 70–90%): transition point, cause (adhesion band, hernia, mass), closed-loop anatomy (C or U-shaped loop, radial mesenteric-vessel convergence), ischemia (absent mural enhancement, fat stranding), small-bowel-feces sign, free fluid/gas (perforation). Note: low sensitivity (<50%) for low-grade/partial SBO." },
+      { name: "Enteroclysis / CT enteroclysis", role: "For subtle low-grade/partial SBO or suspected mural tumor: double-contrast enteroclysis is superior for the transition zone where standard CT is insensitive." },
+      { name: "Water-soluble contrast follow-through (Gastrografin)", role: "After initial CT: contrast reaching colon predicts non-operative resolution (sensitivity ~92%, specificity ~93%) and reduces need for surgery (OR ~0.44); also therapeutic (reduces mucosal edema). AVOID in risk of aspiration or complete SBO with peritonism." },
       { name: "Serum lactate + ABG", role: "Raised lactate (>2 mmol/L) = ischemia concern; metabolic acidosis = advanced ischemia; dictates urgency" },
       { name: "CBC, electrolytes/BUN-Cr, CRP, amylase", role: "WBC raised in strangulation; electrolyte depletion from vomiting; amylase to exclude pancreatitis" }
     ]
@@ -200,7 +203,7 @@ const UPPERGI3_DISEASES = [
     title: "SBO — Non-Operative vs Operative Decision",
     items: [
       { k: "Non-operative (NGT + IVF)", v: "Partial obstruction, adhesional SBO (no strangulation signs), first episode — trial 48–72 h" },
-      { k: "Gastrografin challenge", v: "Adhesional complete SBO: water-soluble contrast at 12–24h; contrast to colon = non-op success likely (97%)" },
+      { k: "Gastrografin challenge", v: "Adhesional SBO: 100 mL water-soluble contrast via NG, KUB at ~8h (repeat at 24h); contrast reaching colon predicts non-op success (sensitivity ~92%, specificity ~93%)" },
       { k: "Operate urgently", v: "Strangulation signs (fever, tachycardia, peritonism, raised lactate), closed-loop on CT, non-resolving at 72h, incarcerated hernia" },
       { k: "Immediate surgery", v: "Peritonitis, perforation (free gas/fluid), hemodynamically unstable" }
     ]
@@ -212,7 +215,7 @@ const UPPERGI3_DISEASES = [
       "IV fluid resuscitation: crystalloid; replace ongoing NG losses (0.9% NaCl + KCl); correct hypokalemia",
       "NBM (nil by mouth): until resolution confirmed",
       "Serial examination every 4–6 hours: detect clinical deterioration early",
-      "Gastrografin challenge: oral/NGT 100 mL Gastrografin at 12–24h; AXR at 24h; contrast to colon = 97% resolution rate without surgery"
+      "Gastrografin challenge: 100 mL water-soluble contrast via NG; abdominal X-ray (KUB) at ~8h, repeat at 24h; contrast reaching colon predicts resolution without surgery (sensitivity ~92%, specificity ~93%); surgery within 72h if not resolved"
     ],
     medical: [
       "Anti-emetics: ondansetron or cyclizine IV",
@@ -223,7 +226,9 @@ const UPPERGI3_DISEASES = [
       { name: "Laparotomy (open)", when: "Strangulation, peritonitis, perforation, failed non-operative management at 72 h, incarcerated hernia", notes: "Midline laparotomy. Identify transition point. Divide adhesion band (adhesiolysis with sharp dissection — scissor not diathermy to avoid thermal injury to bowel). Assess viability of strangulated segment. Resect non-viable bowel with primary anastomosis (if bowel viable and patient stable) or end stoma (peritonitis, unstable patient)." },
       { name: "Laparoscopic adhesiolysis", when: "Single adhesion band on CT, first adhesional SBO episode, no prior extensive surgery, patient stable", notes: "Laparoscopic approach reduces length of stay and post-op adhesions. Conversion rate 20–30% for complex adhesions. Enter abdomen carefully — adhesion to anterior wall at previous incision site (cut-down technique or port site remote from previous laparotomy)." },
       { name: "Hernia repair + bowel assessment", when: "Incarcerated external hernia (inguinal, femoral, umbilical)", notes: "Repair hernia; reduce and assess bowel viability. Non-viable bowel: resect and anastomose; protect anastomosis in contaminated field with defunctioning stoma. Strangulated femoral hernia: divide lacunar ligament medially (femoral vein is lateral — lacunar ligament division medial is safe)" },
-      { name: "Bowel resection", when: "Non-viable strangulated segment confirmed (purple/black, no peristalsis, no pulsation in mesentery)", notes: "Resect with viable margins. Primary anastomosis in stable patient with healthy bowel ends. Damage control: Hartmann's/end stoma + delayed anastomosis if peritonitis or hemodynamic instability." }
+      { name: "Bowel resection", when: "Non-viable strangulated segment confirmed (purple/black, no peristalsis, no pulsation in mesentery)", notes: "Resect with viable margins. Primary anastomosis in stable patient with healthy bowel ends. Damage control: Hartmann's/end stoma + delayed anastomosis if peritonitis or hemodynamic instability. Fluorescein/Doppler no better than clinical judgment for viability. If large-length viability uncertain, plan second-look laparotomy at 24–48h rather than over-resect." },
+      { name: "Early postoperative SBO", when: "<30 days from prior surgery (esp. pelvic/colorectal) — usually partial", notes: "Favor extended non-operative management (2–3 weeks including TPN) as most resolve; reoperation early is technically hazardous (dense inflammatory adhesions)." },
+      { name: "Malignant SBO (palliative)", when: "Known malignancy with SBO — note 25–33% actually have benign adhesions", notes: "Palliative resection or bypass; venting gastrostomy if unresectable/diffuse disease. Long nasoenteric tubes NOT favored (higher complications, no efficacy benefit over standard NG)." }
     ]
   },
   technique: {
@@ -245,27 +250,30 @@ const UPPERGI3_DISEASES = [
     pearls: [
       "Never withhold analgesia for fear of masking signs — serial clinical examination every 4–6 hours is more reliable; pain control is essential",
       "Examine ALL hernia orifices — missed incarcerated femoral hernia is a classic teaching case in SBO; femoral hernia is small and often overlooked",
-      "Gastrografin has therapeutic effect: reduces mucosal edema and stimulates peristalsis — use it routinely in adhesional SBO not settling at 24 hours",
+      "Gastrografin has therapeutic effect: reduces mucosal edema and stimulates peristalsis — use it routinely in adhesional SBO not settling; check KUB at ~8h for contrast reaching colon",
       "Laparoscopic entry at prior midline laparotomy: use open (Hasson) technique or Palmer's point (left subcostal) to avoid bowel injury at previous scar",
-      "Closed-loop obstruction on CT: do not delay for Gastrografin trial — operate promptly"
+      "Laparoscopic adhesiolysis (selected cases): LOS ~4 vs 10 days open, conversion 17–33%, bowel-injury risk not increased vs open",
+      "Closed-loop obstruction on CT: do not delay for Gastrografin trial — operate promptly (U/C-shaped loop, radial mesenteric-vessel convergence to a torsion point = strangulation risk)"
     ]
   },
   guidelines: [
     { src: "WSACS/EAST Guidelines: Management of SBO 2013 (updated practice 2018)" },
     { src: "ACPGBI/NICE Emergency Laparotomy Pathway Quality Improvement Care (ELP-QIC) 2021" },
     { src: "ESCP/EHS Guidelines: Adhesive SBO 2013 (Bologna guidelines)" },
-    { src: "Cochrane Review: Water-soluble contrast for adhesional SBO — Abbas et al. 2007" }
+    { src: "Ceresoli et al. meta-analysis 2016: Water-soluble contrast for adhesive SBO (diagnostic + therapeutic role)" }
   ],
   pearls: [
-    "Gastrografin follow-through: if contrast reaches colon at 24 hours → 97% resolution without surgery; both diagnostic and therapeutic",
+    "Gastrografin follow-through: contrast reaching colon predicts resolution without surgery (sensitivity ~92%, specificity ~93%) and reduces surgery (OR ~0.44); both diagnostic and therapeutic; check KUB at ~8h",
     "Examine all hernia orifices in every patient with SBO — incarcerated femoral hernia is the classic missed diagnosis",
     "Strangulation does not require all classic signs — fever + tachycardia + raised lactate alone = operate; do not wait 72 hours",
-    "Closed-loop obstruction on CT = surgical emergency — Gastrografin trial not appropriate; risk of rapid progression to infarction"
+    "Closed-loop obstruction on CT = surgical emergency (U/C-shaped loop, radial mesenteric-vessel convergence, small-bowel-feces sign) — Gastrografin trial not appropriate; risk of rapid progression to infarction",
+    "Perioperative mortality is <5% in non-strangulating SBO but rises sharply once bowel is compromised — early recognition of strangulation is what saves lives",
+    "Adhesion prevention: laparoscopy over open surgery where feasible (open carries ~4× the 5-year SBO risk); hyaluronan/Seprafilm reduces adhesion formation but SBO-reduction is unproven; do NOT wrap an anastomosis with barrier film (increases leak)"
   ],
   mistakes: [
     "Missing incarcerated hernia as the cause — examine inguinal, femoral, umbilical, and incisional orifices before attributing to adhesions",
     "Waiting 72 hours in a patient with strangulation signs — strangulation is a time-critical emergency; operate when signs appear",
-    "Not using Gastrografin in adhesional SBO — reduces surgical rate by 74% and is both diagnostic and therapeutic",
+    "Not using Gastrografin in adhesional SBO — reduces the need for surgery (OR ~0.44) and is both diagnostic and therapeutic",
     "Sharp dissection with diathermy during adhesiolysis — thermal spread damages bowel serosa; use scissors and controlled sharp dissection"
   ]
 }
