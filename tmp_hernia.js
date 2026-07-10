@@ -19,12 +19,13 @@ const HERNIA_DISEASES = [
   differentials: ["Femoral hernia","Lipoma of cord","Inguinal lymphadenopathy","Undescended testis","Varicocele","Hydrocele","Femoral aneurysm","Psoas abscess"],
   mnemonics: [
     {name:"Hesselbach's triangle", text:"Lateral: inferior epigastric vessels; Medial: lateral edge of rectus; Inferior: inguinal ligament = direct hernia site"},
-    {name:"TAPP vs TEP", text:"TAPP: Trans-Abdominal Pre-Peritoneal (enter abdo, then preperitoneal); TEP: Totally Extra-Peritoneal (never enter abdo)"}
+    {name:"TAPP vs TEP", text:"TAPP: Trans-Abdominal Pre-Peritoneal (enter abdo, then preperitoneal); TEP: Totally Extra-Peritoneal (never enter abdo)"},
+    {name:"Laparoscopic do-not-tack zones", text:"Triangle of doom (vas medially, gonadal vessels laterally → external iliac vessels); triangle of pain (lateral to gonadal vessels → LFCN, genitofemoral, femoral n.); circle of death (aberrant obturator–epigastric vascular ring). No tacks/staples in these zones"}
   ],
   overview: {
     definition: "Protrusion of peritoneum ± abdominal contents through a defect in the posterior inguinal wall, either medial (direct) or lateral (indirect) to the inferior epigastric vessels.",
     epidemiology: "75% of all hernias. M:F = 9:1. Lifetime risk: 27% males; 3% females. Indirect most common in young males; direct more common with age. Right > left (right testis descends later).",
-    pathophysiology: "Indirect: failure of obliteration of processus vaginalis → persistent connection from peritoneal cavity to scrotum. Direct: weakness/attenuation of posterior inguinal wall (transversalis fascia) from chronic raised IAP, collagen disorder, or ageing.",
+    pathophysiology: "Indirect: failure of obliteration of processus vaginalis → persistent connection from peritoneal cavity to scrotum. Direct: weakness/attenuation of posterior inguinal wall (transversalis fascia) from chronic raised IAP, collagen disorder, or ageing. Hernia patients show a decreased type I:type III collagen ratio; associated collagen disorders (Ehlers-Danlos, Marfan, osteogenesis imperfecta); positive family history confers ~8-fold lifetime incidence. All defects lie within the myopectineal orifice of Fruchaud (bounded by rectus, iliopsoas, inguinal ligament, pubis) — the zone a posterior mesh covers entirely.",
     classification: [
       "Indirect inguinal hernia: lateral to inferior epigastric vessels",
       "Direct inguinal hernia: medial to IEV (Hesselbach's triangle)",
@@ -32,7 +33,7 @@ const HERNIA_DISEASES = [
       "Complete: extends into scrotum",
       "Incomplete: within inguinal canal only",
       "EHS Classification: P (primary), R (recurrent); U (unilateral), B (bilateral); I/II/III by size",
-      "Nyhus Classification — Type I: indirect, normal ring; Type II: indirect, dilated ring, intact floor; Type IIIa: direct; Type IIIb: indirect with floor defect (incl. pantaloon/large); Type IV: recurrent (a–d)"
+      "Nyhus Classification — Type I: indirect, normal ring; Type II: indirect, dilated ring, intact floor; Type IIIa: direct; Type IIIb: indirect with floor defect (incl. pantaloon/large); Type IIIc: femoral; Type IV: recurrent (a–d)"
     ]
   },
   diagnosis: {
@@ -53,9 +54,9 @@ const HERNIA_DISEASES = [
     ],
     investigations: [
       {name:"Clinical diagnosis", role:"Sufficient for typical presentation; no imaging required for straightforward reducible inguinal hernia"},
-      {name:"Ultrasound groin", role:"Equivocal examination; occult hernia; distinguishes hernia from lipoma/lymph node/femoral aneurysm"},
-      {name:"CT abdomen/pelvis", role:"Complex hernias; suspected bilateral; recurrent after previous repair; occult hernia in obese patient"},
-      {name:"MRI (sports hernia)", role:"Groin pain without palpable hernia — exclude inguinal disruption, sportsman's groin, osteitis pubis"}
+      {name:"Ultrasound groin", role:"Equivocal examination; occult hernia; distinguishes hernia from lipoma/lymph node/femoral aneurysm (sensitivity ~86%, specificity ~77%)"},
+      {name:"CT abdomen/pelvis", role:"Complex hernias; suspected bilateral; recurrent after previous repair; occult hernia in obese patient (sensitivity ~80%, specificity ~65%)"},
+      {name:"MRI (sports hernia)", role:"Groin pain without palpable hernia — exclude inguinal disruption, sportsman's groin, osteitis pubis; best when US inconclusive (sensitivity ~95%, specificity ~96%)"}
     ]
   },
   criteria: {
@@ -64,7 +65,7 @@ const HERNIA_DISEASES = [
       {k:"Symptomatic hernia", v:"Standard indication — any symptomatic inguinal hernia"},
       {k:"Irreducible/obstructed", v:"Semi-urgent or urgent surgery"},
       {k:"Strangulated", v:"Emergency surgery"},
-      {k:"Asymptomatic", v:"Watchful waiting acceptable for minimally symptomatic (EHS guidelines); 20% become symptomatic requiring surgery within 5 years"}
+      {k:"Asymptomatic", v:"Watchful waiting acceptable for minimally symptomatic (EHS guidelines); ~20% become symptomatic within 5 years, and up to 72% eventually cross over to repair by 7.5 years — crossover is common, so counsel that most will need eventual surgery"}
     ]
   },
   scoring: [],
@@ -110,7 +111,9 @@ const HERNIA_DISEASES = [
   ],
   pearls: [
     "Laparoscopic (TEP/TAPP) preferred for bilateral and recurrent — avoids previously scarred tissue plane",
-    "Chronic groin pain after hernia repair (inguinodynia): most common long-term complication; mesh fixation and nerve injury risk",
+    "Lightweight mesh reduces chronic pain (RR ~0.61) with equivalent recurrence vs heavyweight — prefer lightweight",
+    "In TEP, mesh fixation is not compulsory — no-fixation gives equivalent recurrence with less new-onset pain",
+    "Chronic groin pain after hernia repair (inguinodynia): most common long-term complication; moderate–severe pain affecting daily life in 6–8%; incidence independent of repair method; triple neurectomy for refractory inguinodynia",
     "Perioperative: avoid constipation and coughing post-op — straining increases recurrence risk in early healing period"
   ],
   mistakes: [
@@ -131,7 +134,8 @@ const HERNIA_DISEASES = [
   keypoints: [
     "Boundaries of femoral canal: anterior (inguinal ligament), medial (lacunar ligament), lateral (femoral vein), posterior (pectineal ligament/Cooper's ligament)",
     "F:M = 4:1 but actually more common in men overall (fewer hernias in women but higher proportion are femoral)",
-    "Strangulation risk: 22% at 3 months — highest of all abdominal hernias; always repair promptly",
+    "Strangulation risk: 22% at 3 months, rising to 45% at 2 years — highest of all abdominal hernias; always repair promptly",
+    "Emergency groin-hernia operation carries a ~7-fold increase in all-cause mortality vs elective — argues for prompt elective femoral repair",
     "Approaches: low (crural), high (McEvedy via inguinal), or preperitoneal (laparoscopic TEP/TAPP)",
     "Repair: plug mesh into femoral canal or Cooper's ligament repair (Lotheissen-McVay)"
   ],
@@ -142,7 +146,7 @@ const HERNIA_DISEASES = [
   ],
   overview: {
     definition: "Protrusion of peritoneum ± abdominal contents through the femoral ring into the femoral canal, below and lateral to the pubic tubercle, medial to the femoral vein.",
-    epidemiology: "3% of all groin hernias. F:M = 4:1 in adults. Uncommon in children. Strangulation rate 22% within 3 months of diagnosis — highest of any abdominal hernia. 40% of femoral hernia admissions are strangulated.",
+    epidemiology: "3% of all groin hernias; inguinal hernias are ~5× more common than femoral. F:M = 4:1 in adults (~70% of femoral repairs are in women). Uncommon in children. Strangulation rate 22% within 3 months (45% by 2 years) — highest of any abdominal hernia. 40% of femoral hernia admissions are strangulated.",
     pathophysiology: "Femoral ring is a fixed narrow opening with rigid walls (inguinal ligament anteriorly, Cooper's ligament posteriorly, femoral vein laterally, lacunar ligament medially). Contents cannot expand → strangulation from relatively minor intra-abdominal pressure increase.",
     classification: [
       "Reducible femoral hernia",
@@ -287,7 +291,8 @@ const HERNIA_DISEASES = [
       {k:"<1cm defect", v:"Primary suture repair (Mayo: overlapping fascial layers) OR suture closure"},
       {k:"1–3cm defect", v:"Mesh repair: open IPOM (intraperitoneal onlay mesh) or retromuscular sublay"},
       {k:">3cm defect", v:"Laparoscopic IPOM or open component separation + mesh"},
-      {k:"Cirrhotics", v:"Treat ascites first; emergency repair for leaking/ruptured; elective repair after TIPS/diuretic optimization"}
+      {k:"Cirrhotics", v:"Treat ascites first; emergency repair for leaking/ruptured; elective repair after TIPS/diuretic optimization"},
+      {k:"Transplant candidates", v:"Liver transplant candidates should have the umbilical hernia repaired at the time of transplantation — pretransplant repair carries high morbidity/mortality"}
     ]
   },
   scoring: [],
@@ -346,10 +351,11 @@ const HERNIA_DISEASES = [
   organ: "Abdominal wall",
   severity: "moderate",
   tags: ["hernia","abdominal-wall","mesh","laparoscopic"],
-  hero: "Develops in 10–15% of all laparotomies. Risk factors: obesity, wound infection, poor closure. Large defects require component separation + mesh. Recurrence rate high without mesh.",
+  hero: "Develops in 10–20% of all laparotomies. Risk factors: obesity, wound infection, poor closure. Large defects require component separation + mesh. Recurrence rate high without mesh.",
   keypoints: [
-    "Occurs in 10–15% of laparotomies; higher with midline closure, obesity, wound infection",
-    "Mesh repair: significantly lower recurrence than primary suture (10% vs 30–40%)",
+    "Occurs in 10–20% of laparotomies; higher with midline closure, obesity, wound infection",
+    "Prevention: small-bites fascial closure (5–8 mm bites, suture-length:wound-length ≥4:1) lowers incisional hernia vs classic 1 cm bites",
+    "Mesh repair: significantly lower recurrence than primary suture (Cochrane ~16% mesh vs ~33% suture; suture recurrence reported as high as 54%)",
     "Open retromuscular (Rives-Stoppa): gold standard for medium-large incisional hernias",
     "Component separation (anterior or posterior): for large defects requiring fascial mobilization",
     "Laparoscopic IPOM: good for moderate size; higher recurrence than open retromuscular for large defects"
@@ -360,7 +366,7 @@ const HERNIA_DISEASES = [
   ],
   overview: {
     definition: "Any abdominal wall gap or defect, with or without a bulge, in the area of a postoperative scar, detectable on clinical examination or imaging.",
-    epidemiology: "10–15% of all laparotomies. Higher risk: midline incisions (vs transverse), BMI >30, wound infection, diabetes, steroids, reoperation, emergency surgery. Presents 1–5 years post-surgery in most cases.",
+    epidemiology: "10–20% of all laparotomies. Higher risk: midline incisions (transverse incisions have lower hernia but higher wound-infection rates), BMI >30, wound infection, diabetes, steroids, reoperation, emergency surgery. Presents 1–5 years post-surgery in most cases.",
     pathophysiology: "Failed fascial healing: wound infection, suture pull-through, inadequate suture (fine suture, absorbable suture, too-close bites), raised IAP. Initial fascial gap → progressive enlargement from ongoing tension forces.",
     classification: [
       "EHS Classification: Width (W1:<4cm; W2:4–10cm; W3:>10cm; W4:loss of domain) × Location (M1–5, L1–4)",
@@ -444,7 +450,9 @@ const HERNIA_DISEASES = [
     {src:"IEHS: Update on component separation techniques"}
   ],
   pearls: [
-    "Recurrence without mesh: 30–40%; with mesh: <10%; mesh is non-negotiable for incisional hernia repair",
+    "Recurrence without mesh is high (suture up to ~54%; Cochrane 33% suture vs 16% mesh); mesh is non-negotiable for incisional hernia repair",
+    "Mesh position taxonomy: onlay (above fascia), inlay/bridging, sublay (retromuscular), underlay (intraperitoneal) — systematic review favors sublay for lowest recurrence and fewest wound complications",
+    "Laparoscopic vs open ventral repair: similar recurrence and less wound infection, but higher risk of bowel injury",
     "CT pre-op for all incisional hernias >4cm: assess loss of domain, muscle atrophy, diastasis recti, multiple defects",
     "Loss of domain: bowel/fat >20% abdominal cavity in sac; general/bariatric approach multidisciplinary + staged"
   ],
@@ -466,7 +474,8 @@ const HERNIA_DISEASES = [
   keypoints: [
     "Incarceration: irreducible but no vascular compromise; Strangulation: vascular compromise → ischemia",
     "Clinical: painful, irreducible hernia + systemic signs of ischemia (fever, leukocytosis, peritonism)",
-    "Do NOT attempt forceful manual reduction of strangulated hernia (taxis) — risk of reducing non-viable bowel",
+    "Do NOT attempt forceful manual reduction of strangulated hernia (taxis) — risk of reducing non-viable bowel; gentle taxis is reserved for incarcerated-without-strangulation (analgesia + light sedation, Trendelenburg, sustained circumferential pressure)",
+    "GA induction can spontaneously reduce an incarcerated/strangulated hernia — if it disappears at induction, laparoscopically explore or convert to laparotomy to inspect for non-viable bowel",
     "Assess bowel viability at surgery: viable = repair hernia; non-viable = resect bowel + DCS or primary anastomosis",
     "Femoral and obturator hernias have highest strangulation rate; inguinal lower"
   ],

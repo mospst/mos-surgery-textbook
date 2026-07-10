@@ -38,7 +38,7 @@ const HERNIA2_DISEASES = [
     pathophysiology: "The linea alba transmits highest tensile forces in the upper portion (wider, less reinforced). Small perforating vessels from the epigastric arteries penetrate the linea alba, creating potential points of weakness. Increased intra-abdominal pressure → pre-peritoneal fat herniates through these points → progressively enlarges → eventually a true peritoneal sac develops. At the hernia ring, strangulation of fat (diverticula cutis) causes pain disproportionate to hernia size.",
     classification: [
       "Pre-peritoneal fat hernia (70–80%) — no true peritoneal sac; pre-peritoneal fat only through fascial defect",
-      "True peritoneal sac hernia (20–30%) — peritoneal sac with or without visceral contents (omentum > stomach > small bowel — very rare)",
+      "True peritoneal sac hernia (20–30%) — peritoneal sac with or without visceral contents (omentum or falciform ligament most common; stomach/small bowel very rare)",
       "By size: small <1 cm; medium 1–3 cm; large >3 cm"
     ]
   },
