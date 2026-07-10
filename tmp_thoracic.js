@@ -14,7 +14,8 @@ const THORACIC_DISEASES = [
     "TNM staging: stage I–IIIA = potentially resectable NSCLC; stage IIIB+ = chemoradiation; SCLC rarely surgical",
     "Lobectomy: gold standard resection; anatomic segmentectomy for poor pulmonary reserve",
     "Pre-op fitness assessment: FEV₁ and DLCO post-op prediction; FEV₁ppo >40% and DLCOppo >40% = operable",
-    "VATS lobectomy: equivalent oncological outcomes, less morbidity than open thoracotomy"
+    "VATS lobectomy: equivalent oncological outcomes, less morbidity than open thoracotomy",
+    "Screening: annual low-dose CT in high-risk patients gives a ~20% relative reduction in lung-cancer mortality vs CXR (NLST)"
   ],
   differentials: ["Pulmonary metastasis","Pulmonary carcinoid","Lung abscess","TB/fungal granuloma","Atypical carcinoid","Lymphoma","Hamartoma"],
   mnemonics: [
@@ -50,6 +51,7 @@ const THORACIC_DISEASES = [
     ],
     investigations: [
       {name:"CXR", role:"Initial: mass, hilar lymphadenopathy, pleural effusion, atelectasis; not sufficient alone"},
+      {name:"Solitary pulmonary nodule work-up", role:"SPN = rounded lesion ≤3cm surrounded by aerated lung (>3cm = 'mass', malignant until proven otherwise); benign calcification patterns = central, popcorn, laminated, or diffuse"},
       {name:"CT chest/abdomen/pelvis (contrast)", role:"Staging: tumor characteristics (size, location, lobar involvement), mediastinal nodes, pleural/pericardial effusion, liver/adrenal metastases"},
       {name:"PET-CT", role:"Functional staging: N2/N3 nodes, distant metastases; sensitivity/specificity for nodal staging >85%"},
       {name:"MRI brain", role:"Staging for NSCLC stage II+; SCLC all stages; brain metastases"},
@@ -157,7 +159,8 @@ const THORACIC_DISEASES = [
     pathophysiology: "PSP: rupture of subpleural apical blebs/bullae → air enters pleural space → lung recoil causes collapse. SSP: underlying disease weakens lung parenchyma. Tension: one-way valve → progressive PTX → mediastinal shift → cardiac tamponade physiology.",
     classification: [
       "Primary spontaneous (PSP): no underlying lung disease",
-      "Secondary spontaneous (SSP): underlying lung disease (COPD, asthma, CF, TB, PCP)",
+      "Secondary spontaneous (SSP): underlying lung disease (emphysema/COPD, asthma, CF, TB, PCP/AIDS, metastatic cancer — esp. sarcoma, lung abscess)",
+      "Catamenial: women in 2nd–3rd decade, within 72h of menses onset; associated with thoracic endometriosis",
       "Traumatic: blunt or penetrating chest trauma",
       "Iatrogenic: post-procedure (CVL, pleural biopsy, thoracocentesis, PPV)",
       "Tension pneumothorax: hemodynamically compromising"
@@ -296,7 +299,7 @@ const THORACIC_DISEASES = [
     investigations: [
       {name:"CXR", role:"Effusion; loculated pleural fluid; pleural thickening"},
       {name:"Ultrasound-guided pleural aspiration", role:"Sample pleural fluid — send for pH, protein, LDH, glucose, MC&S, cytology"},
-      {name:"Pleural fluid analysis", role:"pH <7.2 = drain; pH <7.0 = urgent drainage; LDH, protein (Light's criteria for exudate); Gram stain/culture/AFB; cytology"},
+      {name:"Pleural fluid analysis", role:"pH <7.2 OR glucose <40 mg/dL = drain; pH <7.0 = urgent drainage; LDH, protein (Light's criteria for exudate); Gram stain/culture/AFB; cytology. Polymicrobial growth + yeast → suspect esophageal perforation as source"},
       {name:"CT chest with contrast", role:"Confirms empyema; assesses loculation, peel thickness, lung entrapment, mediastinal involvement, associated abscess"},
       {name:"Blood cultures + CBC/CRP", role:"Identify causative organism; gauge severity"}
     ]
@@ -614,7 +617,7 @@ const THORACIC_DISEASES = [
   tags: ["oncology","asbestos","pleura","thoracic"],
   hero: "Aggressive malignancy of pleural mesothelial cells, invariably linked to asbestos exposure. Median survival 12–18 months. Platinum + pemeterxed ± bevacizumab/immunotherapy is standard systemic therapy. Surgery (EPP or P/D) in selected fit patients.",
   keypoints: [
-    "Asbestos exposure in 80%: latent period 20–50 years",
+    "Asbestos exposure in >80%: latent period 20–50 years; smoking does NOT increase mesothelioma risk (contrast with lung cancer, where asbestos and smoking are synergistic)",
     "Epithelioid histotype: best prognosis; sarcomatoid: worst",
     "CT-guided pleural biopsy via VATS: diagnostic; BAP1/MTAP immunohistochemistry",
     "Talc pleurodesis: palliative — controls effusion in >85%",
@@ -737,6 +740,7 @@ const THORACIC_DISEASES = [
     "Most common anterior mediastinal mass in adults (40%)",
     "Myasthenia gravis (MG) in 30–50% of thymoma patients; conversely, 15% of MG patients have thymoma",
     "Complete resection (R0): key prognostic factor",
+    "Capsular invasion / stage (Masaoka), NOT histology, is the dominant prognostic driver — an encapsulated tumour of any WHO type does well after complete excision",
     "WHO classification A/AB/B1/B2/B3/C (thymic carcinoma) — invasiveness increases A→C",
     "Minimally invasive (VATS/robotic) thymectomy: equivalent oncological outcomes to open for stage I–II"
   ],
@@ -860,7 +864,9 @@ const THORACIC_DISEASES = [
     "Middle: lymphoma, pericardial cyst, bronchogenic cyst, tracheal lesions",
     "Posterior: neurogenic tumors (schwannoma, neurofibroma, PNET), vertebral masses",
     "CT-guided biopsy for lymphoma (requires tissue typing); excision biopsy for suspected thymoma/GCT",
-    "Do NOT biopsy anterior mediastinal mass suspected to be thymoma — breach capsule = Masaoka upstaging"
+    "Do NOT biopsy anterior mediastinal mass suspected to be thymoma — breach capsule = Masaoka upstaging",
+    "Large anterior mass can compress the SVC and airway — general anaesthesia may precipitate cardiovascular/airway collapse; anticipate before any biopsy or induction, consider awake/local technique",
+    "Symptomatic masses are more likely malignant than incidental asymptomatic ones"
   ],
   differentials: ["Thymoma","Teratoma/Germ cell tumor","Lymphoma","Substernal thyroid","Aortic aneurysm","Bronchogenic cyst","Neurogenic tumor","Esophageal duplication cyst"],
   mnemonics: [
@@ -1013,7 +1019,7 @@ const THORACIC_DISEASES = [
     ],
     investigations: [
       {name:"CXR", role:"Thick-walled cavity with air-fluid level; opacification; pleural effusion/empyema"},
-      {name:"CT chest", role:"Defines size, location, wall thickness; relationship to bronchus; pleural involvement; distinguish from tumor cavitation"},
+      {name:"CT chest", role:"Defines size, location, wall thickness; relationship to bronchus; pleural involvement; distinguish from tumor cavitation. Abscess = thick irregular wall meeting pleura at an acute angle; empyema = split-pleura sign with an obtuse angle"},
       {name:"Bronchoscopy + BAL", role:"Collect specimens (BAL culture/cytology); exclude tumor or foreign body; allow bronchoscopic drainage of central abscess"},
       {name:"Sputum culture + blood culture (if bacteremic)", role:"Identify organism; AFB + TB culture; fungi"},
       {name:"CT-guided percutaneous drain", role:"Accessible peripheral abscess; diagnostic + therapeutic drainage"}
@@ -1095,7 +1101,7 @@ const THORACIC_DISEASES = [
   tags: ["thoracic","oncology","chest-wall","rare"],
   hero: "Primary chest wall tumors are rare. Benign (osteochondroma, fibrous dysplasia) vs malignant (chondrosarcoma, Ewing's sarcoma, synovial sarcoma). Core biopsy + CT/MRI before surgery. En-bloc resection ± reconstruction.",
   keypoints: [
-    "60% of chest wall tumors are malignant; 40% benign",
+    "50–80% of chest wall tumors are malignant; the remainder benign",
     "Most common malignant: chondrosarcoma (most common primary chest wall malignancy), Ewing's sarcoma (children/young adults), osteosarcoma, MFH/UPS",
     "Most common benign: osteochondroma, chondroma, fibrous dysplasia",
     "Wide en-bloc resection: ≥4cm bony margins; reconstruct chest wall with prosthesis or bioprosthetic mesh",
@@ -1103,7 +1109,7 @@ const THORACIC_DISEASES = [
   ],
   differentials: ["Metastatic disease to chest wall (lung, breast, kidney most common)","Rib fracture","Costal chondritis","Plasmacytoma","Lymphoma of chest wall","Rib osteomyelitis"],
   mnemonics: [
-    {name:"Chest wall malignancy rate", text:"60% malignant (chondrosarcoma > Ewing's > osteosarcoma > MFH); 40% benign (osteochondroma most common benign)"}
+    {name:"Chest wall malignancy rate", text:"50–80% malignant (chondrosarcoma > Ewing's > osteosarcoma > MFH); osteochondroma most common benign"}
   ],
   overview: {
     definition: "Primary neoplasm arising from the bony, cartilaginous, or soft tissue elements of the chest wall, classified as benign or malignant based on histology.",
@@ -1326,7 +1332,7 @@ const THORACIC_DISEASES = [
   keypoints: [
     "Typical carcinoid (TC): <2 mitoses/2mm², no necrosis; 10-year survival >90%",
     "Atypical carcinoid (AC): 2–10 mitoses/2mm² OR necrosis; 10-year survival 50–70%",
-    "Often presents with recurrent hemoptysis, recurrent pneumonia (central), or incidental peripheral nodule",
+    "Often presents with recurrent hemoptysis, recurrent pneumonia (central), or incidental peripheral nodule; central lesions are very vascular — endobronchial biopsy carries a real bleeding risk",
     "Octreotide scan (68Ga-DOTATATE PET): high sensitivity for somatostatin receptor expression",
     "Lobectomy preferred for central lesions; sleeve resection/segmentectomy for peripheral to preserve lung tissue"
   ],
