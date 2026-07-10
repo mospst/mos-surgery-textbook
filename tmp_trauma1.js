@@ -390,7 +390,9 @@ const TRAUMA_DISEASES_1 = [
   hero: "Most commonly injured solid organ in blunt abdominal trauma. Non-operative management (NOM) is now standard for hemodynamically stable patients. Preserve the spleen where possible — prevent OPSI.",
   keypoints: [
     "AAST Grade I–V; Grade I–III stable patients → NOM (ICU monitoring + serial examination)",
-    "NOM failure rate ~5%; indications for intervention: hemodynamic instability, failed NOM, Grade IV–V",
+    "NOM failure rate ~5% in modern series (up to 15–20% needed early splenectomy in older series); indications for intervention: hemodynamic instability, failed NOM, Grade IV–V",
+    "Physiology-driven splenectomy: consider for any >Grade II injury with coagulopathy or multiple life-threatening injuries — not grade alone",
+    "Transfusion requirement within the first 12 h is an early-intervention trigger (favours angioembolization or splenectomy over continued NOM)",
     "Angioembolization: for blush on CT, Grade III–V — avoids splenectomy",
     "Splenectomy: for hemodynamic instability or failed embolization",
     "Post-splenectomy: OPSI risk — vaccinate against encapsulated organisms (pneumococcus, meningococcus, Hib)"
@@ -461,7 +463,8 @@ const TRAUMA_DISEASES_1 = [
       {name:"Angioembolization (proximal or selective)", when:"Grade III–V with active blush on CT; high-grade injury even without blush; NOM failure with stable enough for IR suite", notes:"Proximal embolization (main splenic artery) reduces perfusion pressure while preserving ~70% splenic function via collaterals; selective embolization for specific arterial bleeding"},
       {name:"Splenorrhaphy (splenic repair)", when:"Intraoperative finding of Grade I–II injury; superficial lacerations amenable to repair", notes:"Topical hemostatic agents + argon beam coagulation; pledgeted sutures; mesh wrap (polyglactin mesh wrapping spleen)"},
       {name:"Splenectomy", when:"Hemodynamic instability + positive FAST (immediate); failed NOM; Grade IV–V with hilar injury; failed angioembolization; contaminated field (bowel injury)", notes:"Control splenic hilum first; divide short gastrics; divide splenorenal, splenocolic, splenophrenic ligaments; ligate splenic artery and vein at hilum"},
-      {name:"Post-splenectomy vaccination", when:"All splenectomy patients — prior to discharge or at 2 weeks if emergency splenectomy", notes:"Pneumococcus (Prevnar 13 + Pneumovax 23), Meningococcus ACWY + B, Hemophilus influenzae type b; annual influenza; penicillin V prophylaxis (2 years minimum or lifelong if high-risk)"}
+      {name:"Splenic autotransplantation", when:"Young patients requiring splenectomy WITHOUT enteric/contamination injury — implant parenchymal fragments into an omental pouch", notes:"Aims to preserve partial immunocompetence; benefit debated but low-risk in the clean trauma setting"},
+      {name:"Post-splenectomy vaccination", when:"All splenectomy patients — elective: 2 weeks BEFORE surgery; emergent: postoperatively (optimally >14 days post-injury, once acute immunosuppression settles)", notes:"Pneumococcus (Prevnar 13 + Pneumovax 23), Meningococcus ACWY + B, Hemophilus influenzae type b; annual influenza (54% reduced death in asplenics); penicillin V prophylaxis (2 years minimum or lifelong if high-risk); revaccinate pneumococcus every 5–10 years as titres wane"}
     ]
   },
   technique: {
@@ -493,11 +496,14 @@ const TRAUMA_DISEASES_1 = [
   pearls: [
     "Delayed splenic rupture: subcapsular hematoma expands → rupture 2–28 days post-injury — warn patients",
     "NOM failure: rising transfusion requirement, hemodynamic deterioration, peritonitis — do not persist",
-    "OPSI risk highest in first 2 years post-splenectomy but lifelong — patient education critical"
+    "OPSI risk highest in first 2 years post-splenectomy but lifelong (highest in children and after splenectomy for haematologic disease; lowest after trauma/iatrogenic) — patient education critical",
+    "OPSI microbiology: S. pneumoniae >50%; also H. influenzae, N. meningitidis, Capnocytophaga canimorsus (dog bites), Babesia/Plasmodium (ticks/malaria); gram-negatives now ~45–50% of asplenic sepsis",
+    "Post-splenectomy blood film: Howell-Jolly bodies and siderocytes confirm asplenia/functional hyposplenism",
+    "After POD5, WBC >15,000 with platelet:WBC ratio <20 suggests post-splenectomy sepsis; watch for portal/splenic vein thrombosis (highest with splenomegaly + myeloproliferative disease)"
   ],
   mistakes: [
     "NOM in hemodynamically unstable patient — must operate; stability is non-negotiable criterion",
-    "Forgetting post-splenectomy vaccinations — OPSI mortality 50–70% if it occurs",
+    "Forgetting post-splenectomy vaccinations — OPSI is often fatal if untreated (lifetime risk <1–5%, higher in children)",
     "Pancreatic tail injury during splenectomy — stay close to splenic hilum, not to pancreas"
   ]
 },
@@ -513,7 +519,8 @@ const TRAUMA_DISEASES_1 = [
   keypoints: [
     "AAST Grade I–VI; Grade I–III stable → NOM; Grade IV–V → angioembolization or surgery",
     "Perihepatic packing is the primary surgical hemostatic maneuver — not formal hepatic resection",
-    "Pringle maneuver: compress hepatoduodenal ligament to control inflow (safe for 60min warm ischemia)",
+    "Pringle maneuver: compress hepatoduodenal ligament to control inflow (safe for 60min warm ischemia; release intermittently to reduce hepatocellular injury)",
+    "Bleeding that continues DESPITE a Pringle maneuver implies retrohepatic IVC or hepatic vein injury — not portal inflow; plan for packing/atriocaval shunt, not more dissection",
     "NOM failure rate 5–10%; hepatic arterial blush on CT → angioembolization",
     "Bile leak (biloma), hemobilia, hepatic abscess: late complications of high-grade injury"
   ],
@@ -954,7 +961,8 @@ const TRAUMA_DISEASES_1 = [
     pearls: [
       "PPP is faster than angioembolization (15–20 min vs 60–90 min) — first-line if hemodynamically crashing",
       "PPP + angioembolization are complementary — PPP stops venous; angioembolization stops arterial",
-      "REBOA Zone III: infrarenal or iliac occlusion — bridge to PPP/angioembolization in extremis"
+      "REBOA Zone III: infrarenal or iliac occlusion — bridge to PPP/angioembolization in extremis; escalate to REBOA if SBP <80 despite binder + resuscitation",
+      "Angiography threshold: pursue if >4 units RBC transfused from a pelvic source with corrected coagulation over 12 h — implies ongoing arterial bleeding"
     ]
   },
   guidelines: [

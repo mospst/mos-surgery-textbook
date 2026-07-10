@@ -379,9 +379,9 @@ const TRAUMA_DISEASES_2 = [
   tags: ["trauma","burns","fluid","critical"],
   hero: "Immediate priorities: stop the burning process, airway assessment, fluid resuscitation (Parkland formula), wound care. Early excision and grafting within 48–72h improves survival in major burns.",
   keypoints: [
-    "Rule of Nines: head 9%, each arm 9%, each leg 18%, trunk front 18%, trunk back 18%, perineum 1%",
-    "Parkland formula: 4 × weight (kg) × %TBSA burned = mL Hartmann's in 24h; half in first 8h from injury",
-    "Inhalation injury: intubate early — airway edema can close airway within hours",
+    "Rule of Nines: head 9%, each arm 9%, each leg 18%, trunk front 18%, trunk back 18%, perineum 1% (in children <3y the head is proportionally larger — use Lund & Browder for accuracy)",
+    "Parkland formula: 4 × weight (kg) × %TBSA burned = mL Hartmann's in 24h; half in first 8h from injury (ABA consensus has since shifted the starting estimate lower to ~2 mL/kg/%TBSA to combat over-resuscitation 'fluid creep' — 4 remains the classic teaching)",
+    "Inhalation injury: intubate early — airway edema can close airway within hours; suspect cyanide toxicity (persistent lactic acidosis) alongside CO in closed-space smoke — treat with hydroxocobalamin + sodium thiosulfate + 100% O₂",
     "Circumferential full-thickness burns: escharotomy to release compartment syndrome",
     "Early excision and skin grafting (48–72h): reduces mortality, infection, ICU stay"
   ],
@@ -419,7 +419,8 @@ const TRAUMA_DISEASES_2 = [
       "Electrical burns: entry/exit wounds; cardiac monitoring (arrhythmia); deep tissue necrosis disproportionate to surface appearance"
     ],
     investigations: [
-      {name:"COHb (carboxyhemoglobin)", role:"CO poisoning in enclosed space fire; >25% = severe; treatment: 100% O₂ for ≥6h; SpO₂ unreliable"},
+      {name:"COHb (carboxyhemoglobin)", role:"CO poisoning in enclosed space fire; >25% = severe; SpO₂ unreliable (reads falsely normal). CO binds Hb 200–250× more avidly than O₂; 100% O₂ cuts COHb half-life from ~250 min (room air) to 40–60 min; give for ≥6h"},
+      {name:"Serum lactate / base deficit", role:"Resuscitation endpoints — persistently elevated lactate or worsening base deficit signals under-resuscitation despite adequate urine output; elevated lactate also flags cyanide toxicity"},
       {name:"CXR", role:"Inhalation injury; aspiration; mediastinal assessment"},
       {name:"Fiberoptic bronchoscopy", role:"Confirms inhalation injury (erythema, edema, carbonaceous deposits in airways); assess level of injury"},
       {name:"ECG/cardiac monitoring", role:"Electrical burns: arrhythmias; ventricular fibrillation; prolonged QT"},
@@ -437,21 +438,23 @@ const TRAUMA_DISEASES_2 = [
       {k:"Inhalation injury", v:"Chemical burns"},
       {k:"Electrical burns", v:"Lightning injury"},
       {k:"Burns with significant comorbidity", v:"Pediatric, elderly, pregnancy, immunosuppressed"},
-      {k:"Suspected non-accidental injury", v:"Children"}
+      {k:"Suspected non-accidental injury", v:"Children"},
+      {k:"Burn + concomitant trauma", v:"If burn poses the greater risk, stabilise at a trauma centre then transfer to a burn centre (physician judgement)"},
+      {k:"Special social/emotional or rehabilitation needs", v:"Includes prolonged rehabilitation requirements"}
     ]
   },
   scoring: [],
   management: {
     conservative: [
       "Minor burns (<10% TBSA, partial thickness, not special area): outpatient wound care; moist non-adherent dressings (Mepitel, mepilex); change every 3–5 days",
-      "Cooling: cool running water 20 min within 20 min of injury (reduces depth); do NOT use ice",
+      "Cooling: cool running water 20 min within 20 min of injury (reduces depth); do NOT use ice. In large burns (>20% TBSA) avoid active/prolonged cooling — precipitates hypothermia; keep the patient warm",
       "Elevate burned limbs; analgesia"
     ],
     medical: [
       "Parkland formula: 4 × kg × %TBSA = mL Hartmann's in 24h; give half in first 8h from TIME OF BURN (not arrival); UO target 0.5–1mL/kg/hr",
       "Colloid (5% albumin): add at 12–24h in large burns to reduce total crystalloid volume (Modified Parkland/Muir-Barclay)",
       "High-protein enteral nutrition via NGT within 6–12h of injury: burns are most hypermetabolic injuries",
-      "Prophylactic antibiotics: NOT recommended routinely; treat sepsis when occurs",
+      "Prophylactic systemic antibiotics: contraindicated — they select resistant organisms without reducing sepsis; reserve antibiotics for documented/clinically suspected infection. Topical antimicrobials (silver sulfadiazine, mafenide acetate) are the exception",
       "Tetanus prophylaxis"
     ],
     surgical: [

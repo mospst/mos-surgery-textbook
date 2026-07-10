@@ -19,7 +19,8 @@ const ATLS_DISEASES = [
     "Permissive hypotension: SBP 80–90 mmHg target for hemorrhagic shock WITHOUT TBI; contraindicated in TBI (SBP ≥110 mmHg)",
     "Two large-bore peripheral IVs (≥18G) or intraosseous access — IO is first-line when IV access fails",
     "FAST exam (extended): pericardial + 4 abdominal windows + bilateral thoracic — performed during 'C' assessment",
-    "Massive transfusion protocol (MTP): activate early; 1:1:1 ratio (pRBC:FFP:platelets); TXA within 3 hours of injury"
+    "Massive transfusion protocol (MTP): activate early; 1:1:1 ratio (pRBC:FFP:platelets); TXA within 3 hours of injury",
+    "Response to initial fluid/blood bolus triages the patient: RESPONDER (sustained improvement — likely <20% loss, no ongoing bleeding), TRANSIENT RESPONDER (improves then deteriorates — ongoing haemorrhage, needs source control), NON-RESPONDER (no improvement — exsanguinating or non-haemorrhagic shock, immediate OR)"
   ],
   differentials: [
     "Hemorrhagic shock vs. neurogenic shock (bradycardia + hypotension; no blood loss)",
@@ -264,6 +265,8 @@ const ATLS_DISEASES = [
   ],
   pearls: [
     "Narrow pulse pressure (PP <30 mmHg) in Class II shock — SBP maintained but PP narrows early",
+    "Hypotension begins at SBP <110 mmHg (not 90): trauma mortality rises steadily below 110, so treat SBP <110 as hypoperfusion in the injured patient",
+    "Balanced 1:1:1 resuscitation is evidence-based (PROPPR: 1:1:1 vs 1:1:2 — 1:1:1 achieved better haemostasis and fewer exsanguination deaths)",
     "TXA window is HARD: after 3 hours it increases mortality — give early or not at all",
     "Calcium chloride (not gluconate) in MTP: chloride form gives 3× more ionized calcium per mL"
   ],
