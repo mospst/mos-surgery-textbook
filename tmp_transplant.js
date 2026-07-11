@@ -14,7 +14,8 @@ const TRANSPLANT_DISEASES = [
     "Indications: ESLD (MELD ≥15), acute liver failure, HCC within Milan criteria, metabolic liver disease",
     "MELD score (creatinine, bilirubin, INR) used for organ allocation — higher MELD = higher priority",
     "Orthotopic liver transplant (OLT): recipient hepatectomy + donor liver implantation (IVC, portal vein, hepatic artery, bile duct)",
-    "HAT (hepatic artery thrombosis): most feared early complication — retransplantation often required",
+    "HAT (hepatic artery thrombosis): most feared early complication — ~50% mortality even after definitive therapy; retransplantation often required; screen with US Doppler (>90% sensitivity/specificity)",
+    "Biliary complications are the 'Achilles heel' of liver transplant — leaks/strictures in 10–35%; leaks usually need reoperation, strictures are managed endoscopically/radiologically",
     "Immunosuppression: tacrolimus + mycophenolate ± prednisolone; lifelong"
   ],
   differentials: ["HCC outside Milan criteria (listing criteria not met)","Portal hypertension managed medically","Biliary reconstruction complication","DDLT vs LDLT decision"],
@@ -117,8 +118,11 @@ const TRANSPLANT_DISEASES = [
     {src:"NICE: Organ donation and transplantation"}
   ],
   pearls: [
-    "MELD score determines waitlist priority — calculate and track all ESLD patients",
+    "MELD score determines waitlist priority — calculate and track all ESLD patients; a MELD of ~15–18 is the minimum at which transplant confers a survival benefit (below it, waiting has lower mortality than transplanting)",
+    "Acute cellular rejection occurs in ~20% of liver recipients but — uniquely among solid organs — does NOT adversely affect patient or graft survival",
+    "Primary non-function (3–4% of grafts): immediate graft failure with peak AST often >5000 IU/L; retransplant is the only option; risk factors = donor macrosteatosis and prolonged ischemia",
     "Hepatic artery thrombosis: most common vascular complication (2–5%); early = surgical revision/retransplant; late = biliary ischemia/stricture",
+    "DCD livers with >25 min warm ischemia are prone to ischemic cholangiopathy and graft failure",
     "Post-transplant lymphoproliferative disorder (PTLD): EBV-associated; reduce immunosuppression + rituximab"
   ],
   mistakes: [
@@ -139,13 +143,13 @@ const TRANSPLANT_DISEASES = [
   keypoints: [
     "Transplant kidney placed extraperitoneally in iliac fossa: renal vein to external iliac vein, renal artery to external iliac artery",
     "Ureter anastomosed to bladder (ureteroneocystostomy — Lich-Gregoir technique)",
-    "Delayed graft function (DGF): oliguria/anuria post-op; ATN from ischemia; Doppler to exclude thrombosis",
-    "Rejection: hyperacute (minutes, ABO mismatch), acute (days-months, T-cell mediated), chronic (months-years, antibody-mediated)",
+    "Delayed graft function (DGF): oliguria/anuria post-op needing temporary dialysis; ATN from ischemia; cold ischemia time >24h markedly raises DGF risk (which itself worsens long-term graft survival); Doppler to exclude thrombosis",
+    "Rejection: hyperacute (minutes — preformed antibodies to donor HLA or ABO antigens from prior transplant/pregnancy/transfusion), acute (days-months, T-cell mediated), chronic (months-years, antibody-mediated)",
     "CMV disease: common post-transplant infection; prophylaxis with valganciclovir"
   ],
   differentials: ["Delayed graft function (ATN)","Acute rejection","Vascular thrombosis (renal artery/vein)","Urinary leak","Lymphocele","Ureteric obstruction"],
   mnemonics: [
-    {name:"Rejection types", text:"HAC: Hyperacute (minutes, ABO-incompatible) → Acute (days-weeks, T-cell) → Chronic (months-years, antibody-mediated CMR)"}
+    {name:"Rejection types", text:"HAC: Hyperacute (minutes, preformed anti-HLA/ABO antibody) → Acute (days-weeks, T-cell) → Chronic (months-years, antibody-mediated CMR)"}
   ],
   overview: {
     definition: "Surgical implantation of a deceased or living donor kidney into a recipient's iliac fossa, restoring renal function in end-stage renal disease.",
@@ -182,7 +186,7 @@ const TRANSPLANT_DISEASES = [
   criteria: {
     title: "Banff Rejection Criteria",
     items: [
-      {k:"Hyperacute rejection", v:"Minutes; ABO mismatch; graft thrombosis; nephrectomy"},
+      {k:"Hyperacute rejection", v:"Minutes; preformed antibody to donor HLA or ABO antigens; graft thrombosis; nephrectomy"},
       {k:"Acute T-cell mediated rejection (TCMR)", v:"Days-weeks; lymphocytic tubulitis (Banff IA/IB/IIA/IIB/III); treat with high-dose steroids ± ATG"},
       {k:"Antibody-mediated rejection (ABMR)", v:"Microvascular inflammation + DSA; treat with IVIG + plasma exchange + rituximab"},
       {k:"Chronic ABMR", v:"Months-years; interstitial fibrosis + tubular atrophy (IFTA); progressive graft loss"}
@@ -198,6 +202,7 @@ const TRANSPLANT_DISEASES = [
     medical: [
       "Induction immunosuppression: basiliximab (IL-2R antagonist, standard) or anti-thymocyte globulin (ATG, high-risk sensitised)",
       "Maintenance: tacrolimus (FK506) + mycophenolate mofetil (MMF) + prednisolone (triple therapy); withdraw prednisolone at 3 months if stable",
+      "CNIs (tacrolimus/cyclosporine) cause dose-dependent, reversible nephrotoxicity via afferent-arteriole vasoconstriction — a rising creatinine may be drug toxicity rather than rejection (biopsy distinguishes); MMF is teratogenic — switch to azathioprine if conception is planned",
       "Prophylaxis: valganciclovir (CMV), co-trimoxazole (PCP/UTI), antifungal × 3 months",
       "Acute rejection treatment: methylprednisolone 500mg IV × 3 days; ATG for steroid-resistant TCMR"
     ],
@@ -235,7 +240,9 @@ const TRANSPLANT_DISEASES = [
   pearls: [
     "Anuria post-transplant: Doppler first — exclude thrombosis before assuming ATN",
     "CMV disease most common serious infection post-transplant: prophylaxis duration and surveillance protocol critical",
-    "Living donor transplant: significantly better outcomes vs deceased donor — encourage eligible family members"
+    "Living donor transplant: significantly better outcomes vs deceased donor — encourage eligible family members",
+    "Most common cause of graft loss is recipient DEATH (usually cardiovascular) with a still-functioning graft; the second is chronic allograft nephropathy — technical/surgical graft loss stays ~1–2%",
+    "Donor kidneys with multiple renal arteries (10–30%) fare as well as single-artery grafts — reconstruct as separate implants or on a common Carrel patch"
   ],
   mistakes: [
     "Delaying Doppler in anuria post-transplant — arterial/venous thrombosis is an emergency; 6h window for salvage",
@@ -255,9 +262,10 @@ const TRANSPLANT_DISEASES = [
   keypoints: [
     "Indications: Type 1 DM with ESRD (SPK — simultaneous pancreas-kidney), or Type 1 DM alone (PAK — pancreas after kidney, PTA — pancreas transplant alone)",
     "SPK has best outcomes (80% 5-year insulin independence); immunological advantage",
-    "Graft thrombosis: most common early complication (5–10%); graft loss; prophylactic anticoagulation post-op",
+    "Graft thrombosis: most common early complication (5–15%); venous thrombosis is more common than arterial and usually occurs in the first week (sudden rise in insulin requirement); prophylactic anticoagulation post-op",
+    "Pancreas has the HIGHEST technical-complication rate of any solid-organ transplant (low graft blood flow, two hollow-viscus anastomoses, high immunogenicity, diabetic comorbidity)",
     "Enteric drainage (duodeno-jejunostomy): standard; avoids bladder complications",
-    "Rejection monitoring: in SPK — monitor creatinine as surrogate; in PTA — amylase and glucose (less sensitive)"
+    "Rejection is common (~30% in the first year — pancreas is one of the most immunogenic solid organs); in SPK monitor creatinine as surrogate; in PTA — amylase and glucose (less sensitive)"
   ],
   differentials: ["DM Type 1 managed with insulin pump","Islet cell transplantation (less invasive alternative)","Combined kidney transplant for Type 2 DM with ESRD"],
   mnemonics: [
@@ -330,7 +338,7 @@ const TRANSPLANT_DISEASES = [
       "Recipient: supine; midline laparotomy"
     ],
     steps: [
-      {n:1, t:"Arterial reconstruction (back table)", d:"Donor Y-graft (external iliac bifurcation) anastomosed to donor splenic artery + superior mesenteric artery to reconstitute single arterial inflow"},
+      {n:1, t:"Arterial reconstruction (back table)", d:"Donor Y-graft from the donor COMMON iliac artery bifurcation: donor external iliac artery → graft SMA, donor internal iliac artery → graft splenic artery, reconstituting a single arterial inflow"},
       {n:2, t:"Venous drainage (portal)", d:"Portal venous drainage: donor portal vein anastomosed to recipient superior mesenteric vein (SMV) — physiological insulin delivery to liver; OR systemic drainage: donor portal vein to external iliac vein"},
       {n:3, t:"Arterial anastomosis", d:"Y-graft to recipient common or external iliac artery; 6-0 Prolene"},
       {n:4, t:"Reperfusion", d:"Remove venous then arterial clamps; Doppler confirms arterial and venous flow"},
@@ -338,7 +346,8 @@ const TRANSPLANT_DISEASES = [
       {n:6, t:"Kidney implant (SPK)", d:"Left iliac fossa; standard renal transplant technique"}
     ],
     pearls: [
-      "Portal drainage is physiologically superior (insulin reaches liver first) but technically more complex",
+      "Portal venous drainage is physiologically appealing (insulin reaches liver first, avoiding systemic hyperinsulinaemia) but SYSTEMIC drainage is preferred in practice and used in >90% of transplants; no proven clinical superiority of portal",
+      "Exocrine rejection precedes endocrine rejection by ~5–7 days: falling urinary amylase (bladder-drained) prompts biopsy while still normoglycaemic — hyperglycaemia is a LATE sign (<5% reversible)",
       "Graft pancreatitis post-reperfusion: amylase/lipase rise; conservative management; usually resolves",
       "Donor BMI >30 and older age: higher technical complication rates; donor selection important"
     ]
@@ -356,7 +365,7 @@ const TRANSPLANT_DISEASES = [
   mistakes: [
     "Missing early graft thrombosis — daily Dopplers mandatory for first 7 days",
     "Not anticoagulating post-transplant — graft thrombosis rate without prophylaxis ~10%",
-    "Bladder drainage without warning patient of long-term urological complications (dehydration, UTI, urethritis)"
+    "Bladder drainage without warning patient of long-term urological complications — 20–30% require conversion to enteric drainage within 5 years (cystitis, hematuria, dehydration, metabolic acidosis from bicarbonate loss)"
   ]
 },
 {
@@ -434,7 +443,7 @@ const TRANSPLANT_DISEASES = [
     ],
     surgical: [
       {name:"Isolated small bowel transplantation", when:"Intestinal failure + normal liver + PN complications meeting listing criteria", notes:"Deceased donor small bowel (100–150cm); SMA to recipient aorta; SMV to recipient SMV or IVC; proximal jejunojejunostomy; distal chimney ileostomy (for endoscopic access) or ileocolostomy"},
-      {name:"Composite liver-SBT", when:"Intestinal failure + PN-related liver disease (cholestasis/fibrosis)", notes:"En-bloc liver + bowel from same donor; caval, portal vein, arterial anastomoses; most complex abdominal transplant"},
+      {name:"Composite liver-SBT", when:"Intestinal failure + PN-related liver disease (cholestasis/fibrosis)", notes:"En-bloc liver + bowel from same donor; caval, portal vein, arterial anastomoses. Keeping the hepatoduodenal ligament intact means NO biliary reconstruction is needed, virtually eliminating biliary complications; most complex abdominal transplant"},
       {name:"Multivisceral transplant", when:"Extensive foregut disease; portomesenteric thrombosis making isolated bowel implant impossible; combined hepatic and intestinal failure", notes:"Includes stomach, duodenum, pancreas, liver, bowel; total mesenteric replacement"}
     ]
   },
@@ -581,7 +590,7 @@ const TRANSPLANT_DISEASES = [
     {src:"NHS Blood and Transplant: Living donor criteria"}
   ],
   pearls: [
-    "Donor mortality is real: 0.1–0.5% for right hepatectomy; must be fully disclosed in independent evaluation",
+    "Donor mortality is real: ~0.4% for adult-to-adult right-lobe donation (vs <0.05% for kidney donation); the overall donor complication rate is ~40% (multiple complications in ~19%), with lasting-disability serious complications ~1.1% — all must be fully disclosed in independent evaluation",
     "FLR <30%: consider portal vein embolization (PVE) to induce hypertrophy before donation",
     "Most common donor complication: biliary leak or stricture (5–10%); most managed endoscopically"
   ],
