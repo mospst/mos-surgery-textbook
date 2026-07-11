@@ -631,6 +631,7 @@ const SOFTTISSUE_DISEASES = [
   hero: "Most common retroperitoneal sarcoma; surgery is the only curative modality; aim for R0 resection; dedifferentiated subtype has worst prognosis.",
   keypoints: [
     "Most common retroperitoneal soft tissue sarcoma (40–45% of all retroperitoneal STS)",
+    "Sarcomas spread haematogenously, primarily to the LUNG; nodal metastasis is rare (<5%) — routine nodal dissection is not indicated except in epithelioid, paediatric rhabdomyo-, clear-cell, angio-, and (more rarely) synovial sarcoma",
     "Retroperitoneal liposarcoma often huge at presentation (median >15 cm) — adjacent organs frequently involved",
     "Well-differentiated/dedifferentiated (WD/DD) subtype: MDM2/CDK4 amplification on chromosome 12q — confirm by FISH/IHC",
     "Surgery is the only curative treatment — aim R0 but R1 accepted for major vessel proximity",
@@ -750,7 +751,8 @@ const SOFTTISSUE_DISEASES = [
     "MDM2 amplification distinguishes WDLPS from benign lipoma — all deep lipomas >5 cm need MDM2 FISH testing",
     "Retroperitoneal WDLPS does NOT metastasise but has 80% local recurrence — death from local disease not distant mets",
     "Dedifferentiated area within a WDLPS completely changes prognosis and management — sample non-adipocytic areas at biopsy",
-    "Myxoid liposarcoma is the only sarcoma subtype that metastasises to unusual sites: fat-containing sites (retroperitoneum, paraspinal, other fat deposits) rather than lung"
+    "Myxoid liposarcoma is the only sarcoma subtype that metastasises to unusual sites: fat-containing sites (retroperitoneum, paraspinal, other fat deposits) rather than lung",
+    "For an EXTREMITY sarcoma, any incisional biopsy must be oriented LONGITUDINALLY along the limb so the tract and scar can be excised en-bloc with the tumour — poorly-oriented biopsies forced a change in the planned operation in ~25% of cases and enlarge the eventual defect and radiation field"
   ],
   mistakes: [
     "Shelling out a retroperitoneal liposarcoma — microsatellite deposits in adjacent fat cause inevitable local recurrence",
