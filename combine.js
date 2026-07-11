@@ -112,6 +112,8 @@ const TMP_FILES = [
   'tmp_atls.js',
   'tmp_tms.js',      // TeachMeSurgery reference additions (10 new entries)
   'tmp_mis.js',      // Minimally Invasive Surgery department (8 principles topics)
+  'tmp_abdwall.js',  // Abdominal-wall / retroperitoneal / mesenteric subtopics + DFSP (5 entries)
+  'tmp_trauma3.js',  // Trauma subtopics: BCVI, penetrating neck, REBOA, extremity vascular, pancreaticoduodenal (5 entries)
 ];
 
 // ── Hardcoded ID order (all 187 diseases in display sequence) ─────────────
@@ -143,25 +145,27 @@ const ID_ORDER = [
   'breast-ca','dcis','phyllodes','nipple-sparing-mastectomy','thyroid-ca','mivat','graves','mng','phpt','shpt',
   'phaeochromocytoma','conns','cushings-adrenal','adrenocortical-ca',
   'adrenal-incidentaloma','insulinoma','men1','men2','breast-abscess',
-  // TRAUMA & ACUTE CARE (19)
+  // TRAUMA & ACUTE CARE (24)
   'atls-primary-survey','atls-haemorrhagic-shock','atls-spinal-trauma','atls-airway',
   'trauma-laparotomy','acs','necrotising-fasciitis','splenic-trauma','liver-trauma',
   'bowel-trauma','diaphragm-rupture','pelvic-fracture','wound-dehiscence',
   'penetrating-abdominal','chest-trauma','burns','compartment-limb','renal-trauma',
-  'traumatic-brain',
+  'traumatic-brain','blunt-cerebrovascular-injury','penetrating-neck-injury','reboa',
+  'extremity-vascular-trauma','pancreaticoduodenal-trauma',
   // TRANSPLANT (7)
   'renal-tx','liver-tx','pancreas-tx','small-bowel-tx','living-donor-hepatectomy',
   // THORACIC (13)
   'lung-cancer','pneumothorax','empyema','mesothelioma','thymoma',
   'oesophageal-perforation','haemothorax','lung-abscess','mediastinal-mass',
   'chest-wall-tumour','pectus','lung-carcinoid','congenital-diaphragmatic-hernia',
-  // HERNIA & ABDOMINAL WALL (10)
+  // HERNIA & ABDOMINAL WALL (14)
   'inguinal-hernia','femoral-hernia','umbilical-hernia','incisional-hernia',
   'epigastric-hernia','strangulated-hernia','parastomal-hernia','spigelian-hernia',
-  'obturator-hernia','retroperitoneal-sarcoma',
-  // SKIN & SOFT TISSUE (9)
+  'obturator-hernia','retroperitoneal-sarcoma','rectus-sheath-hematoma','diastasis-recti',
+  'retroperitoneal-fibrosis','mesenteric-cyst',
+  // SKIN & SOFT TISSUE (10)
   'melanoma','bcc','scc-skin','hidradenitis','liposarcoma','leiomyosarcoma',
-  'desmoid','merkel-cell','kaposi',
+  'desmoid','merkel-cell','kaposi','dfsp',
   // MINIMALLY INVASIVE SURGERY (15)
   'mis-principles','lap-access','mis-energy','mis-complications','robotic-surgery',
   'diagnostic-laparoscopy','conversion-to-open','therapeutic-endoscopy','peg',
