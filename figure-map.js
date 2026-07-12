@@ -30,6 +30,11 @@ module.exports = {
   'pad': ['vasc-rutherford-pad-stages'],
   'cli': ['vasc-rutherford-pad-stages'],
   'mesenteric-isch': ['vasc-mesenteric-isch-anatomy'],
+  'varicose-veins': ['vasc-ceap-classification'],
+  'carotid-body-tumour': ['vasc-shamblin'],
+  'thoracic-outlet': ['vasc-thoracic-outlet'],
+  'renal-artery-stenosis': ['vasc-renal-artery-stenosis'],
+  'dvt': ['vasc-dvt-wells'],
 
   // ── HPB & SPLEEN ────────────────────────────────────────────────────────
   'cholangiocarcinoma': ['hpb-bismuth-corlette'],

@@ -485,6 +485,186 @@
   }
 
   // ─────────────────────────────────────────────────────────────────────────
+  // CEAP clinical classes of chronic venous disease (C0–C6)
+  // ─────────────────────────────────────────────────────────────────────────
+  function CeapFig() {
+    const rows = [
+      { c: "C0", d: "No visible or palpable signs of venous disease", op: 0.08 },
+      { c: "C1", d: "Telangiectasia or reticular veins", op: 0.16 },
+      { c: "C2", d: "Varicose veins (≥ 3 mm)", op: 0.26 },
+      { c: "C3", d: "Oedema", op: 0.36 },
+      { c: "C4", d: "Skin changes — C4a pigmentation/eczema · C4b lipodermatosclerosis", op: 0.5 },
+      { c: "C5", d: "Healed venous ulcer", op: 0.64 },
+      { c: "C6", d: "Active venous ulcer", op: 0.82 },
+    ];
+    const x0 = 30, y0 = 56, rh = 34, chipW = 50;
+    return (
+      <svg {...svgProps("0 0 640 330")}>
+        <text {...T(320, 24, 14, { fontWeight: 700 })}>CEAP — clinical classes of chronic venous disease</text>
+        {rows.map((r, i) => {
+          const y = y0 + i * rh;
+          return (
+            <g key={r.c}>
+              <rect x={x0} y={y} width={chipW} height={rh - 8} rx={4} fill={ACCENT} opacity={r.op} stroke={RULE} strokeWidth="1" />
+              <text {...T(x0 + chipW / 2, y + (rh - 8) / 2 + 4, 12, { fontWeight: 700 })}>{r.c}</text>
+              <text x={x0 + chipW + 16} y={y + (rh - 8) / 2 + 4} fontSize="10" fill={INK} textAnchor="start">{r.d}</text>
+            </g>
+          );
+        })}
+        <text x={x0} y={y0 + 7 * rh + 10} fontSize="9" fill={MUTE} textAnchor="start">Full CEAP also encodes Etiology · Anatomy · Pathophysiology (reflux vs obstruction).</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Shamblin classification of carotid body tumours (I–III)
+  // ─────────────────────────────────────────────────────────────────────────
+  function ShamblinFig() {
+    const panels = [
+      { t: "Shamblin I", d: ["small · minimal", "vessel attachment"], enc: 0 },
+      { t: "Shamblin II", d: ["larger · partially", "encircles vessels"], enc: 1 },
+      { t: "Shamblin III", d: ["encases carotids ·", "may need graft"], enc: 2 },
+    ];
+    const pw = 200;
+    const Panel = (p, i) => {
+      const ox = i * pw + 40, cy = 104;
+      const tumR = [16, 25, 33][p.enc];
+      return (
+        <g key={p.t}>
+          {i > 0 && <line x1={ox - 40} y1={54} x2={ox - 40} y2={196} stroke={RULE} strokeWidth="1" />}
+          <circle cx={ox + 62} cy={cy - 2} r={tumR} fill={ASOFT} stroke={ACCENT} strokeWidth="1.8" />
+          <path d={`M ${ox + 62} ${cy + 66} L ${ox + 62} ${cy + 8}`} fill="none" stroke={INK} strokeWidth="5" strokeLinecap="round" />
+          <path d={`M ${ox + 62} ${cy + 8} Q ${ox + 50} ${cy - 22} ${ox + 42} ${cy - 54}`} fill="none" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+          <path d={`M ${ox + 62} ${cy + 8} Q ${ox + 76} ${cy - 22} ${ox + 86} ${cy - 54}`} fill="none" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+          <text {...T(ox + 62, 176, 12, { fontWeight: 700 })}>{p.t}</text>
+          {p.d.map((ln, k) => <text key={k} {...T(ox + 62, 192 + k * 13, 9, { fill: SOFT })}>{ln}</text>)}
+        </g>
+      );
+    };
+    return (
+      <svg {...svgProps("0 0 640 230")}>
+        <text {...T(320, 22, 14, { fontWeight: 700 })}>Shamblin classification — carotid body tumour</text>
+        <text {...T(320, 42, 9, { fill: SOFT })}>ICA (left) &amp; ECA (right) arise from the common carotid; encasement rises I→III</text>
+        {panels.map((p, i) => Panel(p, i))}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Thoracic outlet syndrome — anatomy & subtypes
+  // ─────────────────────────────────────────────────────────────────────────
+  function ThoracicOutletFig() {
+    return (
+      <svg {...svgProps("0 0 660 300")}>
+        <text {...T(330, 24, 14, { fontWeight: 700 })}>Thoracic outlet syndrome — anatomy &amp; subtypes</text>
+        <path d="M 40 96 Q 150 84 250 100" fill="none" stroke={INK} strokeWidth="10" strokeLinecap="round" />
+        <text x={92} y={80} fontSize="9" fill={SOFT} textAnchor="middle">clavicle</text>
+        <path d="M 46 196 Q 150 214 254 190" fill="none" stroke={INK} strokeWidth="9" strokeLinecap="round" />
+        <text x={150} y={232} fontSize="9" fill={SOFT} textAnchor="middle">1st rib</text>
+        <path d="M 152 62 L 204 62 L 208 190 L 150 192 Z" fill={ASOFT} opacity="0.5" />
+        <line x1={150} y1={44} x2={146} y2={198} stroke={MUTE} strokeWidth="6" strokeLinecap="round" />
+        <line x1={206} y1={44} x2={210} y2={196} stroke={MUTE} strokeWidth="6" strokeLinecap="round" />
+        <text x={150} y={40} fontSize="8" fill={MUTE} textAnchor="middle">ant.</text>
+        <text x={208} y={40} fontSize="8" fill={MUTE} textAnchor="middle">mid.</text>
+        <line x1={120} y1={56} x2={122} y2={198} stroke={ACCENT} strokeWidth="3" />
+        <line x1={168} y1={56} x2={172} y2={196} stroke={ACCENT} strokeWidth="3" />
+        <line x1={184} y1={56} x2={190} y2={196} stroke={INK} strokeWidth="1.6" />
+        <text x={38} y={130} fontSize="8.5" fill={INK} textAnchor="end">SC vein</text>
+        <line x1={42} y1={127} x2={118} y2={122} stroke={RULE} strokeWidth="0.8" />
+        <text x={286} y={72} fontSize="9" fill={ACCENT} fontWeight="700" textAnchor="start">interscalene triangle</text>
+        <line x1={282} y1={68} x2={200} y2={104} stroke={RULE} strokeWidth="0.8" />
+        <text x={286} y={158} fontSize="9" fill={ACCENT} fontWeight="700" textAnchor="start">costoclavicular space</text>
+        <line x1={282} y1={154} x2={214} y2={150} stroke={RULE} strokeWidth="0.8" />
+        <line x1={430} y1={56} x2={430} y2={252} stroke={RULE} strokeWidth="1" />
+        <text x={452} y={72} fontSize="11" fill={INK} fontWeight="700" textAnchor="start">Subtypes</text>
+        {[
+          ["Neurogenic (~95%)", "lower brachial plexus (C8–T1)"],
+          ["Venous", "Paget-Schroetter (effort thrombosis)"],
+          ["Arterial", "subclavian artery · cervical rib"],
+        ].map((r, i) => (
+          <g key={i}>
+            <text x={452} y={102 + i * 46} fontSize="10.5" fill={ACCENT} fontWeight="700" textAnchor="start">{r[0]}</text>
+            <text x={452} y={118 + i * 46} fontSize="9.5" fill={SOFT} textAnchor="start">{r[1]}</text>
+          </g>
+        ))}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Renal artery stenosis — atherosclerotic vs fibromuscular dysplasia
+  // ─────────────────────────────────────────────────────────────────────────
+  function RenalArteryStenosisFig() {
+    const Panel = (ox, title, sub, kind) => {
+      const aortaX = ox + 34, ry = 108;
+      const e = [
+        <rect key="ao" x={aortaX} y={44} width={22} height={140} fill={WALL} stroke={INK} strokeWidth="1.8" />,
+        <path key="kid" d={`M ${ox + 214} ${ry - 34} C ${ox + 254} ${ry - 40} ${ox + 260} ${ry + 40} ${ox + 216} ${ry + 34} C ${ox + 198} ${ry + 30} ${ox + 202} ${ry + 12} ${ox + 216} ${ry} C ${ox + 202} ${ry - 12} ${ox + 198} ${ry - 30} ${ox + 214} ${ry - 34} Z`} fill={WALL} stroke={INK} strokeWidth="1.8" />,
+      ];
+      if (kind === "athero") {
+        e.push(<path key="ra" d={`M ${aortaX + 22} ${ry} L ${ox + 214} ${ry}`} fill="none" stroke={ACCENT} strokeWidth="7" />);
+        e.push(<circle key="pl" cx={aortaX + 30} cy={ry} r={9} fill={INK} opacity="0.82" />);
+        e.push(<text key="pll" x={aortaX + 30} y={ry - 16} fontSize="8.5" fill={ACCENT} textAnchor="middle">ostial plaque</text>);
+      } else {
+        e.push(<path key="ra" d={`M ${aortaX + 22} ${ry} L ${ox + 214} ${ry}`} fill="none" stroke={ACCENT} strokeWidth="4" />);
+        [132, 152, 172, 192].forEach((bx, k) => e.push(<circle key={"b" + k} cx={ox + bx} cy={ry} r={7} fill="none" stroke={ACCENT} strokeWidth="2.5" />));
+        e.push(<text key="sbl" x={ox + 162} y={ry - 16} fontSize="8.5" fill={ACCENT} textAnchor="middle">string of beads</text>);
+      }
+      return (
+        <g key={title}>
+          <text {...T(ox + 140, 26, 12, { fontWeight: 700 })}>{title}</text>
+          {e}
+          <text x={aortaX + 11} y={200} fontSize="8.5" fill={SOFT} textAnchor="middle">aorta</text>
+          {sub.map((ln, k) => <text key={k} {...T(ox + 140, 222 + k * 13, 9, { fill: SOFT })}>{ln}</text>)}
+        </g>
+      );
+    };
+    return (
+      <svg {...svgProps("0 0 660 268")}>
+        <line x1={330} y1={16} x2={330} y2={210} stroke={RULE} strokeWidth="1" />
+        {Panel(0, "Atherosclerotic (~90%)", ["ostial / proximal narrowing", "older · CV risk factors"], "athero")}
+        {Panel(330, "Fibromuscular dysplasia (~10%)", ["mid–distal 'string of beads'", "younger women"], "fmd")}
+        <text {...T(330, 258, 9, { fill: MUTE })}>Both → renovascular hypertension via RAAS activation</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Wells score — clinical probability of DVT
+  // ─────────────────────────────────────────────────────────────────────────
+  function DvtWellsFig() {
+    const items = [
+      "Active cancer (treatment within 6 months)",
+      "Paralysis / paresis / recent leg immobilisation",
+      "Bedridden > 3 days or major surgery < 12 weeks",
+      "Localised tenderness along the deep veins",
+      "Entire leg swollen",
+      "Calf > 3 cm larger than the asymptomatic side",
+      "Pitting oedema (symptomatic leg only)",
+      "Collateral superficial (non-varicose) veins",
+      "Previously documented DVT",
+    ];
+    const x0 = 36, y0 = 56, rh = 20;
+    return (
+      <svg {...svgProps("0 0 620 350")}>
+        <text {...T(310, 24, 14, { fontWeight: 700 })}>Wells score — clinical probability of DVT</text>
+        {items.map((s, i) => (
+          <g key={i}>
+            <text x={x0} y={y0 + i * rh} fontSize="10" fill={INK} textAnchor="start">{s}</text>
+            <text x={572} y={y0 + i * rh} fontSize="10" fill={ACCENT} fontWeight="700" textAnchor="end">+1</text>
+          </g>
+        ))}
+        <text x={x0} y={y0 + 9 * rh} fontSize="10" fill={INK} textAnchor="start">Alternative diagnosis at least as likely as DVT</text>
+        <text x={572} y={y0 + 9 * rh} fontSize="10" fill={MUTE} fontWeight="700" textAnchor="end">−2</text>
+        <line x1={x0} y1={y0 + 9 * rh + 12} x2={572} y2={y0 + 9 * rh + 12} stroke={RULE} strokeWidth="1" />
+        <text x={x0} y={y0 + 9 * rh + 34} fontSize="10.5" fill={ACCENT} fontWeight="700" textAnchor="start">Probability:  ≤ 0 low  ·  1–2 moderate  ·  ≥ 3 high</text>
+        <text x={x0} y={y0 + 9 * rh + 56} fontSize="9" fill={SOFT} textAnchor="start">Proximal (popliteal &amp; above) DVT → higher PE risk, anticoagulate ·</text>
+        <text x={x0} y={y0 + 9 * rh + 69} fontSize="9" fill={SOFT} textAnchor="start">isolated distal (calf) DVT → may serially survey with ultrasound</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
   // Register all figures
   // ─────────────────────────────────────────────────────────────────────────
   window.SK_FIGURES = Object.assign(window.SK_FIGURES || {}, {
@@ -522,6 +702,46 @@
       caption: "SMA embolus (50–60% of cases) typically lodges 3–10 cm distal to the SMA ostium, often sparing the proximal jejunum via collaterals from the coeliac axis — a key clinical clue. SMA thrombosis occludes at the ostium on a background of severe atherosclerosis, causing total SMA territory ischaemia. Early CT angiography and embolectomy/revascularisation within the 'golden 6 hours' are critical.",
       ref: "Brandt LJ & Boley SJ, Gastroenterol Clin North Am 2003 · ESVS Guidelines, Eur J Vasc Endovasc Surg 2017;53(4):460",
       render: () => <MesentericIschFig />,
+    },
+
+    "vasc-ceap-classification": {
+      title: "CEAP clinical classification of chronic venous disease",
+      caption:
+        "The clinical (C) axis of CEAP grades chronic venous disease from C0 (no signs) through varicose veins (C2), oedema (C3) and skin changes (C4) to healed (C5) and active (C6) venous ulceration. It standardises severity and drives management — from compression for early classes to intervention for symptomatic reflux and ulceration. The full CEAP additionally records Etiology, Anatomy and Pathophysiology (reflux vs obstruction).",
+      ref: "Lurie F et al., J Vasc Surg Venous Lymphat Disord 2020;8:342 (CEAP 2020 revision).",
+      render: () => <CeapFig />,
+    },
+
+    "vasc-shamblin": {
+      title: "Shamblin classification — carotid body tumour",
+      caption:
+        "Shamblin grade describes how far a carotid body (paraganglioma) tumour encases the carotid bifurcation and predicts operative difficulty and vascular risk. Group I tumours are small and easily dissected off the vessels; Group II tumours partially surround and adhere to the carotids; Group III tumours encase the vessels and may require carotid resection and reconstruction. Higher grade means greater blood loss and cranial-nerve/vascular injury risk.",
+      ref: "Shamblin WR et al., Am J Surg 1971;122:732.",
+      render: () => <ShamblinFig />,
+    },
+
+    "vasc-thoracic-outlet": {
+      title: "Thoracic outlet syndrome — anatomy & subtypes",
+      caption:
+        "The neurovascular bundle can be compressed in the interscalene triangle, the costoclavicular space, or beneath pectoralis minor. Neurogenic TOS is by far the commonest (~95%), affecting the lower brachial plexus (C8–T1). Venous TOS causes subclavian-vein 'effort thrombosis' (Paget-Schroetter), and arterial TOS — the rarest but most dangerous — involves the subclavian artery and is strongly associated with a cervical rib.",
+      ref: "Illig KA et al., J Vasc Surg 2016;64:e23 (SVS reporting standards).",
+      render: () => <ThoracicOutletFig />,
+    },
+
+    "vasc-renal-artery-stenosis": {
+      title: "Renal artery stenosis — atherosclerotic vs FMD",
+      caption:
+        "Around 90% of renal artery stenosis is atherosclerotic — an ostial or proximal narrowing in older patients with cardiovascular risk factors. Most of the remainder is fibromuscular dysplasia, a mid-to-distal 'string of beads' typically in younger women. Both reduce renal perfusion and activate the renin–angiotensin–aldosterone system, causing renovascular hypertension; FMD responds well to angioplasty, whereas atherosclerotic lesions are usually managed medically.",
+      ref: "Lao D et al., Circulation 2011 · ACC/AHA PAD guideline.",
+      render: () => <RenalArteryStenosisFig />,
+    },
+
+    "vasc-dvt-wells": {
+      title: "Wells score — clinical probability of DVT",
+      caption:
+        "The Wells score stratifies pre-test probability of a deep vein thrombosis and directs the work-up: a low score (≤0) with a negative D-dimer effectively excludes DVT, while a higher score prompts compression ultrasound. Proximal DVT (popliteal vein and above) carries a substantial pulmonary-embolism risk and is anticoagulated, whereas an isolated distal (calf) DVT may instead be followed with serial ultrasound in selected low-risk patients.",
+      ref: "Wells PS et al., N Engl J Med 2003;349:1227.",
+      render: () => <DvtWellsFig />,
     },
 
   });
