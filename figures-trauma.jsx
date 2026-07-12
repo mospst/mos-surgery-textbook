@@ -583,6 +583,436 @@
   }
 
   // ─────────────────────────────────────────────────────────────────────────
+  // AAST Renal Injury Grade I–V
+  // ─────────────────────────────────────────────────────────────────────────
+  function AastKidneyFig() {
+    const grades = [
+      { g: "I",   desc: "Subcapsular hx or\ncontusion; no laceration", draw: "contusion" },
+      { g: "II",  desc: "Perirenal hx (Gerota)\nlac <1cm, no extravasation", draw: "perirenal" },
+      { g: "III", desc: "Laceration >1cm depth\nno collecting-system injury", draw: "deep-lac" },
+      { g: "IV",  desc: "Lac into collecting system\nor main vessel / infarct", draw: "collecting" },
+      { g: "V",   desc: "Shattered kidney or\nhilar pedicle avulsion", draw: "shattered" },
+    ];
+
+    const cellW = 124, cellH = 185, cols = 5;
+    const svgW = cellW * cols;
+    const rx = 26, ry = 42;
+
+    const kidneyPath = (cx, cy) =>
+      `M ${cx} ${cy - ry} C ${cx - rx * 1.3} ${cy - ry} ${cx - rx * 1.3} ${cy + ry} ${cx} ${cy + ry} C ${cx + rx * 0.75} ${cy + ry} ${cx + rx * 0.95} ${cy + ry * 0.35} ${cx + rx * 0.3} ${cy} C ${cx + rx * 0.95} ${cy - ry * 0.35} ${cx + rx * 0.75} ${cy - ry} ${cx} ${cy - ry} Z`;
+
+    const drawGrade = (kind, cx, cy) => {
+      const hilumX = cx + rx * 0.3;
+      const base = [];
+
+      if (kind === "perirenal") {
+        base.push(
+          <ellipse key="gerota" cx={cx - 1} cy={cy} rx={rx * 1.55} ry={ry * 1.14} fill="none" stroke={RULE} strokeWidth="1.3" strokeDasharray="4 3" />
+        );
+      }
+
+      base.push(<path key="body" d={kidneyPath(cx, cy)} fill={ASOFT} stroke={ACCENT} strokeWidth="2" />);
+
+      if (kind === "contusion") {
+        base.push(
+          <ellipse key="h" cx={cx - 13} cy={cy - 16} rx={9} ry={6.5} fill={RULE} opacity="0.55" stroke={ACCENT} strokeWidth="1" />
+        );
+      } else if (kind === "perirenal") {
+        base.push(
+          <ellipse key="h" cx={cx - 27} cy={cy + 8} rx={10} ry={19} fill={RULE} opacity="0.32" />,
+          <line key="l" x1={cx - 9} y1={cy - ry * 0.55} x2={cx + 1} y2={cy - ry * 0.28} stroke={MUTE} strokeWidth="2.6" strokeLinecap="round" />
+        );
+      } else if (kind === "deep-lac") {
+        base.push(
+          <line key="l" x1={cx - 15} y1={cy - ry * 0.8} x2={cx + 5} y2={cy + ry * 0.05} stroke={MUTE} strokeWidth="4" strokeLinecap="round" />,
+          <ellipse key="h" cx={cx - 17} cy={cy - 8} rx={18} ry={14} fill={RULE} opacity="0.4" />
+        );
+      } else if (kind === "collecting") {
+        base.push(
+          <line key="l" x1={cx - 16} y1={cy - ry * 0.75} x2={hilumX + 1} y2={cy - 2} stroke={MUTE} strokeWidth="5" strokeLinecap="round" />,
+          <circle key="hv" cx={hilumX + 9} cy={cy} r={5.5} fill={ACCENT} opacity="0.9" />,
+          <line key="s1" x1={hilumX + 9} y1={cy + 7} x2={hilumX + 4} y2={cy + 20} stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" />,
+          <line key="s2" x1={hilumX + 9} y1={cy + 7} x2={hilumX + 13} y2={cy + 21} stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" />
+        );
+      } else if (kind === "shattered") {
+        [[-15, -30, -2, -8], [4, -24, -13, -4], [-20, -2, -3, 22], [-6, 6, -22, 24]].forEach(([x1, y1, x2, y2], k) => {
+          base.push(
+            <line key={`c${k}`} x1={cx + x1} y1={cy + y1} x2={cx + x2} y2={cy + y2} stroke={MUTE} strokeWidth="3.2" strokeLinecap="round" />
+          );
+        });
+        base.push(
+          <line key="ped1" x1={hilumX - 3} y1={cy - 5} x2={hilumX + 9} y2={cy - 5} stroke={ACCENT} strokeWidth="2.5" strokeLinecap="round" />,
+          <line key="ped2" x1={hilumX + 15} y1={cy - 5} x2={hilumX + 27} y2={cy - 5} stroke={ACCENT} strokeWidth="2.5" strokeLinecap="round" />
+        );
+      }
+      return base;
+    };
+
+    return (
+      <svg {...svgProps(`0 0 ${svgW} ${cellH}`)}>
+        {grades.map((gr, i) => {
+          const cx = i * cellW + cellW / 2;
+          const cy = 72;
+          const lines = gr.desc.split("\n");
+          return (
+            <g key={gr.g}>
+              <text {...T(cx, 18, 17, { fontWeight: 700, fill: ACCENT })}>Grade {gr.g}</text>
+              {drawGrade(gr.draw, cx, cy)}
+              {lines.map((ln, li) => (
+                <text key={li} {...T(cx, 140 + li * 16, 9, { fill: SOFT })}>{ln}</text>
+              ))}
+              {i > 0 && (
+                <line x1={i * cellW} y1={0} x2={i * cellW} y2={cellH} stroke={RULE} strokeWidth="0.8" />
+              )}
+            </g>
+          );
+        })}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Young-Burgess pelvic-ring fracture mechanism classification
+  // ─────────────────────────────────────────────────────────────────────────
+  function YoungBurgessFig() {
+    const panels = [
+      {
+        key: "lc", label: "LC", sub: "Lateral Compression",
+        lines: ["I – ipsilateral sacral buckle", "II – crescent fx / SI injury", "III – + contralateral (windswept)"],
+      },
+      {
+        key: "apc", label: "APC", sub: "Anteroposterior Compression",
+        lines: ["I – symphysis gap <2.5cm", "II – “open book”, post. SI intact", "III – complete SI disruption"],
+      },
+      {
+        key: "vs", label: "VS", sub: "Vertical Shear",
+        lines: ["Complete ant. + post. disruption", "Vertical / cephalad displacement", "Most unstable — high transfusion"],
+      },
+      {
+        key: "cm", label: "CM", sub: "Combined Mechanism",
+        lines: ["Mixed features, ≥ 2 patterns", "e.g. LC + vertical component", "Manage per worst component"],
+      },
+    ];
+
+    const cellW = 172, cols = 4, svgW = cellW * cols, svgH = 250;
+    const cy0 = 112;
+    const yTop = cy0 - 28, yLat = cy0 + 6, yBot = cy0 + 36;
+
+    const halfPts = (cx, side, dxTop, dxBot, dy) => {
+      const s = side === "L" ? -1 : 1;
+      return [
+        [cx + s * (8 + dxTop), yTop + dy],
+        [cx + s * (32 + dxTop), yTop + dy],
+        [cx + s * (40 + (dxTop + dxBot) / 2), yLat + dy],
+        [cx + s * (7 + dxBot), yBot + dy],
+      ];
+    };
+    const halfD = (pts) =>
+      `M ${pts[0][0]} ${pts[0][1]} L ${pts[1][0]} ${pts[1][1]} L ${pts[2][0]} ${pts[2][1]} L ${pts[3][0]} ${pts[3][1]} Z`;
+
+    const arrowLeft = (xTail, xTip, y, key) => [
+      <line key={key + "s"} x1={xTail} y1={y} x2={xTip + 10} y2={y} stroke={ACCENT} strokeWidth="3" strokeLinecap="round" />,
+      <polygon key={key + "h"} points={`${xTip},${y} ${xTip + 11},${y - 6} ${xTip + 11},${y + 6}`} fill={ACCENT} />,
+    ];
+    const arrowUp = (yTail, yTip, x, key) => [
+      <line key={key + "s"} x1={x} y1={yTail} x2={x} y2={yTip + 10} stroke={ACCENT} strokeWidth="3" strokeLinecap="round" />,
+      <polygon key={key + "h"} points={`${x},${yTip} ${x - 6},${yTip + 11} ${x + 6},${yTip + 11}`} fill={ACCENT} />,
+    ];
+
+    const drawPanel = (p, cx) => {
+      let RdxTop = 0, RdxBot = 0, Rdy = 0;
+      if (p.key === "apc") { RdxTop = 5; RdxBot = 15; }
+      if (p.key === "vs") { Rdy = -15; }
+      if (p.key === "cm") { RdxTop = 2; RdxBot = 6; Rdy = -7; }
+
+      const lp = halfPts(cx, "L", 0, 0, 0);
+      const rp = halfPts(cx, "R", RdxTop, RdxBot, Rdy);
+      const intact = p.key === "lc";
+
+      const els = [];
+
+      if (intact) {
+        els.push(
+          <path key="sac" d={`M ${lp[0][0]} ${lp[0][1]} L ${rp[0][0]} ${rp[0][1]} L ${cx} ${yTop + 16} Z`} fill={ASOFT} stroke={ACCENT} strokeWidth="1" opacity="0.7" />,
+          <line key="symph" x1={lp[3][0]} y1={lp[3][1]} x2={rp[3][0]} y2={rp[3][1]} stroke={RULE} strokeWidth="2" />
+        );
+      }
+
+      els.push(
+        <path key="L" d={halfD(lp)} fill={WALL} stroke={INK} strokeWidth="2" strokeLinejoin="round" />,
+        <path key="R" d={halfD(rp)} fill={WALL} stroke={INK} strokeWidth="2" strokeLinejoin="round" />,
+        <circle key="acL" cx={lp[2][0] + 8} cy={lp[2][1]} r={3.6} fill={LUMEN} stroke={RULE} strokeWidth="1" />,
+        <circle key="acR" cx={rp[2][0] - 8} cy={rp[2][1]} r={3.6} fill={LUMEN} stroke={RULE} strokeWidth="1" />
+      );
+
+      if (p.key === "lc") {
+        els.push(...arrowLeft(cx + 72, rp[2][0] + 4, rp[2][1], "lc"));
+        els.push(<line key="imp" x1={rp[3][0] - 6} y1={rp[3][1] - 6} x2={rp[3][0] + 6} y2={rp[3][1] + 6} stroke={ACCENT} strokeWidth="2.5" strokeLinecap="round" />);
+      } else if (p.key === "apc") {
+        els.push(...arrowUp(yBot + 34, yBot + 6, cx, "apc"));
+      } else if (p.key === "vs") {
+        els.push(...arrowUp(yBot + 22, yTop + Rdy - 20, rp[2][0] + 16, "vs"));
+        els.push(<line key="ref" x1={rp[2][0] - 4} y1={yLat} x2={rp[2][0] + 12} y2={yLat} stroke={RULE} strokeWidth="1.3" strokeDasharray="2 2" />);
+      }
+
+      return els;
+    };
+
+    return (
+      <svg {...svgProps(`0 0 ${svgW} ${svgH}`)}>
+        <text {...T(svgW / 2, 15, 12, { fill: SOFT, fontWeight: 600 })}>Young-Burgess Pelvic-Ring Fracture Patterns (AP-view schematic)</text>
+        {panels.map((p, i) => {
+          const cx = i * cellW + cellW / 2;
+          return (
+            <g key={p.key}>
+              <text {...T(cx, 42, 16, { fontWeight: 700, fill: ACCENT })}>{p.label}</text>
+              <text {...T(cx, 57, 9.5, { fill: SOFT })}>{p.sub}</text>
+              {drawPanel(p, cx)}
+              {p.lines.map((ln, li) => (
+                <text key={li} x={i * cellW + 8} y={192 + li * 15} fontSize="9.2" fill={SOFT} textAnchor="start">{ln}</text>
+              ))}
+              {i > 0 && <line x1={i * cellW} y1={26} x2={i * cellW} y2={svgH - 6} stroke={RULE} strokeWidth="0.8" />}
+            </g>
+          );
+        })}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Denver Blunt Cerebrovascular Injury (BCVI) Grading Scale I–V
+  // ─────────────────────────────────────────────────────────────────────────
+  function DenverBcviFig() {
+    const grades = [
+      { g: "I",   desc: "Wall irregularity /\ndissection, <25%\nnarrowing", draw: "irregular" },
+      { g: "II",  desc: "Intramural thrombus/flap\nor ≥25% stenosis", draw: "thrombus" },
+      { g: "III", desc: "Pseudoaneurysm", draw: "pseudo" },
+      { g: "IV",  desc: "Occlusion", draw: "occluded" },
+      { g: "V",   desc: "Transection with\nfree extravasation", draw: "transected" },
+    ];
+
+    const cellW = 124, cellH = 185, cols = 5;
+    const svgW = cellW * cols;
+    const tubeH = 30, tubeY = 62;
+
+    const drawGrade = (kind, cx) => {
+      const x1 = cx - 44, x2 = cx + 44;
+      const yTop = tubeY, yBot = tubeY + tubeH, yMid = tubeY + tubeH / 2;
+      const els = [];
+
+      if (kind === "irregular") {
+        els.push(
+          <rect key="wall" x={x1} y={yTop} width={x2 - x1} height={tubeH} rx={tubeH / 2} fill={LUMEN} stroke={INK} strokeWidth="2.5" />,
+          <path key="irr1" d={`M ${cx - 30} ${yTop + 4} q 8 6 14 0 q 8 -6 16 1 q 9 6 15 -1`} fill="none" stroke={ACCENT} strokeWidth="2" />,
+          <path key="irr2" d={`M ${cx - 30} ${yBot - 4} q 8 -6 14 0 q 8 6 16 -1 q 9 -6 15 1`} fill="none" stroke={ACCENT} strokeWidth="2" />
+        );
+      } else if (kind === "thrombus") {
+        els.push(
+          <rect key="wall" x={x1} y={yTop} width={x2 - x1} height={tubeH} rx={tubeH / 2} fill={LUMEN} stroke={INK} strokeWidth="2.5" />,
+          <path key="th" d={`M ${cx - 16} ${yTop + 2} Q ${cx + 10} ${yTop + 2} ${cx + 16} ${yMid} Q ${cx + 2} ${yMid - 3} ${cx - 16} ${yTop + 2} Z`} fill={ACCENT} opacity="0.85" />
+        );
+      } else if (kind === "pseudo") {
+        els.push(
+          <rect key="wall" x={x1} y={yTop} width={x2 - x1} height={tubeH} rx={tubeH / 2} fill={LUMEN} stroke={INK} strokeWidth="2.5" />,
+          <path key="neck" d={`M ${cx - 6} ${yTop + 4} L ${cx + 10} ${yTop - 4}`} fill="none" stroke={ACCENT} strokeWidth="7" strokeLinecap="round" opacity="0.55" />,
+          <circle key="ps" cx={cx + 8} cy={yTop - 10} r={15} fill={ASOFT} stroke={ACCENT} strokeWidth="2" />
+        );
+      } else if (kind === "occluded") {
+        els.push(
+          <rect key="wall" x={x1} y={yTop} width={x2 - x1} height={tubeH} rx={tubeH / 2} fill={LUMEN} stroke={INK} strokeWidth="2.5" />,
+          <rect key="clot" x={x1 + 3} y={yTop + 3} width={x2 - x1 - 6} height={tubeH - 6} rx={(tubeH - 6) / 2} fill={MUTE} opacity="0.85" />
+        );
+      } else if (kind === "transected") {
+        const gap = 20, capR = tubeH / 2;
+        const cutL = cx - gap / 2, cutR = cx + gap / 2;
+        els.push(
+          <path key="wallL" d={`M ${cutL} ${yTop} L ${x1 + capR} ${yTop} A ${capR} ${capR} 0 0 0 ${x1 + capR} ${yBot} L ${cutL} ${yBot} Z`} fill={LUMEN} stroke={INK} strokeWidth="2.5" />,
+          <path key="wallR" d={`M ${cutR} ${yTop} L ${x2 - capR} ${yTop} A ${capR} ${capR} 0 0 1 ${x2 - capR} ${yBot} L ${cutR} ${yBot} Z`} fill={LUMEN} stroke={INK} strokeWidth="2.5" />,
+          <path key="spurt" d={`M ${cx - 2} ${yMid - 4} q -6 18 3 32 q 9 -14 3 -32 Z`} fill={ACCENT} opacity="0.8" />,
+          <circle key="drop" cx={cx + 11} cy={yMid + 30} r={3.6} fill={ACCENT} opacity="0.7" />
+        );
+      }
+      return els;
+    };
+
+    return (
+      <svg {...svgProps(`0 0 ${svgW} ${cellH}`)}>
+        {grades.map((gr, i) => {
+          const cx = i * cellW + cellW / 2;
+          const lines = gr.desc.split("\n");
+          return (
+            <g key={gr.g}>
+              <text {...T(cx, 22, 17, { fontWeight: 700, fill: ACCENT })}>Grade {gr.g}</text>
+              {drawGrade(gr.draw, cx)}
+              {lines.map((ln, li) => (
+                <text key={li} {...T(cx, 130 + li * 16, 10.5, { fill: SOFT })}>{ln}</text>
+              ))}
+              {i > 0 && <line x1={i * cellW} y1={0} x2={i * cellW} y2={cellH} stroke={RULE} strokeWidth="0.8" />}
+            </g>
+          );
+        })}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Zones of the Neck I–III (penetrating neck injury)
+  // ─────────────────────────────────────────────────────────────────────────
+  function NeckZonesFig() {
+    const ySkullBase = 96, yMandible = 128, yCricoid = 222, yClavicle = 300;
+    const neckXL = 78, neckXR = 142;
+    const cx = (neckXL + neckXR) / 2;
+    const shoulderXL = 24, shoulderXR = 196;
+
+    const zones = [
+      { key: "III", y0: ySkullBase, y1: yMandible,
+        structs: ["Distal ICA, vertebral a.", "CN IX–XII, pharynx — hard access"] },
+      { key: "II", y0: yMandible, y1: yCricoid,
+        structs: ["Carotid & jugular vessels", "Larynx, trachea, esophagus", "Most exposed — explore directly"] },
+      { key: "I", y0: yCricoid, y1: yClavicle,
+        structs: ["Great vessel origins (subclavian)", "Trachea, esophagus, thoracic duct", "Thoracic outlet — hardest access"] },
+    ];
+
+    const boundaries = [
+      { y: ySkullBase, label: "skull base" },
+      { y: yMandible, label: "angle of mandible" },
+      { y: yCricoid, label: "cricoid cartilage" },
+      { y: yClavicle, label: "sternal notch / clavicle" },
+    ];
+
+    return (
+      <svg {...svgProps("0 0 520 320")}>
+        <text {...T(260, 16, 13, { fill: SOFT, fontWeight: 600 })}>Zones of the Neck (lateral view)</text>
+
+        {/* Head */}
+        <ellipse cx={cx} cy={78} rx={34} ry={44} fill={WALL} stroke={INK} strokeWidth="1.8" />
+        <circle cx={128} cy={78} r={5} fill="none" stroke={INK} strokeWidth="1.3" />
+        <path d="M 140 86 Q 151 96 137 110" fill="none" stroke={INK} strokeWidth="1.5" />
+
+        {/* Zone bands */}
+        <rect x={neckXL} y={ySkullBase} width={neckXR - neckXL} height={yMandible - ySkullBase} fill={LUMEN} stroke={RULE} strokeWidth="1" />
+        <rect x={neckXL} y={yMandible} width={neckXR - neckXL} height={yCricoid - yMandible} fill={ASOFT} stroke={RULE} strokeWidth="1" />
+        <polygon points={`${neckXL},${yCricoid} ${neckXR},${yCricoid} ${shoulderXR},${yClavicle} ${shoulderXL},${yClavicle}`} fill={WALL} stroke={RULE} strokeWidth="1" />
+
+        {/* silhouette contour */}
+        <path d={`M ${neckXL} ${ySkullBase} L ${neckXL} ${yCricoid} L ${shoulderXL} ${yClavicle}`} fill="none" stroke={INK} strokeWidth="1.8" />
+        <path d={`M ${neckXR} ${ySkullBase} L ${neckXR} ${yCricoid} L ${shoulderXR} ${yClavicle}`} fill="none" stroke={INK} strokeWidth="1.8" />
+
+        {/* boundary dashed lines + landmark labels */}
+        {boundaries.map((b, i) => (
+          <g key={i}>
+            <line x1={15} y1={b.y} x2={205} y2={b.y} stroke={RULE} strokeWidth="1.2" strokeDasharray="4 3" />
+            <text x={18} y={b.y - 4} fontSize="9" fill={SOFT} textAnchor="start">{b.label}</text>
+          </g>
+        ))}
+
+        {/* zone numerals inside bands */}
+        {zones.map((z) => (
+          <text key={z.key} {...T(cx, (z.y0 + z.y1) / 2 + 7, 20, { fontWeight: 700, fill: ACCENT })}>{z.key}</text>
+        ))}
+
+        {/* structures-at-risk lists */}
+        <text x={225} y={ySkullBase - 6} fontSize="11" fill={INK} fontWeight="600" textAnchor="start">Structures at risk</text>
+        {zones.map((z) => {
+          const ymid = (z.y0 + z.y1) / 2;
+          const startY = ymid - ((z.structs.length - 1) * 13) / 2 + 4;
+          return (
+            <g key={"s" + z.key}>
+              {z.structs.map((s, si) => (
+                <text key={si} x={225} y={startY + si * 13} fontSize="9.5" fill={SOFT} textAnchor="start">{s}</text>
+              ))}
+            </g>
+          );
+        })}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // REBOA aortic occlusion zones I–III
+  // ─────────────────────────────────────────────────────────────────────────
+  function ReboaZonesFig() {
+    const cx = 150, tubeW = 34;
+    const yTop = 40, ySubclav = 58, yCeliac = 168, yRenal = 258, yBif = 378, yIliacEnd = 428;
+
+    const brackets = [
+      { z: "Zone I", y0: ySubclav, y1: yCeliac, color: ACCENT,
+        note: ["Supraceliac aorta", "Deploy: abdominal/", "pelvic hemorrhage"] },
+      { z: "Zone II", y0: yCeliac, y1: yRenal, color: MUTE,
+        note: ["Paravisceral", "NO-GO — visceral/", "renal ischemia risk"] },
+      { z: "Zone III", y0: yRenal, y1: yBif, color: ACCENT,
+        note: ["Infrarenal aorta", "Deploy: pelvic/", "junctional hemorrhage"] },
+    ];
+
+    const bx = cx + 90;
+
+    return (
+      <svg {...svgProps("0 0 520 452")}>
+        <text {...T(240, 16, 13, { fill: SOFT, fontWeight: 600 })}>REBOA Aortic Occlusion Zones</text>
+
+        {/* aorta body */}
+        <rect x={cx - tubeW / 2} y={yTop} width={tubeW} height={yBif - yTop} fill={LUMEN} stroke={INK} strokeWidth="2.5" />
+        {/* common iliac limbs */}
+        <path d={`M ${cx - tubeW / 2} ${yBif - 2} L ${cx - tubeW / 2 - 26} ${yIliacEnd} L ${cx - tubeW / 2 - 12} ${yIliacEnd} L ${cx - 3} ${yBif - 2} Z`} fill={LUMEN} stroke={INK} strokeWidth="2" />
+        <path d={`M ${cx + tubeW / 2} ${yBif - 2} L ${cx + tubeW / 2 + 26} ${yIliacEnd} L ${cx + tubeW / 2 + 12} ${yIliacEnd} L ${cx + 3} ${yBif - 2} Z`} fill={LUMEN} stroke={INK} strokeWidth="2" />
+
+        {/* zone tints — Zone I and III (deploy) */}
+        <rect x={cx - tubeW / 2} y={ySubclav} width={tubeW} height={yCeliac - ySubclav} fill={ASOFT} opacity="0.6" />
+        <rect x={cx - tubeW / 2} y={yRenal} width={tubeW} height={yBif - yRenal} fill={ASOFT} opacity="0.6" />
+
+        {/* zone II hatch (no-go) */}
+        <clipPath id="reboa-z2-clip">
+          <rect x={cx - tubeW / 2} y={yCeliac} width={tubeW} height={yRenal - yCeliac} />
+        </clipPath>
+        <g clipPath="url(#reboa-z2-clip)">
+          {[0, 1, 2, 3, 4, 5, 6, 7].map((k) => (
+            <line key={k} x1={cx - tubeW / 2 - 6 + k * 10} y1={yCeliac - 6} x2={cx - tubeW / 2 - 6 + k * 10 + 20} y2={yRenal + 6} stroke={MUTE} strokeWidth="3.4" opacity="0.55" />
+          ))}
+        </g>
+
+        {/* balloon icons — Zone I and III deploy points */}
+        <ellipse cx={cx} cy={(ySubclav + yCeliac) / 2} rx={tubeW / 2 - 1.5} ry={22} fill={ACCENT} opacity="0.85" stroke={ACCENT} strokeWidth="1.5" />
+        <ellipse cx={cx} cy={(yRenal + yBif) / 2} rx={tubeW / 2 - 1.5} ry={22} fill={ACCENT} opacity="0.85" stroke={ACCENT} strokeWidth="1.5" />
+
+        {/* no-entry icon — Zone II */}
+        <circle cx={cx} cy={(yCeliac + yRenal) / 2} r={15} fill={LUMEN} stroke={MUTE} strokeWidth="3" />
+        <line x1={cx - 10} y1={(yCeliac + yRenal) / 2 + 10} x2={cx + 10} y2={(yCeliac + yRenal) / 2 - 10} stroke={MUTE} strokeWidth="3" strokeLinecap="round" />
+
+        {/* branch landmarks — left side */}
+        <line x1={cx - tubeW / 2} y1={ySubclav} x2={cx - tubeW / 2 - 20} y2={ySubclav} stroke={INK} strokeWidth="1.6" />
+        <text x={cx - tubeW / 2 - 24} y={ySubclav + 4} fontSize="10" fill={MUTE} textAnchor="end">L subclavian a.</text>
+
+        <line x1={cx - tubeW / 2} y1={yCeliac} x2={cx - tubeW / 2 - 20} y2={yCeliac} stroke={INK} strokeWidth="1.6" />
+        <text x={cx - tubeW / 2 - 24} y={yCeliac + 4} fontSize="10" fill={MUTE} textAnchor="end">celiac axis</text>
+
+        <line x1={cx - tubeW / 2} y1={yRenal} x2={cx - tubeW / 2 - 20} y2={yRenal} stroke={INK} strokeWidth="1.6" />
+        <text x={cx - tubeW / 2 - 24} y={yRenal + 4} fontSize="10" fill={MUTE} textAnchor="end">lowest renal a.</text>
+        <line x1={cx + tubeW / 2} y1={yRenal} x2={cx + tubeW / 2 + 14} y2={yRenal} stroke={INK} strokeWidth="1.6" />
+
+        <line x1={cx - tubeW / 2} y1={yBif} x2={cx - tubeW / 2 - 20} y2={yBif} stroke={INK} strokeWidth="1.6" />
+        <text x={cx - tubeW / 2 - 24} y={yBif + 4} fontSize="10" fill={MUTE} textAnchor="end">aortic bifurcation</text>
+
+        {/* zone brackets — right side */}
+        {brackets.map((z, zi) => {
+          const mid = (z.y0 + z.y1) / 2;
+          const noteStartY = mid - ((z.note.length - 1) * 12) / 2 + 14;
+          return (
+            <g key={zi}>
+              <line x1={bx} y1={z.y0 + 2} x2={bx} y2={z.y1 - 2} stroke={z.color} strokeWidth="2.5" />
+              <line x1={bx - 6} y1={z.y0 + 2} x2={bx} y2={z.y0 + 2} stroke={z.color} strokeWidth="2.5" />
+              <line x1={bx - 6} y1={z.y1 - 2} x2={bx} y2={z.y1 - 2} stroke={z.color} strokeWidth="2.5" />
+              <text x={bx + 10} y={mid - ((z.note.length - 1) * 12) / 2 - 2} fontSize="13.5" fill={z.color} fontWeight="700" textAnchor="start">{z.z}</text>
+              {z.note.map((n, ni) => (
+                <text key={ni} x={bx + 10} y={noteStartY + ni * 12} fontSize="9.3" fill={SOFT} textAnchor="start">{n}</text>
+              ))}
+            </g>
+          );
+        })}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
   // Register all figures
   // ─────────────────────────────────────────────────────────────────────────
   window.SK_FIGURES = Object.assign(window.SK_FIGURES || {}, {
@@ -620,6 +1050,41 @@
       caption: "The triangle of safety defines the preferred site for chest-drain insertion to minimise risk to breast tissue, pectoralis major, and long thoracic nerve. Its anterior border is the lateral edge of pectoralis major, posterior border is the anterior edge of latissimus dorsi, and inferior border is a horizontal line at the 5th intercostal space (nipple level in males). Drains are inserted in the 4th or 5th ICS, mid-axillary line.",
       ref: "Laws D et al., Thorax 2003;58(Suppl II):ii53. Primary Trauma Care Manual (ATLS concordant).",
       render: () => <TriangleOfSafetyFig />,
+    },
+
+    "trauma-aast-kidney": {
+      title: "AAST Renal Injury Grade I–V",
+      caption: "AAST grading: I = contusion or subcapsular haematoma without laceration; II = perirenal haematoma confined within Gerota fascia, laceration <1 cm cortical depth without urinary extravasation; III = laceration >1 cm parenchymal depth without collecting-system injury; IV = laceration through the corticomedullary junction into the collecting system (urinary extravasation), main renal artery/vein injury with contained haemorrhage, or segmental infarction; V = shattered kidney or renal pedicle avulsion with devascularisation. Grade I–IV in a haemodynamically stable patient is managed non-operatively ± angioembolisation; urinary extravasation alone is not an indication for surgery, but pedicle avulsion (Grade V) usually mandates urgent exploration.",
+      ref: "Moore EE et al., J Trauma 1989;29:1664. AAST Organ Injury Scale (2018 revision).",
+      render: () => <AastKidneyFig />,
+    },
+
+    "trauma-young-burgess": {
+      title: "Young-Burgess Pelvic Fracture Mechanisms",
+      caption: "The Young-Burgess system classifies pelvic-ring fractures by the direction of the injuring force. Lateral compression (LC) drives internal rotation of the hemipelvis with rami and sacral/SI injury; anteroposterior compression (APC) drives external rotation with progressive symphyseal and SI-joint diastasis — the 'open-book' pattern from APC-II onward. Vertical shear (VS) causes complete ring disruption with cephalad displacement of a hemipelvis and is the most hemodynamically unstable pattern; combined mechanism (CM) shows features of more than one pattern.",
+      ref: "Young JW, Burgess AR et al., Radiology 1986;160:445 (Young-Burgess classification).",
+      render: () => <YoungBurgessFig />,
+    },
+
+    "trauma-denver-bcvi": {
+      title: "Denver BCVI Grading Scale I–V",
+      caption: "The Denver scale grades blunt cerebrovascular injury by CT-angiographic appearance and stratifies stroke risk. Grade I (wall irregularity, <25% narrowing) and II (intraluminal thrombus/raised flap, or ≥25% stenosis) are managed with antithrombotic therapy; Grade III (pseudoaneurysm) may need endovascular stenting; Grade IV (occlusion) is usually managed medically; Grade V (transection with free extravasation) requires emergent endovascular or surgical control. Most injuries are clinically silent until they throw an embolic stroke, which is why at-risk patients are screened.",
+      ref: "Biffl WL et al., J Trauma 1999;47:845 (Denver BCVI grading scale).",
+      render: () => <DenverBcviFig />,
+    },
+
+    "trauma-neck-zones": {
+      title: "Zones of the Neck I–III",
+      caption: "The neck is divided into three zones that guide management of penetrating injury. Zone II (cricoid to angle of mandible) is injured most often and is the most surgically accessible, so stable Zone II wounds can be explored directly. Zone I (thoracic outlet) and Zone III (skull base) structures are difficult to control surgically, so stable injuries there favour CT angiography and endovascular options over exploration. Hard signs — expanding haematoma, uncontrolled bleeding, bruit/thrill, pulse deficit, air through the wound, airway compromise — mandate the operating room regardless of zone.",
+      ref: "Roon AJ, Christensen N, J Trauma 1979;19:391 (original zone description).",
+      render: () => <NeckZonesFig />,
+    },
+
+    "trauma-reboa-zones": {
+      title: "REBOA Aortic Occlusion Zones",
+      caption: "REBOA balloon position is described by three aortic zones. Zone I (left subclavian artery origin to coeliac axis) occludes for major intra-abdominal haemorrhage; Zone III (lowest renal artery to aortic bifurcation) occludes for pelvic or junctional haemorrhage and is better tolerated because it spares visceral and renal flow. Zone II (coeliac axis to the lowest renal artery) is a no-deploy zone — occlusion here causes visceral and renal ischaemia without a matching haemorrhage-control benefit.",
+      ref: "DuBose JJ et al., J Trauma Acute Care Surg 2016;81:409 (AAST AORTA registry); Joint Trauma System REBOA CPG.",
+      render: () => <ReboaZonesFig />,
     },
 
   });

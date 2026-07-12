@@ -82,6 +82,11 @@ module.exports = {
   'liver-trauma': ['trauma-aast-liver'],
   'burns': ['trauma-burns-rule-of-nines'],
   'chest-trauma': ['trauma-triangle-of-safety'],
+  'renal-trauma': ['trauma-aast-kidney'],
+  'pelvic-fracture': ['trauma-young-burgess'],
+  'blunt-cerebrovascular-injury': ['trauma-denver-bcvi'],
+  'penetrating-neck-injury': ['trauma-neck-zones'],
+  'reboa': ['trauma-reboa-zones'],
 
   // ── TRANSPLANT ──────────────────────────────────────────────────────────
   'renal-tx': ['tx-renal-anatomy', 'tx-rejection-timeline'],
