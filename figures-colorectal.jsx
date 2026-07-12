@@ -562,6 +562,521 @@
     );
   }
 
+  // ─────────────────────────────────────────────────────────────────────────
+  // Colonic resections & vascular ligation
+  // ─────────────────────────────────────────────────────────────────────────
+  function ColonicResectionExtentsFig() {
+    // Shared colon centreline, defined as named segments so the same
+    // coordinates drive both the full-size anatomy map and the scaled-down
+    // resection-extent panels below (via a <g transform="... scale(...)">).
+    const seg = {
+      ileum:      "M 548 318 L 508 302",
+      ascending:  "M 497 288 L 497 120",
+      hepaticFx:  "M 497 120 Q 495 64 445 60",
+      transProx:  "M 445 60 Q 385 84 320 84",
+      transDist:  "M 320 84 Q 255 84 195 60",
+      splenicFx:  "M 195 60 Q 145 64 140 120",
+      descending: "M 140 120 L 140 266",
+      sigmoid:    "M 140 266 Q 111 300 155 313 Q 206 327 234 300",
+      rectum:     "M 234 300 L 259 336",
+    };
+    const order = ["ascending", "hepaticFx", "transProx", "transDist", "splenicFx", "descending", "sigmoid", "rectum"];
+    const fullPath = order.map((k) => seg[k]).join(" ");
+
+    // Triple-stroke "tube" look — matches the Hinchey sigmoid technique already in this file.
+    const tube = (d, key, w1, w2, w3) => [
+      <path key={key + "a"} d={d} fill="none" stroke={LUMEN} strokeWidth={w1} strokeLinecap="round" />,
+      <path key={key + "b"} d={d} fill="none" stroke={RULE} strokeWidth={w2} strokeLinecap="round" />,
+      <path key={key + "c"} d={d} fill="none" stroke={LUMEN} strokeWidth={w3} strokeLinecap="round" />,
+    ];
+
+    // ── Anatomy map (top): colon frame + named SMA / IMA branches ──
+    const AnatomyMap = () => (
+      <g>
+        <text {...T(320, 16, 13.5, { fontWeight: 700 })}>Named vessels &amp; colon segments</text>
+
+        {tube(fullPath, "wall", 19, 21, 15)}
+        {tube(seg.ileum, "ileumT", 11, 13, 9)}
+        <ellipse cx={500} cy={296} rx={15} ry={12} fill={LUMEN} stroke={RULE} strokeWidth={10} />
+
+        {/* segment labels */}
+        <text x={508} y={205} fontSize="10.5" fill={SOFT} textAnchor="start">Ascending</text>
+        <text x={132} y={205} fontSize="10.5" fill={SOFT} textAnchor="end">Descending</text>
+        <text {...T(478, 44, 9.5, { fill: SOFT })}>Hepatic flexure</text>
+        <text {...T(320, 34, 11, { fill: SOFT, fontWeight: 600 })}>Transverse colon</text>
+        <text {...T(163, 44, 9.5, { fill: SOFT })}>Splenic flexure</text>
+        <text {...T(500, 326, 9.5, { fill: SOFT })}>Caecum</text>
+        <text x={552} y={302} fontSize="9" fill={SOFT} textAnchor="start">Term.</text>
+        <text x={552} y={313} fontSize="9" fill={SOFT} textAnchor="start">ileum</text>
+        <text {...T(246, 355, 9.5, { fill: SOFT })}>Sigmoid</text>
+        <text x={266} y={340} fontSize="9" fill={SOFT} textAnchor="start">Rectum</text>
+
+        {/* Aorta stub */}
+        <rect x={288} y={352} width={18} height={100} rx={4} fill={WALL} stroke={INK} strokeWidth="1.5" />
+        <text x={282} y={406} fontSize="10" fill={SOFT} textAnchor="end">Aorta</text>
+
+        {/* SMA trunk + branches */}
+        <path d="M 297 352 Q 370 300 418 262" fill="none" stroke={INK} strokeWidth="2.6" strokeLinecap="round" />
+        <text x={352} y={288} fontSize="9.5" fill={INK} fontWeight="700" textAnchor="middle">SMA</text>
+        <line x1={418} y1={262} x2={487} y2={290} stroke={INK} strokeWidth="2" />
+        <line x1={418} y1={262} x2={497} y2={178} stroke={INK} strokeWidth="2" />
+        <line x1={418} y1={262} x2={348} y2={82} stroke={INK} strokeWidth="2" />
+        <circle cx={418} cy={262} r={3} fill={INK} />
+        <text x={472} y={286} fontSize="9.5" fill={INK} textAnchor="end">Ileocolic a.</text>
+        <text x={470} y={170} fontSize="9.5" fill={INK} textAnchor="end">Right colic a.</text>
+        <text x={343} y={70} fontSize="9.5" fill={INK} textAnchor="middle">Middle colic a.</text>
+
+        {/* IMA trunk + sequential branches (shows high-tie vs low-tie) */}
+        <path d="M 297 452 L 245 405" fill="none" stroke={INK} strokeWidth="2.6" strokeLinecap="round" />
+        <path d="M 245 405 L 205 362" fill="none" stroke={INK} strokeWidth="2.6" strokeLinecap="round" />
+        <path d="M 205 362 L 250 322" fill="none" stroke={INK} strokeWidth="2.6" strokeLinecap="round" />
+        <text x={297} y={467} fontSize="9.5" fill={INK} fontWeight="700" textAnchor="middle">IMA</text>
+        <circle cx={245} cy={405} r={3} fill={INK} />
+        <line x1={245} y1={405} x2={144} y2={205} stroke={INK} strokeWidth="2" />
+        <text x={219} y={288} fontSize="9.5" fill={INK} textAnchor="start">Left colic a.</text>
+        <circle cx={205} cy={362} r={3} fill={INK} />
+        <line x1={205} y1={362} x2={166} y2={313} stroke={INK} strokeWidth="2" />
+        <text x={178} y={347} fontSize="9" fill={INK} textAnchor="start">Sigmoidal aa.</text>
+        <text x={233} y={349} fontSize="9" fill={INK} textAnchor="start">Superior rectal a.</text>
+
+        {/* High tie / low tie markers */}
+        <circle cx={289} cy={445} r={5} fill={ACCENT} stroke={INK} strokeWidth="1" />
+        <text x={265} y={434} fontSize="9.5" fill={ACCENT} fontWeight="700" textAnchor="end">High tie</text>
+        <text x={265} y={447} fontSize="8.5" fill={SOFT} textAnchor="end">(at aortic origin)</text>
+        <circle cx={235} cy={394} r={5} fill={ACCENT} stroke={INK} strokeWidth="1" />
+        <text x={207} y={383} fontSize="9.5" fill={ACCENT} fontWeight="700" textAnchor="end">Low tie</text>
+        <text x={207} y={396} fontSize="8.5" fill={SOFT} textAnchor="end">(distal to left colic)</text>
+      </g>
+    );
+
+    // ── Resection-extent panels (bottom): 4 mini colons, shared shape, scaled ──
+    const ops = [
+      {
+        name: "Right hemicolectomy", nameSize: 12,
+        resect: ["Term. ileum → hepatic flexure"],
+        vessels: ["Ileocolic + right colic"],
+        highlight: [seg.ileum, seg.ascending, seg.hepaticFx],
+        margins: [[548, 318], [445, 60]],
+      },
+      {
+        name: "Extended right hemi.", nameSize: 11,
+        resect: ["Term. ileum → distal transv."],
+        vessels: ["Ileocolic + right colic +", "middle colic at root"],
+        highlight: [seg.ileum, seg.ascending, seg.hepaticFx, seg.transProx, seg.transDist],
+        margins: [[548, 318], [195, 60]],
+      },
+      {
+        name: "Left hemicolectomy", nameSize: 12,
+        resect: ["Distal transverse/splenic", "flexure → descending"],
+        vessels: ["Left colic ± IMA at root"],
+        highlight: [seg.transDist, seg.splenicFx, seg.descending],
+        margins: [[320, 84], [140, 266]],
+      },
+      {
+        name: "Sigmoid colectomy", nameSize: 12,
+        resect: ["Sigmoid colon"],
+        vessels: ["Sigmoidal + sup. rectal aa."],
+        note: "± high or low tie (IMA)",
+        highlight: [seg.sigmoid, seg.rectum],
+        margins: [[140, 266], [259, 336]],
+      },
+    ];
+
+    const panelW = 160, panelsY = 500;
+    const scale = 0.30; // shrinks the ~437×276 colon shape to fit a 160-wide panel column
+
+    const Panel = (op, i) => {
+      const ox = i * panelW;
+      return (
+        <g key={op.name}>
+          {i > 0 && <line x1={ox} y1={panelsY - 8} x2={ox} y2={710} stroke={RULE} strokeWidth="1" />}
+          <g transform={`translate(${ox - 19} ${panelsY - 7}) scale(${scale})`}>
+            {/* grey context (full colon, incl. terminal ileum + caecum) */}
+            <path d={fullPath} fill="none" stroke={RULE} strokeWidth={9} strokeLinecap="round" />
+            <path d={seg.ileum} fill="none" stroke={RULE} strokeWidth={9} strokeLinecap="round" />
+            <circle cx={500} cy={296} r={15} fill="none" stroke={RULE} strokeWidth={9} />
+            {/* resected span, highlighted */}
+            {op.highlight.map((d, k) => (
+              <path key={k} d={d} fill="none" stroke={ACCENT} strokeWidth={13} strokeLinecap="round" />
+            ))}
+            {/* transection margins */}
+            {op.margins.map(([mx, my], k) => (
+              <circle key={k} cx={mx} cy={my} r={9} fill={INK} stroke={LUMEN} strokeWidth={3} />
+            ))}
+          </g>
+          <text {...T(ox + panelW / 2, panelsY + 108, op.nameSize, { fontWeight: 700 })}>{op.name}</text>
+          {op.resect.map((line, k) => (
+            <text key={"r" + k} {...T(ox + panelW / 2, panelsY + 124 + k * 13, 9, { fill: SOFT })}>{line}</text>
+          ))}
+          {op.vessels.map((line, k) => (
+            <text key={"v" + k} {...T(ox + panelW / 2, panelsY + 124 + op.resect.length * 13 + 4 + k * 13, 9, { fill: ACCENT, fontWeight: 600 })}>{line}</text>
+          ))}
+          {op.note && (
+            <text {...T(ox + panelW / 2, panelsY + 124 + op.resect.length * 13 + 4 + op.vessels.length * 13 + 14, 8.5, { fill: SOFT })}>{op.note}</text>
+          )}
+        </g>
+      );
+    };
+
+    return (
+      <svg {...svgProps("0 0 640 700")}>
+        <AnatomyMap />
+        <line x1={0} y1={482} x2={640} y2={482} stroke={RULE} strokeWidth="1" strokeDasharray="4 4" />
+        <text {...T(320, 500 - 8, 12.5, { fontWeight: 700 })}>Resection extent by operation</text>
+        {ops.map((op, i) => Panel(op, i))}
+        <text {...T(320, 692, 10, { fill: SOFT })}>
+          Grey = whole colon &middot; thick accent = resected segment &middot; dark dots = transection margins
+        </text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Rectal prolapse — perineal vs abdominal repair options
+  // ─────────────────────────────────────────────────────────────────────────
+  function RectalProlapseRepairsFig() {
+    // Shared "prolapsed rectum" motif: a short canal above the verge and a
+    // telescoped (concentric-ringed) tube protruding below it.
+    const prolapse = (ox, cy, key) => {
+      const verge = cy;
+      return (
+        <g key={key}>
+          <rect x={ox - 16} y={verge - 46} width={32} height={46} fill={LUMEN} stroke={RULE} strokeWidth="1.3" />
+          <line x1={ox - 34} y1={verge} x2={ox + 34} y2={verge} stroke={INK} strokeWidth="2" />
+          <path d={`M ${ox - 30} ${verge} Q ${ox - 40} ${verge + 66} ${ox} ${verge + 78} Q ${ox + 40} ${verge + 66} ${ox + 30} ${verge}`}
+            fill={ASOFT} stroke={ACCENT} strokeWidth="2" />
+          <path d={`M ${ox - 17} ${verge + 38} Q ${ox} ${verge + 50} ${ox + 17} ${verge + 38}`}
+            fill="none" stroke={ACCENT} strokeWidth="1.3" opacity="0.7" />
+          <path d={`M ${ox - 9} ${verge + 58} Q ${ox} ${verge + 65} ${ox + 9} ${verge + 58}`}
+            fill="none" stroke={ACCENT} strokeWidth="1.3" opacity="0.7" />
+        </g>
+      );
+    };
+
+    // ── Left: perineal options ──
+    const Altemeier = (ox) => {
+      const verge = 96;
+      return (
+        <g key="alt">
+          {prolapse(ox, verge, "alt-shape")}
+          {/* full-thickness transection near the base */}
+          <line x1={ox - 32} y1={verge + 8} x2={ox + 32} y2={verge + 8} stroke={ACCENT} strokeWidth="2" strokeDasharray="5 3" />
+          {[-24, -8, 8, 24].map((d, k) => (
+            <line key={k} x1={ox + d} y1={verge + 3} x2={ox + d} y2={verge + 13} stroke={ACCENT} strokeWidth="1.6" />
+          ))}
+          <text {...T(ox, verge + 100, 12, { fontWeight: 700 })}>Altemeier's</text>
+          <text {...T(ox, verge + 116, 9, { fill: SOFT })}>Full-thickness perineal</text>
+          <text {...T(ox, verge + 128, 9, { fill: SOFT })}>rectosigmoidectomy</text>
+          <text {...T(ox, verge + 140, 9, { fill: SOFT })}>+ coloanal anastomosis</text>
+          <text {...T(ox, verge + 154, 8.5, { fill: ACCENT, fontWeight: 600 })}>Recurrence up to ~20%</text>
+        </g>
+      );
+    };
+
+    const Delorme = (ox) => {
+      const verge = 96;
+      return (
+        <g key="del">
+          {prolapse(ox, verge, "del-shape")}
+          {/* mucosal sleeve scored just under the surface */}
+          <path d={`M ${ox - 22} ${verge + 10} Q ${ox} ${verge + 20} ${ox + 22} ${verge + 10}`}
+            fill="none" stroke={ACCENT} strokeWidth="2" strokeDasharray="4 3" />
+          {/* plication pleats lower on the muscular tube */}
+          {[0, 1, 2].map((k) => (
+            <path key={k} d={`M ${ox - 14 + k * 2} ${verge + 46 + k * 8} l 8 -6 l 8 6`}
+              fill="none" stroke={ACCENT} strokeWidth="1.6" />
+          ))}
+          <text {...T(ox, verge + 100, 12, { fontWeight: 700 })}>Delorme's</text>
+          <text {...T(ox, verge + 116, 9, { fill: SOFT })}>Mucosal sleeve resection</text>
+          <text {...T(ox, verge + 128, 9, { fill: SOFT })}>+ muscular plication</text>
+          <text {...T(ox, verge + 140, 9, { fill: SOFT })}>&nbsp;</text>
+          <text {...T(ox, verge + 154, 8.5, { fill: ACCENT, fontWeight: 600 })}>Recurrence ~16–30%</text>
+        </g>
+      );
+    };
+
+    // ── Right: ventral mesh rectopexy ──
+    const VentralMesh = () => {
+      const ox = 480, topY = 55, botY = 230;
+      const rectumPath = `M ${ox} ${topY} Q ${ox + 6} ${(topY + botY) / 2} ${ox - 4} ${botY}`;
+      return (
+        <g>
+          {/* rectum tube */}
+          <path d={rectumPath} fill="none" stroke={RULE} strokeWidth="24" strokeLinecap="round" />
+          <path d={rectumPath} fill="none" stroke={LUMEN} strokeWidth="18" strokeLinecap="round" />
+          <text x={ox + 30} y={(topY + botY) / 2} fontSize="10.5" fill={SOFT} textAnchor="start">Rectum</text>
+
+          {/* sacral promontory fixation point */}
+          <circle cx={ox - 70} cy={topY + 6} r={5} fill={WALL} stroke={INK} strokeWidth="1.5" />
+          <text x={ox - 78} y={topY - 2} fontSize="9.5" fill={SOFT} textAnchor="end">Sacral</text>
+          <text x={ox - 78} y={topY + 10} fontSize="9.5" fill={SOFT} textAnchor="end">promontory</text>
+
+          {/* mesh strip: anterior (ventral) surface only, fixed proximally to the sacral point */}
+          <path d={`M ${ox - 65} ${topY + 8} Q ${ox - 40} ${(topY + botY) / 2} ${ox - 18} ${botY - 26}`}
+            fill="none" stroke={ACCENT} strokeWidth="7" strokeDasharray="2 3" strokeLinecap="round" opacity="0.85" />
+          <text x={ox - 100} y={(topY + botY) / 2 + 10} fontSize="10" fill={ACCENT} fontWeight="700" textAnchor="end">Mesh</text>
+
+          {/* suture marks onto anterior rectal wall */}
+          {[0.55, 0.72, 0.88].map((f, k) => {
+            const py = topY + (botY - topY) * f;
+            return <circle key={k} cx={ox - 12} cy={py} r={2.6} fill={INK} />;
+          })}
+
+          <text {...T(ox - 10, botY + 30, 12, { fontWeight: 700 })}>Ventral mesh rectopexy</text>
+          <text {...T(ox - 10, botY + 46, 9.5, { fill: SOFT })}>Anterior dissection only —</text>
+          <text {...T(ox - 10, botY + 58, 9.5, { fill: SOFT })}>posterior/lateral nerves spared</text>
+          <text {...T(ox - 10, botY + 70, 9.5, { fill: SOFT })}>(± sigmoid resection = resection rectopexy)</text>
+          <text {...T(ox - 10, botY + 86, 8.5, { fill: ACCENT, fontWeight: 600 })}>Recurrence ~5–15%; best function</text>
+        </g>
+      );
+    };
+
+    return (
+      <svg {...svgProps("0 0 640 470")}>
+        <text {...T(320, 18, 14, { fontWeight: 700 })}>Rectal prolapse — repair options</text>
+
+        <line x1={320} y1={34} x2={320} y2={410} stroke={RULE} strokeWidth="1.3" strokeDasharray="5 4" />
+
+        <text {...T(160, 42, 12.5, { fontWeight: 700 })}>Perineal approach</text>
+        <text {...T(160, 57, 10, { fill: SOFT })}>frail / high-risk · avoids laparotomy</text>
+        {Altemeier(85)}
+        {Delorme(235)}
+
+        <text {...T(480, 42, 12.5, { fontWeight: 700 })}>Abdominal approach</text>
+        <text {...T(480, 57, 10, { fill: SOFT })}>fitter patients · lower recurrence</text>
+        <VentralMesh />
+
+        <line x1={20} y1={420} x2={620} y2={420} stroke={RULE} strokeWidth="1" />
+        <text {...T(320, 438, 10.5, { fill: MUTE })}>Perineal: quicker, better tolerated, but recurs more.</text>
+        <text {...T(320, 454, 10.5, { fill: MUTE })}>Abdominal: laparotomy/laparoscopy, but more durable.</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Lynch syndrome universal tumour-screening algorithm
+  // ─────────────────────────────────────────────────────────────────────────
+  function LynchMmrAlgorithmFig() {
+    const arrow = (x1, y1, x2, y2, key) => (
+      <line key={key} x1={x1} y1={y1} x2={x2} y2={y2} stroke={RULE} strokeWidth="1.5" markerEnd="url(#cr-lynch-arr)" />
+    );
+
+    const box = (x, y, w, h, lines, fill, key, opts) => {
+      const cx = x + w / 2;
+      const titleSize = (opts && opts.titleSize) || 12;
+      const subSize = (opts && opts.subSize) || 9.5;
+      const subFill = (opts && opts.subFill) || SOFT;
+      const titleFill = (opts && opts.titleFill) || INK;
+      const nLines = lines.length - 1;
+      const startY = y + h / 2 - (nLines * (subSize + 3.5)) / 2 + 3;
+      return (
+        <g key={key}>
+          <rect x={x} y={y} width={w} height={h} rx="6" fill={fill} stroke={RULE} strokeWidth="1.2" />
+          <text {...T(cx, startY, titleSize, { fontWeight: 700, fill: titleFill })}>{lines[0]}</text>
+          {lines.slice(1).map((ln, i) => (
+            <text key={i} {...T(cx, startY + (i + 1) * (subSize + 3.5), subSize, { fill: subFill })}>{ln}</text>
+          ))}
+        </g>
+      );
+    };
+
+    return (
+      <svg {...svgProps("0 0 640 545")}>
+        <defs>
+          <marker id="cr-lynch-arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 Z" fill={RULE} />
+          </marker>
+        </defs>
+
+        <text {...T(320, 16, 13.5, { fontWeight: 700 })}>Lynch syndrome — universal tumour-screening algorithm</text>
+
+        {box(190, 26, 260, 40, ["CRC or endometrial cancer", "newly diagnosed — test all"], ASOFT, "b1")}
+        {arrow(320, 66, 320, 84, "a1")}
+
+        {box(160, 84, 320, 46, ["Universal tumour testing", "MMR IHC (MLH1·MSH2·MSH6·PMS2)", "and / or MSI-PCR"], WALL, "b2", { titleSize: 11.5, subSize: 9 })}
+
+        {arrow(320, 130, 320, 147, "a2")}
+        {arrow(320, 147, 150, 147, "a2L")}
+        {arrow(150, 147, 150, 168, "a2Lb")}
+        {arrow(320, 147, 470, 147, "a2R")}
+        {arrow(470, 147, 470, 168, "a2Rb")}
+
+        {box(20, 168, 260, 40, ["MLH1 + PMS2 loss", "(~70% of dMMR — often sporadic)"], LUMEN, "b3", { titleSize: 11.5, subSize: 9 })}
+        {box(340, 168, 260, 40, ["MSH2 / MSH6 / isolated PMS2 loss", "(rarely sporadic)"], LUMEN, "b6", { titleSize: 11, subSize: 9 })}
+
+        {arrow(150, 208, 150, 226, "a3")}
+        {arrow(470, 208, 470, 226, "a6")}
+
+        {box(20, 226, 260, 54, ["Reflex testing", "BRAF V600E mutation and/or", "MLH1 promoter methylation"], WALL, "b4", { titleSize: 11.5, subSize: 9 })}
+        {box(340, 226, 260, 54, ["Germline testing", "of the implicated MMR gene", "(no BRAF/methylation reflex needed)"], ASOFT, "b7", { titleSize: 11.5, subSize: 9 })}
+
+        {arrow(150, 280, 150, 296, "a4")}
+        {arrow(150, 296, 90, 296, "a4L")}
+        {arrow(90, 296, 90, 312, "a4Lb")}
+        {arrow(150, 296, 255, 296, "a4R")}
+        {arrow(255, 296, 255, 312, "a4Rb")}
+
+        {box(15, 312, 150, 56, ["Likely sporadic", "MLH1 hypermethylation", "— Lynch unlikely"], WALL, "b5a", { titleSize: 11, subSize: 8.5, titleFill: SOFT })}
+        <text {...T(90, 380, 8, { fill: SOFT })}>(no further Lynch workup)</text>
+
+        {box(180, 312, 150, 56, ["Germline MLH1", "mutation test", "confirms / excludes"], ASOFT, "b5b", { titleSize: 11, subSize: 8.5 })}
+
+        {arrow(255, 368, 255, 400, "a5")}
+        {arrow(255, 400, 295, 400, "a5b")}
+        {arrow(295, 400, 295, 430, "a5c")}
+        {arrow(470, 280, 470, 400, "a7")}
+        {arrow(470, 400, 400, 400, "a7b")}
+        {arrow(400, 400, 400, 430, "a7c")}
+
+        {box(180, 430, 280, 54, ["Germline MMR mutation confirmed", "Lynch syndrome — cascade family", "testing + enhanced surveillance"], ASOFT, "b8", { titleSize: 11.5, subSize: 9 })}
+
+        <text {...T(320, 512, 10, { fill: SOFT })}>IHC = immunohistochemistry &middot; MSI = microsatellite instability &middot; dMMR = mismatch-repair deficient</text>
+        <text {...T(320, 528, 10, { fill: SOFT })}>~70% of dMMR is sporadic (MLH1 hypermethylation); the rest is germline Lynch syndrome.</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Goodsall's rule — anal fistula external-opening → tract prediction
+  // ─────────────────────────────────────────────────────────────────────────
+  function GoodsallRuleFig() {
+    const cx = 280, cy = 200, r = 42;
+    const internalPost = [cx, cy + r]; // posterior-midline internal opening
+    const internalAntL = [cx - 26, cy - r + 8];
+    const internalAntR = [cx + 26, cy - r + 8];
+
+    const dot = (p, key, fillC) => <circle key={key} cx={p[0]} cy={p[1]} r={4.5} fill={fillC || ACCENT} stroke={INK} strokeWidth="1" />;
+
+    return (
+      <svg {...svgProps("0 0 560 420")}>
+        <text {...T(280, 18, 13.5, { fontWeight: 700 })}>Goodsall's rule</text>
+        <text {...T(280, 34, 10, { fill: SOFT })}>Perineum viewed with patient in lithotomy</text>
+
+        {/* transverse (Goodsall's) line + anus */}
+        <line x1={65} y1={cy} x2={495} y2={cy} stroke={INK} strokeWidth="2" strokeDasharray="6 4" />
+        <text x={70} y={cy - 8} fontSize="10" fill={MUTE} textAnchor="start">Transverse line</text>
+
+        <circle cx={cx} cy={cy} r={r} fill={LUMEN} stroke={INK} strokeWidth="2.5" />
+        <text {...T(cx, cy + 4, 9, { fill: SOFT })}>anus</text>
+
+        <text {...T(cx, 62, 13, { fontWeight: 700 })}>Anterior</text>
+        <text {...T(cx, 78, 10, { fill: SOFT })}>short, straight (radial) tract</text>
+
+        <text {...T(cx, 388, 13, { fontWeight: 700 })}>Posterior</text>
+        <text {...T(cx, 404, 10, { fill: SOFT })}>curved tract → posterior midline</text>
+
+        {/* anterior: short radial tracts to nearest crypt */}
+        {dot([215, 108], "eA1")}
+        <line x1={215} y1={108} x2={internalAntL[0]} y2={internalAntL[1]} stroke={ACCENT} strokeWidth="2.4" strokeLinecap="round" />
+        {dot(internalAntL, "iA1", INK)}
+
+        {dot([345, 108], "eA2")}
+        <line x1={345} y1={108} x2={internalAntR[0]} y2={internalAntR[1]} stroke={ACCENT} strokeWidth="2.4" strokeLinecap="round" />
+        {dot(internalAntR, "iA2", INK)}
+
+        <text x={205} y={98} fontSize="9" fill={SOFT} textAnchor="end">ext. opening</text>
+
+        {/* posterior: curved tracts converge on one posterior-midline crypt */}
+        {dot([148, 328], "eP1")}
+        <path d={`M 148 328 Q 88 258 ${internalPost[0]} ${internalPost[1]}`} fill="none" stroke={ACCENT} strokeWidth="2.4" strokeLinecap="round" />
+
+        {dot([412, 328], "eP2")}
+        <path d={`M 412 328 Q 472 258 ${internalPost[0]} ${internalPost[1]}`} fill="none" stroke={ACCENT} strokeWidth="2.4" strokeLinecap="round" />
+
+        {dot(internalPost, "iPost", INK)}
+        <text x={cx} y={cy + r + 24} fontSize="9" fill={SOFT} textAnchor="middle">single posterior crypt</text>
+
+        <text x={145} y={343} fontSize="9" fill={SOFT} textAnchor="middle">ext. opening</text>
+
+        {/* exception: distant anterior opening curving posteriorly */}
+        {dot([465, 122], "eEx")}
+        <path d={`M 465 122 Q 530 200 ${internalPost[0]} ${internalPost[1]}`} fill="none" stroke={MUTE} strokeWidth="2" strokeDasharray="4 3" strokeLinecap="round" />
+        <text x={470} y={108} fontSize="9" fill={MUTE} textAnchor="middle">exception</text>
+
+        <text {...T(280, 372, 9.5, { fill: MUTE })}>
+          Exception: an anterior opening far from the verge may still curve posteriorly.
+        </text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Peritoneal Cancer Index (PCI) — 13-region tumour-burden map
+  // ─────────────────────────────────────────────────────────────────────────
+  function PeritonealCancerIndexFig() {
+    const cellW = 110, cellH = 85, gx = 60, gy = 50;
+    const grid = [
+      [{ n: 1, name: "Right upper" }, { n: 2, name: "Epigastrium" }, { n: 3, name: "Left upper" }],
+      [{ n: 8, name: "Right flank" }, { n: 0, name: "Central" }, { n: 4, name: "Left flank" }],
+      [{ n: 7, name: "Right lower" }, { n: 6, name: "Pelvis" }, { n: 5, name: "Left lower" }],
+    ];
+
+    const cell = (row, col, r) => {
+      const x = gx + col * cellW, y = gy + row * cellH;
+      const isCentral = r.n === 0;
+      return (
+        <g key={`${row}-${col}`}>
+          <rect x={x} y={y} width={cellW} height={cellH} fill={isCentral ? ASOFT : WALL} stroke={RULE} strokeWidth="1.2" />
+          <text {...T(x + cellW / 2, y + 38, 21, { fontWeight: 700, fill: ACCENT })}>{r.n}</text>
+          <text {...T(x + cellW / 2, y + 60, 10, { fill: SOFT })}>{r.name}</text>
+        </g>
+      );
+    };
+
+    const sbW = 82, sbY = 335, sbH = 62;
+    const smallBowel = [
+      { n: "9", name: "Upper jejunum" },
+      { n: "10", name: "Lower jejunum" },
+      { n: "11", name: "Upper ileum" },
+      { n: "12", name: "Lower ileum" },
+    ];
+
+    const legendRows = [
+      { code: "LS-0", desc: "No tumour seen", fill: LUMEN },
+      { code: "LS-1", desc: "< 0.5 cm", fill: ASOFT },
+      { code: "LS-2", desc: "0.5–5 cm", fill: ACCENT, opacity: 0.55 },
+      { code: "LS-3", desc: "> 5 cm or confluent", fill: ACCENT },
+    ];
+
+    return (
+      <svg {...svgProps("0 0 620 500")}>
+        <text {...T(310, 18, 13.5, { fontWeight: 700 })}>Peritoneal Cancer Index — 13 regions</text>
+        <text {...T(310, 34, 10, { fill: SOFT })}>Central abdomen (0–8) + small bowel (9–12), each scored by lesion size</text>
+
+        {grid.map((row, r) => row.map((c, ci) => cell(r, ci, c)))}
+
+        <text x={gx} y={sbY - 12} fontSize="11" fill={SOFT} textAnchor="start">Small bowel (proximal → distal)</text>
+        {smallBowel.map((b, i) => {
+          const x = gx + i * sbW;
+          return (
+            <g key={b.n}>
+              <rect x={x} y={sbY} width={sbW - 6} height={sbH} fill={WALL} stroke={RULE} strokeWidth="1.2" />
+              <text {...T(x + (sbW - 6) / 2, sbY + 28, 17, { fontWeight: 700, fill: ACCENT })}>{b.n}</text>
+              <text {...T(x + (sbW - 6) / 2, sbY + 48, 9, { fill: SOFT })}>{b.name}</text>
+            </g>
+          );
+        })}
+
+        {/* Lesion-size legend */}
+        <text x={430} y={50} fontSize="11.5" fill={INK} fontWeight="700" textAnchor="start">Lesion Size (LS) score</text>
+        {legendRows.map((L, i) => {
+          const y = 66 + i * 30;
+          return (
+            <g key={L.code}>
+              <rect x={430} y={y} width={18} height={18} fill={L.fill} opacity={L.opacity || 1} stroke={RULE} strokeWidth="1" />
+              <text x={456} y={y + 13} fontSize="10.5" fill={INK} fontWeight="600" textAnchor="start">{L.code}</text>
+              <text x={492} y={y + 13} fontSize="9.5" fill={SOFT} textAnchor="start">{L.desc}</text>
+            </g>
+          );
+        })}
+
+        <line x1={30} y1={420} x2={590} y2={420} stroke={RULE} strokeWidth="1" />
+        <text {...T(310, 442, 11, { fill: MUTE })}>Score all 13 regions 0–3 by Lesion Size, then sum → PCI (maximum 39).</text>
+        <text {...T(310, 460, 10, { fill: SOFT })}>Higher PCI = greater tumour burden and lower likelihood of complete cytoreduction.</text>
+      </svg>
+    );
+  }
+
   window.SK_FIGURES = Object.assign(window.SK_FIGURES || {}, {
 
     "hinchey-classification": {
@@ -610,6 +1125,46 @@
         "Sigmoid volvulus produces a classic 'coffee-bean' (omega loop) on plain film pointing to the right upper quadrant with the apex above T10; the twist is at the rectosigmoid junction. Caecal volvulus displaces a kidney-shaped gas-filled caecum to the left upper quadrant with an empty right iliac fossa — CT confirms. Urgent colonoscopic detorsion is first-line for sigmoid; caecal volvulus requires operative intervention.",
       ref: "Perrot L et al., J Visc Surg 2016 · ACR Appropriateness Criteria: Large Bowel Obstruction",
       render: () => <VolvulusSchematicFig />,
+    },
+
+    "colonic-resection-extents": {
+      title: "Colonic resections & vascular ligation",
+      caption:
+        "Each colectomy is defined by which named vessels are ligated. Right hemicolectomy takes the ileocolic and right colic (± right branch of middle colic) to the hepatic flexure; extended right additionally ligates middle colic at its root to clear the transverse colon. Left hemicolectomy ligates the left colic (± IMA); sigmoid colectomy takes the sigmoidal and superior rectal vessels. For left-sided cancer, 'high tie' (IMA at its aortic origin) gives a wider node harvest than 'low tie' (distal to the left colic origin), which preserves left-colic inflow to the anastomosis.",
+      ref: "ASCRS Textbook of Colon & Rectal Surgery, 4th ed. · Netter's Atlas of Human Anatomy",
+      render: () => <ColonicResectionExtentsFig />,
+    },
+
+    "rectal-prolapse-repairs": {
+      title: "Rectal prolapse — perineal vs abdominal repair",
+      caption:
+        "Perineal repairs (Altemeier's full-thickness rectosigmoidectomy or Delorme's mucosal sleeve resection + plication) avoid a laparotomy and suit frail, high-risk patients, but recur more often. Abdominal repair — ventral mesh rectopexy, with autonomic-nerve-sparing anterior dissection only, ± sigmoid resection — gives the lowest recurrence and best functional outcome but requires a fitter patient. The choice is driven by patient fitness, not prolapse severity.",
+      ref: "ASCRS Clinical Practice Guidelines for Rectal Prolapse, Dis Colon Rectum 2017 · D'Hoore A et al., Br J Surg 2004",
+      render: () => <RectalProlapseRepairsFig />,
+    },
+
+    "lynch-mmr-algorithm": {
+      title: "Lynch syndrome — tumour-screening algorithm",
+      caption:
+        "All new colorectal and endometrial cancers undergo universal testing (MMR immunohistochemistry and/or MSI-PCR). MLH1/PMS2 loss triggers reflex BRAF V600E and/or MLH1-promoter-methylation testing: if either is present the cause is almost always sporadic hypermethylation; if neither is present, germline MLH1 testing follows. Loss of MSH2, MSH6, or isolated PMS2 is rarely sporadic and goes straight to germline testing of the implicated gene. A confirmed germline mutation defines Lynch syndrome and triggers cascade testing of relatives.",
+      ref: "NCCN Guidelines: Genetic/Familial High-Risk Assessment — Colorectal · Giardiello FM et al., Gastroenterology 2014",
+      render: () => <LynchMmrAlgorithmFig />,
+    },
+
+    "goodsall-rule": {
+      title: "Goodsall's rule",
+      caption:
+        "With the anus bisected by an imaginary transverse line, a fistula's external opening predicts its internal opening: anterior openings track in a short, straight (radial) line to the nearest crypt, while posterior openings — even from openings on both sides — curve through a curved tract to a single internal opening at the posterior midline. Exception: an anterior opening more than 3–4 cm from the anal verge may still curve posteriorly, behaving like a posterior tract.",
+      ref: "Goodsall DH & Miles WE, Diseases of the Anus and Rectum, 1900 · ASCRS Clinical Practice Guidelines for Anal Fistula, Dis Colon Rectum 2022",
+      render: () => <GoodsallRuleFig />,
+    },
+
+    "peritoneal-cancer-index": {
+      title: "Peritoneal Cancer Index (PCI)",
+      caption:
+        "The abdomen and pelvis are divided into 13 regions — a central region (0) plus 8 surrounding regions (1–8) mapped like a tic-tac-toe grid, plus 4 small-bowel regions (9–12, proximal jejunum to distal ileum). Each region is scored 0–3 by the size of its largest deposit (Lesion Size: none, <0.5 cm, 0.5–5 cm, or >5 cm/confluent), for a maximum PCI of 39. A higher PCI reflects greater peritoneal tumour burden and a lower likelihood that complete cytoreduction (CC-0/CC-1) is achievable — a key input to patient selection for CRS/HIPEC.",
+      ref: "Jacquet P & Sugarbaker PH, Cancer Treat Res 1996;82:359",
+      render: () => <PeritonealCancerIndexFig />,
     },
 
   });
