@@ -699,6 +699,255 @@
   }
 
   // ─────────────────────────────────────────────────────────────────────────
+  // Siewert classification of GEJ adenocarcinoma (Types I–III)
+  // ─────────────────────────────────────────────────────────────────────────
+  function SiewertFig() {
+    const cx = 150, gejY = 180, cm = 18;
+    const yAt = (c) => gejY - c * cm;         // +c above GEJ, -c below
+    const stomach =
+      `M ${cx - 22} ${gejY} `
+      + `C ${cx - 74} ${gejY + 6} ${cx - 96} ${gejY + 66} ${cx - 60} ${gejY + 116} `
+      + `C ${cx - 28} ${gejY + 158} ${cx + 44} ${gejY + 150} ${cx + 54} ${gejY + 92} `
+      + `C ${cx + 60} ${gejY + 52} ${cx + 40} ${gejY + 18} ${cx + 22} ${gejY} Z`;
+
+    const zones = [
+      { key: "I",   top: yAt(5),  bot: yAt(1),  label: "Siewert I",   line: "1–5 cm above GEJ  →  oesophagectomy" },
+      { key: "II",  top: yAt(1),  bot: yAt(-2), label: "Siewert II",  line: "1 cm above – 2 cm below  →  individualise" },
+      { key: "III", top: yAt(-2), bot: yAt(-5), label: "Siewert III", line: "2–5 cm below GEJ  →  total gastrectomy" },
+    ];
+
+    return (
+      <svg {...svgProps("0 0 640 400")}>
+        <text {...T(320, 24, 14, { fontWeight: 700 })}>Siewert classification — GEJ adenocarcinoma</text>
+
+        <rect x={cx - 22} y={44} width={44} height={gejY - 44} fill={WALL} stroke={INK} strokeWidth="2" />
+        <path d={stomach} fill={WALL} stroke={INK} strokeWidth="2" />
+
+        {/* tumour-centre zone bands over the tube */}
+        {zones.map((z) => (
+          <rect key={z.key} x={cx - 22} y={z.top} width={44} height={z.bot - z.top}
+            fill={ACCENT} opacity={z.key === "II" ? 0.28 : 0.16} />
+        ))}
+
+        <line x1={cx - 72} y1={gejY} x2={cx + 84} y2={gejY} stroke={ACCENT} strokeWidth="2" strokeDasharray="5 3" />
+        <text x={cx - 76} y={gejY + 4} fontSize="11" fill={ACCENT} fontWeight="700" textAnchor="end">GEJ</text>
+
+        {[5, 2, 0, -2, -5].map((c) => (
+          <g key={c}>
+            <line x1={cx + 24} y1={yAt(c)} x2={cx + 32} y2={yAt(c)} stroke={MUTE} strokeWidth="1.1" />
+            <text x={cx + 38} y={yAt(c) + 3} fontSize="9" fill={MUTE} textAnchor="start">{c > 0 ? "+" + c : c} cm</text>
+          </g>
+        ))}
+
+        {zones.map((z) => {
+          const bx = 300, midY = (z.top + z.bot) / 2;
+          return (
+            <g key={z.key}>
+              <path d={`M ${bx} ${z.top + 3} h 9 v ${z.bot - z.top - 6} h -9`} fill="none" stroke={ACCENT} strokeWidth="1.6" />
+              <text x={bx + 20} y={midY - 4} fontSize="13" fill={ACCENT} fontWeight="700" textAnchor="start">{z.label}</text>
+              <text x={bx + 20} y={midY + 12} fontSize="10.5" fill={SOFT} textAnchor="start">{z.line}</text>
+            </g>
+          );
+        })}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Gastric cancer — resection extent + D1 vs D2 lymphadenectomy
+  // ─────────────────────────────────────────────────────────────────────────
+  function GastricD2Fig() {
+    // stomach body
+    const stomach =
+      "M 300 78 C 250 78 232 120 236 168 C 240 220 268 260 330 264 "
+      + "C 392 268 430 238 430 210 C 430 196 412 194 404 208 "
+      + "C 392 236 350 246 330 244 C 286 240 264 210 262 168 "
+      + "C 260 128 276 98 312 98 C 336 98 344 112 356 112 Z";
+    const node = (x, y, n, key) => (
+      <g key={key}>
+        <circle cx={x} cy={y} r={9} fill={ACCENT} stroke={LUMEN} strokeWidth="1.5" />
+        <text x={x} y={y + 3.2} fontSize="9" fill={LUMEN} fontWeight="700" textAnchor="middle">{n}</text>
+      </g>
+    );
+
+    return (
+      <svg {...svgProps("0 0 640 400")}>
+        <text {...T(320, 24, 14, { fontWeight: 700 })}>Gastric cancer — D1 vs D2 lymphadenectomy</text>
+
+        {/* D1 perigastric halo */}
+        <path d={stomach} fill={ASOFT} stroke="none" transform="translate(0 0) scale(1)" opacity="0.5" />
+        <path d={stomach} fill={WALL} stroke={INK} strokeWidth="2" />
+        {/* perigastric (D1) nodes hugging the curves */}
+        {[[356, 108], [330, 92], [252, 150], [246, 196], [330, 258], [396, 218]].map((p, i) =>
+          <circle key={"pg" + i} cx={p[0]} cy={p[1]} r={6} fill={MUTE} stroke={LUMEN} strokeWidth="1.2" />)}
+        <text x={452} y={120} fontSize="11" fill={MUTE} fontWeight="700" textAnchor="start">D1 = perigastric</text>
+        <text x={452} y={135} fontSize="9.5" fill={SOFT} textAnchor="start">nodes (stations 1–7)</text>
+
+        {/* coeliac trunk + 3 named branches (D2 tier) */}
+        <path d="M 300 344 L 300 300" fill="none" stroke={INK} strokeWidth="3" strokeLinecap="round" />
+        <path d="M 300 300 Q 250 300 190 300" fill="none" stroke={INK} strokeWidth="2.4" />
+        <path d="M 300 300 Q 360 300 420 300" fill="none" stroke={INK} strokeWidth="2.4" />
+        <path d="M 300 300 Q 300 280 316 262" fill="none" stroke={INK} strokeWidth="2.4" />
+        <path d="M 420 300 Q 430 272 430 250" fill="none" stroke={INK} strokeWidth="2.4" />
+        <text x={300} y={360} fontSize="9.5" fill={SOFT} textAnchor="middle">coeliac axis</text>
+
+        {node(300, 300, 9, "n9")}
+        {node(316, 262, 7, "n7")}
+        {node(370, 300, 8, "n8")}
+        {node(430, 250, 12, "n12")}
+        {node(228, 300, 11, "n11")}
+        {node(174, 300, 10, "n10")}
+
+        {/* legend */}
+        <text x={44} y={330} fontSize="10.5" fill={ACCENT} fontWeight="700" textAnchor="start">D2 = D1 + named-artery nodes:</text>
+        <text x={44} y={346} fontSize="9.5" fill={SOFT} textAnchor="start">8 common hepatic · 9 coeliac · 10 splenic hilum ·</text>
+        <text x={44} y={360} fontSize="9.5" fill={SOFT} textAnchor="start">11 splenic a. · 12 hepatoduodenal</text>
+        <text x={44} y={384} fontSize="9.5" fill={MUTE} textAnchor="start">Distal third → subtotal · proximal/diffuse → total gastrectomy. D2 = standard curative extent.</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // GIST risk stratification (Miettinen/AFIP) — size × mitotic rate
+  // ─────────────────────────────────────────────────────────────────────────
+  function GistRiskFig() {
+    const sizes = ["≤ 2 cm", "> 2–5 cm", "> 5–10 cm", "> 10 cm"];
+    // risk level 0 none,1 very low,2 low,3 moderate,4 high
+    const rows = [
+      { rate: "≤ 5 / 5 mm²", cells: [[0, "None"], [1, "Very low"], [2, "Low"], [3, "Moderate"]] },
+      { rate: "> 5 / 5 mm²", cells: [[1, "Very low*"], [3, "Moderate"], [4, "High"], [4, "High"]] },
+    ];
+    const tint = (lvl) => lvl === 0 ? WALL : ACCENT;
+    const op = (lvl) => [0, 0.12, 0.22, 0.45, 0.78][lvl];
+    const x0 = 150, y0 = 92, cw = 110, ch = 62;
+
+    return (
+      <svg {...svgProps("0 0 640 320")}>
+        <text {...T(320, 24, 14, { fontWeight: 700 })}>GIST risk of progression — gastric GIST</text>
+        <text {...T(320, 42, 10, { fill: SOFT })}>by tumour size × mitotic rate (Miettinen/AFIP)</text>
+
+        {/* column headers */}
+        {sizes.map((s, c) => (
+          <text key={"h" + c} {...T(x0 + cw * c + cw / 2, y0 - 8, 10.5, { fontWeight: 700 })}>{s}</text>
+        ))}
+        <text x={x0 - 10} y={y0 - 8} fontSize="10.5" fontWeight="700" fill={INK} textAnchor="end">Mitoses</text>
+
+        {rows.map((row, r) => (
+          <g key={"r" + r}>
+            <text x={x0 - 10} y={y0 + ch * r + ch / 2 + 4} fontSize="10" fill={INK} textAnchor="end">{row.rate}</text>
+            {row.cells.map(([lvl, txt], c) => (
+              <g key={c}>
+                <rect x={x0 + cw * c} y={y0 + ch * r} width={cw} height={ch}
+                  fill={tint(lvl)} opacity={op(lvl)} stroke={RULE} strokeWidth="1" />
+                <rect x={x0 + cw * c} y={y0 + ch * r} width={cw} height={ch}
+                  fill="none" stroke={RULE} strokeWidth="1" />
+                <text {...T(x0 + cw * c + cw / 2, y0 + ch * r + ch / 2 + 4, 10.5,
+                  { fill: lvl >= 3 ? INK : SOFT, fontWeight: lvl === 4 ? 700 : 600 })}>{txt}</text>
+              </g>
+            ))}
+          </g>
+        ))}
+
+        <text x={x0} y={y0 + ch * 2 + 26} fontSize="9.5" fill={MUTE} textAnchor="start">*≤2 cm with high mitotic rate: few data.</text>
+        <text x={x0} y={y0 + ch * 2 + 42} fontSize="9.5" fill={ACCENT} fontWeight="600" textAnchor="start">Small-bowel GIST behaves worse than gastric at the same size &amp; mitotic rate.</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Gastric volvulus — organoaxial vs mesenteroaxial
+  // ─────────────────────────────────────────────────────────────────────────
+  function GastricVolvulusFig() {
+    const Panel = ({ ox, title, sub, axis }) => {
+      const cx = ox + 150;
+      return (
+        <g>
+          <text {...T(cx, 46, 12.5, { fontWeight: 700 })}>{title}</text>
+          <text {...T(cx, 62, 9.5, { fill: SOFT })}>{sub}</text>
+          {/* schematic stomach */}
+          <path d={`M ${cx - 60} 110 C ${cx - 96} 130 ${cx - 96} 200 ${cx - 52} 210 C ${cx - 8} 220 ${cx + 40} 214 ${cx + 62} 176 C ${cx + 78} 148 ${cx + 60} 118 ${cx + 30} 116 C ${cx + 4} 114 ${cx - 6} 128 ${cx - 22} 122 C ${cx - 36} 116 ${cx - 44} 106 ${cx - 60} 110 Z`}
+            fill={WALL} stroke={INK} strokeWidth="2" />
+          {/* rotation axis */}
+          {axis === "long"
+            ? <line x1={cx - 78} y1={164} x2={cx + 82} y2={150} stroke={ACCENT} strokeWidth="1.6" strokeDasharray="6 4" />
+            : <line x1={cx + 2} y1={92} x2={cx - 6} y2={230} stroke={ACCENT} strokeWidth="1.6" strokeDasharray="6 4" />}
+          {/* rotation arrow */}
+          <path d={`M ${cx + 70} 232 A 40 40 0 1 1 ${cx + 34} 250`} fill="none" stroke={ACCENT} strokeWidth="2" />
+          <polygon points={`${cx + 34},250 ${cx + 44},244 ${cx + 42},256`} fill={ACCENT} />
+          <text {...T(cx, 200, 9, { fill: ACCENT, fontWeight: 700 })}>{axis === "long" ? "long axis" : "short axis"}</text>
+        </g>
+      );
+    };
+
+    return (
+      <svg {...svgProps("0 0 640 340")}>
+        <text {...T(320, 22, 14, { fontWeight: 700 })}>Gastric volvulus — axis of rotation</text>
+        <line x1={320} y1={40} x2={320} y2={276} stroke={RULE} strokeWidth="1" />
+
+        <Panel ox={0} title="Organoaxial" sub="rotation about the long (cardio-pyloric) axis" axis="long" />
+        <Panel ox={320} title="Mesenteroaxial" sub="rotation about the short axis" axis="short" />
+
+        <text x={18} y={286} fontSize="9" fill={SOFT} textAnchor="start">Greater curve flips up · para-oesophageal</text>
+        <text x={18} y={300} fontSize="9" fill={SOFT} textAnchor="start">hernia · higher strangulation · commoner</text>
+        <text x={338} y={286} fontSize="9" fill={SOFT} textAnchor="start">Antrum flips up over the GEJ ·</text>
+        <text x={338} y={300} fontSize="9" fill={SOFT} textAnchor="start">often intermittent</text>
+        <text {...T(320, 326, 10, { fill: ACCENT, fontWeight: 700 })}>Borchardt's triad: epigastric pain · retching without vomiting · cannot pass an NGT</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Meckel's diverticulum — rule of 2s + antimesenteric anatomy
+  // ─────────────────────────────────────────────────────────────────────────
+  function MeckelFig() {
+    return (
+      <svg {...svgProps("0 0 640 360")}>
+        <text {...T(320, 24, 14, { fontWeight: 700 })}>Meckel's diverticulum — anatomy &amp; the rule of 2s</text>
+
+        {/* ileal loop (two walls) */}
+        <path d="M 40 190 C 90 150 190 150 240 190" fill="none" stroke={INK} strokeWidth="2" />
+        <path d="M 40 236 C 100 210 180 210 240 236" fill="none" stroke={INK} strokeWidth="2" />
+        <path d="M 40 190 L 40 236" fill="none" stroke={INK} strokeWidth="2" />
+        <path d="M 240 190 L 240 236" fill="none" stroke={INK} strokeWidth="2" />
+        {/* lumen tint */}
+        <path d="M 44 192 C 100 158 184 158 236 192 L 236 232 C 180 208 100 208 44 232 Z" fill={WALL} opacity="0.7" />
+
+        {/* diverticulum on the ANTIMESENTERIC (upper) border */}
+        <path d="M 120 168 C 116 128 100 112 108 92 C 116 108 132 120 140 160 Z" fill={ASOFT} stroke={ACCENT} strokeWidth="2" />
+        <line x1={126} y1={108} x2={188} y2={92} stroke={ACCENT} strokeWidth="1" />
+        <text x={192} y={95} fontSize="10.5" fill={ACCENT} fontWeight="700" textAnchor="start">Meckel's diverticulum</text>
+        <text x={192} y={109} fontSize="9" fill={SOFT} textAnchor="start">true (all layers) · antimesenteric</text>
+
+        {/* mesentery on lower border */}
+        <path d="M 70 244 L 90 286 M 130 246 L 140 288 M 190 244 L 196 286" stroke={MUTE} strokeWidth="1.4" />
+        <text x={140} y={302} fontSize="9.5" fill={MUTE} textAnchor="middle">mesenteric border</text>
+
+        {/* arrow to ileocaecal valve */}
+        <line x1={244} y1={214} x2={300} y2={214} stroke={INK} strokeWidth="1.4" strokeDasharray="4 3" />
+        <polygon points="300,214 291,209 291,219" fill={INK} />
+        <text x={272} y={205} fontSize="9" fill={SOFT} textAnchor="middle">~2 ft → ICV</text>
+
+        {/* rule-of-2s panel */}
+        <rect x={368} y={70} width={240} height={214} rx={8} fill={WALL} stroke={RULE} strokeWidth="1" />
+        <text x={388} y={94} fontSize="12" fill={ACCENT} fontWeight="700" textAnchor="start">The rule of 2s</text>
+        {[
+          "2 % of the population",
+          "2 : 1 male predominance",
+          "~2 feet proximal to the ICV",
+          "~2 inches long",
+          "2 ectopic tissue types (gastric,",
+          "     pancreatic)",
+          "often symptomatic by age 2",
+        ].map((ln, i) => (
+          <text key={i} x={388} y={116 + i * 22} fontSize="10.5" fill={INK} textAnchor="start">{ln}</text>
+        ))}
+
+        <text x={40} y={334} fontSize="9.5" fill={SOFT} textAnchor="start">Omphalomesenteric (vitelline) duct remnant · ectopic gastric mucosa → painless bleed · 99mTc-pertechnetate "Meckel scan"</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
   // Register all figures
   // ─────────────────────────────────────────────────────────────────────────
   window.SK_FIGURES = Object.assign(window.SK_FIGURES || {}, {
@@ -743,6 +992,41 @@
       caption: "Zenker's is a posterior pharyngeal (pulsion) diverticulum arising through Killian's dehiscence — the anatomical weak point between the oblique fibres of the inferior pharyngeal constrictor (thyropharyngeus) and the transverse cricopharyngeus fibres. Raised hypopharyngeal pressure from cricopharyngeal dysfunction drives mucosa through this triangle. Endoscopic (Dohlman/stapler) or transcervical cricopharyngeal myotomy is the definitive treatment.",
       ref: "Watemberg S et al., Surg Endosc 1996;10:164 · SAGES 2021 guideline",
       render: () => React.createElement(ZenkerFig),
+    },
+
+    "ugi-siewert-classification": {
+      title: "Siewert classification of GEJ adenocarcinoma",
+      caption: "Adenocarcinoma of the gastro-oesophageal junction is typed by the position of the tumour CENTRE relative to the anatomical GEJ. Type I (1–5 cm above) arises in the distal oesophagus and is treated like oesophageal cancer (oesophagectomy); Type III (2–5 cm below) is subcardial gastric cancer treated by extended/total gastrectomy; Type II (1 cm above to 2 cm below — the true cardia) is individualised. The type dictates the resection and the lymphadenectomy fields.",
+      ref: "Siewert JR, Stein HJ, Br J Surg 1998;85:1457 · AJCC 8th ed (GEJ staging)",
+      render: () => React.createElement(SiewertFig),
+    },
+
+    "ugi-gastric-d2-lymphadenectomy": {
+      title: "Gastric cancer — D1 vs D2 lymphadenectomy",
+      caption: "D1 clears the perigastric nodes (stations 1–7) along the lesser and greater curves. D2 adds the nodes along the named branches of the coeliac axis — 8 common hepatic, 9 coeliac, 10 splenic hilum, 11 splenic artery, 12 hepatoduodenal ligament. D2 is the standard lymphadenectomy for curative resection; distal-third tumours need only a subtotal gastrectomy, while proximal or diffuse tumours require a total gastrectomy.",
+      ref: "Japanese Gastric Cancer Association, Gastric Cancer 2021 (5th ed) · Songun I et al., Lancet Oncol 2010;11:439 (Dutch D1D2 trial)",
+      render: () => React.createElement(GastricD2Fig),
+    },
+
+    "ugi-gist-risk": {
+      title: "GIST — risk of progression (size × mitotic rate)",
+      caption: "Prognosis of a gastrointestinal stromal tumour is driven by tumour size, mitotic rate, and site. Risk rises across both axes: a >10 cm or a >5-mitoses/5 mm² tumour is high-risk and warrants adjuvant imatinib. Crucially, for the SAME size and mitotic rate a small-bowel GIST behaves worse than a gastric one, so anatomical site must be factored into the estimate and the decision to give adjuvant therapy.",
+      ref: "Miettinen M, Lasota J, Semin Diagn Pathol 2006;23:70 (AFIP) · NCCN GIST guideline",
+      render: () => React.createElement(GistRiskFig),
+    },
+
+    "ugi-gastric-volvulus": {
+      title: "Gastric volvulus — organoaxial vs mesenteroaxial",
+      caption: "Organoaxial volvulus rotates the stomach about its long (cardio-pyloric) axis so the greater curvature flips upward; it is the commoner type, is associated with para-oesophageal/diaphragmatic defects, and carries the higher strangulation risk. Mesenteroaxial volvulus rotates about the short axis so the antrum folds up over the GEJ and is often intermittent. Borchardt's triad — epigastric pain, retching without vomiting, and inability to pass a nasogastric tube — signals acute strangulating volvulus needing urgent decompression and surgery.",
+      ref: "Borchardt M, 1904 · Rashid F et al., World J Emerg Surg 2010;5:18",
+      render: () => React.createElement(GastricVolvulusFig),
+    },
+
+    "ugi-meckel-rule-of-2s": {
+      title: "Meckel's diverticulum — anatomy & the rule of 2s",
+      caption: "Meckel's is the commonest congenital anomaly of the GI tract — a true diverticulum (containing all bowel wall layers) on the ANTIMESENTERIC border of the ileum, a remnant of the omphalomesenteric (vitelline) duct. The rule of 2s captures its epidemiology (2% of people, 2:1 male, ~2 feet from the ileocaecal valve, ~2 inches long, 2 ectopic tissue types, often symptomatic by age 2). Ectopic gastric mucosa causes painless lower-GI bleeding and is imaged with a 99mTc-pertechnetate 'Meckel scan'.",
+      ref: "Park JJ et al., Ann Surg 2005;241:529 (Mayo series) · Sagar J et al., J R Soc Med 2006;99:501",
+      render: () => React.createElement(MeckelFig),
     },
 
   });

@@ -56,6 +56,11 @@ module.exports = {
   'zenker': ['ugi-zenker-anatomy'],
   'bariatric': ['ugi-bariatric-anatomy'],
   'barretts': ['ugi-los-angeles-grade'],
+  'oesophageal-cancer': ['ugi-siewert-classification'],
+  'gastric-ca': ['ugi-siewert-classification', 'ugi-gastric-d2-lymphadenectomy'],
+  'gist': ['ugi-gist-risk'],
+  'gastric-volvulus': ['ugi-gastric-volvulus'],
+  'meckel': ['ugi-meckel-rule-of-2s'],
 
   // ── BREAST & ENDOCRINE ──────────────────────────────────────────────────
   'breast-ca': ['breast-axillary-levels'],
