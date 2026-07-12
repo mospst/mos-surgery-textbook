@@ -44,6 +44,11 @@ module.exports = {
   'choledocholithiasis': ['hpb-biliary-anatomy-stone'],
   'biliary-colic': ['hpb-biliary-anatomy-stone'],
   'psc': ['hpb-bismuth-corlette', 'hpb-biliary-anatomy-stone'],
+  'pancreatic-cancer': ['hpb-panc-resectability'],
+  'chronic-pancreatitis': ['hpb-chronic-panc-ops'],
+  'ipmn': ['hpb-ipmn-types'],
+  'gallbladder-cancer': ['hpb-gb-cancer-tstage'],
+  'hydatid-cyst': ['hpb-hydatid-who'],
 
   // ── UPPER GI ────────────────────────────────────────────────────────────
   'hiatus-hernia': ['ugi-hiatus-hernia-types'],

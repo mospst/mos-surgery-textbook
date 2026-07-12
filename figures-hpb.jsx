@@ -603,6 +603,210 @@
   }
 
   // ─────────────────────────────────────────────────────────────────────────
+  // Pancreatic cancer — resectability by vessel contact (NCCN)
+  // ─────────────────────────────────────────────────────────────────────────
+  function PancResectabilityFig() {
+    const cols = [
+      { t: "Resectable", op: 0.14 },
+      { t: "Borderline", op: 0.34 },
+      { t: "Locally advanced", op: 0.62 },
+    ];
+    const rows = [
+      { h: "SMA / coeliac", cells: [["No contact"], ["≤ 180° contact"], ["> 180° contact"]] },
+      { h: "Common hepatic a.", cells: [["No contact"], ["Contact, no", "coeliac extension"], ["Unreconstructable"]] },
+      { h: "SMV / portal vein", cells: [["≤ 180°,", "normal contour"], ["> 180° or irregular,", "reconstructable"], ["Occluded /", "unreconstructable"]] },
+    ];
+    const x0 = 22, hw = 116, cw = 168, y0 = 84, rh = 70;
+    return (
+      <svg {...svgProps("0 0 660 320")}>
+        <text {...T(330, 24, 14, { fontWeight: 700 })}>Pancreatic cancer — resectability by vessel contact</text>
+        <text {...T(330, 42, 9.5, { fill: SOFT })}>tumour–vessel relationship on CT (NCCN criteria)</text>
+        {cols.map((c, i) => (
+          <g key={i}>
+            <rect x={x0 + hw + cw * i} y={y0 - 26} width={cw} height={24} fill={ACCENT} opacity={c.op} stroke={RULE} strokeWidth="1" />
+            <text {...T(x0 + hw + cw * i + cw / 2, y0 - 9, 10.5, { fontWeight: 700 })}>{c.t}</text>
+          </g>
+        ))}
+        {rows.map((row, r) => (
+          <g key={r}>
+            <rect x={x0} y={y0 + rh * r} width={hw} height={rh} fill={WALL} stroke={RULE} strokeWidth="1" />
+            <text x={x0 + 9} y={y0 + rh * r + rh / 2 + 4} fontSize="9.5" fill={INK} fontWeight="600" textAnchor="start">{row.h}</text>
+            {row.cells.map((lines, c) => (
+              <g key={c}>
+                <rect x={x0 + hw + cw * c} y={y0 + rh * r} width={cw} height={rh} fill="none" stroke={RULE} strokeWidth="1" />
+                {lines.map((ln, k) => (
+                  <text key={k} {...T(x0 + hw + cw * c + cw / 2, y0 + rh * r + rh / 2 - (lines.length - 1) * 7 + k * 14 + 4, 9.5, { fill: SOFT })}>{ln}</text>
+                ))}
+              </g>
+            ))}
+          </g>
+        ))}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Chronic pancreatitis — drainage vs resection operations
+  // ─────────────────────────────────────────────────────────────────────────
+  function ChronicPancOpsFig() {
+    const ops = [
+      { t: "Puestow", d: ["Lateral pancreatico-", "jejunostomy (drainage)"], kind: "puestow" },
+      { t: "Frey", d: ["Head coring +", "lateral PJ (hybrid)"], kind: "frey" },
+      { t: "Beger", d: ["Duodenum-preserving", "head resection"], kind: "beger" },
+      { t: "Whipple", d: ["Pancreatoduodenectomy", "(mass / ?malignancy)"], kind: "whipple" },
+    ];
+    const pw = 170;
+    const Panel = (op, i) => {
+      const ox = i * pw, cx = ox + pw / 2, cy = 96;
+      const gl = `M ${ox + 24} ${cy} Q ${ox + 70} ${cy - 20} ${ox + 116} ${cy - 10} Q ${ox + 148} ${cy - 4} ${ox + 148} ${cy + 16} Q ${ox + 148} ${cy + 38} ${ox + 114} ${cy + 32} Q ${ox + 70} ${cy + 24} ${ox + 24} ${cy + 6} Z`;
+      const e = [<path key="gl" d={gl} fill={WALL} stroke={INK} strokeWidth="1.8" />];
+      if (op.kind === "puestow" || op.kind === "frey") {
+        e.push(<path key="duct" d={`M ${ox + 30} ${cy + 2} L ${ox + 138} ${cy + 8}`} fill="none" stroke={ACCENT} strokeWidth="3" strokeDasharray="3 3" />);
+        e.push(<path key="roux" d={`M ${ox + 40} ${cy + 26} Q ${cx} ${cy + 52} ${ox + 132} ${cy + 26}`} fill="none" stroke={INK} strokeWidth="1.8" />);
+      }
+      if (op.kind === "frey")
+        e.push(<circle key="core" cx={ox + 126} cy={cy + 12} r={11} fill={ASOFT} stroke={ACCENT} strokeWidth="1.5" strokeDasharray="2 2" />);
+      if (op.kind === "beger") {
+        e.push(<line key="div" x1={ox + 108} y1={cy - 16} x2={ox + 108} y2={cy + 36} stroke={ACCENT} strokeWidth="2" strokeDasharray="3 2" />);
+        e.push(<path key="head" d={`M ${ox + 116} ${cy - 10} Q ${ox + 148} ${cy - 4} ${ox + 148} ${cy + 16} Q ${ox + 148} ${cy + 38} ${ox + 114} ${cy + 32}`} fill={ASOFT} stroke={ACCENT} strokeWidth="1.5" />);
+      }
+      if (op.kind === "whipple") {
+        e.push(<line key="cut" x1={ox + 102} y1={cy - 18} x2={ox + 102} y2={cy + 40} stroke={ACCENT} strokeWidth="2" strokeDasharray="3 2" />);
+        e.push(<path key="rm" d={`M ${ox + 110} ${cy - 10} Q ${ox + 148} ${cy - 4} ${ox + 148} ${cy + 16} Q ${ox + 148} ${cy + 38} ${ox + 110} ${cy + 32}`} fill="none" stroke={MUTE} strokeWidth="1.3" strokeDasharray="2 3" />);
+        e.push(<text key="x" {...T(ox + 130, cy + 4, 13, { fill: ACCENT, fontWeight: 700 })}>✕</text>);
+      }
+      return (
+        <g key={op.t}>
+          {i > 0 && <line x1={ox} y1={44} x2={ox} y2={158} stroke={RULE} strokeWidth="1" />}
+          {e}
+          <text {...T(cx, 172, 12, { fontWeight: 700 })}>{op.t}</text>
+          {op.d.map((ln, k) => <text key={k} {...T(cx, 188 + k * 13, 9, { fill: SOFT })}>{ln}</text>)}
+        </g>
+      );
+    };
+    return (
+      <svg {...svgProps("0 0 680 226")}>
+        <text {...T(340, 24, 14, { fontWeight: 700 })}>Chronic pancreatitis — drainage vs resection</text>
+        {ops.map((op, i) => Panel(op, i))}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // IPMN — main-duct vs branch-duct + Fukuoka features
+  // ─────────────────────────────────────────────────────────────────────────
+  function IpmnTypesFig() {
+    const gland = (ox, oy) => `M ${ox} ${oy} Q ${ox + 40} ${oy - 16} ${ox + 90} ${oy - 8} Q ${ox + 122} ${oy - 2} ${ox + 122} ${oy + 14} Q ${ox + 122} ${oy + 32} ${ox + 88} ${oy + 24} Q ${ox + 40} ${oy + 16} ${ox} ${oy} Z`;
+    return (
+      <svg {...svgProps("0 0 660 320")}>
+        <text {...T(330, 24, 14, { fontWeight: 700 })}>IPMN — main-duct vs branch-duct</text>
+
+        <path d={gland(34, 84)} fill={WALL} stroke={INK} strokeWidth="1.8" />
+        <path d="M 40 86 L 150 92" fill="none" stroke={ACCENT} strokeWidth="7" />
+        <text x={34} y={132} fontSize="10.5" fill={INK} fontWeight="700" textAnchor="start">Main-duct</text>
+        <text x={34} y={146} fontSize="9" fill={SOFT} textAnchor="start">MPD ≥ 5 mm · high risk → resect</text>
+
+        <path d={gland(34, 208)} fill={WALL} stroke={INK} strokeWidth="1.8" />
+        <path d="M 40 210 L 150 216" fill="none" stroke={MUTE} strokeWidth="2.5" />
+        <circle cx={98} cy={192} r={15} fill={ASOFT} stroke={ACCENT} strokeWidth="1.8" />
+        <line x1={98} y1={207} x2={98} y2={212} stroke={ACCENT} strokeWidth="2" />
+        <text x={34} y={256} fontSize="10.5" fill={INK} fontWeight="700" textAnchor="start">Branch-duct</text>
+        <text x={34} y={270} fontSize="9" fill={SOFT} textAnchor="start">communicates with MPD · lower risk</text>
+
+        <line x1={286} y1={54} x2={286} y2={286} stroke={RULE} strokeWidth="1" />
+
+        <text x={302} y={72} fontSize="11" fill={ACCENT} fontWeight="700" textAnchor="start">Worrisome features</text>
+        {["cyst ≥ 3 cm", "thick enhancing walls", "MPD 5–9 mm", "non-enhancing mural nodule", "abrupt duct-calibre change", "lymphadenopathy"].map((s, i) => (
+          <text key={i} x={312} y={92 + i * 17} fontSize="9.5" fill={SOFT} textAnchor="start">· {s}</text>
+        ))}
+        <text x={302} y={218} fontSize="11" fill={ACCENT} fontWeight="700" textAnchor="start">High-risk stigmata → resect</text>
+        {["obstructive jaundice + head cyst", "enhancing mural nodule ≥ 5 mm", "MPD ≥ 10 mm"].map((s, i) => (
+          <text key={i} x={312} y={238 + i * 17} fontSize="9.5" fill={SOFT} textAnchor="start">· {s}</text>
+        ))}
+        <text x={34} y={302} fontSize="9" fill={MUTE} textAnchor="start">Fukuoka / international consensus (2017)</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Gallbladder cancer — T-stage by wall depth
+  // ─────────────────────────────────────────────────────────────────────────
+  function GbCancerTStageFig() {
+    const layers = [
+      { t: "Lumen", h: 28, fill: LUMEN },
+      { t: "Mucosa / lamina propria", h: 26, fill: WALL },
+      { t: "Muscularis", h: 24, fill: ASOFT },
+      { t: "Perimuscular conn. tissue", h: 30, fill: WALL },
+      { t: "Serosa", h: 14, fill: ASOFT },
+      { t: "Liver / adjacent organ", h: 38, fill: WALL },
+    ];
+    const x0 = 40, w = 290, y0 = 62;
+    let yy = y0;
+    const bands = layers.map((L) => { const y = yy; yy += L.h; return { ...L, y }; });
+    const stages = [
+      { s: "Tis", y: y0 + 6, txt: "in situ (epithelium)" },
+      { s: "T1a", y: bands[1].y + 13, txt: "lamina propria → simple cholecystectomy" },
+      { s: "T1b", y: bands[2].y + 12, txt: "muscularis → radical cholecystectomy" },
+      { s: "T2", y: bands[3].y + 15, txt: "perimuscular (T2a periton. / T2b hepatic)" },
+      { s: "T3", y: bands[5].y + 6, txt: "through serosa / into liver or 1 organ" },
+      { s: "T4", y: bands[5].y + 26, txt: "portal vein / hepatic a. or ≥ 2 organs" },
+    ];
+    return (
+      <svg {...svgProps("0 0 660 300")}>
+        <text {...T(330, 24, 14, { fontWeight: 700 })}>Gallbladder cancer — T-stage by wall depth</text>
+        {bands.map((L, i) => (
+          <g key={i}>
+            <rect x={x0} y={L.y} width={w} height={L.h} fill={L.fill} stroke={RULE} strokeWidth="1" />
+            <text x={x0 + w / 2} y={L.y + L.h / 2 + 3.5} fontSize="9" fill={MUTE} textAnchor="middle">{L.t}</text>
+          </g>
+        ))}
+        {stages.map((st, i) => (
+          <g key={i}>
+            <text x={x0 + w + 16} y={st.y + 4} fontSize="11" fill={ACCENT} fontWeight="700" textAnchor="start">{st.s}</text>
+            <text x={x0 + w + 50} y={st.y + 4} fontSize="9.5" fill={SOFT} textAnchor="start">{st.txt}</text>
+          </g>
+        ))}
+        <text x={x0} y={272} fontSize="9.5" fill={ACCENT} fontWeight="600" textAnchor="start">Threshold: T1a → simple cholecystectomy · T1b+ → radical (extended) cholecystectomy + portal LND</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Hydatid cyst — WHO (WHO-IWGE) ultrasound classification
+  // ─────────────────────────────────────────────────────────────────────────
+  function HydatidWhoFig() {
+    const cysts = [
+      { id: "CL", x: 92 }, { id: "CE1", x: 208 }, { id: "CE2", x: 324 },
+      { id: "CE3", x: 440 }, { id: "CE4", x: 548 }, { id: "CE5", x: 640 },
+    ];
+    const cy = 116, r = 36;
+    const draw = (id, x) => {
+      const e = [<circle key="c" cx={x} cy={cy} r={r} fill={WALL} stroke={INK} strokeWidth={id === "CE5" ? 5 : 2} />];
+      if (id === "CE1") for (let k = 0; k < 8; k++) { const a = k / 8 * 6.283; e.push(<circle key={"s" + k} cx={x + Math.cos(a) * 15} cy={cy + Math.sin(a) * 15} r={1.8} fill={MUTE} />); }
+      if (id === "CE2") [[-14, -12], [14, -12], [-14, 14], [14, 14], [0, 1]].forEach((p, k) => e.push(<circle key={"d" + k} cx={x + p[0]} cy={cy + p[1]} r={9} fill={LUMEN} stroke={ACCENT} strokeWidth="1.4" />));
+      if (id === "CE3") e.push(<path key="wl" d={`M ${x - 24} ${cy + 4} Q ${x - 8} ${cy - 8} ${x + 4} ${cy + 5} Q ${x + 16} ${cy + 16} ${x + 24} ${cy + 3}`} fill="none" stroke={ACCENT} strokeWidth="2" />);
+      if (id === "CE4") e.push(<path key="ht" d={`M ${x - 18} ${cy - 8} q 9 8 0 16 q 9 8 0 16 M ${x + 2} ${cy - 15} q 9 12 0 24 M ${x + 18} ${cy - 9} q -8 10 0 18`} fill="none" stroke={MUTE} strokeWidth="1.5" />);
+      return e;
+    };
+    return (
+      <svg {...svgProps("0 0 700 240")}>
+        <text {...T(350, 24, 14, { fontWeight: 700 })}>Hydatid cyst — WHO (WHO-IWGE) ultrasound stages</text>
+        {cysts.map((c) => (
+          <g key={c.id}>
+            {draw(c.id, c.x)}
+            <text {...T(c.x, cy + r + 20, 12, { fill: ACCENT, fontWeight: 700 })}>{c.id}</text>
+          </g>
+        ))}
+        <text {...T(92, cy + r + 42, 9, { fill: MUTE })}>undifferentiated</text>
+        <text {...T(266, cy + r + 42, 9, { fill: SOFT })}>Active (viable) → treat</text>
+        <text {...T(440, cy + r + 42, 9, { fill: SOFT })}>Transitional</text>
+        <text {...T(594, cy + r + 42, 9, { fill: SOFT })}>Inactive → observe</text>
+        <text {...T(350, 226, 9, { fill: MUTE })}>CE1 sand · CE2 daughter cysts · CE3 water-lily · CE4 heterogeneous · CE5 calcified</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
   // Register all figures
   // ─────────────────────────────────────────────────────────────────────────
   window.SK_FIGURES = Object.assign(window.SK_FIGURES || {}, {
@@ -653,6 +857,46 @@
         "CBD stones arise from the gallbladder (secondary) or form de novo in the duct (primary). A stone at the distal CBD / ampulla of Vater obstructs bile flow causing conjugated hyperbilirubinaemia; simultaneous pancreatic duct obstruction precipitates gallstone pancreatitis. The anatomical landmark for surgical exploration is the common bile duct at the hepatoduodenal ligament, where it lies anterior to the portal vein and medial to the hepatic artery.",
       ref: "Strasberg SM. N Engl J Med 2008;358:2804 · ESGE CBD stone guideline 2019.",
       render: () => React.createElement(BiliaryAnatomyFig),
+    },
+
+    "hpb-panc-resectability": {
+      title: "Pancreatic cancer — resectability by vessel contact",
+      caption:
+        "Resectability of pancreatic ductal adenocarcinoma is defined by the tumour's relationship to the coeliac axis, SMA, common hepatic artery, and SMV/portal vein on CT. Resectable disease has no arterial contact and ≤180° venous contact with a normal contour; borderline disease has limited arterial contact (≤180°) or reconstructable venous involvement and is offered neoadjuvant therapy first; locally advanced disease has >180° arterial encasement or an unreconstructable vein and is unresectable. Degrees of contact, not size, drive the decision.",
+      ref: "NCCN Guidelines — Pancreatic Adenocarcinoma · Al-Hawary MM et al., Radiology 2014 (consensus).",
+      render: () => React.createElement(PancResectabilityFig),
+    },
+
+    "hpb-chronic-panc-ops": {
+      title: "Chronic pancreatitis — drainage vs resection",
+      caption:
+        "Operations are chosen by ductal anatomy and whether an inflammatory head mass is present. A dilated main duct without a mass is drained by a Puestow (lateral pancreaticojejunostomy); a head-predominant 'inflammatory mass' is addressed by resection or a hybrid — Frey (head coring + lateral PJ), Beger (duodenum-preserving pancreatic head resection), or a Whipple when malignancy cannot be excluded. Drainage preserves parenchyma; resection tackles the pacemaker of pain in the head.",
+      ref: "Frey CF, Smith GJ, Pancreas 1987 · Beger HG et al., Ann Surg 1999 · AGA/IAP guidance.",
+      render: () => React.createElement(ChronicPancOpsFig),
+    },
+
+    "hpb-ipmn-types": {
+      title: "IPMN — main-duct vs branch-duct & Fukuoka features",
+      caption:
+        "Main-duct IPMN (segmental or diffuse MPD dilation ≥5 mm without another cause) carries a high risk of malignancy and is generally resected. Branch-duct IPMN is a cyst communicating with a non-dilated main duct and is lower-risk, so it is stratified by 'worrisome features' (which prompt EUS) and 'high-risk stigmata' — obstructive jaundice with a cystic head lesion, an enhancing mural nodule ≥5 mm, or MPD ≥10 mm — which mandate resection.",
+      ref: "Tanaka M et al., Pancreatology 2017 (revised Fukuoka/international consensus).",
+      render: () => React.createElement(IpmnTypesFig),
+    },
+
+    "hpb-gb-cancer-tstage": {
+      title: "Gallbladder cancer — T-stage & the re-resection threshold",
+      caption:
+        "T-stage is defined by depth of invasion through the gallbladder wall. The pivotal threshold is T1a (lamina propria) versus T1b (muscularis): a T1a tumour found incidentally after cholecystectomy is cured by the cholecystectomy alone, whereas T1b and beyond require radical (extended) cholecystectomy — resection of liver segments IVb/V and a portal lymphadenectomy. T2b (hepatic-side) tumours carry a worse prognosis than T2a (peritoneal-side).",
+      ref: "AJCC Cancer Staging Manual 8th ed · Aloia TA et al., HPB 2015 (expert consensus).",
+      render: () => React.createElement(GbCancerTStageFig),
+    },
+
+    "hpb-hydatid-who": {
+      title: "Hydatid cyst — WHO ultrasound classification (CE1–CE5)",
+      caption:
+        "The WHO-IWGE classification groups hepatic hydatid (Echinococcus granulosus) cysts by activity on ultrasound. CE1 (unilocular with hydatid sand) and CE2 (multivesicular, daughter cysts) are ACTIVE and viable; CE3 (detached membrane — the 'water-lily' sign) is transitional; CE4 (heterogeneous, degenerated) and CE5 (calcified wall) are INACTIVE. Active cysts warrant treatment (albendazole plus PAIR or surgery), whereas inactive CE4/CE5 cysts can often simply be observed.",
+      ref: "WHO Informal Working Group on Echinococcosis, Acta Trop 2003;85:253.",
+      render: () => React.createElement(HydatidWhoFig),
     },
 
   });
