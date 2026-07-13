@@ -149,4 +149,8 @@ module.exports = {
   'diagnostic-laparoscopy': ['mis-port-placement', 'mis-access-techniques'],
   'conversion-to-open': ['mis-access-techniques'],
   'lap-inguinal-hernia': ['mis-tep-vs-tapp'],
+  'partial-fundoplication': ['mis-fundoplication-wraps'],
+  'balloon-tamponade': ['mis-balloon-tamponade'],
+  'poem': ['mis-poem-steps'],
+  'peg': ['mis-peg-pull'],
 };

@@ -2,7 +2,7 @@
 // Cache name is stamped with a content hash so a new build replaces the old cache.
 'use strict';
 
-const CACHE = 'surgery-6b942f9e211c';
+const CACHE = 'surgery-e3a3f14c13ee';
 const ASSETS = [
   "./",
   "./index.html",

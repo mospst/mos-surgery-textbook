@@ -485,6 +485,154 @@
     );
   }
 
+  // ─────────────────────────────────────────────────────────────────────────
+  // Fundoplication wraps — Nissen vs Toupet vs Dor (axial at the GEJ)
+  // ─────────────────────────────────────────────────────────────────────────
+  function FundoplicationWrapsFig() {
+    const wraps = [
+      { t: "Nissen", deg: "360° complete", kind: "full" },
+      { t: "Toupet", deg: "270° posterior", kind: "post" },
+      { t: "Dor", deg: "180° anterior", kind: "ant" },
+    ];
+    const pw = 210;
+    const rad = (d) => d * Math.PI / 180;
+    const pt = (cx, cy, r, a) => [cx + r * Math.cos(rad(a)), cy + r * Math.sin(rad(a))];
+    const sector = (cx, cy, ri, ro, a0, a1) => {
+      const [x1, y1] = pt(cx, cy, ro, a0), [x2, y2] = pt(cx, cy, ro, a1);
+      const [x3, y3] = pt(cx, cy, ri, a1), [x4, y4] = pt(cx, cy, ri, a0);
+      const large = (a1 - a0) > 180 ? 1 : 0;
+      return `M ${x1} ${y1} A ${ro} ${ro} 0 ${large} 1 ${x2} ${y2} L ${x3} ${y3} A ${ri} ${ri} 0 ${large} 0 ${x4} ${y4} Z`;
+    };
+    const Panel = (w, i) => {
+      const ox = i * pw + 60, cx = ox + 46, cy = 110, ri = 22, ro = 42;
+      const e = [<text key="ant" {...T(cx, 60, 8, { fill: MUTE })}>anterior ↑</text>];
+      if (w.kind === "full") e.push(<circle key="w" cx={cx} cy={cy} r={ro} fill={ASOFT} stroke={ACCENT} strokeWidth="2" />);
+      else if (w.kind === "post") e.push(<path key="w" d={sector(cx, cy, ri, ro, -45, 225)} fill={ASOFT} stroke={ACCENT} strokeWidth="2" />);
+      else e.push(<path key="w" d={sector(cx, cy, ri, ro, 180, 360)} fill={ASOFT} stroke={ACCENT} strokeWidth="2" />);
+      e.push(<circle key="oe" cx={cx} cy={cy} r={ri} fill={WALL} stroke={INK} strokeWidth="1.8" />);
+      e.push(<text key="oel" {...T(cx, cy + 3, 8, { fill: SOFT })}>oes.</text>);
+      return (
+        <g key={w.t}>
+          {i > 0 && <line x1={ox - 14} y1={54} x2={ox - 14} y2={198} stroke={RULE} strokeWidth="1" />}
+          {e}
+          <text {...T(cx, 178, 12, { fontWeight: 700 })}>{w.t}</text>
+          <text {...T(cx, 194, 9, { fill: SOFT })}>{w.deg}</text>
+        </g>
+      );
+    };
+    return (
+      <svg {...svgProps("0 0 660 228")}>
+        <text {...T(330, 24, 14, { fontWeight: 700 })}>Fundoplication wraps (axial view at the GEJ)</text>
+        {wraps.map((w, i) => Panel(w, i))}
+        <text {...T(330, 216, 8.5, { fill: MUTE })}>Partial wraps (Toupet/Dor) cause less dysphagia — favoured with impaired oesophageal motility</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Balloon tamponade — Sengstaken-Blakemore / Minnesota tube
+  // ─────────────────────────────────────────────────────────────────────────
+  function BalloonTamponadeFig() {
+    const tx = 250;
+    return (
+      <svg {...svgProps("0 0 640 320")}>
+        <text {...T(320, 24, 14, { fontWeight: 700 })}>Balloon tamponade — Sengstaken-Blakemore tube</text>
+        {/* oesophagus walls */}
+        <line x1={tx - 18} y1={52} x2={tx - 18} y2={196} stroke={INK} strokeWidth="1.6" />
+        <line x1={tx + 18} y1={52} x2={tx + 18} y2={196} stroke={INK} strokeWidth="1.6" />
+        {/* stomach */}
+        <path d={`M ${tx - 18} 196 Q ${tx - 70} 210 ${tx - 60} 258 Q ${tx - 48} 296 ${tx + 20} 292 Q ${tx + 80} 288 ${tx + 78} 244 Q ${tx + 76} 208 ${tx + 18} 196`} fill={WALL} stroke={INK} strokeWidth="1.6" />
+        {/* tube */}
+        <line x1={tx} y1={40} x2={tx} y2={268} stroke={INK} strokeWidth="3" />
+        {/* gastric balloon */}
+        <ellipse cx={tx + 4} cy={250} rx={44} ry={28} fill={ASOFT} stroke={ACCENT} strokeWidth="2" />
+        <text {...T(tx + 4, 248, 9, { fill: ACCENT, fontWeight: 700 })}>gastric</text>
+        <text {...T(tx + 4, 260, 8, { fill: SOFT })}>250–500 mL</text>
+        {/* oesophageal balloon */}
+        <rect x={tx - 14} y={100} width={28} height={64} rx={13} fill={ASOFT} stroke={ACCENT} strokeWidth="2" />
+        <text x={tx + 26} y={130} fontSize="9" fill={ACCENT} fontWeight="700" textAnchor="start">oesophageal</text>
+        <text x={tx + 26} y={142} fontSize="8.5" fill={SOFT} textAnchor="start">balloon</text>
+        {/* traction */}
+        <line x1={tx} y1={40} x2={tx} y2={16} stroke={ACCENT} strokeWidth="2" />
+        <polygon points={`${tx},14 ${tx - 5},26 ${tx + 5},26`} fill={ACCENT} />
+        <text x={tx + 10} y={44} fontSize="9" fill={ACCENT} textAnchor="start">traction</text>
+        {/* ports */}
+        <text x={420} y={80} fontSize="10.5" fill={INK} fontWeight="700" textAnchor="start">Lumens</text>
+        {["gastric aspiration", "gastric balloon inflation", "oesophageal balloon inflation", "Minnesota adds an oesophageal", "aspiration port (4 lumens)"].map((s, i) => (
+          <text key={i} x={420} y={102 + i * 18} fontSize="9" fill={SOFT} textAnchor="start">· {s}</text>
+        ))}
+        <text x={40} y={306} fontSize="8.5" fill={MUTE} textAnchor="start">Temporising bridge (&lt; 24 h) · deflate periodically · risks: mucosal necrosis, aspiration, migration/asphyxia</text>
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // POEM — per-oral endoscopic myotomy steps
+  // ─────────────────────────────────────────────────────────────────────────
+  function PoemStepsFig() {
+    const steps = [
+      { n: 1, t: "Mucosotomy", d: "2 cm mucosal entry" },
+      { n: 2, t: "Submucosal tunnel", d: "down across the GEJ" },
+      { n: 3, t: "Myotomy", d: "divide circular muscle" },
+      { n: 4, t: "Close", d: "clip the mucosotomy" },
+    ];
+    const pw = 160;
+    const Panel = (s, i) => {
+      const ox = i * pw + 24, x = ox, w = 126, ly = 62;
+      const layers = [
+        { h: 16, fill: WALL }, { h: 18, fill: ASOFT }, { h: 16, fill: WALL }, { h: 12, fill: WALL },
+      ];
+      let yy = ly;
+      const bands = layers.map((L) => { const y = yy; yy += L.h; return { ...L, y }; });
+      const e = bands.map((L, k) => <rect key={"b" + k} x={x} y={L.y} width={w} height={L.h} fill={L.fill} stroke={RULE} strokeWidth="0.8" />);
+      if (s.n === 1) e.push(<line key="m" x1={x + 34} y1={ly} x2={x + 44} y2={ly + 16} stroke={ACCENT} strokeWidth="2.5" />);
+      if (s.n === 2) e.push(<rect key="t" x={x + 26} y={bands[1].y} width={w - 44} height={bands[1].h} fill={ACCENT} opacity="0.35" />);
+      if (s.n === 3) { e.push(<rect key="t" x={x + 26} y={bands[1].y} width={w - 44} height={bands[1].h} fill={ACCENT} opacity="0.2" />); e.push(<line key="my" x1={x + 44} y1={bands[2].y - 1} x2={x + 92} y2={bands[2].y + 16} stroke={ACCENT} strokeWidth="3" />); }
+      if (s.n === 4) { e.push(<circle key="cl" cx={x + 40} cy={ly - 1} r={3} fill={ACCENT} />); e.push(<line key="c1" x1={x + 34} y1={ly + 5} x2={x + 40} y2={ly - 1} stroke={INK} strokeWidth="1.6" />); e.push(<line key="c2" x1={x + 46} y1={ly + 5} x2={x + 40} y2={ly - 1} stroke={INK} strokeWidth="1.6" />); }
+      return (
+        <g key={s.n}>
+          {i > 0 && <line x1={ox - 17} y1={52} x2={ox - 17} y2={170} stroke={RULE} strokeWidth="1" />}
+          {e}
+          <text {...T(x + w / 2, 158, 11, { fontWeight: 700 })}>{s.n}. {s.t}</text>
+          <text {...T(x + w / 2, 172, 8.5, { fill: SOFT })}>{s.d}</text>
+        </g>
+      );
+    };
+    return (
+      <svg {...svgProps("0 0 660 200")}>
+        <text {...T(330, 24, 14, { fontWeight: 700 })}>POEM — per-oral endoscopic myotomy steps</text>
+        <text {...T(330, 44, 8, { fill: MUTE })}>oesophageal wall in cross-section — lumen above, muscle below</text>
+        {steps.map((s, i) => Panel(s, i))}
+      </svg>
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // PEG — pull technique & bumper apposition
+  // ─────────────────────────────────────────────────────────────────────────
+  function PegPullFig() {
+    return (
+      <svg {...svgProps("0 0 640 290")}>
+        <text {...T(320, 24, 14, { fontWeight: 700 })}>PEG — pull technique &amp; bumper apposition</text>
+        <text x={64} y={62} fontSize="9" fill={SOFT} textAnchor="start">skin / abdominal wall</text>
+        <rect x={60} y={68} width={230} height={24} fill={WALL} stroke={INK} strokeWidth="1.5" />
+        <path d="M 60 150 Q 175 132 290 150 L 290 174 Q 175 156 60 174 Z" fill={ASOFT} stroke={INK} strokeWidth="1.5" />
+        <text x={64} y={200} fontSize="9" fill={SOFT} textAnchor="start">stomach wall (gastropexy)</text>
+        <rect x={168} y={44} width={14} height={128} fill={LUMEN} stroke={INK} strokeWidth="1.8" />
+        <rect x={150} y={58} width={50} height={10} rx={3} fill={MUTE} />
+        <text x={206} y={66} fontSize="8.5" fill={SOFT} textAnchor="start">external bolster</text>
+        <path d="M 158 174 L 192 174 L 184 189 L 166 189 Z" fill={ACCENT} opacity="0.85" />
+        <text x={206} y={186} fontSize="8.5" fill={SOFT} textAnchor="start">internal bumper</text>
+        <line x1={320} y1={44} x2={320} y2={214} stroke={RULE} strokeWidth="1" />
+        <text x={342} y={62} fontSize="11" fill={INK} fontWeight="700" textAnchor="start">Pull technique</text>
+        {["Endoscopy → transilluminate +", "   finger-indent the gastric wall", "Needle puncture → pass a guidewire", "Snare the wire, pull it out the mouth", "Attach the PEG, pull down until the", "   internal bumper apposes mucosa"].map((s, i) => (
+          <text key={i} x={342} y={86 + i * 19} fontSize="9.5" fill={SOFT} textAnchor="start">{s}</text>
+        ))}
+        <text x={60} y={244} fontSize="8.5" fill={MUTE} textAnchor="start">Bumper too tight → buried-bumper syndrome · don't replace a dislodged tube early (tract immature &lt; 2–4 wk)</text>
+      </svg>
+    );
+  }
+
   window.SK_FIGURES = Object.assign(window.SK_FIGURES || {}, {
 
     "mis-port-placement": {
@@ -520,6 +668,38 @@
       caption: "Both approaches create a mesh-reinforced preperitoneal pocket covering the myopectineal orifice (direct, indirect, and femoral spaces). TEP never enters the peritoneal cavity, minimising adhesion risk but requiring early balloon development of a limited space. TAPP provides a familiar transabdominal view and easier contralateral inspection, but mandates secure peritoneal closure over the mesh to prevent bowel adhesion.",
       ref: "Miserez M et al. HerniaSurge Group guidelines. Hernia 2018;22:1 · Lau H et al. Surg Endosc 2006;20:998.",
       render: () => <TepTappFig />,
+    },
+
+    "mis-fundoplication-wraps": {
+      title: "Fundoplication wraps — Nissen vs Toupet vs Dor",
+      caption:
+        "The three common anti-reflux wraps differ in how far the gastric fundus is brought around the distal oesophagus. Nissen is a 360° complete wrap; Toupet is a 270° posterior partial wrap; Dor is a ~180° anterior partial wrap. Partial wraps (Toupet/Dor) generate less resistance and cause less post-operative dysphagia, so they are favoured when oesophageal motility is impaired; the complete Nissen gives the most durable reflux control.",
+      ref: "Stefanidis D et al., Surg Endosc 2010 (SAGES GERD guideline).",
+      render: () => <FundoplicationWrapsFig />,
+    },
+
+    "mis-balloon-tamponade": {
+      title: "Balloon tamponade — Sengstaken-Blakemore tube",
+      caption:
+        "A balloon tamponade tube is a temporising rescue for exsanguinating variceal haemorrhage when endoscopy fails or is unavailable. The gastric balloon (250–500 mL) is inflated in the stomach and pulled up under traction to tamponade gastro-oesophageal junction varices; an oesophageal balloon can compress oesophageal varices. The Sengstaken-Blakemore tube has three lumens; the Minnesota tube adds an oesophageal aspiration port (four lumens). It is a bridge (<24 h) with real risks — mucosal necrosis, aspiration, and fatal airway obstruction if it migrates.",
+      ref: "Garcia-Tsao G et al., Hepatology 2017 (AASLD) · UK BSG variceal guideline.",
+      render: () => <BalloonTamponadeFig />,
+    },
+
+    "mis-poem-steps": {
+      title: "POEM — per-oral endoscopic myotomy",
+      caption:
+        "POEM is an incisionless endoscopic myotomy for achalasia. After a short mucosal incision (mucosotomy), a submucosal tunnel is created down across the gastro-oesophageal junction; a selective myotomy then divides the circular muscle, and the mucosotomy is closed with clips. Because the tunnel length is adjustable, POEM is especially suited to type III (spastic) achalasia where a longer myotomy is needed; the main trade-off versus a Heller is a higher rate of post-procedure reflux.",
+      ref: "Inoue H et al., Endoscopy 2010;42:265 · Werner YB et al., N Engl J Med 2019.",
+      render: () => <PoemStepsFig />,
+    },
+
+    "mis-peg-pull": {
+      title: "PEG — pull technique & bumper apposition",
+      caption:
+        "In the pull technique, the endoscope transilluminates the abdominal wall and a finger indentation confirms a safe window; a needle is passed into the stomach, a guidewire is snared and drawn out through the mouth, and the PEG tube is then pulled down until its internal bumper apposes the gastric mucosa against the abdominal wall (a gastropexy). Over-tightening the bumper risks buried-bumper syndrome, and a tube dislodged before the tract matures (~2–4 weeks) must not be blindly replaced.",
+      ref: "Gauderer MW et al., J Pediatr Surg 1980;15:872 (original) · ESGE PEG guideline 2021.",
+      render: () => <PegPullFig />,
     },
 
   });
