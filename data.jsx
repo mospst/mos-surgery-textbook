@@ -49093,7 +49093,8 @@ const DISEASES = [
         tags: ["image", "public-domain", "cancer", "illustration"],
         query: "liposarcoma"
       }
-    ]
+    ],
+    figures: ["skin-sts-grade-margins"]
   },
 
   {
@@ -49359,7 +49360,8 @@ const DISEASES = [
         tags: ["image", "public-domain", "cancer", "illustration"],
         query: "Leiomyosarcoma"
       }
-    ]
+    ],
+    figures: ["skin-sts-grade-margins"]
   },
 
   {
@@ -49617,7 +49619,8 @@ const DISEASES = [
         tags: ["image", "public-domain", "cancer", "illustration"],
         query: "Desmoid Tumor"
       }
-    ]
+    ],
+    figures: ["skin-desmoid-pathway"]
   },
 
   {
@@ -49880,7 +49883,8 @@ const DISEASES = [
         tags: ["image", "public-domain", "cancer", "illustration"],
         query: "Merkel cell carcinoma"
       }
-    ]
+    ],
+    figures: ["skin-merkel-cell-aeiou"]
   },
 
   {
@@ -50161,7 +50165,8 @@ const DISEASES = [
         tags: ["image", "public-domain", "cancer", "illustration"],
         query: "Kaposi sarcoma"
       }
-    ]
+    ],
+    figures: ["skin-kaposi-subtypes"]
   },
 
   {
@@ -50413,7 +50418,8 @@ const DISEASES = [
         tags: ["image", "public-domain", "cancer", "illustration"],
         query: "Dermatofibrosarcoma Protuberans & Abdominal-Wall Sarcoma"
       }
-    ]
+    ],
+    figures: ["skin-dfsp-infiltrative-margins"]
   },
 
 

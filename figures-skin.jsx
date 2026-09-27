@@ -518,6 +518,393 @@
   }
 
   // ──────────────────────────────────────────────────────────────────────────
+  // 6. FNCLCC grade + margins — soft-tissue sarcoma (liposarcoma, leiomyosarcoma)
+  //    Panel A: 3-factor grading table. Panel B: pseudocapsule/margin anatomy.
+  // ──────────────────────────────────────────────────────────────────────────
+  function FnclccMarginFig() {
+    const W = 600;
+    const col0X = 20, col0W = 118;
+    const colW = 150;
+    const cols = [col0X + col0W, col0X + col0W + colW, col0X + col0W + colW * 2];
+    const headerY = 34, headerH = 26;
+    const rowH = 44;
+    const rows = [
+      { label: "Differentiation", cells: [["Resembles", "normal tissue"], ["Definite", "histologic type"], ["Synovial/undiff.", "/doubtful type"]] },
+      { label: "Mitotic count", sub: "per 10 HPF", cells: ["0–9", "10–19", "≥ 20"] },
+      { label: "Necrosis", cells: ["None", "≤ 50%", "> 50%"] },
+    ];
+    const rowsTop = headerY + headerH;
+    const tableBottom = rowsTop + rowH * rows.length;
+
+    const barY = tableBottom + 26, barH = 46;
+    const chips = [
+      { grade: "Grade 1", sum: "sum 2–3", tone: WALL },
+      { grade: "Grade 2", sum: "sum 4–5", tone: ASOFT },
+      { grade: "Grade 3", sum: "sum 6–8", tone: ASOFT },
+    ];
+    const chipW = 184, chipGap = 8;
+
+    const panelBY0 = barY + barH + 30;
+    const ringCx = 170, ringCy = panelBY0 + 128;
+    const legendX = 340;
+    const legendRows = [
+      { name: "Tumour", sub: "gross mass", swatch: "solid" },
+      { name: "Pseudocapsule", sub: "compressed tissue — not a true capsule", swatch: "ring" },
+      { name: "Satellite nodules", sub: "microscopic tumour beyond the visible edge", swatch: "dot" },
+      { name: "Reactive zone", sub: "oedema/inflammation — may hide satellites", swatch: "dash" },
+      { name: "Resection margin", sub: "cuff of normal tissue taken in WLE", swatch: "solidring" },
+    ];
+    const legendRowH = 40;
+    const totalH = ringCy + 85 + 15;
+
+    return (
+      <svg {...svgProps(`0 0 ${W} ${totalH}`)}>
+        <text {...T(W / 2, 18, 12.5, { fill: SOFT, fontWeight: 700 })}>FNCLCC grade — sum three scores (liposarcoma, leiomyosarcoma)</text>
+
+        <rect x={col0X} y={headerY} width={col0W - 4} height={headerH} fill={WALL} stroke={RULE} strokeWidth="1" rx="3" />
+        {cols.map((cx, i) => (
+          <rect key={"h" + i} x={cx} y={headerY} width={colW - 4} height={headerH} fill={WALL} stroke={RULE} strokeWidth="1" rx="3" />
+        ))}
+        {["Score 1", "Score 2", "Score 3"].map((t, i) => (
+          <text key={t} {...T(cols[i] + (colW - 4) / 2, headerY + 17, 11, { fontWeight: 700, fill: SOFT })}>{t}</text>
+        ))}
+
+        {rows.map((r, ri) => {
+          const y = rowsTop + ri * rowH;
+          const cy2 = y + rowH / 2 - 2;
+          return (
+            <g key={r.label}>
+              <rect x={col0X} y={y} width={col0W - 4} height={rowH - 4} fill={LUMEN} stroke={RULE} strokeWidth="1" rx="3" />
+              <text {...T(col0X + (col0W - 4) / 2, y + (r.sub ? 18 : 24), 11, { fontWeight: 700 })}>{r.label}</text>
+              {r.sub && <text {...T(col0X + (col0W - 4) / 2, y + 32, 9, { fill: SOFT })}>{r.sub}</text>}
+              {r.cells.map((c, ci) => {
+                const lines = Array.isArray(c) ? c : [c];
+                return (
+                  <g key={ci}>
+                    <rect x={cols[ci]} y={y} width={colW - 4} height={rowH - 4} fill={ci === 2 ? ASOFT : LUMEN} stroke={RULE} strokeWidth="1" rx="3" />
+                    {lines.length === 1
+                      ? <text {...T(cols[ci] + (colW - 4) / 2, cy2 + 3, 9.5)}>{lines[0]}</text>
+                      : <>
+                          <text {...T(cols[ci] + (colW - 4) / 2, cy2 - 5, 9.5)}>{lines[0]}</text>
+                          <text {...T(cols[ci] + (colW - 4) / 2, cy2 + 8, 9.5)}>{lines[1]}</text>
+                        </>}
+                  </g>
+                );
+              })}
+            </g>
+          );
+        })}
+
+        <text {...T(W / 2, tableBottom + 16, 10.5, { fill: SOFT })}>sum the three scores ↓</text>
+        {chips.map((c, i) => {
+          const x = col0X + i * (chipW + chipGap);
+          return (
+            <g key={c.grade}>
+              <rect x={x} y={barY} width={chipW} height={barH} rx="6" fill={c.tone} stroke={RULE} strokeWidth="1" />
+              <text {...T(x + chipW / 2, barY + 19, 12.5, { fontWeight: 800, fill: ACCENT })}>{c.grade}</text>
+              <text {...T(x + chipW / 2, barY + 35, 10, { fill: SOFT })}>{c.sum}</text>
+            </g>
+          );
+        })}
+
+        <line x1={20} y1={panelBY0 - 12} x2={W - 20} y2={panelBY0 - 12} stroke={RULE} strokeWidth="1" />
+        <text {...T(W / 2, panelBY0 + 14, 12.5, { fill: SOFT, fontWeight: 700 })}>Why margins matter: pseudocapsule &amp; reactive zone</text>
+
+        <ellipse cx={ringCx} cy={ringCy} rx={105} ry={85} fill="none" stroke={ACCENT} strokeWidth="2.5" />
+        <ellipse cx={ringCx} cy={ringCy} rx={78} ry={63} fill="none" stroke={MUTE} strokeWidth="1.5" strokeDasharray="4 3" />
+        <ellipse cx={ringCx} cy={ringCy} rx={56} ry={45} fill="none" stroke={INK} strokeWidth="2" />
+        <ellipse cx={ringCx} cy={ringCy} rx={45} ry={36} fill={ACCENT} opacity="0.6" />
+        <circle cx={ringCx + 50} cy={ringCy - 32} r={4.5} fill={ACCENT} opacity="0.7" />
+        <circle cx={ringCx - 48} cy={ringCy + 34} r={4} fill={ACCENT} opacity="0.7" />
+        <circle cx={ringCx + 18} cy={ringCy + 50} r={4} fill={ACCENT} opacity="0.7" />
+
+        {legendRows.map((l, i) => {
+          const y = panelBY0 + 30 + i * legendRowH;
+          const sx = legendX;
+          return (
+            <g key={l.name}>
+              {l.swatch === "solid" && <circle cx={sx + 8} cy={y - 4} r={7} fill={ACCENT} opacity="0.6" />}
+              {l.swatch === "ring" && <circle cx={sx + 8} cy={y - 4} r={7} fill="none" stroke={INK} strokeWidth="2" />}
+              {l.swatch === "dot" && <circle cx={sx + 8} cy={y - 4} r={4} fill={ACCENT} opacity="0.7" />}
+              {l.swatch === "dash" && <circle cx={sx + 8} cy={y - 4} r={7} fill="none" stroke={MUTE} strokeWidth="1.5" strokeDasharray="3 2" />}
+              {l.swatch === "solidring" && <circle cx={sx + 8} cy={y - 4} r={7} fill="none" stroke={ACCENT} strokeWidth="2.5" />}
+              <text x={sx + 22} y={y - 1} fontSize="11" fill={INK} fontWeight="700" textAnchor="start">{l.name}</text>
+              <text x={sx + 22} y={y + 12} fontSize="9" fill={SOFT} textAnchor="start">{l.sub}</text>
+            </g>
+          );
+        })}
+      </svg>
+    );
+  }
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 7. DFSP — infiltrative "tentacle" extension beyond the visible nodule
+  // ──────────────────────────────────────────────────────────────────────────
+  function DfspInfiltrativeFig() {
+    const W = 620, H = 280;
+    const bandX = 20, bandW = 430;
+    const epiY = 44, epiH = 12;
+    const dermY = epiY + epiH, dermH = 94;
+    const fatY = dermY + dermH, fatH = 96;
+
+    return (
+      <svg {...svgProps(`0 0 ${W} ${H}`)}>
+        <text {...T(W / 2, 16, 12.5, { fill: SOFT, fontWeight: 700 })}>DFSP: visible nodule vs microscopic reach</text>
+
+        <rect x={bandX} y={epiY} width={bandW} height={epiH} fill={ASOFT} stroke={RULE} strokeWidth="1" />
+        <rect x={bandX} y={dermY} width={bandW} height={dermH} fill={WALL} stroke={RULE} strokeWidth="1" />
+        <rect x={bandX} y={fatY} width={bandW} height={fatH} fill={LUMEN} stroke={RULE} strokeWidth="1" />
+        <text x={bandX + bandW - 8} y={epiY + 9} fontSize="9" fill={SOFT} textAnchor="end">epidermis</text>
+        <text x={bandX + bandW - 8} y={dermY + 16} fontSize="9" fill={SOFT} textAnchor="end">dermis</text>
+        <text x={bandX + bandW - 8} y={fatY + 16} fontSize="9" fill={SOFT} textAnchor="end">subcutaneous fat</text>
+
+        <rect x={140} y={26} width={210} height={228} rx="16" fill="none" stroke={ACCENT} strokeWidth="2" strokeDasharray="6 4" />
+
+        <ellipse cx={230} cy={52} rx={40} ry={28} fill={ACCENT} opacity="0.55" stroke={ACCENT} strokeWidth="2" />
+
+        <path d="M 205 72 Q 175 122 195 176" fill="none" stroke={ACCENT} strokeWidth="2" strokeLinecap="round" />
+        <path d="M 218 76 Q 210 150 225 208" fill="none" stroke={ACCENT} strokeWidth="2" strokeLinecap="round" />
+        <path d="M 250 76 Q 285 142 300 196" fill="none" stroke={ACCENT} strokeWidth="2" strokeLinecap="round" />
+        <path d="M 260 70 Q 320 132 362 208" fill="none" stroke={ACCENT} strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M 235 80 Q 240 160 240 232" fill="none" stroke={ACCENT} strokeWidth="2" strokeLinecap="round" />
+
+        <circle cx={470} cy={70} r={7} fill={ACCENT} opacity="0.55" stroke={ACCENT} strokeWidth="2" />
+        <text x={484} y={68} fontSize="11" fill={INK} fontWeight="700" textAnchor="start">Visible nodule</text>
+        <text x={484} y={80} fontSize="9" fill={SOFT} textAnchor="start">the gross "protuberans"</text>
+
+        <line x1={463} y1={128} x2={477} y2={128} stroke={ACCENT} strokeWidth="2" />
+        <text x={484} y={126} fontSize="11" fill={INK} fontWeight="700" textAnchor="start">Fibrous tentacles</text>
+        <text x={484} y={138} fontSize="9" fill={SOFT} textAnchor="start">reach far past the edge</text>
+
+        <rect x={463} y={180} width={14} height={14} rx="3" fill="none" stroke={ACCENT} strokeWidth="2" strokeDasharray="3 2" />
+        <text x={484} y={188} fontSize="11" fill={INK} fontWeight="700" textAnchor="start">Standard WLE margin</text>
+        <text x={484} y={200} fontSize="9" fill={SOFT} textAnchor="start">a tentacle tip can still</text>
+        <text x={484} y={213} fontSize="9" fill={SOFT} textAnchor="start">extend past it → recurrence</text>
+      </svg>
+    );
+  }
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 8. Kaposi's sarcoma — four HHV-8-driven clinical subtypes
+  // ──────────────────────────────────────────────────────────────────────────
+  function KaposiSubtypesFig() {
+    const W = 640;
+    const col0X = 20, col0W = 110;
+    const colW = 126;
+    const cols = [col0X + col0W, col0X + col0W + colW, col0X + col0W + colW * 2, col0X + col0W + colW * 3];
+    const names = ["Classic", "Endemic\n(African)", "Iatrogenic", "Epidemic\n(AIDS)"];
+
+    const bannerY = 30, bannerH = 22;
+    const headerY = bannerY + bannerH + 4, headerH = 34;
+    const rowsTop = headerY + headerH;
+    const rowH = 62;
+    const rows = [
+      { label: "Population", cells: [
+        ["Elderly men,", "Mediterranean/E.Europe"],
+        ["Sub-Saharan Africa,", "incl. children"],
+        ["Transplant /", "immunosuppressed"],
+        ["HIV-positive,", "low CD4 count"],
+      ] },
+      { label: "Distribution", cells: [
+        ["Distal lower limb", "(ankles, feet), skin"],
+        ["Skin + nodes;", "nodal form in children"],
+        ["Skin ±", "visceral"],
+        ["Widespread skin,", "mucosa, GI, lung"],
+      ] },
+      { label: "Course", cells: [
+        ["Indolent —", "local Rx often enough"],
+        ["Variable — nodal", "form more aggressive"],
+        ["Regresses if", "immunosuppression ↓"],
+        ["Aggressive —", "responds to ART"],
+      ] },
+    ];
+    const tableBottom = rowsTop + rowH * rows.length;
+    const H = tableBottom + 20;
+
+    return (
+      <svg {...svgProps(`0 0 ${W} ${H}`)}>
+        <text {...T(W / 2, 18, 12.5, { fill: SOFT, fontWeight: 700 })}>Kaposi's sarcoma — four clinical subtypes</text>
+
+        <rect x={20} y={bannerY} width={W - 40} height={bannerH} rx="4" fill={ASOFT} stroke={RULE} strokeWidth="1" />
+        <text {...T(W / 2, bannerY + 15, 10.5, { fontWeight: 700 })}>All four are driven by HHV-8 (KSHV) infection</text>
+
+        <rect x={col0X} y={headerY} width={col0W - 4} height={headerH} fill={WALL} stroke={RULE} strokeWidth="1" rx="3" />
+        {cols.map((cx, i) => {
+          const lines = names[i].split("\n");
+          return (
+            <g key={i}>
+              <rect x={cx} y={headerY} width={colW - 4} height={headerH} fill={WALL} stroke={RULE} strokeWidth="1" rx="3" />
+              {lines.length === 1
+                ? <text {...T(cx + (colW - 4) / 2, headerY + 21, 11.5, { fontWeight: 800, fill: ACCENT })}>{lines[0]}</text>
+                : <>
+                    <text {...T(cx + (colW - 4) / 2, headerY + 13, 11.5, { fontWeight: 800, fill: ACCENT })}>{lines[0]}</text>
+                    <text {...T(cx + (colW - 4) / 2, headerY + 26, 11.5, { fontWeight: 800, fill: ACCENT })}>{lines[1]}</text>
+                  </>}
+            </g>
+          );
+        })}
+
+        {rows.map((r, ri) => {
+          const y = rowsTop + ri * rowH;
+          const cy2 = y + rowH / 2 - 2;
+          return (
+            <g key={r.label}>
+              <rect x={col0X} y={y} width={col0W - 4} height={rowH - 4} fill={LUMEN} stroke={RULE} strokeWidth="1" rx="3" />
+              <text {...T(col0X + (col0W - 4) / 2, cy2 + 3, 10.5, { fontWeight: 700 })}>{r.label}</text>
+              {r.cells.map((c, ci) => (
+                <g key={ci}>
+                  <rect x={cols[ci]} y={y} width={colW - 4} height={rowH - 4} fill={LUMEN} stroke={RULE} strokeWidth="1" rx="3" />
+                  <text {...T(cols[ci] + (colW - 4) / 2, cy2 - 5, 9)}>{c[0]}</text>
+                  <text {...T(cols[ci] + (colW - 4) / 2, cy2 + 8, 9)}>{c[1]}</text>
+                </g>
+              ))}
+            </g>
+          );
+        })}
+      </svg>
+    );
+  }
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 9. Merkel cell carcinoma — AEIOU clinical features + management pathway
+  // ──────────────────────────────────────────────────────────────────────────
+  function MerkelCellAeiouFig() {
+    const cellW = 124, topH = 148;
+    const letters = [
+      { L: "A", word: "Asymptomatic", sub: "painless" },
+      { L: "E", word: "Expanding", sub: "rapid, weeks" },
+      { L: "I", word: "Immuno-", sub: "suppressed" },
+      { L: "O", word: "Older", sub: "> 50 years" },
+      { L: "U", word: "UV-exposed", sub: "fair skin site" },
+    ];
+
+    const boxes = [
+      ["Biopsy", "(CK20+, neurofilament+)"],
+      ["Wide local excision", "(1–2 cm margin)"],
+      ["Sentinel node", "biopsy"],
+      ["Adjuvant RT", "(very radiosensitive)"],
+    ];
+    const boxW = 140, boxH = 56, boxGap = 14, arrowW = 18;
+    const totalBoxesW = boxes.length * boxW + (boxes.length - 1) * (boxGap + arrowW);
+    const W = Math.max(cellW * letters.length, totalBoxesW + 20);
+    const pathStartX = (W - totalBoxesW) / 2;
+    const pathTop = topH + 34;
+    const H = pathTop + boxH + 20;
+    const letterOffset = (W - cellW * letters.length) / 2;
+
+    return (
+      <svg {...svgProps(`0 0 ${W} ${H}`)}>
+        {letters.map((p, i) => {
+          const cx = letterOffset + i * cellW + cellW / 2;
+          const cy = 46;
+          return (
+            <g key={p.L}>
+              {i > 0 && <line x1={letterOffset + i * cellW} y1={10} x2={letterOffset + i * cellW} y2={topH - 14} stroke={RULE} strokeWidth="1" />}
+              <circle cx={cx} cy={cy} r={26} fill={ASOFT} stroke={ACCENT} strokeWidth="2" />
+              <text {...T(cx, cy + 9, 24, { fontWeight: 900, fill: ACCENT })}>{p.L}</text>
+              <text {...T(cx, topH - 44, 12, { fontWeight: 700 })}>{p.word}</text>
+              <text {...T(cx, topH - 28, 10, { fill: SOFT })}>{p.sub}</text>
+            </g>
+          );
+        })}
+
+        <line x1={20} y1={topH - 4} x2={W - 20} y2={topH - 4} stroke={RULE} strokeWidth="1" />
+        <text {...T(W / 2, pathTop - 12, 11, { fill: SOFT, fontWeight: 700 })}>AEIOU present in ~90% at diagnosis → work-up pathway</text>
+
+        {boxes.map((b, i) => {
+          const x = pathStartX + i * (boxW + boxGap + arrowW);
+          return (
+            <g key={i}>
+              <rect x={x} y={pathTop} width={boxW} height={boxH} rx="6" fill={i % 2 === 0 ? WALL : ASOFT} stroke={RULE} strokeWidth="1" />
+              <text {...T(x + boxW / 2, pathTop + 24, 10.5, { fontWeight: 700 })}>{b[0]}</text>
+              <text {...T(x + boxW / 2, pathTop + 40, 9.5, { fill: SOFT })}>{b[1]}</text>
+              {i < boxes.length - 1 && (
+                <>
+                  <line x1={x + boxW + 4} y1={pathTop + boxH / 2} x2={x + boxW + boxGap + arrowW - 6} y2={pathTop + boxH / 2} stroke={MUTE} strokeWidth="1.5" />
+                  <polygon points={`${x + boxW + boxGap + arrowW - 6},${pathTop + boxH / 2 - 4} ${x + boxW + boxGap + arrowW},${pathTop + boxH / 2} ${x + boxW + boxGap + arrowW - 6},${pathTop + boxH / 2 + 4}`} fill={MUTE} />
+                </>
+              )}
+            </g>
+          );
+        })}
+      </svg>
+    );
+  }
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 10. Desmoid tumour — anatomic sites + modern (surveillance-first) pathway
+  // ──────────────────────────────────────────────────────────────────────────
+  function DesmoidPathwayFig() {
+    const W = 600;
+    const siteY = 34, siteH = 70, siteW = 180, siteGap = 10;
+    const sites = [
+      { name: "Abdominal wall", sub1: "rectus sheath", sub2: "often post-partum" },
+      { name: "Intra-abdominal", sub1: "mesenteric", sub2: "FAP / Gardner-associated" },
+      { name: "Extra-abdominal", sub1: "limb girdle, chest wall,", sub2: "head/neck" },
+    ];
+    const sitesTotalW = siteW * 3 + siteGap * 2;
+    const sitesX0 = (W - sitesTotalW) / 2;
+
+    const flowTop = siteY + siteH + 40;
+    const boxW = 260, boxH = 44;
+    const box1Y = flowTop;
+    const box2Y = box1Y + boxH + 30;
+    const forkY = box2Y + boxH + 40;
+    const box3W = 240, box3H = 58;
+    const forkGap = 30;
+    const box3LX = W / 2 - forkGap / 2 - box3W;
+    const box3RX = W / 2 + forkGap / 2;
+    const H = forkY + box3H + 20;
+
+    return (
+      <svg {...svgProps(`0 0 ${W} ${H}`)}>
+        <text {...T(W / 2, 18, 12.5, { fill: SOFT, fontWeight: 700 })}>Desmoid — where it arises</text>
+        {sites.map((s, i) => {
+          const x = sitesX0 + i * (siteW + siteGap);
+          return (
+            <g key={s.name}>
+              <rect x={x} y={siteY} width={siteW} height={siteH} rx="6" fill={WALL} stroke={RULE} strokeWidth="1" />
+              <text {...T(x + siteW / 2, siteY + 24, 11.5, { fontWeight: 700 })}>{s.name}</text>
+              <text {...T(x + siteW / 2, siteY + 44, 9.5, { fill: SOFT })}>{s.sub1}</text>
+              <text {...T(x + siteW / 2, siteY + 58, 9.5, { fill: SOFT })}>{s.sub2}</text>
+            </g>
+          );
+        })}
+
+        <line x1={20} y1={siteY + siteH + 16} x2={W - 20} y2={siteY + siteH + 16} stroke={RULE} strokeWidth="1" />
+        <text {...T(W / 2, flowTop - 16, 11, { fill: SOFT, fontWeight: 700 })}>Modern management — surveillance first</text>
+
+        <rect x={W / 2 - boxW / 2} y={box1Y} width={boxW} height={boxH} rx="6" fill={LUMEN} stroke={RULE} strokeWidth="1" />
+        <text {...T(W / 2, box1Y + 27, 10.5, { fontWeight: 700 })}>Diagnosis confirmed</text>
+
+        <line x1={W / 2} y1={box1Y + boxH} x2={W / 2} y2={box2Y - 6} stroke={MUTE} strokeWidth="1.5" />
+        <polygon points={`${W / 2 - 5},${box2Y - 6} ${W / 2 + 5},${box2Y - 6} ${W / 2},${box2Y}`} fill={MUTE} />
+
+        <rect x={W / 2 - boxW / 2} y={box2Y} width={boxW} height={boxH} rx="6" fill={ASOFT} stroke={RULE} strokeWidth="1" />
+        <text {...T(W / 2, box2Y + 18, 11, { fontWeight: 800, fill: ACCENT })}>Active surveillance (1st line)</text>
+        <text {...T(W / 2, box2Y + 33, 9.5, { fill: SOFT })}>MRI every 3–6 months</text>
+
+        <line x1={W / 2} y1={box2Y + boxH} x2={W / 2} y2={box2Y + boxH + 14} stroke={MUTE} strokeWidth="1.5" />
+        <line x1={box3LX + box3W / 2} y1={box2Y + boxH + 14} x2={box3RX + box3W / 2} y2={box2Y + boxH + 14} stroke={MUTE} strokeWidth="1.5" />
+        <line x1={box3LX + box3W / 2} y1={box2Y + boxH + 14} x2={box3LX + box3W / 2} y2={forkY - 6} stroke={MUTE} strokeWidth="1.5" />
+        <line x1={box3RX + box3W / 2} y1={box2Y + boxH + 14} x2={box3RX + box3W / 2} y2={forkY - 6} stroke={MUTE} strokeWidth="1.5" />
+        <polygon points={`${box3LX + box3W / 2 - 5},${forkY - 6} ${box3LX + box3W / 2 + 5},${forkY - 6} ${box3LX + box3W / 2},${forkY}`} fill={MUTE} />
+        <polygon points={`${box3RX + box3W / 2 - 5},${forkY - 6} ${box3RX + box3W / 2 + 5},${forkY - 6} ${box3RX + box3W / 2},${forkY}`} fill={MUTE} />
+
+        <rect x={box3LX} y={forkY} width={box3W} height={box3H} rx="6" fill={WALL} stroke={RULE} strokeWidth="1" />
+        <text {...T(box3LX + box3W / 2, forkY + 20, 10.5, { fontWeight: 700 })}>Stable / regressing</text>
+        <text {...T(box3LX + box3W / 2, forkY + 36, 9.5, { fill: SOFT })}>continue surveillance</text>
+        <text {...T(box3LX + box3W / 2, forkY + 49, 9.5, { fill: SOFT })}>(many regress spontaneously)</text>
+
+        <rect x={box3RX} y={forkY} width={box3W} height={box3H} rx="6" fill={ASOFT} stroke={RULE} strokeWidth="1" />
+        <text {...T(box3RX + box3W / 2, forkY + 20, 10.5, { fontWeight: 700 })}>Progressive / symptomatic</text>
+        <text {...T(box3RX + box3W / 2, forkY + 36, 9.5, { fill: SOFT })}>systemic therapy or surgery</text>
+        <text {...T(box3RX + box3W / 2, forkY + 49, 9.5, { fill: SOFT })}>(RT if unresectable/recurrent)</text>
+      </svg>
+    );
+  }
+
+  // ──────────────────────────────────────────────────────────────────────────
   // Register all figures
   // ──────────────────────────────────────────────────────────────────────────
   window.SK_FIGURES = Object.assign(window.SK_FIGURES || {}, {
@@ -550,6 +937,36 @@
       caption: "Hurley staging guides treatment intensity. Stage I: single or multiple isolated abscesses without sinus tracts or scarring — treated medically (antiseptics, antibiotics, intralesional corticosteroids). Stage II: recurrent abscesses with one or more sinus tracts and scarring, lesions are separated — requires long-term systemic therapy (biologics, dapsone) ± limited surgical drainage. Stage III: diffuse or near-diffuse involvement with multiple interconnected tracts and extensive confluent scarring — wide surgical excision with healing by secondary intention or flap/graft reconstruction.",
       ref: "Hurley HJ, Dermatol Surg 1989 (chapter) · Zouboulis CC et al., J Eur Acad Dermatol 2015 (S1 guidelines)",
       render: () => <HurleyFig />,
+    },
+    "skin-sts-grade-margins": {
+      title: "FNCLCC grade & the pseudocapsule — why margins matter",
+      caption: "FNCLCC grade sums three independently scored factors — differentiation (1–3), mitotic count per 10 high-power fields (1–3) and tumour necrosis (0–2) — into grade 1 (sum 2–3), grade 2 (4–5) or grade 3 (6–8); grade is the strongest predictor of metastasis in soft-tissue sarcoma. Grossly the tumour looks encapsulated, but this pseudocapsule is compressed tumour and reactive tissue, not a true barrier: microscopic satellite nodules can sit in the surrounding reactive zone. 'Shelling out' along the pseudocapsule leaves disease behind — wide local excision must take a cuff of normal tissue beyond the reactive zone.",
+      ref: "Trojani M et al., Int J Cancer 1984;33:37 (FNCLCC grading) · Coindre JM et al., Cancer 2001;91:1914 · Enneking WF et al., Clin Orthop Relat Res 1980;153:106 · NCCN Guidelines: Soft Tissue Sarcoma",
+      render: () => <FnclccMarginFig />,
+    },
+    "skin-dfsp-infiltrative-margins": {
+      title: "DFSP — the visible nodule undersells the tumour",
+      caption: "Dermatofibrosarcoma protuberans grows as a slow, painless dermal nodule but sends thin, finger-like fibrous projections through the subcutaneous fat well beyond the palpable edge. This is why fixed-margin wide local excision (even 2–3 cm) can leave residual disease and recur, whereas Mohs micrographic surgery or margin-mapped (CCPDMA) excision follows the projections directly and achieves much lower recurrence. The COL1A1–PDGFB fusion, t(17;22), also makes unresectable or metastatic DFSP responsive to imatinib.",
+      ref: "Gloster HM Jr, J Am Acad Dermatol 1996;35:355 · Farma JM et al., Ann Surg Oncol 2010;17:2112 · NCCN Guidelines: Dermatofibrosarcoma Protuberans",
+      render: () => <DfspInfiltrativeFig />,
+    },
+    "skin-kaposi-subtypes": {
+      title: "Kaposi's sarcoma — four clinical subtypes, one virus",
+      caption: "Every clinical form of Kaposi's sarcoma is driven by HHV-8 (Kaposi's sarcoma-associated herpesvirus), but epidemiology and behaviour differ sharply. Classic: elderly men of Mediterranean or Eastern European descent, indolent lesions on the distal lower limb. Endemic: sub-Saharan Africa, including an aggressive lymphadenopathic form in children. Iatrogenic: transplant recipients and other immunosuppressed patients — often regresses when immunosuppression is reduced. Epidemic (AIDS-associated): widespread skin, mucosal and visceral disease that improves with antiretroviral therapy. Identifying the subtype guides management more than the appearance of the lesion.",
+      ref: "Chang Y et al., Science 1994;266:1865 (identification of HHV-8) · Antman K, Chang Y, N Engl J Med 2000;342:1027",
+      render: () => <KaposiSubtypesFig />,
+    },
+    "skin-merkel-cell-aeiou": {
+      title: "Merkel cell carcinoma — AEIOU features & work-up",
+      caption: "AEIOU — Asymptomatic, Expanding rapidly, Immunosuppressed, Older than 50, UV-exposed site on fair skin — comes from a 195-patient diagnostic cohort in which most tumours showed three or more of these features. Merkel cell carcinoma is an aggressive cutaneous neuroendocrine tumour (CK20 and neurofilament positive). Surgical work-up parallels melanoma — wide local excision with 1–2 cm margins plus sentinel lymph node biopsy — but because the tumour is markedly radiosensitive, adjuvant radiotherapy is used far more often than in melanoma.",
+      ref: "Heath M et al., J Am Acad Dermatol 2008;58:375 (AEIOU features) · NCCN Guidelines: Merkel Cell Carcinoma",
+      render: () => <MerkelCellAeiouFig />,
+    },
+    "skin-desmoid-pathway": {
+      title: "Desmoid tumour — sites & the surveillance-first pathway",
+      caption: "Desmoid-type fibromatosis arises at three characteristic sites: the abdominal wall (often post-partum), intra-abdominal/mesenteric (associated with FAP and Gardner syndrome), and extra-abdominal soft tissue (limb girdle, chest wall, head and neck). It is locally aggressive but does not metastasise. Management has moved away from upfront surgery: active surveillance with serial MRI is first-line for asymptomatic or stable disease because a substantial proportion stabilise or regress spontaneously. Systemic therapy or surgery is reserved for progressive or symptomatic disease, with radiotherapy an option for unresectable or recurrent tumours.",
+      ref: "Desmoid Tumor Working Group, Eur J Cancer 2020;127:96 (global consensus guideline)",
+      render: () => <DesmoidPathwayFig />,
     },
   });
 })();

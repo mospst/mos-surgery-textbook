@@ -139,6 +139,12 @@ module.exports = {
   'bcc': ['skin-bcc-scc-origin'],
   'scc-skin': ['skin-bcc-scc-origin'],
   'hidradenitis': ['skin-hurley-staging'],
+  'liposarcoma': ['skin-sts-grade-margins'],
+  'leiomyosarcoma': ['skin-sts-grade-margins'],
+  'dfsp': ['skin-dfsp-infiltrative-margins'],
+  'kaposi': ['skin-kaposi-subtypes'],
+  'merkel-cell': ['skin-merkel-cell-aeiou'],
+  'desmoid': ['skin-desmoid-pathway'],
 
   // ── MINIMALLY INVASIVE SURGERY ──────────────────────────────────────────
   'mis-principles': ['mis-port-placement', 'mis-energy-devices'],
