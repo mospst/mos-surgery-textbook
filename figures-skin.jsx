@@ -526,14 +526,15 @@
     const col0X = 20, col0W = 118;
     const colW = 150;
     const cols = [col0X + col0W, col0X + col0W + colW, col0X + col0W + colW * 2];
-    const headerY = 34, headerH = 26;
+    const headerY = 30, headerH = 22;
     const rowH = 44;
+    // Necrosis is scored 0–2 (not 1–3) — that's why the minimum total is 2.
     const rows = [
-      { label: "Differentiation", cells: [["Resembles", "normal tissue"], ["Definite", "histologic type"], ["Synovial/undiff.", "/doubtful type"]] },
-      { label: "Mitotic count", sub: "per 10 HPF", cells: ["0–9", "10–19", "≥ 20"] },
-      { label: "Necrosis", cells: ["None", "≤ 50%", "> 50%"] },
+      { label: "Differentiation", scores: [1, 2, 3], cells: [["Resembles", "normal tissue"], ["Definite", "histologic type"], ["Synovial/undiff.", "/doubtful type"]] },
+      { label: "Mitotic count", sub: "per 10 HPF", scores: [1, 2, 3], cells: ["0–9", "10–19", "≥ 20"] },
+      { label: "Necrosis", sub: "scored 0–2", scores: [0, 1, 2], cells: ["None", "< 50%", "≥ 50%"] },
     ];
-    const rowsTop = headerY + headerH;
+    const rowsTop = headerY + headerH + 4;
     const tableBottom = rowsTop + rowH * rows.length;
 
     const barY = tableBottom + 26, barH = 46;
@@ -561,13 +562,8 @@
       <svg {...svgProps(`0 0 ${W} ${totalH}`)}>
         <text {...T(W / 2, 18, 12.5, { fill: SOFT, fontWeight: 700 })}>FNCLCC grade — sum three scores (liposarcoma, leiomyosarcoma)</text>
 
-        <rect x={col0X} y={headerY} width={col0W - 4} height={headerH} fill={WALL} stroke={RULE} strokeWidth="1" rx="3" />
-        {cols.map((cx, i) => (
-          <rect key={"h" + i} x={cx} y={headerY} width={colW - 4} height={headerH} fill={WALL} stroke={RULE} strokeWidth="1" rx="3" />
-        ))}
-        {["Score 1", "Score 2", "Score 3"].map((t, i) => (
-          <text key={t} {...T(cols[i] + (colW - 4) / 2, headerY + 17, 11, { fontWeight: 700, fill: SOFT })}>{t}</text>
-        ))}
+        <rect x={cols[0]} y={headerY} width={colW * 3 - 4} height={headerH} fill={WALL} stroke={RULE} strokeWidth="1" rx="3" />
+        <text {...T(cols[0] + (colW * 3 - 4) / 2, headerY + 15, 10.5, { fontWeight: 700, fill: SOFT })}>less aggressive → more aggressive (circled number = points)</text>
 
         {rows.map((r, ri) => {
           const y = rowsTop + ri * rowH;
@@ -579,14 +575,17 @@
               {r.sub && <text {...T(col0X + (col0W - 4) / 2, y + 32, 9, { fill: SOFT })}>{r.sub}</text>}
               {r.cells.map((c, ci) => {
                 const lines = Array.isArray(c) ? c : [c];
+                const tx = cols[ci] + 28 + (colW - 4 - 28) / 2;
                 return (
                   <g key={ci}>
                     <rect x={cols[ci]} y={y} width={colW - 4} height={rowH - 4} fill={ci === 2 ? ASOFT : LUMEN} stroke={RULE} strokeWidth="1" rx="3" />
+                    <circle cx={cols[ci] + 15} cy={cy2} r={9} fill={ACCENT} />
+                    <text {...T(cols[ci] + 15, cy2 + 3.5, 10, { fontWeight: 800, fill: LUMEN })}>{r.scores[ci]}</text>
                     {lines.length === 1
-                      ? <text {...T(cols[ci] + (colW - 4) / 2, cy2 + 3, 9.5)}>{lines[0]}</text>
+                      ? <text {...T(tx, cy2 + 3, 9.5)}>{lines[0]}</text>
                       : <>
-                          <text {...T(cols[ci] + (colW - 4) / 2, cy2 - 5, 9.5)}>{lines[0]}</text>
-                          <text {...T(cols[ci] + (colW - 4) / 2, cy2 + 8, 9.5)}>{lines[1]}</text>
+                          <text {...T(tx, cy2 - 5, 9.5)}>{lines[0]}</text>
+                          <text {...T(tx, cy2 + 8, 9.5)}>{lines[1]}</text>
                         </>}
                   </g>
                 );
@@ -809,7 +808,7 @@
         })}
 
         <line x1={20} y1={topH - 4} x2={W - 20} y2={topH - 4} stroke={RULE} strokeWidth="1" />
-        <text {...T(W / 2, pathTop - 12, 11, { fill: SOFT, fontWeight: 700 })}>AEIOU present in ~90% at diagnosis → work-up pathway</text>
+        <text {...T(W / 2, pathTop - 12, 11, { fill: SOFT, fontWeight: 700 })}>≥ 3 of 5 AEIOU features in ~90% at diagnosis → work-up pathway</text>
 
         {boxes.map((b, i) => {
           const x = pathStartX + i * (boxW + boxGap + arrowW);
@@ -882,7 +881,7 @@
 
         <rect x={W / 2 - boxW / 2} y={box2Y} width={boxW} height={boxH} rx="6" fill={ASOFT} stroke={RULE} strokeWidth="1" />
         <text {...T(W / 2, box2Y + 18, 11, { fontWeight: 800, fill: ACCENT })}>Active surveillance (1st line)</text>
-        <text {...T(W / 2, box2Y + 33, 9.5, { fill: SOFT })}>MRI every 3–6 months</text>
+        <text {...T(W / 2, box2Y + 33, 9.5, { fill: SOFT })}>serial MRI, 3–6-monthly at first</text>
 
         <line x1={W / 2} y1={box2Y + boxH} x2={W / 2} y2={box2Y + boxH + 14} stroke={MUTE} strokeWidth="1.5" />
         <line x1={box3LX + box3W / 2} y1={box2Y + boxH + 14} x2={box3RX + box3W / 2} y2={box2Y + boxH + 14} stroke={MUTE} strokeWidth="1.5" />
@@ -940,7 +939,7 @@
     },
     "skin-sts-grade-margins": {
       title: "FNCLCC grade & the pseudocapsule — why margins matter",
-      caption: "FNCLCC grade sums three independently scored factors — differentiation (1–3), mitotic count per 10 high-power fields (1–3) and tumour necrosis (0–2) — into grade 1 (sum 2–3), grade 2 (4–5) or grade 3 (6–8); grade is the strongest predictor of metastasis in soft-tissue sarcoma. Grossly the tumour looks encapsulated, but this pseudocapsule is compressed tumour and reactive tissue, not a true barrier: microscopic satellite nodules can sit in the surrounding reactive zone. 'Shelling out' along the pseudocapsule leaves disease behind — wide local excision must take a cuff of normal tissue beyond the reactive zone.",
+      caption: "FNCLCC grade sums three independently scored factors — differentiation (1–3), mitotic count per 10 high-power fields (1–3) and tumour necrosis (0 = none, 1 = < 50%, 2 = ≥ 50%) — into grade 1 (sum 2–3), grade 2 (4–5) or grade 3 (6–8); grade is the strongest predictor of metastasis in soft-tissue sarcoma. Grossly the tumour looks encapsulated, but this pseudocapsule is compressed tumour and reactive tissue, not a true barrier: microscopic satellite nodules can sit in the surrounding reactive zone. 'Shelling out' along the pseudocapsule leaves disease behind — wide local excision must take a cuff of normal tissue beyond the reactive zone.",
       ref: "Trojani M et al., Int J Cancer 1984;33:37 (FNCLCC grading) · Coindre JM et al., Cancer 2001;91:1914 · Enneking WF et al., Clin Orthop Relat Res 1980;153:106 · NCCN Guidelines: Soft Tissue Sarcoma",
       render: () => <FnclccMarginFig />,
     },
